@@ -1,0 +1,27 @@
+{
+  "name": "playwright-live-visual-automation",
+  "version": "1.0.0",
+  "description": "Playwright Live Visual E2E Automation Testing Framework với chuột Neon trực quan, gõ phím chân thực, quay video, chụp ảnh Step-by-Step và báo cáo Markdown phân cấp.",
+  "main": "playwright.config.js",
+  "scripts": {
+    "test": "playwright test --headed --workers=1",
+    "test:headless": "playwright test",
+    "test:parallel": "playwright test --headed --workers=10",
+    "test:ui": "playwright test --ui",
+    "install:browsers": "playwright install chrome",
+    "report": "playwright show-report"
+  },
+  "keywords": [
+    "playwright",
+    "e2e",
+    "testing",
+    "automation",
+    "visual-testing",
+    "markdown-report"
+  ],
+  "author": "ThachY-23120411",
+  "license": "MIT",
+  "devDependencies": {
+    "@playwright/test": "^1.40.0"
+  }
+}

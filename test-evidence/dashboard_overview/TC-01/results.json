@@ -1,0 +1,20 @@
+{
+  "tcId": "TC-01",
+  "pageName": "dashboard_overview",
+  "title": "TC-01: Kiểm tra nạp bảng điều khiển & Menu hệ thống",
+  "status": "PASSED",
+  "duration": "11.69s",
+  "errors": "",
+  "attachments": {
+    "screenshots": [
+      "dashboard_overview/TC-01/screenshots/test-finished-1.png"
+    ],
+    "videos": [
+      "dashboard_overview/TC-01/videos/video.webm"
+    ],
+    "traces": [
+      "dashboard_overview/TC-01/traces/trace.zip"
+    ]
+  },
+  "timestamp": "2026-10-15T08:14:32.829Z"
+}

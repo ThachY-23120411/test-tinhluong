@@ -1,0 +1,52 @@
+{
+  "tcId": "TC-03",
+  "pageName": "employee_bank_approval",
+  "title": "Nhân viên Tai.Dang đăng nhập lại để đối chiếu và kiểm tra thông tin sau phê duyệt",
+  "testStatus": "PASSED",
+  "businessStatus": "FAILED",
+  "businessNotes": "FAIL - Thông tin tài khoản ngân hàng không hiển thị trên hồ sơ nhân viên sau khi đã được phê duyệt",
+  "failureAnalysis": {
+    "issue": "Dữ liệu số tài khoản và thông tin ngân hàng không cập nhật vào hồ sơ cá nhân sau khi Quản lý phê duyệt thành công",
+    "expected": "Sau khi Quản lý Cuong.Vu thực hiện duyệt ở TC-02, số tài khoản mới (ví dụ 99xxxxxxx) và ngân hàng phải được nạp đầy đủ vào form Thông tin ngân hàng của nhân viên Tai.Dang",
+    "actual": "Các ô nhập liệu Số tài khoản, Ngân hàng, Chi nhánh trong form Thông tin ngân hàng của nhân viên vẫn hoàn toàn rỗng (\"\")",
+    "rootCause": "Hệ thống Paradise HRM khi gọi sp_approve_EmployeeChange mới chỉ cập nhật cờ trạng thái trong bảng yêu cầu thay đổi (sp_EmployeeChange_Detail), nhưng chưa thực hiện câu lệnh UPDATE dữ liệu vào bảng chính của nhân viên (tbl_HRS_Employee / tbl_HRS_Employee_Bank), hoặc API lấy thông tin nhân viên chưa nạp dữ liệu từ nguồn đã duyệt.",
+    "recommendation": "Đội ngũ Backend cần kiểm tra lại Stored Procedure sp_approve_EmployeeChange để đảm bảo dữ liệu được đồng bộ vào bảng nhân viên chính thức; đồng thời kiểm tra luồng API nạp dữ liệu lên form Hồ sơ nhân viên."
+  },
+  "status": "FAILED",
+  "duration": "29.93s",
+  "errors": "",
+  "stepScreenshots": [
+    {
+      "step": 1,
+      "title": "Nhân viên Tai.Dang đăng nhập lại hệ thống để kiểm tra thông tin sau duyệt",
+      "fileName": "TC-03-step01-nhan-vien-tai-dang-dang-nhap-lai-he-thong-de-kiem-tra-thong-tin-sau-duyet.png",
+      "relPath": "employee_bank_approval/TC-03/screenshots/TC-03-step01-nhan-vien-tai-dang-dang-nhap-lai-he-thong-de-kiem-tra-thong-tin-sau-duyet.png"
+    },
+    {
+      "step": 2,
+      "title": "Điều hướng đến mục Thông tin Ngân hàng & Thuế trên màn hình Hồ sơ nhân viên",
+      "fileName": "TC-03-step02-dieu-huong-den-muc-thong-tin-ngan-hang-thue-tren-man-hinh-ho-so-nhan-vien.png",
+      "relPath": "employee_bank_approval/TC-03/screenshots/TC-03-step02-dieu-huong-den-muc-thong-tin-ngan-hang-thue-tren-man-hinh-ho-so-nhan-vien.png"
+    },
+    {
+      "step": 3,
+      "title": "Bằng chứng đối chiếu thực tế: Form Thông tin ngân hàng vẫn rỗng dữ liệu sau khi duyệt",
+      "fileName": "TC-03-step03-bang-chung-doi-chieu-thuc-te-form-thong-tin-ngan-hang-van-rong-du-lieu-sau-khi-duyet.png",
+      "relPath": "employee_bank_approval/TC-03/screenshots/TC-03-step03-bang-chung-doi-chieu-thuc-te-form-thong-tin-ngan-hang-van-rong-du-lieu-sau-khi-duyet.png"
+    }
+  ],
+  "attachments": {
+    "screenshots": [
+      "employee_bank_approval/TC-03/screenshots/TC-03-step01-nhan-vien-tai-dang-dang-nhap-lai-he-thong-de-kiem-tra-thong-tin-sau-duyet.png",
+      "employee_bank_approval/TC-03/screenshots/TC-03-step02-dieu-huong-den-muc-thong-tin-ngan-hang-thue-tren-man-hinh-ho-so-nhan-vien.png",
+      "employee_bank_approval/TC-03/screenshots/TC-03-step03-bang-chung-doi-chieu-thuc-te-form-thong-tin-ngan-hang-van-rong-du-lieu-sau-khi-duyet.png"
+    ],
+    "videos": [
+      "employee_bank_approval/TC-03/videos/video.webm"
+    ],
+    "traces": [
+      "employee_bank_approval/TC-03/traces/trace.zip"
+    ]
+  },
+  "timestamp": "2026-10-15T16:16:55.959Z"
+}

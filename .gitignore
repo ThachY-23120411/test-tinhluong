@@ -1,0 +1,27 @@
+# Dependencies
+node_modules/
+package-lock.json
+
+# Playwright test execution outputs
+test-results/
+playwright-report/
+blob-report/
+
+# Session & Auth
+.auth/storageState.json
+scratch/
+
+# Large binaries in test-evidence (traces and raw recorded videos)
+# Giữ lại các file báo cáo markdown, json và ảnh step-by-step screenshots làm bằng chứng
+test-evidence/**/traces/
+test-evidence/**/videos/
+*.zip
+*.webm
+*.mp4
+
+# OS & Logs
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.log

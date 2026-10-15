@@ -1,0 +1,20 @@
+{
+  "tcId": "TC-01",
+  "pageName": "login",
+  "title": "TC-01: Đăng nhập thành công với tài khoản Chien.nguyen",
+  "status": "FAILED",
+  "duration": "23.42s",
+  "errors": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('#username')\nExpected: visible\nTimeout: 15000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" locator('#username') with timeout 15000ms\u001b[22m\n\u001b[2m  - waiting for locator('#username')\u001b[22m\n",
+  "attachments": {
+    "screenshots": [
+      "login/TC-01/screenshots/test-failed-1.png"
+    ],
+    "videos": [
+      "login/TC-01/videos/video.webm"
+    ],
+    "traces": [
+      "login/TC-01/traces/trace.zip"
+    ]
+  },
+  "timestamp": "2026-10-15T08:05:22.597Z"
+}

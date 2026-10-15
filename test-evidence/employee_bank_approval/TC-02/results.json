@@ -1,0 +1,66 @@
+{
+  "tcId": "TC-02",
+  "pageName": "employee_bank_approval",
+  "title": "Quản lý Cuong.Vu đăng nhập và Phê duyệt thay đổi hồ sơ",
+  "testStatus": "PASSED",
+  "businessStatus": "PASSED",
+  "businessNotes": "PASS - Quản lý phê duyệt thành công yêu cầu trên hệ thống (Hệ thống xác nhận: Đã duyệt thành công các thay đổi)",
+  "failureAnalysis": {
+    "issue": "",
+    "expected": "",
+    "actual": "",
+    "rootCause": "",
+    "recommendation": ""
+  },
+  "status": "PASSED",
+  "duration": "34.58s",
+  "errors": "",
+  "stepScreenshots": [
+    {
+      "step": 1,
+      "title": "Quản lý Cuong.Vu truy cập thành công màn hình Danh sách phê duyệt",
+      "fileName": "TC-02-step01-quan-ly-cuong-vu-truy-cap-thanh-cong-man-hinh-danh-sach-phe-duyet.png",
+      "relPath": "employee_bank_approval/TC-02/screenshots/TC-02-step01-quan-ly-cuong-vu-truy-cap-thanh-cong-man-hinh-danh-sach-phe-duyet.png"
+    },
+    {
+      "step": 2,
+      "title": "Chọn bản ghi yêu cầu Duyệt thay đổi hồ sơ của Đặng Minh Tài",
+      "fileName": "TC-02-step02-chon-ban-ghi-yeu-cau-duyet-thay-doi-ho-so-cua-dang-minh-tai.png",
+      "relPath": "employee_bank_approval/TC-02/screenshots/TC-02-step02-chon-ban-ghi-yeu-cau-duyet-thay-doi-ho-so-cua-dang-minh-tai.png"
+    },
+    {
+      "step": 3,
+      "title": "Chi tiết thay đổi hồ sơ và tích chọn toàn bộ các mục thông tin cần duyệt",
+      "fileName": "TC-02-step03-chi-tiet-thay-doi-ho-so-va-tich-chon-toan-bo-cac-muc-thong-tin-can-duyet.png",
+      "relPath": "employee_bank_approval/TC-02/screenshots/TC-02-step03-chi-tiet-thay-doi-ho-so-va-tich-chon-toan-bo-cac-muc-thong-tin-can-duyet.png"
+    },
+    {
+      "step": 4,
+      "title": "Con trỏ chuột Neon di chuyển trực tiếp lên nút Phê duyệt trên thanh thao tác nổi",
+      "fileName": "TC-02-step04-con-tro-chuot-neon-di-chuyen-truc-tiep-len-nut-phe-duyet-tren-thanh-thao-tac-noi.png",
+      "relPath": "employee_bank_approval/TC-02/screenshots/TC-02-step04-con-tro-chuot-neon-di-chuyen-truc-tiep-len-nut-phe-duyet-tren-thanh-thao-tac-noi.png"
+    },
+    {
+      "step": 5,
+      "title": "Hệ thống xác nhận đã phê duyệt thành công các thông tin thay đổi",
+      "fileName": "TC-02-step05-he-thong-xac-nhan-da-phe-duyet-thanh-cong-cac-thong-tin-thay-doi.png",
+      "relPath": "employee_bank_approval/TC-02/screenshots/TC-02-step05-he-thong-xac-nhan-da-phe-duyet-thanh-cong-cac-thong-tin-thay-doi.png"
+    }
+  ],
+  "attachments": {
+    "screenshots": [
+      "employee_bank_approval/TC-02/screenshots/TC-02-step01-quan-ly-cuong-vu-truy-cap-thanh-cong-man-hinh-danh-sach-phe-duyet.png",
+      "employee_bank_approval/TC-02/screenshots/TC-02-step02-chon-ban-ghi-yeu-cau-duyet-thay-doi-ho-so-cua-dang-minh-tai.png",
+      "employee_bank_approval/TC-02/screenshots/TC-02-step03-chi-tiet-thay-doi-ho-so-va-tich-chon-toan-bo-cac-muc-thong-tin-can-duyet.png",
+      "employee_bank_approval/TC-02/screenshots/TC-02-step04-con-tro-chuot-neon-di-chuyen-truc-tiep-len-nut-phe-duyet-tren-thanh-thao-tac-noi.png",
+      "employee_bank_approval/TC-02/screenshots/TC-02-step05-he-thong-xac-nhan-da-phe-duyet-thanh-cong-cac-thong-tin-thay-doi.png"
+    ],
+    "videos": [
+      "employee_bank_approval/TC-02/videos/video.webm"
+    ],
+    "traces": [
+      "employee_bank_approval/TC-02/traces/trace.zip"
+    ]
+  },
+  "timestamp": "2026-10-15T16:16:24.034Z"
+}
