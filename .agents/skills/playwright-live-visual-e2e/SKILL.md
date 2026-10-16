@@ -334,7 +334,207 @@ tests/ (Mã nguồn kịch bản)                test-evidence/ (Bằng chứng 
 
 ---
 
+## 2.2. KHO KỊCH BẢN BIÊN, TIÊU CỰC & BẪY LỖI NGHIỆP VỤ TỰ ĐỘNG MỞ RỘNG (EDGE CASES & TRAP REPOSITORY)
+
+> **NGUYÊN TẮC TÍCH LŨY TRI THỨC (CONTINUOUS LEARNING RULE):**
+> Kho kịch bản biên này là một "thư viện sống". **Mỗi khi phát hiện thêm một lỗi mới, một bẫy logic hoặc một ca kiểm thử khó trong thực tế**, Agent/Tester **BẮT BUỘC PHẢI BỔ SUNG NGAY** mã kịch bản mới (`EDGE-xxx-N`) vào kho này. Nhờ đó, kho tri thức ngày càng dày đặc, việc kiểm thử ở các menu và dự án sau sẽ **tự động kế thừa toàn bộ các kịch bản biên từ trước**, đảm bảo hệ thống ngày càng được kiểm tra kĩ lưỡng và không bao giờ lặp lại sai lầm cũ!
+
+```
+┌─────────────────────────────────────────────────────────────────────────────────┐
+│              CƠ CHẾ KẾ THỪA & TÍCH LŨY KỊCH BẢN BIÊN LIÊN TỤC                   │
+│                                                                                 │
+│   Dự án A / Menu 1  ──► Phát hiện Bug mới ──► Thêm mã EDGE-xxx vào Kho        │
+│                                                              │                  │
+│                                                              ▼                  │
+│   Dự án B / Menu N  ◄── Tự động kế thừa toàn bộ Kho ────────┴────────────────   │
+│   (Kiểm thử tự động ngày càng sâu sắc, khắt khe và bao quát 100% rủi ro)         │
+└─────────────────────────────────────────────────────────────────────────────────┘
+```
+
+---
+
+### A. KHO BẪY LỖI BỘ LỌC & TÌM KIẾM (FILTER & SEARCH TRAPS)
+
+#### 🔸 `EDGE-FLT-01`: Bẫy Mất Dữ Liệu Khi Khôi Phục Trạng Thái (The Lost-Data Re-click Trap)
+* **Đối tượng**: Chip lọc trạng thái (Status Pills), Tab trạng thái, Dropdown lọc.
+* **Mô tả bẫy lỗi**: Ban đầu danh sách có $N$ bản ghi. Click chọn lọc 1 trạng thái con $\rightarrow$ Click lại "Tất cả" lần 2. Do frontend không khôi phục cờ `isViewAll = 1` hoặc ngầm ép cứng ngày theo tuần hiện tại $\rightarrow$ Danh sách bị xóa sạch trắng trơn!
+* **Cách lập trình `.spec.js`**:
+  ```javascript
+  const n0 = await page.locator('#grid tbody tr.dx-data-row').count();
+  await chipChild.click(); // Chọn lọc con
+  await page.waitForTimeout(800);
+  await chipAll.click();   // Chọn lại Tất cả lần 2
+  await page.waitForTimeout(800);
+  const nRestore = await page.locator('#grid tbody tr.dx-data-row').count();
+  expect(nRestore).toBe(n0); // Bắt buộc phải phục hồi nguyên vẹn n0 dòng
+  ```
+
+#### 🔸 `EDGE-FLT-02`: Bẫy Khoảng Ngày Mặc Định Ngầm (The Hidden Default Date Boundary Trap)
+* **Đối tượng**: Mọi bộ lọc có gắn kèm khoảng ngày (FromDate, ToDate) ngầm hoặc nổi.
+* **Mô tả bẫy lỗi**: Hệ thống ngầm định lấy ngày theo "Tuần này" hoặc "Tháng này" mà không có thông báo cho người dùng, làm biến mất các dữ liệu lịch sử hợp lệ tạo từ các tháng trước.
+* **Cách lập trình `.spec.js`**:
+  - Chặn request API: `const request = await page.waitForRequest(r => r.url().includes('/query'));`
+  - Bóc tách POST data: `const postData = request.postData();`
+  - Kiểm tra xem tham số `@FromDate` có bị ép ngầm khi người dùng KHÔNG hề chọn lọc theo ngày hay không.
+
+#### 🔸 `EDGE-FLT-03`: Bẫy Ký Tự Đặc Biệt & SQL Injection Trong Ô Tìm Kiếm (Special Characters & SQLi)
+* **Đối tượng**: Ô tìm kiếm nhanh (Search Box / Instant Filter).
+* **Mô tả bẫy lỗi**: Người dùng gõ các ký tự nhạy cảm như `'`, `"`, `\`, `%`, `_`, `--`, `<script>` khiến Stored Procedure văng lỗi cú pháp SQL hoặc giao diện bị crash.
+* **Cách lập trình `.spec.js`**:
+  ```javascript
+  await searchInput.fill("' OR '1'='1");
+  await page.waitForTimeout(600);
+  // Không được văng lỗi Unhandled Exception, bảng phải hiển thị Empty State an toàn
+  const errorAlert = page.locator('.dx-error-message, .alert-danger');
+  await expect(errorAlert).not.toBeVisible();
+  ```
+
+#### 🔸 `EDGE-FLT-04`: Bẫy Khoảng Trắng 2 Đầu Từ Khóa (Leading / Trailing Whitespace Trap)
+* **Đối tượng**: Ô tìm kiếm nhanh, Ô nhập mã số/tên.
+* **Mô tả bẫy lỗi**: Người dùng copy-paste từ khóa kèm khoảng trắng ở đầu hoặc cuối (vd: `" Nguyen Van A "`). Hệ thống so khớp chính xác (Exact match) thay vì tự động `trim()` làm kết quả tìm kiếm rỗng.
+* **Cách lập trình `.spec.js`**:
+  - Trích xuất tên dòng 1: `const realName = await firstRowName.innerText();`
+  - Gõ vào ô search chuỗi có khoảng trắng thừa: `await searchInput.fill(`  ${realName}  `);`
+  - Assert bảng vẫn phải tìm ra đúng bản ghi đó.
+
+#### 🔸 `EDGE-FLT-05`: Bẫy Bộ Lọc Chồng Chéo Mâu Thuẫn (Conflicting Filter Combinations)
+* **Đối tượng**: Kết hợp đồng thời 2-3 bộ lọc (ví dụ: Trạng thái = "Đã nghỉ việc" + Phòng ban = "Kinh doanh" + Tìm kiếm theo từ khóa).
+* **Mô tả bẫy lỗi**: Khi reset 1 trong 3 bộ lọc, các bộ lọc còn lại bị reset ngầm hoặc gây ra câu query trả về dữ liệu sai lệch.
+* **Cách lập trình `.spec.js`**:
+  - Áp dụng lần lượt 3 tiêu chí $\rightarrow$ Ghi nhận số dòng.
+  - Xóa 1 tiêu chí $\rightarrow$ Assert số dòng tăng lên hợp lý và 2 tiêu chí còn lại vẫn giữ nguyên hiệu lực.
+
+---
+
+### B. KHO BẪY LỖI NHẬP LIỆU & FORM CRUD (FORM & INPUT TRAPS)
+
+#### 🔸 `EDGE-INP-01`: Bẫy Bấm Lưu Khi Form Trống Hoàn Toàn (Empty Form Submit)
+* **Đối tượng**: Mọi Modal / Form Tạo mới hoặc Cập nhật.
+* **Mô tả bẫy lỗi**: Người dùng mở popup rồi bấm thẳng vào nút "Lưu" mà chưa nhập bất kỳ thông tin nào. Hệ thống hoặc văng lỗi Backend 500, hoặc gửi dữ liệu `null` vào DB, hoặc đóng popup mà không có phản hồi gì.
+* **Cách lập trình `.spec.js`**:
+  ```javascript
+  await openCreateModalBtn.click();
+  await saveBtn.click(); // Bấm Lưu ngay khi form còn rỗng
+  // BẮT BUỘC: Form không được đóng và phải hiển thị các viền đỏ / thông báo validation
+  await expect(modal).toBeVisible();
+  const invalidFields = page.locator('.dx-invalid, input:invalid, .field-validation-error');
+  expect(await invalidFields.count()).toBeGreaterThan(0);
+  ```
+
+#### 🔸 `EDGE-INP-02`: Bẫy Click Đúp Nút Lưu Liên Tục (Double-Click / Rapid Fire Debounce)
+* **Đối tượng**: Mọi nút Submit / Lưu / Gửi phê duyệt / Đặt hàng.
+* **Mô tả bẫy lỗi**: Người dùng click đúp hoặc click liên tiếp 2-3 lần vào nút Lưu. Do frontend không vô hiệu hóa nút (disable) hoặc thiếu cơ chế debounce $\rightarrow$ Server nhận cùng lúc 2 request tạo ra 2 bản ghi trùng lặp (Duplicate Records) trong Database!
+* **Cách lập trình `.spec.js`**:
+  ```javascript
+  // Lắng nghe số lượng request gửi đi
+  let requestCount = 0;
+  page.on('request', req => { if (req.url().includes('/save') && req.method() === 'POST') requestCount++; });
+  // Giả lập click liên tiếp cực nhanh
+  await saveBtn.click({ clickCount: 3, delay: 50 });
+  await page.waitForTimeout(1500);
+  // BẮT BUỘC: Hệ thống chỉ được phát ra tối đa 1 request lưu dữ liệu duy nhất!
+  expect(requestCount).toBe(1);
+  ```
+
+#### 🔸 `EDGE-INP-03`: Bẫy Mất Dữ Liệu Khi Chuyển Tab Dở Dang (Tab Switch State Loss)
+* **Đối tượng**: Form nhập liệu có nhiều Tab (vd: Tab 1: Thông tin chung, Tab 2: Người liên hệ, Tab 3: Tài khoản ngân hàng).
+* **Mô tả bẫy lỗi**: Người dùng nhập dữ liệu ở Tab 1, chuyển sang Tab 2 xem rồi quay lại Tab 1 $\rightarrow$ Các ô input ở Tab 1 bị xóa sạch về rỗng!
+* **Cách lập trình `.spec.js`**:
+  ```javascript
+  await tab1Input.fill('Dữ liệu thử nghiệm Tab 1');
+  await tab2Header.click(); // Chuyển Tab 2
+  await page.waitForTimeout(500);
+  await tab1Header.click(); // Quay lại Tab 1
+  // Dữ liệu Tab 1 PHẢI được giữ nguyên vẹn
+  await expect(tab1Input).toHaveValue('Dữ liệu thử nghiệm Tab 1');
+  ```
+
+#### 🔸 `EDGE-INP-04`: Bẫy Thoát Không Lưu Không Cảnh Báo (Unsaved Changes / Dirty Form Exit)
+* **Đối tượng**: Modal chỉnh sửa dữ liệu, Form chi tiết.
+* **Mô tả bẫy lỗi**: Người dùng đã sửa nhiều trường quan trọng, nhưng lỡ tay bấm phím `Esc`, click vào nền mờ Backdrop hoặc bấm nút "Hủy". Hệ thống đóng ngay lập tức làm mất toàn bộ công sức nhập liệu mà không có bất kỳ lời cảnh báo nào.
+* **Cách lập trình `.spec.js`**:
+  - Nhập dữ liệu mới vào 1 ô input $\rightarrow$ Bấm nút "Hủy" hoặc phím `Escape`.
+  - Assert hệ thống phải bật Dialog xác nhận: *"Dữ liệu chưa được lưu, bạn có chắc chắn muốn thoát?"*.
+
+#### 🔸 `EDGE-INP-05`: Bẫy Tràn Giới Hạn Độ Dài Ký Tự (Max-length Overflow / Truncation)
+* **Đối tượng**: Ô Mã số thuế, Số CMND/CCCD, Số điện thoại, Ghi chú.
+* **Mô tả bẫy lỗi**: Cố tình nhập chuỗi quá dài (vd: 500 ký tự vào ô Tên ngắn có `varchar(50)`). Hệ thống văng lỗi SQL: `String or binary data would be truncated`.
+* **Cách lập trình `.spec.js`**:
+  - Gõ chuỗi 255 ký tự `A`.
+  - Kiểm tra xem ô input có thuộc tính `maxlength` ngăn chặn nhập quá ngưỡng hay không, hoặc khi bấm Lưu hệ thống có validate độ dài hợp lệ hay không.
+
+#### 🔸 `EDGE-INP-06`: Bẫy Số Âm & Tiền Tệ Âm (Negative & Zero Value Bypassing)
+* **Đối tượng**: Ô Số lượng, Đơn giá, Lương cơ bản, Số ngày phép.
+* **Mô tả bẫy lỗi**: Nhập số âm (vd: `-5000000`) hoặc số `0`. Backend không validate $\rightarrow$ Lưu số âm vào DB gây sai lệch báo cáo tài chính.
+* **Cách lập trình `.spec.js`**:
+  - Nhập `-1000` vào ô tiền tệ $\rightarrow$ Bấm Lưu $\rightarrow$ Bắt buộc assert thông báo lỗi: *"Số tiền phải lớn hơn 0"*.
+
+---
+
+### C. KHO BẪY LỖI BẢNG DỮ LIỆU & THAO TÁC (DATAGRID & ACTION TRAPS)
+
+#### 🔸 `EDGE-GRD-01`: Bẫy Mã HTTP 200 Che Giấu Lỗi Backend (HTTP 200 Masking Trap)
+* **Đối tượng**: Mọi request API qua Generic Handler (`.ashx`, `/api/query`, `/hpa/paradise2`).
+* **Mô tả bẫy lỗi**: Server IIS luôn trả về HTTP 200 OK ngay cả khi SQL văng Exception hoặc trả về kết quả rỗng `data: [[]]`.
+* **Cách lập trình `.spec.js`**:
+  ```javascript
+  const res = await page.waitForResponse(r => r.url().includes('/hpa/paradise2'));
+  expect(res.status()).toBe(200); // ⚠️ KHÔNG ĐƯỢC DỪNG Ở ĐÂY!
+  const json = await res.json();
+  // Bóc tách kiểm tra bên trong có bị văng chuỗi lỗi SQL hay không
+  expect(json.result).not.toContain('error');
+  expect(json.result).not.toContain('Exception');
+  ```
+
+#### 🔸 `EDGE-GRD-02`: Bẫy Xóa Ngay Lập Tức Không Qua Xác Nhận (Accidental Instant Delete)
+* **Đối tượng**: Nút icon Thùng rác / Nút Xóa trên bảng hoặc form.
+* **Mô tả bẫy lỗi**: Người dùng lỡ tay click trúng icon Xóa $\rightarrow$ Hệ thống gọi API xóa luôn bản ghi trong tích tắc mà không hỏi lại người dùng!
+* **Cách lập trình `.spec.js`**:
+  - Di chuột click icon Xóa.
+  - Bắt buộc kiểm tra Popup xác nhận ("Bạn có chắc chắn muốn xóa bản ghi này?") xuất hiện.
+  - Bấm nút "Hủy" trên popup $\rightarrow$ Bản ghi vẫn còn nguyên vẹn trên bảng.
+
+#### 🔸 `EDGE-GRD-03`: Bẫy Double-Click Mở Chi Tiết Nhưng Form Rỗng (Empty Detail Binding Trap)
+* **Đối tượng**: DataGrid có tính năng nhấp đúp vào dòng để xem chi tiết.
+* **Mô tả bẫy lỗi**: Nhấp đúp vào dòng, popup chi tiết mở lên thành công nhưng các ô input bên trong hoàn toàn trắng trơn (rỗng `""`) do API nạp chi tiết bị lỗi ID hoặc Stored Procedure thiếu tham số.
+* **Cách lập trình `.spec.js`**:
+  ```javascript
+  const rowName = await row.locator('.col-name').innerText();
+  await row.dblclick(); // Mở chi tiết
+  await page.waitForResponse(r => r.url().includes('Detail'));
+  // BẮT BUỘC: Ô input Tên trong modal chi tiết PHẢI BẰNG tên của dòng vừa click
+  const detailNameInput = page.locator('#txtName, input[name="FullName"]');
+  await expect(detailNameInput).not.toHaveValue('');
+  await expect(detailNameInput).toHaveValue(rowName.trim());
+  ```
+
+#### 🔸 `EDGE-GRD-04`: Bẫy Mất Vị Trí Phân Trang Sau Khi Thao Tác (Pagination Reset Trap)
+* **Đối tượng**: DataGrid có phân trang.
+* **Mô tả bẫy lỗi**: Người dùng đang ở Trang 5, mở 1 bản ghi lên xem rồi đóng lại, hoặc sửa 1 bản ghi rồi Lưu. Hệ thống tự động reset về Trang 1 bắt người dùng phải cuộn và bấm lại từ đầu!
+* **Cách lập trình `.spec.js`**:
+  - Điều hướng sang Trang 3.
+  - Mở chi tiết 1 bản ghi rồi đóng lại.
+  - Assert DataGrid vẫn giữ nguyên trạng thái đang ở Trang 3.
+
+---
+
+### D. HƯỚNG DẪN BỔ SUNG KỊCH BẢN MỚI VÀO KHO (CONTRIBUTING NEW EDGE CASES)
+
+Khi Agent hoặc Tester gặp một lỗi mới trong thực tế, **hãy mở file này và bổ sung thêm 1 mục theo đúng khung mẫu 5 thành tố chuẩn**:
+
+```markdown
+#### 🔸 `EDGE-[NHÓM]-[SỐ_THỨ_TỰ]`: <Tên Kịch Bản Biên / Bẫy Lỗi Rõ Ràng>
+* **Đối tượng**: <Tên các control hoặc quy trình bị ảnh hưởng>
+* **Mô tả bẫy lỗi**: <Bối cảnh thực tế và hậu quả nghiệp vụ khi gặp lỗi này>
+* **Cách lập trình `.spec.js`**:
+  <Đoạn mã mẫu Playwright bắt trọn trường hợp biên này>
+* **Kỳ vọng hệ thống**: <Hành vi đúng mà hệ thống chuẩn mực phải đáp ứng>
+```
+
+---
+
 ## 3. Quy Trình Xử Lý Khi Người Dùng Yêu Cầu Viết Test Cho Một Trang/Menu
+
 
 ### Bước 1: Kiểm tra Trang đó ĐÃ TỪNG ĐƯỢC TEST CHƯA?
 Agent quét thư mục `tests/` để tìm file spec tương ứng với chức năng đó (Ví dụ: `tests/employee.spec.js`, `tests/contracts.spec.js`, `tests/timesheet.spec.js`):
