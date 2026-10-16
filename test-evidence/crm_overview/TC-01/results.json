@@ -1,0 +1,66 @@
+{
+  "tcId": "TC-01",
+  "pageName": "crm_overview",
+  "title": "Thẩm định Giao diện Dashboard KPI, Thẻ Chỉ số & Bảng Kết quả Chi tiết",
+  "testStatus": "PASSED",
+  "businessStatus": "PASSED",
+  "businessNotes": "PASS - Màn hình Tổng quan CRM nạp đầy đủ các widget và bảng KPI chi tiết",
+  "failureAnalysis": {
+    "issue": "",
+    "expected": "",
+    "actual": "",
+    "rootCause": "",
+    "recommendation": ""
+  },
+  "status": "PASSED",
+  "duration": "21.82s",
+  "errors": "",
+  "stepScreenshots": [
+    {
+      "step": 1,
+      "title": "Mở thành công màn hình Tổng quan CRM",
+      "fileName": "TC-01-step01-mo-thanh-cong-man-hinh-tong-quan-crm.png",
+      "relPath": "crm_overview/TC-01/screenshots/TC-01-step01-mo-thanh-cong-man-hinh-tong-quan-crm.png"
+    },
+    {
+      "step": 2,
+      "title": "Xác nhận hiển thị khu vực Dashboard KPI và các thẻ chỉ số",
+      "fileName": "TC-01-step02-xac-nhan-hien-thi-khu-vuc-dashboard-kpi-va-cac-the-chi-so.png",
+      "relPath": "crm_overview/TC-01/screenshots/TC-01-step02-xac-nhan-hien-thi-khu-vuc-dashboard-kpi-va-cac-the-chi-so.png"
+    },
+    {
+      "step": 3,
+      "title": "Bảng kết quả KPI chi tiết nạp đầy đủ danh sách nhân viên",
+      "fileName": "TC-01-step03-bang-ket-qua-kpi-chi-tiet-nap-day-du-danh-sach-nhan-vien.png",
+      "relPath": "crm_overview/TC-01/screenshots/TC-01-step03-bang-ket-qua-kpi-chi-tiet-nap-day-du-danh-sach-nhan-vien.png"
+    },
+    {
+      "step": 4,
+      "title": "Con trỏ Neon rà soát các cột chỉ số Yêu cầu Thực tế và Đạt được",
+      "fileName": "TC-01-step04-con-tro-neon-ra-soat-cac-cot-chi-so-yeu-cau-thuc-te-va-dat-duoc.png",
+      "relPath": "crm_overview/TC-01/screenshots/TC-01-step04-con-tro-neon-ra-soat-cac-cot-chi-so-yeu-cau-thuc-te-va-dat-duoc.png"
+    },
+    {
+      "step": 5,
+      "title": "Dashboard KPI nạp dữ liệu thành công đạt chuẩn",
+      "fileName": "TC-01-step05-dashboard-kpi-nap-du-lieu-thanh-cong-dat-chuan.png",
+      "relPath": "crm_overview/TC-01/screenshots/TC-01-step05-dashboard-kpi-nap-du-lieu-thanh-cong-dat-chuan.png"
+    }
+  ],
+  "attachments": {
+    "screenshots": [
+      "crm_overview/TC-01/screenshots/TC-01-step01-mo-thanh-cong-man-hinh-tong-quan-crm.png",
+      "crm_overview/TC-01/screenshots/TC-01-step02-xac-nhan-hien-thi-khu-vuc-dashboard-kpi-va-cac-the-chi-so.png",
+      "crm_overview/TC-01/screenshots/TC-01-step03-bang-ket-qua-kpi-chi-tiet-nap-day-du-danh-sach-nhan-vien.png",
+      "crm_overview/TC-01/screenshots/TC-01-step04-con-tro-neon-ra-soat-cac-cot-chi-so-yeu-cau-thuc-te-va-dat-duoc.png",
+      "crm_overview/TC-01/screenshots/TC-01-step05-dashboard-kpi-nap-du-lieu-thanh-cong-dat-chuan.png"
+    ],
+    "videos": [
+      "crm_overview/TC-01/videos/video.webm"
+    ],
+    "traces": [
+      "crm_overview/TC-01/traces/trace.zip"
+    ]
+  },
+  "timestamp": "2026-10-16T05:29:12.376Z"
+}

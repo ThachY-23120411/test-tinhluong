@@ -1,6 +1,6 @@
 # BÁO CÁO KIỂM THỬ TRANG: EMPLOYEE_BANK_APPROVAL
 
-> Thời gian kiểm thử: **23:16:56 15/10/2026**
+> Thời gian kiểm thử: **10:49:06 16/10/2026**
 > Tổng số kịch bản: **3** | ✅ LOGIC PASS: **2** | ❌ LOGIC FAIL: **1**
 
 ## BẢNG ĐỐI CHIẾU TRẠNG THÁI TEST & LOGIC NGHIỆP VỤ
@@ -15,7 +15,7 @@
 
 ### TC-01: Nhân viên Tai.Dang đăng nhập và cập nhật Thông tin Ngân hàng
 
-* **Trạng thái thực thi Test (Kỹ thuật)**: ✅ PASS (Thời gian thực thi: `37.48s`)
+* **Trạng thái thực thi Test (Kỹ thuật)**: ✅ PASS (Thời gian thực thi: `36.68s`)
 * **Trạng thái Logic Nghiệp vụ (Business Output)**: ✅ PASS
 * **Đánh giá tổng quát**: PASS - Yêu cầu cập nhật thông tin ngân hàng đã được gửi thành công lên hệ thống phê duyệt
 * **Thư mục lưu trữ**: `test-evidence/employee_bank_approval/TC-01/`
@@ -45,7 +45,7 @@
 
 ### TC-02: Quản lý Cuong.Vu đăng nhập và Phê duyệt thay đổi hồ sơ
 
-* **Trạng thái thực thi Test (Kỹ thuật)**: ✅ PASS (Thời gian thực thi: `34.58s`)
+* **Trạng thái thực thi Test (Kỹ thuật)**: ✅ PASS (Thời gian thực thi: `33.59s`)
 * **Trạng thái Logic Nghiệp vụ (Business Output)**: ✅ PASS
 * **Đánh giá tổng quát**: PASS - Quản lý phê duyệt thành công yêu cầu trên hệ thống (Hệ thống xác nhận: Đã duyệt thành công các thay đổi)
 * **Thư mục lưu trữ**: `test-evidence/employee_bank_approval/TC-02/`
@@ -75,7 +75,7 @@
 
 ### TC-03: Nhân viên Tai.Dang đăng nhập lại để đối chiếu và kiểm tra thông tin sau phê duyệt
 
-* **Trạng thái thực thi Test (Kỹ thuật)**: ✅ PASS (Thời gian thực thi: `29.93s`)
+* **Trạng thái thực thi Test (Kỹ thuật)**: ✅ PASS (Thời gian thực thi: `32.14s`)
 * **Trạng thái Logic Nghiệp vụ (Business Output)**: ❌ FAIL
 * **Đánh giá tổng quát**: FAIL - Thông tin tài khoản ngân hàng không hiển thị trên hồ sơ nhân viên sau khi đã được phê duyệt
 * **Thư mục lưu trữ**: `test-evidence/employee_bank_approval/TC-03/`

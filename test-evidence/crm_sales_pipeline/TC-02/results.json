@@ -1,0 +1,66 @@
+{
+  "tcId": "TC-02",
+  "pageName": "crm_sales_pipeline",
+  "title": "Thẩm định Ô Tìm kiếm (#kanbanSearchInput) & Lọc Nhanh Cơ Hội",
+  "testStatus": "PASSED",
+  "businessStatus": "PASSED",
+  "businessNotes": "PASS - Ô tìm kiếm Kanban lọc tức thì và khôi phục dữ liệu hoàn hảo",
+  "failureAnalysis": {
+    "issue": "",
+    "expected": "",
+    "actual": "",
+    "rootCause": "",
+    "recommendation": ""
+  },
+  "status": "PASSED",
+  "duration": "28.99s",
+  "errors": "",
+  "stepScreenshots": [
+    {
+      "step": 1,
+      "title": "Xác định vị trí ô tìm kiếm và trích xuất từ khóa: Công",
+      "fileName": "TC-02-step01-xac-dinh-vi-tri-o-tim-kiem-va-trich-xuat-tu-khoa-cong.png",
+      "relPath": "crm_sales_pipeline/TC-02/screenshots/TC-02-step01-xac-dinh-vi-tri-o-tim-kiem-va-trich-xuat-tu-khoa-cong.png"
+    },
+    {
+      "step": 2,
+      "title": "Con trỏ Neon focus vào ô tìm kiếm Kanban",
+      "fileName": "TC-02-step02-con-tro-neon-focus-vao-o-tim-kiem-kanban.png",
+      "relPath": "crm_sales_pipeline/TC-02/screenshots/TC-02-step02-con-tro-neon-focus-vao-o-tim-kiem-kanban.png"
+    },
+    {
+      "step": 3,
+      "title": "Gõ từ khóa tìm kiếm và quan sát các thẻ được lọc trực tiếp",
+      "fileName": "TC-02-step03-go-tu-khoa-tim-kiem-va-quan-sat-cac-the-duoc-loc-truc-tiep.png",
+      "relPath": "crm_sales_pipeline/TC-02/screenshots/TC-02-step03-go-tu-khoa-tim-kiem-va-quan-sat-cac-the-duoc-loc-truc-tiep.png"
+    },
+    {
+      "step": 4,
+      "title": "Hệ thống lọc tức thì danh sách còn 51 thẻ khớp từ khóa",
+      "fileName": "TC-02-step04-he-thong-loc-tuc-thi-danh-sach-con-51-the-khop-tu-khoa.png",
+      "relPath": "crm_sales_pipeline/TC-02/screenshots/TC-02-step04-he-thong-loc-tuc-thi-danh-sach-con-51-the-khop-tu-khoa.png"
+    },
+    {
+      "step": 5,
+      "title": "Khôi phục nguyên vẹn 61 thẻ cơ hội ban đầu",
+      "fileName": "TC-02-step05-khoi-phuc-nguyen-ven-61-the-co-hoi-ban-dau.png",
+      "relPath": "crm_sales_pipeline/TC-02/screenshots/TC-02-step05-khoi-phuc-nguyen-ven-61-the-co-hoi-ban-dau.png"
+    }
+  ],
+  "attachments": {
+    "screenshots": [
+      "crm_sales_pipeline/TC-02/screenshots/TC-02-step01-xac-dinh-vi-tri-o-tim-kiem-va-trich-xuat-tu-khoa-cong.png",
+      "crm_sales_pipeline/TC-02/screenshots/TC-02-step02-con-tro-neon-focus-vao-o-tim-kiem-kanban.png",
+      "crm_sales_pipeline/TC-02/screenshots/TC-02-step03-go-tu-khoa-tim-kiem-va-quan-sat-cac-the-duoc-loc-truc-tiep.png",
+      "crm_sales_pipeline/TC-02/screenshots/TC-02-step04-he-thong-loc-tuc-thi-danh-sach-con-51-the-khop-tu-khoa.png",
+      "crm_sales_pipeline/TC-02/screenshots/TC-02-step05-khoi-phuc-nguyen-ven-61-the-co-hoi-ban-dau.png"
+    ],
+    "videos": [
+      "crm_sales_pipeline/TC-02/videos/video.webm"
+    ],
+    "traces": [
+      "crm_sales_pipeline/TC-02/traces/trace.zip"
+    ]
+  },
+  "timestamp": "2026-10-16T05:46:13.336Z"
+}

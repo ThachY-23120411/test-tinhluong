@@ -13,7 +13,7 @@
     "recommendation": "Đội ngũ Backend cần kiểm tra lại Stored Procedure sp_approve_EmployeeChange để đảm bảo dữ liệu được đồng bộ vào bảng nhân viên chính thức; đồng thời kiểm tra luồng API nạp dữ liệu lên form Hồ sơ nhân viên."
   },
   "status": "FAILED",
-  "duration": "29.93s",
+  "duration": "32.14s",
   "errors": "",
   "stepScreenshots": [
     {
@@ -48,5 +48,5 @@
       "employee_bank_approval/TC-03/traces/trace.zip"
     ]
   },
-  "timestamp": "2026-10-15T16:16:55.959Z"
+  "timestamp": "2026-10-16T03:49:05.808Z"
 }

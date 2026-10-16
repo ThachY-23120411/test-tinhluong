@@ -1,0 +1,1661 @@
+{
+  "code": "CRM-15",
+  "appId": "MnuCSM004",
+  "menuName": "Báo giá phần mềm",
+  "group": "Báo giá",
+  "clickSuccess": true,
+  "crawledAt": "2026-10-16T02:33:24.449Z",
+  "screenshot": "CRM-15_bao_gia_phan_mem.png",
+  "mainScreen": {
+    "contextName": "Báo giá phần mềm",
+    "fields": [
+      {
+        "index": 1,
+        "label": "Trường #1",
+        "controlType": "CheckBox",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": "true"
+      },
+      {
+        "index": 2,
+        "label": "Trường #2",
+        "controlType": "CheckBox",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": "true"
+      },
+      {
+        "index": 4,
+        "label": "Trường #4",
+        "controlType": "Dropdown / SelectBox",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 5,
+        "label": "Trường #5",
+        "controlType": "Dropdown / SelectBox",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 6,
+        "label": "Trường #6",
+        "controlType": "Dropdown / SelectBox",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 7,
+        "label": "Chọn cột hiển thị",
+        "controlType": "TextBox (Text / String)",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 8,
+        "label": "Trường #8",
+        "controlType": "CheckBox",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": "false"
+      },
+      {
+        "index": 10,
+        "label": "Chọn cột hiển thị",
+        "controlType": "TextBox (Text / String)",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 15,
+        "label": "Nhân viên",
+        "controlType": "Dropdown / SelectBox",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": "2026-09-16"
+      },
+      {
+        "index": 16,
+        "label": "Chọn cột hiển thị",
+        "controlType": "TextBox (Text / String)",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 17,
+        "label": "Tìm kiếm theo nội dung",
+        "controlType": "TextBox (Text / String)",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 18,
+        "label": "Trường #18",
+        "controlType": "CheckBox",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": "false"
+      },
+      {
+        "index": 20,
+        "label": "Ngày tạo",
+        "controlType": "DatePicker / DateBox",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 21,
+        "label": "Mã nhân viên",
+        "controlType": "TextBox (Text / String)",
+        "state": "DISABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 22,
+        "label": "Công ty",
+        "controlType": "TextBox (Text / String)",
+        "state": "DISABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 23,
+        "label": "Mã số thuế",
+        "controlType": "TextBox (Text / String)",
+        "state": "DISABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 24,
+        "label": "Ngành",
+        "controlType": "Dropdown / SelectBox",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 25,
+        "label": "Địa chỉ",
+        "controlType": "TextBox (Text / String)",
+        "state": "DISABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 26,
+        "label": "Người liên hệ",
+        "controlType": "TextBox (Text / String)",
+        "state": "DISABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 27,
+        "label": "Điện thoại",
+        "controlType": "TextBox (Text / String)",
+        "state": "DISABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 28,
+        "label": "EMAIL",
+        "controlType": "TextBox (Text / String)",
+        "state": "DISABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 29,
+        "label": "Chức vụ công việc",
+        "controlType": "Dropdown / SelectBox",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 30,
+        "label": "Quy mô công ty",
+        "controlType": "Dropdown / SelectBox",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 31,
+        "label": "Nguồn",
+        "controlType": "TextBox (Text / String)",
+        "state": "DISABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 32,
+        "label": "Ghi chú",
+        "controlType": "TextArea",
+        "state": "DISABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 33,
+        "label": "Trạng thái",
+        "controlType": "TextBox (Text / String)",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 34,
+        "label": "Vui lòng nhập lý do từ chối",
+        "controlType": "TextArea",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 35,
+        "label": "Nhân viên",
+        "controlType": "DatePicker / DateBox",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": "2026-10-12"
+      },
+      {
+        "index": 36,
+        "label": "Nhân viên",
+        "controlType": "DatePicker / DateBox",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 38,
+        "label": "Tìm kiếm theo nội dung",
+        "controlType": "TextBox (Text / String)",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 40,
+        "label": "Tìm kiếm theo nội dung",
+        "controlType": "TextBox (Text / String)",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 43,
+        "label": "Tiêu đề",
+        "controlType": "TextBox (Text / String)",
+        "state": "ENABLED",
+        "required": "YES (*)",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Bắt buộc nhập (*)",
+        "currentValue": ""
+      },
+      {
+        "index": 44,
+        "label": "Địa\n                            điểm",
+        "controlType": "TextBox (Text / String)",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 45,
+        "label": "Bắt\n                            đầu",
+        "controlType": "DatePicker / DateBox",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 46,
+        "label": "Kết\n                            thúc",
+        "controlType": "DatePicker / DateBox",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 47,
+        "label": "Người tham dự",
+        "controlType": "TextBox (Text / String)",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 48,
+        "label": "Nội dung",
+        "controlType": "Dropdown / SelectBox",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": "#000000"
+      },
+      {
+        "index": 49,
+        "label": "Nhắc\n                            trước",
+        "controlType": "NumberInput",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Chỉ nhận giá trị số",
+        "currentValue": "15"
+      },
+      {
+        "index": 50,
+        "label": "Nhân viên",
+        "controlType": "DatePicker / DateBox",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": "2026-10-12"
+      },
+      {
+        "index": 52,
+        "label": "Tìm kiếm theo nội dung",
+        "controlType": "TextBox (Text / String)",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 55,
+        "label": "Thời gian",
+        "controlType": "DatePicker / DateBox",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 56,
+        "label": "Chủ đề",
+        "controlType": "TextBox (Text / String)",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 57,
+        "label": "Trạng thái",
+        "controlType": "Dropdown / SelectBox",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 58,
+        "label": "Loại bài đăng",
+        "controlType": "Dropdown / SelectBox",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 59,
+        "label": "Link bài đăng",
+        "controlType": "TextBox (Text / String)",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 60,
+        "label": "Ghi chú",
+        "controlType": "Dropdown / SelectBox",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": "#000000"
+      },
+      {
+        "index": 61,
+        "label": "Đính kèm",
+        "controlType": "TextBox (Text / String)",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 62,
+        "label": "Nhân viên",
+        "controlType": "DatePicker / DateBox",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": "2026-10-12"
+      },
+      {
+        "index": 63,
+        "label": "Chọn cột hiển thị",
+        "controlType": "TextBox (Text / String)",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 64,
+        "label": "Tìm kiếm theo nội dung",
+        "controlType": "TextBox (Text / String)",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 90,
+        "label": "Chọn cột hiển thị",
+        "controlType": "TextBox (Text / String)",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 91,
+        "label": "Tìm kiếm theo nội dung",
+        "controlType": "TextBox (Text / String)",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 94,
+        "label": "Chọn cột hiển thị",
+        "controlType": "TextBox (Text / String)",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 95,
+        "label": "Thêm",
+        "controlType": "TextBox (Text / String)",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 96,
+        "label": "Tìm kiếm theo nội dung",
+        "controlType": "TextBox (Text / String)",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 106,
+        "label": "Trường #106",
+        "controlType": "Dropdown / SelectBox",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 107,
+        "label": "Chọn cột hiển thị",
+        "controlType": "TextBox (Text / String)",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 108,
+        "label": "Tìm kiếm theo nội dung",
+        "controlType": "TextBox (Text / String)",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 109,
+        "label": "Trường #109",
+        "controlType": "CheckBox",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": "false"
+      },
+      {
+        "index": 111,
+        "label": "Xem tất cả ngày",
+        "controlType": "DatePicker / DateBox",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": "2026-10-12"
+      },
+      {
+        "index": 116,
+        "label": "Tìm kiếm theo nội dung",
+        "controlType": "TextBox (Text / String)",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 140,
+        "label": "Ngày tạo",
+        "controlType": "DatePicker / DateBox",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 141,
+        "label": "Kéo thả hình ảnh để AI phân tích",
+        "controlType": "TextBox (Text / String)",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 142,
+        "label": "Xem của tôi",
+        "controlType": "CheckBox",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": "on"
+      },
+      {
+        "index": 143,
+        "label": "Chọn cột hiển thị",
+        "controlType": "TextBox (Text / String)",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 144,
+        "label": "Tìm kiếm theo nội dung",
+        "controlType": "TextBox (Text / String)",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 164,
+        "label": "Nhân viên",
+        "controlType": "DatePicker / DateBox",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": "2026-10-01"
+      },
+      {
+        "index": 166,
+        "label": "Tìm kiếm theo nội dung",
+        "controlType": "TextBox (Text / String)",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 168,
+        "label": "Excel",
+        "controlType": "TextBox (Text / String)",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 169,
+        "label": "Excel",
+        "controlType": "TextBox (Text / String)",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 170,
+        "label": "Excel",
+        "controlType": "TextBox (Text / String)",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 171,
+        "label": "Excel",
+        "controlType": "TextBox (Text / String)",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 172,
+        "label": "Excel",
+        "controlType": "TextBox (Text / String)",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 173,
+        "label": "Excel",
+        "controlType": "TextBox (Text / String)",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 174,
+        "label": "Excel",
+        "controlType": "TextBox (Text / String)",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 175,
+        "label": "Excel",
+        "controlType": "TextBox (Text / String)",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 176,
+        "label": "Excel",
+        "controlType": "TextBox (Text / String)",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 177,
+        "label": "Excel",
+        "controlType": "TextBox (Text / String)",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 178,
+        "label": "Excel",
+        "controlType": "TextBox (Text / String)",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 179,
+        "label": "Excel",
+        "controlType": "TextBox (Text / String)",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 180,
+        "label": "Excel",
+        "controlType": "TextBox (Text / String)",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 181,
+        "label": "Excel",
+        "controlType": "TextBox (Text / String)",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 182,
+        "label": "Excel",
+        "controlType": "TextBox (Text / String)",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 183,
+        "label": "Excel",
+        "controlType": "TextBox (Text / String)",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 186,
+        "label": "#",
+        "controlType": "TextBox (Text / String)",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 197,
+        "label": "Xếp hạng",
+        "controlType": "TextBox (Text / String)",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 199,
+        "label": "STT",
+        "controlType": "TextBox (Text / String)",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 201,
+        "label": "#",
+        "controlType": "TextBox (Text / String)",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      }
+    ],
+    "buttons": [
+      "Không",
+      "Đồng ý",
+      "OK",
+      "Share",
+      "Báo giá phần mềm",
+      "Lọc dữ liệu",
+      "Thu thập dữ liệu",
+      "Import bất thường",
+      "Các cuộc họp",
+      "Nội dung đăng tải",
+      "Email gửi thủ công",
+      "Lịch sử tin AI tạo tin nhắn",
+      "Sản phẩm marketing",
+      "Xoá",
+      "Chuyển dữ liệu",
+      "Chọn cột hiển thị",
+      "＋ Thêm tổ hợp",
+      "✕ Xóa tổ hợp",
+      "Cào theo tổ hợp",
+      "Dừng cào hàng loạt",
+      "Tải lại",
+      "Từ chối",
+      "Duyệt",
+      "Tìm kiếm",
+      "Làm mới",
+      "Đóng",
+      "Hủy",
+      "Tạo cuộc họp mới",
+      "Bình thường",
+      "16px",
+      "Khôi phục mặc định",
+      "Áp dụng",
+      "Start Recording",
+      "Xóa",
+      "Lưu cuộc họp",
+      "Thêm nội dung",
+      "Xóa hình ảnh",
+      "Lưu dữ liệu",
+      "Gửi",
+      "Soạn thư",
+      "Tất cả",
+      "Bạn bè",
+      "Nhóm",
+      "Khách hàng",
+      "Thêm",
+      "Export",
+      "Tuần",
+      "Tháng",
+      "Quý",
+      "Năm",
+      "Quay lại",
+      "+ Thêm mới",
+      "Chỉnh sửa",
+      "Import",
+      "Danh sách bổ xung",
+      "Dữ liệu thu thập",
+      "Lead",
+      "Đã liên hệ",
+      "Đã demo & gửi báo giá",
+      "Cần chăm sóc",
+      "Sắp chốt đơn",
+      "Thành công",
+      "Thất bại",
+      "Hôm nay",
+      "Tuần này",
+      "Tháng này",
+      "? Áp dụng",
+      "Lưu thông tin liên hệ",
+      "Xuất báo giá",
+      "Lưu báo giá",
+      "Tạo báo giá mới",
+      "Excel",
+      "Thêm Lead",
+      "Tính toán lại",
+      "Quản lý danh sách KPI",
+      "Lưu cấu hình",
+      "Lọc",
+      "Xuất Excel",
+      "Close all tabs",
+      "Close other tabs",
+      "Close all tabs on left",
+      "Close all tabs on right",
+      "Close this tab",
+      "Pin to taskbar",
+      "Open",
+      "Unpin to taskbar",
+      "Ðánh d?u t?t c? dã xem",
+      "Xem danh sách thông báo",
+      "Cài d?t",
+      "Stay",
+      "Select a file",
+      "Upload",
+      "Nhấn để thiết lập phím tắt",
+      "Hủy phím tắt"
+    ]
+  },
+  "modals": [],
+  "dataLineage": {
+    "isDownstreamScreen": false,
+    "hasDataTable": true,
+    "hasCreateButton": true,
+    "detectedMetadata": {},
+    "inferredStoredProcedures": [
+      "sp_Sub_SubQuotation"
+    ],
+    "recommendation": "Màn hình \"Báo giá phần mềm\" có sẵn form tạo/nhập dữ liệu trực tiếp."
+  },
+  "apiNetworkCalls": [
+    {
+      "type": "request",
+      "url": "https://paradisehrm.com/Tai3/api/hpa/paradise?&name=paradisepublic&param=[%22paradisepublic%22,%22sp_Sub_SubQuotation%22,%22LanguageID%22,%22VN%22,%22ParadiseVersion%22,-1521729414]&user=paradisepublic&password=3C9909AFEC25354D551DAE21590BB26E38D53F2173B8D3DC3EEE4C047E7AB1C1EB8B85103E3BE7BA613B31BB5C9C36214DC9F14A42FD7A2FDB84856BCA5C44C2&_cb=VN_-1521729414",
+      "method": "GET",
+      "resourceType": "xhr",
+      "postData": null,
+      "timestamp": "2026-10-16T02:33:12.081Z"
+    },
+    {
+      "type": "request",
+      "url": "https://paradisehrm.com/Tai3/hpa/paradise2",
+      "method": "POST",
+      "resourceType": "fetch",
+      "postData": {
+        "content": "02xY5O3N3CIcOd20zC0/ATOZWT00Qk6gu0O5yKQbIIEcfCdU/s8ytsWyvFSnIpV63DhwyA8Sm8hAVLVEfHQd84Ae350jXqD0APv3lxYIsZfMljF7zN3npoBJDKSrsf+kQiTqIMeqNrzomX8S1Hyvo8f4G0HCrlZ2CENcB73W1/ouzGTW2LxDmj09ndA+d4bRnfHkcut/cXY9g1+j5oMtWzf2s8b6liVAou4aarswLsppQf0m42fzRFAE804wYojljeS/wvulP3ce9Um8hvsQAQAJ1/zvPoBnb7lJxhKfBVz/Df7bfebCZq33PYJny2fImNjEWLhrC2wbmMojd4qZB3XdRcYK81sK47GR3zwBe1177HdGJDHlLBMse/JQ9FwMJFJR3I/8cJ6QdL9SB7gEJHQSkbO98w2FjIjxBW2fdsOg3V4pQbokPNCoFiMBs1LOCG9JrOr+toU6Vgd2We6EMqj43zMrlDCWJBGsLKcLazk=",
+        "paradiseType": "2"
+      },
+      "timestamp": "2026-10-16T02:33:12.085Z"
+    },
+    {
+      "type": "request",
+      "url": "https://paradisehrm.com/Tai3/hpa/paradise2",
+      "method": "POST",
+      "resourceType": "fetch",
+      "postData": {
+        "content": "02xY5O3N3CIcOd20zC0/ATOZWT00Qk6gu0O5yKQbIIEcfCdU/s8ytsWyvFSnIpV63DhwyA8Sm8hAVLVEfHQd84Ae350jXqD0APv3lxYIsZfMljF7zN3npoBJDKSrsf+kQiTqIMeqNrzomX8S1Hyvo8f4G0HCrlZ2CENcB73W1/ouzGTW2LxDmj09ndA+d4bRzzvT0NnRWZ1Ir9wN7Hw/OfMnoKwueYvrxU+iDKj+L/yqNnfWSvukUK8zaEPU4onv32iJRevXGNIBrV523mDQ4j8O8dlx+4SYRqtmnRI4eO8+b8R7gTdCCTRhJe0ra9wDh8i1dGQN1Gm8n9EpmodbBQ==",
+        "paradiseType": "2"
+      },
+      "timestamp": "2026-10-16T02:33:12.300Z"
+    },
+    {
+      "type": "response",
+      "url": "https://paradisehrm.com/Tai3/api/hpa/paradise?&name=paradisepublic&param=[%22paradisepublic%22,%22sp_Sub_SubQuotation%22,%22LanguageID%22,%22VN%22,%22ParadiseVersion%22,-1521729414]&user=paradisepublic&password=3C9909AFEC25354D551DAE21590BB26E38D53F2173B8D3DC3EEE4C047E7AB1C1EB8B85103E3BE7BA613B31BB5C9C36214DC9F14A42FD7A2FDB84856BCA5C44C2&_cb=VN_-1521729414",
+      "status": 200,
+      "responseBody": {
+        "result": "success",
+        "reason": "",
+        "data": [
+          [
+            {
+              "bytes": "\r\n   <style>\r\n  #sp_Sub_SubQuotation_html .btn-add-SubQuotation {\r\n    white-space: nowrap;\r\n    padding: 6px 18px;\r\n    font-weight: 500;\r\n    font-size: 0.9rem;\r\n    border: none;\r\n    box-shadow: 0 2px 4px rgba(74, 158, 15, 0.2);\r\n    transition: background-color 0.2s;\r\n  }\r\n  #sp_Sub_SubQuotation_html .modal-overlay {\r\n    position: fixed;\r\n    inset: 0;\r\n    background: rgba(0, 0, 0, 0.7);\r\n    z-index: 1050;\r\n    align-items: center;\r\n    justify-content: center;\r\n    padding: 1rem;\r\n    visibility: hidden;\r\n    opacity: 0;\r\n    transition:\r\n      opacity 0.2s,\r\n      visibility 0.2s;\r\n    display: flex;\r\n    /* ✅ Luôn có display flex để reserve space */\r\n  }\r\n\r\n    #sp_Sub_SubQuotation_html .dx-datagrid-header-panel\r\n     {\r\n        padding-bottom: 32px;\r\n     }\r\n     #sp_Sub_SubQuotation_html .dx-button-has-icon.dx-button-has-text .dx-button-content\r\n     {\r\n\r\n        padding: 10px;\r\n\r\n     }\r\n\r\n    #sp_Sub_SubQuotation_html .btn-icon {\r\n        border-radius: 8px;\r\n    }\r\n  #sp_Sub_SubQuotation_html .btn-add-item {\r\n    background: rgba(46, 125, 50, 0.1);\r\n    color: var(--quote-primary);\r\n    border: 2px dashed var(--quote-primary);\r\n    padding: 0.75rem;\r\n    border-radius: 8px;\r\n    width: 100%;\r\n    cursor: pointer;\r\n    margin-top: 1rem;\r\n    font-weight: 600;\r\n    transition: all 0.2s;\r\n  }\r\n\r\n  #sp_Sub_SubQuotation_html .btn-add-item:hover {\r\n    background: rgba(46, 125, 50, 0.2);\r\n    transform: translateY(-2px);\r\n  }\r\n\r\n    /* Responsive CSS only - SubQuotation 2026-07-01 */\r\n    #sp_Sub_SubQuotation_html,\r\n    #sp_Sub_SubQuotation_html * { box-sizing: border-box; }\r\n    #sp_Sub_SubQuotation_html { width: 100%; max-width: 100%; min-width: 0; min-height: 0; overflow: hidden; }\r\n    #sp_Sub_SubQuotation_html .header-section { min-width: 0; max-width: 100%; }\r\n    #sp_Sub_SubQuotation_html .header-section h3 { line-height: 1.2; overflow-wrap: anywhere; }\r\n    #sp_Sub_SubQuotation_html .ttv-grid-wrap { width: 100%; max-width: 100%; min-width: 0; overflow-x: auto !important; overflow-y: hidden; -webkit-overflow-scrolling: touch; }\r\n    #sp_Sub_SubQuotation_html #QuouteListGrid { width: 100%; max-width: 100%; min-width: 0; overflow: hidden; }\r\n    #sp_Sub_SubQuotation_html #QuouteListGrid .dx-datagrid-header-panel,\r\n    #sp_Sub_SubQuotation_html #QuouteListGrid .dx-toolbar,\r\n    #sp_Sub_SubQuotation_html #QuouteListGrid .dx-toolbar-items-container { height: auto !important; min-height: 0; overflow: visible !important; }\r\n    #sp_Sub_SubQuotation_html #QuouteListGrid .dx-toolbar-items-container { display: flex !important; flex-wrap: wrap !important; align-items: center !important; gap: 8px !important; width: 100%; }\r\n    #sp_Sub_SubQuotation_html #QuouteListGrid .dx-toolbar-before,\r\n    #sp_Sub_SubQuotation_html #QuouteListGrid .dx-toolbar-center,\r\n    #sp_Sub_SubQuotation_html #QuouteListGrid .dx-toolbar-after { display: flex !important; flex-wrap: wrap !important; align-items: center !important; gap: 8px !important; min-width: 0; max-width: 100%; position: static !important; }\r\n    #sp_Sub_SubQuotation_html #QuouteListGrid .dx-toolbar-before { flex: 0 1 auto; }\r\n    #sp_Sub_SubQuotation_html #QuouteListGrid .dx-toolbar-after { flex: 1 1 360px; margin-left: auto !important; justify-content: flex-end; }\r\n    #sp_Sub_SubQuotation_html #QuouteListGrid .dx-toolbar-item,\r\n    #sp_Sub_SubQuotation_html #QuouteListGrid .dx-toolbar-item-content { min-width: 0; max-width: 100%; }\r\n    #sp_Sub_SubQuotation_html #QuouteListGrid .dx-toolbar-after .dx-toolbar-item { flex: 0 0 auto; }\r\n    #sp_Sub_SubQuotation_html #QuouteListGrid .dx-toolbar-after .dx-toolbar-item:has(.toolbar-right) { flex: 0 1 auto; }\r\n    #sp_Sub_SubQuotation_html #QuouteListGrid .dx-toolbar-after .toolbar-right { flex: 0 0 auto; }\r\n    #sp_Sub_SubQuotation_html #QuouteListGrid .dx-toolbar-after .dx-toolbar-item:has(.dx-searchbox) { flex: 1 1 240px; min-width: 220px; max-width: none; }\r\n    #sp_Sub_SubQuotation_html #QuouteListGrid .dx-searchbox { width: 100% !important; min-width: 220px; max-width: none; }\r\n    #sp_Sub_SubQuotation_html #QuouteListGrid .dx-button { flex: 0 0 auto; }\r\n    #sp_Sub_SubQuotation_html #QuouteListGrid .dx-datagrid-headers,\r\n    #sp_Sub_SubQuotation_html #QuouteListGrid .dx-datagrid-rowsview { max-width: 100%; overflow-x: auto !important; -webkit-overflow-scrolling: touch; }\r\n    #sp_Sub_SubQuotation_html #QuouteListGrid .dx-datagrid-table { min-width: 900px; }\r\n    #sp_Sub_SubQuotation_html #QuouteListGrid .dx-datagrid-table th,\r\n    #sp_Sub_SubQuotation_html #QuouteListGrid .dx-datagrid-table td,\r\n    #sp_Sub_SubQuotation_html #QuouteListGrid .dx-header-row td { white-space: nowrap; }\r\n    #sp_Sub_SubQuotation_html #QuouteListGrid .dx-scrollable-container,\r\n    #sp_Sub_SubQuotation_html #QuouteListGrid .dx-scrollable-content { min-width: 0; }\r\n    @media (max-width: 1024px) {\r\n        #sp_Sub_SubQuotation_html { height: auto !important; min-height: 100dvh; overflow-y: auto !important; overflow-x: hidden !important; padding-left: 12px !important; padding-right: 12px !important; }\r\n        #sp_Sub_SubQuotation_html .header-section h3 { font-size: 22px; }\r\n        #sp_Sub_SubQuotation_html .ttv-grid-wrap,\r\n        #sp_Sub_SubQuotation_html #QuouteListGrid { overflow: visible !important; }\r\n        #sp_Sub_SubQuotation_html #QuouteListGrid .dx-datagrid-header-panel { padding-bottom: 8px !important; }\r\n    }\r\n    @media (max-width: 768px) {\r\n        #sp_Sub_SubQuotation_html { padding-left: 10px !important; padding-right: 10px !important; }\r\n        #sp_Sub_SubQuotation_html .header-section h3 { font-size: 20px; }\r\n        #sp_Sub_SubQuotation_html #QuouteListGrid .dx-toolbar-before,\r\n        #sp_Sub_SubQuotation_html #QuouteListGrid .dx-toolbar-center { width: 100%; flex: 1 1 100%; margin-left: 0 !important; justify-content: flex-start; }\r\n        #sp_Sub_SubQuotation_html #QuouteListGrid .dx-toolbar-after { width: 100%; flex: 1 1 100%; margin-left: 0 !important; justify-content: flex-start; }\r\n        #sp_Sub_SubQuotation_html #QuouteListGrid .dx-toolbar-after .dx-toolbar-item:has(.toolbar-right) { flex: 1 1 100%; min-width: 100%; }\r\n        #sp_Sub_SubQuotation_html #QuouteListGrid .dx-toolbar-after .toolbar-right { flex: 0 0 auto; width: auto; }\r\n        #sp_Sub_SubQuotation_html #QuouteListGrid .dx-toolbar-after .dx-toolbar-item:has(.dx-searchbox) { flex: 1 1 100%; min-width: 100%; max-width: 100%; }\r\n        #sp_Sub_SubQuotation_html #QuouteListGrid .dx-searchbox { width: 100% !important; min-width: 0; max-width: 100%; }\r\n        #sp_Sub_SubQuotation_html #QuouteListGrid .dx-datagrid-table { min-width: 820px; }\r\n    }\r\n    @media (max-width: 480px) {\r\n        #sp_Sub_SubQuotation_html { padding-left: 8px !important; padding-right: 8px !important; }\r\n        #sp_Sub_SubQuotation_html .header-section h3 { font-size: 18px; }\r\n        #sp_Sub_SubQuotation_html #QuouteListGrid .dx-toolbar-items-container { gap: 6px !important; }\r\n        #sp_Sub_SubQuotation_html #QuouteListGrid .dx-toolbar-before,\r\n        #sp_Sub_SubQuotation_html #QuouteListGrid .dx-toolbar-center,\r\n        #sp_Sub_SubQuotation_html #QuouteListGrid .dx-toolbar-after { gap: 6px !important; }\r\n        #sp_Sub_SubQuotation_html #QuouteListGrid .dx-toolbar-after .dx-toolbar-item:has(.dx-searchbox) { flex: 1 1 100%; min-width: 100%; }\r\n        #sp_Sub_SubQuotation_html #QuouteListGrid .dx-searchbox { flex: 1 1 100%; width: 100% !important; }\r\n        #sp_Sub_SubQuotation_html #QuouteListGrid .dx-datagrid-table { min-width: 760px; }\r\n        #sp_Sub_SubQuotation_html #QuouteListGrid .dx-datagrid-headers .dx-datagrid-text-content,\r\n        #sp_Sub_SubQuotation_html #QuouteListGrid .dx-datagrid-rowsview td { font-size: 12px; line-height: 1.25; }\r\n    }\r\n  </style>\r\n<div id=\"sp_Sub_SubQuotation_html\" class=\"container-fluid\">\r\n  <div class=\"header-section pb-2\">\r\n    <div\r\n      class=\"d-flex flex-column flex-md-row justify-content-between align-items-start align-items-md-center gap-3\"\r\n    >\r\n      <div>\r\n        <h3 class=\"mb-1 fw-bold\">\r\n          <i class=\"bi bi-file-earmark-text-fill me-2\"></i\r\n          >Quản lý Báo giá Tùy chỉnh\r\n        </h3>\r\n        <p class=\"mb-0 opacity-75\">Tạo và quản lý báo giá cho khách hàng một cách chuyên nghiệp</p>\r\n      </div>\r\n    </div>\r\n  </div>\r\n  <div class=\"d-none\"><div id=\"SelectedEmployeeSub_SubQuotation\"></div></div>\r\n  <div id=\"QuouteListGrid\" style=\"height: 100%\"></div>\r\n</div>\r\n<script>\r\n  (() => {\r\n    let fromDateValue,\r\n      toDateValue,\r\n      isViewAll = true;\r\n    let DataSource = [];\r\n\r\n    // Load DataSource: EmployeeListAll_DataSetting_Custom\r\n    if (\r\n      \"EmployeeListAll_DataSetting_Custom\" &&\r\n      \"EmployeeListAll_DataSetting_Custom\".trim() !== \"\"\r\n    ) {\r\n      loadDataSourceCommon(\r\n        \"EmployeeID\",\r\n        \"EmployeeListAll_DataSetting_Custom\",\r\n        function (data) {\r\n          // Data được shared qua callback\r\n        },\r\n      );\r\n    }\r\n\r\n    // Load DataSource: sp_getCustomerPersonInfo\r\n    if (\r\n      \"sp_getCustomerPersonInfo\" &&\r\n      \"sp_getCustomerPersonInfo\".trim() !== \"\"\r\n    ) {\r\n      loadDataSourceCommon(\r\n        \"CustomerID\",\r\n        \"sp_getCustomerPersonInfo\",\r\n        function (data) {\r\n          // Data được shared qua callback\r\n        },\r\n      );\r\n    }\r\n\r\n    window.InstanceQuouteListGridP389C21A8E8BD4889B7C593D29585A11A = null;\r\n    // Thêm responsive styles cho grid header\r\n    const styleQuouteListGrid = document.createElement(\"style\");\r\n    styleQuouteListGrid.textContent = `\r\n                              /* =============== RESPONSIVE POPUP STYLES =============== */\r\n                              .dx-datagrid-search-panel .dx-placeholder {\r\n                                  display: none !important;\r\n                              }\r\n\r\n                              /* =============== FIX TEXTBOX TRONG GRID =============== */\r\n                              .dx-datagrid .dx-texteditor {\r\n                                  width: 100% !important;\r\n                                  min-width: 0 !important;\r\n                              }\r\n\r\n     .dx-datagrid .dx-texteditor-input {\r\n                                  width: 100% !important;\r\n                                min-width: 0 !important;\r\n                                  box-sizing: border-box !important;\r\n                              }\r\n\r\n                              .dx-datagrid-rowsview .dx-row > td > div {\r\n                                  white-space: nowrap;\r\n                                  overflow: hidden;\r\n                                  text-overflow: ellipsis;\r\n                                  word-break: break-word !important;\r\n                                  line-height: 1.4 !important;\r\n                              }\r\n\r\n                              .dx-popup.hpa-responsive {\r\n                                  max-width: 95vw !important;\r\n                                  max-height: 95vh !important;\r\n                                  width: 95vw !important;\r\n                                  left: 0 !important;\r\n                                  top: 0 !important;\r\n                              }\r\n\r\n                              .dx-popup.hpa-responsive .dx-popup-content {\r\n                                  height: calc(95vh - 120px) !important;\r\n                                  max-height: calc(95vh - 120px) !important;\r\n                                  overflow-y: auto !important;\r\n              padding: 8px !important;\r\n                                  display: flex !important;\r\n        flex-direction: column !important;\r\n                              }\r\n\r\n                   .dx-popup.hpa-responsive .dx-popup-content-scrollable {\r\n                                  flex: 1 !important;\r\n                                  min-height: 0 !important;\r\n     overflow: auto !important;\r\n                              }\r\n\r\n                              .dx-popup-content.dx-popup-content-scrollable {\r\n                    height: auto !important;\r\n                              }\r\n\r\n                              .dx-popup.hpa-responsive .dx-toolbar-items {\r\n                                  padding: 4px 0 !important;\r\n                                  flex-wrap: wrap;\r\n                              }\r\n\r\n                              .dx-popup.hpa-responsive .dx-toolbar-item {\r\n                                  margin: 2px 2px !important;\r\n                              }\r\n\r\n                              /* =============== GRID HEADER STYLES =============== */\r\n                       .dx-datagrid {\r\n                                  font-size: 14px;\r\n                                  table-layout: fixed !important;\r\n                              }\r\n\r\n                              /* FIX COLUMN WIDTH ALIGNMENT */\r\n                              .dx-datagrid-table {\r\n                                  table-layout: fixed !important;\r\n                                  width: 100% !important;\r\n                              }\r\n\r\n                              .dx-datagrid-headers .dx-datagrid-table {\r\n                                  table-layout: fixed !important;\r\n                              }\r\n\r\n                              .dx-datagrid-rowsview .dx-datagrid-table {\r\n                                  table-layout: fixed !important;\r\n                              }\r\n\r\n                              /* Ensure header and content cells have same width calculation */\r\n                              .dx-datagrid .dx-header-row > td,\r\n                              .dx-datagrid .dx-data-row > td {\r\n   box-sizing: border-box !important;\r\n                                  overflow: hidden !important;\r\n                              }\r\n\r\n                              .dx-datagrid-headers {\r\n                                  white-space: normal;\r\n                                  word-break: break-word;\r\n                              }\r\n\r\n                              .dx-datagrid-header-panel {\r\n                                  padding: 8px;\r\n                              }\r\n\r\n                              .dx-datagrid .dx-header-row {\r\n       height: auto;\r\n       min-height: 44px;\r\n       }\r\n\r\n                        .dx-datagrid .dx-row > td {\r\n                                  padding: 8px !important;\r\n                                  vertical-align: middle !important;\r\n                              }\r\n\r\n                              .dx-datagrid .dx-col-fixed {\r\n                                  z-index: 800 !important;\r\n                              }\r\n\r\n                              /* FORCE COLUMN WIDTH CONSISTENCY */\r\n                              .dx-datagrid .dx-header-row > td,\r\n                              .dx-datagrid .dx-data-row > td {\r\n                                  min-width: 0 !important;\r\n                                  width: auto !important;\r\n                                  max-width: none !important;\r\n                              }\r\n\r\n                              /* Prevent column width calculation conflicts */\r\n                              .dx-datagrid-headers .dx-header-row td,\r\n                              .dx-datagrid-rowsview .dx-data-row td {\r\n                                  position: relative !important;\r\n                              }\r\n\r\n                              /* Group row - sát mép */\r\n                              .dx-datagrid .dx-group-row {\r\n\r\n                               padding: 0 !important;\r\n                            }\r\n\r\n                              .dx-datagrid .dx-group-row > td {\r\n                                  padding: 8px !important;\r\n                              }\r\n\r\n                              .dx-datagrid .dx-group-row .dx-group-text {\r\n                                  padding: 0 !important;\r\n                                  margin: 0 !important;\r\n                              }\r\n\r\n                              /* Mobile responsive */\r\n                    @media (max-width: 1024px) {\r\n                                  .dx-popup.hpa-responsive {\r\n                                      max-width: 90vw !important;\r\n                                      max-height: 90vh !important;\r\n                                      width: 90vw !important;\r\n                                      left: 5vw !important;\r\n                                  }\r\n                                  .dx-overlay-content.dx-popup-normal.dx-popup-draggable.dx-resizable {\r\n                                      width: 90vw !important;\r\n                                      max-width: 90vw !important;\r\n                                  }\r\n                                  .dx-popup.hpa-responsive .dx-popup-content {\r\n                                      max-height: calc(95vh - 120px) !important;\r\n                                  }\r\n\r\n                                  /* Fix grid width alignment on tablet */\r\n                                  .dx-datagrid-table {\r\n                                      min-width: 100% !important;\r\n                                  }\r\n                              }\r\n\r\n                              @media (max-width: 768px) {\r\n                                  .dx-datagrid {\r\n                                      font-size: 12px;\r\n                                  }\r\n\r\n                                  /* Maintain fixed table layout on mobile */\r\n                                  .dx-datagrid-table {\r\n                                      table-layout: fixed !important;\r\n                                      min-width: 100% !important;\r\n                                  }\r\n\r\n                                  .dx-datagrid-headers {\r\n                                      padding: 4px !important;\r\n                                  }\r\n\r\n                                  .dx-datagrid .dx-header-row {\r\n                                      height: auto;\r\n                           min-height: 36px;\r\n                                      padding: 0 !important;\r\n                     }\r\n\r\n                                  .dx-datagrid-text-content {\r\n                                      padding: 4px 2px !important;\r\n                         font-size: 11px !important;\r\n       line-height: 1.3 !important;\r\n         overflow: hidden !important;\r\n                           white-space: nowrap !important;\r\n                                      text-overflow: ellipsis !important;\r\n                                      word-break: break-word !important;\r\n                                  }\r\n\r\n                                  .dx-datagrid-text-content.dx-header-filter {\r\n                                      padding: 2px 1px !important;\r\n                                  }\r\n\r\n                                  .dx-checkbox {\r\n                                      width: 24px !important;\r\n                               height: 24px !important;\r\n                    }\r\n\r\n                                  .dx-datagrid-rowsview {\r\n                                      padding: 0 !important;\r\n                                  }\r\n\r\n                                  .dx-datagrid .dx-row {\r\n                                      height: auto;\r\n                                      min-height: 36px !important;\r\n                                      padding: 0 !important;\r\n                                  }\r\n\r\n                                  .dx-datagrid .dx-data-row > td > div {\r\n                                      padding: 4px 8px !important;\r\n\r\n     white-space: nowrap !important;\r\n                     text-overflow: ellipsis !important;\r\n                                      word-break: break-word !important;\r\n        vertical-align: middle !important;\r\n                                      overflow: hidden !important;\r\n                                      box-sizing: border-box !important;\r\n                                  }\r\n\r\n                                  .dx-datagrid .dx-group-row > td {\r\n                                      padding: 4px 2px !important;\r\n                 }\r\n\r\n                                  .dx-pager {\r\n                                      padding: 4px 0 !important;\r\n                                  }\r\n\r\n                                  .dx-pager-page,\r\n                                  .dx-pager-navigation {\r\n                                      padding: 2px 4px !important;\r\n                                      font-size: 11px !important;\r\n                                  }\r\n\r\n                                  .dx-searchbox {\r\n                                      width: 100% !important;\r\n                                      max-width: none !important;\r\n                                  }\r\n\r\n                                  .dx-searchbox .dx-texteditor-input {\r\n                                      padding: 4px !important;\r\n                                      font-size: 12px !important;\r\n                                      height: 32px !important;\r\n                                  }\r\n\r\n                                  .dx-popup.hpa-responsive {\r\n                                      max-width: 95vw !important;\r\n                                      max-height: 85vh !important;\r\n                                      width: 95vw !important;\r\n                                      left: 2.5vw !important;\r\n                                      top: 5vh !important;\r\n                                  }\r\n                                  .dx-overlay-content.dx-popup-normal.dx-popup-draggable.dx-resizable {\r\n                                      width: 95vw !important;\r\n                                      max-width: 95vw !important;\r\n                                      height: auto !important;\r\n                                      max-height: 85vh !important;\r\n            }\r\n                                  .dx-popup.hpa-responsive .dx-overlay-wrapper {\r\n                                      position: fixed !important;\r\n                                  }\r\n         .dx-popup.hpa-responsive .dx-popup-content {\r\n                                      height: calc(95vh - 120px) !important;\r\n                  max-height: calc(95vh - 120px) !important;\r\n                              font-size: 13px !important;\r\n                                      padding: 6px !important;\r\n                 display: flex !important;\r\n      flex-direction: column !important;\r\n                                  }\r\n\r\n                                  .dx-popup.hpa-responsive .dx-popup-content-scrollable {\r\n                                      flex: 1 !important;\r\n                                      min-height: 0 !important;\r\n                                      overflow: auto !important;\r\n                                  }\r\n\r\n                                  .dx-popup-content.dx-popup-content-scrollable {\r\n                                      height: auto !important;\r\n                                  }\r\n\r\n                       /* Toolbar buttons */\r\n                                  .dx-popup.hpa-responsive .dx-toolbar-item .dx-button {\r\n                                      padding: 6px 12px !important;\r\n                                      font-size: 12px !important;\r\n                                      min-height: 36px !important;\r\n                                  width: auto !important;\r\n                                  }\r\n                                  .dx-popup.hpa-responsive .dx-toolbar-item .dx-button .dx-button-text {\r\n                          font-size: 12px !important;\r\n                      }\r\n                                  .dx-popup.hpa-responsive .dx-button {\r\n                                   padding: 6px 12px !important;\r\n                                      font-size: 12px !important;\r\n                                      min-height: 36px !important;\r\n                                      width: auto !important;\r\n                                  }\r\n                                  .dx-popup.hpa-responsive .dx-button .dx-button-text {\r\n                                      font-size: 12px !important;\r\n       }\r\n                                  .dx-popup.hpa-responsive .dx-datagrid {\r\n                                      font-size: 11px !important;\r\n                                  }\r\n                                  .dx-popup.hpa-responsive .dx-datagrid .dx-data-row td {\r\n                                      padding: 4px 2px !important;\r\n                                  }\r\n                              }\r\n\r\n                              @media (max-width: 480px) {\r\n                                  .dx-datagrid {\r\n                                      font-size: 12px;\r\n                                  }\r\n\r\n                                  .dx-datagrid-headers {\r\n                                      padding: 2px !important;\r\n                                  }\r\n\r\n                                  .dx-datagrid .dx-header-row {\r\n                                      min-height: 32px;\r\n                                  }\r\n\r\n                                  .dx-datagrid-text-content {\r\n                                      padding: 2px 1px !important;\r\n                                      font-size: 12px !important;\r\n                                  }\r\n\r\n                                  .dx-checkbox {\r\n                                      width: 20px !important;\r\n                                      height: 20px !important;\r\n                                  }\r\n\r\n                                  .dx-datagrid .dx-row {\r\n                                      min-height: 32px;\r\n                                  }\r\n\r\n                                  .dx-datagrid .dx-data-row > td > div {\r\n                                      padding: 8px !important;\r\n                                      font-size: 12px !important;\r\n                                  }\r\n\r\n  .dx-pager-page,\r\n                                  .dx-pager-navigation {\r\n              padding: 1px 2px !important;\r\n                                      font-size: 12px !important;\r\n                                  }\r\n\r\n                        .dx-popup.hpa-responsive {\r\n                               max-width: 98vw !important;\r\n                 max-height: 80vh !important;\r\n                        width: 98vw !important;\r\n                            left: 1vw !important;\r\n                         top: 10vh !important;\r\n                                  }\r\n                                  .dx-overlay-content.dx-popup-normal.dx-popup-draggable.dx-resizable {\r\n                                      width: 98vw !important;\r\n                                      max-width: 98vw !important;\r\n                                      height: auto !important;\r\n                                      max-height: 80vh !important;\r\n                                  }\r\n                                  .dx-popup.hpa-responsive .dx-overlay-wrapper {\r\n\r\n                                      position: fixed !important;\r\n                      }\r\n                                  .dx-popup.hpa-responsive .dx-popup-content {\r\n                                      height: calc(95vh - 120px) !important;\r\n                                      max-height: calc(95vh - 120px) !important;\r\n                                      font-size: 12px !important;\r\n                                      padding: 4px !important;\r\n                                      display: flex !important;\r\n                                   flex-direction: column !important;\r\n   }\r\n\r\n                                  .dx-popup.hpa-responsive .dx-popup-content-scrollable {\r\n                                      flex: 1 !important;\r\n                                      min-height: 0 !important;\r\n                                      overflow: auto !important;\r\n                                  }\r\n\r\n                                  .dx-popup-content.dx-popup-content-scrollable {\r\n                                      height: auto !important;\r\n                                  }\r\n                                  /* Toolbar buttons */\r\n                                  .dx-popup.hpa-responsive .dx-toolbar-item .dx-button {\r\n                                      padding: 4px 8px !important;\r\n                                      font-size: 11px !important;\r\n                                      min-height: 32px !important;\r\n                                      width: auto !important;\r\n                                  }\r\n                                  .dx-popup.hpa-responsive .dx-toolbar-item .dx-button .dx-button-text {\r\n                                      font-size: 11px !important;\r\n                                  }\r\n                                  .dx-popup.hpa-responsive .dx-button {\r\n                                      padding: 4px 8px !important;\r\n                                      font-size: 11px !important;\r\n                                      min-height: 32px !important;\r\n                                      width: auto !important;\r\n                                  }\r\n                                  .dx-popup.hpa-responsive .dx-button .dx-button-text {\r\n                                      font-size: 11px !important;\r\n                                  }\r\n                                  .dx-popup.hpa-responsive .dx-datagrid {\r\n                                      font-size: 10px !important;\r\n                                  }\r\n                                  .dx-popup.hpa-responsive .dx-datagrid .dx-data-row td {\r\n                                      padding: 2px 1px !important;\r\n                                      font-size: 10px !important;\r\n                                  }\r\n                                  .dx-popup.hpa-responsive .dx-datagrid .dx-header-row {\r\n                                      min-height: 28px !important;\r\n      }\r\n                                  .dx-popup.hpa-responsive .dx-checkbox {\r\n                                     width: 18px !important;\r\n                                      height: 18px !important;\r\n         }\r\n\r\n                              }\r\n   `;\r\n    document.head.appendChild(styleQuouteListGrid);\r\n\r\n    // Helper normalize function: bỏ dấu - dùng chung cho search/grid\r\n    window.normalizeVietnameseText =\r\n      window.normalizeVietnameseText ||\r\n      function (value) {\r\n        if (value === undefined || value === null) return \"\";\r\n        let text = String(value);\r\n        if (typeof RemoveToneMarks_Js === \"function\") {\r\n          text = RemoveToneMarks_Js(text);\r\n        } else if (text.normalize) {\r\n          text = text.normalize(\"NFD\").replace(/[\\u0300-\\u036f]/g, \"\");\r\n        }\r\n        return text.replace(/đ/g, \"d\").replace(/Đ/g, \"D\").toLowerCase();\r\n      };\r\n\r\n    InstanceQuouteListGridP389C21A8E8BD4889B7C593D29585A11A = $(\r\n      \"#QuouteListGrid\",\r\n    )\r\n      .dxDataGrid({\r\n        dataSource: [],\r\n        keyExpr: \"QuouteID\",\r\n        height: \"100%\",\r\n        width: \"100%\",\r\n        showBorders: true,\r\n        showRowLines: true,\r\n        rowAlternationEnabled: false,\r\n        hoverStateEnabled: false,\r\n        columnAutoWidth: true,\r\n        allowColumnReordering: true,\r\n        allowColumnResizing: true,\r\n        columnResizingMode: \"widget\",\r\n        columnMinWidth: 80,\r\n        wordWrapEnabled: true,\r\n        onRowDblClick: function(e) {\r\n\r\n           if ([\"Android\", \"iOS\"].includes(getMobileOperatingSystem())) {\r\n                    OpenFormParamMobile(`sp_Sub_CUSubQuotation`,{QuouteID: e.key});\r\n                } else {\r\n          openFormParam(`sp_Sub_CUSubQuotation`, {QuouteID: e.key});\r\n                }\r\n        },\r\n        scrolling: {\r\n          mode: \"virtual\", // standard\r\n          showScrollbar: \"onHover\",\r\n        },\r\n\r\n        paging: {\r\n          enabled: true,\r\n          pageSize: 50,\r\n        },\r\n\r\n        pager: {\r\n          visible: true,\r\n          allowedPageSizes: [5, 10, 50, 100],\r\n          showPageSizeSelector: true,\r\n          showInfo: true,\r\n          showNavigationButtons: true,\r\n        },\r\n\r\n        selection: {\r\n          mode: \"single\",\r\n          showCheckBoxesMode: \"none\",\r\n          allowSelectAll: false,\r\n        },\r\n\r\n        searchPanel: {\r\n          visible: true,\r\n          width: 260,\r\n          highlightSearchResults: false,\r\n          highlightCaseSensitive: false,\r\n          placeholder: \"Tìm kiếm theo nội dung\",\r\n        },\r\n\r\n        headerFilter: { visible: false },\r\n\r\n        stateStoring: {\r\n          enabled: false,\r\n          type: \"localStorage\",\r\n          storageKey: \"gridState_QuouteListGrid\",\r\n        },\r\n\r\n        grouping: {\r\n          autoExpandAll: false,\r\n          contextMenuEnabled: false,\r\n          allowCollapsing: false,\r\n        },\r\n\r\n        groupPanel: { visible: false },\r\n        columnFixing: { enabled: false },\r\n\r\n        customizeColumns: function (columns) {\r\n          const normalizeText =\r\n            window.normalizeVietnameseText ||\r\n            function (val) {\r\n              if (val === undefined || val === null) return \"\";\r\n              return String(val).toLowerCase();\r\n            };\r\n\r\n          columns.forEach(function (column) {\r\n            if (column._hpaSearchNormalized) return;\r\n            column._hpaSearchNormalized = true;\r\n\r\n            const originalCalculate = column.calculateFilterExpression;\r\n            const dataFieldPath = column.dataField || column.name || \"\";\r\n            const getValue = column.calculateCellValue\r\n              ? column.calculateCellValue.bind(column)\r\n              : function (dataObj) {\r\n                  if (!dataObj || !dataFieldPath) return null;\r\n                  if (dataFieldPath.indexOf(\".\") === -1) {\r\n                    return dataObj[dataFieldPath];\r\n                  }\r\n                  return dataFieldPath.split(\".\").reduce(function (acc, key) {\r\n                    return acc && acc[key] !== undefined ? acc[key] : null;\r\n                  }, dataObj);\r\n                };\r\n\r\n            column.calculateFilterExpression = function (\r\n              filterValue,\r\n              selectedFilterOperation,\r\n        target,\r\n            ) {\r\n              if (target === \"search\") {\r\n                const normalizedFilter = normalizeText(filterValue);\r\n                if (!normalizedFilter) {\r\n                  if (originalCalculate) {\r\n                    return originalCalculate.call(\r\n                      this,\r\n                      filterValue,\r\n                      selectedFilterOperation,\r\n                      target,\r\n                    );\r\n                  }\r\n                  if (this.defaultCalculateFilterExpression) {\r\n                    return this.defaultCalculateFilterExpression(\r\n                      filterValue,\r\n                      selectedFilterOperation,\r\n                      target,\r\n                    );\r\n                  }\r\n                  return null;\r\n                }\r\n\r\n                return function (dataItem) {\r\n                  const rawValue = getValue ? getValue(dataItem) : null;\r\n                  const normalizedValue = normalizeText(rawValue);\r\n                  return normalizedValue.indexOf(normalizedFilter) > -1;\r\n                };\r\n              }\r\n\r\n              if (originalCalculate) {\r\n                return originalCalculate.call(\r\n                  this,\r\n                  filterValue,\r\n                  selectedFilterOperation,\r\n                  target,\r\n                );\r\n              }\r\n\r\n              if (this.defaultCalculateFilterExpression) {\r\n                return this.defaultCalculateFilterExpression(\r\n                  filterValue,\r\n                  selectedFilterOperation,\r\n                  target,\r\n                );\r\n              }\r\n\r\n              return null;\r\n            };\r\n          });\r\n        },\r\n        noDataText: \"Không có dữ liệu\",\r\n        columns: [\r\n          {\r\n            dataField: \"QuoteCode\",\r\n            caption: \"Mã báo giá\",\r\n            width: 180,\r\n            alignment: \"left\",\r\n            minWidth: 80,\r\n            maxWidth: 400,\r\n            allowSorting: true,\r\n            allowFiltering: true,\r\n            cellTemplate: function (cellElement, cellInfo) {\r\n              const val = cellInfo.value;\r\n              if (val === undefined || val === null || val === \"\") {\r\n                $(\"<div>\")\r\n                  .addClass(\"dx-placeholder\")\r\n                  .text(\"\")\r\n                  .appendTo(cellElement);\r\n                return;\r\n              }\r\n              $(\"<div>\").text(val).appendTo(cellElement);\r\n            },\r\n            allowEditing: false,\r\n          },\r\n\r\n          {\r\n            dataField: \"CustomerID\",\r\n            caption: \"Tên khách hàng\",\r\n            width: 180,\r\n            alignment: \"left\",\r\n            minWidth: 80,\r\n            maxWidth: 400,\r\n            allowSorting: true,\r\n            allowFiltering: true,\r\n            cellTemplate: function (cellElement, cellInfo) {\r\n              const val = cellInfo.value;\r\n              if (val === undefined || val === null || val === \"\") {\r\n                $(\"<div>\")\r\n                  .addClass(\"dx-placeholder\")\r\n                  .text(\"\")\r\n                  .appendTo(cellElement);\r\n                return;\r\n              }\r\n              $(\"<div>\").text(val).appendTo(cellElement);\r\n            },\r\n            allowEditing: false,\r\n          },\r\n          {\r\n            dataField: \"Company\",\r\n            caption: \"Công ty\",\r\n            width: 180,\r\n            alignment: \"left\",\r\n            minWidth: 80,\r\n            maxWidth: 400,\r\n            allowSorting: true,\r\n            allowFiltering: true,\r\n            cellTemplate: function (cellElement, cellInfo) {\r\n              const val = cellInfo.value;\r\n              if (val === undefined || val === null || val === \"\") {\r\n                $(\"<div>\")\r\n                  .addClass(\"dx-placeholder\")\r\n                  .text(\"\")\r\n                  .appendTo(cellElement);\r\n                return;\r\n              }\r\n              $(\"<div>\").text(val).appendTo(cellElement);\r\n            },\r\n            allowEditing: false,\r\n          },\r\n\r\n          {\r\n            dataField: \"QuoteDate\",\r\n            caption: \"Ngày tạo\",\r\n            width: 180,\r\n            alignment: \"left\",\r\n            minWidth: 80,\r\n            maxWidth: 400,\r\n            allowSorting: true,\r\n            allowFiltering: true,\r\n            cellTemplate: function (cellElement, cellInfo) {\r\n              const val = cellInfo.value;\r\n              if (val === undefined || val === null || val === \"\") {\r\n                $(\"<div>\")\r\n                  .addClass(\"dx-placeholder\")\r\n                  .text(\"\")\r\n                  .appendTo(cellElement);\r\n                return;\r\n              }\r\n              $(\"<div>\").text(val).appendTo(cellElement);\r\n            },\r\n            allowEditing: false,\r\n          },\r\n\r\n          {\r\n            dataField: \"CustomerID\",\r\n            caption: \"Người liên hệ\",\r\n            width: 150,\r\n            alignment: \"left\",\r\n            minWidth: 80,\r\n            maxWidth: 400,\r\n            allowSorting: true,\r\n            allowFiltering: true,\r\n            cellTemplate: function (cellElement, cellInfo) {\r\n              const val = cellInfo.value;\r\n              if (val === undefined || val === null || val === \"\") {\r\n                $(\"<div>\")\r\n                  .addClass(\"dx-placeholder\")\r\n                  .text(\"\")\r\n                  .appendTo(cellElement);\r\n                return;\r\n   }\r\n              $(\"<div>\").text(val).appendTo(cellElement);\r\n            },\r\n            allowEditing: false,\r\n          },\r\n\r\n          {\r\n            dataField: \"EmployeeID\",\r\n            caption: \"Người tạo\",\r\n            width: 150,\r\n            alignment: \"left\",\r\n            minWidth: 80,\r\n            maxWidth: 400,\r\n            allowSorting: true,\r\n            allowFiltering: true,\r\n            cellTemplate: function (cellElement, cellInfo) {\r\n              const val = cellInfo.value;\r\n              if (val === undefined || val === null || val === \"\") {\r\n                $(\"<div>\")\r\n                  .addClass(\"dx-placeholder\")\r\n                  .text(\"\")\r\n                  .appendTo(cellElement);\r\n                return;\r\n              }\r\n              $(\"<div>\").text(val).appendTo(cellElement);\r\n            },\r\n            allowEditing: false,\r\n          },\r\n\r\n          {\r\n            dataField: \"TotalAmount\",\r\n            caption: \"Tổng tiền\",\r\n            width: 150,\r\n            alignment: \"left\",\r\n            minWidth: 80,\r\n            maxWidth: 400,\r\n            allowSorting: true,\r\n            allowFiltering: true,\r\n            cellTemplate: function (cellElement, cellInfo) {\r\n              const val = cellInfo.value;\r\n              if (val === undefined || val === null || val === \"\") {\r\n                $(\"<div>\")\r\n                  .addClass(\"dx-placeholder\")\r\n                  .text(\"\")\r\n                  .appendTo(cellElement);\r\n                return;\r\n              }\r\n              $(\"<div>\").text(val).appendTo(cellElement);\r\n            },\r\n            allowEditing: false,\r\n          },\r\n          {\r\n            caption: \"Xuất file\",\r\n            width: 150,\r\n            alignment: \"center\",\r\n            cellTemplate: function (container, options) {\r\n                const key = options.key;\r\n                // Nút Excel\r\n                $(\"<div>\")\r\n                    .dxButton({\r\n                        text: \"Excel\",\r\n                        icon: \"exportxlsx\",\r\n                        stylingMode: \"contained\",\r\n                        type: \"success\",\r\n                        onClick: function () {\r\n                            exportSubQuoute(key);\r\n                        }\r\n                    })\r\n                    .css(\"margin-right\", \"5px\")\r\n                    .appendTo(container);\r\n\r\n                // Nút PDF\r\n              /*  $(\"<div>\")\r\n                    .dxButton({\r\n                        text: \"PDF\",\r\n                        icon: \"exportpdf\",\r\n         stylingMode: \"contained\",\r\n                        type: \"danger\",\r\n                        onClick: function () {\r\n                            exportPDF(key);\r\n                        }\r\n                    })\r\n                    .appendTo(container); */\r\n            }\r\n        }\r\n        ],\r\n        onToolbarPreparing: function (e) {\r\n          e.toolbarOptions.items.unshift(\r\n            {\r\n              location: \"before\",\r\n              template: function (data, index, element) {\r\n                const $container = $(`\r\n                    <div class=\"ms-filter-toolbar\" style=\"display:flex;flex-direction:column;gap:3px;width:100%;box-sizing:border-box;min-height:auto;\">\r\n                    </div>\r\n                  `);\r\n\r\n                let $employeeDiv;\r\n                if (window.EmployeeID_Login) {\r\n                  $employeeDiv = $(`\r\n                      <div style=\"display:flex;align-items:center;gap:5px;min-width:160px;\">\r\n                        <label style=\"font-size:11px;color:#64748b;white-space:nowrap;\">Nhân viên:</label>\r\n                        <div id=\"multilselectedEmployeebtnSubQuotation\" style=\"width:160px;\"></div>\r\n                      </div>\r\n                    `);\r\n                }\r\n\r\n                const $firstRow = $(`\r\n                    <div style=\"display:flex;gap:6px;align-items:center;flex-wrap:wrap;width:100%;margin-bottom:8px;\"></div>\r\n                  `);\r\n\r\n                const $dateContainer = $(`\r\n                    <div style=\"display:flex;gap:10px;align-items:center;flex-wrap:wrap;\"></div>\r\n                  `);\r\n\r\n                const $fromDiv = $(`\r\n                    <div style=\"display:flex;align-items:center;gap:5px;min-width:120px;\">\r\n                      <div class=\"filter-from-date\"></div>\r\n                    </div>\r\n                  `);\r\n\r\n                let InstanceFromDate = $fromDiv\r\n                  .find(\".filter-from-date\")\r\n\r\n                  .dxDateBox({\r\n                    width: 160,\r\n                    label: \"Từ\",\r\n                    labelMode: \"static\",\r\n                    type: \"date\",\r\n                    disabled: true,\r\n                    displayFormat: \"dd/MM/yyyy\",\r\n                    value: new Date(\r\n                      new Date().getFullYear(),\r\n                      new Date().getMonth(),\r\n                      1,\r\n                    ),\r\n                    onValueChanged: function (e) {\r\n                      fromDateValue = e.value;\r\n                    },\r\n                  })\r\n                  .dxDateBox(\"instance\");\r\n\r\n                const $toDiv = $(`\r\n                    <div style=\"display:flex;align-items:center;gap:5px;min-width:120px;\">\r\n                      <div class=\"filter-to-date\"></div>\r\n                    </div>\r\n                  `);\r\n\r\n                let InstanceToDate = $toDiv\r\n                  .find(\".filter-to-date\")\r\n                  .dxDateBox({\r\n                    width: 160,\r\n                    label: \"Đến\",\r\n                    labelMode: \"static\",\r\n                    type: \"date\",\r\n                    displayFormat: \"dd/MM/yyyy\",\r\n                    disabled: true,\r\n                    value: new Date(\r\n                      new Date().getFullYear(),\r\n                      new Date().getMonth() + 1,\r\n                      0,\r\n                    ),\r\n                    onValueChanged: function (e) {\r\n                      toDateValue = e.value;\r\n                    },\r\n                  })\r\n                  .dxDateBox(\"instance\");\r\n\r\n                $dateContainer.append($fromDiv, $toDiv);\r\n\r\n                const $actionButtonContainer = $(`\r\n                    <div style=\"display:flex;gap:5px;align-items:center;\"></div>\r\n                  `);\r\n                $filterBtn =\r\n                  $(`<button class=\"btn btn-add-SubQuotation btn-success\">\r\n                                               <i class=\"bi bi-funnel\"></i> Tìm kiếm\r\n      </button>\r\n                                                  `);\r\n\r\n                $filterBtn.on(\"click\", function () {\r\n                  InstanceQuouteListGridP389C21A8E8BD4889B7C593D29585A11A.getDataSource().reload();\r\n                });\r\n\r\n                const $resetBtn = $(`\r\n                    <button class=\"btn btn-outline-success btn-add-SubQuotation\">\r\n                      <i class=\"bi bi-arrow-clockwise\"></i> Làm mới\r\n                    </button>\r\n                  `);\r\n                $resetBtn.off(\"click\").on(\"click\", function () {\r\n                  isViewAll = true;\r\n                  InstanceToDate.option(\"disabled\", isViewAll);\r\n                  InstanceFromDate.option(\"disabled\", isViewAll);\r\n                  $checkboxRow.find(\".toolbar-view-all\").prop(\"checked\", true);\r\n                  $checkboxRow\r\n                    .find(\".toolbar-only-user\")\r\n                    .prop(\"checked\", false);\r\n                  fromDateValue = null;\r\n                  toDateValue = null;\r\n                  InstanceEmployeeIDSelectedEmployeeSub_SubQuotation.option(\r\n                    \"value\",\r\n                    null,\r\n                  );\r\n                  InstanceQuouteListGridP389C21A8E8BD4889B7C593D29585A11A.getDataSource().reload();\r\n                });\r\n                const $checkboxRow = $(`\r\n                    <div style=\"display:flex;align-items:center;gap:15px;\"></div>\r\n                  `);\r\n\r\n                $checkboxRow.append(`\r\n                    <input type=\"checkbox\" checked class=\"toolbar-view-all\" style=\"width:15px;height:15px;cursor:pointer;accent-color:#198754;\">\r\n                    <label style=\"font-size:12px;color:#64748b;cursor:pointer;margin:0;\">Xem tất cả</label>\r\n                  `);\r\n\r\n                if (window.EmployeeID_Login) {\r\n                  $checkboxRow.append(`\r\n                       <input type=\"checkbox\" class=\"toolbar-only-user\" style=\"width:15px;height:15px;cursor:pointer;accent-color:#198754;\">\r\n                      <label style=\"font-size:12px;color:#64748b;cursor:pointer;margin:0;\">Chỉ xem của tôi</label>\r\n                    `);\r\n                }\r\n\r\n                $checkboxRow\r\n                  .find(\".toolbar-view-all\")\r\n                  .off(\"change\")\r\n                  .on(\"change\", function () {\r\n                    const checked = $(this).is(\":checked\");\r\n\r\n                    isViewAll = checked;\r\n\r\n                    InstanceToDate.option(\"disabled\", checked);\r\n                    InstanceFromDate.option(\"disabled\", checked);\r\n\r\n                    if (checked) {\r\n                      fromDateValue = null;\r\n            toDateValue = null;\r\n                    } else {\r\n                      fromDateValue = InstanceFromDate.option(\"value\");\r\n                      toDateValue = InstanceToDate.option(\"value\");\r\n                    }\r\n\r\n                    InstanceQuouteListGridP389C21A8E8BD4889B7C593D29585A11A.getDataSource().reload();\r\n\r\n     $fromDiv.css(\"opacity\", checked ? \"0.4\" : \"1\");\r\n                    $toDiv.css(\"opacity\", checked ? \"0.4\" : \"1\");\r\n                  });\r\n                $checkboxRow\r\n                  .find(\".toolbar-only-user\")\r\n                  .off(\"change\")\r\n                  .on(\"change\", function () {\r\n                    const checked = $(this).is(\":checked\");\r\n                    if (checked) {\r\n                      InstanceEmployeeIDSelectedEmployeeSub_SubQuotation.option(\r\n                        \"value\",\r\n                        EmployeeID_Login,\r\n                      );\r\n                    } else {\r\n                      InstanceEmployeeIDSelectedEmployeeSub_SubQuotation.option(\r\n                        \"value\",\r\n                        null,\r\n                      );\r\n                    }\r\n\r\n                    let arrEm =\r\n                      InstanceEmployeeIDSelectedEmployeeSub_SubQuotation.option(\r\n                        \"value\",\r\n                      );\r\n                    InstanceQuouteListGridP389C21A8E8BD4889B7C593D29585A11A.getDataSource().reload();\r\n                  });\r\n$resetBtn.on(\"click\", function () {});\r\n\r\n                $actionButtonContainer.append($filterBtn, $resetBtn);\r\n\r\n                $firstRow.append(\r\n                  $employeeDiv || $(\"<div></div>\"),\r\n                  $dateContainer,\r\n                  $actionButtonContainer,\r\n                );\r\n\r\n                const $secondRow = $(`\r\n                    <div style=\"display:flex;gap:10px;align-items:center;flex-wrap:wrap;width:100%;\"></div>\r\n                  `);\r\n\r\n                $secondRow.append($checkboxRow);\r\n\r\n                $container.append($firstRow, $secondRow);\r\n\r\n                $(element).parent().prepend($container);\r\n              },\r\n            },\r\n            {\r\n              location: \"after\",\r\n              template: function () {\r\n                const $wrap = $(\r\n                  '<div class=\"toolbar-right d-flex align-items-center gap-2\"></div>',\r\n                );\r\n                const $btnAdd =\r\n                  $(`<button class=\"btn btn-add-SubQuotation btn-success\">\r\n                                              <i class=\"bi bi-plus-lg\"></i> Tạo báo giá mới\r\n                                                  </button>\r\n                                                  `);\r\n                $btnAdd.off(\"click\").on(\"click\", function () {\r\n                       if ([\"Android\", \"iOS\"].includes(getMobileOperatingSystem())) {\r\n                        OpenFormParamMobile(`sp_Sub_CUSubQuotation`);\r\n                    } else {\r\n                        openFormParam(`sp_Sub_CUSubQuotation`);\r\n                    }\r\n                });\r\n                const $btnGroup = $(\r\n                  '<div class=\"d-flex align-items-center gap-2\"></div>',\r\n                );\r\n                $btnGroup.append($btnAdd);\r\n                $wrap.append($btnGroup);\r\n                return $wrap;\r\n              },\r\n            },\r\n          );\r\n        },\r\n      })\r\n      .dxDataGrid(\"instance\");\r\n\r\n    // Shared grid data source registry so detail forms can trigger refreshes\r\n    window.hpaSharedGridDataSources = window.hpaSharedGridDataSources || {};\r\n\r\n    if (!window.__hpaTextBoxUnderlineStyleInjected) {\r\n      $(\"<style>\")\r\n        .attr(\"id\", \"hpa-textbox-underline-style\")\r\n        .text(\r\n          `\r\n                          .dx-texteditor.dx-editor-underlined::after { border-bottom-color: #ddd !important; }\r\n                          .dx-texteditor.dx-editor-underlined.dx-state-focused::after { border-bottom-color: #337ab7 !important; border-bottom-width: 2px !important; }\r\n                          .dx-texteditor.dx-editor-underlined.dx-invalid::after { border-bottom-color: #d9534f !important; border-bottom-width: 2px !important; }\r\n                      `,\r\n        )\r\n        .appendTo(\"head\");\r\n      window.__hpaTextBoxUnderlineStyleInjected = true;\r\n    }\r\n    async function loadDataSourceCommon(\r\n      columnName,\r\n      dataSourceSP,\r\n      onSuccessCallback,\r\n    ) {\r\n      if (!columnName || !dataSourceSP || dataSourceSP.trim() === \"\") {\r\n        console.warn(\r\n          \"[loadDataSourceCommon] Missing columnName or dataSourceSP\",\r\n        );\r\n        return;\r\n      }\r\n\r\n      const dataSourceKey = \"DataSource_\" + columnName;\r\n      // Sử dụng format: columnNameDataSourceLoaded để tương thích với code hiện tại\r\n      const loadedKey = columnName + \"DataSourceLoaded\";\r\n\r\n      // Kiểm tra nếu đã load rồi thì không load lại\r\n      if (window[loadedKey] === true) {\r\n        if (typeof onSuccessCallback === \"function\") {\r\n          onSuccessCallback(window[dataSourceKey] || []);\r\n        }\r\n        return;\r\n      }\r\n\r\n      // Kiểm tra nếu đang load thì đợi\r\n      if (window[loadedKey] === \"loading\") {\r\n        // Đợi một chút rồi thử lại\r\n        setTimeout(function () {\r\n          loadDataSourceCommon(columnName, dataSourceSP, onSuccessCallback);\r\n        }, 100);\r\n        return;\r\n      }\r\n\r\n      // Đánh dấu đang load để tránh load trùng lặp\r\n      window[loadedKey] = \"loading\";\r\n\r\n      await AjaxHPAParadiseAsync({\r\n        data: {\r\n          name: dataSourceSP,\r\n          param: [\"LoginID\", LoginID, \"LanguageID\", LanguageID],\r\n        },\r\n        success: function (res) {\r\n          const json = typeof res === \"string\" ? JSON.parse(res) : res;\r\n          window[dataSourceKey] = (json.data && json.data[0]) || [];\r\n\r\n          // load trong form bth co combox luon\r\n\r\n          window[loadedKey] = true;\r\n\r\n          // Gọi callback nếu có\r\n          if (typeof onSuccessCallback === \"function\") {\r\n            onSuccessCallback(window[dataSourceKey]);\r\n          }\r\n\r\n          // Tự động cập nhật control nếu có method setDataSource hoặc option\r\n          // Thử nhiều format tên instance để tương thích\r\n          const instanceVariants = [\r\n            \"Instance\" +\r\n              columnName.charAt(0).toUpperCase() +\r\n              columnName.slice(1) +\r\n              \"PED6A4AAAA14F4706822A32B2859DDDAD\",\r\n            \"Instance\" + columnName + \"PED6A4AAAA14F4706822A32B2859DDDAD\",\r\n            \"instance\" +\r\n              columnName.charAt(0).toUpperCase() +\r\n              columnName.slice(1) +\r\n              \"PED6A4AAAA14F4706822A32B2859DDDAD\",\r\n          ];\r\n\r\n          for (let i = 0; i < instanceVariants.length; i++) {\r\n            const instanceKey = instanceVariants[i];\r\n\r\n            if (window[instanceKey] || instanceKey) {\r\n              const instanceObj = window[instanceKey] || instanceKey;\r\n\r\n              // Kiểm tra nếu đây là dxDataGrid\r\n              if (\r\n                typeof instanceObj.dxDataGrid === \"function\" ||\r\n                (instanceObj.option &&\r\n                  instanceObj.option(\"dataSource\") !== undefined)\r\n              ) {\r\n                try {\r\n                  // Nếu là Grid, apply dynamic config\r\n                  const gridConfigFn =\r\n                    window[\r\n                      \"getGridConfig_\" +\r\n                        columnName.charAt(0).toUpperCase() +\r\n                        columnName.slice(1)\r\n                    ];\r\n                  if (typeof gridConfigFn === \"function\") {\r\n                    const gridConfig = gridConfigFn(window[dataSourceKey]);\r\n                    instanceObj.option(\r\n                      \"remoteOperations\",\r\n                      gridConfig.remoteOperations,\r\n                    );\r\n                    instanceObj.option(\"paging.pageSize\", gridConfig.pageSize);\r\n                    instanceObj.option(\r\n                      \"pager.allowedPageSizes\",\r\n                      gridConfig.allowedPageSizes,\r\n                    );\r\n                  }\r\n\r\n                  instanceObj.option(\"dataSource\", window[dataSourceKey]);\r\n                  break;\r\n                } catch (e) {\r\n                  console.warn(\"[LoadDataSourceCommon] Grid config error:\", e);\r\n                  // Fallback: just set data source\r\n\r\n                  instanceObj.option(\"dataSource\", window[dataSourceKey]);\r\n                  break;\r\n                }\r\n              } else if (typeof instanceObj.setDataSource === \"function\") {\r\n                instanceObj.setDataSource(window[dataSourceKey]);\r\n                break;\r\n              } else if (typeof instanceObj.option === \"function\") {\r\n                try {\r\n                  instanceObj.option(\"dataSource\", window[dataSourceKey]);\r\n                  break;\r\n                } catch (e) {\r\n                  // Continue to next variant\r\n                }\r\n              }\r\n            }\r\n          }\r\n        },\r\n        error: function (err) {\r\n          console.error(\r\n            \"[loadDataSourceCommon] Failed to load datasource for\",\r\n            columnName,\r\n            \":\",\r\n            err,\r\n          );\r\n          window[loadedKey] = false;\r\n          if (typeof onSuccessCallback === \"function\") {\r\n            onSuccessCallback([]);\r\n          }\r\n        },\r\n      });\r\n    }\r\n    let api = true;\r\n    let _pageCache = {};\r\n    let dataStore_GridSubQuotation = null;\r\n    function clearPageCache() {\r\n_pageCache = {};\r\n    }\r\n\r\n    function getGridHeight() {\r\n      const gridEl = InstanceQuouteListGridP389C21A8E8BD4889B7C593D29585A11A.element();\r\n      const domElement = gridEl.jquery ? gridEl[0] : gridEl;\r\n      const top = domElement.getBoundingClientRect().top;\r\n      return window.innerHeight - top - 20;\r\n    }\r\n    function ReloadData() {\r\n      let _currentKeyword = String(\r\n             InstanceQuouteListGridP389C21A8E8BD4889B7C593D29585A11A.option(\r\n              \"searchPanel.text\",\r\n            ) || \"\",\r\n      ).trim();\r\n      const arrEmployee =\r\n        InstanceEmployeeIDSelectedEmployeeSub_SubQuotation.option(\"value\") ||\r\n        \"\";\r\n\r\n      dataStore_GridSubQuotation = new DevExpress.data.CustomStore({\r\n        key: \"QuoteID\",\r\n        load: function (loadOptions) {\r\n          const deferred = $.Deferred();\r\n          if (!api) {\r\n            const results = DataSource || [];\r\n            const skip = loadOptions.skip || 0;\r\n            const take = loadOptions.take || 50;\r\n            const pageData = results.slice(skip, skip + take);\r\n            deferred.resolve({\r\n              data: pageData,\r\n              totalCount: results.length,\r\n            });\r\n            api = true;\r\n            return deferred.promise();\r\n          }\r\n\r\n          let params = [];\r\n\r\n          // SP nghiệp vụ\r\n          params.push(\"@ProcName\", \"sp_CRM_SubQuotationList\");\r\n\r\n          // Tham số riêng của sp_KPIgetDataCollection\r\n          let procParam = \"\";\r\n\r\n          procParam += `@LoginID=${window.UserID}`;\r\n          procParam += `,@isViewAll=${isViewAll}`;\r\n          procParam += `,@FromDate=${fromDateValue || null}`;\r\n          procParam += `,@ToDate=${toDateValue || null}`;\r\n\r\n          let arrEm =\r\n            InstanceEmployeeIDSelectedEmployeeSub_SubQuotation.option(\"value\");\r\n          procParam += `,@arrEmployee='${arrEm || \"\"}'`;\r\n\r\n          params.push(\"@ProcParam\", procParam);\r\n          // Phân trang\r\n          params.push(\"@Take\", loadOptions.take || 50);\r\n          params.push(\"@Skip\", loadOptions.skip || 0);\r\n\r\n          // TotalCount\r\n          if (loadOptions.requireTotalCount) {\r\n            params.push(\"@RequireTotalCount\", 1);\r\n          }\r\n\r\n          // Sort\r\n          const sort = loadOptions.sort\r\n            ? loadOptions.sort\r\n                .map((s) => s.selector + (s.desc ? \" DESC\" : \" ASC\"))\r\n                .join(\",\")\r\n            : \"QuoteCode DESC\"; // này cho mặc định. tự chỉnh theo menu mỗi người\r\n\r\n          params.push(\"@Sort\", \"ORDER BY \" + sort);\r\n\r\n          // Search\r\n\r\n          if (_currentKeyword) {\r\n            params.push(\"@SearchValue\", _currentKeyword);\r\n            params.push(\r\n              \"@ColumnSearch\",\r\n              \"QuoteCode, Company, CustomerID\",\r\n            );\r\n          }\r\n\r\n          if (loadOptions.filter) {\r\n            // Kiểm tra filter item có phải function không\r\n            const isJSFunction = (item) => typeof item === \"function\";\r\n            const hasFunction = JSON.stringify(\r\n              loadOptions.filter,\r\n              (key, val) => {\r\n                if (typeof val === \"function\") return \"FUNCTION\";\r\n                return val;\r\n              },\r\n            ).includes(\"FUNCTION\");\r\n\r\n            if (!hasFunction) {\r\n              params.push(\"@Filters\", createConditionQuery(loadOptions.filter));\r\n            }\r\n          }\r\n\r\n\r\n          // Group\r\n          if (loadOptions.group) {\r\n            let selectGroup = \"\",\r\n              groupBy = \"GROUP BY \";\r\n            loadOptions.group.forEach((item, index) => {\r\n              if (selectGroup) selectGroup += \", \";\r\n              if (groupBy !== \"GROUP BY \") groupBy += \", \";\r\n              if (item.groupInterval) {\r\n                selectGroup += `${item.groupInterval.toUpperCase()}(${item.selector}) as col${index}`;\r\n                groupBy += `${item.groupInterval.toUpperCase()}(${item.selector})`;\r\n              } else {\r\n                selectGroup += `${item.selector} as col${index}`;\r\n               groupBy += `${item.selector}`;\r\n              }\r\n            });\r\n            selectGroup += `, Count(*) as totalCount`;\r\n            params.push(\"@SelectGroup\", selectGroup);\r\n            params.push(\"@GroupBy\", groupBy);\r\n          }\r\n\r\n          // Summary\r\n          if (loadOptions.totalSummary) {\r\n            const summary = loadOptions.totalSummary.map((item) => {\r\n              const type =\r\n                item.summaryType === \"custom\"\r\n                  ? `count(CASE WHEN [${item.selector}] = 1 THEN 1 END) as ${item.selector}_COUNT`\r\n                  : `${item.summaryType}([${item.selector}]) as ${item.selector}_${item.summaryType.toUpperCase()}`;\r\n              return type;\r\n            });\r\n            params.push(\"@TotalSummary\", summary.join(\", \"));\r\n          }\r\n          console.log(params)\r\n          AjaxHPAParadise({\r\n            data: {\r\n              name: \"sp_LoadGridUsingAPI\",\r\n              param: params,\r\n            },\r\n            success: function (res) {\r\n              const json = typeof res === \"string\" ? JSON.parse(res) : res;\r\n              const results = Array.isArray(json?.data?.[0])\r\n                ? json.data[0]\r\n                : [];\r\n\r\n              let result = { data: results };\r\n\r\n              if (loadOptions.requireTotalCount) {\r\n                result.totalCount = json?.data?.[1]?.[0]?.TotalCount ?? 0;\r\n                if (loadOptions.totalSummary) {\r\n                  result.summary = Object.values(json?.data?.[2]?.[0] ?? {});\r\n                }\r\n              } else {\r\n                if (loadOptions.totalSummary) {\r\n                  result.summary = Object.values(json?.data?.[1]?.[0] ?? {});\r\n                }\r\n              }\r\n\r\n              deferred.resolve(result);\r\n            },\r\n            error: function (err) {\r\n              deferred.reject(\"Data Loading Error\");\r\n            },\r\n          });\r\n\r\n          return deferred.promise();\r\n        },\r\n      });\r\n\r\n      // Gán store vào grid để kích hoạt load\r\n      const gridInstance =\r\n        InstanceQuouteListGridP389C21A8E8BD4889B7C593D29585A11A;\r\n      gridInstance.beginUpdate();\r\n      gridInstance.option(\"remoteOperations\", {\r\n        paging: true,\r\n        filtering: true,\r\n        sorting: true,\r\n        searching: true,\r\n      });\r\n\r\n      // scroll\r\n      gridInstance.option(\"scrolling.mode\", \"infinite\");\r\n      gridInstance.option(\"scrolling.rowRenderingMode\", \"virtual\");\r\n      gridInstance.option(\"scrolling.preloadEnabled\", false);\r\n\r\n gridInstance.option(\"paging.enabled\", true);\r\n      gridInstance.option(\"paging.pageSize\", 50);\r\n      gridInstance.option(\"pager.visible\", false);\r\n      gridInstance.option(\"pager.allowedPageSizes\", [50]);\r\n      gridInstance.option(\"searchPanel.highlightSearchText\", false);\r\n      gridInstance.option(\"dataSource\", dataStore_GridSubQuotation);\r\n      gridInstance.option(\"height\", getGridHeight());\r\n      gridInstance.option(\"onOptionChanged\", function (e) {\r\n        if (e.name === \"searchPanel\" && e.fullName === \"searchPanel.text\") {\r\n          const raw = e.value || \"\";\r\n          let t = String(raw);\r\n          _currentKeyword = t.trim();\r\n          _pageCache = {};\r\n        }\r\n      });\r\n      gridInstance.endUpdate();\r\n    }\r\n\r\n    window.GlobalEmployeeAvatarCache = window.GlobalEmployeeAvatarCache || {};\r\n    window.GlobalEmployeeAvatarLoading =\r\n      window.GlobalEmployeeAvatarLoading || {};\r\n    let InstanceEmployeeIDSelectedEmployeeSub_SubQuotation = null;\r\n\r\n    function loadGlobalAvatarIfNeededEmployeeIDSelectedEmployeeSub_SubQuotation(\r\n      employeeId,\r\n      storeImgName,\r\n      paramImg,\r\n      callbackFn,\r\n    ) {\r\n      const idStr = String(employeeId);\r\n\r\n      if (window.GlobalEmployeeAvatarCache[idStr]) {\r\n        if (callbackFn) callbackFn(window.GlobalEmployeeAvatarCache[idStr]);\r\n        return window.GlobalEmployeeAvatarCache[idStr];\r\n      }\r\n\r\n      if (window.GlobalEmployeeAvatarLoading[idStr]) {\r\n        if (callbackFn) {\r\n  window.GlobalEmployeeAvatarLoading[idStr].callbacks =\r\n            window.GlobalEmployeeAvatarLoading[idStr].callbacks || [];\r\n          window.GlobalEmployeeAvatarLoading[idStr].callbacks.push(callbackFn);\r\n        }\r\n        return null;\r\n      }\r\n\r\n      if (!storeImgName) {\r\n        return null;\r\n      }\r\n\r\n      window.GlobalEmployeeAvatarLoading[idStr] = {\r\n        loading: true,\r\n        callbacks: callbackFn ? [callbackFn] : [],\r\n      };\r\n\r\n      let paramArray = [];\r\n      if (paramImg) {\r\n        try {\r\n          const decoded = decodeURIComponent(paramImg);\r\n          paramArray = JSON.parse(decoded);\r\n        } catch (e) {\r\n          paramArray = [];\r\n        }\r\n      }\r\n\r\n      AjaxHPAParadise({\r\n        data: {\r\n          name: storeImgName,\r\n          param: paramArray,\r\n        },\r\n        xhrFields: { responseType: \"blob\" },\r\n        cache: true,\r\n        success: function (blob) {\r\n          const callbacks =\r\n            window.GlobalEmployeeAvatarLoading[idStr]?.callbacks || [];\r\n          delete window.GlobalEmployeeAvatarLoading[idStr];\r\n\r\n          if (blob && blob.size > 0) {\r\n            const url = URL.createObjectURL(blob);\r\n            window.GlobalEmployeeAvatarCache[idStr] = url;\r\n\r\n            callbacks.forEach((cb) => {\r\n              try {\r\n                cb(url);\r\n              } catch (e) {\r\n                console.error(e);\r\n              }\r\n            });\r\n          } else {\r\n            callbacks.forEach((cb) => {\r\n              try {\r\n                cb(null);\r\n              } catch (e) {\r\n                console.error(e);\r\n              }\r\n            });\r\n          }\r\n        },\r\n        error: function () {\r\n          const callbacks =\r\n            window.GlobalEmployeeAvatarLoading[idStr]?.callbacks || [];\r\n          delete window.GlobalEmployeeAvatarLoading[idStr];\r\n\r\n          callbacks.forEach((cb) => {\r\n            try {\r\n              cb(null);\r\n            } catch (e) {\r\n              console.error(e);\r\n            }\r\n          });\r\n        },\r\n      });\r\n\r\n      return null;\r\n    }\r\n\r\n    window[\"DataSource_EmployeeID\"] = window[\"DataSource_EmployeeID\"] || [];\r\n    let spNameDSEEmployeeIDSelectedEmployeeSub_SubQuotation =\r\n      \"sp_EmployeeListDataMultiSelectSelectBox\";\r\n    let EmployeeIDSelectedEmployeeSub_SubQuotationSelectedIds = [],\r\n      EmployeeIDSelectedEmployeeSub_SubQuotationSelectedIdsOriginal = [];\r\n    const MAX_VISIBLE_EmployeeIDSelectedEmployeeSub_SubQuotation = 3;\r\n    let _autoSaveEmployeeIDSelectedEmployeeSub_SubQuotation = false;\r\n    let _readOnlyEmployeeIDSelectedEmployeeSub_SubQuotation = false;\r\n    let EmployeeIDSelectedEmployeeSub_SubQuotationIsSaving = false;\r\n\r\n    $(document).ready(function () {\r\n      // Sử dụng hàm loadDataSourceCommon từ sptblCommonControlType_Signed\r\n      if (\r\n        spNameDSEEmployeeIDSelectedEmployeeSub_SubQuotation &&\r\n        spNameDSEEmployeeIDSelectedEmployeeSub_SubQuotation.trim() !== \"\"\r\n      ) {\r\n        loadDataSourceCommon(\r\n          \"EmployeeIDSelectedEmployeeSub_SubQuotation\",\r\n          spNameDSEEmployeeIDSelectedEmployeeSub_SubQuotation,\r\n          function (data) {\r\n            window[\"DataSource_EmployeeID\"] = data || [];\r\n            if (Array.isArray(data) && data.length > 0) {\r\n              data.forEach((emp) => {\r\n                hpaUtils.loadAvatar(emp.ID, emp.StoreImgName, emp.ImgParamV);\r\n              });\r\n            }\r\n            if (\r\n              typeof renderDisplayBoxEmployeeIDSelectedEmployeeSub_SubQuotation ===\r\n              \"function\"\r\n            ) {\r\n              renderDisplayBoxEmployeeIDSelectedEmployeeSub_SubQuotation();\r\n            }\r\n          },\r\n        );\r\n      }\r\n    });\r\n\r\n    function getInitialsEmployeeIDSelectedEmployeeSub_SubQuotation(name) {\r\n      if (!name) return \"?\";\r\n      const words = name.trim().split(/\\s+/);\r\n      if (words.length >= 2)\r\n        return (words[0][0] + words[words.length - 1][0]).toUpperCase();\r\n      return name.substring(0, 2).toUpperCase();\r\n    }\r\n\r\n    function getColorForIdEmployeeIDSelectedEmployeeSub_SubQuotation(id) {\r\n      const colors = [\r\n        { bg: \"#e3f2fd\", text: \"#1976d2\" },\r\n        { bg: \"#f3e5f5\", text: \"#7b1fa2\" },\r\n        { bg: \"#e8f5e9\", text: \"#388e3c\" },\r\n        { bg: \"#fff3e0\", text: \"#f57c00\" },\r\n        { bg: \"#fce4ec\", text: \"#c2185b\" },\r\n      ];\r\n      const numId = parseInt(id, 10);\r\n      const index = isNaN(numId) ? 0 : Math.abs(numId) % colors.length;\r\n      return colors[index];\r\n    }\r\n\r\n    function renderDisplayBoxEmployeeIDSelectedEmployeeSub_SubQuotation() {\r\n      const $displayBoxEmployeeIDSelectedEmployeeSub_SubQuotation = $(\r\n        \"#EmployeeIDSelectedEmployeeSub_SubQuotation_display\",\r\n      );\r\n      if (!$displayBoxEmployeeIDSelectedEmployeeSub_SubQuotation.length) return;\r\n      $displayBoxEmployeeIDSelectedEmployeeSub_SubQuotation.empty();\r\n\r\n      const $wrapper = $(\"<div>\")\r\n        .css({\r\n          borderBottom: \"1px solid #ddd\",\r\n          padding: \"0 6px\",\r\n          minHeight: \"30px\",\r\n          display: \"flex\",\r\n          alignItems: \"center\",\r\n          cursor: \"pointer\",\r\n          transition: \"border-bottom-color 0.2s\",\r\n        })\r\n        .attr(\"tabIndex\", \"0\")\r\n        .on(\"keydown\", function (e) {\r\n          if (e.key === \"Enter\" || e.key === \" \" || e.key === \"Spacebar\") {\r\n            e.preventDefault();\r\n            if (_readOnlyEmployeeIDSelectedEmployeeSub_SubQuotation) return;\r\n            if (!popupEmployeeIDSelectedEmployeeSub_SubQuotation) {\r\n              initPopupEmployeeIDSelectedEmployeeSub_SubQuotation();\r\n              setTimeout(\r\n                () => popupEmployeeIDSelectedEmployeeSub_SubQuotation.show(),\r\n                0,\r\n              );\r\n            } else {\r\n              popupEmployeeIDSelectedEmployeeSub_SubQuotation.show();\r\n            }\r\n          }\r\n        })\r\n        .on(\"focus\", function () {\r\n          $wrapper.css({ borderBottom: \"2px solid #337ab7\", outline: \"none\" });\r\n        })\r\n        .on(\"blur\", function () {\r\n          $wrapper.css({ borderBottom: \"1px solid #ddd\" });\r\n        })\r\n        .hover(\r\n          () => {\r\n            if (!$wrapper.is(\":focus\")) {\r\n              $wrapper.css({ borderBottom: \"1px solid #337ab7\" });\r\n            }\r\n          },\r\n          () => {\r\n            if (!$wrapper.is(\":focus\")) {\r\n              $wrapper.css({ borderBottom: \"1px solid #ddd\" });\r\n            }\r\n          },\r\n        );\r\n\r\n      if (EmployeeIDSelectedEmployeeSub_SubQuotationSelectedIds.length === 0) {\r\n        $wrapper.append(\r\n          $(\"<span>\")\r\n            .addClass(\"text-muted\")\r\n            .html('<i class=\"bi bi-person-plus me-2\"></i>Chọn nhân viên...'),\r\n        );\r\n      } else {\r\n        const displayIds =\r\n          EmployeeIDSelectedEmployeeSub_SubQuotationSelectedIds.slice(\r\n            0,\r\n            MAX_VISIBLE_EmployeeIDSelectedEmployeeSub_SubQuotation,\r\n          );\r\n        const $group = $(\"<div>\").css({\r\n          display: \"flex\",\r\n          alignItems: \"center\",\r\n        });\r\n\r\n        displayIds.forEach((id, index) => {\r\n\r\n          const item = window[\"DataSource_EmployeeID\"].find(\r\n            (e) => String(e.ID) === String(id),\r\n          );\r\n          if (!item) return;\r\n\r\n          const $chip = $(\"<div>\")\r\n            .css({\r\n              width: \"36px\",\r\n              height: \"36px\",\r\n              borderRadius: \"50%\",\r\n              border: \"3px solid #fff\",\r\n              boxShadow: \"0 2px 6px rgba(0,0,0,0.15)\",\r\n              marginLeft: index === 0 ? \"0\" : \"-10px\",\r\n              zIndex: index + 1,\r\n              display: \"flex\",\r\n              alignItems: \"center\",\r\n              justifyContent: \"center\",\r\n              fontWeight: \"600\",\r\n              fontSize: \"13px\",\r\n              position: \"relative\",\r\n              overflow: \"hidden\",\r\n            })\r\n            .attr(\"title\", item.Name || item.FullName || \"\");\r\n\r\n          const cachedUrl = window.GlobalEmployeeAvatarCache[String(id)];\r\n\r\n          if (cachedUrl) {\r\n            $chip.append(\r\n              $(\"<img>\")\r\n                .attr(\"src\", cachedUrl)\r\n                .css({ width: \"100%\", height: \"100%\", objectFit: \"cover\" }),\r\n            );\r\n          } else if (item.storeImgName) {\r\n            loadGlobalAvatarIfNeededEmployeeIDSelectedEmployeeSub_SubQuotation(\r\n              id,\r\n              item.storeImgName,\r\n              item.paramImg,\r\n              function (url) {\r\n                if (url)\r\n                  renderDisplayBoxEmployeeIDSelectedEmployeeSub_SubQuotation();\r\n              },\r\n            );\r\n            const color =\r\n              getColorForIdEmployeeIDSelectedEmployeeSub_SubQuotation(id);\r\n            const initials =\r\n              getInitialsEmployeeIDSelectedEmployeeSub_SubQuotation(\r\n                item.Name || item.FullName,\r\n              );\r\n            $chip\r\n              .css({ background: color.bg, color: color.text })\r\n              .text(initials);\r\n          } else {\r\n            const color =\r\n              getColorForIdEmployeeIDSelectedEmployeeSub_SubQuotation(id);\r\n            const initials =\r\n              getInitialsEmployeeIDSelectedEmployeeSub_SubQuotation(\r\n                item.Name || item.FullName,\r\n              );\r\n            $chip\r\n              .css({ background: color.bg, color: color.text })\r\n              .text(initials);\r\n          }\r\n\r\n          $group.append($chip);\r\n        });\r\n\r\n        if (\r\n          EmployeeIDSelectedEmployeeSub_SubQuotationSelectedIds.length >\r\n          MAX_VISIBLE_EmployeeIDSelectedEmployeeSub_SubQuotation\r\n        ) {\r\n          const remaining =\r\n            EmployeeIDSelectedEmployeeSub_SubQuotationSelectedIds.length -\r\n            MAX_VISIBLE_EmployeeIDSelectedEmployeeSub_SubQuotation;\r\n          $group.append(\r\n            $(\"<div>\")\r\n              .css({\r\n                width: \"36px\",\r\n                height: \"36px\",\r\n                borderRadius: \"50%\",\r\n                border: \"3px solid #fff\",\r\n                marginLeft: \"-10px\",\r\n                zIndex:\r\n                  MAX_VISIBLE_EmployeeIDSelectedEmployeeSub_SubQuotation + 1,\r\n                display: \"flex\",\r\n                alignItems: \"center\",\r\n                justifyContent: \"center\",\r\n                fontWeight: \"700\",\r\n                fontSize: \"12px\",\r\n              })\r\n              .text(\"+\" + remaining)\r\n              .attr(\"title\", \"Còn \" + remaining + \" người nữa\"),\r\n          );\r\n        }\r\n\r\n        $wrapper.append($group);\r\n      }\r\n\r\n      $displayBoxEmployeeIDSelectedEmployeeSub_SubQuotation.append($wrapper);\r\n      $wrapper.off(\"click\").on(\"click\", () => {\r\n        if (_readOnlyEmployeeIDSelectedEmployeeSub_SubQuotation) {\r\n          if (typeof uiManager !== \"undefined\" && uiManager.showAlert) {\r\n            uiManager.showAlert({\r\n              type: \"info\",\r\n              message: \"This field is read-only.\",\r\n            });\r\n          } else {\r\n            alert(\"This field is read-only.\");\r\n          }\r\n          return;\r\n        }\r\n        if (!popupEmployeeIDSelectedEmployeeSub_SubQuotation) {\r\n          initPopupEmployeeIDSelectedEmployeeSub_SubQuotation();\r\n          setTimeout(() => {\r\n            popupEmployeeIDSelectedEmployeeSub_SubQuotation.show();\r\n          }, 0);\r\n        } else {\r\n          popupEmployeeIDSelectedEmployeeSub_SubQuotation.show();\r\n        }\r\n      });\r\n    }\r\n\r\n    const $containerEmployeeIDSelectedEmployeeSub_SubQuotation = $(\r\n      \"#SelectedEmployeeSub_SubQuotation\",\r\n    );\r\n    $containerEmployeeIDSelectedEmployeeSub_SubQuotation.empty();\r\n    const $displayBoxEmployeeIDSelectedEmployeeSub_SubQuotation = $(\r\n      \"<div>\",\r\n    ).attr(\"id\", \"EmployeeIDSelectedEmployeeSub_SubQuotation_display\");\r\n    $containerEmployeeIDSelectedEmployeeSub_SubQuotation.append(\r\n      $displayBoxEmployeeIDSelectedEmployeeSub_SubQuotation,\r\n    );\r\n\r\n    let popupEmployeeIDSelectedEmployeeSub_SubQuotation;\r\n    let popupEmployeeIDSelectedEmployeeSub_SubQuotationOnce = false;\r\n    let EmployeeIDSelectedEmployeeSub_SubQuotationGridContainer = null;\r\n\r\n    function initPopupEmployeeIDSelectedEmployeeSub_SubQuotation() {\r\n      if (popupEmployeeIDSelectedEmployeeSub_SubQuotationOnce) {\r\n        popupEmployeeIDSelectedEmployeeSub_SubQuotation.show();\r\n        return;\r\n      }\r\n\r\n      // FIXED: Dọn dẹp DOM rác\r\n      $(\"#EmployeeIDSelectedEmployeeSub_SubQuotation_popup\").remove();\r\n\r\n      popupEmployeeIDSelectedEmployeeSub_SubQuotationOnce = true;\r\n      popupEmployeeIDSelectedEmployeeSub_SubQuotation = $(\"<div>\")\r\n        .attr(\"id\", \"EmployeeIDSelectedEmployeeSub_SubQuotation_popup\")\r\n        .appendTo(document.body)\r\n        .addClass(\"hpa-responsive\")\r\n        .dxPopup({\r\n          width: () => (window.innerWidth < 768 ? \"95vw\" : 750),\r\n          maxHeight: \"90vh\",\r\n          height: \"auto\",\r\n          animation: null,\r\n          showTitle: true,\r\n          title: \"Chọn nhân viên\",\r\n          dragEnabled: true,\r\n          closeOnOutsideClick: true,\r\n          showCloseButton: true,\r\n          toolbarItems: [\r\n            {\r\n              widget: \"dxButton\",\r\n              location: \"before\",\r\n              toolbar: \"bottom\",\r\n              options: {\r\n                text: \"Xóa chọn\",\r\n                type: \"danger\",\r\n                stylingMode: \"outlined\",\r\n                onClick: () => {\r\n                  EmployeeIDSelectedEmployeeSub_SubQuotationSelectedIds = [];\r\n                  try {\r\n                    EmployeeIDSelectedEmployeeSub_SubQuotationGridContainer.dxDataGrid(\r\n                      \"instance\",\r\n                    ).deselectAll();\r\n                  } catch (e) {}\r\n                },\r\n              },\r\n            },\r\n            {\r\n              widget: \"dxButton\",\r\n              location: \"after\",\r\n              toolbar: \"bottom\",\r\n              options: {\r\n                text: \"Hủy\",\r\n                onClick: () => {\r\n                  EmployeeIDSelectedEmployeeSub_SubQuotationSelectedIds = [\r\n                    ...EmployeeIDSelectedEmployeeSub_SubQuotationSelectedIdsOriginal,\r\n                  ];\r\n                  popupEmployeeIDSelectedEmployeeSub_SubQuotation.hide();\r\n                },\r\n              },\r\n            },\r\n            {\r\n              widget: \"dxButton\",\r\n              location: \"after\",\r\n              toolbar: \"bottom\",\r\n              options: {\r\n                text: \"Lưu\",\r\n                type: \"success\",\r\n                onClick: async () => {\r\n                  if (\r\n   _autoSaveEmployeeIDSelectedEmployeeSub_SubQuotation &&\r\n                    typeof saveValueEmployeeIDSelectedEmployeeSub_SubQuotation ===\r\n                      \"function\"\r\n                  ) {\r\n                    await saveValueEmployeeIDSelectedEmployeeSub_SubQuotation();\r\n                  } else {\r\n                    // Local Save (Sync Grid)\r\n                    if (\r\n                      typeof cellInfo !== \"undefined\" &&\r\n                      cellInfo &&\r\n                      cellInfo.component\r\n                    ) {\r\n                      try {\r\n                        const grid = cellInfo.component;\r\n                        const newValue =\r\n                          EmployeeIDSelectedEmployeeSub_SubQuotationSelectedIds.join(\r\n                            \",\",\r\n                          );\r\n                        grid.cellValue(\r\n                          cellInfo.rowIndex,\r\n                          \"EmployeeID\",\r\n                          newValue || null,\r\n                        );\r\n                        grid.repaint();\r\n                      } catch (e) {\r\n                        console.warn(e);\r\n                      }\r\n                    }\r\n                    EmployeeIDSelectedEmployeeSub_SubQuotationSelectedIdsOriginal =\r\n                      [\r\n                        ...EmployeeIDSelectedEmployeeSub_SubQuotationSelectedIds,\r\n       ];\r\n                    renderDisplayBoxEmployeeIDSelectedEmployeeSub_SubQuotation();\r\n                  }\r\n              popupEmployeeIDSelectedEmployeeSub_SubQuotation.hide();\r\n                },\r\n              },\r\n            },\r\n          ],\r\n          contentTemplate: function (contentElement) {\r\n            EmployeeIDSelectedEmployeeSub_SubQuotationGridContainer =\r\n              $(\"<div>\");\r\n            contentElement.append(\r\n              EmployeeIDSelectedEmployeeSub_SubQuotationGridContainer,\r\n            );\r\n          },\r\n          onShown: () => {\r\n            const sortedData = window[\"DataSource_EmployeeID\"].sort((a, b) => {\r\n              const aSelected =\r\n                EmployeeIDSelectedEmployeeSub_SubQuotationSelectedIds.includes(\r\n                  String(a.ID),\r\n                );\r\n              const bSelected =\r\n                EmployeeIDSelectedEmployeeSub_SubQuotationSelectedIds.includes(\r\n                  String(b.ID),\r\n                );\r\n              return bSelected - aSelected;\r\n            });\r\n\r\n            try {\r\n              const existingInstance =\r\n                EmployeeIDSelectedEmployeeSub_SubQuotationGridContainer.dxDataGrid(\r\n                  \"instance\",\r\n                );\r\n              if (existingInstance) {\r\n                existingInstance.dispose();\r\n              }\r\n            } catch (e) {\r\n              // Instance chưa tồn tại hoặc đã bị destroy\r\n            }\r\n\r\n            EmployeeIDSelectedEmployeeSub_SubQuotationGridContainer.empty().dxDataGrid(\r\n              {\r\n                dataSource: sortedData,\r\n                keyExpr: \"ID\",\r\n                remoteOperations: false,\r\n                columnAutoWidth: true,\r\n                allowColumnResizing: true,\r\n                selection: { mode: \"multiple\", showCheckBoxesMode: \"always\" },\r\n                selectedRowKeys:\r\n                  EmployeeIDSelectedEmployeeSub_SubQuotationSelectedIds,\r\n                focusStateEnabled: true,\r\n                keyboardNavigation: { enabled: true },\r\n                hoverStateEnabled: true,\r\n                columns: [\r\n                  {\r\n                    caption: \"Ảnh\",\r\n                    width: 70,\r\n                    alignment: \"center\",\r\n                    cellTemplate: function (container, options) {\r\n                      const item = options.data;\r\n                      const $cell = $(\"<div>\").css({\r\n                        display: \"flex\",\r\n                        justifyContent: \"center\",\r\n                        alignItems: \"center\",\r\n                        height: \"100%\",\r\n\r\n                      });\r\n\r\n                      const cachedUrl =\r\n                        window.GlobalEmployeeAvatarCache[String(item.ID)];\r\n\r\n                      if (cachedUrl) {\r\n                        $cell.append(\r\n                          $(\"<img>\").attr(\"src\", cachedUrl).css({\r\n                            width: \"30px\",\r\n                            height: \"30px\",\r\n                            borderRadius: \"50%\",\r\n                            objectFit: \"cover\",\r\n                            border: \"2px solid #fff\",\r\n                            boxShadow: \"0 2px 4px rgba(0,0,0,0.1)\",\r\n                          }),\r\n                        );\r\n                      } else if (item.storeImgName) {\r\n                        loadGlobalAvatarIfNeededEmployeeIDSelectedEmployeeSub_SubQuotation(\r\n                          item.ID,\r\n                          item.storeImgName,\r\n                          item.paramImg,\r\n                          function (url) {\r\n                            if (!url) return;\r\n                            $cell.empty().append(\r\n                              $(\"<img>\").attr(\"src\", url).css({\r\n                                width: \"30px\",\r\n                                height: \"30px\",\r\n                                borderRadius: \"50%\",\r\n                                objectFit: \"cover\",\r\n                                border: \"2px solid #fff\",\r\n                                boxShadow: \"0 2px 4px rgba(0,0,0,0.1)\",\r\n                              }),\r\n                           );\r\n                          },\r\n                        );\r\n\r\n                        const initials =\r\n                          getInitialsEmployeeIDSelectedEmployeeSub_SubQuotation(\r\n                            item.Name || item.FullName || \"?\",\r\n                          );\r\n                        const color =\r\n                          getColorForIdEmployeeIDSelectedEmployeeSub_SubQuotation(\r\n                            item.ID,\r\n                          );\r\n                        $cell.append(\r\n                          $(\"<div>\").text(initials).css({\r\n                            width: \"30px\",\r\n                            height: \"30px\",\r\n                            borderRadius: \"50%\",\r\n                            background: color.bg,\r\n                            color: color.text,\r\n                            display: \"flex\",\r\n                            justifyContent: \"center\",\r\n                            alignItems: \"center\",\r\n                            fontWeight: \"600\",\r\n                            fontSize: \"14px\",\r\n                            boxShadow: \"0 2px 4px rgba(0,0,0,0.1)\",\r\n                          }),\r\n                        );\r\n                      } else {\r\n                        const initials =\r\n                          getInitialsEmployeeIDSelectedEmployeeSub_SubQuotation(\r\n                            item.Name || item.FullName || \"?\",\r\n                          );\r\n                        const color =\r\n                          getColorForIdEmployeeIDSelectedEmployeeSub_SubQuotation(\r\n                            item.ID,\r\n                          );\r\n                        $cell.append(\r\n                          $(\"<div>\").text(initials).css({\r\n                            width: \"30px\",\r\n                            height: \"30px\",\r\n                            borderRadius: \"50%\",\r\n                            background: color.bg,\r\n                            color: color.text,\r\n                            display: \"flex\",\r\n                            justifyContent: \"center\",\r\n                            alignItems: \"center\",\r\n                            fontWeight: \"600\",\r\n                            fontSize: \"14px\",\r\n                            boxShadow: \"0 2px 4px rgba(0,0,0,0.1)\",\r\n                          }),\r\n                        );\r\n                      }\r\n\r\n                      container.append($cell);\r\n                    },\r\n                  },\r\n\r\n                  { dataField: \"Name\", caption: \"Họ tên\" },\r\n                  { dataField: \"Email\", caption: \"Email\", hidingPriority: 0 },\r\n                  {\r\n                    dataField: \"Position\",\r\n                    caption: \"Chức vụ\",\r\n                    hidingPriority: 1,\r\n                  },\r\n                ],\r\n                searchPanel: {\r\n                  visible: true,\r\n                  placeholder: \"\",\r\n                },\r\n                onContentReady: function (e) {\r\n                  const grid = e.component;\r\n                  const searchBox = grid\r\n                    .getView(\"headerPanel\")\r\n                    ._$element.find(\".dx-datagrid-search-panel input\");\r\n\r\n                  if (!searchBox.length) return;\r\n\r\n                  // Chỉ bind 1 lần, tránh re-bind sau mỗi lần filter re-render\r\n                  if (searchBox.data(\"hpa-search-bound\")) return;\r\n                  searchBox.data(\"hpa-search-bound\", true);\r\n\r\n                  if (\r\n                    !$(\r\n                      \"#custom-search-style-EmployeeIDSelectedEmployeeSub_SubQuotation\",\r\n                    ).length\r\n                  ) {\r\n                    $(\"<style>\")\r\n                      .attr(\r\n                        \"id\",\r\n                        \"custom-search-style-EmployeeIDSelectedEmployeeSub_SubQuotation\",\r\n                      )\r\n                      .text(\r\n                        `\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t.dx-datagrid-search-panel input:not(:placeholder-shown) {\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\tcolor: #000 !important;\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t}\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t.dx-datagrid-search-panel input::placeholder {\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\tcolor: #999 !important;\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\topacity: 1 !important;\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t}\r\n\t\t\t\t\t\t\t\t\t\t\t\t`,\r\n                      )\r\n                      .appendTo(\"head\");\r\n                  }\r\n\r\n                  searchBox.off(\"input keyup change\");\r\n\r\n                  searchBox.on(\"input\", function () {\r\n                    const $self = $(this);\r\n                    const searchValue = $self.val();\r\n\r\n                    if (!searchValue) {\r\n                      grid.clearFilter();\r\n                      // Restore focus sau clearFilter\r\n                      setTimeout(() => $self.focus(), 0);\r\n                      return;\r\n                    }\r\n\r\n                    const searchNormalized = RemoveToneMarks_Js(searchValue);\r\n                    grid.filter(function (item) {\r\n                      const fields = [\"Name\", \"Email\", \"Position\"];\r\n                      for (let i = 0; i < fields.length; i++) {\r\n                        const fieldValue = item[fields[i]];\r\n                        if (\r\n                          fieldValue &&\r\n                          RemoveToneMarks_Js(String(fieldValue)).indexOf(\r\n                            searchNormalized,\r\n                          ) !== -1\r\n                        ) {\r\n                          return true;\r\n                        }\r\n                      }\r\n                      return false;\r\n                    });\r\n\r\n                    // Restore focus sau filter (grid re-render không cướp focus)\r\n                    setTimeout(() => $self.focus(), 0);\r\n                  });\r\n                },\r\n                paging: {\r\n                  enabled: true,\r\n                  pageSize: 5,\r\n                  pageIndex: 0,\r\n                },\r\n                pager: {\r\n                  visible: true,\r\n                  allowedPageSizes: [5, 10],\r\n                  showPageSizeSelector: true,\r\n                  showInfo: true,\r\n                  showNavigationButtons: true,\r\n                },\r\n                onSelectionChanged: (e) =>\r\n                  (EmployeeIDSelectedEmployeeSub_SubQuotationSelectedIds =\r\n                    e.selectedRowKeys || []),\r\n              },\r\n            );\r\n          },\r\n          onHidden: () => {\r\n            // FIXED: KHÔNG dispose grid tại đây\r\n            // Reset position của popup về default\r\n            popupEmployeeIDSelectedEmployeeSub_SubQuotation.option(\"position\", {\r\n              my: \"center\",\r\n              at: \"center\",\r\n              of: window,\r\n            });\r\n\r\n            renderDisplayBoxEmployeeIDSelectedEmployeeSub_SubQuotation();\r\n          },\r\n        })\r\n        .dxPopup(\"instance\");\r\n    }\r\n\r\n    async function saveValueEmployeeIDSelectedEmployeeSub_SubQuotation() {\r\n      if (_readOnlyEmployeeIDSelectedEmployeeSub_SubQuotation) {\r\n        if (typeof uiManager !== \"undefined\" && uiManager.showAlert) {\r\n          uiManager.showAlert({\r\n            type: \"info\",\r\n            message: \"This field is read-only.\",\r\n          });\r\n        } else {\r\n          alert(\"This field is read-only.\");\r\n        }\r\n        return;\r\n      }\r\n\r\n      const original =\r\n        EmployeeIDSelectedEmployeeSub_SubQuotationSelectedIdsOriginal.slice()\r\n          .sort()\r\n          .join(\",\");\r\n      const current =\r\n        EmployeeIDSelectedEmployeeSub_SubQuotationSelectedIds.slice()\r\n          .sort()\r\n          .join(\",\");\r\n      if (\r\n        original === current ||\r\n        EmployeeIDSelectedEmployeeSub_SubQuotationIsSaving\r\n      )\r\n        return;\r\n\r\n      EmployeeIDSelectedEmployeeSub_SubQuotationIsSaving = true;\r\n      try {\r\n        const newValue =\r\n          EmployeeIDSelectedEmployeeSub_SubQuotationSelectedIds.join(\",\");\r\n        const dataJSON = JSON.stringify([\r\n          \"-99218308\",\r\n[\"EmployeeID\"],\r\n          [newValue || null],\r\n        ]);\r\n\r\n        let id1 = window.currentRecordID_EmployeeID;\r\n        if (typeof cellInfo !== \"undefined\" && cellInfo && cellInfo.data) {\r\n          id1 = cellInfo.data[\"EmployeeID\"] || id1;\r\n        }\r\n        let idValues = [id1];\r\n        let idFields = [\"EmployeeID\"];\r\n\r\n        if (\"\" && \"\".trim() !== \"\") {\r\n          let id2 = currentRecordID_;\r\n          if (typeof cellInfo !== \"undefined\" && cellInfo && cellInfo.data) {\r\n            id2 = cellInfo.data[\"\"] || id2;\r\n          }\r\n          idValues.push(id2);\r\n          idFields.push(\"\");\r\n        }\r\n        const idValsJSON = JSON.stringify([idValues, idFields]);\r\n\r\n        const json = await saveFunction(dataJSON, idValsJSON);\r\n        const errors = json.data?.[json.data.length - 1] || [];\r\n        if (errors.length > 0 && errors[0].Status === \"ERROR\") {\r\n          uiManager.showAlert({\r\n            type: \"error\",\r\n            message: errors[0].Message || \"Lưu dữ liệu thất bại.\",\r\n          });\r\n          return;\r\n        }\r\n\r\n        // SYNC GRID\r\n        if (typeof cellInfo !== \"undefined\" && cellInfo && cellInfo.component) {\r\n          try {\r\n            const grid = cellInfo.component;\r\n            grid.cellValue(cellInfo.rowIndex, \"EmployeeID\", newValue);\r\n            grid.repaint();\r\n          } catch (syncErr) {\r\n            console.warn(\r\n              \"[Grid Sync] SelectEmployee EmployeeIDSelectedEmployeeSub_SubQuotation: Không thể sync grid:\",\r\n              syncErr,\r\n            );\r\n          }\r\n        }\r\n\r\n        EmployeeIDSelectedEmployeeSub_SubQuotationSelectedIdsOriginal = [\r\n          ...EmployeeIDSelectedEmployeeSub_SubQuotationSelectedIds,\r\n        ];\r\n        renderDisplayBoxEmployeeIDSelectedEmployeeSub_SubQuotation();\r\n      } catch (err) {\r\n        uiManager.showAlert({ type: \"error\", message: \"Lưu dữ liệu thất bại.\" });\r\n      } finally {\r\n        EmployeeIDSelectedEmployeeSub_SubQuotationIsSaving = false;\r\n      }\r\n    }\r\n\r\n    InstanceEmployeeIDSelectedEmployeeSub_SubQuotation = {\r\n      setValue: function (val) {\r\n        if (typeof val === \"string\" && val.trim()) {\r\n          EmployeeIDSelectedEmployeeSub_SubQuotationSelectedIds = val\r\n            .split(\",\")\r\n            .map((v) => v.trim())\r\n            .filter((v) => v);\r\n        } else if (Array.isArray(val)) {\r\n          EmployeeIDSelectedEmployeeSub_SubQuotationSelectedIds =\r\n            val.map(String);\r\n        } else {\r\n          EmployeeIDSelectedEmployeeSub_SubQuotationSelectedIds = [];\r\n        }\r\n        EmployeeIDSelectedEmployeeSub_SubQuotationSelectedIdsOriginal = [\r\n          ...EmployeeIDSelectedEmployeeSub_SubQuotationSelectedIds,\r\n        ];\r\n        renderDisplayBoxEmployeeIDSelectedEmployeeSub_SubQuotation();\r\n      },\r\n      getValue: () => EmployeeIDSelectedEmployeeSub_SubQuotationSelectedIds,\r\n      getValueAsString: () =>\r\n        EmployeeIDSelectedEmployeeSub_SubQuotationSelectedIds.join(\",\"),\r\n      setDataSource: (data) => {\r\n        window[\"DataSource_EmployeeID\"] = data || [];\r\n      },\r\n      repaint: renderDisplayBoxEmployeeIDSelectedEmployeeSub_SubQuotation,\r\n      _readOnly: false,\r\n      _autoSave: false,\r\n      option: function (name, value) {\r\n        if (arguments.length === 2) {\r\n          if (name === \"value\") this.setValue(value);\r\n          if (name === \"readOnly\") {\r\n            this._readOnly = value;\r\n            _readOnlyEmployeeIDSelectedEmployeeSub_SubQuotation = value;\r\n            const $displayBox = $(\r\n              \"#EmployeeIDSelectedEmployeeSub_SubQuotation_display\",\r\n            );\r\n            if (value)\r\n              $displayBox.addClass(\"disabled-control\").css(\"opacity\", \"0.6\");\r\n            else\r\n              $displayBox.removeClass(\"disabled-control\").css(\"opacity\", \"1\");\r\n          }\r\n          if (name === \"autoSave\") {\r\n            this._autoSave = value;\r\n            _autoSaveEmployeeIDSelectedEmployeeSub_SubQuotation = value;\r\n          }\r\n        } else if (arguments.length === 1) {\r\n          if (name === \"value\") return this.getValueAsString();\r\n          if (name === \"dataSource\") return window[\"DataSource_EmployeeID\"];\r\n          if (name === \"readOnly\")\r\n            return _readOnlyEmployeeIDSelectedEmployeeSub_SubQuotation;\r\n          if (name === \"autoSave\")\r\n            return _autoSaveEmployeeIDSelectedEmployeeSub_SubQuotation;\r\n        }\r\n        return undefined;\r\n      },\r\n      _suppressValueChangeAction: function () {},\r\n      _resumeValueChangeAction: function () {},\r\n    };\r\n\r\n    setTimeout(() => {\r\n      var employeeFilterWrapper = document.getElementById(\r\n        \"multilselectedEmployeebtnSubQuotation\",\r\n      );\r\n      if (\r\n        employeeFilterWrapper &&\r\n        employeeFilterWrapper.children.length === 0\r\n      ) {\r\n        var originalEmployee = document.getElementById(\r\n          \"SelectedEmployeeSub_SubQuotation\",\r\n        );\r\n        if (originalEmployee && originalEmployee.parentElement) {\r\n          var employeeDiv = originalEmployee.parentElement.querySelector(\"div\");\r\n          if (employeeDiv) {\r\n            employeeFilterWrapper.appendChild(employeeDiv);\r\n          }\r\n        }\r\n      }\r\n    }, 300);\r\n\r\n     async function exportSubQuoute(QuoteID) {\r\n        showLoadingByClassOrID(\"#QuouteListGrid\", \"Xuất dữ liệu\");\r\n        //console.log(arg);\r\n        let exportItem = {\r\n          item: \"ExportQuoteExcel\",\r\n          query: \"sp_Sub_ExportQuote_Excel\",\r\n          fileName: \"exportExcelQuote.xlsx\",\r\n        };\r\n        let ExportName = exportItem.item;\r\n\r\n        try {\r\n          if (!exportItem.fileName) {\r\n            let exportTemp = await AjaxHPAParadiseAsync({\r\n              data: {\r\n                name: exportItem.item,\r\n                param: [\"@QuoteID\", QuoteID],\r\n              },\r\n              success: function (resultData) {},\r\n            });\r\n\r\n            exportTemp =\r\n              typeof exportTemp === \"string\" ? JSON.parse(exportTemp) : exportTemp;\r\n            ExportName =\r\n              exportTemp.data[0][0][\r\n                Object.keys(exportTemp.data[0][0]).find(\r\n                  (x) => x.toLowerCase() == \"exportname\",\r\n                )\r\n              ] ?? ExportName;\r\n          }\r\n\r\n          let resultData = await AjaxHPAParadiseParadiseAsync({\r\n            data: {\r\n              //name: \"ExportLocationFolderSaveAsFileAsync\",\r\n              name: \"ExportLocationFolder\",\r\n              param: [\"\", ExportName, exportItem.fileName, \"@QuoteID\", QuoteID],\r\n            },\r\n            success: function (resultData) {},\r\n            error: function (xhr, status, error) {},\r\n          });\r\n\r\n          let jsonData =\r\n            typeof resultData === \"string\" ? JSON.parse(resultData) : resultData;\r\n\r\n          if (jsonData.result == \"error\")\r\n            throw new Error(jsonData.reason ?? \"Lỗi bất thường\");\r\n          //console.log(resultData)\r\n          if (jsonData) {\r\n            if (\r\n              ParadiseOption &&\r\n              ParadiseOption.AppInfoPackageName ==\r\n                \"com.vietinsoft.onshiftparadisehr\"\r\n            ) {\r\n              AjaxHPAParadiseParadise({\r\n                data: {\r\n                  name: \"MobileOpenFileAsync\",\r\n                  param: [jsonData.FilePath, exportItem.fileName],\r\n                },\r\n                success: function (resultData) {},\r\n                error: function (xhr, status, error) {},\r\n              });\r\n            } else {\r\n              jsonData =\r\n                typeof jsonData.data === \"string\"\r\n                  ? JSON.parse(jsonData.data)\r\n                  : jsonData.data;\r\n\r\n              AjaxHPAParadiseParadise({\r\n                data: {\r\n                  name: \"ReadPathFileToByte\",\r\n                  param: [jsonData.FilePath],\r\n                },\r\n                success: function (result) {\r\n                  let resultData =\r\n                    typeof result === \"string\" ? JSON.parse(result) : result;\r\n                  saveAsFile(jsonData.FileName, resultData.data);\r\n                },\r\n                error: function (xhr, status, error) {},\r\n              });\r\n            }\r\n      }\r\n\r\n          HideLoadingByClassOrID(\"#QuouteListGrid\");\r\n        } catch (error) {\r\n          HideLoadingByClassOrID(\"#QuouteListGrid\");\r\n          let direction = \"up-push\";\r\n          let position = \"bottom right\";\r\n\r\n          try {\r\n            let reason = JSON.parse(jsonData.reason);\r\n            reason = Array.isArray(reason) ? reason[0] : reason;\r\n            jsonData.reason = reason.ErrorDetail;\r\n          } catch (jsonError) {}\r\n\r\n          let message =\r\n            jsonData.result == \"error\" && jsonData.reason\r\n              ? jsonData.reason\r\n              : error.message;\r\n\r\n          DevExpress.ui.notify(\r\n            {\r\n              message: message,\r\n              type: \"error\",\r\n              displayTime: 2500,\r\n            },\r\n            {\r\n              position,\r\n              direction,\r\n            },\r\n          );\r\n        }\r\n      }\r\n    ReloadData();\r\n\r\n  })();\r\n</script>\r\n",
+              "bytes_filename": "sp_Sub_SubQuotation.html"
+            }
+          ]
+        ],
+        "dataSchema": [
+          [
+            {
+              "name": "bytes",
+              "type": "System.String"
+            },
+            {
+              "name": "bytes_filename",
+              "type": "System.String"
+            }
+          ]
+        ]
+      },
+      "timestamp": "2026-10-16T02:33:12.308Z"
+    },
+    {
+      "type": "request",
+      "url": "https://paradisehrm.com/Tai3/hpa/paradise2",
+      "method": "POST",
+      "resourceType": "fetch",
+      "postData": {
+        "content": "02xY5O3N3CIcOd20zC0/ATOZWT00Qk6gu0O5yKQbIIEcfCdU/s8ytsWyvFSnIpV63DhwyA8Sm8hAVLVEfHQd84Ae350jXqD0APv3lxYIsZfMljF7zN3npoBJDKSrsf+kQiTqIMeqNrzomX8S1Hyvo8f4G0HCrlZ2CENcB73W1/ouzGTW2LxDmj09ndA+d4bRdmi3/pTDPBuJ2VWO7eTeE/g1Zo3bJOF1Ap3sHBV1LcxZGXGhtoxeDc/z/0o5b2zhwNWJJX5CVw5vpMLRPHwS26JKoNp8b3lBRfC3WeF+KIcR+ijm9VQdsdBlcWYWRFlFcQw1CnUmEE4/g2/BIEz+8PpJ+vsZ8ET+fQWropeOPitwIlnvRt870wjlWkwg+SpulZnGOsAy7Amf+AdkB6OOikXQSWYCiBs7vNuyLHV6Y610w2zqKETVYPUngGT8MBuTgzCsZhj4NCKBk6gl7zlZY5Ow6QDj/tWa",
+        "paradiseType": "2"
+      },
+      "timestamp": "2026-10-16T02:33:12.310Z"
+    },
+    {
+      "type": "response",
+      "url": "https://paradisehrm.com/Tai3/hpa/paradise2",
+      "status": 200,
+      "responseBody": {
+        "result": "success",
+        "reason": "",
+        "data": [],
+        "dataSchema": []
+      },
+      "timestamp": "2026-10-16T02:33:12.335Z"
+    },
+    {
+      "type": "response",
+      "url": "https://paradisehrm.com/Tai3/hpa/paradise2",
+      "status": 200,
+      "responseBody": {
+        "result": "success",
+        "reason": "",
+        "data": [
+          [
+            {
+              "ParadiseVersion": "-1521729414"
+            }
+          ]
+        ],
+        "dataSchema": [
+          [
+            {
+              "name": "ParadiseVersion",
+              "type": "System.String"
+            }
+          ]
+        ]
+      },
+      "timestamp": "2026-10-16T02:33:12.338Z"
+    },
+    {
+      "type": "response",
+      "url": "https://paradisehrm.com/Tai3/hpa/paradise2",
+      "status": 200,
+      "responseBody": {
+        "result": "success",
+        "reason": "",
+        "data": [
+          [
+            {
+              "QuoteID": 129,
+              "QuoteCode": "BG-20260929-154005",
+              "QuoteDate": "29/09/2026",
+              "CustomerID": "Hoài Dung",
+              "EmployeeID": "ĐẶNG THỊ NHUNG",
+              "Company": "Star Gym & Fitness",
+              "TotalAmount": "0 đ",
+              "RowNum": 1
+            },
+            {
+              "QuoteID": 128,
+              "QuoteCode": "BG-20260928-104927",
+              "QuoteDate": "28/09/2026",
+              "CustomerID": "Huỳn",
+              "EmployeeID": "TRẦN KHÁNH LY",
+              "Company": "Tiger Gym",
+              "TotalAmount": "0 đ",
+              "RowNum": 2
+            },
+            {
+              "QuoteID": 127,
+              "QuoteCode": "BG-20260925-134416",
+              "QuoteDate": "25/09/2026",
+              "CustomerID": "Nguyễn Thị Trâm Anh",
+              "EmployeeID": "TRẦN KHÁNH LY",
+              "Company": "CÔNG TY TNHH KỸ THUẬT CÔNG NGHỆ CTC FAST",
+              "TotalAmount": "0 đ",
+              "RowNum": 3
+            },
+            {
+              "QuoteID": 126,
+              "QuoteCode": "BG-20260924-133503",
+              "QuoteDate": "24/09/2026",
+              "CustomerID": "Xuân Thanh",
+              "EmployeeID": "NGUYỄN THỊ THANH TÂM",
+              "Company": "Công ty TNHH Vật Liệu Chân Không Cách Nhiệt HAODA (Việt Nam)",
+              "TotalAmount": "0 đ",
+              "RowNum": 4
+            },
+            {
+              "QuoteID": 125,
+              "QuoteCode": "BG-20260921-164247",
+              "QuoteDate": "21/09/2026",
+              "CustomerID": "Nguyen Kim Nhung",
+              "EmployeeID": "TRẦN KHÁNH LY",
+              "Company": "CÔNG TY TRÁCH NHIỆM HỮU HẠN VINA YONG SEONG",
+              "TotalAmount": "0 đ",
+              "RowNum": 5
+            },
+            {
+              "QuoteID": 124,
+              "QuoteCode": "BG-20260921-161437",
+              "QuoteDate": "21/09/2026",
+              "CustomerID": "NGUYỄN ĐĂNG HOAN",
+              "EmployeeID": "TRẦN KHÁNH LY",
+              "Company": "CÔNG TY CỔ PHẦN DU HỌC QUỐC TẾ FAST EDU",
+              "TotalAmount": "0 đ",
+              "RowNum": 6
+            },
+            {
+              "QuoteID": 123,
+              "QuoteCode": "BG-20260921-161209",
+              "QuoteDate": "21/09/2026",
+              "CustomerID": "NGUYỄN ĐĂNG HOAN",
+              "EmployeeID": "TRẦN KHÁNH LY",
+              "Company": "CÔNG TY CỔ PHẦN DU HỌC QUỐC TẾ FAST EDU",
+              "TotalAmount": "0 đ",
+              "RowNum": 7
+            },
+            {
+              "QuoteID": 122,
+              "QuoteCode": "BG-20260921-161057",
+              "QuoteDate": "21/09/2026",
+              "CustomerID": "NGUYỄN ĐĂNG HOAN",
+              "EmployeeID": "TRẦN KHÁNH LY",
+              "Company": "CÔNG TY CỔ PHẦN DU HỌC QUỐC TẾ FAST EDU",
+              "TotalAmount": "0 đ",
+              "RowNum": 8
+            },
+            {
+              "QuoteID": 121,
+              "QuoteCode": "BG-20260921-142706",
+              "QuoteDate": "21/09/2026",
+              "CustomerID": "NGUYỄN ĐĂNG HOAN",
+              "EmployeeID": "TRẦN KHÁNH LY",
+              "Company": "CÔNG TY CỔ PHẦN DU HỌC QUỐC TẾ FAST EDU",
+              "TotalAmount": "0 đ",
+              "RowNum": 9
+            },
+            {
+              "QuoteID": 120,
+              "QuoteCode": "BG-20260921-141451",
+              "QuoteDate": "21/09/2026",
+              "CustomerID": "Dinh Xuan Hai",
+              "EmployeeID": "TRẦN KHÁNH LY",
+              "Company": "Dinh Xuan Hai Gym",
+              "TotalAmount": "0 đ",
+              "RowNum": 10
+            },
+            {
+              "QuoteID": 119,
+              "QuoteCode": "BG-20260921-141400",
+              "QuoteDate": "21/09/2026",
+              "CustomerID": "Dinh Xuan Hai",
+              "EmployeeID": "TRẦN KHÁNH LY",
+              "Company": "Dinh Xuan Hai Gym",
+              "TotalAmount": "0 đ",
+              "RowNum": 11
+            },
+            {
+              "QuoteID": 118,
+              "QuoteCode": "BG-20260921-141017",
+              "QuoteDate": "21/09/2026",
+              "CustomerID": "Dinh Xuan Hai",
+              "EmployeeID": "TRẦN KHÁNH LY",
+              "Company": "Dinh Xuan Hai Gym",
+              "TotalAmount": "0 đ",
+              "RowNum": 12
+            },
+            {
+              "QuoteID": 117,
+              "QuoteCode": "BG-20260917-153941",
+              "QuoteDate": "17/09/2026",
+              "CustomerID": "Anh Vũ",
+              "EmployeeID": "ĐẶNG THỊ NHUNG",
+              "Company": "CÔNG TY CỔ PHẦN GOZO",
+              "TotalAmount": "0 đ",
+              "RowNum": 13
+            },
+            {
+              "QuoteID": 116,
+              "QuoteCode": "BG-20260910-143224",
+              "QuoteDate": "10/09/2026",
+              "CustomerID": "Ms Thư",
+              "EmployeeID": "TRẦN KHÁNH LY",
+              "Company": "CÔNG TY TNHH FURNITURE RESOURCES VIỆT NAM",
+              "TotalAmount": "0 đ",
+              "RowNum": 14
+            },
+            {
+              "QuoteID": 115,
+              "QuoteCode": "BG-20260910-140142",
+              "QuoteDate": "10/09/2026",
+              "CustomerID": "Ms Yến",
+              "EmployeeID": "NGUYỄN TỪ ÁNH TUYẾT",
+              "Company": "CÔNG TY TNHH FUJIKURA COMPOSITES HẢI PHÒNG",
+              "TotalAmount": "0 đ",
+              "RowNum": 15
+            },
+            {
+              "QuoteID": 114,
+              "QuoteCode": "BG-20260907-134258",
+              "QuoteDate": "07/09/2026",
+              "CustomerID": "Trần Thị Lợi",
+              "EmployeeID": "NGUYỄN THỊ THANH TÂM",
+              "Company": "Công ty TNHH KingKong PQ",
+              "TotalAmount": "0 đ",
+              "RowNum": 16
+            },
+            {
+              "QuoteID": 113,
+              "QuoteCode": "BG-20260903-090419",
+              "QuoteDate": "03/09/2026",
+              "CustomerID": "Nhân sự",
+              "EmployeeID": "TRẦN KHÁNH LY",
+              "Company": "SCM METAL VIET NAM COMPANY LIMITED",
+              "TotalAmount": "0 đ",
+              "RowNum": 17
+            },
+            {
+              "QuoteID": 112,
+              "QuoteCode": "BG-20260903-082401",
+              "QuoteDate": "03/09/2026",
+              "CustomerID": "ĐÀO HOÀNG VŨ",
+              "EmployeeID": "NGUYỄN THỊ THANH TÂM",
+              "Company": "ABC",
+              "TotalAmount": "0 đ",
+              "RowNum": 18
+            },
+            {
+              "QuoteID": 111,
+              "QuoteCode": "BG-20260829-162935",
+              "QuoteDate": "29/08/2026",
+              "CustomerID": "Chị kim Huệ",
+              "EmployeeID": "ĐẶNG THỊ NHUNG",
+              "Company": "",
+              "TotalAmount": "0 đ",
+              "RowNum": 19
+            },
+            {
+              "QuoteID": 110,
+              "QuoteCode": "BG-20260825-144308",
+              "QuoteDate": "25/08/2026",
+              "CustomerID": "Miss Thân Thúy",
+              "EmployeeID": "TRẦN KHÁNH LY",
+              "Company": "CÔNG TY CỔ PHẦN EXCELLENT 68",
+              "TotalAmount": "0 đ",
+              "RowNum": 20
+            },
+            {
+              "QuoteID": 109,
+              "QuoteCode": "BG-20260821-134047",
+              "QuoteDate": "21/08/2026",
+              "CustomerID": "Sơn",
+              "EmployeeID": "NGUYỄN THỊ THANH TÂM",
+              "Company": "CÔNG TY TNHH GIẢI PHÁP Y SINH ABT – CHI NHÁNH LONG HẬU",
+              "TotalAmount": "0 đ",
+              "RowNum": 21
+            },
+            {
+              "QuoteID": 108,
+              "QuoteCode": "BG-20260820-142708",
+              "QuoteDate": "20/08/2026",
+              "CustomerID": "LEE KYU SANG",
+              "EmployeeID": "TRẦN KHÁNH LY",
+              "Company": "CÔNG TY TNHH ASIA NETWORKS HOLDINGS",
+              "TotalAmount": "0 đ",
+              "RowNum": 22
+            },
+            {
+              "QuoteID": 107,
+              "QuoteCode": "BG-20260819-155200",
+              "QuoteDate": "19/08/2026",
+              "CustomerID": null,
+              "EmployeeID": "NGUYỄN THỊ THANH TÂM",
+              "Company": "",
+              "TotalAmount": "0 đ",
+              "RowNum": 23
+            },
+            {
+              "QuoteID": 106,
+              "QuoteCode": "BG-20260818-161951",
+              "QuoteDate": "18/08/2026",
+              "CustomerID": "Khả Di",
+              "EmployeeID": "NGUYỄN THỊ THANH TÂM",
+              "Company": "Dương Gym Fitness",
+              "TotalAmount": "0 đ",
+              "RowNum": 24
+            },
+            {
+              "QuoteID": 105,
+              "QuoteCode": "BG-20260817-164239",
+              "QuoteDate": "17/08/2026",
+              "CustomerID": "Huong mai ",
+              "EmployeeID": "TRẦN KHÁNH LY",
+              "Company": "CÔNG TY TNHH KỸ THUẬT CƠ KHÍ HOÀN PHONG",
+              "TotalAmount": "0 đ",
+              "RowNum": 25
+            },
+            {
+              "QuoteID": 104,
+              "QuoteCode": "BG-20260817-132217",
+              "QuoteDate": "17/08/2026",
+              "CustomerID": "test",
+              "EmployeeID": "LÊ TRẦN HOÀNG NAM",
+              "Company": "Vietinsoft",
+              "TotalAmount": "0 đ",
+              "RowNum": 26
+            },
+            {
+              "QuoteID": 103,
+              "QuoteCode": "BG-20260817-111747",
+              "QuoteDate": "17/08/2026",
+              "CustomerID": "Ông Đặng Thiện Quốc",
+              "EmployeeID": "LÊ TRẦN HOÀNG NAM",
+              "Company": "Cty TNHH TM - DV Việt San",
+              "TotalAmount": "0 đ",
+              "RowNum": 27
+            },
+            {
+              "QuoteID": 102,
+              "QuoteCode": "BG-20260814-134640",
+              "QuoteDate": "14/08/2026",
+              "CustomerID": "Nguyễn Thanh Trạng",
+              "EmployeeID": "LÊ TRẦN HOÀNG NAM",
+              "Company": "CÔNG TY CỔ PHẦN QUẢN LÝ DỊCH VỤ ADORA",
+              "TotalAmount": "0 đ",
+              "RowNum": 28
+            },
+            {
+              "QuoteID": 101,
+              "QuoteCode": "BG-20260814-115407",
+              "QuoteDate": "14/08/2026",
+              "CustomerID": "Nguyễn Thanh Trạng",
+              "EmployeeID": "LÊ TRẦN HOÀNG NAM",
+              "Company": "CÔNG TY CỔ PHẦN QUẢN LÝ DỊCH VỤ ADORA",
+              "TotalAmount": "0 đ",
+              "RowNum": 29
+            },
+            {
+              "QuoteID": 100,
+              "QuoteCode": "BG-20260814-114153",
+              "QuoteDate": "14/08/2026",
+              "CustomerID": "Mr. Lê Thành Chung",
+              "EmployeeID": "ĐẶNG THỊ NHUNG",
+              "Company": "CÔNG TY CỔ PHẦN CÔNG NGHỆ VÀ GIÁO DỤC MINCLUE",
+              "TotalAmount": "0 đ",
+              "RowNum": 30
+            },
+            {
+              "QuoteID": 99,
+              "QuoteCode": "BG-20260813-165820",
+              "QuoteDate": "13/08/2026",
+              "CustomerID": "Ms Thắm",
+              "EmployeeID": "TRẦN KHÁNH LY",
+              "Company": "CÔNG TY TNHH CÔNG NGHỆ QUANSHEN",
+              "TotalAmount": "0 đ",
+              "RowNum": 31
+            },
+            {
+              "QuoteID": 98,
+              "QuoteCode": "BG-20260813-094906",
+              "QuoteDate": "13/08/2026",
+              "CustomerID": "Mr. Lê Thành Chung",
+              "EmployeeID": "ĐẶNG THỊ NHUNG",
+              "Company": "CÔNG TY CỔ PHẦN CÔNG NGHỆ VÀ GIÁO DỤC MINCLUE",
+              "TotalAmount": "0 đ",
+              "RowNum": 32
+            },
+            {
+              "QuoteID": 97,
+              "QuoteCode": "BG-20260811-141543",
+              "QuoteDate": "11/08/2026",
+              "CustomerID": "Mr Trường",
+              "EmployeeID": "NGUYỄN TỪ ÁNH TUYẾT",
+              "Company": "CÔNG TY TNHH NAM SƠN",
+              "TotalAmount": "0 đ",
+              "RowNum": 33
+            },
+            {
+              "QuoteID": 96,
+              "QuoteCode": "BG-20260811-091933",
+              "QuoteDate": "11/08/2026",
+              "CustomerID": "ĐỖ TRỌNG PHÁT",
+              "EmployeeID": "TRẦN KHÁNH LY",
+              "Company": "CÔNG TY TNHH ZEN CENTER",
+              "TotalAmount": "0 đ",
+              "RowNum": 34
+            },
+            {
+              "QuoteID": 95,
+              "QuoteCode": "BG-20260811-080852",
+              "QuoteDate": "11/08/2026",
+              "CustomerID": "Ms. Mỹ Linh",
+              "EmployeeID": "LÊ THỊ KIM THỦY",
+              "Company": "CÔNG TY TNHH FUTURE TEXTILE VIỆT NAM",
+              "TotalAmount": "0 đ",
+              "RowNum": 35
+            },
+            {
+              "QuoteID": 94,
+              "QuoteCode": "BG-20260810-164229",
+              "QuoteDate": "10/08/2026",
+              "CustomerID": "Ms. Mỹ Linh",
+              "EmployeeID": "LÊ THỊ KIM THỦY",
+              "Company": "CÔNG TY TNHH FUTURE TEXTILE VIỆT NAM",
+              "TotalAmount": "0 đ",
+              "RowNum": 36
+            },
+            {
+              "QuoteID": 93,
+              "QuoteCode": "BG-20260810-085912",
+              "QuoteDate": "10/08/2026",
+              "CustomerID": "Nguyễn Hữu Tân",
+              "EmployeeID": "TRẦN KHÁNH LY",
+              "Company": "Trường TH THCS và THPT Đinh Tiên Hoàng",
+              "TotalAmount": "0 đ",
+              "RowNum": 37
+            },
+            {
+              "QuoteID": 92,
+              "QuoteCode": "BG-20260810-085640",
+              "QuoteDate": "10/08/2026",
+              "CustomerID": "Mr Quang",
+              "EmployeeID": "TRẦN KHÁNH LY",
+              "Company": "Gym",
+              "TotalAmount": "0 đ",
+              "RowNum": 38
+            },
+            {
+              "QuoteID": 91,
+              "QuoteCode": "BG-20260807-150626",
+              "QuoteDate": "07/08/2026",
+              "CustomerID": "Ms Hoa KT",
+              "EmployeeID": "TRẦN KHÁNH LY",
+              "Company": "FORTIKA CORPORATION",
+              "TotalAmount": "0 đ",
+              "RowNum": 39
+            },
+            {
+              "QuoteID": 90,
+              "QuoteCode": "BG-20260807-144608",
+              "QuoteDate": "07/08/2026",
+              "CustomerID": "HCNS",
+              "EmployeeID": "LÊ THỊ KIM THỦY",
+              "Company": "CHI NHÁNH DRIP HYDRATION HỒ CHÍ MINH – CÔNG TY CỔ PHẦN THƯƠNG MẠI VÀ ĐẦU TƯ 3T",
+              "TotalAmount": "0 đ",
+              "RowNum": 40
+            },
+            {
+              "QuoteID": 89,
+              "QuoteCode": "BG-20260807-113329",
+              "QuoteDate": "07/08/2026",
+              "CustomerID": "Ms Nhung",
+              "EmployeeID": "LÊ TRẦN HOÀNG NAM",
+              "Company": "CÔNG TY TNHH THƯƠNG MẠI VÀ DỊCH VỤ TỔNG HỢP VHT",
+              "TotalAmount": "0 đ",
+              "RowNum": 41
+            },
+            {
+              "QuoteID": 88,
+              "QuoteCode": "BG-20260807-112655",
+              "QuoteDate": "07/08/2026",
+              "CustomerID": "Ms Nhung",
+              "EmployeeID": "LÊ TRẦN HOÀNG NAM",
+              "Company": "CÔNG TY TNHH THƯƠNG MẠI VÀ DỊCH VỤ TỔNG HỢP VHT",
+              "TotalAmount": "0 đ",
+              "RowNum": 42
+            },
+            {
+              "QuoteID": 87,
+              "QuoteCode": "BG-20260803-101539",
+              "QuoteDate": "03/08/2026",
+              "CustomerID": "Khả Di",
+              "EmployeeID": "NGUYỄN THỊ THANH TÂM",
+              "Company": "Dương Gym Fitness",
+              "TotalAmount": "0 đ",
+              "RowNum": 43
+            },
+            {
+              "QuoteID": 86,
+              "QuoteCode": "BG-20260731-091435",
+              "QuoteDate": "31/07/2026",
+              "CustomerID": "Anh Vũ",
+              "EmployeeID": "ĐẶNG THỊ NHUNG",
+              "Company": "CÔNG TY CỔ PHẦN GOZO",
+              "TotalAmount": "0 đ",
+              "RowNum": 44
+            },
+            {
+              "QuoteID": 85,
+              "QuoteCode": "BG-20260730-141708",
+              "QuoteDate": "30/07/2026",
+              "CustomerID": "Hoàng Trong",
+              "EmployeeID": "NGUYỄN THỊ THANH TÂM",
+              "Company": "Phòng Gym - Khách hàng Hoàng Trong",
+              "TotalAmount": "0 đ",
+              "RowNum": 45
+            },
+            {
+              "QuoteID": 84,
+              "QuoteCode": "BG-20260730-141621",
+              "QuoteDate": "30/07/2026",
+              "CustomerID": "Hoàng Trong",
+              "EmployeeID": "NGUYỄN THỊ THANH TÂM",
+              "Company": "Phòng Gym - Khách hàng Hoàng Trong",
+              "TotalAmount": "0 đ",
+              "RowNum": 46
+            },
+            {
+              "QuoteID": 83,
+              "QuoteCode": "BG-20260730-141539",
+              "QuoteDate": "30/07/2026",
+              "CustomerID": "Hoàng Trong",
+              "EmployeeID": "NGUYỄN THỊ THANH TÂM",
+              "Company": "Phòng Gym - Khách hàng Hoàng Trong",
+              "TotalAmount": "0 đ",
+              "RowNum": 47
+            },
+            {
+              "QuoteID": 82,
+              "QuoteCode": "BG-20260730-114407",
+              "QuoteDate": "30/07/2026",
+              "CustomerID": "Nguyễn Thành Long",
+              "EmployeeID": "TRẦN KHÁNH LY",
+              "Company": "Chi nhánh Công ty Cổ phần Bê tông Ly tâm Thủ Đức tại Hải Dương",
+              "TotalAmount": "0 đ",
+              "RowNum": 48
+            },
+            {
+              "QuoteID": 81,
+              "QuoteCode": "BG-20260730-110412",
+              "QuoteDate": "30/07/2026",
+              "CustomerID": "Ms Yến",
+              "EmployeeID": "NGUYỄN TỪ ÁNH TUYẾT",
+              "Company": "CÔNG TY TNHH FUJIKURA COMPOSITES HẢI PHÒNG",
+              "TotalAmount": "0 đ",
+              "RowNum": 49
+            },
+            {
+              "QuoteID": 80,
+              "QuoteCode": "BG-20260728-084228",
+              "QuoteDate": "28/07/2026",
+              "CustomerID": "Ms Hồng",
+              "EmployeeID": "TRẦN KHÁNH LY",
+              "Company": "Công ty TNHH Molex Việt Nam",
+              "TotalAmount": "0 đ",
+              "RowNum": 50
+            }
+          ]
+        ],
+        "dataSchema": [
+          [
+            {
+              "name": "QuoteID",
+              "type": "System.Int32"
+            },
+            {
+              "name": "QuoteCode",
+              "type": "System.String"
+            },
+            {
+              "name": "QuoteDate",
+              "type": "System.String"
+            },
+            {
+              "name": "CustomerID",
+              "type": "System.String"
+            },
+            {
+              "name": "EmployeeID",
+              "type": "System.String"
+            },
+            {
+              "name": "Company",
+              "type": "System.String"
+            },
+            {
+              "name": "TotalAmount",
+              "type": "System.String"
+            },
+            {
+              "name": "RowNum",
+              "type": "System.Int64"
+            }
+          ]
+        ]
+      },
+      "timestamp": "2026-10-16T02:33:12.588Z"
+    }
+  ]
+}

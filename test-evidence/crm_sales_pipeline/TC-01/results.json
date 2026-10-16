@@ -1,0 +1,73 @@
+{
+  "tcId": "TC-01",
+  "pageName": "crm_sales_pipeline",
+  "title": "Khởi động, Điều hướng và Thẩm định Bảng Kanban Sales Pipeline",
+  "testStatus": "PASSED",
+  "businessStatus": "PASSED",
+  "businessNotes": "PASS - Màn hình Sales Pipeline nạp giao diện Kanban trực quan, thông suốt",
+  "failureAnalysis": {
+    "issue": "",
+    "expected": "",
+    "actual": "",
+    "rootCause": "",
+    "recommendation": ""
+  },
+  "status": "PASSED",
+  "duration": "23.05s",
+  "errors": "",
+  "stepScreenshots": [
+    {
+      "step": 1,
+      "title": "Mở thành công màn hình Sales Pipeline trong CRM",
+      "fileName": "TC-01-step01-mo-thanh-cong-man-hinh-sales-pipeline-trong-crm.png",
+      "relPath": "crm_sales_pipeline/TC-01/screenshots/TC-01-step01-mo-thanh-cong-man-hinh-sales-pipeline-trong-crm.png"
+    },
+    {
+      "step": 2,
+      "title": "Xác nhận hiển thị không gian làm việc Sales Pipeline",
+      "fileName": "TC-01-step02-xac-nhan-hien-thi-khong-gian-lam-viec-sales-pipeline.png",
+      "relPath": "crm_sales_pipeline/TC-01/screenshots/TC-01-step02-xac-nhan-hien-thi-khong-gian-lam-viec-sales-pipeline.png"
+    },
+    {
+      "step": 3,
+      "title": "Hệ thống nạp đầy đủ 61 thẻ cơ hội bán hàng theo từng giai đoạn",
+      "fileName": "TC-01-step03-he-thong-nap-day-du-61-the-co-hoi-ban-hang-theo-tung-giai-doan.png",
+      "relPath": "crm_sales_pipeline/TC-01/screenshots/TC-01-step03-he-thong-nap-day-du-61-the-co-hoi-ban-hang-theo-tung-giai-doan.png"
+    },
+    {
+      "step": 3,
+      "title": "Hệ thống nạp đầy đủ 61 thẻ cơ hội bán hàng theo từng giai đoạn",
+      "fileName": "TC-01-step03-he-thong-nap-day-du-cac-the-co-hoi-ban-hang-theo-tung-giai-doan.png",
+      "relPath": "crm_sales_pipeline/TC-01/screenshots/TC-01-step03-he-thong-nap-day-du-cac-the-co-hoi-ban-hang-theo-tung-giai-doan.png"
+    },
+    {
+      "step": 4,
+      "title": "Con trỏ Neon di chuyển và chọn thẻ khách hàng trên pipeline",
+      "fileName": "TC-01-step04-con-tro-neon-di-chuyen-va-chon-the-khach-hang-tren-pipeline.png",
+      "relPath": "crm_sales_pipeline/TC-01/screenshots/TC-01-step04-con-tro-neon-di-chuyen-va-chon-the-khach-hang-tren-pipeline.png"
+    },
+    {
+      "step": 5,
+      "title": "Bảng Sales Pipeline hoạt động ổn định đạt chuẩn",
+      "fileName": "TC-01-step05-bang-sales-pipeline-hoat-dong-on-dinh-dat-chuan.png",
+      "relPath": "crm_sales_pipeline/TC-01/screenshots/TC-01-step05-bang-sales-pipeline-hoat-dong-on-dinh-dat-chuan.png"
+    }
+  ],
+  "attachments": {
+    "screenshots": [
+      "crm_sales_pipeline/TC-01/screenshots/TC-01-step01-mo-thanh-cong-man-hinh-sales-pipeline-trong-crm.png",
+      "crm_sales_pipeline/TC-01/screenshots/TC-01-step02-xac-nhan-hien-thi-khong-gian-lam-viec-sales-pipeline.png",
+      "crm_sales_pipeline/TC-01/screenshots/TC-01-step03-he-thong-nap-day-du-61-the-co-hoi-ban-hang-theo-tung-giai-doan.png",
+      "crm_sales_pipeline/TC-01/screenshots/TC-01-step03-he-thong-nap-day-du-cac-the-co-hoi-ban-hang-theo-tung-giai-doan.png",
+      "crm_sales_pipeline/TC-01/screenshots/TC-01-step04-con-tro-neon-di-chuyen-va-chon-the-khach-hang-tren-pipeline.png",
+      "crm_sales_pipeline/TC-01/screenshots/TC-01-step05-bang-sales-pipeline-hoat-dong-on-dinh-dat-chuan.png"
+    ],
+    "videos": [
+      "crm_sales_pipeline/TC-01/videos/video.webm"
+    ],
+    "traces": [
+      "crm_sales_pipeline/TC-01/traces/trace.zip"
+    ]
+  },
+  "timestamp": "2026-10-16T05:44:25.816Z"
+}

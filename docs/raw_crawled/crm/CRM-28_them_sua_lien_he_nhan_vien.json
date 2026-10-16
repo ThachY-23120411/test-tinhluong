@@ -1,0 +1,1947 @@
+{
+  "code": "CRM-28",
+  "appId": "MnuKPI041",
+  "menuName": "Thêm/Sửa liên hệ nhân viên",
+  "group": "Thiết lập",
+  "clickSuccess": true,
+  "crawledAt": "2026-10-16T02:36:08.796Z",
+  "screenshot": "CRM-28_them_sua_lien_he_nhan_vien.png",
+  "mainScreen": {
+    "contextName": "Thêm/Sửa liên hệ nhân viên",
+    "fields": [
+      {
+        "index": 1,
+        "label": "Trường #1",
+        "controlType": "CheckBox",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": "true"
+      },
+      {
+        "index": 2,
+        "label": "Trường #2",
+        "controlType": "CheckBox",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": "true"
+      },
+      {
+        "index": 6,
+        "label": "Chọn cột hiển thị",
+        "controlType": "TextBox (Text / String)",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 7,
+        "label": "Tìm kiếm theo nội dung",
+        "controlType": "TextBox (Text / String)",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 9,
+        "label": "Trường #9",
+        "controlType": "CheckBox",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": "false"
+      },
+      {
+        "index": 10,
+        "label": "Trường #10",
+        "controlType": "CheckBox",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": "false"
+      },
+      {
+        "index": 11,
+        "label": "Trường #11",
+        "controlType": "CheckBox",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": "false"
+      },
+      {
+        "index": 12,
+        "label": "Trường #12",
+        "controlType": "CheckBox",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": "false"
+      },
+      {
+        "index": 13,
+        "label": "Trường #13",
+        "controlType": "CheckBox",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": "false"
+      },
+      {
+        "index": 14,
+        "label": "Trường #14",
+        "controlType": "CheckBox",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": "false"
+      },
+      {
+        "index": 15,
+        "label": "Trường #15",
+        "controlType": "CheckBox",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": "false"
+      },
+      {
+        "index": 16,
+        "label": "Trường #16",
+        "controlType": "CheckBox",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": "false"
+      },
+      {
+        "index": 17,
+        "label": "Trường #17",
+        "controlType": "CheckBox",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": "false"
+      },
+      {
+        "index": 18,
+        "label": "Trường #18",
+        "controlType": "CheckBox",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": "false"
+      },
+      {
+        "index": 19,
+        "label": "Trường #19",
+        "controlType": "CheckBox",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": "false"
+      },
+      {
+        "index": 20,
+        "label": "Trường #20",
+        "controlType": "CheckBox",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": "false"
+      },
+      {
+        "index": 21,
+        "label": "Trường #21",
+        "controlType": "CheckBox",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": "false"
+      },
+      {
+        "index": 22,
+        "label": "Trường #22",
+        "controlType": "CheckBox",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": "false"
+      },
+      {
+        "index": 23,
+        "label": "Trường #23",
+        "controlType": "CheckBox",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": "false"
+      },
+      {
+        "index": 24,
+        "label": "Trường #24",
+        "controlType": "CheckBox",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": "false"
+      },
+      {
+        "index": 25,
+        "label": "Trường #25",
+        "controlType": "CheckBox",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": "false"
+      },
+      {
+        "index": 26,
+        "label": "Trường #26",
+        "controlType": "CheckBox",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": "false"
+      },
+      {
+        "index": 27,
+        "label": "Trường #27",
+        "controlType": "CheckBox",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": "false"
+      },
+      {
+        "index": 28,
+        "label": "Trường #28",
+        "controlType": "CheckBox",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": "false"
+      },
+      {
+        "index": 29,
+        "label": "Trường #29",
+        "controlType": "CheckBox",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": "false"
+      },
+      {
+        "index": 30,
+        "label": "Trường #30",
+        "controlType": "CheckBox",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": "false"
+      },
+      {
+        "index": 34,
+        "label": "Chọn cột hiển thị",
+        "controlType": "TextBox (Text / String)",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 35,
+        "label": "Tìm kiếm",
+        "controlType": "TextBox (Text / String)",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 36,
+        "label": "Trường #36",
+        "controlType": "CheckBox",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": "false"
+      },
+      {
+        "index": 38,
+        "label": "Tạo mới",
+        "controlType": "TextBox (Text / String)",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 39,
+        "label": "Xuất Excel",
+        "controlType": "TextBox (Text / String)",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 41,
+        "label": "Chọn cột hiển thị",
+        "controlType": "TextBox (Text / String)",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 42,
+        "label": "Tìm kiếm theo nội dung",
+        "controlType": "TextBox (Text / String)",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 66,
+        "label": "Nhân viên",
+        "controlType": "DatePicker / DateBox",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": "2026-10-01"
+      },
+      {
+        "index": 68,
+        "label": "Chọn cột hiển thị",
+        "controlType": "TextBox (Text / String)",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 69,
+        "label": "Tìm kiếm theo nội dung",
+        "controlType": "TextBox (Text / String)",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 122,
+        "label": "Nhân viên",
+        "controlType": "DatePicker / DateBox",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": "2026-10-01"
+      },
+      {
+        "index": 124,
+        "label": "Tìm kiếm theo nội dung",
+        "controlType": "TextBox (Text / String)",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 162,
+        "label": "Tìm kiếm theo nội dung",
+        "controlType": "TextBox (Text / String)",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 174,
+        "label": "Trường #174",
+        "controlType": "Dropdown / SelectBox",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 175,
+        "label": "Trường #175",
+        "controlType": "Dropdown / SelectBox",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 176,
+        "label": "Trường #176",
+        "controlType": "Dropdown / SelectBox",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 177,
+        "label": "Chọn cột hiển thị",
+        "controlType": "TextBox (Text / String)",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 178,
+        "label": "Trường #178",
+        "controlType": "CheckBox",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": "false"
+      },
+      {
+        "index": 180,
+        "label": "Chọn cột hiển thị",
+        "controlType": "TextBox (Text / String)",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 185,
+        "label": "Nhân viên",
+        "controlType": "Dropdown / SelectBox",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": "2026-09-16"
+      },
+      {
+        "index": 186,
+        "label": "Chọn cột hiển thị",
+        "controlType": "TextBox (Text / String)",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 187,
+        "label": "Tìm kiếm theo nội dung",
+        "controlType": "TextBox (Text / String)",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 188,
+        "label": "Trường #188",
+        "controlType": "CheckBox",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": "false"
+      },
+      {
+        "index": 190,
+        "label": "Ngày tạo",
+        "controlType": "DatePicker / DateBox",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 191,
+        "label": "Mã nhân viên",
+        "controlType": "TextBox (Text / String)",
+        "state": "DISABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 192,
+        "label": "Công ty",
+        "controlType": "TextBox (Text / String)",
+        "state": "DISABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 193,
+        "label": "Mã số thuế",
+        "controlType": "TextBox (Text / String)",
+        "state": "DISABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 194,
+        "label": "Ngành",
+        "controlType": "Dropdown / SelectBox",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 195,
+        "label": "Địa chỉ",
+        "controlType": "TextBox (Text / String)",
+        "state": "DISABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 196,
+        "label": "Người liên hệ",
+        "controlType": "TextBox (Text / String)",
+        "state": "DISABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 197,
+        "label": "Điện thoại",
+        "controlType": "TextBox (Text / String)",
+        "state": "DISABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 198,
+        "label": "EMAIL",
+        "controlType": "TextBox (Text / String)",
+        "state": "DISABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 199,
+        "label": "Chức vụ công việc",
+        "controlType": "Dropdown / SelectBox",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 200,
+        "label": "Quy mô công ty",
+        "controlType": "Dropdown / SelectBox",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 201,
+        "label": "Nguồn",
+        "controlType": "TextBox (Text / String)",
+        "state": "DISABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 202,
+        "label": "Ghi chú",
+        "controlType": "TextArea",
+        "state": "DISABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 203,
+        "label": "Trạng thái",
+        "controlType": "TextBox (Text / String)",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 204,
+        "label": "Vui lòng nhập lý do từ chối",
+        "controlType": "TextArea",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 205,
+        "label": "Nhân viên",
+        "controlType": "DatePicker / DateBox",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": "2026-10-12"
+      },
+      {
+        "index": 206,
+        "label": "Nhân viên",
+        "controlType": "DatePicker / DateBox",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 208,
+        "label": "Tìm kiếm theo nội dung",
+        "controlType": "TextBox (Text / String)",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 210,
+        "label": "Tìm kiếm theo nội dung",
+        "controlType": "TextBox (Text / String)",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 213,
+        "label": "Tiêu đề",
+        "controlType": "TextBox (Text / String)",
+        "state": "ENABLED",
+        "required": "YES (*)",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Bắt buộc nhập (*)",
+        "currentValue": ""
+      },
+      {
+        "index": 214,
+        "label": "Địa\n                            điểm",
+        "controlType": "TextBox (Text / String)",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 215,
+        "label": "Bắt\n                            đầu",
+        "controlType": "DatePicker / DateBox",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 216,
+        "label": "Kết\n                            thúc",
+        "controlType": "DatePicker / DateBox",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 217,
+        "label": "Người tham dự",
+        "controlType": "TextBox (Text / String)",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 218,
+        "label": "Nội dung",
+        "controlType": "Dropdown / SelectBox",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": "#000000"
+      },
+      {
+        "index": 219,
+        "label": "Nhắc\n                            trước",
+        "controlType": "NumberInput",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Chỉ nhận giá trị số",
+        "currentValue": "15"
+      },
+      {
+        "index": 220,
+        "label": "Nhân viên",
+        "controlType": "DatePicker / DateBox",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": "2026-10-12"
+      },
+      {
+        "index": 222,
+        "label": "Tìm kiếm theo nội dung",
+        "controlType": "TextBox (Text / String)",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 225,
+        "label": "Thời gian",
+        "controlType": "DatePicker / DateBox",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 226,
+        "label": "Chủ đề",
+        "controlType": "TextBox (Text / String)",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 227,
+        "label": "Trạng thái",
+        "controlType": "Dropdown / SelectBox",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 228,
+        "label": "Loại bài đăng",
+        "controlType": "Dropdown / SelectBox",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 229,
+        "label": "Link bài đăng",
+        "controlType": "TextBox (Text / String)",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 230,
+        "label": "Ghi chú",
+        "controlType": "Dropdown / SelectBox",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": "#000000"
+      },
+      {
+        "index": 231,
+        "label": "Đính kèm",
+        "controlType": "TextBox (Text / String)",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 232,
+        "label": "Nhân viên",
+        "controlType": "DatePicker / DateBox",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": "2026-10-12"
+      },
+      {
+        "index": 233,
+        "label": "Chọn cột hiển thị",
+        "controlType": "TextBox (Text / String)",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 234,
+        "label": "Tìm kiếm theo nội dung",
+        "controlType": "TextBox (Text / String)",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 260,
+        "label": "Chọn cột hiển thị",
+        "controlType": "TextBox (Text / String)",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 261,
+        "label": "Tìm kiếm theo nội dung",
+        "controlType": "TextBox (Text / String)",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 264,
+        "label": "Chọn cột hiển thị",
+        "controlType": "TextBox (Text / String)",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 265,
+        "label": "Thêm",
+        "controlType": "TextBox (Text / String)",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 266,
+        "label": "Tìm kiếm theo nội dung",
+        "controlType": "TextBox (Text / String)",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 276,
+        "label": "Trường #276",
+        "controlType": "Dropdown / SelectBox",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 277,
+        "label": "Chọn cột hiển thị",
+        "controlType": "TextBox (Text / String)",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 278,
+        "label": "Tìm kiếm theo nội dung",
+        "controlType": "TextBox (Text / String)",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 279,
+        "label": "Trường #279",
+        "controlType": "CheckBox",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": "false"
+      },
+      {
+        "index": 281,
+        "label": "Xem tất cả ngày",
+        "controlType": "DatePicker / DateBox",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": "2026-10-12"
+      },
+      {
+        "index": 286,
+        "label": "Tìm kiếm theo nội dung",
+        "controlType": "TextBox (Text / String)",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 310,
+        "label": "Ngày tạo",
+        "controlType": "DatePicker / DateBox",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 311,
+        "label": "Kéo thả hình ảnh để AI phân tích",
+        "controlType": "TextBox (Text / String)",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 312,
+        "label": "Xem của tôi",
+        "controlType": "CheckBox",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": "on"
+      },
+      {
+        "index": 313,
+        "label": "Chọn cột hiển thị",
+        "controlType": "TextBox (Text / String)",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 314,
+        "label": "Tìm kiếm theo nội dung",
+        "controlType": "TextBox (Text / String)",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 334,
+        "label": "Nhân viên",
+        "controlType": "DatePicker / DateBox",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": "2026-10-01"
+      },
+      {
+        "index": 336,
+        "label": "Tìm kiếm theo nội dung",
+        "controlType": "TextBox (Text / String)",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 338,
+        "label": "Excel",
+        "controlType": "TextBox (Text / String)",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 339,
+        "label": "Excel",
+        "controlType": "TextBox (Text / String)",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 340,
+        "label": "Excel",
+        "controlType": "TextBox (Text / String)",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 341,
+        "label": "Excel",
+        "controlType": "TextBox (Text / String)",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 342,
+        "label": "Excel",
+        "controlType": "TextBox (Text / String)",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 343,
+        "label": "Excel",
+        "controlType": "TextBox (Text / String)",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 344,
+        "label": "Excel",
+        "controlType": "TextBox (Text / String)",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 345,
+        "label": "Excel",
+        "controlType": "TextBox (Text / String)",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 346,
+        "label": "Excel",
+        "controlType": "TextBox (Text / String)",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 347,
+        "label": "Excel",
+        "controlType": "TextBox (Text / String)",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 348,
+        "label": "Excel",
+        "controlType": "TextBox (Text / String)",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 349,
+        "label": "Excel",
+        "controlType": "TextBox (Text / String)",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 350,
+        "label": "Excel",
+        "controlType": "TextBox (Text / String)",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 351,
+        "label": "Excel",
+        "controlType": "TextBox (Text / String)",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 352,
+        "label": "Excel",
+        "controlType": "TextBox (Text / String)",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 353,
+        "label": "Excel",
+        "controlType": "TextBox (Text / String)",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 356,
+        "label": "#",
+        "controlType": "TextBox (Text / String)",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 367,
+        "label": "Xếp hạng",
+        "controlType": "TextBox (Text / String)",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 369,
+        "label": "STT",
+        "controlType": "TextBox (Text / String)",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 371,
+        "label": "#",
+        "controlType": "TextBox (Text / String)",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      }
+    ],
+    "buttons": [
+      "Không",
+      "Đồng ý",
+      "OK",
+      "Share",
+      "Thêm/Sửa liên hệ nhân viên",
+      "Zalo",
+      "Danh sách công ty CRM",
+      "Thư ký cuộc họp",
+      "Danh sách hỗ trợ",
+      "Hướng dẫn sử dụng",
+      "Tổng quan hỗ trợ",
+      "Lịch sử xuất kho",
+      "Lịch sử nhập kho",
+      "Xóa",
+      "Lưu lại",
+      "Chọn cột hiển thị",
+      "AI soạn thảo",
+      "Xuất Word",
+      "Nghe",
+      "Xuất Word 0",
+      "Xóa lọc",
+      "Tạo mới",
+      "Xuất Excel",
+      "Bình thường",
+      "16px",
+      "Khôi phục mặc định",
+      "Hủy",
+      "Áp dụng",
+      "Start Recording",
+      "Select a file",
+      "Tải về",
+      "Gửi yêu cầu",
+      "Tạo yêu cầu",
+      "Tìm kiếm",
+      "Làm mới",
+      "Thêm mới",
+      "Lưu",
+      "Thêm phân hệ",
+      "Xoá",
+      "Lọc dữ liệu",
+      "Chuyển dữ liệu",
+      "＋ Thêm tổ hợp",
+      "✕ Xóa tổ hợp",
+      "Cào theo tổ hợp",
+      "Dừng cào hàng loạt",
+      "Tải lại",
+      "Từ chối",
+      "Duyệt",
+      "Đóng",
+      "Tạo cuộc họp mới",
+      "Lưu cuộc họp",
+      "Thêm nội dung",
+      "Xóa hình ảnh",
+      "Lưu dữ liệu",
+      "Gửi",
+      "Soạn thư",
+      "Tất cả",
+      "Bạn bè",
+      "Nhóm",
+      "Khách hàng",
+      "Thêm",
+      "Export",
+      "Tuần",
+      "Tháng",
+      "Quý",
+      "Năm",
+      "Quay lại",
+      "+ Thêm mới",
+      "Chỉnh sửa",
+      "Import",
+      "Danh sách bổ xung",
+      "Dữ liệu thu thập",
+      "Lead",
+      "Đã liên hệ",
+      "Đã demo & gửi báo giá",
+      "Cần chăm sóc",
+      "Sắp chốt đơn",
+      "Thành công",
+      "Thất bại",
+      "Hôm nay",
+      "Tuần này",
+      "Tháng này",
+      "? Áp dụng",
+      "Lưu thông tin liên hệ",
+      "Xuất báo giá",
+      "Lưu báo giá",
+      "Tạo báo giá mới",
+      "Excel",
+      "Thêm Lead",
+      "Tính toán lại",
+      "Quản lý danh sách KPI",
+      "Lưu cấu hình",
+      "Lọc",
+      "Close all tabs",
+      "Close other tabs",
+      "Close all tabs on left",
+      "Close all tabs on right",
+      "Close this tab",
+      "Pin to taskbar",
+      "Open",
+      "Unpin to taskbar",
+      "Ðánh d?u t?t c? dã xem",
+      "Xem danh sách thông báo",
+      "Cài d?t",
+      "Stay",
+      "Upload",
+      "Nhấn để thiết lập phím tắt",
+      "Hủy phím tắt",
+      "Lấy mã mới"
+    ]
+  },
+  "modals": [],
+  "dataLineage": {
+    "isDownstreamScreen": false,
+    "hasDataTable": true,
+    "hasCreateButton": true,
+    "detectedMetadata": {},
+    "inferredStoredProcedures": [
+      "sp_CRM_EditContactEmployee"
+    ],
+    "recommendation": "Màn hình \"Thêm/Sửa liên hệ nhân viên\" có sẵn form tạo/nhập dữ liệu trực tiếp."
+  },
+  "apiNetworkCalls": [
+    {
+      "type": "request",
+      "url": "https://paradisehrm.com/Tai3/hpa/paradise2",
+      "method": "POST",
+      "resourceType": "fetch",
+      "postData": {
+        "content": "02xY5O3N3CIcOd20zC0/ATOZWT00Qk6gu0O5yKQbIIEcfCdU/s8ytsWyvFSnIpV6UKgQ7Sv8lOKA5yMgftW5a4Ae350jXqD0APv3lxYIsZfMljF7zN3npoBJDKSrsf+kQiTqIMeqNrzomX8S1Hyvo8f4G0HCrlZ2CENcB73W1/ouzGTW2LxDmj09ndA+d4bRzzvT0NnRWZ1Ir9wN7Hw/OfMnoKwueYvrxU+iDKj+L/yqNnfWSvukUPn7hdFhdHW1FxMgsNcFFrMTqo3oeymqEjj5naQPVRCAn38odT2YbfzLwb6Jl8Kjs51VkgaJDVZXfTnh/F9B6MwXVEwmo8lIkY425HT6Cwee",
+        "paradiseType": "2"
+      },
+      "timestamp": "2026-10-16T02:35:56.032Z"
+    },
+    {
+      "type": "request",
+      "url": "https://paradisehrm.com/Tai3/hpa/paradise2",
+      "method": "POST",
+      "resourceType": "fetch",
+      "postData": {
+        "content": "02xY5O3N3CIcOd20zC0/ATOZWT00Qk6gu0O5yKQbIIEcfCdU/s8ytsWyvFSnIpV6UKgQ7Sv8lOKA5yMgftW5a4Ae350jXqD0APv3lxYIsZfMljF7zN3npoBJDKSrsf+kQiTqIMeqNrzomX8S1Hyvo8f4G0HCrlZ2CENcB73W1/ouzGTW2LxDmj09ndA+d4bRnfHkcut/cXY9g1+j5oMtWzf2s8b6liVAou4aarswLsppQf0m42fzRFAE804wYojljeS/wvulP3ce9Um8hvsQAQAJ1/zvPoBnb7lJxhKfBVz/Df7bfebCZq33PYJny2fImNjEWLhrC2wbmMojd4qZB3XdRcYK81sK47GR3zwBe1177HdGJDHlLBHVhuI742T3x2iEX5nWxY1yi2mfXHdF5zpWB3ZZ7oQyQZtfMszQYA8L4lOsJ7IRC8EW4xNEUAx3YSJhSxcaJ1bCm8InBKpoF3oVufmEDVWOJBGsLKcLazk=",
+        "paradiseType": "2"
+      },
+      "timestamp": "2026-10-16T02:35:56.040Z"
+    },
+    {
+      "type": "request",
+      "url": "https://paradisehrm.com/Tai3/api/hpa/paradise?&name=paradisepublic&param=[%22paradisepublic%22,%22sp_CRM_EditContactEmployee%22,%22LanguageID%22,%22VN%22,%22ParadiseVersion%22,-1469847]&user=paradisepublic&password=3C9909AFEC25354D551DAE21590BB26E38D53F2173B8D3DC3EEE4C047E7AB1C1EB8B85103E3BE7BA613B31BB5C9C36214DC9F14A42FD7A2FDB84856BCA5C44C2&_cb=VN_-1469847",
+      "method": "GET",
+      "resourceType": "xhr",
+      "postData": null,
+      "timestamp": "2026-10-16T02:35:56.073Z"
+    },
+    {
+      "type": "response",
+      "url": "https://paradisehrm.com/Tai3/hpa/paradise2",
+      "status": 200,
+      "responseBody": {
+        "result": "success",
+        "reason": "",
+        "data": [
+          [
+            {
+              "ParadiseVersion": "-1469847"
+            }
+          ]
+        ],
+        "dataSchema": [
+          [
+            {
+              "name": "ParadiseVersion",
+              "type": "System.String"
+            }
+          ]
+        ]
+      },
+      "timestamp": "2026-10-16T02:35:56.074Z"
+    },
+    {
+      "type": "response",
+      "url": "https://paradisehrm.com/Tai3/hpa/paradise2",
+      "status": 200,
+      "responseBody": {
+        "result": "success",
+        "reason": "",
+        "data": [],
+        "dataSchema": []
+      },
+      "timestamp": "2026-10-16T02:35:56.074Z"
+    },
+    {
+      "type": "request",
+      "url": "https://paradisehrm.com/Tai3/api/hpa/paradise?&name=paradisepublic&param=[%22paradisepublic%22,%22sp_CRM_EditContactEmployee%22,%22LanguageID%22,%22VN%22,%22ParadiseVersion%22,-1469847]&user=paradisepublic&password=3C9909AFEC25354D551DAE21590BB26E38D53F2173B8D3DC3EEE4C047E7AB1C1EB8B85103E3BE7BA613B31BB5C9C36214DC9F14A42FD7A2FDB84856BCA5C44C2&_cb=VN_-1469847",
+      "method": "GET",
+      "resourceType": "xhr",
+      "postData": null,
+      "timestamp": "2026-10-16T02:35:56.227Z"
+    },
+    {
+      "type": "response",
+      "url": "https://paradisehrm.com/Tai3/api/hpa/paradise?&name=paradisepublic&param=[%22paradisepublic%22,%22sp_CRM_EditContactEmployee%22,%22LanguageID%22,%22VN%22,%22ParadiseVersion%22,-1469847]&user=paradisepublic&password=3C9909AFEC25354D551DAE21590BB26E38D53F2173B8D3DC3EEE4C047E7AB1C1EB8B85103E3BE7BA613B31BB5C9C36214DC9F14A42FD7A2FDB84856BCA5C44C2&_cb=VN_-1469847",
+      "status": 200,
+      "responseBody": {
+        "result": "success",
+        "reason": "",
+        "data": [
+          [
+            {
+              "bytes": "\r\n<style>\r\n  #sp_CRM_EditContactEmployee_html .form-title {\r\n    font-size: 16px;\r\n    font-weight: 700;\r\n    margin-bottom: 24px;\r\n    display: flex;\r\n    align-items: center;\r\n    gap: 8px;\r\n    letter-spacing: -0.2px;\r\n  }\r\n\r\n  #sp_CRM_EditContactEmployee_html .form-body {\r\n    display: flex;\r\n    flex-direction: column;\r\n    gap: 20px;\r\n    margin-bottom: 28px;\r\n  }\r\n\r\n  #sp_CRM_EditContactEmployee_html .form-group-item {\r\n    display: flex;\r\n    flex-direction: column;\r\n    gap: 8px;\r\n  }\r\n\r\n  #sp_CRM_EditContactEmployee_html .form-label {\r\n    font-size: 11px;\r\n    font-weight: 700;\r\n    color: var(--paradise-color-secondary, #64748b);\r\n    text-transform: uppercase;\r\n    letter-spacing: 0.8px;\r\n  }\r\n\r\n  #sp_CRM_EditContactEmployee_html .form-group-item-inline {\r\n    display: flex;\r\n    flex-direction: row;\r\n    align-items: center;\r\n    gap: 16px;\r\n  }\r\n\r\n  #sp_CRM_EditContactEmployee_html .form-group-item-inline .form-label {\r\n    flex: 0 0 160px;\r\n    margin-bottom: 0;\r\n  }\r\n\r\n  #sp_CRM_EditContactEmployee_html .form-footer-actions {\r\n    display: flex;\r\n    justify-content: flex-end;\r\n    gap: 12px;\r\n    border-top: 1px solid var(--paradise-color-input-border, #e2e8f0);\r\n    padding-top: 20px;\r\n  }\r\n\r\n  #sp_CRM_EditContactEmployee_html .btn-form-action {\r\n    display: inline-flex;\r\n    align-items: center;\r\n    justify-content: center;\r\n    padding: 8px 18px;\r\n    font-size: 13px;\r\n    font-weight: 600;\r\n    border-radius: 8px;\r\n    cursor: pointer;\r\n    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);\r\n    border: 1px solid transparent;\r\n  }\r\n\r\n  #sp_CRM_EditContactEmployee_html .btn-save {\r\n    background-color: var(--paradise-color-success, #198754);\r\n    color: #ffffff;\r\n    box-shadow: 0 4px 12px rgba(25, 135, 84, 0.15);\r\n  }\r\n\r\n  #sp_CRM_EditContactEmployee_html .btn-save:hover {\r\n    background-color: var(--paradise-color-success-dark, #157347);\r\n    transform: translateY(-1px);\r\n    box-shadow: 0 6px 16px rgba(25, 135, 84, 0.25);\r\n  }\r\n\r\n  #sp_CRM_EditContactEmployee_html .btn-save:active {\r\n    transform: translateY(0);\r\n  }\r\n\r\n  .dx-dropdowneditor-overlay .dx-inkripple {\r\n    display: none !important;\r\n  }\r\n</style>\r\n\r\n<div id=\"sp_CRM_EditContactEmployee_html\" class=\"edit-form-wrapper p-3\">\r\n  <div class=\"edit-form-card\">\r\n    <div class=\"form-body\">\r\n      <div class=\"form-group-item form-group-item-inline\" id=\"contactEmployeeSelectRow\">\r\n        <label class=\"form-label\">Họ và tên <span style=\"color: red;\">*</span></label>\r\n        <div id=\"P3C6A9B4D1F8E0572A34C67D0E9F1B2A3\" style=\"flex: 1\"></div>\r\n      </div>\r\n\r\n      <div class=\"form-group-item form-group-item-inline\" id=\"contactEmployeeReadonlyRow\" style=\"display:none;\">\r\n        <label class=\"form-label\">Họ và tên</label>\r\n        <div id=\"ContactEmployeeFullNameReadOnly\" style=\"flex: 1\"></div>\r\n      </div>\r\n\r\n      <div class=\"form-group-item form-group-item-inline\">\r\n        <label class=\"form-label\">Email</label>\r\n        <div id=\"P5E8C1D6F3B0A2794C56E89F2A1B3D4C5\" style=\"flex: 1\"></div>\r\n      </div>\r\n    </div>\r\n\r\n    <div class=\"form-footer-actions\">\r\n      <button class=\"btn-form-action btn-delete\" id=\"btnDeleteContactEmployee\" style=\"display:none; margin-right: auto; background-color: var(--paradise-color-danger, #dc3545); color: white;\" onclick=\"onDeleteEdit()\">\r\n        <i class=\"fas fa-trash-alt me-1\"></i>Xóa\r\n      </button>\r\n      <button class=\"btn-form-action btn-save\" onclick=\"onSaveEdit()\">\r\n        <i class=\"fas fa-check me-1\"></i>Lưu lại\r\n      </button>\r\n    </div>\r\n  </div>\r\n</div>\r\n\r\n<script>\r\n  (() => {\r\n      const employeeUID = \"P3C6A9B4D1F8E0572A34C67D0E9F1B2A3\";\r\n      const emailUID = \"P5E8C1D6F3B0A2794C56E89F2A1B3D4C5\";\r\n      const sourceParam = Object.assign({}, window.sp_CRM_EditContactEmployee_param || window.sp_CRM_EditContactEmployee_Param || {});\r\n      const forcedMode = (window.__crmContactEmployeeFormMode || sourceParam.mode || sourceParam.Mode || \"\").toString().toLowerCase();\r\n      const currentRow = forcedMode === \"add\"\r\n          ? {}\r\n          : Object.assign({}, sourceParam.row || sourceParam.data || window.currentClickedGridContactEmployee || {});\r\n      const isEditMode = forcedMode === \"edit\" || (!!(currentRow.EmployeeID || window.currentClicked_GridContactEmployee) && forcedMode !== \"add\");\r\n      let lastSavedEmail = (currentRow.Email || \"\").toString();\r\n      let readonlyNameInstance = null;\r\n      console.log(\"[CRM ContactEmployee] detail init\", { forcedMode, sourceParam, currentRow, isEditMode });\r\n\r\n      if (isEditMode && currentRow.EmployeeID) {\r\n          window.currentClicked_GridContactEmployee = currentRow.EmployeeID;\r\n          window.currentClickedGridContactEmployee = currentRow;\r\n          window.currentRecordID_EmployeeID = currentRow.EmployeeID;\r\n      }\r\n\r\n      if (typeof window.loadDataSourceCommon === \"undefined\") {\r\n          window.loadDataSourceCommon = function(columnName, dataSourceSP, cb) {\r\n              if (!dataSourceSP) {\r\n                  if (cb) cb([]);\r\n                  return;\r\n              }\r\n              var loginID = window.UserID || window.LoginID || 0;\r\n              var langID = window.LanguageID || \"VN\";\r\n              AjaxHPAParadise({\r\n                  data: {\r\n                      name: \"sp_LoadGridUsingAPI\",\r\n                      param: [\r\n                          \"@ProcName\", dataSourceSP,\r\n                          \"@ProcParam\", \"@LoginID = \" + loginID + \", @LanguageID = \" + langID,\r\n                          \"@Take\", 1000,\r\n                          \"@Skip\", 0\r\n                      ]\r\n                  },\r\n                  success: function(res) {\r\n                      var json = typeof res === \"string\" ? JSON.parse(res) : res;\r\n                      var data = (json && json.data && Array.isArray(json.data[0])) ? json.data[0] : [];\r\n                      window[\"DataSource_\" + columnName] = data;\r\n                      if (typeof cb === \"function\") cb(data);\r\n                  },\r\n                  error: function() {\r\n                      window[\"DataSource_\" + columnName] = [];\r\n                      if (typeof cb === \"function\") cb([]);\r\n                  }\r\n              });\r\n          };\r\n      }\r\n\r\n     const _baseLoadDS = window.loadDataSourceCommon;\r\n\r\n        function loadDataSourceCommon_ContactEmployee(columnName, dataSourceSP, cb) {\r\n            return _baseLoadDS(columnName, dataSourceSP, function(data) {\r\n                if (columnName === \"EmployeeID\") {\r\n                    window.DataSource_EmployeeID = filterEmployeeDataSourceForAdd(Array.isArray(data) ? data : []);\r\n                    hydrateCurrentEmployeeIntoDataSource();\r\n                    setTimeout(applyEmployeeDataSourceToControl, 0);\r\n                    if (typeof cb === \"function\") cb(window.DataSource_EmployeeID);\r\n                    return;\r\n                }\r\n                if (typeof cb === \"function\") cb(data);\r\n            });\r\n        }\r\n\r\n      function getEmployeeInstance() {\r\n          if (typeof InstanceEmployeeIDP3C6A9B4D1F8E0572A34C67D0E9F1B2A3 !== \"undefined\") {\r\n              return InstanceEmployeeIDP3C6A9B4D1F8E0572A34C67D0E9F1B2A3;\r\n          }\r\n          if (window.InstanceEmployeeIDP3C6A9B4D1F8E0572A34C67D0E9F1B2A3) {\r\n              return window.InstanceEmployeeIDP3C6A9B4D1F8E0572A34C67D0E9F1B2A3;\r\n          }\r\n          return null;\r\n      }\r\n\r\n      function getEmailInstance() {\r\n          if (typeof InstanceEmailP5E8C1D6F3B0A2794C56E89F2A1B3D4C5 !== \"undefined\") {\r\n              return InstanceEmailP5E8C1D6F3B0A2794C56E89F2A1B3D4C5;\r\n          }\r\n          if (window.InstanceEmailP5E8C1D6F3B0A2794C56E89F2A1B3D4C5) {\r\n              return window.InstanceEmailP5E8C1D6F3B0A2794C56E89F2A1B3D4C5;\r\n          }\r\n          return null;\r\n      }\r\n\r\n      function getControlValue(instance, fallbackSelector) {\r\n          try {\r\n              if (instance && typeof instance.getValue === \"function\") return instance.getValue();\r\n              if (instance && typeof instance.option === \"function\") return instance.option(\"value\");\r\n          } catch (e) {}\r\n          try {\r\n              return $(fallbackSelector).find(\"input\").val() || $(fallbackSelector).val() || \"\";\r\n          } catch (e) {\r\n              return \"\";\r\n          }\r\n      }\r\n\r\n      function setControlValue(instance, value, suppress) {\r\n          if (!instance) return;\r\n          try {\r\n              if (suppress && typeof instance._suppressValueChangeAction === \"function\") {\r\n                  instance._suppressValueChangeAction();\r\n              }\r\n              if (typeof instance.setValue === \"function\") {\r\n                  instance.setValue(value);\r\n              } else if (typeof instance.option === \"function\") {\r\n                  instance.option(\"value\", value);\r\n              }\r\n          } finally {\r\n              if (suppress && instance && typeof instance._resumeValueChangeAction === \"function\") {\r\n                  instance._resumeValueChangeAction();\r\n              }\r\n          }\r\n      }\r\n\r\n      function setEmailProgrammatically(email) {\r\n          const emailInstance = getEmailInstance();\r\n          const safeEmail = email || \"\";\r\n          if (emailInstance) {\r\n              setControlValue(emailInstance, safeEmail, true);\r\n          } else {\r\n              $(\"#\" + emailUID).find(\"input\").val(safeEmail).trigger(\"change\");\r\n          }\r\n      }\r\n\r\n      function normalizeEmployeeItem(item) {\r\n          if (!item) return null;\r\n          const id = item.ID || item.EmployeeID || item.Value || \"\";\r\n          if (!id) return null;\r\n          return {\r\n              ID: id,\r\n              EmployeeID: id,\r\n              Name: item.Name || item.FullName || id,\r\n              FullName: item.FullName || item.Name || id,\r\n              Email: item.Email || \"\"\r\n          };\r\n      }\r\n\r\n      function getExistingContactEmployeeIds() {\r\n          const ids = new Set();\r\n          try {\r\n              const shared = window.hpaSharedGridDataSources && window.hpaSharedGridDataSources.GridContactEmployee;\r\n              if (Array.isArray(shared)) {\r\n                  shared.forEach(x => { if (x && x.EmployeeID) ids.add(String(x.EmployeeID)); });\r\n              }\r\n          } catch (e) {}\r\n          try {\r\n              const grid = $(\"#GridContactEmployee\").dxDataGrid(\"instance\");\r\n              const items = grid && grid.getDataSource && grid.getDataSource().items ? grid.getDataSource().items() : [];\r\n              if (Array.isArray(items)) {\r\n                  items.forEach(x => { if (x && x.EmployeeID) ids.add(String(x.EmployeeID)); });\r\n              }\r\n          } catch (e) {}\r\n          return ids;\r\n      }\r\n\r\n      function filterEmployeeDataSourceForAdd(data) {\r\n          if (isEditMode || !Array.isArray(data)) return data || [];\r\n          const existingIds = getExistingContactEmployeeIds();\r\n          if (!existingIds.size) return data;\r\n          return data.filter(x => !existingIds.has(String((x && (x.ID || x.EmployeeID)) || \"\")));\r\n      }\r\n\r\n      function hydrateCurrentEmployeeIntoDataSource() {\r\n          if (!isEditMode || !currentRow.EmployeeID) return;\r\n          const currentItem = normalizeEmployeeItem({\r\n              ID: currentRow.EmployeeID,\r\n              EmployeeID: currentRow.EmployeeID,\r\n              Name: currentRow.FullName || currentRow.EmployeeID,\r\n              FullName: currentRow.FullName || currentRow.EmployeeID,\r\n              Email: currentRow.Email || \"\"\r\n          });\r\n          if (!currentItem) return;\r\n\r\n          const data = window.DataSource_EmployeeID || [];\r\n          const exists = data.some(x => (x.ID || x.EmployeeID) == currentItem.ID);\r\n          window.DataSource_EmployeeID = exists ? data.map(x => ((x.ID || x.EmployeeID) == currentItem.ID ? Object.assign({}, x, currentItem) : x)) : [currentItem].concat(data);\r\n      }\r\n\r\n      function applyEmployeeDataSourceToControl() {\r\n          const employeeInstance = getEmployeeInstance();\r\n          const data = filterEmployeeDataSourceForAdd(window.DataSource_EmployeeID || []);\r\n          window.DataSource_EmployeeID = data;\r\n          if (!employeeInstance || !data.length) return;\r\n          try {\r\n              if (typeof employeeInstance.option === \"function\") {\r\n                  employeeInstance.option(\"dataSource\", data);\r\n              }\r\n          } catch (e) {}\r\n      }\r\n\r\n      window.onSelectBoxChanged_EmployeeID = function(value, instance, e) {\r\n          if (isEditMode) return;\r\n          const selectedItem = instance && typeof instance.option === \"function\" ? instance.option(\"selectedItem\") : null;\r\n          const normalized = normalizeEmployeeItem(selectedItem);\r\n          setEmailProgrammatically(value && normalized ? normalized.Email : \"\");\r\n      };\r\n\r\n      window._readOnlyEmployeeIDP3C6A9B4D1F8E0572A34C67D0E9F1B2A3 = isEditMode;\r\n      window[\"_readOnlyEmployeeID\" + employeeUID] = isEditMode;\r\n      hydrateCurrentEmployeeIntoDataSource();\r\n\r\n        let EmployeeIDP3C6A9B4D1F8E0572A34C67D0E9F1B2A3DataSourceSP  = \"sp_CRM_DataSource_ContactEmployeeList\";\r\n        let EmployeeIDP3C6A9B4D1F8E0572A34C67D0E9F1B2A3TableAddNew = \"\";\r\n        let EmployeeIDP3C6A9B4D1F8E0572A34C67D0E9F1B2A3ColumnAddNew  = \"\";\r\n        let EmployeeIDP3C6A9B4D1F8E0572A34C67D0E9F1B2A3CurrentSearch = \"\";\r\n        let _autoSaveEmployeeIDP3C6A9B4D1F8E0572A34C67D0E9F1B2A3     = false;\r\n        let _readOnlyEmployeeIDP3C6A9B4D1F8E0572A34C67D0E9F1B2A3     = false;\r\n        let InstanceEmployeeIDP3C6A9B4D1F8E0572A34C67D0E9F1B2A3      = null;\r\n\r\n        let _isEditEmployeeIDP3C6A9B4D1F8E0572A34C67D0E9F1B2A3     = window[\"_isEdit_EmployeeIDP3C6A9B4D1F8E0572A34C67D0E9F1B2A3\"]     || false;\r\n        let _isDeleteEmployeeIDP3C6A9B4D1F8E0572A34C67D0E9F1B2A3   = window[\"_isDelete_EmployeeIDP3C6A9B4D1F8E0572A34C67D0E9F1B2A3\"]   || false;\r\n        let _hideIDEmployeeIDP3C6A9B4D1F8E0572A34C67D0E9F1B2A3     = window[\"_hideID_EmployeeIDP3C6A9B4D1F8E0572A34C67D0E9F1B2A3\"]     || false;\r\n        let _hideSearchEmployeeIDP3C6A9B4D1F8E0572A34C67D0E9F1B2A3 = window[\"_hideSearch_EmployeeIDP3C6A9B4D1F8E0572A34C67D0E9F1B2A3\"] || false;\r\n\r\n        if (window.hpaControlEngine) {\r\n            InstanceEmployeeIDP3C6A9B4D1F8E0572A34C67D0E9F1B2A3 = window.hpaControlEngine.initSelectBoxManual({\r\n                uid:            \"P3C6A9B4D1F8E0572A34C67D0E9F1B2A3\",\r\n                columnName:     \"EmployeeID\",\r\n                displayName:    \"Họ và tên\",\r\n                dataSourceSP:   \"sp_CRM_DataSource_ContactEmployeeList\",\r\n                tableAddNew:    \"\",\r\n                tableAddNewD:   \"\",\r\n                columnAddNew:   \"\",\r\n                tableId:        \"-99218308\",\r\n                columnIDName:   \"EmployeeID\",\r\n                columnIDName2:  \"\",\r\n                gridColumnName: \"GridContactEmployee\",\r\n                keyUpdateGrid:  \"0\",\r\n                columnNameSync: \"\",\r\n                isEdit:         _isEditEmployeeIDP3C6A9B4D1F8E0572A34C67D0E9F1B2A3,\r\n                isDelete:       _isDeleteEmployeeIDP3C6A9B4D1F8E0572A34C67D0E9F1B2A3,\r\n                getAutoSave:    function() { return _autoSaveEmployeeIDP3C6A9B4D1F8E0572A34C67D0E9F1B2A3; },\r\n                getReadOnly:    function() { return _readOnlyEmployeeIDP3C6A9B4D1F8E0572A34C67D0E9F1B2A3; },\r\n                getHideID:      function() { return _hideIDEmployeeIDP3C6A9B4D1F8E0572A34C67D0E9F1B2A3; },\r\n                getHideSearch:  function() { return _hideSearchEmployeeIDP3C6A9B4D1F8E0572A34C67D0E9F1B2A3; },\r\n                actionRichTextEditor: function(e, instance) {\r\n                    \r\n                },\r\n                isAdminOrManager: window.hpaIsAdminOrManager,\r\n                loadDataSourceCommon: (typeof loadDataSourceCommon !== 'undefined' ? loadDataSourceCommon : undefined),\r\n                saveFunction: (typeof saveFunction !== 'undefined' ? saveFunction : undefined),\r\n                updateOrDeleteDataExample: (typeof updateOrDeleteDataExample !== 'undefined' ? updateOrDeleteDataExample : undefined)\r\n            });\r\n        }\r\n        \r\n            if (typeof window.hpaControlEngine === \"undefined\") {\r\n                console.error(\"[hpaControlText] window.hpaControlEngine chưa được load. Vui lòng load thủ tục sp_hpaControlEngineLoadUI trước.\");\r\n                return;\r\n            }\r\n\r\n            // Define getters in case outer code mutates the variables\r\n            let _autoSaveEmailP5E8C1D6F3B0A2794C56E89F2A1B3D4C5 = false;\r\n            let _readOnlyEmailP5E8C1D6F3B0A2794C56E89F2A1B3D4C5 = false;\r\n\r\n            window.hpaControlEngine.initTextBoxManual({\r\n                uid: \"P5E8C1D6F3B0A2794C56E89F2A1B3D4C5\",\r\n                columnName: \"Email\",\r\n                displayName: \"Email\",\r\n                tableId: \"-99218308\",\r\n                columnIDName: \"EmployeeID\",\r\n                columnIDName2: \"\",\r\n                isRequired: 0,\r\n                customValidate: function() { return typeof null === \"function\" ? null.apply(this, arguments) : true; },\r\n                saveErrorMessage: \"Lưu dữ liệu thất bại.\",\r\n                gridColumnName: \"GridContactEmployee\",\r\n                keyUpdateGrid: \"0\",\r\n                tabIndex: \"2\",\r\n                getAutoSave: function() { return _autoSaveEmailP5E8C1D6F3B0A2794C56E89F2A1B3D4C5; },\r\n                getReadOnly: function() { return _readOnlyEmailP5E8C1D6F3B0A2794C56E89F2A1B3D4C5; }\r\n            });\r\n        \r\n      window._autoSaveEmailP5E8C1D6F3B0A2794C56E89F2A1B3D4C5 = false;\r\n      _autoSaveEmailP5E8C1D6F3B0A2794C56E89F2A1B3D4C5 = false;\r\n\r\n      function syncGridEmail(employeeID, email, fullName) {\r\n          if (!employeeID) return;\r\n          const row = {\r\n              EmployeeID: employeeID,\r\n              Email: email || \"\"\r\n          };\r\n          if (fullName) row.FullName = fullName;\r\n\r\n          if (window.updateSharedGridRow) {\r\n              try { window.updateSharedGridRow(\"GridContactEmployee\", row); } catch (e) {}\r\n          }\r\n\r\n          if (window.hpaSharedGridDataSources && Array.isArray(window.hpaSharedGridDataSources.GridContactEmployee)) {\r\n              const found = window.hpaSharedGridDataSources.GridContactEmployee.find(x => x.EmployeeID == employeeID);\r\n              if (found) Object.assign(found, row);\r\n          }\r\n\r\n          try {\r\n              const grid = $(\"#GridContactEmployee\").dxDataGrid(\"instance\");\r\n              if (grid) {\r\n                  grid.refresh();\r\n              }\r\n          } catch (e) {}\r\n          try {\r\n              if (window.parent && window.parent.$) {\r\n                  const parentGrid = window.parent.$(\"#GridContactEmployee\").dxDataGrid(\"instance\");\r\n                  if (parentGrid) parentGrid.refresh();\r\n              }\r\n          } catch (e) {}\r\n      }\r\n\r\n      function getCurrentEmailValue() {\r\n          try {\r\n              const $input = $(\"#\" + emailUID).find(\"input,textarea\").first();\r\n              if ($input.length) return ($input.val() || \"\").toString().trim();\r\n          } catch (e) {}\r\n          return (getControlValue(getEmailInstance(), \"#\" + emailUID) || \"\").toString().trim();\r\n      }\r\n\r\n      async function saveContactEmployeeBySystem(employeeID, fields) {\r\n          if (!employeeID || !fields || Object.keys(fields).length === 0) return false;\r\n          const cols = Object.keys(fields);\r\n          const vals = cols.map(k => fields[k]);\r\n          const dataJSON = JSON.stringify([\r\n              \"-99218308\",\r\n              cols,\r\n              vals\r\n          ]);\r\n          const res = await saveFunction(dataJSON, JSON.stringify([[employeeID], [\"EmployeeID\"]]));\r\n          const json = typeof res === \"string\" ? JSON.parse(res) : res;\r\n          const lastTable = Array.isArray(json?.data) ? json.data[json.data.length - 1] : null;\r\n          const statusRow = Array.isArray(lastTable) ? (lastTable[0] || {}) : (json?.data?.[0]?.[0] || json || {});\r\n          if (statusRow.Status && ![\"SUCCESS\", \"OK\"].includes(statusRow.Status)) {\r\n              throw (statusRow.Message || \"Lưu dữ liệu thất bại\");\r\n          }\r\n          return true;\r\n      }\r\n\r\n      function callAddEmailProperty(employeeID, email, fullName) {\r\n          return new Promise(function(resolve, reject) {\r\n              AjaxHPAParadise({\r\n                  data: {\r\n                      name: \"sp_AddEmailProperty\",\r\n                      param: [\r\n                          \"EmployeeEmail\", email || \"\",\r\n                          \"EmployeeID\", employeeID,\r\n                          \"FullName\", fullName || \"\"\r\n                      ]\r\n                  },\r\n                  success: function(data) {\r\n                      try {\r\n                          if (typeof data === \"string\" && data.trim() !== \"\") {\r\n                              data = data.includes(\"{\") ? data : EncryptionStringDecryption(data);\r\n                          }\r\n\r\n                          const dataObj = typeof data === \"string\" ? JSON.parse(data) : data;\r\n                          const resultRow = dataObj && dataObj.data && dataObj.data[0]\r\n                              ? dataObj.data[0][0]\r\n                              : null;\r\n\r\n                          if (resultRow && resultRow.Result === \"SUCCESS\") {\r\n                              resolve(resultRow);\r\n                              return;\r\n                          }\r\n\r\n                          if (resultRow && resultRow.ErrorMessage) {\r\n                              let errMsg = resultRow.ErrorMessage;\r\n                              if (errMsg.includes(\"404\") || errMsg.includes(\"ResourceNotFound\") || errMsg.includes(\"does not exist\")) {\r\n                                  errMsg = \"Tài khoản email không tồn tại hoặc sai định dạng.\";\r\n                              }\r\n                              reject(\"Lỗi Outlook: \" + errMsg);\r\n                          } else {\r\n                              reject(\"Outlook không xác nhận lưu Email thành công.\");\r\n                          }\r\n                      } catch (parseError) {\r\n                          reject(\"Không đọc được phản hồi từ Outlook: \" + parseError);\r\n                      }\r\n                  },\r\n                  error: function() {\r\n                      reject(\"Lỗi kết nối khi đồng bộ Email với Outlook.\");\r\n                  }\r\n              });\r\n          });\r\n      }\r\n\r\n      function closePopupOnly() {\r\n          if (typeof closeEditPopup === \"function\") {\r\n              closeEditPopup();\r\n          } else if (window.parent && typeof window.parent.closeEditPopup === \"function\") {\r\n              window.parent.closeEditPopup();\r\n          } else {\r\n              try {\r\n                  const $popups = $(\".dx-popup:visible\");\r\n                  if ($popups.length > 0) {\r\n                      $popups.each(function() {\r\n                          try {\r\n                              const popup = $(this).dxPopup(\"instance\");\r\n                              if (popup && popup.option(\"visible\")) popup.hide();\r\n                          } catch (e) {}\r\n                      });\r\n                  } else {\r\n                      $(\"#edit-popup-container\").removeClass(\"open\");\r\n                  }\r\n              } catch (ex) {\r\n                  $(\"#edit-popup-container\").removeClass(\"open\");\r\n              }\r\n          }\r\n      }\r\n\r\n      function ReloadData() {\r\n          const currentID = currentRow.EmployeeID || window.currentClicked_GridContactEmployee || null;\r\n          window.currentRecordID_EmployeeID = currentID;\r\n\r\n          const obj = Object.assign({\r\n              EmployeeID: null,\r\n              Email: null\r\n          }, currentRow);\r\n\r\n\r\n            // Smart Load: Check số dòng - nếu > 1000 thì dùng API, còn không thì load bình thường\r\n            var spLoadDataGridName = \"\";\r\n            var isSmartLoadNeeded = false;\r\n\r\n            // Kiểm tra xem có cần smart load hay không (chỉ cho các control có datasource)\r\n            if (spLoadDataGridName && spLoadDataGridName.trim() !== \"\") {\r\n                // Lấy data source từ window nếu đã load\r\n                var dataSource = window[\"DataSource_Email\"];\r\n\r\n                // Nếu chưa load hoặc dữ liệu trống, thì skip smart load cho lần này\r\n                if (dataSource && Array.isArray(dataSource) && dataSource.length > 1000) {\r\n                    isSmartLoadNeeded = true;\r\n                }\r\n            }\r\n\r\n            // Nếu smart load, thì set flag để control sẽ tự động load qua API\r\n            if (isSmartLoadNeeded) {\r\n                window[\"UseAPILoad_Email\"] = true;\r\n                return;\r\n             }\r\n\r\n            // Load bình thường (dữ liệu nhỏ <= 1000)\r\n\r\n\t\t\ttry{\t\r\n\t\t\tInstanceEmailP5E8C1D6F3B0A2794C56E89F2A1B3D4C5.clearValidationError();\t\r\n\t\t\t}catch(e){}\r\n            InstanceEmailP5E8C1D6F3B0A2794C56E89F2A1B3D4C5._suppressValueChangeAction();\r\n\r\n\t\t\ttry {\r\n\t\t\t\tInstanceEmailP5E8C1D6F3B0A2794C56E89F2A1B3D4C5.option(\"searchValue\", \"\");\r\n\t\t\t\tInstanceEmailP5E8C1D6F3B0A2794C56E89F2A1B3D4C5.option(\"text\", \"\");\r\n\t\t\t\tInstanceEmailP5E8C1D6F3B0A2794C56E89F2A1B3D4C5.reset();\r\n\t\t\t} catch(e) {}\r\n\t\t\r\n            if(typeof obj !== \"undefined\" && obj && obj.Email != null) InstanceEmailP5E8C1D6F3B0A2794C56E89F2A1B3D4C5.option(\"value\", obj.Email);\r\n            else InstanceEmailP5E8C1D6F3B0A2794C56E89F2A1B3D4C5.option(\"value\", \"\");            \t\t\t\t\t\t\r\n\r\n\t\t\tInstanceEmailP5E8C1D6F3B0A2794C56E89F2A1B3D4C5._resumeValueChangeAction();\t\t\r\n\t\t\t\r\n\t\t\r\n        \r\n            // Smart Load: Check số dòng - nếu > 1000 thì dùng API, còn không thì load bình thường\r\n            var spLoadDataGridName = \"sp_CRM_DataSource_ContactEmployeeList\";\r\n            var isSmartLoadNeeded = false;\r\n\r\n            // Kiểm tra xem có cần smart load hay không (chỉ cho các control có datasource)\r\n            if (spLoadDataGridName && spLoadDataGridName.trim() !== \"\") {\r\n                // Lấy data source từ window nếu đã load\r\n                var dataSource = window[\"DataSource_EmployeeID\"];\r\n\r\n                // Nếu chưa load hoặc dữ liệu trống, thì skip smart load cho lần này\r\n                if (dataSource && Array.isArray(dataSource) && dataSource.length > 1000) {\r\n                    isSmartLoadNeeded = true;\r\n                }\r\n            }\r\n\r\n            // Nếu smart load, thì set flag để control sẽ tự động load qua API\r\n            if (isSmartLoadNeeded) {\r\n                window[\"UseAPILoad_EmployeeID\"] = true;\r\n                return;\r\n             }\r\n\r\n            // Load bình thường (dữ liệu nhỏ <= 1000)\r\n\r\n\t\t\ttry{\t\r\n\t\t\tInstanceEmployeeIDP3C6A9B4D1F8E0572A34C67D0E9F1B2A3.clearValidationError();\t\r\n\t\t\t}catch(e){}\r\n            InstanceEmployeeIDP3C6A9B4D1F8E0572A34C67D0E9F1B2A3._suppressValueChangeAction();\r\n\r\n\t\t\ttry {\r\n\t\t\t\tInstanceEmployeeIDP3C6A9B4D1F8E0572A34C67D0E9F1B2A3.option(\"searchValue\", \"\");\r\n\t\t\t\tInstanceEmployeeIDP3C6A9B4D1F8E0572A34C67D0E9F1B2A3.option(\"text\", \"\");\r\n\t\t\t\tInstanceEmployeeIDP3C6A9B4D1F8E0572A34C67D0E9F1B2A3.reset();\r\n\t\t\t} catch(e) {}\r\n\t\t\r\n            if(typeof obj !== \"undefined\" && obj && obj.EmployeeID != null) InstanceEmployeeIDP3C6A9B4D1F8E0572A34C67D0E9F1B2A3.option(\"value\", obj.EmployeeID);\r\n            else InstanceEmployeeIDP3C6A9B4D1F8E0572A34C67D0E9F1B2A3.option(\"value\", \"\");            \t\t\t\t\t\t\r\n\r\n\t\t\tInstanceEmployeeIDP3C6A9B4D1F8E0572A34C67D0E9F1B2A3._resumeValueChangeAction();\t\t\r\n\t\t\t\r\n\t\t\r\n        \r\n\r\n          hydrateCurrentEmployeeIntoDataSource();\r\n          applyEmployeeDataSourceToControl();\r\n\r\n          if (isEditMode) {\r\n              $(\"#contactEmployeeSelectRow\").hide();\r\n              $(\"#contactEmployeeReadonlyRow\").show();\r\n              const readOnlyName = ((currentRow.EmployeeID || \"\") + \" - \" + (currentRow.FullName || \"\")).replace(/^ - /, \"\");\r\n              try {\r\n                  readonlyNameInstance = $(\"#ContactEmployeeFullNameReadOnly\").dxTextBox({\r\n                      value: readOnlyName,\r\n                      readOnly: true,\r\n                      stylingMode: \"underlined\"\r\n                  }).dxTextBox(\"instance\");\r\n              } catch(e) {\r\n                  $(\"#ContactEmployeeFullNameReadOnly\").text(readOnlyName);\r\n              }\r\n          } else {\r\n              $(\"#contactEmployeeSelectRow\").show();\r\n              $(\"#contactEmployeeReadonlyRow\").hide();\r\n          }\r\n\r\n          if (isEditMode && currentID) {\r\n              setEmailProgrammatically(currentRow.Email || \"\");\r\n          }\r\n\r\n          const detailTitle = isEditMode ? \"Sửa nhân viên kinh doanh\" : \"Thêm nhân viên kinh doanh\";\r\n          window.__crmContactEmployeeDialogTitle = detailTitle;\r\n          try {\r\n              $(\".dx-popup:visible\").each(function() {\r\n                  const popup = $(this).dxPopup(\"instance\");\r\n                  if (popup) popup.option(\"title\", detailTitle);\r\n              });\r\n              $(\".dx-popup-title .dx-toolbar-label, .dx-popup-title .dx-toolbar-label > div\").filter(\":visible\").first().text(detailTitle);\r\n          } catch(e) {}\r\n\r\n          if (currentID) {\r\n              $(\"#sp_CRM_EditContactEmployee_html .btn-save\").show();\r\n              $(\"#btnDeleteContactEmployee\").show();\r\n          } else {\r\n              $(\"#sp_CRM_EditContactEmployee_html .btn-save\").show();\r\n              $(\"#btnDeleteContactEmployee\").hide();\r\n          }\r\n      }\r\n\r\n      window.onDeleteEdit = async function() {\r\n          const employeeID = currentRow.EmployeeID || window.currentClicked_GridContactEmployee || \"\";\r\n          if (!employeeID) return;\r\n\r\n          showConfirmPopup({\r\n              title: \"Xác nhận\",\r\n              message: \"Bạn có chắc chắn muốn xóa nhân viên này khỏi danh sách kinh doanh?\",\r\n              YesText: \"Xóa\",\r\n              NoText: \"Hủy bỏ\",\r\n              onYes: async function() {\r\n                  try {\r\n                      await saveContactEmployeeBySystem(employeeID, { IsContact: 0, Email: null });\r\n\r\n                      const fullName = currentRow.FullName || \"\";\r\n                      syncGridEmail(employeeID, \"\", fullName);\r\n\r\n                      if (window.uiManager && uiManager.showAlert) {\r\n                          uiManager.showAlert({ type: \"success\", message: \"Đã xóa thành công!\" });\r\n                      }\r\n\r\n                      try {\r\n                          const grid = $(\"#GridContactEmployee\").dxDataGrid(\"instance\");\r\n                          if (grid) grid.refresh();\r\n                      } catch (e) {}\r\n                      try {\r\n                          if (window.parent && window.parent.$) {\r\n                               const parentGrid = window.parent.$(\"#GridContactEmployee\").dxDataGrid(\"instance\");\r\n                               if (parentGrid) parentGrid.refresh();\r\n                          }\r\n                      } catch (e) {}\r\n\r\n                      closePopupOnly();\r\n                  } catch (ex) {\r\n                      if (window.uiManager && uiManager.showAlert) {\r\n                          uiManager.showAlert({ type: \"error\", message: \"Xóa thất bại: \" + ex });\r\n                      }\r\n                  }\r\n              }\r\n          });\r\n      };\r\n\r\n      window.onSaveEdit = async function() {\r\n          try {\r\n              const employeeID = (\r\n                  (isEditMode ? (currentRow.EmployeeID || window.currentClicked_GridContactEmployee) : \"\")\r\n                  || getControlValue(getEmployeeInstance(), \"#\" + employeeUID)\r\n                  || \"\"\r\n              ).toString().trim();\r\n              if (!employeeID) {\r\n                  uiManager.showAlert({ type: \"error\", message: \"Vui lòng chọn nhân viên!\" });\r\n                  return;\r\n              }\r\n\r\n              const email = getCurrentEmailValue();\r\n              \r\n              const emailRegex = /^[^\\s@]+@[^\\s@]+\\.[^\\s@]{2,}$/;\r\n              const normalizedEmail = email\r\n                  ?.replace(/\\u00A0/g, \"\")   \r\n                  .replace(/\\s+/g, \"\")      \r\n                  .trim();\r\n\r\n              if (normalizedEmail && !emailRegex.test(normalizedEmail)) {\r\n                  if (window.uiManager && uiManager.showAlert) {\r\n                      uiManager.showAlert({ type: \"error\", message: \"Định dạng Email không hợp lệ\" });\r\n                  }\r\n                  return;\r\n              }\r\n\r\n              const employeeInstance = getEmployeeInstance();\r\n              const selectedItem = employeeInstance && typeof employeeInstance.option === \"function\" ? employeeInstance.option(\"selectedItem\") : null;\r\n              const normalized = normalizeEmployeeItem(selectedItem);\r\n              const fullName = (normalized && normalized.FullName) || currentRow.FullName || \"\";\r\n              const saveFields = isEditMode\r\n                  ? { Email: email || null }\r\n                  : { IsContact: 1, Email: email || null };\r\n\r\n              await callAddEmailProperty(employeeID, email, fullName);\r\n              await saveContactEmployeeBySystem(employeeID, saveFields);\r\n\r\n              syncGridEmail(employeeID, email, fullName);\r\n              lastSavedEmail = email;\r\n              currentRow.Email = email;\r\n\r\n              if (window.uiManager && uiManager.showAlert) {\r\n                  uiManager.showAlert({ type: \"success\", message: \"Lưu thành công!\" });\r\n              }\r\n              closePopupOnly();\r\n          } catch(ex) {\r\n              if (window.uiManager && uiManager.showAlert) {\r\n                  uiManager.showAlert({ type: \"error\", message: \"Lưu thất bại: \" + ex });\r\n              }\r\n          }\r\n      };\r\n\r\n      ReloadData();\r\n  })();\r\n</script>\r\n",
+              "bytes_filename": "sp_CRM_EditContactEmployee.html"
+            }
+          ]
+        ],
+        "dataSchema": [
+          [
+            {
+              "name": "bytes",
+              "type": "System.String"
+            },
+            {
+              "name": "bytes_filename",
+              "type": "System.String"
+            }
+          ]
+        ]
+      },
+      "timestamp": "2026-10-16T02:35:56.234Z"
+    },
+    {
+      "type": "request",
+      "url": "https://paradisehrm.com/Tai3/hpa/paradise2",
+      "method": "POST",
+      "resourceType": "fetch",
+      "postData": {
+        "content": "02xY5O3N3CIcOd20zC0/ATOZWT00Qk6gu0O5yKQbIIEcfCdU/s8ytsWyvFSnIpV6UKgQ7Sv8lOKA5yMgftW5a4Ae350jXqD0APv3lxYIsZfMljF7zN3npoBJDKSrsf+kQiTqIMeqNrzomX8S1Hyvo8f4G0HCrlZ2CENcB73W1/ouzGTW2LxDmj09ndA+d4bRzzvT0NnRWZ1Ir9wN7Hw/OfMnoKwueYvrxU+iDKj+L/yqNnfWSvukUPn7hdFhdHW1FxMgsNcFFrMTqo3oeymqEjj5naQPVRCAn38odT2YbfzLwb6Jl8Kjsz+6D5QfRBPgu9XnmAdyaGpLy+EDDPh0yPkT/5CPEjZ3vgOB1tTn0Jk=",
+        "paradiseType": "2"
+      },
+      "timestamp": "2026-10-16T02:35:56.264Z"
+    },
+    {
+      "type": "response",
+      "url": "https://paradisehrm.com/Tai3/api/hpa/paradise?&name=paradisepublic&param=[%22paradisepublic%22,%22sp_CRM_EditContactEmployee%22,%22LanguageID%22,%22VN%22,%22ParadiseVersion%22,-1469847]&user=paradisepublic&password=3C9909AFEC25354D551DAE21590BB26E38D53F2173B8D3DC3EEE4C047E7AB1C1EB8B85103E3BE7BA613B31BB5C9C36214DC9F14A42FD7A2FDB84856BCA5C44C2&_cb=VN_-1469847",
+      "status": 200,
+      "responseBody": {
+        "result": "success",
+        "reason": "",
+        "data": [
+          [
+            {
+              "bytes": "\r\n<style>\r\n  #sp_CRM_EditContactEmployee_html .form-title {\r\n    font-size: 16px;\r\n    font-weight: 700;\r\n    margin-bottom: 24px;\r\n    display: flex;\r\n    align-items: center;\r\n    gap: 8px;\r\n    letter-spacing: -0.2px;\r\n  }\r\n\r\n  #sp_CRM_EditContactEmployee_html .form-body {\r\n    display: flex;\r\n    flex-direction: column;\r\n    gap: 20px;\r\n    margin-bottom: 28px;\r\n  }\r\n\r\n  #sp_CRM_EditContactEmployee_html .form-group-item {\r\n    display: flex;\r\n    flex-direction: column;\r\n    gap: 8px;\r\n  }\r\n\r\n  #sp_CRM_EditContactEmployee_html .form-label {\r\n    font-size: 11px;\r\n    font-weight: 700;\r\n    color: var(--paradise-color-secondary, #64748b);\r\n    text-transform: uppercase;\r\n    letter-spacing: 0.8px;\r\n  }\r\n\r\n  #sp_CRM_EditContactEmployee_html .form-group-item-inline {\r\n    display: flex;\r\n    flex-direction: row;\r\n    align-items: center;\r\n    gap: 16px;\r\n  }\r\n\r\n  #sp_CRM_EditContactEmployee_html .form-group-item-inline .form-label {\r\n    flex: 0 0 160px;\r\n    margin-bottom: 0;\r\n  }\r\n\r\n  #sp_CRM_EditContactEmployee_html .form-footer-actions {\r\n    display: flex;\r\n    justify-content: flex-end;\r\n    gap: 12px;\r\n    border-top: 1px solid var(--paradise-color-input-border, #e2e8f0);\r\n    padding-top: 20px;\r\n  }\r\n\r\n  #sp_CRM_EditContactEmployee_html .btn-form-action {\r\n    display: inline-flex;\r\n    align-items: center;\r\n    justify-content: center;\r\n    padding: 8px 18px;\r\n    font-size: 13px;\r\n    font-weight: 600;\r\n    border-radius: 8px;\r\n    cursor: pointer;\r\n    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);\r\n    border: 1px solid transparent;\r\n  }\r\n\r\n  #sp_CRM_EditContactEmployee_html .btn-save {\r\n    background-color: var(--paradise-color-success, #198754);\r\n    color: #ffffff;\r\n    box-shadow: 0 4px 12px rgba(25, 135, 84, 0.15);\r\n  }\r\n\r\n  #sp_CRM_EditContactEmployee_html .btn-save:hover {\r\n    background-color: var(--paradise-color-success-dark, #157347);\r\n    transform: translateY(-1px);\r\n    box-shadow: 0 6px 16px rgba(25, 135, 84, 0.25);\r\n  }\r\n\r\n  #sp_CRM_EditContactEmployee_html .btn-save:active {\r\n    transform: translateY(0);\r\n  }\r\n\r\n  .dx-dropdowneditor-overlay .dx-inkripple {\r\n    display: none !important;\r\n  }\r\n</style>\r\n\r\n<div id=\"sp_CRM_EditContactEmployee_html\" class=\"edit-form-wrapper p-3\">\r\n  <div class=\"edit-form-card\">\r\n    <div class=\"form-body\">\r\n      <div class=\"form-group-item form-group-item-inline\" id=\"contactEmployeeSelectRow\">\r\n        <label class=\"form-label\">Họ và tên <span style=\"color: red;\">*</span></label>\r\n        <div id=\"P3C6A9B4D1F8E0572A34C67D0E9F1B2A3\" style=\"flex: 1\"></div>\r\n      </div>\r\n\r\n      <div class=\"form-group-item form-group-item-inline\" id=\"contactEmployeeReadonlyRow\" style=\"display:none;\">\r\n        <label class=\"form-label\">Họ và tên</label>\r\n        <div id=\"ContactEmployeeFullNameReadOnly\" style=\"flex: 1\"></div>\r\n      </div>\r\n\r\n      <div class=\"form-group-item form-group-item-inline\">\r\n        <label class=\"form-label\">Email</label>\r\n        <div id=\"P5E8C1D6F3B0A2794C56E89F2A1B3D4C5\" style=\"flex: 1\"></div>\r\n      </div>\r\n    </div>\r\n\r\n    <div class=\"form-footer-actions\">\r\n      <button class=\"btn-form-action btn-delete\" id=\"btnDeleteContactEmployee\" style=\"display:none; margin-right: auto; background-color: var(--paradise-color-danger, #dc3545); color: white;\" onclick=\"onDeleteEdit()\">\r\n        <i class=\"fas fa-trash-alt me-1\"></i>Xóa\r\n      </button>\r\n      <button class=\"btn-form-action btn-save\" onclick=\"onSaveEdit()\">\r\n        <i class=\"fas fa-check me-1\"></i>Lưu lại\r\n      </button>\r\n    </div>\r\n  </div>\r\n</div>\r\n\r\n<script>\r\n  (() => {\r\n      const employeeUID = \"P3C6A9B4D1F8E0572A34C67D0E9F1B2A3\";\r\n      const emailUID = \"P5E8C1D6F3B0A2794C56E89F2A1B3D4C5\";\r\n      const sourceParam = Object.assign({}, window.sp_CRM_EditContactEmployee_param || window.sp_CRM_EditContactEmployee_Param || {});\r\n      const forcedMode = (window.__crmContactEmployeeFormMode || sourceParam.mode || sourceParam.Mode || \"\").toString().toLowerCase();\r\n      const currentRow = forcedMode === \"add\"\r\n          ? {}\r\n          : Object.assign({}, sourceParam.row || sourceParam.data || window.currentClickedGridContactEmployee || {});\r\n      const isEditMode = forcedMode === \"edit\" || (!!(currentRow.EmployeeID || window.currentClicked_GridContactEmployee) && forcedMode !== \"add\");\r\n      let lastSavedEmail = (currentRow.Email || \"\").toString();\r\n      let readonlyNameInstance = null;\r\n      console.log(\"[CRM ContactEmployee] detail init\", { forcedMode, sourceParam, currentRow, isEditMode });\r\n\r\n      if (isEditMode && currentRow.EmployeeID) {\r\n          window.currentClicked_GridContactEmployee = currentRow.EmployeeID;\r\n          window.currentClickedGridContactEmployee = currentRow;\r\n          window.currentRecordID_EmployeeID = currentRow.EmployeeID;\r\n      }\r\n\r\n      if (typeof window.loadDataSourceCommon === \"undefined\") {\r\n          window.loadDataSourceCommon = function(columnName, dataSourceSP, cb) {\r\n              if (!dataSourceSP) {\r\n                  if (cb) cb([]);\r\n                  return;\r\n              }\r\n              var loginID = window.UserID || window.LoginID || 0;\r\n              var langID = window.LanguageID || \"VN\";\r\n              AjaxHPAParadise({\r\n                  data: {\r\n                      name: \"sp_LoadGridUsingAPI\",\r\n                      param: [\r\n                          \"@ProcName\", dataSourceSP,\r\n                          \"@ProcParam\", \"@LoginID = \" + loginID + \", @LanguageID = \" + langID,\r\n                          \"@Take\", 1000,\r\n                          \"@Skip\", 0\r\n                      ]\r\n                  },\r\n                  success: function(res) {\r\n                      var json = typeof res === \"string\" ? JSON.parse(res) : res;\r\n                      var data = (json && json.data && Array.isArray(json.data[0])) ? json.data[0] : [];\r\n                      window[\"DataSource_\" + columnName] = data;\r\n                      if (typeof cb === \"function\") cb(data);\r\n                  },\r\n                  error: function() {\r\n                      window[\"DataSource_\" + columnName] = [];\r\n                      if (typeof cb === \"function\") cb([]);\r\n                  }\r\n              });\r\n          };\r\n      }\r\n\r\n     const _baseLoadDS = window.loadDataSourceCommon;\r\n\r\n        function loadDataSourceCommon_ContactEmployee(columnName, dataSourceSP, cb) {\r\n            return _baseLoadDS(columnName, dataSourceSP, function(data) {\r\n                if (columnName === \"EmployeeID\") {\r\n                    window.DataSource_EmployeeID = filterEmployeeDataSourceForAdd(Array.isArray(data) ? data : []);\r\n                    hydrateCurrentEmployeeIntoDataSource();\r\n                    setTimeout(applyEmployeeDataSourceToControl, 0);\r\n                    if (typeof cb === \"function\") cb(window.DataSource_EmployeeID);\r\n                    return;\r\n                }\r\n                if (typeof cb === \"function\") cb(data);\r\n            });\r\n        }\r\n\r\n      function getEmployeeInstance() {\r\n          if (typeof InstanceEmployeeIDP3C6A9B4D1F8E0572A34C67D0E9F1B2A3 !== \"undefined\") {\r\n              return InstanceEmployeeIDP3C6A9B4D1F8E0572A34C67D0E9F1B2A3;\r\n          }\r\n          if (window.InstanceEmployeeIDP3C6A9B4D1F8E0572A34C67D0E9F1B2A3) {\r\n              return window.InstanceEmployeeIDP3C6A9B4D1F8E0572A34C67D0E9F1B2A3;\r\n          }\r\n          return null;\r\n      }\r\n\r\n      function getEmailInstance() {\r\n          if (typeof InstanceEmailP5E8C1D6F3B0A2794C56E89F2A1B3D4C5 !== \"undefined\") {\r\n              return InstanceEmailP5E8C1D6F3B0A2794C56E89F2A1B3D4C5;\r\n          }\r\n          if (window.InstanceEmailP5E8C1D6F3B0A2794C56E89F2A1B3D4C5) {\r\n              return window.InstanceEmailP5E8C1D6F3B0A2794C56E89F2A1B3D4C5;\r\n          }\r\n          return null;\r\n      }\r\n\r\n      function getControlValue(instance, fallbackSelector) {\r\n          try {\r\n              if (instance && typeof instance.getValue === \"function\") return instance.getValue();\r\n              if (instance && typeof instance.option === \"function\") return instance.option(\"value\");\r\n          } catch (e) {}\r\n          try {\r\n              return $(fallbackSelector).find(\"input\").val() || $(fallbackSelector).val() || \"\";\r\n          } catch (e) {\r\n              return \"\";\r\n          }\r\n      }\r\n\r\n      function setControlValue(instance, value, suppress) {\r\n          if (!instance) return;\r\n          try {\r\n              if (suppress && typeof instance._suppressValueChangeAction === \"function\") {\r\n                  instance._suppressValueChangeAction();\r\n              }\r\n              if (typeof instance.setValue === \"function\") {\r\n                  instance.setValue(value);\r\n              } else if (typeof instance.option === \"function\") {\r\n                  instance.option(\"value\", value);\r\n              }\r\n          } finally {\r\n              if (suppress && instance && typeof instance._resumeValueChangeAction === \"function\") {\r\n                  instance._resumeValueChangeAction();\r\n              }\r\n          }\r\n      }\r\n\r\n      function setEmailProgrammatically(email) {\r\n          const emailInstance = getEmailInstance();\r\n          const safeEmail = email || \"\";\r\n          if (emailInstance) {\r\n              setControlValue(emailInstance, safeEmail, true);\r\n          } else {\r\n              $(\"#\" + emailUID).find(\"input\").val(safeEmail).trigger(\"change\");\r\n          }\r\n      }\r\n\r\n      function normalizeEmployeeItem(item) {\r\n          if (!item) return null;\r\n          const id = item.ID || item.EmployeeID || item.Value || \"\";\r\n          if (!id) return null;\r\n          return {\r\n              ID: id,\r\n              EmployeeID: id,\r\n              Name: item.Name || item.FullName || id,\r\n              FullName: item.FullName || item.Name || id,\r\n              Email: item.Email || \"\"\r\n          };\r\n      }\r\n\r\n      function getExistingContactEmployeeIds() {\r\n          const ids = new Set();\r\n          try {\r\n              const shared = window.hpaSharedGridDataSources && window.hpaSharedGridDataSources.GridContactEmployee;\r\n              if (Array.isArray(shared)) {\r\n                  shared.forEach(x => { if (x && x.EmployeeID) ids.add(String(x.EmployeeID)); });\r\n              }\r\n          } catch (e) {}\r\n          try {\r\n              const grid = $(\"#GridContactEmployee\").dxDataGrid(\"instance\");\r\n              const items = grid && grid.getDataSource && grid.getDataSource().items ? grid.getDataSource().items() : [];\r\n              if (Array.isArray(items)) {\r\n                  items.forEach(x => { if (x && x.EmployeeID) ids.add(String(x.EmployeeID)); });\r\n              }\r\n          } catch (e) {}\r\n          return ids;\r\n      }\r\n\r\n      function filterEmployeeDataSourceForAdd(data) {\r\n          if (isEditMode || !Array.isArray(data)) return data || [];\r\n          const existingIds = getExistingContactEmployeeIds();\r\n          if (!existingIds.size) return data;\r\n          return data.filter(x => !existingIds.has(String((x && (x.ID || x.EmployeeID)) || \"\")));\r\n      }\r\n\r\n      function hydrateCurrentEmployeeIntoDataSource() {\r\n          if (!isEditMode || !currentRow.EmployeeID) return;\r\n          const currentItem = normalizeEmployeeItem({\r\n              ID: currentRow.EmployeeID,\r\n              EmployeeID: currentRow.EmployeeID,\r\n              Name: currentRow.FullName || currentRow.EmployeeID,\r\n              FullName: currentRow.FullName || currentRow.EmployeeID,\r\n              Email: currentRow.Email || \"\"\r\n          });\r\n          if (!currentItem) return;\r\n\r\n          const data = window.DataSource_EmployeeID || [];\r\n          const exists = data.some(x => (x.ID || x.EmployeeID) == currentItem.ID);\r\n          window.DataSource_EmployeeID = exists ? data.map(x => ((x.ID || x.EmployeeID) == currentItem.ID ? Object.assign({}, x, currentItem) : x)) : [currentItem].concat(data);\r\n      }\r\n\r\n      function applyEmployeeDataSourceToControl() {\r\n          const employeeInstance = getEmployeeInstance();\r\n          const data = filterEmployeeDataSourceForAdd(window.DataSource_EmployeeID || []);\r\n          window.DataSource_EmployeeID = data;\r\n          if (!employeeInstance || !data.length) return;\r\n          try {\r\n              if (typeof employeeInstance.option === \"function\") {\r\n                  employeeInstance.option(\"dataSource\", data);\r\n              }\r\n          } catch (e) {}\r\n      }\r\n\r\n      window.onSelectBoxChanged_EmployeeID = function(value, instance, e) {\r\n          if (isEditMode) return;\r\n          const selectedItem = instance && typeof instance.option === \"function\" ? instance.option(\"selectedItem\") : null;\r\n          const normalized = normalizeEmployeeItem(selectedItem);\r\n          setEmailProgrammatically(value && normalized ? normalized.Email : \"\");\r\n      };\r\n\r\n      window._readOnlyEmployeeIDP3C6A9B4D1F8E0572A34C67D0E9F1B2A3 = isEditMode;\r\n      window[\"_readOnlyEmployeeID\" + employeeUID] = isEditMode;\r\n      hydrateCurrentEmployeeIntoDataSource();\r\n\r\n        let EmployeeIDP3C6A9B4D1F8E0572A34C67D0E9F1B2A3DataSourceSP  = \"sp_CRM_DataSource_ContactEmployeeList\";\r\n        let EmployeeIDP3C6A9B4D1F8E0572A34C67D0E9F1B2A3TableAddNew = \"\";\r\n        let EmployeeIDP3C6A9B4D1F8E0572A34C67D0E9F1B2A3ColumnAddNew  = \"\";\r\n        let EmployeeIDP3C6A9B4D1F8E0572A34C67D0E9F1B2A3CurrentSearch = \"\";\r\n        let _autoSaveEmployeeIDP3C6A9B4D1F8E0572A34C67D0E9F1B2A3     = false;\r\n        let _readOnlyEmployeeIDP3C6A9B4D1F8E0572A34C67D0E9F1B2A3     = false;\r\n        let InstanceEmployeeIDP3C6A9B4D1F8E0572A34C67D0E9F1B2A3      = null;\r\n\r\n        let _isEditEmployeeIDP3C6A9B4D1F8E0572A34C67D0E9F1B2A3     = window[\"_isEdit_EmployeeIDP3C6A9B4D1F8E0572A34C67D0E9F1B2A3\"]     || false;\r\n        let _isDeleteEmployeeIDP3C6A9B4D1F8E0572A34C67D0E9F1B2A3   = window[\"_isDelete_EmployeeIDP3C6A9B4D1F8E0572A34C67D0E9F1B2A3\"]   || false;\r\n        let _hideIDEmployeeIDP3C6A9B4D1F8E0572A34C67D0E9F1B2A3     = window[\"_hideID_EmployeeIDP3C6A9B4D1F8E0572A34C67D0E9F1B2A3\"]     || false;\r\n        let _hideSearchEmployeeIDP3C6A9B4D1F8E0572A34C67D0E9F1B2A3 = window[\"_hideSearch_EmployeeIDP3C6A9B4D1F8E0572A34C67D0E9F1B2A3\"] || false;\r\n\r\n        if (window.hpaControlEngine) {\r\n            InstanceEmployeeIDP3C6A9B4D1F8E0572A34C67D0E9F1B2A3 = window.hpaControlEngine.initSelectBoxManual({\r\n                uid:            \"P3C6A9B4D1F8E0572A34C67D0E9F1B2A3\",\r\n                columnName:     \"EmployeeID\",\r\n                displayName:    \"Họ và tên\",\r\n                dataSourceSP:   \"sp_CRM_DataSource_ContactEmployeeList\",\r\n                tableAddNew:    \"\",\r\n                tableAddNewD:   \"\",\r\n                columnAddNew:   \"\",\r\n                tableId:        \"-99218308\",\r\n                columnIDName:   \"EmployeeID\",\r\n                columnIDName2:  \"\",\r\n                gridColumnName: \"GridContactEmployee\",\r\n                keyUpdateGrid:  \"0\",\r\n                columnNameSync: \"\",\r\n                isEdit:         _isEditEmployeeIDP3C6A9B4D1F8E0572A34C67D0E9F1B2A3,\r\n                isDelete:       _isDeleteEmployeeIDP3C6A9B4D1F8E0572A34C67D0E9F1B2A3,\r\n                getAutoSave:    function() { return _autoSaveEmployeeIDP3C6A9B4D1F8E0572A34C67D0E9F1B2A3; },\r\n                getReadOnly:    function() { return _readOnlyEmployeeIDP3C6A9B4D1F8E0572A34C67D0E9F1B2A3; },\r\n                getHideID:      function() { return _hideIDEmployeeIDP3C6A9B4D1F8E0572A34C67D0E9F1B2A3; },\r\n                getHideSearch:  function() { return _hideSearchEmployeeIDP3C6A9B4D1F8E0572A34C67D0E9F1B2A3; },\r\n                actionRichTextEditor: function(e, instance) {\r\n                    \r\n                },\r\n                isAdminOrManager: window.hpaIsAdminOrManager,\r\n                loadDataSourceCommon: (typeof loadDataSourceCommon !== 'undefined' ? loadDataSourceCommon : undefined),\r\n                saveFunction: (typeof saveFunction !== 'undefined' ? saveFunction : undefined),\r\n                updateOrDeleteDataExample: (typeof updateOrDeleteDataExample !== 'undefined' ? updateOrDeleteDataExample : undefined)\r\n            });\r\n        }\r\n        \r\n            if (typeof window.hpaControlEngine === \"undefined\") {\r\n                console.error(\"[hpaControlText] window.hpaControlEngine chưa được load. Vui lòng load thủ tục sp_hpaControlEngineLoadUI trước.\");\r\n                return;\r\n            }\r\n\r\n            // Define getters in case outer code mutates the variables\r\n            let _autoSaveEmailP5E8C1D6F3B0A2794C56E89F2A1B3D4C5 = false;\r\n            let _readOnlyEmailP5E8C1D6F3B0A2794C56E89F2A1B3D4C5 = false;\r\n\r\n            window.hpaControlEngine.initTextBoxManual({\r\n                uid: \"P5E8C1D6F3B0A2794C56E89F2A1B3D4C5\",\r\n                columnName: \"Email\",\r\n                displayName: \"Email\",\r\n                tableId: \"-99218308\",\r\n                columnIDName: \"EmployeeID\",\r\n                columnIDName2: \"\",\r\n                isRequired: 0,\r\n                customValidate: function() { return typeof null === \"function\" ? null.apply(this, arguments) : true; },\r\n                saveErrorMessage: \"Lưu dữ liệu thất bại.\",\r\n                gridColumnName: \"GridContactEmployee\",\r\n                keyUpdateGrid: \"0\",\r\n                tabIndex: \"2\",\r\n                getAutoSave: function() { return _autoSaveEmailP5E8C1D6F3B0A2794C56E89F2A1B3D4C5; },\r\n                getReadOnly: function() { return _readOnlyEmailP5E8C1D6F3B0A2794C56E89F2A1B3D4C5; }\r\n            });\r\n        \r\n      window._autoSaveEmailP5E8C1D6F3B0A2794C56E89F2A1B3D4C5 = false;\r\n      _autoSaveEmailP5E8C1D6F3B0A2794C56E89F2A1B3D4C5 = false;\r\n\r\n      function syncGridEmail(employeeID, email, fullName) {\r\n          if (!employeeID) return;\r\n          const row = {\r\n              EmployeeID: employeeID,\r\n              Email: email || \"\"\r\n          };\r\n          if (fullName) row.FullName = fullName;\r\n\r\n          if (window.updateSharedGridRow) {\r\n              try { window.updateSharedGridRow(\"GridContactEmployee\", row); } catch (e) {}\r\n          }\r\n\r\n          if (window.hpaSharedGridDataSources && Array.isArray(window.hpaSharedGridDataSources.GridContactEmployee)) {\r\n              const found = window.hpaSharedGridDataSources.GridContactEmployee.find(x => x.EmployeeID == employeeID);\r\n              if (found) Object.assign(found, row);\r\n          }\r\n\r\n          try {\r\n              const grid = $(\"#GridContactEmployee\").dxDataGrid(\"instance\");\r\n              if (grid) {\r\n                  grid.refresh();\r\n              }\r\n          } catch (e) {}\r\n          try {\r\n              if (window.parent && window.parent.$) {\r\n                  const parentGrid = window.parent.$(\"#GridContactEmployee\").dxDataGrid(\"instance\");\r\n                  if (parentGrid) parentGrid.refresh();\r\n              }\r\n          } catch (e) {}\r\n      }\r\n\r\n      function getCurrentEmailValue() {\r\n          try {\r\n              const $input = $(\"#\" + emailUID).find(\"input,textarea\").first();\r\n              if ($input.length) return ($input.val() || \"\").toString().trim();\r\n          } catch (e) {}\r\n          return (getControlValue(getEmailInstance(), \"#\" + emailUID) || \"\").toString().trim();\r\n      }\r\n\r\n      async function saveContactEmployeeBySystem(employeeID, fields) {\r\n          if (!employeeID || !fields || Object.keys(fields).length === 0) return false;\r\n          const cols = Object.keys(fields);\r\n          const vals = cols.map(k => fields[k]);\r\n          const dataJSON = JSON.stringify([\r\n              \"-99218308\",\r\n              cols,\r\n              vals\r\n          ]);\r\n          const res = await saveFunction(dataJSON, JSON.stringify([[employeeID], [\"EmployeeID\"]]));\r\n          const json = typeof res === \"string\" ? JSON.parse(res) : res;\r\n          const lastTable = Array.isArray(json?.data) ? json.data[json.data.length - 1] : null;\r\n          const statusRow = Array.isArray(lastTable) ? (lastTable[0] || {}) : (json?.data?.[0]?.[0] || json || {});\r\n          if (statusRow.Status && ![\"SUCCESS\", \"OK\"].includes(statusRow.Status)) {\r\n              throw (statusRow.Message || \"Lưu dữ liệu thất bại\");\r\n          }\r\n          return true;\r\n      }\r\n\r\n      function callAddEmailProperty(employeeID, email, fullName) {\r\n          return new Promise(function(resolve, reject) {\r\n              AjaxHPAParadise({\r\n                  data: {\r\n                      name: \"sp_AddEmailProperty\",\r\n                      param: [\r\n                          \"EmployeeEmail\", email || \"\",\r\n                          \"EmployeeID\", employeeID,\r\n                          \"FullName\", fullName || \"\"\r\n                      ]\r\n                  },\r\n                  success: function(data) {\r\n                      try {\r\n                          if (typeof data === \"string\" && data.trim() !== \"\") {\r\n                              data = data.includes(\"{\") ? data : EncryptionStringDecryption(data);\r\n                          }\r\n\r\n                          const dataObj = typeof data === \"string\" ? JSON.parse(data) : data;\r\n                          const resultRow = dataObj && dataObj.data && dataObj.data[0]\r\n                              ? dataObj.data[0][0]\r\n                              : null;\r\n\r\n                          if (resultRow && resultRow.Result === \"SUCCESS\") {\r\n                              resolve(resultRow);\r\n                              return;\r\n                          }\r\n\r\n                          if (resultRow && resultRow.ErrorMessage) {\r\n                              let errMsg = resultRow.ErrorMessage;\r\n                              if (errMsg.includes(\"404\") || errMsg.includes(\"ResourceNotFound\") || errMsg.includes(\"does not exist\")) {\r\n                                  errMsg = \"Tài khoản email không tồn tại hoặc sai định dạng.\";\r\n                              }\r\n                              reject(\"Lỗi Outlook: \" + errMsg);\r\n                          } else {\r\n                              reject(\"Outlook không xác nhận lưu Email thành công.\");\r\n                          }\r\n                      } catch (parseError) {\r\n                          reject(\"Không đọc được phản hồi từ Outlook: \" + parseError);\r\n                      }\r\n                  },\r\n                  error: function() {\r\n                      reject(\"Lỗi kết nối khi đồng bộ Email với Outlook.\");\r\n                  }\r\n              });\r\n          });\r\n      }\r\n\r\n      function closePopupOnly() {\r\n          if (typeof closeEditPopup === \"function\") {\r\n              closeEditPopup();\r\n          } else if (window.parent && typeof window.parent.closeEditPopup === \"function\") {\r\n              window.parent.closeEditPopup();\r\n          } else {\r\n              try {\r\n                  const $popups = $(\".dx-popup:visible\");\r\n                  if ($popups.length > 0) {\r\n                      $popups.each(function() {\r\n                          try {\r\n                              const popup = $(this).dxPopup(\"instance\");\r\n                              if (popup && popup.option(\"visible\")) popup.hide();\r\n                          } catch (e) {}\r\n                      });\r\n                  } else {\r\n                      $(\"#edit-popup-container\").removeClass(\"open\");\r\n                  }\r\n              } catch (ex) {\r\n                  $(\"#edit-popup-container\").removeClass(\"open\");\r\n              }\r\n          }\r\n      }\r\n\r\n      function ReloadData() {\r\n          const currentID = currentRow.EmployeeID || window.currentClicked_GridContactEmployee || null;\r\n          window.currentRecordID_EmployeeID = currentID;\r\n\r\n          const obj = Object.assign({\r\n              EmployeeID: null,\r\n              Email: null\r\n          }, currentRow);\r\n\r\n\r\n            // Smart Load: Check số dòng - nếu > 1000 thì dùng API, còn không thì load bình thường\r\n            var spLoadDataGridName = \"\";\r\n            var isSmartLoadNeeded = false;\r\n\r\n            // Kiểm tra xem có cần smart load hay không (chỉ cho các control có datasource)\r\n            if (spLoadDataGridName && spLoadDataGridName.trim() !== \"\") {\r\n                // Lấy data source từ window nếu đã load\r\n                var dataSource = window[\"DataSource_Email\"];\r\n\r\n                // Nếu chưa load hoặc dữ liệu trống, thì skip smart load cho lần này\r\n                if (dataSource && Array.isArray(dataSource) && dataSource.length > 1000) {\r\n                    isSmartLoadNeeded = true;\r\n                }\r\n            }\r\n\r\n            // Nếu smart load, thì set flag để control sẽ tự động load qua API\r\n            if (isSmartLoadNeeded) {\r\n                window[\"UseAPILoad_Email\"] = true;\r\n                return;\r\n             }\r\n\r\n            // Load bình thường (dữ liệu nhỏ <= 1000)\r\n\r\n\t\t\ttry{\t\r\n\t\t\tInstanceEmailP5E8C1D6F3B0A2794C56E89F2A1B3D4C5.clearValidationError();\t\r\n\t\t\t}catch(e){}\r\n            InstanceEmailP5E8C1D6F3B0A2794C56E89F2A1B3D4C5._suppressValueChangeAction();\r\n\r\n\t\t\ttry {\r\n\t\t\t\tInstanceEmailP5E8C1D6F3B0A2794C56E89F2A1B3D4C5.option(\"searchValue\", \"\");\r\n\t\t\t\tInstanceEmailP5E8C1D6F3B0A2794C56E89F2A1B3D4C5.option(\"text\", \"\");\r\n\t\t\t\tInstanceEmailP5E8C1D6F3B0A2794C56E89F2A1B3D4C5.reset();\r\n\t\t\t} catch(e) {}\r\n\t\t\r\n            if(typeof obj !== \"undefined\" && obj && obj.Email != null) InstanceEmailP5E8C1D6F3B0A2794C56E89F2A1B3D4C5.option(\"value\", obj.Email);\r\n            else InstanceEmailP5E8C1D6F3B0A2794C56E89F2A1B3D4C5.option(\"value\", \"\");            \t\t\t\t\t\t\r\n\r\n\t\t\tInstanceEmailP5E8C1D6F3B0A2794C56E89F2A1B3D4C5._resumeValueChangeAction();\t\t\r\n\t\t\t\r\n\t\t\r\n        \r\n            // Smart Load: Check số dòng - nếu > 1000 thì dùng API, còn không thì load bình thường\r\n            var spLoadDataGridName = \"sp_CRM_DataSource_ContactEmployeeList\";\r\n            var isSmartLoadNeeded = false;\r\n\r\n            // Kiểm tra xem có cần smart load hay không (chỉ cho các control có datasource)\r\n            if (spLoadDataGridName && spLoadDataGridName.trim() !== \"\") {\r\n                // Lấy data source từ window nếu đã load\r\n                var dataSource = window[\"DataSource_EmployeeID\"];\r\n\r\n                // Nếu chưa load hoặc dữ liệu trống, thì skip smart load cho lần này\r\n                if (dataSource && Array.isArray(dataSource) && dataSource.length > 1000) {\r\n                    isSmartLoadNeeded = true;\r\n                }\r\n            }\r\n\r\n            // Nếu smart load, thì set flag để control sẽ tự động load qua API\r\n            if (isSmartLoadNeeded) {\r\n                window[\"UseAPILoad_EmployeeID\"] = true;\r\n                return;\r\n             }\r\n\r\n            // Load bình thường (dữ liệu nhỏ <= 1000)\r\n\r\n\t\t\ttry{\t\r\n\t\t\tInstanceEmployeeIDP3C6A9B4D1F8E0572A34C67D0E9F1B2A3.clearValidationError();\t\r\n\t\t\t}catch(e){}\r\n            InstanceEmployeeIDP3C6A9B4D1F8E0572A34C67D0E9F1B2A3._suppressValueChangeAction();\r\n\r\n\t\t\ttry {\r\n\t\t\t\tInstanceEmployeeIDP3C6A9B4D1F8E0572A34C67D0E9F1B2A3.option(\"searchValue\", \"\");\r\n\t\t\t\tInstanceEmployeeIDP3C6A9B4D1F8E0572A34C67D0E9F1B2A3.option(\"text\", \"\");\r\n\t\t\t\tInstanceEmployeeIDP3C6A9B4D1F8E0572A34C67D0E9F1B2A3.reset();\r\n\t\t\t} catch(e) {}\r\n\t\t\r\n            if(typeof obj !== \"undefined\" && obj && obj.EmployeeID != null) InstanceEmployeeIDP3C6A9B4D1F8E0572A34C67D0E9F1B2A3.option(\"value\", obj.EmployeeID);\r\n            else InstanceEmployeeIDP3C6A9B4D1F8E0572A34C67D0E9F1B2A3.option(\"value\", \"\");            \t\t\t\t\t\t\r\n\r\n\t\t\tInstanceEmployeeIDP3C6A9B4D1F8E0572A34C67D0E9F1B2A3._resumeValueChangeAction();\t\t\r\n\t\t\t\r\n\t\t\r\n        \r\n\r\n          hydrateCurrentEmployeeIntoDataSource();\r\n          applyEmployeeDataSourceToControl();\r\n\r\n          if (isEditMode) {\r\n              $(\"#contactEmployeeSelectRow\").hide();\r\n              $(\"#contactEmployeeReadonlyRow\").show();\r\n              const readOnlyName = ((currentRow.EmployeeID || \"\") + \" - \" + (currentRow.FullName || \"\")).replace(/^ - /, \"\");\r\n              try {\r\n                  readonlyNameInstance = $(\"#ContactEmployeeFullNameReadOnly\").dxTextBox({\r\n                      value: readOnlyName,\r\n                      readOnly: true,\r\n                      stylingMode: \"underlined\"\r\n                  }).dxTextBox(\"instance\");\r\n              } catch(e) {\r\n                  $(\"#ContactEmployeeFullNameReadOnly\").text(readOnlyName);\r\n              }\r\n          } else {\r\n              $(\"#contactEmployeeSelectRow\").show();\r\n              $(\"#contactEmployeeReadonlyRow\").hide();\r\n          }\r\n\r\n          if (isEditMode && currentID) {\r\n              setEmailProgrammatically(currentRow.Email || \"\");\r\n          }\r\n\r\n          const detailTitle = isEditMode ? \"Sửa nhân viên kinh doanh\" : \"Thêm nhân viên kinh doanh\";\r\n          window.__crmContactEmployeeDialogTitle = detailTitle;\r\n          try {\r\n              $(\".dx-popup:visible\").each(function() {\r\n                  const popup = $(this).dxPopup(\"instance\");\r\n                  if (popup) popup.option(\"title\", detailTitle);\r\n              });\r\n              $(\".dx-popup-title .dx-toolbar-label, .dx-popup-title .dx-toolbar-label > div\").filter(\":visible\").first().text(detailTitle);\r\n          } catch(e) {}\r\n\r\n          if (currentID) {\r\n              $(\"#sp_CRM_EditContactEmployee_html .btn-save\").show();\r\n              $(\"#btnDeleteContactEmployee\").show();\r\n          } else {\r\n              $(\"#sp_CRM_EditContactEmployee_html .btn-save\").show();\r\n              $(\"#btnDeleteContactEmployee\").hide();\r\n          }\r\n      }\r\n\r\n      window.onDeleteEdit = async function() {\r\n          const employeeID = currentRow.EmployeeID || window.currentClicked_GridContactEmployee || \"\";\r\n          if (!employeeID) return;\r\n\r\n          showConfirmPopup({\r\n              title: \"Xác nhận\",\r\n              message: \"Bạn có chắc chắn muốn xóa nhân viên này khỏi danh sách kinh doanh?\",\r\n              YesText: \"Xóa\",\r\n              NoText: \"Hủy bỏ\",\r\n              onYes: async function() {\r\n                  try {\r\n                      await saveContactEmployeeBySystem(employeeID, { IsContact: 0, Email: null });\r\n\r\n                      const fullName = currentRow.FullName || \"\";\r\n                      syncGridEmail(employeeID, \"\", fullName);\r\n\r\n                      if (window.uiManager && uiManager.showAlert) {\r\n                          uiManager.showAlert({ type: \"success\", message: \"Đã xóa thành công!\" });\r\n                      }\r\n\r\n                      try {\r\n                          const grid = $(\"#GridContactEmployee\").dxDataGrid(\"instance\");\r\n                          if (grid) grid.refresh();\r\n                      } catch (e) {}\r\n                      try {\r\n                          if (window.parent && window.parent.$) {\r\n                               const parentGrid = window.parent.$(\"#GridContactEmployee\").dxDataGrid(\"instance\");\r\n                               if (parentGrid) parentGrid.refresh();\r\n                          }\r\n                      } catch (e) {}\r\n\r\n                      closePopupOnly();\r\n                  } catch (ex) {\r\n                      if (window.uiManager && uiManager.showAlert) {\r\n                          uiManager.showAlert({ type: \"error\", message: \"Xóa thất bại: \" + ex });\r\n                      }\r\n                  }\r\n              }\r\n          });\r\n      };\r\n\r\n      window.onSaveEdit = async function() {\r\n          try {\r\n              const employeeID = (\r\n                  (isEditMode ? (currentRow.EmployeeID || window.currentClicked_GridContactEmployee) : \"\")\r\n                  || getControlValue(getEmployeeInstance(), \"#\" + employeeUID)\r\n                  || \"\"\r\n              ).toString().trim();\r\n              if (!employeeID) {\r\n                  uiManager.showAlert({ type: \"error\", message: \"Vui lòng chọn nhân viên!\" });\r\n                  return;\r\n              }\r\n\r\n              const email = getCurrentEmailValue();\r\n              \r\n              const emailRegex = /^[^\\s@]+@[^\\s@]+\\.[^\\s@]{2,}$/;\r\n              const normalizedEmail = email\r\n                  ?.replace(/\\u00A0/g, \"\")   \r\n                  .replace(/\\s+/g, \"\")      \r\n                  .trim();\r\n\r\n              if (normalizedEmail && !emailRegex.test(normalizedEmail)) {\r\n                  if (window.uiManager && uiManager.showAlert) {\r\n                      uiManager.showAlert({ type: \"error\", message: \"Định dạng Email không hợp lệ\" });\r\n                  }\r\n                  return;\r\n              }\r\n\r\n              const employeeInstance = getEmployeeInstance();\r\n              const selectedItem = employeeInstance && typeof employeeInstance.option === \"function\" ? employeeInstance.option(\"selectedItem\") : null;\r\n              const normalized = normalizeEmployeeItem(selectedItem);\r\n              const fullName = (normalized && normalized.FullName) || currentRow.FullName || \"\";\r\n              const saveFields = isEditMode\r\n                  ? { Email: email || null }\r\n                  : { IsContact: 1, Email: email || null };\r\n\r\n              await callAddEmailProperty(employeeID, email, fullName);\r\n              await saveContactEmployeeBySystem(employeeID, saveFields);\r\n\r\n              syncGridEmail(employeeID, email, fullName);\r\n              lastSavedEmail = email;\r\n              currentRow.Email = email;\r\n\r\n              if (window.uiManager && uiManager.showAlert) {\r\n                  uiManager.showAlert({ type: \"success\", message: \"Lưu thành công!\" });\r\n              }\r\n              closePopupOnly();\r\n          } catch(ex) {\r\n              if (window.uiManager && uiManager.showAlert) {\r\n                  uiManager.showAlert({ type: \"error\", message: \"Lưu thất bại: \" + ex });\r\n              }\r\n          }\r\n      };\r\n\r\n      ReloadData();\r\n  })();\r\n</script>\r\n",
+              "bytes_filename": "sp_CRM_EditContactEmployee.html"
+            }
+          ]
+        ],
+        "dataSchema": [
+          [
+            {
+              "name": "bytes",
+              "type": "System.String"
+            },
+            {
+              "name": "bytes_filename",
+              "type": "System.String"
+            }
+          ]
+        ]
+      },
+      "timestamp": "2026-10-16T02:35:56.361Z"
+    },
+    {
+      "type": "request",
+      "url": "https://paradisehrm.com/Tai3/hpa/paradise2",
+      "method": "POST",
+      "resourceType": "fetch",
+      "postData": {
+        "content": "02xY5O3N3CIcOd20zC0/ATOZWT00Qk6gu0O5yKQbIIEcfCdU/s8ytsWyvFSnIpV6UKgQ7Sv8lOI/AhPFz0E/e4Ae350jXqD0APv3lxYIsZfMljF7zN3npoBJDKSrsf+kQiTqIMeqNrzomX8S1Hyvo8f4G0HCrlZ2CENcB73W1/ouzGTW2LxDmj09ndA+d4bRXlzu2lVbXFnL1x51Ifrcf1GfrhmJftsUZLJTFLHcbVUED8+Kb2SJncFXeFF1Mp3nlUYEcOjI4SAElpaXJ/HF8Yn6nIexv/3Ng9/aMcCNDHSKbMexcLQTec1WehVFTcoNcY6Zwze5iOxE1Bswc8Ty0IPqVGPlush2LqUcg3MXRZSAKnf2anyP71aSFMf3BietAAKp6eHBMa8=",
+        "paradiseType": "2"
+      },
+      "timestamp": "2026-10-16T02:35:57.008Z"
+    },
+    {
+      "type": "request",
+      "url": "https://paradisehrm.com/Tai3/hpa/paradise2",
+      "method": "POST",
+      "resourceType": "fetch",
+      "postData": {
+        "content": "02xY5O3N3CIcOd20zC0/ATOZWT00Qk6gu0O5yKQbIIEcfCdU/s8ytsWyvFSnIpV6UKgQ7Sv8lOI/AhPFz0E/e4Ae350jXqD0APv3lxYIsZfMljF7zN3npoBJDKSrsf+kQiTqIMeqNrzomX8S1Hyvo8f4G0HCrlZ2CENcB73W1/ouzGTW2LxDmj09ndA+d4bRXlzu2lVbXFnL1x51Ifrcf1GfrhmJftsUZLJTFLHcbVUED8+Kb2SJncFXeFF1Mp3nlUYEcOjI4SAElpaXJ/HF8Yn6nIexv/3Ng9/aMcCNDHSKbMexcLQTec1WehVFTcoNcY6Zwze5iOxE1Bswc8Ty0IPqVGPlush2LqUcg3MXRZSAKnf2anyP71aSFMf3BietAAKp6eHBMa8=",
+        "paradiseType": "2"
+      },
+      "timestamp": "2026-10-16T02:35:57.036Z"
+    },
+    {
+      "type": "response",
+      "url": "https://paradisehrm.com/Tai3/hpa/paradise2",
+      "status": 200,
+      "responseBody": {
+        "result": "success",
+        "reason": "",
+        "data": [
+          [
+            {
+              "ParadiseVersion": "-1469847"
+            }
+          ]
+        ],
+        "dataSchema": [
+          [
+            {
+              "name": "ParadiseVersion",
+              "type": "System.String"
+            }
+          ]
+        ]
+      },
+      "timestamp": "2026-10-16T02:35:57.067Z"
+    },
+    {
+      "type": "response",
+      "url": "https://paradisehrm.com/Tai3/hpa/paradise2",
+      "status": 200,
+      "responseBody": {
+        "result": "success",
+        "reason": "",
+        "data": [
+          [
+            {
+              "TotalTickets": 0,
+              "NewTicketsThisMonth": null,
+              "ProcessingTickets": null,
+              "CompletedTickets": null
+            }
+          ],
+          [
+            {
+              "Label": "Tháng 1",
+              "Total": 0
+            },
+            {
+              "Label": "Tháng 2",
+              "Total": 0
+            },
+            {
+              "Label": "Tháng 3",
+              "Total": 3
+            },
+            {
+              "Label": "Tháng 4",
+              "Total": 0
+            },
+            {
+              "Label": "Tháng 5",
+              "Total": 3
+            },
+            {
+              "Label": "Tháng 6",
+              "Total": 87
+            },
+            {
+              "Label": "Tháng 7",
+              "Total": 119
+            },
+            {
+              "Label": "Tháng 8",
+              "Total": 69
+            },
+            {
+              "Label": "Tháng 9",
+              "Total": 91
+            },
+            {
+              "Label": "Tháng 10",
+              "Total": 0
+            },
+            {
+              "Label": "Tháng 11",
+              "Total": 0
+            },
+            {
+              "Label": "Tháng 12",
+              "Total": 0
+            }
+          ],
+          [],
+          [],
+          [],
+          [],
+          [
+            {
+              "CompanyFullName": "VIET TIN SOFTWARE SOLUTION COMPANY LIMITED"
+            }
+          ]
+        ],
+        "dataSchema": [
+          [
+            {
+              "name": "TotalTickets",
+              "type": "System.Int32"
+            },
+            {
+              "name": "NewTicketsThisMonth",
+              "type": "System.Int32"
+            },
+            {
+              "name": "ProcessingTickets",
+              "type": "System.Int32"
+            },
+            {
+              "name": "CompletedTickets",
+              "type": "System.Int32"
+            }
+          ],
+          [
+            {
+              "name": "Label",
+              "type": "System.String"
+            },
+            {
+              "name": "Total",
+              "type": "System.Int32"
+            }
+          ],
+          [
+            {
+              "name": "TicketStatusID",
+              "type": "System.Int32"
+            },
+            {
+              "name": "StatusName",
+              "type": "System.String"
+            },
+            {
+              "name": "Total",
+              "type": "System.Int32"
+            }
+          ],
+          [
+            {
+              "name": "SupportLevelID",
+              "type": "System.Int32"
+            },
+            {
+              "name": "LevelName",
+              "type": "System.String"
+            },
+            {
+              "name": "Total",
+              "type": "System.Int32"
+            }
+          ],
+          [
+            {
+              "name": "DepartmentName",
+              "type": "System.String"
+            },
+            {
+              "name": "Total",
+              "type": "System.Int32"
+            }
+          ],
+          [
+            {
+              "name": "TicketID",
+              "type": "System.Int32"
+            },
+            {
+              "name": "ShortDescription",
+              "type": "System.String"
+            },
+            {
+              "name": "CreatedBy",
+              "type": "System.String"
+            },
+            {
+              "name": "AssignedTo",
+              "type": "System.String"
+            },
+            {
+              "name": "CreatedDate",
+              "type": "System.DateTime"
+            },
+            {
+              "name": "StatusName",
+              "type": "System.String"
+            },
+            {
+              "name": "LevelName",
+              "type": "System.String"
+            }
+          ],
+          [
+            {
+              "name": "CompanyFullName",
+              "type": "System.String"
+            }
+          ]
+        ]
+      },
+      "timestamp": "2026-10-16T02:35:57.074Z"
+    },
+    {
+      "type": "response",
+      "url": "https://paradisehrm.com/Tai3/hpa/paradise2",
+      "status": 200,
+      "responseBody": {
+        "result": "success",
+        "reason": "",
+        "data": [
+          [
+            {
+              "TotalTickets": 0,
+              "NewTicketsThisMonth": null,
+              "ProcessingTickets": null,
+              "CompletedTickets": null
+            }
+          ],
+          [
+            {
+              "Label": "Tháng 1",
+              "Total": 0
+            },
+            {
+              "Label": "Tháng 2",
+              "Total": 0
+            },
+            {
+              "Label": "Tháng 3",
+              "Total": 3
+            },
+            {
+              "Label": "Tháng 4",
+              "Total": 0
+            },
+            {
+              "Label": "Tháng 5",
+              "Total": 3
+            },
+            {
+              "Label": "Tháng 6",
+              "Total": 87
+            },
+            {
+              "Label": "Tháng 7",
+              "Total": 119
+            },
+            {
+              "Label": "Tháng 8",
+              "Total": 69
+            },
+            {
+              "Label": "Tháng 9",
+              "Total": 91
+            },
+            {
+              "Label": "Tháng 10",
+              "Total": 0
+            },
+            {
+              "Label": "Tháng 11",
+              "Total": 0
+            },
+            {
+              "Label": "Tháng 12",
+              "Total": 0
+            }
+          ],
+          [],
+          [],
+          [],
+          [],
+          [
+            {
+              "CompanyFullName": "VIET TIN SOFTWARE SOLUTION COMPANY LIMITED"
+            }
+          ]
+        ],
+        "dataSchema": [
+          [
+            {
+              "name": "TotalTickets",
+              "type": "System.Int32"
+            },
+            {
+              "name": "NewTicketsThisMonth",
+              "type": "System.Int32"
+            },
+            {
+              "name": "ProcessingTickets",
+              "type": "System.Int32"
+            },
+            {
+              "name": "CompletedTickets",
+              "type": "System.Int32"
+            }
+          ],
+          [
+            {
+              "name": "Label",
+              "type": "System.String"
+            },
+            {
+              "name": "Total",
+              "type": "System.Int32"
+            }
+          ],
+          [
+            {
+              "name": "TicketStatusID",
+              "type": "System.Int32"
+            },
+            {
+              "name": "StatusName",
+              "type": "System.String"
+            },
+            {
+              "name": "Total",
+              "type": "System.Int32"
+            }
+          ],
+          [
+            {
+              "name": "SupportLevelID",
+              "type": "System.Int32"
+            },
+            {
+              "name": "LevelName",
+              "type": "System.String"
+            },
+            {
+              "name": "Total",
+              "type": "System.Int32"
+            }
+          ],
+          [
+            {
+              "name": "DepartmentName",
+              "type": "System.String"
+            },
+            {
+              "name": "Total",
+              "type": "System.Int32"
+            }
+          ],
+          [
+            {
+              "name": "TicketID",
+              "type": "System.Int32"
+            },
+            {
+              "name": "ShortDescription",
+              "type": "System.String"
+            },
+            {
+              "name": "CreatedBy",
+              "type": "System.String"
+            },
+            {
+              "name": "AssignedTo",
+              "type": "System.String"
+            },
+            {
+              "name": "CreatedDate",
+              "type": "System.DateTime"
+            },
+            {
+              "name": "StatusName",
+              "type": "System.String"
+            },
+            {
+              "name": "LevelName",
+              "type": "System.String"
+            }
+          ],
+          [
+            {
+              "name": "CompanyFullName",
+              "type": "System.String"
+            }
+          ]
+        ]
+      },
+      "timestamp": "2026-10-16T02:35:57.129Z"
+    }
+  ]
+}

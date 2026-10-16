@@ -24,8 +24,8 @@ class HierarchicalMarkdownReporter {
         .replace(/\.[jt]s$/, '');
     }
 
-    // 2. Xác định mã TC (ví dụ TC-01, TC-02) từ tiêu đề test
-    const tcMatch = test.title.match(/TC-(\d+)/i);
+    // 2. Xác định mã TC (ví dụ TC-01, TC-02, FLOW-01) từ tiêu đề test
+    const tcMatch = test.title.match(/(?:TC|FLOW|E2E)-(\d+)/i);
     let tcId = tcMatch ? tcMatch[0].toUpperCase() : `TC-${String((this.pageResults[pageName] || []).length + 1).padStart(2, '0')}`;
 
     // 3. Khởi tạo thư mục theo cấp bậc: test-evidence/<pageName>/<tcId>/
@@ -120,7 +120,7 @@ class HierarchicalMarkdownReporter {
         if (stepTitleMap[stepNum]) {
           stepTitle = stepTitleMap[stepNum];
         } else {
-          stepTitle = stepTitle.replace(/^TC-\d+[-_]step\d+[-_]?/i, '').replace(/[-_]+/g, ' ');
+          stepTitle = stepTitle.replace(/^(?:TC|FLOW|E2E)-\d+[-_]step\d+[-_]?/i, '').replace(/[-_]+/g, ' ');
           stepTitle = stepTitle.charAt(0).toUpperCase() + stepTitle.slice(1);
         }
 

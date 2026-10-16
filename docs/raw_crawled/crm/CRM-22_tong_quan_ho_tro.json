@@ -1,0 +1,2378 @@
+{
+  "code": "CRM-22",
+  "appId": "MnuHRS32389",
+  "menuName": "Tổng quan hỗ trợ",
+  "group": "Hỗ trợ",
+  "clickSuccess": true,
+  "crawledAt": "2026-10-16T02:34:51.647Z",
+  "screenshot": "CRM-22_tong_quan_ho_tro.png",
+  "mainScreen": {
+    "contextName": "Tổng quan hỗ trợ",
+    "fields": [
+      {
+        "index": 1,
+        "label": "Trường #1",
+        "controlType": "CheckBox",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": "true"
+      },
+      {
+        "index": 2,
+        "label": "Trường #2",
+        "controlType": "CheckBox",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": "true"
+      },
+      {
+        "index": 4,
+        "label": "Nhân viên",
+        "controlType": "DatePicker / DateBox",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": "2026-10-01"
+      },
+      {
+        "index": 6,
+        "label": "Chọn cột hiển thị",
+        "controlType": "TextBox (Text / String)",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 7,
+        "label": "Tìm kiếm theo nội dung",
+        "controlType": "TextBox (Text / String)",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 60,
+        "label": "Nhân viên",
+        "controlType": "DatePicker / DateBox",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": "2026-10-01"
+      },
+      {
+        "index": 62,
+        "label": "Tìm kiếm theo nội dung",
+        "controlType": "TextBox (Text / String)",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 100,
+        "label": "Tìm kiếm theo nội dung",
+        "controlType": "TextBox (Text / String)",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 112,
+        "label": "Trường #112",
+        "controlType": "Dropdown / SelectBox",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 113,
+        "label": "Trường #113",
+        "controlType": "Dropdown / SelectBox",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 114,
+        "label": "Trường #114",
+        "controlType": "Dropdown / SelectBox",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 115,
+        "label": "Chọn cột hiển thị",
+        "controlType": "TextBox (Text / String)",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 116,
+        "label": "Trường #116",
+        "controlType": "CheckBox",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": "false"
+      },
+      {
+        "index": 118,
+        "label": "Chọn cột hiển thị",
+        "controlType": "TextBox (Text / String)",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 123,
+        "label": "Nhân viên",
+        "controlType": "Dropdown / SelectBox",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": "2026-09-16"
+      },
+      {
+        "index": 124,
+        "label": "Chọn cột hiển thị",
+        "controlType": "TextBox (Text / String)",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 125,
+        "label": "Tìm kiếm theo nội dung",
+        "controlType": "TextBox (Text / String)",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 126,
+        "label": "Trường #126",
+        "controlType": "CheckBox",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": "false"
+      },
+      {
+        "index": 128,
+        "label": "Ngày tạo",
+        "controlType": "DatePicker / DateBox",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 129,
+        "label": "Mã nhân viên",
+        "controlType": "TextBox (Text / String)",
+        "state": "DISABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 130,
+        "label": "Công ty",
+        "controlType": "TextBox (Text / String)",
+        "state": "DISABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 131,
+        "label": "Mã số thuế",
+        "controlType": "TextBox (Text / String)",
+        "state": "DISABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 132,
+        "label": "Ngành",
+        "controlType": "Dropdown / SelectBox",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 133,
+        "label": "Địa chỉ",
+        "controlType": "TextBox (Text / String)",
+        "state": "DISABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 134,
+        "label": "Người liên hệ",
+        "controlType": "TextBox (Text / String)",
+        "state": "DISABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 135,
+        "label": "Điện thoại",
+        "controlType": "TextBox (Text / String)",
+        "state": "DISABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 136,
+        "label": "EMAIL",
+        "controlType": "TextBox (Text / String)",
+        "state": "DISABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 137,
+        "label": "Chức vụ công việc",
+        "controlType": "Dropdown / SelectBox",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 138,
+        "label": "Quy mô công ty",
+        "controlType": "Dropdown / SelectBox",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 139,
+        "label": "Nguồn",
+        "controlType": "TextBox (Text / String)",
+        "state": "DISABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 140,
+        "label": "Ghi chú",
+        "controlType": "TextArea",
+        "state": "DISABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 141,
+        "label": "Trạng thái",
+        "controlType": "TextBox (Text / String)",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 142,
+        "label": "Vui lòng nhập lý do từ chối",
+        "controlType": "TextArea",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 143,
+        "label": "Nhân viên",
+        "controlType": "DatePicker / DateBox",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": "2026-10-12"
+      },
+      {
+        "index": 144,
+        "label": "Nhân viên",
+        "controlType": "DatePicker / DateBox",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 146,
+        "label": "Tìm kiếm theo nội dung",
+        "controlType": "TextBox (Text / String)",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 148,
+        "label": "Tìm kiếm theo nội dung",
+        "controlType": "TextBox (Text / String)",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 151,
+        "label": "Tiêu đề",
+        "controlType": "TextBox (Text / String)",
+        "state": "ENABLED",
+        "required": "YES (*)",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Bắt buộc nhập (*)",
+        "currentValue": ""
+      },
+      {
+        "index": 152,
+        "label": "Địa\n                            điểm",
+        "controlType": "TextBox (Text / String)",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 153,
+        "label": "Bắt\n                            đầu",
+        "controlType": "DatePicker / DateBox",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 154,
+        "label": "Kết\n                            thúc",
+        "controlType": "DatePicker / DateBox",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 155,
+        "label": "Người tham dự",
+        "controlType": "TextBox (Text / String)",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 156,
+        "label": "Nội dung",
+        "controlType": "Dropdown / SelectBox",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": "#000000"
+      },
+      {
+        "index": 157,
+        "label": "Nhắc\n                            trước",
+        "controlType": "NumberInput",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Chỉ nhận giá trị số",
+        "currentValue": "15"
+      },
+      {
+        "index": 158,
+        "label": "Nhân viên",
+        "controlType": "DatePicker / DateBox",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": "2026-10-12"
+      },
+      {
+        "index": 160,
+        "label": "Tìm kiếm theo nội dung",
+        "controlType": "TextBox (Text / String)",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 163,
+        "label": "Thời gian",
+        "controlType": "DatePicker / DateBox",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 164,
+        "label": "Chủ đề",
+        "controlType": "TextBox (Text / String)",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 165,
+        "label": "Trạng thái",
+        "controlType": "Dropdown / SelectBox",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 166,
+        "label": "Loại bài đăng",
+        "controlType": "Dropdown / SelectBox",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 167,
+        "label": "Link bài đăng",
+        "controlType": "TextBox (Text / String)",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 168,
+        "label": "Ghi chú",
+        "controlType": "Dropdown / SelectBox",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": "#000000"
+      },
+      {
+        "index": 169,
+        "label": "Đính kèm",
+        "controlType": "TextBox (Text / String)",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 170,
+        "label": "Nhân viên",
+        "controlType": "DatePicker / DateBox",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": "2026-10-12"
+      },
+      {
+        "index": 171,
+        "label": "Chọn cột hiển thị",
+        "controlType": "TextBox (Text / String)",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 172,
+        "label": "Tìm kiếm theo nội dung",
+        "controlType": "TextBox (Text / String)",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 198,
+        "label": "Chọn cột hiển thị",
+        "controlType": "TextBox (Text / String)",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 199,
+        "label": "Tìm kiếm theo nội dung",
+        "controlType": "TextBox (Text / String)",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 202,
+        "label": "Chọn cột hiển thị",
+        "controlType": "TextBox (Text / String)",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 203,
+        "label": "Thêm",
+        "controlType": "TextBox (Text / String)",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 204,
+        "label": "Tìm kiếm theo nội dung",
+        "controlType": "TextBox (Text / String)",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 214,
+        "label": "Trường #214",
+        "controlType": "Dropdown / SelectBox",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 215,
+        "label": "Chọn cột hiển thị",
+        "controlType": "TextBox (Text / String)",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 216,
+        "label": "Tìm kiếm theo nội dung",
+        "controlType": "TextBox (Text / String)",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 217,
+        "label": "Trường #217",
+        "controlType": "CheckBox",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": "false"
+      },
+      {
+        "index": 219,
+        "label": "Xem tất cả ngày",
+        "controlType": "DatePicker / DateBox",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": "2026-10-12"
+      },
+      {
+        "index": 224,
+        "label": "Tìm kiếm theo nội dung",
+        "controlType": "TextBox (Text / String)",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 248,
+        "label": "Ngày tạo",
+        "controlType": "DatePicker / DateBox",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 249,
+        "label": "Kéo thả hình ảnh để AI phân tích",
+        "controlType": "TextBox (Text / String)",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 250,
+        "label": "Xem của tôi",
+        "controlType": "CheckBox",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": "on"
+      },
+      {
+        "index": 251,
+        "label": "Chọn cột hiển thị",
+        "controlType": "TextBox (Text / String)",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 252,
+        "label": "Tìm kiếm theo nội dung",
+        "controlType": "TextBox (Text / String)",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 272,
+        "label": "Nhân viên",
+        "controlType": "DatePicker / DateBox",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": "2026-10-01"
+      },
+      {
+        "index": 274,
+        "label": "Tìm kiếm theo nội dung",
+        "controlType": "TextBox (Text / String)",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 276,
+        "label": "Excel",
+        "controlType": "TextBox (Text / String)",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 277,
+        "label": "Excel",
+        "controlType": "TextBox (Text / String)",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 278,
+        "label": "Excel",
+        "controlType": "TextBox (Text / String)",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 279,
+        "label": "Excel",
+        "controlType": "TextBox (Text / String)",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 280,
+        "label": "Excel",
+        "controlType": "TextBox (Text / String)",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 281,
+        "label": "Excel",
+        "controlType": "TextBox (Text / String)",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 282,
+        "label": "Excel",
+        "controlType": "TextBox (Text / String)",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 283,
+        "label": "Excel",
+        "controlType": "TextBox (Text / String)",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 284,
+        "label": "Excel",
+        "controlType": "TextBox (Text / String)",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 285,
+        "label": "Excel",
+        "controlType": "TextBox (Text / String)",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 286,
+        "label": "Excel",
+        "controlType": "TextBox (Text / String)",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 287,
+        "label": "Excel",
+        "controlType": "TextBox (Text / String)",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 288,
+        "label": "Excel",
+        "controlType": "TextBox (Text / String)",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 289,
+        "label": "Excel",
+        "controlType": "TextBox (Text / String)",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 290,
+        "label": "Excel",
+        "controlType": "TextBox (Text / String)",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 291,
+        "label": "Excel",
+        "controlType": "TextBox (Text / String)",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 294,
+        "label": "#",
+        "controlType": "TextBox (Text / String)",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 305,
+        "label": "Xếp hạng",
+        "controlType": "TextBox (Text / String)",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 307,
+        "label": "STT",
+        "controlType": "TextBox (Text / String)",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 309,
+        "label": "#",
+        "controlType": "TextBox (Text / String)",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      }
+    ],
+    "buttons": [
+      "Không",
+      "Đồng ý",
+      "OK",
+      "Share",
+      "Tổng quan hỗ trợ",
+      "Lịch sử xuất kho",
+      "Lịch sử nhập kho",
+      "Danh mục sản phẩm",
+      "Thêm/Sửa phân hệ",
+      "Quản lý phân hệ",
+      "Thêm/Sửa báo giá",
+      "Báo giá phần mềm",
+      "Lọc dữ liệu",
+      "Tạo yêu cầu",
+      "Tìm kiếm",
+      "Làm mới",
+      "Thêm mới",
+      "Chọn cột hiển thị",
+      "Lưu",
+      "Thêm phân hệ",
+      "Xoá",
+      "Chuyển dữ liệu",
+      "＋ Thêm tổ hợp",
+      "✕ Xóa tổ hợp",
+      "Cào theo tổ hợp",
+      "Dừng cào hàng loạt",
+      "Tải lại",
+      "Từ chối",
+      "Duyệt",
+      "Đóng",
+      "Hủy",
+      "Tạo cuộc họp mới",
+      "Bình thường",
+      "16px",
+      "Khôi phục mặc định",
+      "Áp dụng",
+      "Start Recording",
+      "Xóa",
+      "Lưu cuộc họp",
+      "Thêm nội dung",
+      "Xóa hình ảnh",
+      "Lưu dữ liệu",
+      "Gửi",
+      "Soạn thư",
+      "Tất cả",
+      "Bạn bè",
+      "Nhóm",
+      "Khách hàng",
+      "Thêm",
+      "Export",
+      "Tuần",
+      "Tháng",
+      "Quý",
+      "Năm",
+      "Quay lại",
+      "+ Thêm mới",
+      "Chỉnh sửa",
+      "Import",
+      "Danh sách bổ xung",
+      "Dữ liệu thu thập",
+      "Lead",
+      "Đã liên hệ",
+      "Đã demo & gửi báo giá",
+      "Cần chăm sóc",
+      "Sắp chốt đơn",
+      "Thành công",
+      "Thất bại",
+      "Hôm nay",
+      "Tuần này",
+      "Tháng này",
+      "? Áp dụng",
+      "Lưu thông tin liên hệ",
+      "Xuất báo giá",
+      "Lưu báo giá",
+      "Tạo báo giá mới",
+      "Excel",
+      "Thêm Lead",
+      "Tính toán lại",
+      "Quản lý danh sách KPI",
+      "Lưu cấu hình",
+      "Lọc",
+      "Xuất Excel",
+      "Close all tabs",
+      "Close other tabs",
+      "Close all tabs on left",
+      "Close all tabs on right",
+      "Close this tab",
+      "Pin to taskbar",
+      "Open",
+      "Unpin to taskbar",
+      "Ðánh d?u t?t c? dã xem",
+      "Xem danh sách thông báo",
+      "Cài d?t",
+      "Stay",
+      "Select a file",
+      "Upload",
+      "Nhấn để thiết lập phím tắt",
+      "Hủy phím tắt"
+    ]
+  },
+  "modals": [],
+  "dataLineage": {
+    "isDownstreamScreen": false,
+    "hasDataTable": true,
+    "hasCreateButton": true,
+    "detectedMetadata": {},
+    "inferredStoredProcedures": [
+      "sp_dashboard_home_new_customer"
+    ],
+    "recommendation": "Màn hình \"Tổng quan hỗ trợ\" có sẵn form tạo/nhập dữ liệu trực tiếp."
+  },
+  "apiNetworkCalls": [
+    {
+      "type": "request",
+      "url": "https://paradisehrm.com/Tai3/hpa/paradise2",
+      "method": "POST",
+      "resourceType": "fetch",
+      "postData": {
+        "content": "02xY5O3N3CIcOd20zC0/ATOZWT00Qk6gu0O5yKQbIIEcfCdU/s8ytsWyvFSnIpV6f8iCZwbnFviSY4mViS/reIAe350jXqD0APv3lxYIsZfMljF7zN3npoBJDKSrsf+kQiTqIMeqNrzomX8S1Hyvo8f4G0HCrlZ2CENcB73W1/ouzGTW2LxDmj09ndA+d4bRzzvT0NnRWZ1Ir9wN7Hw/OfMnoKwueYvrxU+iDKj+L/yqNnfWSvukUMkoQUcOLXvZXqwNaQejbbIQ/a1U6Vw5o4WOcQNdtWvUMoywKaeyJOeQbdA/sMscrNPLHZAmNaIvlaRd1W2vF9M2yM+oeShECSYzQGtzYVTG",
+        "paradiseType": "2"
+      },
+      "timestamp": "2026-10-16T02:34:39.290Z"
+    },
+    {
+      "type": "request",
+      "url": "https://paradisehrm.com/Tai3/hpa/paradise2",
+      "method": "POST",
+      "resourceType": "fetch",
+      "postData": {
+        "content": "02xY5O3N3CIcOd20zC0/ATOZWT00Qk6gu0O5yKQbIIEcfCdU/s8ytsWyvFSnIpV6f8iCZwbnFviSY4mViS/reIAe350jXqD0APv3lxYIsZfMljF7zN3npoBJDKSrsf+kQiTqIMeqNrzomX8S1Hyvo8f4G0HCrlZ2CENcB73W1/ouzGTW2LxDmj09ndA+d4bRnfHkcut/cXY9g1+j5oMtWzf2s8b6liVAou4aarswLsppQf0m42fzRFAE804wYojljeS/wvulP3ce9Um8hvsQAQAJ1/zvPoBnb7lJxhKfBVz/Df7bfebCZq33PYJny2fImNjEWLhrC2wbmMojd4qZB3XdRcYK81sK47GR3zwBe1177HdGJDHlLCX5PNE9wectdMDAoVgTWV6g3V4pQbokPOADYmcJWMH1uM1rSVNNDyE6Vgd2We6EMiz5cHnHTmGFP961Rl0oioOqb+Qjzn9wNzBdt0z6KtqmvJ/RKZqHWwU=",
+        "paradiseType": "2"
+      },
+      "timestamp": "2026-10-16T02:34:39.292Z"
+    },
+    {
+      "type": "request",
+      "url": "https://paradisehrm.com/Tai3/api/hpa/paradise?&name=paradisepublic&param=[%22paradisepublic%22,%22sp_dashboard_home_new_customer%22,%22LanguageID%22,%22VN%22,%22ParadiseVersion%22,2115056208]&user=paradisepublic&password=3C9909AFEC25354D551DAE21590BB26E38D53F2173B8D3DC3EEE4C047E7AB1C1EB8B85103E3BE7BA613B31BB5C9C36214DC9F14A42FD7A2FDB84856BCA5C44C2&_cb=VN_2115056208",
+      "method": "GET",
+      "resourceType": "xhr",
+      "postData": null,
+      "timestamp": "2026-10-16T02:34:39.590Z"
+    },
+    {
+      "type": "response",
+      "url": "https://paradisehrm.com/Tai3/hpa/paradise2",
+      "status": 200,
+      "responseBody": {
+        "result": "success",
+        "reason": "",
+        "data": [
+          [
+            {
+              "ParadiseVersion": "2115056208"
+            }
+          ]
+        ],
+        "dataSchema": [
+          [
+            {
+              "name": "ParadiseVersion",
+              "type": "System.String"
+            }
+          ]
+        ]
+      },
+      "timestamp": "2026-10-16T02:34:39.590Z"
+    },
+    {
+      "type": "response",
+      "url": "https://paradisehrm.com/Tai3/hpa/paradise2",
+      "status": 200,
+      "responseBody": {
+        "result": "success",
+        "reason": "",
+        "data": [],
+        "dataSchema": []
+      },
+      "timestamp": "2026-10-16T02:34:39.742Z"
+    },
+    {
+      "type": "request",
+      "url": "https://paradisehrm.com/Tai3/hpa/paradise2",
+      "method": "POST",
+      "resourceType": "fetch",
+      "postData": {
+        "content": "02xY5O3N3CIcOd20zC0/ATOZWT00Qk6gu0O5yKQbIIEcfCdU/s8ytsWyvFSnIpV6f8iCZwbnFviSY4mViS/reIAe350jXqD0APv3lxYIsZfMljF7zN3npoBJDKSrsf+kQiTqIMeqNrzomX8S1Hyvo8f4G0HCrlZ2CENcB73W1/ouzGTW2LxDmj09ndA+d4bRh3UVaPwPXv1rgQlmFlnRXpCnuznQsF8+gET9MYKHY6YCnewcFXUtzAESD5sah7NDX3rVieVuWXCQbdA/sMscrDvO41DIzWLd",
+        "paradiseType": "2"
+      },
+      "timestamp": "2026-10-16T02:34:39.759Z"
+    },
+    {
+      "type": "request",
+      "url": "https://paradisehrm.com/Tai3/hpa/paradise2",
+      "method": "POST",
+      "resourceType": "fetch",
+      "postData": {
+        "content": "02xY5O3N3CIcOd20zC0/ATOZWT00Qk6gu0O5yKQbIIEcfCdU/s8ytsWyvFSnIpV6f8iCZwbnFviSY4mViS/reIAe350jXqD0APv3lxYIsZfMljF7zN3npoBJDKSrsf+kQiTqIMeqNrzomX8S1Hyvo8f4G0HCrlZ2CENcB73W1/ouzGTW2LxDmj09ndA+d4bRlDZyEqMGsv21eijN2e7wAgZHkauX4eBf/Yu5lL4T+2839rPG+pYlQKLuGmq7MC7Kl4TNkNuS9Ziffyh1PZht/MvBvomXwqOzvJ/RKZqHWwU=",
+        "paradiseType": "2"
+      },
+      "timestamp": "2026-10-16T02:34:39.760Z"
+    },
+    {
+      "type": "request",
+      "url": "https://paradisehrm.com/Tai3/hpa/paradise2",
+      "method": "POST",
+      "resourceType": "fetch",
+      "postData": {
+        "content": "02xY5O3N3CIcOd20zC0/ATOZWT00Qk6gu0O5yKQbIIEcfCdU/s8ytsWyvFSnIpV6f8iCZwbnFviSY4mViS/reIAe350jXqD0APv3lxYIsZfMljF7zN3npoBJDKSrsf+kQiTqIMeqNrzomX8S1Hyvo8f4G0HCrlZ2CENcB73W1/ouzGTW2LxDmj09ndA+d4bRXlzu2lVbXFnL1x51Ifrcf1GfrhmJftsUZLJTFLHcbVUED8+Kb2SJncFXeFF1Mp3nlUYEcOjI4SAElpaXJ/HF8Yn6nIexv/3Ng9/aMcCNDHSKbMexcLQTec1WehVFTcoNcY6Zwze5iOxE1Bswc8Ty0IPqVGPlush2LqUcg3MXRZSAKnf2anyP71aSFMf3BietAAKp6eHBMa8=",
+        "paradiseType": "2"
+      },
+      "timestamp": "2026-10-16T02:34:39.762Z"
+    },
+    {
+      "type": "request",
+      "url": "https://paradisehrm.com/Tai3/api/hpa/paradise?&name=paradisepublic&param=[%22paradisepublic%22,%22sp_dashboard_home_new_customer%22,%22LanguageID%22,%22VN%22,%22ParadiseVersion%22,2115056208]&user=paradisepublic&password=3C9909AFEC25354D551DAE21590BB26E38D53F2173B8D3DC3EEE4C047E7AB1C1EB8B85103E3BE7BA613B31BB5C9C36214DC9F14A42FD7A2FDB84856BCA5C44C2&_cb=VN_2115056208",
+      "method": "GET",
+      "resourceType": "xhr",
+      "postData": null,
+      "timestamp": "2026-10-16T02:34:39.762Z"
+    },
+    {
+      "type": "response",
+      "url": "https://paradisehrm.com/Tai3/api/hpa/paradise?&name=paradisepublic&param=[%22paradisepublic%22,%22sp_dashboard_home_new_customer%22,%22LanguageID%22,%22VN%22,%22ParadiseVersion%22,2115056208]&user=paradisepublic&password=3C9909AFEC25354D551DAE21590BB26E38D53F2173B8D3DC3EEE4C047E7AB1C1EB8B85103E3BE7BA613B31BB5C9C36214DC9F14A42FD7A2FDB84856BCA5C44C2&_cb=VN_2115056208",
+      "status": 200,
+      "responseBody": {
+        "result": "success",
+        "reason": "",
+        "data": [
+          [
+            {
+              "bytes": "\r\n\t\t\t<style>\r\n\t\t\t\t/* --- Cấu trúc Layout chính --- */\r\n\t\t\t\t#ticket-dashboard-container {\r\n\t\t\t\t\tfont-family: -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, sans-serif;\r\n\t\t\t\t\twidth: 100%;\r\n\t\t\t\t\theight: 100vh;\r\n\t\t\t\t\tdisplay: flex;\r\n\t\t\t\t\tflex-direction: column;\r\n\t\t\t\t\toverflow: hidden;\r\n\t\t\t\t\tbackground-color: transparent;\r\n\t\t\t\t}\r\n\t\t\t\t\r\n\t\t\t\t#ticket-dashboard-container *,\r\n\t\t\t\t#ticket-dashboard-container *:before,\r\n\t\t\t\t#ticket-dashboard-container *:after {\r\n\t\t\t\t\tbox-sizing: border-box;\r\n\t\t\t\t}\r\n\r\n\t\t\t\t/* --- Header --- */\r\n\t\t\t\t#ticket-dashboard-container .header-wrapper {\r\n\t\t\t\t\tflex: 0 0 auto;\r\n\t\t\t\t\tpadding: 20px 24px 10px 24px;\r\n\t\t\t\t\tz-index: 10;\r\n\t\t\t\t}\r\n\r\n\t\t\t\t#ticket-dashboard-container .header-section-ticketDashboard {\r\n\t\t\t\t\tdisplay: flex;\r\n\t\t\t\t\tjustify-content: space-between;\r\n\t\t\t\t\talign-items: center;\r\n\t\t\t\t\tpadding: 12px 24px; /* Giảm padding một chút cho gọn */\r\n\t\t\t\t\tborder-radius: 8px;\r\n\t\t\t\t\tborder: 1px solid #e2e8f0;\r\n                    border-left: 5px solid #00673b; /* Highlight viền trái */\r\n\t\t\t\t}\r\n\r\n\t\t\t\t/* Group text bên trái header */\r\n\t\t\t\t#ticket-dashboard-container .header-content {\r\n\t\t\t\t\tdisplay: flex;\r\n\t\t\t\t\tflex-direction: column;\r\n\t\t\t\t\tgap: 2px;\r\n\t\t\t\t}\r\n\r\n\t\t\t\t#ticket-dashboard-container .welcome-text {\r\n                    font-size: 24px; /* Tăng cỡ chữ */\r\n                    font-weight: 800; /* Tăng độ đậm */\r\n                    color: #00673b;\r\n                    text-shadow: 0px 1px 2px rgba(0,0,0,0.1); /* Thêm bóng chữ nhẹ cho nổi */\r\n                    margin-bottom: 4px; /* Thêm khoảng cách */\r\n                }\r\n\r\n                #ticket-dashboard-container .company-subtext {\r\n                    font-size: 14px;\r\n                    font-weight: 600;\r\n                    color: #4b5563; /* Màu xám đậm hơn chút để dễ đọc */\r\n                    text-transform: uppercase;\r\n                    letter-spacing: 1px; /* Tăng khoảng cách chữ cho sang */\r\n                }\r\n\r\n\t\t\t\t#ticket-dashboard-container .create-ticket-btn {\r\n\t\t\t\t\tpadding: 10px 20px;\r\n\t\t\t\t\tborder: 1px solid #00673b; /* Đổi viền theo màu chủ đạo luôn cho đồng bộ */\r\n\t\t\t\t\t\r\n\t\t\t\t\tcolor: #00673b;\r\n\t\t\t\t\tborder-radius: 6px;\r\n\t\t\t\t\tcursor: pointer;\r\n\t\t\t\t\tfont-size: 14px;\r\n\t\t\t\t\tfont-weight: 600;\r\n\t\t\t\t\tdisplay: flex;\r\n\t\t\t\t\talign-items: center;\r\n\t\t\t\t\tgap: 8px;\r\n\t\t\t\t\ttransition: all 0.2s ease;\r\n\t\t\t\t}\r\n\t\t\t\t#ticket-dashboard-container .create-ticket-btn:hover {\r\n\t\t\t\t\tbackground: #f0fdf4; /* Hover màu xanh lá nhạt */\r\n\t\t\t\t}\r\n\r\n\t\t\t\t/* --- Layout 2 cột --- */\r\n\t\t\t\t#ticket-dashboard-container .dashboard-layout {\r\n\t\t\t\t\tflex: 1;\r\n\t\t\t\t\tdisplay: grid;\r\n\t\t\t\t\tgrid-template-columns: 1fr 400px;\r\n\t\t\t\t\tgap: 24px;\r\n\t\t\t\t\tpadding: 10px 24px 20px 24px;\r\n\t\t\t\t\toverflow: hidden;\r\n\t\t\t\t\tmin-height: 0;\r\n\t\t\t\t}\r\n\r\n\t\t\t\t#ticket-dashboard-container .scroll-column {\r\n\t\t\t\t\theight: 100%;\r\n\t\t\t\t\toverflow-y: auto;\r\n\t\t\t\t\tpadding-right: 4px;\r\n\t\t\t\t\tpadding-bottom: 20px;\r\n\t\t\t\t\t-ms-overflow-style: none;\r\n\t\t\t\t\tscrollbar-width: none;\r\n\t\t\t\t}\r\n\t\t\t\t#ticket-dashboard-container .scroll-column::-webkit-scrollbar { display: none; }\r\n\r\n\t\t\t\t/* --- Cards & Stats --- */\r\n\t\t\t\t#ticket-dashboard-container .stats-grid {\r\n\t\t\t\t\tdisplay: grid;\r\n\t\t\t\t\tgrid-template-columns: repeat(3, 1fr);\r\n\t\t\t\t\tgap: 20px;\r\n\t\t\t\t\tmargin-bottom: 24px;\r\n\t\t\t\t}\r\n\r\n\t\t\t\t/* --- Sửa lại Style cho Stat Card --- */\r\n\t\t\t\t#ticket-dashboard-container .stat-card {\r\n\t\t\t\t\tpadding: 20px;\r\n\t\t\t\t\tborder-radius: 8px;\r\n\t\t\t\t\tborder: 1px solid #e2e8f0;\r\n\t\t\t\t\tposition: relative;\r\n\t\t\t\t\t/* Chuyển sang xếp ngang để icon và nội dung nằm cạnh nhau */\r\n\t\t\t\t\tdisplay: flex;\r\n\t\t\t\t\tflex-direction: row;\r\n\t\t\t\t\talign-items: center;\r\n\t\t\t\t\tjustify-content: space-between; /* Đẩy dropdown sang phải cùng */\r\n\t\t\t\t}\r\n\r\n\t\t\t\t/* Color highlights giữ nguyên */\r\n\t\t\t\t#ticket-dashboard-container .stat-card::before {\r\n\t\t\t\t\tcontent: \"\"; position: absolute; top: 12px; bottom: 12px; left: 0; width: 4px;\r\n\t\t\t\t\tborder-top-right-radius: 4px; border-bottom-right-radius: 4px;\r\n\t\t\t\t}\r\n\t\t\t\t#ticket-dashboard-container .stat-card.total::before { background: #10b981; }\r\n\t\t\t\t#ticket-dashboard-container .stat-card.new::before { background: #3b82f6; }\r\n\t\t\t\t#ticket-dashboard-container .stat-card.onleave::before { background: #f59e0b; }\r\n\r\n\t\t\t\t/* Gom nhóm Icon và Text */\r\n\t\t\t\t#ticket-dashboard-container .stat-main-content {\r\n\t\t\t\t\tdisplay: flex;\r\n\t\t\t\t\talign-items: center;\r\n\t\t\t\t\tgap: 16px; /* Khoảng cách giữa icon và chữ */\r\n\t\t\t\t}\r\n\r\n\t\t\t\t#ticket-dashboard-container .stat-icon {\r\n\t\t\t\t\twidth: 48px; height: 48px; /* Tăng kích thước icon chút cho cân đối */\r\n\t\t\t\t\tborder-radius: 8px;\r\n\t\t\t\t\tborder: 1px solid #e2e8f0;\r\n\t\t\t\t\tdisplay: flex; align-items: center; justify-content: center;\r\n\t\t\t\t\tcolor: #64748b;\r\n\t\t\t\t\tflex-shrink: 0; /* Không cho icon bị co lại */\r\n\t\t\t\t}\r\n\t\t\t\t#ticket-dashboard-container .stat-icon svg { width: 24px; height: 24px; fill: currentColor; }\r\n\r\n\t\t\t\t/* Phần chữ xếp dọc (Label trên, Value dưới hoặc ngược lại) */\r\n\t\t\t\t#ticket-dashboard-container .stat-text-group {\r\n\t\t\t\t\tdisplay: flex;\r\n\t\t\t\t\tflex-direction: column;\r\n\t\t\t\t\tjustify-content: center;\r\n\t\t\t\t}\r\n\r\n\t\t\t\t#ticket-dashboard-container .stat-value {\r\n\t\t\t\t\tfont-size: 24px;\r\n\t\t\t\t\tfont-weight: 700;\r\n\t\t\t\t\tline-height: 1.2;\r\n\t\t\t\t}\r\n\r\n\t\t\t\t#ticket-dashboard-container .stat-label {\r\n\t\t\t\t\tfont-size: 13px;\r\n\t\t\t\t\tcolor: #64748b;\r\n\t\t\t\t\tfont-weight: 500;\r\n\t\t\t\t}\r\n\r\n\t\t\t\t/* --- Charts & General Card Box --- */\r\n\t\t\t\t#ticket-dashboard-container .charts-grid {\r\n\t\t\t\t\tdisplay: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-bottom: 24px;\r\n\t\t\t\t}\r\n\t\t\t\t#ticket-dashboard-container .card-box {\r\n\t\t\t\t\t\r\n\t\t\t\t\tpadding: 24px;\r\n\t\t\t\t\tborder-radius: 8px;\r\n\t\t\t\t\tborder: 1px solid #e2e8f0;\r\n\t\t\t\t\tmargin-bottom: 24px;\r\n\t\t\t\t}\r\n\t\t\t\t#ticket-dashboard-container .charts-grid .card-box { margin-bottom: 0; }\r\n\r\n\t\t\t\t#ticket-dashboard-container .card-title {\r\n\t\t\t\t\tfont-size: 16px; font-weight: 600; color: #00673b; margin-bottom: 20px;\r\n\t\t\t\t\tdisplay: flex; justify-content: space-between; align-items: center;\r\n\t\t\t\t}\r\n\t\t\t\t#ticket-dashboard-container .chart-canvas { width: 100%; height: 250px; }\r\n\r\n\t\t\t\t/* --- List Items --- */\r\n\t\t\t\t#ticket-dashboard-container .info-item, #ticket-dashboard-container .user-item {\r\n\t\t\t\t\tdisplay: flex; justify-content: space-between; align-items: center;\r\n\t\t\t\t\tpadding: 12px 0; border-bottom: 1px solid #f1f5f9;\r\n\t\t\t\t}\r\n\t\t\t\t#ticket-dashboard-container .info-item:last-child, #ticket-dashboard-container .user-item:last-child { border-bottom: none; }\r\n\t\t\t\t#ticket-dashboard-container .user-item { gap: 12px; justify-content: flex-start; }\r\n\t\t\t\t/* --- Sửa lại Style cho Item trong Sidebar --- */\r\n\t\t\t\t#ticket-dashboard-container .user-item {\r\n\t\t\t\t\tdisplay: flex;\r\n\t\t\t\t\talign-items: center; /* Căn giữa theo chiều dọc */\r\n\t\t\t\t\tgap: 12px;\r\n\t\t\t\t\tpadding: 12px 0;\r\n\t\t\t\t\tborder-bottom: 1px solid #f1f5f9;\r\n\t\t\t\t}\r\n\r\n\t\t\t\t#ticket-dashboard-container .user-info {\r\n                    flex: 1;\r\n                    min-width: 0; /* Quan trọng: cho phép flex item co lại nhỏ hơn content */\r\n                    display: flex;\r\n                    flex-direction: column;\r\n                    gap: 3px;\r\n                    overflow: hidden; /* Thêm dòng này */\r\n                }\r\n\r\n\t\t\t\t/* Dòng 1: Tiêu đề Ticket */\r\n\t\t\t\t#ticket-dashboard-container .ticket-title-text {\r\n                    font-size: 14px;\r\n                    font-weight: 600;\r\n                    white-space: nowrap;\r\n                    overflow: hidden;\r\n                    text-overflow: ellipsis;\r\n                    max-width: 100%; /* Thêm dòng này */\r\n                    flex: 1; /* Thêm dòng này để chiếm hết không gian còn lại */\r\n                }\r\n\r\n\t\t\t\t/* Dòng 2: Nhân viên + Ngày */\r\n\t\t\t\t#ticket-dashboard-container .ticket-sub-row {\r\n\t\t\t\t\tfont-size: 12px;\r\n\t\t\t\t\tcolor: #64748b;\r\n\t\t\t\t\tdisplay: flex;\r\n\t\t\t\t\talign-items: center;\r\n\t\t\t\t}\r\n\r\n\t\t\t\t/* Dấu chấm hoặc gạch ngăn cách (nếu cần) */\r\n\t\t\t\t#ticket-dashboard-container .ticket-sub-divider {\r\n\t\t\t\t\tmargin: 0 6px;\r\n\t\t\t\t\tcolor: #cbd5e1;\r\n\t\t\t\t}\r\n\t\t\t\t#ticket-dashboard-container .user-avatar {\r\n\t\t\t\t\twidth: 36px; height: 36px; border-radius: 50%;\r\n\t\t\t\t\tborder: 1px solid #e2e8f0;\r\n\t\t\t\t\t color: #2563eb;\r\n\t\t\t\t\tdisplay: flex; align-items: center; justify-content: center; font-size: 12px; font-weight: 700; flex-shrink: 0;\r\n\t\t\t\t}\r\n\t\t\t\t#ticket-dashboard-container .user-info { flex: 1; min-width: 0; }\r\n\t\t\t\t#ticket-dashboard-container .user-name {\r\n\t\t\t\t\tfont-size: 14px; font-weight: 500;\r\n\t\t\t\t\twhite-space: nowrap; overflow: hidden; text-overflow: ellipsis;\r\n\t\t\t\t}\r\n\t\t\t\t#ticket-dashboard-container .user-role { font-size: 12px; color: #64748b; }\r\n\t\t\t\t#ticket-dashboard-container .status-badge {\r\n\t\t\t\t\tpadding: 2px 8px; border-radius: 4px;\r\n\t\t\t\t\tfont-size: 11px; font-weight: 600; margin-left: auto;\r\n\t\t\t\t\tborder: 1px solid currentColor;\r\n\t\t\t\t\tbackground: transparent;\r\n\t\t\t\t}\r\n\t\t\t\t#ticket-dashboard-container select {\r\n\t\t\t\t\tpadding: 4px 8px; border: 1px solid #cbd5e1;\r\n\t\t\t\t\tborder-radius: 4px; font-size: 12px; outline: none;\r\n\t\t\t\t}\r\n                /* --- Filter Panel Styles --- */\r\n                #ticket-dashboard-container .header-actions {\r\n                    display: flex;\r\n                    align-items: center;\r\n                    gap: 12px;\r\n                    justify-content: flex-end;\r\n                }\r\n                #ticket-dashboard-container .filter-bar-slide {\r\n                    display: flex;\r\n                    align-items: center;\r\n                    gap: 8px;\r\n\r\n                    /* Thiết lập hiệu ứng trượt */\r\n                    max-width: 0;\r\n                    opacity: 0;\r\n                    overflow: hidden; /* Giấu nội dung khi đóng */\r\n                    white-space: nowrap; /* Không xuống dòng */\r\n                    transition: all 0.4s ease-in-out;\r\n                }\r\n\r\n                /* Khi có class .open thì hiện ra */\r\n                #ticket-dashboard-container .filter-bar-slide.open {\r\n                    max-width: 800px; /* Đủ rộng để chứa hết input */\r\n                    opacity: 1;\r\n                    margin-right: 8px; /* Khoảng cách với nút icon */\r\n                }\r\n                #ticket-dashboard-container .filter-group {\r\n                    display: flex;\r\n                    align-items: center;\r\n                    gap: 8px;\r\n                }\r\n                #ticket-dashboard-container .filter-toggle-btn {\r\n                    padding: 0;\r\n                    width: 36px;\r\n                    height: 36px;\r\n                    border: 1px solid #00673b;\r\n                    color: #00673b;\r\n                    border-radius: 6px;\r\n                    cursor: pointer;\r\n                    display: flex; align-items: center; justify-content: center;\r\n                    transition: all 0.2s ease;\r\n                }\r\n                #ticket-dashboard-container .filter-toggle-btn:hover,\r\n                #ticket-dashboard-container .filter-toggle-btn.active {\r\n                    background: #00673b;\r\n                    color: white;\r\n                }\r\n                \r\n                #ticket-dashboard-container .action-buttons-group {\r\n                    display: flex;\r\n                    align-items: center;\r\n                    gap: 12px;\r\n                }\r\n                \r\n                #ticket-dashboard-container .date-range-group {\r\n                    display: flex;\r\n                    align-items: center;\r\n                    gap: 8px;\r\n                    flex-shrink: 0;\r\n                }\r\n\r\n                /* Nút Reset (Icon nhỏ) */\r\n                #ticket-dashboard-container .btn-reset-icon {\r\n                    width: 30px; height: 30px;\r\n                    border: none; background: transparent;\r\n                    color: #94a3b8; cursor: pointer;\r\n                    display: flex; align-items: center; justify-content: center;\r\n                }\r\n                #ticket-dashboard-container .btn-reset-icon:hover { color: #ef4444; }\r\n\r\n                #ticket-dashboard-container .filter-panel {\r\n                    position: absolute;\r\n                    top: calc(100% + 8px);\r\n                    right: 0;\r\n                    border: 1px solid #e2e8f0;\r\n                    border-radius: 8px;\r\n                    box-shadow: 0 10px 25px rgba(0,0,0,0.1);\r\n                    padding: 16px;\r\n                    min-width: 650px;\r\n                    display: none;\r\n              z-index: 1000;\r\n                }\r\n\r\n                #ticket-dashboard-container .filter-panel.open {\r\n                    display: block;\r\n                }\r\n\r\n                #ticket-dashboard-container .filter-content {\r\n                    display: flex;\r\n                    gap: 12px;\r\n                    align-items: center;\r\n                }\r\n\r\n                #ticket-dashboard-container .filter-input,\r\n                #ticket-dashboard-container .filter-select {\r\n                    height: 36px;\r\n                    padding: 0 10px;\r\n                    border: 1px solid #cbd5e1;\r\n                    border-radius: 6px;\r\n                    font-size: 13px;\r\n                    outline: none;\r\n                    line-height: normal;\r\n                    box-sizing: border-box;\r\n                    width: auto; /* Tự động theo nội dung hoặc set cứng bên dưới */\r\n                }\r\n\r\n                #ticket-dashboard-container .filter-select {\r\n                    width: 160px; /* Select box rộng hơn chút để hiển thị tên */\r\n                }\r\n\r\n                #ticket-dashboard-container .filter-input:focus,\r\n                #ticket-dashboard-container .filter-select:focus {\r\n                    border-color: #00673b;\r\n                    box-shadow: 0 0 0 2px rgba(0, 103, 59, 0.1);\r\n                }\r\n                #ticket-dashboard-container .btn-reset-icon {\r\n                    width: 36px;\r\n                    height: 36px;\r\n                    display: flex;\r\n                    align-items: center;\r\n                    justify-content: center;\r\n                    border: 1px solid #e2e8f0;\r\n                    border-radius: 6px;\r\n                    color: #64748b;\r\n                    cursor: pointer;\r\n                    transition: all 0.2s;\r\n                }\r\n                #ticket-dashboard-container .btn-reset-icon:hover {\r\n                    background: #f1f5f9;\r\n                    color: #ef4444;\r\n                    border-color: #cbd5e1;\r\n                }\r\n                #ticket-dashboard-container .filter-input::placeholder {\r\n                    color: #94a3b8;\r\n                    font-size: 13px;\r\n                }\r\n\r\n                #ticket-dashboard-container .filter-actions {\r\n                    display: flex;\r\n                    gap: 8px;\r\n                }\r\n\r\n                #ticket-dashboard-container .filter-btn {\r\n                    padding: 8px 16px;\r\n                    border-radius: 6px;\r\n                    font-size: 13px;\r\n                    font-weight: 600;\r\n                    cursor: pointer;\r\n                    transition: all 0.2s ease;\r\n                    white-space: nowrap;\r\n                }\r\n\r\n                #ticket-dashboard-container .filter-btn.apply {\r\n                    background: #00673b;\r\n                    color: white;\r\n                    border: 1px solid #00673b;\r\n                }\r\n\r\n                #ticket-dashboard-container .filter-btn.apply:hover {\r\n                    background: #005230;\r\n                }\r\n\r\n                #ticket-dashboard-container .filter-btn.reset {\r\n                    color: #64748b;\r\n                    border: 1px solid #cbd5e1;\r\n                }\r\n\r\n                #ticket-dashboard-container .filter-btn.reset:hover {\r\n                    background: #f8fafc;\r\n                }\r\n\r\n                /* --- Chart Legend Styles --- */\r\n                #ticket-dashboard-container .chart-legend {\r\n                    margin-top: 16px;\r\n                    display: flex;\r\n                    flex-wrap: wrap;\r\n                    gap: 12px;\r\n                    justify-content: center;\r\n                }\r\n\r\n                #ticket-dashboard-container .legend-item {\r\n                    display: flex;\r\n                    align-items: center;\r\n                    gap: 6px;\r\n                    font-size: 12px;\r\n                    color: #64748b;\r\n                }\r\n\r\n                #ticket-dashboard-container .legend-color {\r\n\r\n\r\n\r\n\r\n\r\n\r\n                    width: 12px;\r\n                    height: 12px;\r\n                    border-radius: 2px;\r\n                }\r\n                #ticket-dashboard-container .filter-input[type=\"date\"] {\r\n                    width: 137px;\r\n                    display: flex;\r\n                    align-items: center;\r\n                    font-family: inherit;\r\n                }\r\n                #ticket-dashboard-container .filter-input[type=\"date\"]::-webkit-calendar-picker-indicator {\r\n                    cursor: pointer;\r\n                }\r\n\r\n                #ticket-dashboard-container .filter-input[type=\"date\"]:before {\r\n                    content: attr(placeholder);\r\n                    color: #94a3b8;\r\n                    margin-right: 8px;\r\n                }\r\n\r\n                #ticket-dashboard-container .filter-input[type=\"date\"]:focus:before,\r\n                #ticket-dashboard-container .filter-input[type=\"date\"]:valid:before {\r\n                    content: \"\";\r\n                }\r\n                #ticket-dashboard-container .filter-input[type=\"date\"] { width: 136px; }\r\n                #ticket-dashboard-container .filter-select { width: 150px; }\r\n\t\t\t\t/* Responsive */\r\n\t\t\t\t@media (max-width: 1024px) {\r\n\t\t\t\t\t#ticket-dashboard-container .dashboard-layout { grid-template-columns: 1fr; overflow-y: auto; }\r\n\t\t\t\t\t#ticket-dashboard-container .scroll-column { overflow-y: visible; height: auto; }\r\n\t\t\t\t\t#ticket-dashboard-container .stats-grid { grid-template-columns: 1fr 1fr 1fr; }\r\n\t\t\t\t}\r\n\t\t\t\t@media (max-width: 768px) {\r\n                    #ticket-dashboard-container .header-wrapper {\r\n                        padding: 12px 12px 6px 12px;\r\n                    }\r\n                    #ticket-dashboard-container .header-section-ticketDashboard {\r\n                        flex-direction: column;\r\n                        align-items: stretch;\r\n                        gap: 10px;\r\n                        padding: 16px;\r\n                        border-left-width: 4px;\r\n                    }\r\n                    #ticket-dashboard-container .welcome-text {\r\n                        font-size: 20px;\r\n                    }\r\n                    #ticket-dashboard-container .header-actions {\r\n                        width: 100%;\r\n                        flex-direction: column;\r\n                        align-items: stretch;\r\n                        gap: 12px;\r\n                    }\r\n                    \r\n                    #ticket-dashboard-container .action-buttons-group {\r\n                        width: 100%;\r\n                        justify-content: flex-end;\r\n                        gap: 8px;\r\n                        order: 2; /* Đưa xuống dưới */\r\n                    }\r\n                    \r\n                    #ticket-dashboard-container .filter-bar-slide {\r\n                        order: 1; /* Đưa lên trên */\r\n                    }\r\n\r\n                    #ticket-dashboard-container .date-range-group {\r\n                        width: 100%;\r\n                        justify-content: space-between;\r\n                    }\r\n\r\n                    /* Sửa lại bộ lọc trên mobile: Hiển thị gọn gàng hơn */\r\n                    #ticket-dashboard-container .filter-bar-slide {\r\n                        position: relative;\r\n                        display: flex;\r\n                        flex-direction: column; /* Đổi về column để chứa các row */\r\n                        align-items: stretch;\r\n                        width: 100%;\r\n                        gap: 8px;\r\n                        max-height: 0;\r\n                        opacity: 0;\r\n                        margin: 0 !important;\r\n                        padding: 0;\r\n                        overflow: hidden;\r\n                        transition: all 0.3s ease-in-out;\r\n                    }\r\n                    #ticket-dashboard-container .filter-bar-slide.open {\r\n                        max-height: 500px;\r\n                        opacity: 1;\r\n                        padding-top: 10px;\r\n                        border-top: 1px dashed #e2e8f0;\r\n                        margin-top: 10px !important;\r\n                    }\r\n                    \r\n                    #ticket-dashboard-container .filter-input, \r\n                    #ticket-dashboard-container .filter-select { \r\n                        width: 100% !important;\r\n                        min-width: 0;\r\n                        background-color: #f8fafc;\r\n                    }\r\n                    \r\n                    #ticket-dashboard-container .filter-input[type=\"date\"] {\r\n                        flex: 1;\r\n                        width: auto !important;\r\n                    }\r\n                    \r\n                    #ticket-dashboard-container .filter-bar-slide span {\r\n                        display: inline-block; /* Hiện lại dấu gạch ngang */\r\n                    }\r\n\r\n\t\t\t\t\t#ticket-dashboard-container .stats-grid { grid-template-columns: 1fr; gap: 12px; }\r\n\t\t\t\t\t#ticket-dashboard-container .charts-grid { grid-template-columns: 1fr; gap: 16px; }\r\n                    #ticket-dashboard-container .dashboard-layout { padding: 10px 16px; gap: 16px; }\r\n\t\t\t\t}\r\n\t\t\t</style>\r\n\r\n\t\t\t<div id=\"ticket-dashboard-container\">\r\n\t\t\t\t<div class=\"header-wrapper\">\r\n\t\t\t\t\t<div class=\"header-section-ticketDashboard\">\r\n\t\t\t\t\t\t<div class=\"header-content\">\r\n\t\t\t\t\t\t\t<div class=\"welcome-text\">Chào mừng quay trở lại!</div>\r\n\t\t\t\t\t\t\t<div class=\"company-subtext\" id=\"companyName\">Đang tải...</div>\r\n\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div class=\"header-actions\">\r\n\t\t\t\t\t\t\t<div class=\"filter-bar-slide\" id=\"filterBar\">\r\n\t\t\t\t\t\t\t\t<div class=\"date-range-group\">\r\n\t\t\t\t\t\t\t\t\t<input type=\"date\" class=\"filter-input\" id=\"filterFromDate\" onchange=\"onFilterChange()\" title=\"Từ ngày\">\r\n\t\t\t\t\t\t\t\t\t<span style=\"color:#cbd5e1\">-</span>\r\n\t\t\t\t\t\t\t\t\t<input type=\"date\" class=\"filter-input\" id=\"filterToDate\" onchange=\"onFilterChange()\" title=\"Đến ngày\">\r\n\t\t\t\t\t\t\t\t</div>\r\n\r\n\t\t\t\t\t\t\t\t<select class=\"filter-select\" id=\"filterCustomer\" onchange=\"onFilterChange()\">\r\n\t\t\t\t\t\t\t\t\t<option value=\"\">Chọn công ty</option>\r\n\t\t\t\t\t\t\t\t</select>\r\n\r\n\t\t\t\t\t\t\t\t<select class=\"filter-select\" id=\"filterSupport\" onchange=\"onFilterChange()\">\r\n\t\t\t\t\t\t\t\t\t<option value=\"\">Chọn nhân viên</option>\r\n\t\t\t\t\t\t\t\t</select>\r\n\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t<div class=\"action-buttons-group\">\r\n\t\t\t\t\t\t\t\t<button class=\"filter-toggle-btn\" id=\"btnReload\" onclick=\"resetFilter()\" title=\"Tải lại dữ liệu\">\r\n\t\t\t\t\t\t\t\t\t<svg width=\"20\" height=\"20\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\r\n\t\t\t\t\t\t\t\t\t\t<path d=\"M23 4v6h-6\"></path><path d=\"M1 20v-6h6\"></path>\r\n\t\t\t\t\t\t\t\t\t\t<path d=\"M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15\"></path>\r\n\t\t\t\t\t\t\t\t\t</svg>\r\n\t\t\t\t\t\t\t\t</button>\r\n\t\t\t\t\t\t\t\t<button class=\"filter-toggle-btn\" id=\"btnToggleFilter\" onclick=\"toggleFilterBar()\" title=\"Bộ lọc\">\r\n\t\t\t\t\t\t\t\t\t<svg width=\"20\" height=\"20\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\r\n\t\t\t\t\t\t\t\t\t\t<polygon points=\"22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3\"></polygon>\r\n\t\t\t\t\t\t\t\t\t</svg>\r\n\t\t\t\t\t\t\t\t</button>\r\n\t\t\t\t\r\n\t\t\t\t\t\t\t\t<button class=\"create-ticket-btn\" onclick=\"window.openParadiseForm('sp_Ticket_HistoryControl', { LoginID: UserID, LanguageID: 'VN'})\">\r\n\t\t\t\t\t\t\t\t\t<svg width=\"14\" height=\"14\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\r\n\t\t\t\t\t\t\t\t\t\t<line x1=\"12\" y1=\"5\" x2=\"12\" y2=\"19\"></line>\r\n\t\t\t\t\t\t\t\t\t\t<line x1=\"5\" y1=\"12\" x2=\"19\" y2=\"12\"></line>\r\n\t\t\t\t\t\t\t\t\t</svg>\r\n\t\t\t\t\t\t\t\t\t<span>Tạo yêu cầu</span>\r\n\t\t\t\t\t\t\t\t</button>\r\n\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t</div>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t</div>\r\n\r\n    <div class=\"dashboard-layout\">\r\n\r\n        <div class=\"main-column scroll-column\">\r\n\r\n            <div class=\"stats-grid\">\r\n                <div class=\"stat-card total\">\r\n                    <div class=\"stat-main-content\">\r\n                        <div class=\"stat-icon\" style=\"color: #10b981; background: #ecfdf5; border-color: #d1fae5;\">\r\n                            <svg viewBox=\"0 0 24 24\"><path d=\"M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2\"></path><circle cx=\"9\" cy=\"7\" r=\"4\"></circle><path d=\"M23 21v-2a4 4 0 0 0-3-3.87\"></path><path d=\"M16 3.13a4 4 0 0 1 0 7.75\"></path></svg>\r\n                        </div>\r\n                        <div class=\"stat-text-group\">\r\n                            <div class=\"stat-label\">Tổng ticket</div>\r\n                            <div class=\"stat-value\" id=\"lbl_TotalTickets\">0</div>\r\n                        </div>\r\n                    </div>\r\n                </div>\r\n\r\n                <div class=\"stat-card new\">\r\n                    <div class=\"stat-main-content\">\r\n                        <div class=\"stat-icon\" style=\"color: #3b82f6; background: #eff6ff; border-color: #dbeafe;\">\r\n                            <svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z\"></path><polyline points=\"14 2 14 8 20 8\"></polyline><line x1=\"16\" y1=\"13\" x2=\"8\" y2=\"13\"></line><line x1=\"16\" y1=\"17\" x2=\"8\" y2=\"17\"></line><polyline points=\"10 9 9 9 8 9\"></polyline></svg>\r\n                        </div>\r\n                        <div class=\"stat-text-group\">\r\n                            <div class=\"stat-label\">Đang xử lý</div>\r\n                            <div class=\"stat-value\" id=\"lbl_ProcessingTickets\">0</div>\r\n                        </div>\r\n                    </div>\r\n                </div>\r\n\r\n                <div class=\"stat-card onleave\">\r\n                    <div class=\"stat-main-content\">\r\n                        <div class=\"stat-icon\" style=\"color: #f59e0b; background: #fffbeb; border-color: #fef3c7;\">\r\n                            <svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><circle cx=\"12\" cy=\"12\" r=\"10\"></circle><polyline points=\"12 6 12 12 16 14\"></polyline></svg>\r\n                        </div>\r\n                        <div class=\"stat-text-group\">\r\n                            <div class=\"stat-label\">Hoàn thành</div>\r\n                            <div class=\"stat-value\" id=\"lbl_CompletedTickets\">0</div>\r\n                        </div>\r\n                    </div>\r\n                </div>\r\n            </div>\r\n\r\n            <div class=\"charts-grid\">\r\n                <div class=\"card-box\">\r\n                    <div class=\"card-title\">\r\n                        <span>Số lượng ticket theo tháng</span>\r\n                        <select><option>2026</option></select>\r\n                    </div>\r\n                    <canvas id=\"barChart\" class=\"chart-canvas\"></canvas>\r\n                </div>\r\n                <div class=\"card-box\">\r\n                    <div class=\"card-title\">\r\n                        <span>Tỷ lệ theo trạng thái</span>\r\n                        <div style=\"cursor: pointer;\">\r\n                            <svg width=\"20\" height=\"20\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><circle cx=\"12\" cy=\"12\" r=\"1\"></circle><circle cx=\"12\" cy=\"5\" r=\"1\"></circle><circle cx=\"12\" cy=\"19\" r=\"1\"></circle></svg>\r\n          </div>\r\n                    </div>\r\n                    <canvas id=\"donutChart\" class=\"chart-canvas\"></canvas>\r\n                    <div class=\"chart-legend\" id=\"donutLegend\"></div>\r\n                </div>\r\n            </div>\r\n\r\n            <div class=\"charts-grid\">\r\n                <div class=\"card-box\" id=\"list_priority_stats\">\r\n                    <div class=\"card-title\">Tỷ lệ theo mức độ</div>\r\n                    </div>\r\n\r\n                <div class=\"card-box\" id=\"list_dept_stats\">\r\n                    <div class=\"card-title\">Theo phòng ban</div>\r\n                    </div>\r\n            </div>\r\n        </div>\r\n\r\n        <div class=\"sidebar-column scroll-column\">\r\n\r\n            <div class=\"card-box\" id=\"list_recent_tickets\">\r\n                <div class=\"card-title\">\r\n                    <span>Ticket Mới Nhất</span>\r\n                </div>\r\n                </div>\r\n\r\n            <div class=\"card-box\" id=\"list_high_priority\">\r\n                <div class=\"card-title\" style=\"color:#dc2626\">Ticket Ưu Tiên Cao</div>\r\n                </div>\r\n        </div>\r\n    </div>\r\n</div>\r\n\r\n\t\t\t<script>\r\n    (function() {\r\n        // Hàm mở form linh hoạt hỗ trợ Mobile App và Web\r\n        window.openParadiseForm = function(formName, params) {\r\n            var _loginID = (typeof LoginID !== 'undefined') ? LoginID : 0;\r\n            var _langID = (typeof LanguageID !== 'undefined') ? LanguageID : 'VN';\r\n            \r\n            // Merge mặc định LoginID/LanguageID nếu chưa có\r\n            var finalParams = Object.assign({ LoginID: _loginID, LanguageID: _langID }, params || {});\r\n\r\n            if (typeof getMobileOperatingSystem === \"function\" && [\"Android\", \"iOS\"].includes(getMobileOperatingSystem())) {\r\n                OpenFormParamMobile(formName, finalParams);\r\n            } else {\r\n                openFormParam(formName, finalParams);\r\n            }\r\n        }\r\n        \r\n        // Giữ lại alias cũ để không hỏng code renderTicketList đã sửa ở lượt trước\r\n        window.openDetailTicketID = function(TicketID) {\r\n            window.openParadiseForm('sp_Ticket_Message', { TicketID: TicketID });\r\n        }\r\n    \r\n        var filterState = {\r\n            fromDate: null,\r\n            toDate: null,\r\n            customerID: null,\r\n            supportID: null\r\n        };\r\n        window.toggleFilterBar = function() {\r\n            var bar = document.getElementById('filterBar');\r\n            var btn = document.getElementById('btnToggleFilter');\r\n\r\n            // Toggle class open để kích hoạt CSS transition\r\n            bar.classList.toggle('open');\r\n            btn.classList.toggle('active');\r\n        }\r\n        function initDefaultDateRange() {\r\n            var today = new Date();\r\n            var firstDay = new Date(today.getFullYear(), today.getMonth(), 1);\r\n            var lastDay = new Date(today.getFullYear(), today.getMonth() + 1, 0);\r\n\r\n            // Format: YYYY-MM-DD\r\n            var firstDayStr = firstDay.getFullYear() + '-' +\r\n                              String(firstDay.getMonth() + 1).padStart(2, '0') + '-' +\r\n                              String(firstDay.getDate()).padStart(2, '0');\r\n\r\n            var lastDayStr = lastDay.getFullYear() + '-' +\r\n                             String(lastDay.getMonth() + 1).padStart(2, '0') + '-' +\r\n                             String(lastDay.getDate()).padStart(2, '0');\r\n\r\n            document.getElementById('filterFromDate').value = firstDayStr;\r\n            document.getElementById('filterToDate').value = lastDayStr;\r\n\r\n            // Set vào filterState\r\n            filterState.fromDate = firstDayStr;\r\n            filterState.toDate = lastDayStr;\r\n       }\r\n\r\n        window.toggleFilterPanel = function() {\r\n            var panel = document.getElementById('filterPanel');\r\n   var btn = document.getElementById('filterToggleBtn');\r\n            panel.classList.toggle('open');\r\n            btn.classList.toggle('active');\r\n        }\r\n\r\n        window.applyFilter = function() {\r\n            filterState.fromDate = document.getElementById('filterFromDate').value;\r\n            filterState.toDate = document.getElementById('filterToDate').value;\r\n            filterState.customerID = document.getElementById('filterCustomer').value;\r\n            filterState.supportID = document.getElementById('filterSupport').value;\r\n\r\n            loadDashboardDataTicket();\r\n        }\r\n       window.onFilterChange = function() {\r\n            filterState.fromDate = document.getElementById('filterFromDate').value;\r\n            filterState.toDate = document.getElementById('filterToDate').value;\r\n            filterState.customerID = document.getElementById('filterCustomer').value;\r\n            filterState.supportID = document.getElementById('filterSupport').value;\r\n\r\n            loadDashboardDataTicket();\r\n      }\r\n \r\n        // 3. Hàm Reset\r\n        window.resetFilter = function() {\r\n            initDefaultDateRange();\r\n            document.getElementById('filterCustomer').value = '';\r\ndocument.getElementById('filterSupport').value = '';\r\n            window.onFilterChange();\r\n        }\r\n        function drawBarChart(labels, dataValues) {\r\n            // Đảm bảo ID khớp với HTML\r\n            var canvas = document.getElementById('barChart');\r\n            if (!canvas) {\r\n                console.error(\"Không tìm thấy canvas #barChart\");\r\n                return;\r\n            }\r\n\r\n            var ctx = canvas.getContext('2d');\r\n            // Reset canvas để vẽ lại\r\n            var width = canvas.width = canvas.offsetWidth;\r\n            var height = canvas.height = 250; // Set chiều cao cố định\r\n            ctx.clearRect(0, 0, width, height);\r\n\r\n            var maxVal = Math.max.apply(null, dataValues);\r\n            if (maxVal < 5) maxVal = 5;\r\n\r\n            var padding = 40;\r\n            var bottomPadding = 30;\r\n            var chartW = width - (padding * 2);\r\n            var chartH = height - padding - bottomPadding;\r\n\r\n            // Tính toán độ rộng cột (12 tháng)\r\n            var gap = 10;\r\n            var barWidth = (chartW / 12) - gap;\r\n\r\n            // 1. Vẽ đường kẻ ngang (Grid)\r\n            ctx.strokeStyle = \"#f1f5f9\";\r\n            ctx.lineWidth = 1;\r\n            ctx.beginPath();\r\n            for(var i=0; i<=5; i++){\r\n                var y = padding + (chartH/5)*i;\r\n                ctx.moveTo(padding, y);\r\n                ctx.lineTo(width - padding, y);\r\n\r\n                // Vẽ số trục Y\r\n                ctx.fillStyle = \"#94a3b8\";\r\n                ctx.font = \"10px sans-serif\";\r\n                ctx.textAlign = \"right\";\r\n                // Viết số\r\n                var valY = Math.round(maxVal - (maxVal/5)*i);\r\n                ctx.fillText(valY, padding - 5, y + 4);\r\n            }\r\n            ctx.stroke();\r\n\r\n            // 2. Vẽ Cột và Label\r\n            dataValues.forEach(function(val, i) {\r\n                // Tọa độ X\r\n                var x = padding + (gap/2) + (barWidth + gap) * i;\r\n\r\n                // Chiều cao cột\r\n                var barHeight = (val / maxVal) * chartH;\r\n                var y = (padding + chartH) - barHeight;\r\n\r\n                // Vẽ cột\r\n                if (val >= 0) {\r\n                    ctx.fillStyle = \"#3b82f6\"; // Màu xanh\r\n                    // Dùng fillRect thay cho roundRect để tương thích mọi trình duyệt\r\n                    ctx.fillRect(x, y, barWidth, barHeight);\r\n\r\n                    // Vẽ số liệu trên đỉnh cột (Nếu > 0)\r\n                    if (val > 0) {\r\n                        ctx.fillStyle = \"#1e293b\";\r\n                        ctx.font = \"bold 11px sans-serif\";\r\n                        ctx.textAlign = \"center\";\r\n                        ctx.fillText(val, x + barWidth/2, y - 5);\r\n                    }\r\n }\r\n\r\n\r\n                // Vẽ Label tháng (Trục X)\r\n                ctx.fillStyle = \"#64748b\";\r\n                ctx.font = \"11px sans-serif\";\r\n                ctx.textAlign = \"center\";\r\n                // labels[i] đang là \"Tháng 1\", \"Tháng 2\"... lấy số thôi\r\n                var labelText = (i + 1);\r\n                ctx.fillText(\"T\" + labelText, x + barWidth/2, height - 10);\r\n            });\r\n        }\r\n\r\n        // --- 2. Hàm vẽ Donut Chart ---\r\n        function drawDonutChart(dataItems) {\r\n            const canvas = document.getElementById('donutChart');\r\n            if (!canvas) return;\r\n            const ctx = canvas.getContext('2d');\r\n            const width = canvas.width = canvas.offsetWidth * 2;\r\n            const height = canvas.height = 500;\r\n            ctx.clearRect(0, 0, width, height);\r\n\r\n            const cx = width/2, cy = height/2;\r\n            const r = Math.min(width, height)/3;\r\n            let start = -Math.PI/2;\r\n            let total = dataItems.reduce((sum, item) => sum + item.Total, 0);\r\n            const colors = [\"#3b82f6\", \"#f97316\", \"#10b981\", \"#6366f1\", \"#ef4444\"];\r\n\r\n            dataItems.forEach((item, index) => {\r\n                let p = total > 0 ? item.Total / total : 0;\r\n                let sliceAngle = p * Math.PI * 2;\r\n                let color = colors[index % colors.length];\r\n                ctx.beginPath(); ctx.moveTo(cx, cy); ctx.arc(cx, cy, r, start, start + sliceAngle);\r\n                ctx.fillStyle = color; ctx.fill();\r\n                start += sliceAngle;\r\n            });\r\n\r\n            ctx.beginPath(); ctx.arc(cx, cy, r*0.7, 0, Math.PI*2); ctx.fillStyle = \"white\"; ctx.fill();\r\n\r\n            if (dataItems.length > 0 && total > 0) {\r\n                 let maxItem = dataItems.reduce((prev, current) => (prev.Total > current.Total) ? prev : current);\r\n                 let maxPercent = Math.round((maxItem.Total / total) * 100) + \"%\";\r\n                 ctx.fillStyle = \"#1e293b\"; ctx.font = \"bold 40px sans-serif\"; ctx.textAlign = \"center\"; ctx.textBaseline = \"middle\";\r\n                 ctx.fillText(maxPercent, cx, cy);\r\n            }\r\n            var legendContainer = document.getElementById('donutLegend');\r\n            if (legendContainer && dataItems.length > 0) {\r\n                var legendHTML = '';\r\n                dataItems.forEach((item, index) => {\r\n                    var color = colors[index % colors.length];\r\n                    var percent = total > 0 ? Math.round((item.Total / total) * 100) : 0;\r\n                    legendHTML += `\r\n                        <div class=\"legend-item\">\r\n                            <div class=\"legend-color\" style=\"background: ${color}\"></div>\r\n                            <span>${item.StatusName}: ${item.Total} (${percent}%)</span>\r\n                        </div>\r\n                    `;\r\n                });\r\n                legendContainer.innerHTML = legendHTML;\r\n            }\r\n        }\r\n        function loadFilterOptions() {\r\n            var _loginID = (typeof LoginID !== 'undefined') ? LoginID : 0;\r\n            var _langID = (typeof LanguageID !== 'undefined') ? LanguageID : 'VN';\r\n\r\n            // Load Customers\r\n            AjaxHPAParadise({\r\n                data: {\r\n                    name: \"sp_getCustomerListForFilter\",\r\n                    param: [\"LoginID\", _loginID, \"LanguageID\", _langID]\r\n                },\r\n                success: function (res) {\r\n                    try {\r\n                        var response = (typeof res === \"string\") ? JSON.parse(res) : res;\r\n                        var select = document.getElementById('filterCustomer');\r\n                        if (response.data && response.data[0]) {\r\n                            response.data[0].forEach(function(item) {\r\n                                var option = document.createElement('option');\r\n                                option.value = item.CustomerID;\r\n                                option.text = item.CustomerName;\r\n select.add(option);\r\n                            });\r\n   }\r\n                    } catch(e) {\r\n                        console.error(\"Load Customer Error:\", e);\r\n                    }\r\n                }\r\n            });\r\n\r\n            // Load Support Staff\r\n            AjaxHPAParadise({\r\n                data: {\r\n                    name: \"sp_getSupportStaffListForFilter\",\r\n                    param: [\"LoginID\", _loginID, \"LanguageID\", _langID]\r\n                },\r\n                success: function (res) {\r\n                    try {\r\n                        var response = (typeof res === \"string\") ? JSON.parse(res) : res;\r\n                        var select = document.getElementById('filterSupport');\r\n                        if (response.data && response.data[0]) {\r\n                            response.data[0].forEach(function(item) {\r\n                                var option = document.createElement('option');\r\n                                option.value = item.StaffID;\r\n                                option.text = item.StaffName;\r\n                                select.add(option);\r\n\r\n                            });\r\n                        }\r\n                    } catch(e) {\r\n                        console.error(\"Load Support Staff Error:\", e);\r\n  }\r\n                }\r\n      });\r\n        }\r\n        // --- 3. Hàm render danh sách Stat ---\r\n        function renderStatList(containerId, title, data, labelField, valueField, subValue) {\r\n            var container = document.getElementById(containerId);\r\n            if (!container) return;\r\n            var html = '<div class=\"card-title\">' + title + '</div>';\r\n            if (!data || data.length === 0) {\r\n                html += '<div style=\"padding:10px;text-align:center;color:#999;font-size:12px\">Không có dữ liệu</div>';\r\n            } else {\r\n                data.forEach(function(item) {\r\n                    var valStr = item[valueField];\r\n                    if (subValue && item[subValue] > 0) {\r\n                         var pct = Math.round((item[valueField] / item[subValue]) * 100);\r\n              valStr += ' (' + pct + '%)';\r\n                    }\r\n                    html += `<div class=\"info-item\"><span class=\"info-label\">${item[labelField]}</span><span class=\"info-value\">${valStr}</span></div>`;\r\n                });\r\n            }\r\n            container.innerHTML = html;\r\n        }\r\n\r\n        // --- 4. Hàm render Ticket List (Đã sửa onclick và truyền ID) ---\r\n        function renderTicketList(containerId, title, data, isHighPriority, currentLoginID) {\r\n            var container = document.getElementById(containerId);\r\n            if (!container) return;\r\n\r\n            var titleStyle = isHighPriority ? 'style=\"color:#dc2626\"' : '';\r\n            var html = `<div class=\"card-title\" ${titleStyle}>\r\n                            <span>${title}</span>\r\n\r\n                        </div>`;\r\n\r\n            if (!data || data.length === 0) {\r\n                html += '<div style=\"padding:15px;text-align:center;color:#999;font-size:12px\">Không có dữ liệu</div>';\r\n            } else {\r\n                var displayData = data.slice(0, 3);\r\n                displayData.forEach(function(item) {\r\n                    var avatarStyle = isHighPriority\r\n                        ? 'color:#dc2626; border-color: #fecaca; background: #fef2f2;'\r\n                        : 'background: white; border-color: #e2e8f0; color: #64748b;';\r\n\r\n                    var icon = isHighPriority\r\n                        ? '<svg width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><circle cx=\"12\" cy=\"12\" r=\"10\"></circle><line x1=\"12\" y1=\"8\" x2=\"12\" y2=\"12\"></line><line x1=\"12\" y1=\"16\" x2=\"12.01\" y2=\"16\"></line></svg>'\r\n                        : '<svg width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z\"></path><polyline points=\"14 2 14 8 20 8\"></polyline><line x1=\"16\" y1=\"13\" x2=\"8\" y2=\"13\"></line><line x1=\"16\" y1=\"17\" x2=\"8\" y2=\"17\"></line><polyline points=\"10 9 9 9 8 9\"></polyline></svg>';\r\n\r\n                    var dateObj = new Date(item.CreatedDate);\r\n                    var dateStr = dateObj.getDate() + '/' + (dateObj.getMonth() + 1);\r\n\r\n                    // SỬA: Truyền TicketID dạng primitive thay vì object để openFormParam có thể map giá trị đúng\r\n                    html += `\r\n                    <div class=\"user-item\"\r\n                         style=\"cursor: pointer;\"\r\n                         onclick=\"window.openParadiseForm('sp_Ticket_Message', { TicketID: ${item.TicketID} })\">\r\n                        <div class=\"user-avatar\" style=\"${avatarStyle}\">${icon}</div>\r\n                        <div class=\"user-info\">\r\n                            <div class=\"ticket-title-text\" title=\"${item.ShortDescription}\">${item.ShortDescription}</div>\r\n                            <div class=\"ticket-sub-row\">\r\n                                <span>${item.AssignedTo || 'Chưa chỉ định'}</span>\r\n                                <span class=\"ticket-sub-divider\">|</span>\r\n                        <span>${dateStr}</span>\r\n            </div>\r\n                        </div>\r\n                        ${isHighPriority ? '<span class=\"status-badge\" style=\"color:#dc2626; border-color: #fecaca;\">Cao</span>' : ''}\r\n                    </div>`;\r\n                });\r\n            }\r\n            container.innerHTML = html;\r\n        }\r\n\r\n        // --- MAIN FUNCTION ---\r\n        window.loadDashboardDataTicket = function() {\r\n            console.log(123);\r\n            var _loginID = (typeof LoginID !== 'undefined') ? LoginID : 0;\r\n            var _langID = (typeof LanguageID !== 'undefined') ? LanguageID : 'VN';\r\n\r\n            AjaxHPAParadise({\r\n                data: {\r\n                    name: \"sp_getTicketListDashboard\",\r\n                    param: [\r\n                        \"LoginID\", _loginID,\r\n                        \"LanguageID\", _langID,\r\n                        \"FromDate\", filterState.fromDate || '',\r\n                        \"ToDate\", filterState.toDate || '',\r\n                        \"CustomerID\", filterState.customerID || 0,\r\n                        \"SupportStaffID\", filterState.supportID || 0\r\n                    ]\r\n                },\r\n                success: function (res) {\r\n                    console.log('[Dashboard] ✅ API trả về response raw:', res);\r\n                    try {\r\n                        var response = (typeof res === \"string\") ? JSON.parse(res) : res;\r\n                        console.log(response);\r\n                        if (!response.data || response.data.length === 0) return;\r\n\r\n                        // 1. Stats\r\n                        var stats = response.data[0][0];\r\n                        if (stats) {\r\n                            if(document.getElementById(\"lbl_TotalTickets\")) document.getElementById(\"lbl_TotalTickets\").innerText = stats.TotalTickets;\r\n                            if(document.getElementById(\"lbl_ProcessingTickets\")) document.getElementById(\"lbl_ProcessingTickets\").innerText = stats.ProcessingTickets;\r\n                            if(document.getElementById(\"lbl_CompletedTickets\")) document.getElementById(\"lbl_CompletedTickets\").innerText = stats.CompletedTickets;\r\n                        }\r\n\r\n                        // 2. Charts\r\n                        var chartData = response.data[1];\r\n                        console.log(\"chartData\", chartData)\r\n                        if (chartData) {\r\n      // SQL đã trả về đủ 12 tháng nên không cần reverse() hay xử lý mảng\r\n          // Đảm bảo SQL trả về thứ tự tháng 1 -> 12\r\n                            var labels = chartData.map(d => d.Label);\r\n                            var values = chartData.map(d => d.Total);\r\n\r\n                            // Gọi hàm vẽ biểu đồ cột thay vì lineChart\r\n                            drawBarChart(labels, values);\r\n                        }\r\n\r\n                        var donutData = response.data[2];\r\n                        if (donutData) drawDonutChart(donutData);\r\n\r\n                        // 3. Lists\r\n                        var totalT = stats ? stats.TotalTickets : 0;\r\n                        if(response.data[3]) {\r\n                            var priorityData = response.data[3].map(item => ({...item, TotalAll: totalT}));\r\n                            renderStatList(\"list_priority_stats\", \"Tỷ lệ theo mức độ\", priorityData, \"LevelName\", \"Total\", \"TotalAll\");\r\n                        }\r\n                        if(response.data[4]) {\r\n                            var deptData = response.data[4].map(item => ({...item, TotalAll: totalT}));\r\n                  renderStatList(\"list_dept_stats\", \"Theo phòng ban\", deptData, \"DepartmentName\", \"Total\", \"TotalAll\");\r\n                        }\r\n\r\n                        // 4. Ticket Lists (SỬA: Thêm kiểm tra null || [])\r\n                        var listData = response.data[5] || [];\r\n\r\n                        // Render Ticket Mới Nhất\r\n                        renderTicketList(\"list_recent_tickets\", \"Ticket Mới Nhất\", listData, false, _loginID);\r\n\r\n                        // Render Ticket Ưu Tiên Cao (Lọc an toàn)\r\n                        var highPriorityData = listData.filter(x => x.LevelName && (x.LevelName.includes(\"Cao\") || x.LevelName.includes(\"High\")));\r\n                        renderTicketList(\"list_high_priority\", \"Ticket Ưu Tiên Cao\", highPriorityData, true, _loginID);\r\n\r\n                        if(response.data[6] && response.data[6].length > 0) {\r\n                            var companyName = response.data[6][0][Object.keys(response.data[6][0])[0]]; // Lấy giá trị cột đầu tiên\r\n                            if(document.getElementById(\"companyName\")) {\r\n                                document.getElementById(\"companyName\").innerText = companyName || 'Paradise HR';\r\n                            }\r\n                        }\r\n                    } catch (e) {\r\n                        console.error(\"Dashboard Error:\", e);\r\n                    }\r\n                }\r\n            });\r\n        }\r\n        initDefaultDateRange();\r\n        loadFilterOptions();\r\n        loadDashboardDataTicket();\r\n\r\n        window.addEventListener(\"resize\", function() { loadDashboardDataTicket(); });\r\n    })();\r\n</script>\r\n\t\t</div>\r\n\t",
+              "bytes_filename": "sp_dashboard_home_new_customer.html"
+            }
+          ]
+        ],
+        "dataSchema": [
+          [
+            {
+              "name": "bytes",
+              "type": "System.String"
+            },
+            {
+              "name": "bytes_filename",
+              "type": "System.String"
+            }
+          ]
+        ]
+      },
+      "timestamp": "2026-10-16T02:34:39.786Z"
+    },
+    {
+      "type": "request",
+      "url": "https://paradisehrm.com/Tai3/hpa/paradise2",
+      "method": "POST",
+      "resourceType": "fetch",
+      "postData": {
+        "content": "02xY5O3N3CIcOd20zC0/ATOZWT00Qk6gu0O5yKQbIIEcfCdU/s8ytsWyvFSnIpV6f8iCZwbnFviSY4mViS/reIAe350jXqD0APv3lxYIsZfMljF7zN3npoBJDKSrsf+kQiTqIMeqNrzomX8S1Hyvo8f4G0HCrlZ2CENcB73W1/ouzGTW2LxDmj09ndA+d4bRzzvT0NnRWZ1Ir9wN7Hw/OfMnoKwueYvrxU+iDKj+L/yqNnfWSvukUMkoQUcOLXvZXqwNaQejbbIQ/a1U6Vw5o4WOcQNdtWvUMoywKaeyJOeQbdA/sMscrFhywDm4K8azwmiwcJjYTc6oADTUV4o4Ug9wqHCgpAxo0mliOzikrH9j51SMTDMGng==",
+        "paradiseType": "2"
+      },
+      "timestamp": "2026-10-16T02:34:39.800Z"
+    },
+    {
+      "type": "request",
+      "url": "https://paradisehrm.com/Tai3/hpa/paradise2",
+      "method": "POST",
+      "resourceType": "fetch",
+      "postData": {
+        "content": "02xY5O3N3CIcOd20zC0/ATOZWT00Qk6gu0O5yKQbIIEcfCdU/s8ytsWyvFSnIpV6f8iCZwbnFviSY4mViS/reIAe350jXqD0APv3lxYIsZfMljF7zN3npoBJDKSrsf+kQiTqIMeqNrzomX8S1Hyvo8f4G0HCrlZ2CENcB73W1/ouzGTW2LxDmj09ndA+d4bRh3UVaPwPXv1rgQlmFlnRXpCnuznQsF8+gET9MYKHY6YCnewcFXUtzAESD5sah7NDX3rVieVuWXCQbdA/sMscrDvO41DIzWLd",
+        "paradiseType": "2"
+      },
+      "timestamp": "2026-10-16T02:34:39.801Z"
+    },
+    {
+      "type": "request",
+      "url": "https://paradisehrm.com/Tai3/hpa/paradise2",
+      "method": "POST",
+      "resourceType": "fetch",
+      "postData": {
+        "content": "02xY5O3N3CIcOd20zC0/ATOZWT00Qk6gu0O5yKQbIIEcfCdU/s8ytsWyvFSnIpV6f8iCZwbnFviSY4mViS/reIAe350jXqD0APv3lxYIsZfMljF7zN3npoBJDKSrsf+kQiTqIMeqNrzomX8S1Hyvo8f4G0HCrlZ2CENcB73W1/ouzGTW2LxDmj09ndA+d4bRlDZyEqMGsv21eijN2e7wAgZHkauX4eBf/Yu5lL4T+2839rPG+pYlQKLuGmq7MC7Kl4TNkNuS9Ziffyh1PZht/MvBvomXwqOzvJ/RKZqHWwU=",
+        "paradiseType": "2"
+      },
+      "timestamp": "2026-10-16T02:34:39.801Z"
+    },
+    {
+      "type": "request",
+      "url": "https://paradisehrm.com/Tai3/hpa/paradise2",
+      "method": "POST",
+      "resourceType": "fetch",
+      "postData": {
+        "content": "02xY5O3N3CIcOd20zC0/ATOZWT00Qk6gu0O5yKQbIIEcfCdU/s8ytsWyvFSnIpV6f8iCZwbnFviSY4mViS/reIAe350jXqD0APv3lxYIsZfMljF7zN3npoBJDKSrsf+kQiTqIMeqNrzomX8S1Hyvo8f4G0HCrlZ2CENcB73W1/ouzGTW2LxDmj09ndA+d4bRXlzu2lVbXFnL1x51Ifrcf1GfrhmJftsUZLJTFLHcbVUED8+Kb2SJncFXeFF1Mp3nlUYEcOjI4SAElpaXJ/HF8Yn6nIexv/3Ng9/aMcCNDHSKbMexcLQTec1WehVFTcoNcY6Zwze5iOxE1Bswc8Ty0IPqVGPlush2LqUcg3MXRZSAKnf2anyP71aSFMf3BietAAKp6eHBMa8=",
+        "paradiseType": "2"
+      },
+      "timestamp": "2026-10-16T02:34:39.823Z"
+    },
+    {
+      "type": "response",
+      "url": "https://paradisehrm.com/Tai3/api/hpa/paradise?&name=paradisepublic&param=[%22paradisepublic%22,%22sp_dashboard_home_new_customer%22,%22LanguageID%22,%22VN%22,%22ParadiseVersion%22,2115056208]&user=paradisepublic&password=3C9909AFEC25354D551DAE21590BB26E38D53F2173B8D3DC3EEE4C047E7AB1C1EB8B85103E3BE7BA613B31BB5C9C36214DC9F14A42FD7A2FDB84856BCA5C44C2&_cb=VN_2115056208",
+      "status": 200,
+      "responseBody": {
+        "result": "success",
+        "reason": "",
+        "data": [
+          [
+            {
+              "bytes": "\r\n\t\t\t<style>\r\n\t\t\t\t/* --- Cấu trúc Layout chính --- */\r\n\t\t\t\t#ticket-dashboard-container {\r\n\t\t\t\t\tfont-family: -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, sans-serif;\r\n\t\t\t\t\twidth: 100%;\r\n\t\t\t\t\theight: 100vh;\r\n\t\t\t\t\tdisplay: flex;\r\n\t\t\t\t\tflex-direction: column;\r\n\t\t\t\t\toverflow: hidden;\r\n\t\t\t\t\tbackground-color: transparent;\r\n\t\t\t\t}\r\n\t\t\t\t\r\n\t\t\t\t#ticket-dashboard-container *,\r\n\t\t\t\t#ticket-dashboard-container *:before,\r\n\t\t\t\t#ticket-dashboard-container *:after {\r\n\t\t\t\t\tbox-sizing: border-box;\r\n\t\t\t\t}\r\n\r\n\t\t\t\t/* --- Header --- */\r\n\t\t\t\t#ticket-dashboard-container .header-wrapper {\r\n\t\t\t\t\tflex: 0 0 auto;\r\n\t\t\t\t\tpadding: 20px 24px 10px 24px;\r\n\t\t\t\t\tz-index: 10;\r\n\t\t\t\t}\r\n\r\n\t\t\t\t#ticket-dashboard-container .header-section-ticketDashboard {\r\n\t\t\t\t\tdisplay: flex;\r\n\t\t\t\t\tjustify-content: space-between;\r\n\t\t\t\t\talign-items: center;\r\n\t\t\t\t\tpadding: 12px 24px; /* Giảm padding một chút cho gọn */\r\n\t\t\t\t\tborder-radius: 8px;\r\n\t\t\t\t\tborder: 1px solid #e2e8f0;\r\n                    border-left: 5px solid #00673b; /* Highlight viền trái */\r\n\t\t\t\t}\r\n\r\n\t\t\t\t/* Group text bên trái header */\r\n\t\t\t\t#ticket-dashboard-container .header-content {\r\n\t\t\t\t\tdisplay: flex;\r\n\t\t\t\t\tflex-direction: column;\r\n\t\t\t\t\tgap: 2px;\r\n\t\t\t\t}\r\n\r\n\t\t\t\t#ticket-dashboard-container .welcome-text {\r\n                    font-size: 24px; /* Tăng cỡ chữ */\r\n                    font-weight: 800; /* Tăng độ đậm */\r\n                    color: #00673b;\r\n                    text-shadow: 0px 1px 2px rgba(0,0,0,0.1); /* Thêm bóng chữ nhẹ cho nổi */\r\n                    margin-bottom: 4px; /* Thêm khoảng cách */\r\n                }\r\n\r\n                #ticket-dashboard-container .company-subtext {\r\n                    font-size: 14px;\r\n                    font-weight: 600;\r\n                    color: #4b5563; /* Màu xám đậm hơn chút để dễ đọc */\r\n                    text-transform: uppercase;\r\n                    letter-spacing: 1px; /* Tăng khoảng cách chữ cho sang */\r\n                }\r\n\r\n\t\t\t\t#ticket-dashboard-container .create-ticket-btn {\r\n\t\t\t\t\tpadding: 10px 20px;\r\n\t\t\t\t\tborder: 1px solid #00673b; /* Đổi viền theo màu chủ đạo luôn cho đồng bộ */\r\n\t\t\t\t\t\r\n\t\t\t\t\tcolor: #00673b;\r\n\t\t\t\t\tborder-radius: 6px;\r\n\t\t\t\t\tcursor: pointer;\r\n\t\t\t\t\tfont-size: 14px;\r\n\t\t\t\t\tfont-weight: 600;\r\n\t\t\t\t\tdisplay: flex;\r\n\t\t\t\t\talign-items: center;\r\n\t\t\t\t\tgap: 8px;\r\n\t\t\t\t\ttransition: all 0.2s ease;\r\n\t\t\t\t}\r\n\t\t\t\t#ticket-dashboard-container .create-ticket-btn:hover {\r\n\t\t\t\t\tbackground: #f0fdf4; /* Hover màu xanh lá nhạt */\r\n\t\t\t\t}\r\n\r\n\t\t\t\t/* --- Layout 2 cột --- */\r\n\t\t\t\t#ticket-dashboard-container .dashboard-layout {\r\n\t\t\t\t\tflex: 1;\r\n\t\t\t\t\tdisplay: grid;\r\n\t\t\t\t\tgrid-template-columns: 1fr 400px;\r\n\t\t\t\t\tgap: 24px;\r\n\t\t\t\t\tpadding: 10px 24px 20px 24px;\r\n\t\t\t\t\toverflow: hidden;\r\n\t\t\t\t\tmin-height: 0;\r\n\t\t\t\t}\r\n\r\n\t\t\t\t#ticket-dashboard-container .scroll-column {\r\n\t\t\t\t\theight: 100%;\r\n\t\t\t\t\toverflow-y: auto;\r\n\t\t\t\t\tpadding-right: 4px;\r\n\t\t\t\t\tpadding-bottom: 20px;\r\n\t\t\t\t\t-ms-overflow-style: none;\r\n\t\t\t\t\tscrollbar-width: none;\r\n\t\t\t\t}\r\n\t\t\t\t#ticket-dashboard-container .scroll-column::-webkit-scrollbar { display: none; }\r\n\r\n\t\t\t\t/* --- Cards & Stats --- */\r\n\t\t\t\t#ticket-dashboard-container .stats-grid {\r\n\t\t\t\t\tdisplay: grid;\r\n\t\t\t\t\tgrid-template-columns: repeat(3, 1fr);\r\n\t\t\t\t\tgap: 20px;\r\n\t\t\t\t\tmargin-bottom: 24px;\r\n\t\t\t\t}\r\n\r\n\t\t\t\t/* --- Sửa lại Style cho Stat Card --- */\r\n\t\t\t\t#ticket-dashboard-container .stat-card {\r\n\t\t\t\t\tpadding: 20px;\r\n\t\t\t\t\tborder-radius: 8px;\r\n\t\t\t\t\tborder: 1px solid #e2e8f0;\r\n\t\t\t\t\tposition: relative;\r\n\t\t\t\t\t/* Chuyển sang xếp ngang để icon và nội dung nằm cạnh nhau */\r\n\t\t\t\t\tdisplay: flex;\r\n\t\t\t\t\tflex-direction: row;\r\n\t\t\t\t\talign-items: center;\r\n\t\t\t\t\tjustify-content: space-between; /* Đẩy dropdown sang phải cùng */\r\n\t\t\t\t}\r\n\r\n\t\t\t\t/* Color highlights giữ nguyên */\r\n\t\t\t\t#ticket-dashboard-container .stat-card::before {\r\n\t\t\t\t\tcontent: \"\"; position: absolute; top: 12px; bottom: 12px; left: 0; width: 4px;\r\n\t\t\t\t\tborder-top-right-radius: 4px; border-bottom-right-radius: 4px;\r\n\t\t\t\t}\r\n\t\t\t\t#ticket-dashboard-container .stat-card.total::before { background: #10b981; }\r\n\t\t\t\t#ticket-dashboard-container .stat-card.new::before { background: #3b82f6; }\r\n\t\t\t\t#ticket-dashboard-container .stat-card.onleave::before { background: #f59e0b; }\r\n\r\n\t\t\t\t/* Gom nhóm Icon và Text */\r\n\t\t\t\t#ticket-dashboard-container .stat-main-content {\r\n\t\t\t\t\tdisplay: flex;\r\n\t\t\t\t\talign-items: center;\r\n\t\t\t\t\tgap: 16px; /* Khoảng cách giữa icon và chữ */\r\n\t\t\t\t}\r\n\r\n\t\t\t\t#ticket-dashboard-container .stat-icon {\r\n\t\t\t\t\twidth: 48px; height: 48px; /* Tăng kích thước icon chút cho cân đối */\r\n\t\t\t\t\tborder-radius: 8px;\r\n\t\t\t\t\tborder: 1px solid #e2e8f0;\r\n\t\t\t\t\tdisplay: flex; align-items: center; justify-content: center;\r\n\t\t\t\t\tcolor: #64748b;\r\n\t\t\t\t\tflex-shrink: 0; /* Không cho icon bị co lại */\r\n\t\t\t\t}\r\n\t\t\t\t#ticket-dashboard-container .stat-icon svg { width: 24px; height: 24px; fill: currentColor; }\r\n\r\n\t\t\t\t/* Phần chữ xếp dọc (Label trên, Value dưới hoặc ngược lại) */\r\n\t\t\t\t#ticket-dashboard-container .stat-text-group {\r\n\t\t\t\t\tdisplay: flex;\r\n\t\t\t\t\tflex-direction: column;\r\n\t\t\t\t\tjustify-content: center;\r\n\t\t\t\t}\r\n\r\n\t\t\t\t#ticket-dashboard-container .stat-value {\r\n\t\t\t\t\tfont-size: 24px;\r\n\t\t\t\t\tfont-weight: 700;\r\n\t\t\t\t\tline-height: 1.2;\r\n\t\t\t\t}\r\n\r\n\t\t\t\t#ticket-dashboard-container .stat-label {\r\n\t\t\t\t\tfont-size: 13px;\r\n\t\t\t\t\tcolor: #64748b;\r\n\t\t\t\t\tfont-weight: 500;\r\n\t\t\t\t}\r\n\r\n\t\t\t\t/* --- Charts & General Card Box --- */\r\n\t\t\t\t#ticket-dashboard-container .charts-grid {\r\n\t\t\t\t\tdisplay: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-bottom: 24px;\r\n\t\t\t\t}\r\n\t\t\t\t#ticket-dashboard-container .card-box {\r\n\t\t\t\t\t\r\n\t\t\t\t\tpadding: 24px;\r\n\t\t\t\t\tborder-radius: 8px;\r\n\t\t\t\t\tborder: 1px solid #e2e8f0;\r\n\t\t\t\t\tmargin-bottom: 24px;\r\n\t\t\t\t}\r\n\t\t\t\t#ticket-dashboard-container .charts-grid .card-box { margin-bottom: 0; }\r\n\r\n\t\t\t\t#ticket-dashboard-container .card-title {\r\n\t\t\t\t\tfont-size: 16px; font-weight: 600; color: #00673b; margin-bottom: 20px;\r\n\t\t\t\t\tdisplay: flex; justify-content: space-between; align-items: center;\r\n\t\t\t\t}\r\n\t\t\t\t#ticket-dashboard-container .chart-canvas { width: 100%; height: 250px; }\r\n\r\n\t\t\t\t/* --- List Items --- */\r\n\t\t\t\t#ticket-dashboard-container .info-item, #ticket-dashboard-container .user-item {\r\n\t\t\t\t\tdisplay: flex; justify-content: space-between; align-items: center;\r\n\t\t\t\t\tpadding: 12px 0; border-bottom: 1px solid #f1f5f9;\r\n\t\t\t\t}\r\n\t\t\t\t#ticket-dashboard-container .info-item:last-child, #ticket-dashboard-container .user-item:last-child { border-bottom: none; }\r\n\t\t\t\t#ticket-dashboard-container .user-item { gap: 12px; justify-content: flex-start; }\r\n\t\t\t\t/* --- Sửa lại Style cho Item trong Sidebar --- */\r\n\t\t\t\t#ticket-dashboard-container .user-item {\r\n\t\t\t\t\tdisplay: flex;\r\n\t\t\t\t\talign-items: center; /* Căn giữa theo chiều dọc */\r\n\t\t\t\t\tgap: 12px;\r\n\t\t\t\t\tpadding: 12px 0;\r\n\t\t\t\t\tborder-bottom: 1px solid #f1f5f9;\r\n\t\t\t\t}\r\n\r\n\t\t\t\t#ticket-dashboard-container .user-info {\r\n                    flex: 1;\r\n                    min-width: 0; /* Quan trọng: cho phép flex item co lại nhỏ hơn content */\r\n                    display: flex;\r\n                    flex-direction: column;\r\n                    gap: 3px;\r\n                    overflow: hidden; /* Thêm dòng này */\r\n                }\r\n\r\n\t\t\t\t/* Dòng 1: Tiêu đề Ticket */\r\n\t\t\t\t#ticket-dashboard-container .ticket-title-text {\r\n                    font-size: 14px;\r\n                    font-weight: 600;\r\n                    white-space: nowrap;\r\n                    overflow: hidden;\r\n                    text-overflow: ellipsis;\r\n                    max-width: 100%; /* Thêm dòng này */\r\n                    flex: 1; /* Thêm dòng này để chiếm hết không gian còn lại */\r\n                }\r\n\r\n\t\t\t\t/* Dòng 2: Nhân viên + Ngày */\r\n\t\t\t\t#ticket-dashboard-container .ticket-sub-row {\r\n\t\t\t\t\tfont-size: 12px;\r\n\t\t\t\t\tcolor: #64748b;\r\n\t\t\t\t\tdisplay: flex;\r\n\t\t\t\t\talign-items: center;\r\n\t\t\t\t}\r\n\r\n\t\t\t\t/* Dấu chấm hoặc gạch ngăn cách (nếu cần) */\r\n\t\t\t\t#ticket-dashboard-container .ticket-sub-divider {\r\n\t\t\t\t\tmargin: 0 6px;\r\n\t\t\t\t\tcolor: #cbd5e1;\r\n\t\t\t\t}\r\n\t\t\t\t#ticket-dashboard-container .user-avatar {\r\n\t\t\t\t\twidth: 36px; height: 36px; border-radius: 50%;\r\n\t\t\t\t\tborder: 1px solid #e2e8f0;\r\n\t\t\t\t\t color: #2563eb;\r\n\t\t\t\t\tdisplay: flex; align-items: center; justify-content: center; font-size: 12px; font-weight: 700; flex-shrink: 0;\r\n\t\t\t\t}\r\n\t\t\t\t#ticket-dashboard-container .user-info { flex: 1; min-width: 0; }\r\n\t\t\t\t#ticket-dashboard-container .user-name {\r\n\t\t\t\t\tfont-size: 14px; font-weight: 500;\r\n\t\t\t\t\twhite-space: nowrap; overflow: hidden; text-overflow: ellipsis;\r\n\t\t\t\t}\r\n\t\t\t\t#ticket-dashboard-container .user-role { font-size: 12px; color: #64748b; }\r\n\t\t\t\t#ticket-dashboard-container .status-badge {\r\n\t\t\t\t\tpadding: 2px 8px; border-radius: 4px;\r\n\t\t\t\t\tfont-size: 11px; font-weight: 600; margin-left: auto;\r\n\t\t\t\t\tborder: 1px solid currentColor;\r\n\t\t\t\t\tbackground: transparent;\r\n\t\t\t\t}\r\n\t\t\t\t#ticket-dashboard-container select {\r\n\t\t\t\t\tpadding: 4px 8px; border: 1px solid #cbd5e1;\r\n\t\t\t\t\tborder-radius: 4px; font-size: 12px; outline: none;\r\n\t\t\t\t}\r\n                /* --- Filter Panel Styles --- */\r\n                #ticket-dashboard-container .header-actions {\r\n                    display: flex;\r\n                    align-items: center;\r\n                    gap: 12px;\r\n                    justify-content: flex-end;\r\n                }\r\n                #ticket-dashboard-container .filter-bar-slide {\r\n                    display: flex;\r\n                    align-items: center;\r\n                    gap: 8px;\r\n\r\n                    /* Thiết lập hiệu ứng trượt */\r\n                    max-width: 0;\r\n                    opacity: 0;\r\n                    overflow: hidden; /* Giấu nội dung khi đóng */\r\n                    white-space: nowrap; /* Không xuống dòng */\r\n                    transition: all 0.4s ease-in-out;\r\n                }\r\n\r\n                /* Khi có class .open thì hiện ra */\r\n                #ticket-dashboard-container .filter-bar-slide.open {\r\n                    max-width: 800px; /* Đủ rộng để chứa hết input */\r\n                    opacity: 1;\r\n                    margin-right: 8px; /* Khoảng cách với nút icon */\r\n                }\r\n                #ticket-dashboard-container .filter-group {\r\n                    display: flex;\r\n                    align-items: center;\r\n                    gap: 8px;\r\n                }\r\n                #ticket-dashboard-container .filter-toggle-btn {\r\n                    padding: 0;\r\n                    width: 36px;\r\n                    height: 36px;\r\n                    border: 1px solid #00673b;\r\n                    color: #00673b;\r\n                    border-radius: 6px;\r\n                    cursor: pointer;\r\n                    display: flex; align-items: center; justify-content: center;\r\n                    transition: all 0.2s ease;\r\n                }\r\n                #ticket-dashboard-container .filter-toggle-btn:hover,\r\n                #ticket-dashboard-container .filter-toggle-btn.active {\r\n                    background: #00673b;\r\n                    color: white;\r\n                }\r\n                \r\n                #ticket-dashboard-container .action-buttons-group {\r\n                    display: flex;\r\n                    align-items: center;\r\n                    gap: 12px;\r\n                }\r\n                \r\n                #ticket-dashboard-container .date-range-group {\r\n                    display: flex;\r\n                    align-items: center;\r\n                    gap: 8px;\r\n                    flex-shrink: 0;\r\n                }\r\n\r\n                /* Nút Reset (Icon nhỏ) */\r\n                #ticket-dashboard-container .btn-reset-icon {\r\n                    width: 30px; height: 30px;\r\n                    border: none; background: transparent;\r\n                    color: #94a3b8; cursor: pointer;\r\n                    display: flex; align-items: center; justify-content: center;\r\n                }\r\n                #ticket-dashboard-container .btn-reset-icon:hover { color: #ef4444; }\r\n\r\n                #ticket-dashboard-container .filter-panel {\r\n                    position: absolute;\r\n                    top: calc(100% + 8px);\r\n                    right: 0;\r\n                    border: 1px solid #e2e8f0;\r\n                    border-radius: 8px;\r\n                    box-shadow: 0 10px 25px rgba(0,0,0,0.1);\r\n                    padding: 16px;\r\n                    min-width: 650px;\r\n                    display: none;\r\n              z-index: 1000;\r\n                }\r\n\r\n                #ticket-dashboard-container .filter-panel.open {\r\n                    display: block;\r\n                }\r\n\r\n                #ticket-dashboard-container .filter-content {\r\n                    display: flex;\r\n                    gap: 12px;\r\n                    align-items: center;\r\n                }\r\n\r\n                #ticket-dashboard-container .filter-input,\r\n                #ticket-dashboard-container .filter-select {\r\n                    height: 36px;\r\n                    padding: 0 10px;\r\n                    border: 1px solid #cbd5e1;\r\n                    border-radius: 6px;\r\n                    font-size: 13px;\r\n                    outline: none;\r\n                    line-height: normal;\r\n                    box-sizing: border-box;\r\n                    width: auto; /* Tự động theo nội dung hoặc set cứng bên dưới */\r\n                }\r\n\r\n                #ticket-dashboard-container .filter-select {\r\n                    width: 160px; /* Select box rộng hơn chút để hiển thị tên */\r\n                }\r\n\r\n                #ticket-dashboard-container .filter-input:focus,\r\n                #ticket-dashboard-container .filter-select:focus {\r\n                    border-color: #00673b;\r\n                    box-shadow: 0 0 0 2px rgba(0, 103, 59, 0.1);\r\n                }\r\n                #ticket-dashboard-container .btn-reset-icon {\r\n                    width: 36px;\r\n                    height: 36px;\r\n                    display: flex;\r\n                    align-items: center;\r\n                    justify-content: center;\r\n                    border: 1px solid #e2e8f0;\r\n                    border-radius: 6px;\r\n                    color: #64748b;\r\n                    cursor: pointer;\r\n                    transition: all 0.2s;\r\n                }\r\n                #ticket-dashboard-container .btn-reset-icon:hover {\r\n                    background: #f1f5f9;\r\n                    color: #ef4444;\r\n                    border-color: #cbd5e1;\r\n                }\r\n                #ticket-dashboard-container .filter-input::placeholder {\r\n                    color: #94a3b8;\r\n                    font-size: 13px;\r\n                }\r\n\r\n                #ticket-dashboard-container .filter-actions {\r\n                    display: flex;\r\n                    gap: 8px;\r\n                }\r\n\r\n                #ticket-dashboard-container .filter-btn {\r\n                    padding: 8px 16px;\r\n                    border-radius: 6px;\r\n                    font-size: 13px;\r\n                    font-weight: 600;\r\n                    cursor: pointer;\r\n                    transition: all 0.2s ease;\r\n                    white-space: nowrap;\r\n                }\r\n\r\n                #ticket-dashboard-container .filter-btn.apply {\r\n                    background: #00673b;\r\n                    color: white;\r\n                    border: 1px solid #00673b;\r\n                }\r\n\r\n                #ticket-dashboard-container .filter-btn.apply:hover {\r\n                    background: #005230;\r\n                }\r\n\r\n                #ticket-dashboard-container .filter-btn.reset {\r\n                    color: #64748b;\r\n                    border: 1px solid #cbd5e1;\r\n                }\r\n\r\n                #ticket-dashboard-container .filter-btn.reset:hover {\r\n                    background: #f8fafc;\r\n                }\r\n\r\n                /* --- Chart Legend Styles --- */\r\n                #ticket-dashboard-container .chart-legend {\r\n                    margin-top: 16px;\r\n                    display: flex;\r\n                    flex-wrap: wrap;\r\n                    gap: 12px;\r\n                    justify-content: center;\r\n                }\r\n\r\n                #ticket-dashboard-container .legend-item {\r\n                    display: flex;\r\n                    align-items: center;\r\n                    gap: 6px;\r\n                    font-size: 12px;\r\n                    color: #64748b;\r\n                }\r\n\r\n                #ticket-dashboard-container .legend-color {\r\n\r\n\r\n\r\n\r\n\r\n\r\n                    width: 12px;\r\n                    height: 12px;\r\n                    border-radius: 2px;\r\n                }\r\n                #ticket-dashboard-container .filter-input[type=\"date\"] {\r\n                    width: 137px;\r\n                    display: flex;\r\n                    align-items: center;\r\n                    font-family: inherit;\r\n                }\r\n                #ticket-dashboard-container .filter-input[type=\"date\"]::-webkit-calendar-picker-indicator {\r\n                    cursor: pointer;\r\n                }\r\n\r\n                #ticket-dashboard-container .filter-input[type=\"date\"]:before {\r\n                    content: attr(placeholder);\r\n                    color: #94a3b8;\r\n                    margin-right: 8px;\r\n                }\r\n\r\n                #ticket-dashboard-container .filter-input[type=\"date\"]:focus:before,\r\n                #ticket-dashboard-container .filter-input[type=\"date\"]:valid:before {\r\n                    content: \"\";\r\n                }\r\n                #ticket-dashboard-container .filter-input[type=\"date\"] { width: 136px; }\r\n                #ticket-dashboard-container .filter-select { width: 150px; }\r\n\t\t\t\t/* Responsive */\r\n\t\t\t\t@media (max-width: 1024px) {\r\n\t\t\t\t\t#ticket-dashboard-container .dashboard-layout { grid-template-columns: 1fr; overflow-y: auto; }\r\n\t\t\t\t\t#ticket-dashboard-container .scroll-column { overflow-y: visible; height: auto; }\r\n\t\t\t\t\t#ticket-dashboard-container .stats-grid { grid-template-columns: 1fr 1fr 1fr; }\r\n\t\t\t\t}\r\n\t\t\t\t@media (max-width: 768px) {\r\n                    #ticket-dashboard-container .header-wrapper {\r\n                        padding: 12px 12px 6px 12px;\r\n                    }\r\n                    #ticket-dashboard-container .header-section-ticketDashboard {\r\n                        flex-direction: column;\r\n                        align-items: stretch;\r\n                        gap: 10px;\r\n                        padding: 16px;\r\n                        border-left-width: 4px;\r\n                    }\r\n                    #ticket-dashboard-container .welcome-text {\r\n                        font-size: 20px;\r\n                    }\r\n                    #ticket-dashboard-container .header-actions {\r\n                        width: 100%;\r\n                        flex-direction: column;\r\n                        align-items: stretch;\r\n                        gap: 12px;\r\n                    }\r\n                    \r\n                    #ticket-dashboard-container .action-buttons-group {\r\n                        width: 100%;\r\n                        justify-content: flex-end;\r\n                        gap: 8px;\r\n                        order: 2; /* Đưa xuống dưới */\r\n                    }\r\n                    \r\n                    #ticket-dashboard-container .filter-bar-slide {\r\n                        order: 1; /* Đưa lên trên */\r\n                    }\r\n\r\n                    #ticket-dashboard-container .date-range-group {\r\n                        width: 100%;\r\n                        justify-content: space-between;\r\n                    }\r\n\r\n                    /* Sửa lại bộ lọc trên mobile: Hiển thị gọn gàng hơn */\r\n                    #ticket-dashboard-container .filter-bar-slide {\r\n                        position: relative;\r\n                        display: flex;\r\n                        flex-direction: column; /* Đổi về column để chứa các row */\r\n                        align-items: stretch;\r\n                        width: 100%;\r\n                        gap: 8px;\r\n                        max-height: 0;\r\n                        opacity: 0;\r\n                        margin: 0 !important;\r\n                        padding: 0;\r\n                        overflow: hidden;\r\n                        transition: all 0.3s ease-in-out;\r\n                    }\r\n                    #ticket-dashboard-container .filter-bar-slide.open {\r\n                        max-height: 500px;\r\n                        opacity: 1;\r\n                        padding-top: 10px;\r\n                        border-top: 1px dashed #e2e8f0;\r\n                        margin-top: 10px !important;\r\n                    }\r\n                    \r\n                    #ticket-dashboard-container .filter-input, \r\n                    #ticket-dashboard-container .filter-select { \r\n                        width: 100% !important;\r\n                        min-width: 0;\r\n                        background-color: #f8fafc;\r\n                    }\r\n                    \r\n                    #ticket-dashboard-container .filter-input[type=\"date\"] {\r\n                        flex: 1;\r\n                        width: auto !important;\r\n                    }\r\n                    \r\n                    #ticket-dashboard-container .filter-bar-slide span {\r\n                        display: inline-block; /* Hiện lại dấu gạch ngang */\r\n                    }\r\n\r\n\t\t\t\t\t#ticket-dashboard-container .stats-grid { grid-template-columns: 1fr; gap: 12px; }\r\n\t\t\t\t\t#ticket-dashboard-container .charts-grid { grid-template-columns: 1fr; gap: 16px; }\r\n                    #ticket-dashboard-container .dashboard-layout { padding: 10px 16px; gap: 16px; }\r\n\t\t\t\t}\r\n\t\t\t</style>\r\n\r\n\t\t\t<div id=\"ticket-dashboard-container\">\r\n\t\t\t\t<div class=\"header-wrapper\">\r\n\t\t\t\t\t<div class=\"header-section-ticketDashboard\">\r\n\t\t\t\t\t\t<div class=\"header-content\">\r\n\t\t\t\t\t\t\t<div class=\"welcome-text\">Chào mừng quay trở lại!</div>\r\n\t\t\t\t\t\t\t<div class=\"company-subtext\" id=\"companyName\">Đang tải...</div>\r\n\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div class=\"header-actions\">\r\n\t\t\t\t\t\t\t<div class=\"filter-bar-slide\" id=\"filterBar\">\r\n\t\t\t\t\t\t\t\t<div class=\"date-range-group\">\r\n\t\t\t\t\t\t\t\t\t<input type=\"date\" class=\"filter-input\" id=\"filterFromDate\" onchange=\"onFilterChange()\" title=\"Từ ngày\">\r\n\t\t\t\t\t\t\t\t\t<span style=\"color:#cbd5e1\">-</span>\r\n\t\t\t\t\t\t\t\t\t<input type=\"date\" class=\"filter-input\" id=\"filterToDate\" onchange=\"onFilterChange()\" title=\"Đến ngày\">\r\n\t\t\t\t\t\t\t\t</div>\r\n\r\n\t\t\t\t\t\t\t\t<select class=\"filter-select\" id=\"filterCustomer\" onchange=\"onFilterChange()\">\r\n\t\t\t\t\t\t\t\t\t<option value=\"\">Chọn công ty</option>\r\n\t\t\t\t\t\t\t\t</select>\r\n\r\n\t\t\t\t\t\t\t\t<select class=\"filter-select\" id=\"filterSupport\" onchange=\"onFilterChange()\">\r\n\t\t\t\t\t\t\t\t\t<option value=\"\">Chọn nhân viên</option>\r\n\t\t\t\t\t\t\t\t</select>\r\n\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t<div class=\"action-buttons-group\">\r\n\t\t\t\t\t\t\t\t<button class=\"filter-toggle-btn\" id=\"btnReload\" onclick=\"resetFilter()\" title=\"Tải lại dữ liệu\">\r\n\t\t\t\t\t\t\t\t\t<svg width=\"20\" height=\"20\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\r\n\t\t\t\t\t\t\t\t\t\t<path d=\"M23 4v6h-6\"></path><path d=\"M1 20v-6h6\"></path>\r\n\t\t\t\t\t\t\t\t\t\t<path d=\"M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15\"></path>\r\n\t\t\t\t\t\t\t\t\t</svg>\r\n\t\t\t\t\t\t\t\t</button>\r\n\t\t\t\t\t\t\t\t<button class=\"filter-toggle-btn\" id=\"btnToggleFilter\" onclick=\"toggleFilterBar()\" title=\"Bộ lọc\">\r\n\t\t\t\t\t\t\t\t\t<svg width=\"20\" height=\"20\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\r\n\t\t\t\t\t\t\t\t\t\t<polygon points=\"22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3\"></polygon>\r\n\t\t\t\t\t\t\t\t\t</svg>\r\n\t\t\t\t\t\t\t\t</button>\r\n\t\t\t\t\r\n\t\t\t\t\t\t\t\t<button class=\"create-ticket-btn\" onclick=\"window.openParadiseForm('sp_Ticket_HistoryControl', { LoginID: UserID, LanguageID: 'VN'})\">\r\n\t\t\t\t\t\t\t\t\t<svg width=\"14\" height=\"14\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\r\n\t\t\t\t\t\t\t\t\t\t<line x1=\"12\" y1=\"5\" x2=\"12\" y2=\"19\"></line>\r\n\t\t\t\t\t\t\t\t\t\t<line x1=\"5\" y1=\"12\" x2=\"19\" y2=\"12\"></line>\r\n\t\t\t\t\t\t\t\t\t</svg>\r\n\t\t\t\t\t\t\t\t\t<span>Tạo yêu cầu</span>\r\n\t\t\t\t\t\t\t\t</button>\r\n\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t</div>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t</div>\r\n\r\n    <div class=\"dashboard-layout\">\r\n\r\n        <div class=\"main-column scroll-column\">\r\n\r\n            <div class=\"stats-grid\">\r\n                <div class=\"stat-card total\">\r\n                    <div class=\"stat-main-content\">\r\n                        <div class=\"stat-icon\" style=\"color: #10b981; background: #ecfdf5; border-color: #d1fae5;\">\r\n                            <svg viewBox=\"0 0 24 24\"><path d=\"M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2\"></path><circle cx=\"9\" cy=\"7\" r=\"4\"></circle><path d=\"M23 21v-2a4 4 0 0 0-3-3.87\"></path><path d=\"M16 3.13a4 4 0 0 1 0 7.75\"></path></svg>\r\n                        </div>\r\n                        <div class=\"stat-text-group\">\r\n                            <div class=\"stat-label\">Tổng ticket</div>\r\n                            <div class=\"stat-value\" id=\"lbl_TotalTickets\">0</div>\r\n                        </div>\r\n                    </div>\r\n                </div>\r\n\r\n                <div class=\"stat-card new\">\r\n                    <div class=\"stat-main-content\">\r\n                        <div class=\"stat-icon\" style=\"color: #3b82f6; background: #eff6ff; border-color: #dbeafe;\">\r\n                            <svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z\"></path><polyline points=\"14 2 14 8 20 8\"></polyline><line x1=\"16\" y1=\"13\" x2=\"8\" y2=\"13\"></line><line x1=\"16\" y1=\"17\" x2=\"8\" y2=\"17\"></line><polyline points=\"10 9 9 9 8 9\"></polyline></svg>\r\n                        </div>\r\n                        <div class=\"stat-text-group\">\r\n                            <div class=\"stat-label\">Đang xử lý</div>\r\n                            <div class=\"stat-value\" id=\"lbl_ProcessingTickets\">0</div>\r\n                        </div>\r\n                    </div>\r\n                </div>\r\n\r\n                <div class=\"stat-card onleave\">\r\n                    <div class=\"stat-main-content\">\r\n                        <div class=\"stat-icon\" style=\"color: #f59e0b; background: #fffbeb; border-color: #fef3c7;\">\r\n                            <svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><circle cx=\"12\" cy=\"12\" r=\"10\"></circle><polyline points=\"12 6 12 12 16 14\"></polyline></svg>\r\n                        </div>\r\n                        <div class=\"stat-text-group\">\r\n                            <div class=\"stat-label\">Hoàn thành</div>\r\n                            <div class=\"stat-value\" id=\"lbl_CompletedTickets\">0</div>\r\n                        </div>\r\n                    </div>\r\n                </div>\r\n            </div>\r\n\r\n            <div class=\"charts-grid\">\r\n                <div class=\"card-box\">\r\n                    <div class=\"card-title\">\r\n                        <span>Số lượng ticket theo tháng</span>\r\n                        <select><option>2026</option></select>\r\n                    </div>\r\n                    <canvas id=\"barChart\" class=\"chart-canvas\"></canvas>\r\n                </div>\r\n                <div class=\"card-box\">\r\n                    <div class=\"card-title\">\r\n                        <span>Tỷ lệ theo trạng thái</span>\r\n                        <div style=\"cursor: pointer;\">\r\n                            <svg width=\"20\" height=\"20\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><circle cx=\"12\" cy=\"12\" r=\"1\"></circle><circle cx=\"12\" cy=\"5\" r=\"1\"></circle><circle cx=\"12\" cy=\"19\" r=\"1\"></circle></svg>\r\n          </div>\r\n                    </div>\r\n                    <canvas id=\"donutChart\" class=\"chart-canvas\"></canvas>\r\n                    <div class=\"chart-legend\" id=\"donutLegend\"></div>\r\n                </div>\r\n            </div>\r\n\r\n            <div class=\"charts-grid\">\r\n                <div class=\"card-box\" id=\"list_priority_stats\">\r\n                    <div class=\"card-title\">Tỷ lệ theo mức độ</div>\r\n                    </div>\r\n\r\n                <div class=\"card-box\" id=\"list_dept_stats\">\r\n                    <div class=\"card-title\">Theo phòng ban</div>\r\n                    </div>\r\n            </div>\r\n        </div>\r\n\r\n        <div class=\"sidebar-column scroll-column\">\r\n\r\n            <div class=\"card-box\" id=\"list_recent_tickets\">\r\n                <div class=\"card-title\">\r\n                    <span>Ticket Mới Nhất</span>\r\n                </div>\r\n                </div>\r\n\r\n            <div class=\"card-box\" id=\"list_high_priority\">\r\n                <div class=\"card-title\" style=\"color:#dc2626\">Ticket Ưu Tiên Cao</div>\r\n                </div>\r\n        </div>\r\n    </div>\r\n</div>\r\n\r\n\t\t\t<script>\r\n    (function() {\r\n        // Hàm mở form linh hoạt hỗ trợ Mobile App và Web\r\n        window.openParadiseForm = function(formName, params) {\r\n            var _loginID = (typeof LoginID !== 'undefined') ? LoginID : 0;\r\n            var _langID = (typeof LanguageID !== 'undefined') ? LanguageID : 'VN';\r\n            \r\n            // Merge mặc định LoginID/LanguageID nếu chưa có\r\n            var finalParams = Object.assign({ LoginID: _loginID, LanguageID: _langID }, params || {});\r\n\r\n            if (typeof getMobileOperatingSystem === \"function\" && [\"Android\", \"iOS\"].includes(getMobileOperatingSystem())) {\r\n                OpenFormParamMobile(formName, finalParams);\r\n            } else {\r\n                openFormParam(formName, finalParams);\r\n            }\r\n        }\r\n        \r\n        // Giữ lại alias cũ để không hỏng code renderTicketList đã sửa ở lượt trước\r\n        window.openDetailTicketID = function(TicketID) {\r\n            window.openParadiseForm('sp_Ticket_Message', { TicketID: TicketID });\r\n        }\r\n    \r\n        var filterState = {\r\n            fromDate: null,\r\n            toDate: null,\r\n            customerID: null,\r\n            supportID: null\r\n        };\r\n        window.toggleFilterBar = function() {\r\n            var bar = document.getElementById('filterBar');\r\n            var btn = document.getElementById('btnToggleFilter');\r\n\r\n            // Toggle class open để kích hoạt CSS transition\r\n            bar.classList.toggle('open');\r\n            btn.classList.toggle('active');\r\n        }\r\n        function initDefaultDateRange() {\r\n            var today = new Date();\r\n            var firstDay = new Date(today.getFullYear(), today.getMonth(), 1);\r\n            var lastDay = new Date(today.getFullYear(), today.getMonth() + 1, 0);\r\n\r\n            // Format: YYYY-MM-DD\r\n            var firstDayStr = firstDay.getFullYear() + '-' +\r\n                              String(firstDay.getMonth() + 1).padStart(2, '0') + '-' +\r\n                              String(firstDay.getDate()).padStart(2, '0');\r\n\r\n            var lastDayStr = lastDay.getFullYear() + '-' +\r\n                             String(lastDay.getMonth() + 1).padStart(2, '0') + '-' +\r\n                             String(lastDay.getDate()).padStart(2, '0');\r\n\r\n            document.getElementById('filterFromDate').value = firstDayStr;\r\n            document.getElementById('filterToDate').value = lastDayStr;\r\n\r\n            // Set vào filterState\r\n            filterState.fromDate = firstDayStr;\r\n            filterState.toDate = lastDayStr;\r\n       }\r\n\r\n        window.toggleFilterPanel = function() {\r\n            var panel = document.getElementById('filterPanel');\r\n   var btn = document.getElementById('filterToggleBtn');\r\n            panel.classList.toggle('open');\r\n            btn.classList.toggle('active');\r\n        }\r\n\r\n        window.applyFilter = function() {\r\n            filterState.fromDate = document.getElementById('filterFromDate').value;\r\n            filterState.toDate = document.getElementById('filterToDate').value;\r\n            filterState.customerID = document.getElementById('filterCustomer').value;\r\n            filterState.supportID = document.getElementById('filterSupport').value;\r\n\r\n            loadDashboardDataTicket();\r\n        }\r\n       window.onFilterChange = function() {\r\n            filterState.fromDate = document.getElementById('filterFromDate').value;\r\n            filterState.toDate = document.getElementById('filterToDate').value;\r\n            filterState.customerID = document.getElementById('filterCustomer').value;\r\n            filterState.supportID = document.getElementById('filterSupport').value;\r\n\r\n            loadDashboardDataTicket();\r\n      }\r\n \r\n        // 3. Hàm Reset\r\n        window.resetFilter = function() {\r\n            initDefaultDateRange();\r\n            document.getElementById('filterCustomer').value = '';\r\ndocument.getElementById('filterSupport').value = '';\r\n            window.onFilterChange();\r\n        }\r\n        function drawBarChart(labels, dataValues) {\r\n            // Đảm bảo ID khớp với HTML\r\n            var canvas = document.getElementById('barChart');\r\n            if (!canvas) {\r\n                console.error(\"Không tìm thấy canvas #barChart\");\r\n                return;\r\n            }\r\n\r\n            var ctx = canvas.getContext('2d');\r\n            // Reset canvas để vẽ lại\r\n            var width = canvas.width = canvas.offsetWidth;\r\n            var height = canvas.height = 250; // Set chiều cao cố định\r\n            ctx.clearRect(0, 0, width, height);\r\n\r\n            var maxVal = Math.max.apply(null, dataValues);\r\n            if (maxVal < 5) maxVal = 5;\r\n\r\n            var padding = 40;\r\n            var bottomPadding = 30;\r\n            var chartW = width - (padding * 2);\r\n            var chartH = height - padding - bottomPadding;\r\n\r\n            // Tính toán độ rộng cột (12 tháng)\r\n            var gap = 10;\r\n            var barWidth = (chartW / 12) - gap;\r\n\r\n            // 1. Vẽ đường kẻ ngang (Grid)\r\n            ctx.strokeStyle = \"#f1f5f9\";\r\n            ctx.lineWidth = 1;\r\n            ctx.beginPath();\r\n            for(var i=0; i<=5; i++){\r\n                var y = padding + (chartH/5)*i;\r\n                ctx.moveTo(padding, y);\r\n                ctx.lineTo(width - padding, y);\r\n\r\n                // Vẽ số trục Y\r\n                ctx.fillStyle = \"#94a3b8\";\r\n                ctx.font = \"10px sans-serif\";\r\n                ctx.textAlign = \"right\";\r\n                // Viết số\r\n                var valY = Math.round(maxVal - (maxVal/5)*i);\r\n                ctx.fillText(valY, padding - 5, y + 4);\r\n            }\r\n            ctx.stroke();\r\n\r\n            // 2. Vẽ Cột và Label\r\n            dataValues.forEach(function(val, i) {\r\n                // Tọa độ X\r\n                var x = padding + (gap/2) + (barWidth + gap) * i;\r\n\r\n                // Chiều cao cột\r\n                var barHeight = (val / maxVal) * chartH;\r\n                var y = (padding + chartH) - barHeight;\r\n\r\n                // Vẽ cột\r\n                if (val >= 0) {\r\n                    ctx.fillStyle = \"#3b82f6\"; // Màu xanh\r\n                    // Dùng fillRect thay cho roundRect để tương thích mọi trình duyệt\r\n                    ctx.fillRect(x, y, barWidth, barHeight);\r\n\r\n                    // Vẽ số liệu trên đỉnh cột (Nếu > 0)\r\n                    if (val > 0) {\r\n                        ctx.fillStyle = \"#1e293b\";\r\n                        ctx.font = \"bold 11px sans-serif\";\r\n                        ctx.textAlign = \"center\";\r\n                        ctx.fillText(val, x + barWidth/2, y - 5);\r\n                    }\r\n }\r\n\r\n\r\n                // Vẽ Label tháng (Trục X)\r\n                ctx.fillStyle = \"#64748b\";\r\n                ctx.font = \"11px sans-serif\";\r\n                ctx.textAlign = \"center\";\r\n                // labels[i] đang là \"Tháng 1\", \"Tháng 2\"... lấy số thôi\r\n                var labelText = (i + 1);\r\n                ctx.fillText(\"T\" + labelText, x + barWidth/2, height - 10);\r\n            });\r\n        }\r\n\r\n        // --- 2. Hàm vẽ Donut Chart ---\r\n        function drawDonutChart(dataItems) {\r\n            const canvas = document.getElementById('donutChart');\r\n            if (!canvas) return;\r\n            const ctx = canvas.getContext('2d');\r\n            const width = canvas.width = canvas.offsetWidth * 2;\r\n            const height = canvas.height = 500;\r\n            ctx.clearRect(0, 0, width, height);\r\n\r\n            const cx = width/2, cy = height/2;\r\n            const r = Math.min(width, height)/3;\r\n            let start = -Math.PI/2;\r\n            let total = dataItems.reduce((sum, item) => sum + item.Total, 0);\r\n            const colors = [\"#3b82f6\", \"#f97316\", \"#10b981\", \"#6366f1\", \"#ef4444\"];\r\n\r\n            dataItems.forEach((item, index) => {\r\n                let p = total > 0 ? item.Total / total : 0;\r\n                let sliceAngle = p * Math.PI * 2;\r\n                let color = colors[index % colors.length];\r\n                ctx.beginPath(); ctx.moveTo(cx, cy); ctx.arc(cx, cy, r, start, start + sliceAngle);\r\n                ctx.fillStyle = color; ctx.fill();\r\n                start += sliceAngle;\r\n            });\r\n\r\n            ctx.beginPath(); ctx.arc(cx, cy, r*0.7, 0, Math.PI*2); ctx.fillStyle = \"white\"; ctx.fill();\r\n\r\n            if (dataItems.length > 0 && total > 0) {\r\n                 let maxItem = dataItems.reduce((prev, current) => (prev.Total > current.Total) ? prev : current);\r\n                 let maxPercent = Math.round((maxItem.Total / total) * 100) + \"%\";\r\n                 ctx.fillStyle = \"#1e293b\"; ctx.font = \"bold 40px sans-serif\"; ctx.textAlign = \"center\"; ctx.textBaseline = \"middle\";\r\n                 ctx.fillText(maxPercent, cx, cy);\r\n            }\r\n            var legendContainer = document.getElementById('donutLegend');\r\n            if (legendContainer && dataItems.length > 0) {\r\n                var legendHTML = '';\r\n                dataItems.forEach((item, index) => {\r\n                    var color = colors[index % colors.length];\r\n                    var percent = total > 0 ? Math.round((item.Total / total) * 100) : 0;\r\n                    legendHTML += `\r\n                        <div class=\"legend-item\">\r\n                            <div class=\"legend-color\" style=\"background: ${color}\"></div>\r\n                            <span>${item.StatusName}: ${item.Total} (${percent}%)</span>\r\n                        </div>\r\n                    `;\r\n                });\r\n                legendContainer.innerHTML = legendHTML;\r\n            }\r\n        }\r\n        function loadFilterOptions() {\r\n            var _loginID = (typeof LoginID !== 'undefined') ? LoginID : 0;\r\n            var _langID = (typeof LanguageID !== 'undefined') ? LanguageID : 'VN';\r\n\r\n            // Load Customers\r\n            AjaxHPAParadise({\r\n                data: {\r\n                    name: \"sp_getCustomerListForFilter\",\r\n                    param: [\"LoginID\", _loginID, \"LanguageID\", _langID]\r\n                },\r\n                success: function (res) {\r\n                    try {\r\n                        var response = (typeof res === \"string\") ? JSON.parse(res) : res;\r\n                        var select = document.getElementById('filterCustomer');\r\n                        if (response.data && response.data[0]) {\r\n                            response.data[0].forEach(function(item) {\r\n                                var option = document.createElement('option');\r\n                                option.value = item.CustomerID;\r\n                                option.text = item.CustomerName;\r\n select.add(option);\r\n                            });\r\n   }\r\n                    } catch(e) {\r\n                        console.error(\"Load Customer Error:\", e);\r\n                    }\r\n                }\r\n            });\r\n\r\n            // Load Support Staff\r\n            AjaxHPAParadise({\r\n                data: {\r\n                    name: \"sp_getSupportStaffListForFilter\",\r\n                    param: [\"LoginID\", _loginID, \"LanguageID\", _langID]\r\n                },\r\n                success: function (res) {\r\n                    try {\r\n                        var response = (typeof res === \"string\") ? JSON.parse(res) : res;\r\n                        var select = document.getElementById('filterSupport');\r\n                        if (response.data && response.data[0]) {\r\n                            response.data[0].forEach(function(item) {\r\n                                var option = document.createElement('option');\r\n                                option.value = item.StaffID;\r\n                                option.text = item.StaffName;\r\n                                select.add(option);\r\n\r\n                            });\r\n                        }\r\n                    } catch(e) {\r\n                        console.error(\"Load Support Staff Error:\", e);\r\n  }\r\n                }\r\n      });\r\n        }\r\n        // --- 3. Hàm render danh sách Stat ---\r\n        function renderStatList(containerId, title, data, labelField, valueField, subValue) {\r\n            var container = document.getElementById(containerId);\r\n            if (!container) return;\r\n            var html = '<div class=\"card-title\">' + title + '</div>';\r\n            if (!data || data.length === 0) {\r\n                html += '<div style=\"padding:10px;text-align:center;color:#999;font-size:12px\">Không có dữ liệu</div>';\r\n            } else {\r\n                data.forEach(function(item) {\r\n                    var valStr = item[valueField];\r\n                    if (subValue && item[subValue] > 0) {\r\n                         var pct = Math.round((item[valueField] / item[subValue]) * 100);\r\n              valStr += ' (' + pct + '%)';\r\n                    }\r\n                    html += `<div class=\"info-item\"><span class=\"info-label\">${item[labelField]}</span><span class=\"info-value\">${valStr}</span></div>`;\r\n                });\r\n            }\r\n            container.innerHTML = html;\r\n        }\r\n\r\n        // --- 4. Hàm render Ticket List (Đã sửa onclick và truyền ID) ---\r\n        function renderTicketList(containerId, title, data, isHighPriority, currentLoginID) {\r\n            var container = document.getElementById(containerId);\r\n            if (!container) return;\r\n\r\n            var titleStyle = isHighPriority ? 'style=\"color:#dc2626\"' : '';\r\n            var html = `<div class=\"card-title\" ${titleStyle}>\r\n                            <span>${title}</span>\r\n\r\n                        </div>`;\r\n\r\n            if (!data || data.length === 0) {\r\n                html += '<div style=\"padding:15px;text-align:center;color:#999;font-size:12px\">Không có dữ liệu</div>';\r\n            } else {\r\n                var displayData = data.slice(0, 3);\r\n                displayData.forEach(function(item) {\r\n                    var avatarStyle = isHighPriority\r\n                        ? 'color:#dc2626; border-color: #fecaca; background: #fef2f2;'\r\n                        : 'background: white; border-color: #e2e8f0; color: #64748b;';\r\n\r\n                    var icon = isHighPriority\r\n                        ? '<svg width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><circle cx=\"12\" cy=\"12\" r=\"10\"></circle><line x1=\"12\" y1=\"8\" x2=\"12\" y2=\"12\"></line><line x1=\"12\" y1=\"16\" x2=\"12.01\" y2=\"16\"></line></svg>'\r\n                        : '<svg width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z\"></path><polyline points=\"14 2 14 8 20 8\"></polyline><line x1=\"16\" y1=\"13\" x2=\"8\" y2=\"13\"></line><line x1=\"16\" y1=\"17\" x2=\"8\" y2=\"17\"></line><polyline points=\"10 9 9 9 8 9\"></polyline></svg>';\r\n\r\n                    var dateObj = new Date(item.CreatedDate);\r\n                    var dateStr = dateObj.getDate() + '/' + (dateObj.getMonth() + 1);\r\n\r\n                    // SỬA: Truyền TicketID dạng primitive thay vì object để openFormParam có thể map giá trị đúng\r\n                    html += `\r\n                    <div class=\"user-item\"\r\n                         style=\"cursor: pointer;\"\r\n                         onclick=\"window.openParadiseForm('sp_Ticket_Message', { TicketID: ${item.TicketID} })\">\r\n                        <div class=\"user-avatar\" style=\"${avatarStyle}\">${icon}</div>\r\n                        <div class=\"user-info\">\r\n                            <div class=\"ticket-title-text\" title=\"${item.ShortDescription}\">${item.ShortDescription}</div>\r\n                            <div class=\"ticket-sub-row\">\r\n                                <span>${item.AssignedTo || 'Chưa chỉ định'}</span>\r\n                                <span class=\"ticket-sub-divider\">|</span>\r\n                        <span>${dateStr}</span>\r\n            </div>\r\n                        </div>\r\n                        ${isHighPriority ? '<span class=\"status-badge\" style=\"color:#dc2626; border-color: #fecaca;\">Cao</span>' : ''}\r\n                    </div>`;\r\n                });\r\n            }\r\n            container.innerHTML = html;\r\n        }\r\n\r\n        // --- MAIN FUNCTION ---\r\n        window.loadDashboardDataTicket = function() {\r\n            console.log(123);\r\n            var _loginID = (typeof LoginID !== 'undefined') ? LoginID : 0;\r\n            var _langID = (typeof LanguageID !== 'undefined') ? LanguageID : 'VN';\r\n\r\n            AjaxHPAParadise({\r\n                data: {\r\n                    name: \"sp_getTicketListDashboard\",\r\n                    param: [\r\n                        \"LoginID\", _loginID,\r\n                        \"LanguageID\", _langID,\r\n                        \"FromDate\", filterState.fromDate || '',\r\n                        \"ToDate\", filterState.toDate || '',\r\n                        \"CustomerID\", filterState.customerID || 0,\r\n                        \"SupportStaffID\", filterState.supportID || 0\r\n                    ]\r\n                },\r\n                success: function (res) {\r\n                    console.log('[Dashboard] ✅ API trả về response raw:', res);\r\n                    try {\r\n                        var response = (typeof res === \"string\") ? JSON.parse(res) : res;\r\n                        console.log(response);\r\n                        if (!response.data || response.data.length === 0) return;\r\n\r\n                        // 1. Stats\r\n                        var stats = response.data[0][0];\r\n                        if (stats) {\r\n                            if(document.getElementById(\"lbl_TotalTickets\")) document.getElementById(\"lbl_TotalTickets\").innerText = stats.TotalTickets;\r\n                            if(document.getElementById(\"lbl_ProcessingTickets\")) document.getElementById(\"lbl_ProcessingTickets\").innerText = stats.ProcessingTickets;\r\n                            if(document.getElementById(\"lbl_CompletedTickets\")) document.getElementById(\"lbl_CompletedTickets\").innerText = stats.CompletedTickets;\r\n                        }\r\n\r\n                        // 2. Charts\r\n                        var chartData = response.data[1];\r\n                        console.log(\"chartData\", chartData)\r\n                        if (chartData) {\r\n      // SQL đã trả về đủ 12 tháng nên không cần reverse() hay xử lý mảng\r\n          // Đảm bảo SQL trả về thứ tự tháng 1 -> 12\r\n                            var labels = chartData.map(d => d.Label);\r\n                            var values = chartData.map(d => d.Total);\r\n\r\n                            // Gọi hàm vẽ biểu đồ cột thay vì lineChart\r\n                            drawBarChart(labels, values);\r\n                        }\r\n\r\n                        var donutData = response.data[2];\r\n                        if (donutData) drawDonutChart(donutData);\r\n\r\n                        // 3. Lists\r\n                        var totalT = stats ? stats.TotalTickets : 0;\r\n                        if(response.data[3]) {\r\n                            var priorityData = response.data[3].map(item => ({...item, TotalAll: totalT}));\r\n                            renderStatList(\"list_priority_stats\", \"Tỷ lệ theo mức độ\", priorityData, \"LevelName\", \"Total\", \"TotalAll\");\r\n                        }\r\n                        if(response.data[4]) {\r\n                            var deptData = response.data[4].map(item => ({...item, TotalAll: totalT}));\r\n                  renderStatList(\"list_dept_stats\", \"Theo phòng ban\", deptData, \"DepartmentName\", \"Total\", \"TotalAll\");\r\n                        }\r\n\r\n                        // 4. Ticket Lists (SỬA: Thêm kiểm tra null || [])\r\n                        var listData = response.data[5] || [];\r\n\r\n                        // Render Ticket Mới Nhất\r\n                        renderTicketList(\"list_recent_tickets\", \"Ticket Mới Nhất\", listData, false, _loginID);\r\n\r\n                        // Render Ticket Ưu Tiên Cao (Lọc an toàn)\r\n                        var highPriorityData = listData.filter(x => x.LevelName && (x.LevelName.includes(\"Cao\") || x.LevelName.includes(\"High\")));\r\n                        renderTicketList(\"list_high_priority\", \"Ticket Ưu Tiên Cao\", highPriorityData, true, _loginID);\r\n\r\n                        if(response.data[6] && response.data[6].length > 0) {\r\n                            var companyName = response.data[6][0][Object.keys(response.data[6][0])[0]]; // Lấy giá trị cột đầu tiên\r\n                            if(document.getElementById(\"companyName\")) {\r\n                                document.getElementById(\"companyName\").innerText = companyName || 'Paradise HR';\r\n                            }\r\n                        }\r\n                    } catch (e) {\r\n                        console.error(\"Dashboard Error:\", e);\r\n                    }\r\n                }\r\n            });\r\n        }\r\n        initDefaultDateRange();\r\n        loadFilterOptions();\r\n        loadDashboardDataTicket();\r\n\r\n        window.addEventListener(\"resize\", function() { loadDashboardDataTicket(); });\r\n    })();\r\n</script>\r\n\t\t</div>\r\n\t",
+              "bytes_filename": "sp_dashboard_home_new_customer.html"
+            }
+          ]
+        ],
+        "dataSchema": [
+          [
+            {
+              "name": "bytes",
+              "type": "System.String"
+            },
+            {
+              "name": "bytes_filename",
+              "type": "System.String"
+            }
+          ]
+        ]
+      },
+      "timestamp": "2026-10-16T02:34:39.824Z"
+    },
+    {
+      "type": "request",
+      "url": "https://paradisehrm.com/Tai3/hpa/paradise2",
+      "method": "POST",
+      "resourceType": "fetch",
+      "postData": {
+        "content": "02xY5O3N3CIcOd20zC0/ATOZWT00Qk6gu0O5yKQbIIEcfCdU/s8ytsWyvFSnIpV6f8iCZwbnFviSY4mViS/reIAe350jXqD0APv3lxYIsZfMljF7zN3npoBJDKSrsf+kQiTqIMeqNrzomX8S1Hyvo8f4G0HCrlZ2CENcB73W1/ouzGTW2LxDmj09ndA+d4bRXlzu2lVbXFnL1x51Ifrcf1GfrhmJftsUZLJTFLHcbVUED8+Kb2SJncFXeFF1Mp3nlUYEcOjI4SAElpaXJ/HF8Yn6nIexv/3Ng9/aMcCNDHSKbMexcLQTec1WehVFTcoNcY6Zwze5iOxE1Bswc8Ty0IPqVGPlush2LqUcg3MXRZSAKnf2anyP71aSFMf3BietAAKp6eHBMa8=",
+        "paradiseType": "2"
+      },
+      "timestamp": "2026-10-16T02:34:39.894Z"
+    },
+    {
+      "type": "request",
+      "url": "https://paradisehrm.com/Tai3/hpa/paradise2",
+      "method": "POST",
+      "resourceType": "fetch",
+      "postData": {
+        "content": "02xY5O3N3CIcOd20zC0/ATOZWT00Qk6gu0O5yKQbIIEcfCdU/s8ytsWyvFSnIpV6f8iCZwbnFviSY4mViS/reIAe350jXqD0APv3lxYIsZfMljF7zN3npoBJDKSrsf+kQiTqIMeqNrzomX8S1Hyvo8f4G0HCrlZ2CENcB73W1/ouzGTW2LxDmj09ndA+d4bRXlzu2lVbXFnL1x51Ifrcf1GfrhmJftsUZLJTFLHcbVUED8+Kb2SJncFXeFF1Mp3nlUYEcOjI4SAElpaXJ/HF8Yn6nIexv/3Ng9/aMcCNDHSKbMexcLQTec1WehVFTcoNcY6Zwze5iOxE1Bswc8Ty0IPqVGPlush2LqUcg3MXRZSAKnf2anyP71aSFMf3BietAAKp6eHBMa8=",
+        "paradiseType": "2"
+      },
+      "timestamp": "2026-10-16T02:34:39.902Z"
+    },
+    {
+      "type": "response",
+      "url": "https://paradisehrm.com/Tai3/hpa/paradise2",
+      "status": 200,
+      "responseBody": {
+        "result": "success",
+        "reason": "",
+        "data": [
+          [
+            {
+              "ParadiseVersion": "2115056208"
+            }
+          ]
+        ],
+        "dataSchema": [
+          [
+            {
+              "name": "ParadiseVersion",
+              "type": "System.String"
+            }
+          ]
+        ]
+      },
+      "timestamp": "2026-10-16T02:34:39.909Z"
+    },
+    {
+      "type": "response",
+      "url": "https://paradisehrm.com/Tai3/hpa/paradise2",
+      "status": 200,
+      "responseBody": {
+        "result": "success",
+        "reason": "",
+        "data": [
+          [
+            {
+              "CustomerID": 21933,
+              "CustomerName": "CÔNG TY CỔ PHẦN DƯỢC PHẨM VĨNH PHÚC"
+            },
+            {
+              "CustomerID": 24313,
+              "CustomerName": "CÔNG TY TNHH AMOREPACIFIC VIỆT NAM"
+            },
+            {
+              "CustomerID": 24331,
+              "CustomerName": "CÔNG TY TNHH BOYD VIỆT NAM"
+            },
+            {
+              "CustomerID": 34936,
+              "CustomerName": "CÔNG TY TNHH CHÂN TRỜI XANH"
+            },
+            {
+              "CustomerID": 24346,
+              "CustomerName": "CÔNG TY TNHH DỆT KIM JUNZU VIỆT NAM"
+            },
+            {
+              "CustomerID": 33937,
+              "CustomerName": "CÔNG TY TNHH DỊCH VỤ NHÂN SỰ LINKS VN"
+            },
+            {
+              "CustomerID": 22184,
+              "CustomerName": "CÔNG TY TNHH HỆ THỐNG TRUYỀN ĐỘNG NIDEC (VIỆT NAM)"
+            },
+            {
+              "CustomerID": 21922,
+              "CustomerName": "CÔNG TY TNHH HÓA DƯỢC SHIZENCOS"
+            },
+            {
+              "CustomerID": 24317,
+              "CustomerName": "CÔNG TY TNHH KINH DOANH DỊCH VỤ LINKS VIỆT NAM"
+            },
+            {
+              "CustomerID": 32058,
+              "CustomerName": "CÔNG TY TNHH LUCKY DRAGON VIỆT NAM"
+            },
+            {
+              "CustomerID": 22233,
+              "CustomerName": "CÔNG TY TNHH MANPOWER VIỆT NAM"
+            },
+            {
+              "CustomerID": 16198,
+              "CustomerName": "CÔNG TY TNHH MTV TÔN LÂM QUÝ"
+            },
+            {
+              "CustomerID": 22175,
+              "CustomerName": "CÔNG TY TNHH NIDEC ADVANCED MOTOR (VIỆT NAM)"
+            },
+            {
+              "CustomerID": 24361,
+              "CustomerName": "CÔNG TY TNHH SẢN PHẨM THỂ THAO HUA XING"
+            },
+            {
+              "CustomerID": 21925,
+              "CustomerName": "CÔNG TY TNHH SUMIDENSO VIỆT NAM"
+            },
+            {
+              "CustomerID": 21907,
+              "CustomerName": "HỘ KINH DOANH EVA VILLAGE"
+            },
+            {
+              "CustomerID": 18287,
+              "CustomerName": "LOTTE VIETNAM CO.,LTD"
+            }
+          ]
+        ],
+        "dataSchema": [
+          [
+            {
+              "name": "CustomerID",
+              "type": "System.Int32"
+            },
+            {
+              "name": "CustomerName",
+              "type": "System.String"
+            }
+          ]
+        ]
+      },
+      "timestamp": "2026-10-16T02:34:39.978Z"
+    },
+    {
+      "type": "response",
+      "url": "https://paradisehrm.com/Tai3/hpa/paradise2",
+      "status": 200,
+      "responseBody": {
+        "result": "success",
+        "reason": "",
+        "data": [
+          [
+            {
+              "TotalTickets": 0,
+              "NewTicketsThisMonth": null,
+              "ProcessingTickets": null,
+              "CompletedTickets": null
+            }
+          ],
+          [
+            {
+              "Label": "Tháng 1",
+              "Total": 0
+            },
+            {
+              "Label": "Tháng 2",
+              "Total": 0
+            },
+            {
+              "Label": "Tháng 3",
+              "Total": 3
+            },
+            {
+              "Label": "Tháng 4",
+              "Total": 0
+            },
+            {
+              "Label": "Tháng 5",
+              "Total": 3
+            },
+            {
+              "Label": "Tháng 6",
+              "Total": 87
+            },
+            {
+              "Label": "Tháng 7",
+              "Total": 119
+            },
+            {
+              "Label": "Tháng 8",
+              "Total": 69
+            },
+            {
+              "Label": "Tháng 9",
+              "Total": 91
+            },
+            {
+              "Label": "Tháng 10",
+              "Total": 0
+            },
+            {
+              "Label": "Tháng 11",
+              "Total": 0
+            },
+            {
+              "Label": "Tháng 12",
+              "Total": 0
+            }
+          ],
+          [],
+          [],
+          [],
+          [],
+          [
+            {
+              "CompanyFullName": "VIET TIN SOFTWARE SOLUTION COMPANY LIMITED"
+            }
+          ]
+        ],
+        "dataSchema": [
+          [
+            {
+              "name": "TotalTickets",
+              "type": "System.Int32"
+            },
+            {
+              "name": "NewTicketsThisMonth",
+              "type": "System.Int32"
+            },
+            {
+              "name": "ProcessingTickets",
+              "type": "System.Int32"
+            },
+            {
+              "name": "CompletedTickets",
+              "type": "System.Int32"
+            }
+          ],
+          [
+            {
+              "name": "Label",
+              "type": "System.String"
+            },
+            {
+              "name": "Total",
+              "type": "System.Int32"
+            }
+          ],
+          [
+            {
+              "name": "TicketStatusID",
+              "type": "System.Int32"
+            },
+            {
+              "name": "StatusName",
+              "type": "System.String"
+            },
+            {
+              "name": "Total",
+              "type": "System.Int32"
+            }
+          ],
+          [
+            {
+              "name": "SupportLevelID",
+              "type": "System.Int32"
+            },
+            {
+              "name": "LevelName",
+              "type": "System.String"
+            },
+            {
+              "name": "Total",
+              "type": "System.Int32"
+            }
+          ],
+          [
+            {
+              "name": "DepartmentName",
+              "type": "System.String"
+            },
+            {
+              "name": "Total",
+              "type": "System.Int32"
+            }
+          ],
+          [
+            {
+              "name": "TicketID",
+              "type": "System.Int32"
+            },
+            {
+              "name": "ShortDescription",
+              "type": "System.String"
+            },
+            {
+              "name": "CreatedBy",
+              "type": "System.String"
+            },
+            {
+              "name": "AssignedTo",
+              "type": "System.String"
+            },
+            {
+              "name": "CreatedDate",
+              "type": "System.DateTime"
+            },
+            {
+              "name": "StatusName",
+              "type": "System.String"
+            },
+            {
+              "name": "LevelName",
+              "type": "System.String"
+            }
+          ],
+          [
+            {
+              "name": "CompanyFullName",
+              "type": "System.String"
+            }
+          ]
+        ]
+      },
+      "timestamp": "2026-10-16T02:34:40.011Z"
+    },
+    {
+      "type": "response",
+      "url": "https://paradisehrm.com/Tai3/hpa/paradise2",
+      "status": 200,
+      "responseBody": {
+        "result": "success",
+        "reason": "",
+        "data": [
+          [
+            {
+              "CustomerID": 21933,
+              "CustomerName": "CÔNG TY CỔ PHẦN DƯỢC PHẨM VĨNH PHÚC"
+            },
+            {
+              "CustomerID": 24313,
+              "CustomerName": "CÔNG TY TNHH AMOREPACIFIC VIỆT NAM"
+            },
+            {
+              "CustomerID": 24331,
+              "CustomerName": "CÔNG TY TNHH BOYD VIỆT NAM"
+            },
+            {
+              "CustomerID": 34936,
+              "CustomerName": "CÔNG TY TNHH CHÂN TRỜI XANH"
+            },
+            {
+              "CustomerID": 24346,
+              "CustomerName": "CÔNG TY TNHH DỆT KIM JUNZU VIỆT NAM"
+            },
+            {
+              "CustomerID": 33937,
+              "CustomerName": "CÔNG TY TNHH DỊCH VỤ NHÂN SỰ LINKS VN"
+            },
+            {
+              "CustomerID": 22184,
+              "CustomerName": "CÔNG TY TNHH HỆ THỐNG TRUYỀN ĐỘNG NIDEC (VIỆT NAM)"
+            },
+            {
+              "CustomerID": 21922,
+              "CustomerName": "CÔNG TY TNHH HÓA DƯỢC SHIZENCOS"
+            },
+            {
+              "CustomerID": 24317,
+              "CustomerName": "CÔNG TY TNHH KINH DOANH DỊCH VỤ LINKS VIỆT NAM"
+            },
+            {
+              "CustomerID": 32058,
+              "CustomerName": "CÔNG TY TNHH LUCKY DRAGON VIỆT NAM"
+            },
+            {
+              "CustomerID": 22233,
+              "CustomerName": "CÔNG TY TNHH MANPOWER VIỆT NAM"
+            },
+            {
+              "CustomerID": 16198,
+              "CustomerName": "CÔNG TY TNHH MTV TÔN LÂM QUÝ"
+            },
+            {
+              "CustomerID": 22175,
+              "CustomerName": "CÔNG TY TNHH NIDEC ADVANCED MOTOR (VIỆT NAM)"
+            },
+            {
+              "CustomerID": 24361,
+              "CustomerName": "CÔNG TY TNHH SẢN PHẨM THỂ THAO HUA XING"
+            },
+            {
+              "CustomerID": 21925,
+              "CustomerName": "CÔNG TY TNHH SUMIDENSO VIỆT NAM"
+            },
+            {
+              "CustomerID": 21907,
+              "CustomerName": "HỘ KINH DOANH EVA VILLAGE"
+            },
+            {
+              "CustomerID": 18287,
+              "CustomerName": "LOTTE VIETNAM CO.,LTD"
+            }
+          ]
+        ],
+        "dataSchema": [
+          [
+            {
+              "name": "CustomerID",
+              "type": "System.Int32"
+            },
+            {
+              "name": "CustomerName",
+              "type": "System.String"
+            }
+          ]
+        ]
+      },
+      "timestamp": "2026-10-16T02:34:40.020Z"
+    },
+    {
+      "type": "response",
+      "url": "https://paradisehrm.com/Tai3/hpa/paradise2",
+      "status": 200,
+      "responseBody": {
+        "result": "success",
+        "reason": "",
+        "data": [
+          [
+            {
+              "TotalTickets": 0,
+              "NewTicketsThisMonth": null,
+              "ProcessingTickets": null,
+              "CompletedTickets": null
+            }
+          ],
+          [
+            {
+              "Label": "Tháng 1",
+              "Total": 0
+            },
+            {
+              "Label": "Tháng 2",
+              "Total": 0
+            },
+            {
+              "Label": "Tháng 3",
+              "Total": 3
+            },
+            {
+              "Label": "Tháng 4",
+              "Total": 0
+            },
+            {
+              "Label": "Tháng 5",
+              "Total": 3
+            },
+            {
+              "Label": "Tháng 6",
+              "Total": 87
+            },
+            {
+              "Label": "Tháng 7",
+              "Total": 119
+            },
+            {
+              "Label": "Tháng 8",
+              "Total": 69
+            },
+            {
+              "Label": "Tháng 9",
+              "Total": 91
+            },
+            {
+              "Label": "Tháng 10",
+              "Total": 0
+            },
+            {
+              "Label": "Tháng 11",
+              "Total": 0
+            },
+            {
+              "Label": "Tháng 12",
+              "Total": 0
+            }
+          ],
+          [],
+          [],
+          [],
+          [],
+          [
+            {
+              "CompanyFullName": "VIET TIN SOFTWARE SOLUTION COMPANY LIMITED"
+            }
+          ]
+        ],
+        "dataSchema": [
+          [
+            {
+              "name": "TotalTickets",
+              "type": "System.Int32"
+            },
+            {
+              "name": "NewTicketsThisMonth",
+              "type": "System.Int32"
+            },
+            {
+              "name": "ProcessingTickets",
+              "type": "System.Int32"
+            },
+            {
+              "name": "CompletedTickets",
+              "type": "System.Int32"
+            }
+          ],
+          [
+            {
+              "name": "Label",
+              "type": "System.String"
+            },
+            {
+              "name": "Total",
+              "type": "System.Int32"
+            }
+          ],
+          [
+            {
+              "name": "TicketStatusID",
+              "type": "System.Int32"
+            },
+            {
+              "name": "StatusName",
+              "type": "System.String"
+            },
+            {
+              "name": "Total",
+              "type": "System.Int32"
+            }
+          ],
+          [
+            {
+              "name": "SupportLevelID",
+              "type": "System.Int32"
+            },
+            {
+              "name": "LevelName",
+              "type": "System.String"
+            },
+            {
+              "name": "Total",
+              "type": "System.Int32"
+            }
+          ],
+          [
+            {
+              "name": "DepartmentName",
+              "type": "System.String"
+            },
+            {
+              "name": "Total",
+              "type": "System.Int32"
+            }
+          ],
+          [
+            {
+              "name": "TicketID",
+              "type": "System.Int32"
+            },
+            {
+              "name": "ShortDescription",
+              "type": "System.String"
+            },
+            {
+              "name": "CreatedBy",
+              "type": "System.String"
+            },
+            {
+              "name": "AssignedTo",
+              "type": "System.String"
+            },
+            {
+              "name": "CreatedDate",
+              "type": "System.DateTime"
+            },
+            {
+              "name": "StatusName",
+              "type": "System.String"
+            },
+            {
+              "name": "LevelName",
+              "type": "System.String"
+            }
+          ],
+          [
+            {
+              "name": "CompanyFullName",
+              "type": "System.String"
+            }
+          ]
+        ]
+      },
+      "timestamp": "2026-10-16T02:34:40.033Z"
+    },
+    {
+      "type": "response",
+      "url": "https://paradisehrm.com/Tai3/hpa/paradise2",
+      "status": 200,
+      "responseBody": {
+        "result": "success",
+        "reason": "",
+        "data": [
+          [
+            {
+              "TotalTickets": 0,
+              "NewTicketsThisMonth": null,
+              "ProcessingTickets": null,
+              "CompletedTickets": null
+            }
+          ],
+          [
+            {
+              "Label": "Tháng 1",
+              "Total": 0
+            },
+            {
+              "Label": "Tháng 2",
+              "Total": 0
+            },
+            {
+              "Label": "Tháng 3",
+              "Total": 3
+            },
+            {
+              "Label": "Tháng 4",
+              "Total": 0
+            },
+            {
+              "Label": "Tháng 5",
+              "Total": 3
+            },
+            {
+              "Label": "Tháng 6",
+              "Total": 87
+            },
+            {
+              "Label": "Tháng 7",
+              "Total": 119
+            },
+            {
+              "Label": "Tháng 8",
+              "Total": 69
+            },
+            {
+              "Label": "Tháng 9",
+              "Total": 91
+            },
+            {
+              "Label": "Tháng 10",
+              "Total": 0
+            },
+            {
+              "Label": "Tháng 11",
+              "Total": 0
+            },
+            {
+              "Label": "Tháng 12",
+              "Total": 0
+            }
+          ],
+          [],
+          [],
+          [],
+          [],
+          [
+            {
+              "CompanyFullName": "VIET TIN SOFTWARE SOLUTION COMPANY LIMITED"
+            }
+          ]
+        ],
+        "dataSchema": [
+          [
+            {
+              "name": "TotalTickets",
+              "type": "System.Int32"
+            },
+            {
+              "name": "NewTicketsThisMonth",
+              "type": "System.Int32"
+            },
+            {
+              "name": "ProcessingTickets",
+              "type": "System.Int32"
+            },
+            {
+              "name": "CompletedTickets",
+              "type": "System.Int32"
+            }
+          ],
+          [
+            {
+              "name": "Label",
+              "type": "System.String"
+            },
+            {
+              "name": "Total",
+              "type": "System.Int32"
+            }
+          ],
+          [
+            {
+              "name": "TicketStatusID",
+              "type": "System.Int32"
+            },
+            {
+              "name": "StatusName",
+              "type": "System.String"
+            },
+            {
+              "name": "Total",
+              "type": "System.Int32"
+            }
+          ],
+          [
+            {
+              "name": "SupportLevelID",
+              "type": "System.Int32"
+            },
+            {
+              "name": "LevelName",
+              "type": "System.String"
+            },
+            {
+              "name": "Total",
+              "type": "System.Int32"
+            }
+          ],
+          [
+            {
+              "name": "DepartmentName",
+              "type": "System.String"
+            },
+            {
+              "name": "Total",
+              "type": "System.Int32"
+            }
+          ],
+          [
+            {
+              "name": "TicketID",
+              "type": "System.Int32"
+            },
+            {
+              "name": "ShortDescription",
+              "type": "System.String"
+            },
+            {
+              "name": "CreatedBy",
+              "type": "System.String"
+            },
+            {
+              "name": "AssignedTo",
+              "type": "System.String"
+            },
+            {
+              "name": "CreatedDate",
+              "type": "System.DateTime"
+            },
+            {
+              "name": "StatusName",
+              "type": "System.String"
+            },
+            {
+              "name": "LevelName",
+              "type": "System.String"
+            }
+          ],
+          [
+            {
+              "name": "CompanyFullName",
+              "type": "System.String"
+            }
+          ]
+        ]
+      },
+      "timestamp": "2026-10-16T02:34:40.033Z"
+    },
+    {
+      "type": "response",
+      "url": "https://paradisehrm.com/Tai3/hpa/paradise2",
+      "status": 200,
+      "responseBody": {
+        "result": "success",
+        "reason": "",
+        "data": [
+          [
+            {
+              "StaffID": "006",
+              "StaffName": "HÀ PHI HÙNG"
+            },
+            {
+              "StaffID": "041",
+              "StaffName": "Hứa Vĩnh Đức"
+            },
+            {
+              "StaffID": "003",
+              "StaffName": "LÊ MINH TRÍ"
+            },
+            {
+              "StaffID": "068",
+              "StaffName": "LÊ VĂN TÚC"
+            },
+            {
+              "StaffID": "004",
+              "StaffName": "NGUYỄN MINH TRÍ"
+            },
+            {
+              "StaffID": "045",
+              "StaffName": "NGUYỄN THẮNG"
+            },
+            {
+              "StaffID": "047",
+              "StaffName": "NGUYỄN VĂN THÔNG"
+            },
+            {
+              "StaffID": "034",
+              "StaffName": "TRẦN KHÁNH LY"
+            },
+            {
+              "StaffID": "029",
+              "StaffName": "TRẦN TRUNG HIẾU"
+            },
+            {
+              "StaffID": "014",
+              "StaffName": "VŨ ĐÌNH CƯỜNG"
+            }
+          ]
+        ],
+        "dataSchema": [
+          [
+            {
+              "name": "StaffID",
+              "type": "System.String"
+            },
+            {
+              "name": "StaffName",
+              "type": "System.String"
+            }
+          ]
+        ]
+      },
+      "timestamp": "2026-10-16T02:34:40.094Z"
+    },
+    {
+      "type": "response",
+      "url": "https://paradisehrm.com/Tai3/hpa/paradise2",
+      "status": 200,
+      "responseBody": {
+        "result": "success",
+        "reason": "",
+        "data": [
+          [
+            {
+              "TotalTickets": 0,
+              "NewTicketsThisMonth": null,
+              "ProcessingTickets": null,
+              "CompletedTickets": null
+            }
+          ],
+          [
+            {
+              "Label": "Tháng 1",
+              "Total": 0
+            },
+            {
+              "Label": "Tháng 2",
+              "Total": 0
+            },
+            {
+              "Label": "Tháng 3",
+              "Total": 3
+            },
+            {
+              "Label": "Tháng 4",
+              "Total": 0
+            },
+            {
+              "Label": "Tháng 5",
+              "Total": 3
+            },
+            {
+              "Label": "Tháng 6",
+              "Total": 87
+            },
+            {
+              "Label": "Tháng 7",
+              "Total": 119
+            },
+            {
+              "Label": "Tháng 8",
+              "Total": 69
+            },
+            {
+              "Label": "Tháng 9",
+              "Total": 91
+            },
+            {
+              "Label": "Tháng 10",
+              "Total": 0
+            },
+            {
+              "Label": "Tháng 11",
+              "Total": 0
+            },
+            {
+              "Label": "Tháng 12",
+              "Total": 0
+            }
+          ],
+          [],
+          [],
+          [],
+          [],
+          [
+            {
+              "CompanyFullName": "VIET TIN SOFTWARE SOLUTION COMPANY LIMITED"
+            }
+          ]
+        ],
+        "dataSchema": [
+          [
+            {
+              "name": "TotalTickets",
+              "type": "System.Int32"
+            },
+            {
+              "name": "NewTicketsThisMonth",
+              "type": "System.Int32"
+            },
+            {
+              "name": "ProcessingTickets",
+              "type": "System.Int32"
+            },
+            {
+              "name": "CompletedTickets",
+              "type": "System.Int32"
+            }
+          ],
+          [
+            {
+              "name": "Label",
+              "type": "System.String"
+            },
+            {
+              "name": "Total",
+              "type": "System.Int32"
+            }
+          ],
+          [
+            {
+              "name": "TicketStatusID",
+              "type": "System.Int32"
+            },
+            {
+              "name": "StatusName",
+              "type": "System.String"
+            },
+            {
+              "name": "Total",
+              "type": "System.Int32"
+            }
+          ],
+          [
+            {
+              "name": "SupportLevelID",
+              "type": "System.Int32"
+            },
+            {
+              "name": "LevelName",
+              "type": "System.String"
+            },
+            {
+              "name": "Total",
+              "type": "System.Int32"
+            }
+          ],
+          [
+            {
+              "name": "DepartmentName",
+              "type": "System.String"
+            },
+            {
+              "name": "Total",
+              "type": "System.Int32"
+            }
+          ],
+          [
+            {
+              "name": "TicketID",
+              "type": "System.Int32"
+            },
+            {
+              "name": "ShortDescription",
+              "type": "System.String"
+            },
+            {
+              "name": "CreatedBy",
+              "type": "System.String"
+            },
+            {
+              "name": "AssignedTo",
+              "type": "System.String"
+            },
+            {
+              "name": "CreatedDate",
+              "type": "System.DateTime"
+            },
+            {
+              "name": "StatusName",
+              "type": "System.String"
+            },
+            {
+              "name": "LevelName",
+              "type": "System.String"
+            }
+          ],
+          [
+            {
+              "name": "CompanyFullName",
+              "type": "System.String"
+            }
+          ]
+        ]
+      },
+      "timestamp": "2026-10-16T02:34:40.094Z"
+    },
+    {
+      "type": "response",
+      "url": "https://paradisehrm.com/Tai3/hpa/paradise2",
+      "status": 200,
+      "responseBody": {
+        "result": "success",
+        "reason": "",
+        "data": [
+          [
+            {
+              "StaffID": "006",
+              "StaffName": "HÀ PHI HÙNG"
+            },
+            {
+              "StaffID": "041",
+              "StaffName": "Hứa Vĩnh Đức"
+            },
+            {
+              "StaffID": "003",
+              "StaffName": "LÊ MINH TRÍ"
+            },
+            {
+              "StaffID": "068",
+              "StaffName": "LÊ VĂN TÚC"
+            },
+            {
+              "StaffID": "004",
+              "StaffName": "NGUYỄN MINH TRÍ"
+            },
+            {
+              "StaffID": "045",
+              "StaffName": "NGUYỄN THẮNG"
+            },
+            {
+              "StaffID": "047",
+              "StaffName": "NGUYỄN VĂN THÔNG"
+            },
+            {
+              "StaffID": "034",
+              "StaffName": "TRẦN KHÁNH LY"
+            },
+            {
+              "StaffID": "029",
+              "StaffName": "TRẦN TRUNG HIẾU"
+            },
+            {
+              "StaffID": "014",
+              "StaffName": "VŨ ĐÌNH CƯỜNG"
+            }
+          ]
+        ],
+        "dataSchema": [
+          [
+            {
+              "name": "StaffID",
+              "type": "System.String"
+            },
+            {
+              "name": "StaffName",
+              "type": "System.String"
+            }
+          ]
+        ]
+      },
+      "timestamp": "2026-10-16T02:34:40.094Z"
+    }
+  ]
+}

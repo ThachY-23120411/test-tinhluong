@@ -1,339 +1,53 @@
 {
-  "status": "passed",
-  "timestamp": "11:43:02 16/10/2026",
-  "totalTests": 5,
-  "pages": {
-    "crm_customer_data": [
-      {
-        "tcId": "TC-01",
-        "pageName": "crm_customer_data",
-        "title": "Kiểm tra Khởi động, Điều hướng và Thẩm định API Nạp Danh sách Khách hàng",
-        "testStatus": "PASSED",
-        "businessStatus": "PASSED",
-        "businessNotes": "PASS - Khởi động thành công, API nạp dữ liệu phản hồi HTTP 200 (Success) và DataGrid hiển thị 4 bản ghi khách hàng",
-        "failureAnalysis": {
-          "issue": "",
-          "expected": "",
-          "actual": "",
-          "rootCause": "",
-          "recommendation": ""
-        },
-        "status": "PASSED",
-        "duration": "40.90s",
-        "errors": "",
-        "stepScreenshots": [
-          {
-            "step": 1,
-            "title": "Đăng nhập thành công và mở trang chủ hệ thống Paradise HRM",
-            "fileName": "TC-01-step01-dang-nhap-thanh-cong-va-mo-trang-chu-he-thong-paradise-hrm.png",
-            "relPath": "crm_customer_data/TC-01/screenshots/TC-01-step01-dang-nhap-thanh-cong-va-mo-trang-chu-he-thong-paradise-hrm.png"
-          },
-          {
-            "step": 2,
-            "title": "Mở màn hình Dữ liệu khách hàng và thẩm định phản hồi API HTTP 200 thành công",
-            "fileName": "TC-01-step02-mo-man-hinh-du-lieu-khach-hang-va-tham-dinh-phan-hoi-api-http-200-thanh-cong.png",
-            "relPath": "crm_customer_data/TC-01/screenshots/TC-01-step02-mo-man-hinh-du-lieu-khach-hang-va-tham-dinh-phan-hoi-api-http-200-thanh-cong.png"
-          },
-          {
-            "step": 3,
-            "title": "Kiểm tra thanh công cụ Toolbar (Nút Thêm +, Tùy chọn ⋮, Tìm kiếm 🔍)",
-            "fileName": "TC-01-step03-kiem-tra-thanh-cong-cu-toolbar-nut-them-tuy-chon-tim-kiem.png",
-            "relPath": "crm_customer_data/TC-01/screenshots/TC-01-step03-kiem-tra-thanh-cong-cu-toolbar-nut-them-tuy-chon-tim-kiem.png"
-          },
-          {
-            "step": 4,
-            "title": "Kiểm tra cấu trúc DataGrid với các cột thông tin khách hàng chính",
-            "fileName": "TC-01-step04-kiem-tra-cau-truc-datagrid-voi-cac-cot-thong-tin-khach-hang-chinh.png",
-            "relPath": "crm_customer_data/TC-01/screenshots/TC-01-step04-kiem-tra-cau-truc-datagrid-voi-cac-cot-thong-tin-khach-hang-chinh.png"
-          },
-          {
-            "step": 5,
-            "title": "Xác nhận DataGrid hiển thị đầy đủ danh sách khách hàng khớp với dữ liệu API backend",
-            "fileName": "TC-01-step05-xac-nhan-datagrid-hien-thi-day-du-danh-sach-khach-hang-khop-voi-du-lieu-api-backend.png",
-            "relPath": "crm_customer_data/TC-01/screenshots/TC-01-step05-xac-nhan-datagrid-hien-thi-day-du-danh-sach-khach-hang-khop-voi-du-lieu-api-backend.png"
-          }
-        ],
-        "attachments": {
-          "screenshots": [
-            "crm_customer_data/TC-01/screenshots/TC-01-step01-dang-nhap-thanh-cong-va-mo-trang-chu-he-thong-paradise-hrm.png",
-            "crm_customer_data/TC-01/screenshots/TC-01-step02-mo-man-hinh-du-lieu-khach-hang-va-tham-dinh-phan-hoi-api-http-200-thanh-cong.png",
-            "crm_customer_data/TC-01/screenshots/TC-01-step03-kiem-tra-thanh-cong-cu-toolbar-nut-them-tuy-chon-tim-kiem.png",
-            "crm_customer_data/TC-01/screenshots/TC-01-step04-kiem-tra-cau-truc-datagrid-voi-cac-cot-thong-tin-khach-hang-chinh.png",
-            "crm_customer_data/TC-01/screenshots/TC-01-step05-xac-nhan-datagrid-hien-thi-day-du-danh-sach-khach-hang-khop-voi-du-lieu-api-backend.png"
-          ],
-          "videos": [
-            "crm_customer_data/TC-01/videos/video.webm"
-          ],
-          "traces": [
-            "crm_customer_data/TC-01/traces/trace.zip"
-          ]
-        },
-        "timestamp": "2026-10-16T04:40:38.146Z"
-      },
-      {
-        "tcId": "TC-02",
-        "pageName": "crm_customer_data",
-        "title": "Kiểm tra Bộ lọc Trạng thái (Chip lọc) & Phát hiện Lỗi Nghiệp vụ Mất Dữ liệu",
-        "testStatus": "PASSED",
-        "businessStatus": "FAILED",
-        "businessNotes": "FAIL - Bấm chip lọc trạng thái làm mất toàn bộ danh sách khách hàng và bấm lại Tất cả lần 2 không khôi phục được 4 bản ghi ban đầu (chỉ còn 4 dòng)",
-        "failureAnalysis": {
-          "issue": "Bấm chọn chip lọc trạng thái (Lead, Đã liên hệ...) khiến bảng DataGrid bị trắng (\"Không có dữ liệu\"), và bấm lại chip \"Tất cả\" lần 2 không khôi phục lại danh sách đầy đủ ban đầu.",
-          "expected": "Khi bấm chọn chip lọc \"Tất cả\" lần 2, hệ thống phải nạp lại đầy đủ toàn bộ danh sách khách hàng (16+ bản ghi ban đầu). Khi chọn các chip trạng thái (Lead, Đã liên hệ...), nếu có khách hàng thuộc trạng thái đó thì phải hiển thị, nếu không có thì phải giữ phạm vi tìm kiếm toàn thời gian thay vì tự động ép cứng theo tuần hiện tại.",
-          "actual": "Khi bấm chip Lead, DataGrid hiển thị \"Không có dữ liệu\" dù API trả về HTTP 200. Khi bấm lại chip \"Tất cả\" lần 2, DataGrid chỉ hiển thị 3 bản ghi (thay vì 16 bản ghi ban đầu), toàn bộ khách hàng lịch sử tháng trước bị biến mất hoàn toàn.",
-          "rootCause": "1) Hàm ReloadData() trong mã nguồn frontend tự động gán isViewAll = 0 khi bấm chip lọc và ép cứng tham số @FromDate, @ToDate theo khoảng thời gian tuần hiện tại (12/10/2026 - 19/10/2026), loại bỏ toàn bộ dữ liệu lịch sử.\n2) Mã phản hồi HTTP 200 của API /hpa/paradise2 che giấu lỗi backend: IIS luôn trả về HTTP 200 kể cả khi SQL Server trả mảng rỗng data: [[]] hoặc bị lỗi va chạm bảng tạm toàn cục ##sp_KPIgetDataCollection22VN.\n3) Khi bấm chip trạng thái, code tự động uncheck cờ #pillKPI... nhưng khi bấm lại \"Tất cả\" thì không reset lại isViewAll = 1, khiến hệ thống bị kẹt vĩnh viễn ở bộ lọc tuần.",
-          "recommendation": "1) Frontend: Trong hàm applyFilter(), khi chọn chip \"Tất cả\" (value == null), bắt buộc gán isViewAll = 1 để nạp toàn bộ dữ liệu toàn thời gian.\n2) Backend: Trong Stored Procedure sp_KPIgetDataCollection, loại bỏ bảng tạm toàn cục ## (tránh va chạm giữa các request đồng thời), thay bằng bảng tạm cục bộ # hoặc Table Variable có khối TRY...CATCH dọn dẹp bảng tạm.\n3) UI: Bổ sung nhãn hiển thị khoảng thời gian lọc trực quan cạnh thanh chip để người dùng nhận biết khi danh sách đang bị giới hạn theo ngày."
-        },
-        "status": "FAILED",
-        "duration": "38.79s",
-        "errors": "",
-        "stepScreenshots": [
-          {
-            "step": 1,
-            "title": "Giao diện ban đầu hiển thị đầy đủ 4 khách hàng trên DataGrid với chip Tất cả",
-            "fileName": "TC-02-step01-giao-dien-ban-dau-hien-thi-day-du-4-khach-hang-tren-datagrid-voi-chip-tat-ca.png",
-            "relPath": "crm_customer_data/TC-02/screenshots/TC-02-step01-giao-dien-ban-dau-hien-thi-day-du-4-khach-hang-tren-datagrid-voi-chip-tat-ca.png"
-          },
-          {
-            "step": 2,
-            "title": "Bấm chip lọc Lead: API trả HTTP 200 nhưng data rỗng, DataGrid mất dữ liệu và hiện Không có dữ liệu",
-            "fileName": "TC-02-step02-bam-chip-loc-lead-api-tra-http-200-nhung-data-rong-datagrid-mat-du-lieu-va-hien-khong-co-du-lieu.png",
-            "relPath": "crm_customer_data/TC-02/screenshots/TC-02-step02-bam-chip-loc-lead-api-tra-http-200-nhung-data-rong-datagrid-mat-du-lieu-va-hien-khong-co-du-lieu.png"
-          },
-          {
-            "step": 3,
-            "title": "Bấm lại Tất cả lần 2: Chỉ hiển thị 4/4 bản ghi (dữ liệu lịch sử bị mất)",
-            "fileName": "TC-02-step03-bam-lai-tat-ca-lan-2-chi-hien-thi-4-4-ban-ghi-du-lieu-lich-su-bi-mat.png",
-            "relPath": "crm_customer_data/TC-02/screenshots/TC-02-step03-bam-lai-tat-ca-lan-2-chi-hien-thi-4-4-ban-ghi-du-lieu-lich-su-bi-mat.png"
-          },
-          {
-            "step": 4,
-            "title": "Bằng chứng đối chiếu: Hàm ReloadData tự động ép cứng FromDate/ToDate theo tuần hiện tại",
-            "fileName": "TC-02-step04-bang-chung-doi-chieu-ham-reloaddata-tu-dong-ep-cung-fromdate-todate-theo-tuan-hien-tai.png",
-            "relPath": "crm_customer_data/TC-02/screenshots/TC-02-step04-bang-chung-doi-chieu-ham-reloaddata-tu-dong-ep-cung-fromdate-todate-theo-tuan-hien-tai.png"
-          },
-          {
-            "step": 5,
-            "title": "Hệ thống phát hiện Bug logic nghiệp vụ: Bộ lọc chip làm mất dữ liệu và không thể khôi phục lại",
-            "fileName": "TC-02-step05-he-thong-phat-hien-bug-logic-nghiep-vu-bo-loc-chip-lam-mat-du-lieu-va-khong-the-khoi-phuc-lai.png",
-            "relPath": "crm_customer_data/TC-02/screenshots/TC-02-step05-he-thong-phat-hien-bug-logic-nghiep-vu-bo-loc-chip-lam-mat-du-lieu-va-khong-the-khoi-phuc-lai.png"
-          }
-        ],
-        "attachments": {
-          "screenshots": [
-            "crm_customer_data/TC-02/screenshots/TC-02-step01-giao-dien-ban-dau-hien-thi-day-du-4-khach-hang-tren-datagrid-voi-chip-tat-ca.png",
-            "crm_customer_data/TC-02/screenshots/TC-02-step02-bam-chip-loc-lead-api-tra-http-200-nhung-data-rong-datagrid-mat-du-lieu-va-hien-khong-co-du-lieu.png",
-            "crm_customer_data/TC-02/screenshots/TC-02-step03-bam-lai-tat-ca-lan-2-chi-hien-thi-4-4-ban-ghi-du-lieu-lich-su-bi-mat.png",
-            "crm_customer_data/TC-02/screenshots/TC-02-step04-bang-chung-doi-chieu-ham-reloaddata-tu-dong-ep-cung-fromdate-todate-theo-tuan-hien-tai.png",
-            "crm_customer_data/TC-02/screenshots/TC-02-step05-he-thong-phat-hien-bug-logic-nghiep-vu-bo-loc-chip-lam-mat-du-lieu-va-khong-the-khoi-phuc-lai.png"
-          ],
-          "videos": [
-            "crm_customer_data/TC-02/videos/video.webm"
-          ],
-          "traces": [
-            "crm_customer_data/TC-02/traces/trace.zip"
-          ]
-        },
-        "timestamp": "2026-10-16T04:41:18.897Z"
-      },
-      {
-        "tcId": "TC-03",
-        "pageName": "crm_customer_data",
-        "title": "Kiểm tra Chức năng Nghiệp vụ: THÊM MỚI KHÁCH HÀNG THỰC TẾ (Create Customer End-to-End)",
-        "testStatus": "PASSED",
-        "businessStatus": "PASSED",
-        "businessNotes": "PASS - Chức năng Thêm mới khách hàng hoạt động hoàn hảo: API lưu phản hồi HTTP 200 (Success), dữ liệu được ghi vào DB và khách hàng \"Công ty TNHH Paradise E2E 4230\" hiển thị ngay trên DataGrid",
-        "failureAnalysis": {
-          "issue": "",
-          "expected": "",
-          "actual": "",
-          "rootCause": "",
-          "recommendation": ""
-        },
-        "status": "PASSED",
-        "duration": "41.28s",
-        "errors": "",
-        "stepScreenshots": [
-          {
-            "step": 1,
-            "title": "Con trỏ chuột Neon di chuyển và bấm nút Thêm dữ liệu mới (+)",
-            "fileName": "TC-03-step01-con-tro-chuot-neon-di-chuyen-va-bam-nut-them-du-lieu-moi.png",
-            "relPath": "crm_customer_data/TC-03/screenshots/TC-03-step01-con-tro-chuot-neon-di-chuyen-va-bam-nut-them-du-lieu-moi.png"
-          },
-          {
-            "step": 2,
-            "title": "Modal Thêm dữ liệu mới hiển thị đầy đủ các trường thông tin công ty và liên hệ",
-            "fileName": "TC-03-step02-modal-them-du-lieu-moi-hien-thi-day-du-cac-truong-thong-tin-cong-ty-va-lien-he.png",
-            "relPath": "crm_customer_data/TC-03/screenshots/TC-03-step02-modal-them-du-lieu-moi-hien-thi-day-du-cac-truong-thong-tin-cong-ty-va-lien-he.png"
-          },
-          {
-            "step": 3,
-            "title": "Điền đầy đủ thông tin khách hàng thử nghiệm vào các trường bắt buộc (*)",
-            "fileName": "TC-03-step03-dien-day-du-thong-tin-khach-hang-thu-nghiem-vao-cac-truong-bat-buoc.png",
-            "relPath": "crm_customer_data/TC-03/screenshots/TC-03-step03-dien-day-du-thong-tin-khach-hang-thu-nghiem-vao-cac-truong-bat-buoc.png"
-          },
-          {
-            "step": 4,
-            "title": "Con trỏ chuột Neon di chuyển và bấm nút Lưu thông tin liên hệ",
-            "fileName": "TC-03-step04-con-tro-chuot-neon-di-chuyen-va-bam-nut-luu-thong-tin-lien-he.png",
-            "relPath": "crm_customer_data/TC-03/screenshots/TC-03-step04-con-tro-chuot-neon-di-chuyen-va-bam-nut-luu-thong-tin-lien-he.png"
-          },
-          {
-            "step": 5,
-            "title": "Khách hàng mới tạo đã được lưu vào cơ sở dữ liệu và hiển thị ngay trên DataGrid",
-            "fileName": "TC-03-step05-khach-hang-moi-tao-da-duoc-luu-vao-co-so-du-lieu-va-hien-thi-ngay-tren-datagrid.png",
-            "relPath": "crm_customer_data/TC-03/screenshots/TC-03-step05-khach-hang-moi-tao-da-duoc-luu-vao-co-so-du-lieu-va-hien-thi-ngay-tren-datagrid.png"
-          }
-        ],
-        "attachments": {
-          "screenshots": [
-            "crm_customer_data/TC-03/screenshots/TC-03-step01-con-tro-chuot-neon-di-chuyen-va-bam-nut-them-du-lieu-moi.png",
-            "crm_customer_data/TC-03/screenshots/TC-03-step02-modal-them-du-lieu-moi-hien-thi-day-du-cac-truong-thong-tin-cong-ty-va-lien-he.png",
-            "crm_customer_data/TC-03/screenshots/TC-03-step03-dien-day-du-thong-tin-khach-hang-thu-nghiem-vao-cac-truong-bat-buoc.png",
-            "crm_customer_data/TC-03/screenshots/TC-03-step04-con-tro-chuot-neon-di-chuyen-va-bam-nut-luu-thong-tin-lien-he.png",
-            "crm_customer_data/TC-03/screenshots/TC-03-step05-khach-hang-moi-tao-da-duoc-luu-vao-co-so-du-lieu-va-hien-thi-ngay-tren-datagrid.png"
-          ],
-          "videos": [
-            "crm_customer_data/TC-03/videos/video.webm"
-          ],
-          "traces": [
-            "crm_customer_data/TC-03/traces/trace.zip"
-          ]
-        },
-        "timestamp": "2026-10-16T04:42:03.441Z"
-      },
-      {
-        "tcId": "TC-04",
-        "pageName": "crm_customer_data",
-        "title": "Kiểm tra Chức năng Nghiệp vụ: XEM CHI TIẾT KHÁCH HÀNG (View Customer Detail End-to-End)",
-        "testStatus": "PASSED",
-        "businessStatus": "PASSED",
-        "businessNotes": "PASS - Chức năng Xem chi tiết khách hàng hoạt động chính xác: API sp_CRM_CompanyDetail phản hồi HTTP 200, nạp đầy đủ thông tin chi tiết và điều hướng tab mượt mà",
-        "failureAnalysis": {
-          "issue": "",
-          "expected": "",
-          "actual": "",
-          "rootCause": "",
-          "recommendation": ""
-        },
-        "status": "PASSED",
-        "duration": "25.99s",
-        "errors": "",
-        "stepScreenshots": [
-          {
-            "step": 1,
-            "title": "Xác định dòng dữ liệu khách hàng cần xem chi tiết trên DataGrid",
-            "fileName": "TC-04-step01-xac-dinh-dong-du-lieu-khach-hang-can-xem-chi-tiet-tren-datagrid.png",
-            "relPath": "crm_customer_data/TC-04/screenshots/TC-04-step01-xac-dinh-dong-du-lieu-khach-hang-can-xem-chi-tiet-tren-datagrid.png"
-          },
-          {
-            "step": 2,
-            "title": "Con trỏ chuột Neon di chuyển vào dòng khách hàng để thực hiện mở chi tiết",
-            "fileName": "TC-04-step02-con-tro-chuot-neon-di-chuyen-vao-dong-khach-hang-de-thuc-hien-mo-chi-tiet.png",
-            "relPath": "crm_customer_data/TC-04/screenshots/TC-04-step02-con-tro-chuot-neon-di-chuyen-vao-dong-khach-hang-de-thuc-hien-mo-chi-tiet.png"
-          },
-          {
-            "step": 3,
-            "title": "Màn hình Chi tiết thông tin công ty hiển thị đầy đủ thông tin doanh nghiệp và người đại diện",
-            "fileName": "TC-04-step03-man-hinh-chi-tiet-thong-tin-cong-ty-hien-thi-day-du-thong-tin-doanh-nghiep-va-nguoi-dai-dien.png",
-            "relPath": "crm_customer_data/TC-04/screenshots/TC-04-step03-man-hinh-chi-tiet-thong-tin-cong-ty-hien-thi-day-du-thong-tin-doanh-nghiep-va-nguoi-dai-dien.png"
-          },
-          {
-            "step": 4,
-            "title": "Con trỏ chuột Neon di chuyển lên tab Dữ liệu khách hàng để quay lại danh sách",
-            "fileName": "TC-04-step04-con-tro-chuot-neon-di-chuyen-len-tab-du-lieu-khach-hang-de-quay-lai-danh-sach.png",
-            "relPath": "crm_customer_data/TC-04/screenshots/TC-04-step04-con-tro-chuot-neon-di-chuyen-len-tab-du-lieu-khach-hang-de-quay-lai-danh-sach.png"
-          },
-          {
-            "step": 5,
-            "title": "Quay trở lại giao diện danh sách khách hàng an toàn và duy trì trạng thái dữ liệu",
-            "fileName": "TC-04-step05-quay-tro-lai-giao-dien-danh-sach-khach-hang-an-toan-va-duy-tri-trang-thai-du-lieu.png",
-            "relPath": "crm_customer_data/TC-04/screenshots/TC-04-step05-quay-tro-lai-giao-dien-danh-sach-khach-hang-an-toan-va-duy-tri-trang-thai-du-lieu.png"
-          }
-        ],
-        "attachments": {
-          "screenshots": [
-            "crm_customer_data/TC-04/screenshots/TC-04-step01-xac-dinh-dong-du-lieu-khach-hang-can-xem-chi-tiet-tren-datagrid.png",
-            "crm_customer_data/TC-04/screenshots/TC-04-step02-con-tro-chuot-neon-di-chuyen-vao-dong-khach-hang-de-thuc-hien-mo-chi-tiet.png",
-            "crm_customer_data/TC-04/screenshots/TC-04-step03-man-hinh-chi-tiet-thong-tin-cong-ty-hien-thi-day-du-thong-tin-doanh-nghiep-va-nguoi-dai-dien.png",
-            "crm_customer_data/TC-04/screenshots/TC-04-step04-con-tro-chuot-neon-di-chuyen-len-tab-du-lieu-khach-hang-de-quay-lai-danh-sach.png",
-            "crm_customer_data/TC-04/screenshots/TC-04-step05-quay-tro-lai-giao-dien-danh-sach-khach-hang-an-toan-va-duy-tri-trang-thai-du-lieu.png"
-          ],
-          "videos": [
-            "crm_customer_data/TC-04/videos/video.webm"
-          ],
-          "traces": [
-            "crm_customer_data/TC-04/traces/trace.zip"
-          ]
-        },
-        "timestamp": "2026-10-16T04:42:31.171Z"
-      },
-      {
-        "tcId": "TC-05",
-        "pageName": "crm_customer_data",
-        "title": "Kiểm tra Chức năng Tìm kiếm Nhanh (Search Box) & Lọc Dữ liệu Tức thì trên DataGrid",
-        "testStatus": "PASSED",
-        "businessStatus": "PASSED",
-        "businessNotes": "PASS - Chức năng Tìm kiếm nhanh hoạt động tức thì, lọc chính xác theo từ khóa \"Nguyễn\" và khôi phục đầy đủ 20 bản ghi",
-        "failureAnalysis": {
-          "issue": "",
-          "expected": "",
-          "actual": "",
-          "rootCause": "",
-          "recommendation": ""
-        },
-        "status": "PASSED",
-        "duration": "27.93s",
-        "errors": "",
-        "stepScreenshots": [
-          {
-            "step": 1,
-            "title": "Xác định ô Tìm kiếm nhanh trên thanh công cụ Dữ liệu khách hàng",
-            "fileName": "TC-05-step01-xac-dinh-o-tim-kiem-nhanh-tren-thanh-cong-cu-du-lieu-khach-hang.png",
-            "relPath": "crm_customer_data/TC-05/screenshots/TC-05-step01-xac-dinh-o-tim-kiem-nhanh-tren-thanh-cong-cu-du-lieu-khach-hang.png"
-          },
-          {
-            "step": 2,
-            "title": "Nhập từ khóa tìm kiếm \"Nguyễn\" trực quan vào ô tìm kiếm nhanh",
-            "fileName": "TC-05-step02-nhap-tu-khoa-tim-kiem-nguyen-truc-quan-vao-o-tim-kiem-nhanh.png",
-            "relPath": "crm_customer_data/TC-05/screenshots/TC-05-step02-nhap-tu-khoa-tim-kiem-nguyen-truc-quan-vao-o-tim-kiem-nhanh.png"
-          },
-          {
-            "step": 3,
-            "title": "DataGrid lọc tức thì danh sách khách hàng khớp với từ khóa tìm kiếm",
-            "fileName": "TC-05-step03-datagrid-loc-tuc-thi-danh-sach-khach-hang-khop-voi-tu-khoa-tim-kiem.png",
-            "relPath": "crm_customer_data/TC-05/screenshots/TC-05-step03-datagrid-loc-tuc-thi-danh-sach-khach-hang-khop-voi-tu-khoa-tim-kiem.png"
-          },
-          {
-            "step": 4,
-            "title": "Con trỏ chuột Neon kiểm tra chi tiết bản ghi khách hàng tìm thấy",
-            "fileName": "TC-05-step04-con-tro-chuot-neon-kiem-tra-chi-tiet-ban-ghi-khach-hang-tim-thay.png",
-            "relPath": "crm_customer_data/TC-05/screenshots/TC-05-step04-con-tro-chuot-neon-kiem-tra-chi-tiet-ban-ghi-khach-hang-tim-thay.png"
-          },
-          {
-            "step": 5,
-            "title": "Xóa từ khóa tìm kiếm và khôi phục toàn bộ danh sách khách hàng ban đầu",
-            "fileName": "TC-05-step05-xoa-tu-khoa-tim-kiem-va-khoi-phuc-toan-bo-danh-sach-khach-hang-ban-dau.png",
-            "relPath": "crm_customer_data/TC-05/screenshots/TC-05-step05-xoa-tu-khoa-tim-kiem-va-khoi-phuc-toan-bo-danh-sach-khach-hang-ban-dau.png"
-          }
-        ],
-        "attachments": {
-          "screenshots": [
-            "crm_customer_data/TC-05/screenshots/TC-05-step01-xac-dinh-o-tim-kiem-nhanh-tren-thanh-cong-cu-du-lieu-khach-hang.png",
-            "crm_customer_data/TC-05/screenshots/TC-05-step02-nhap-tu-khoa-tim-kiem-nguyen-truc-quan-vao-o-tim-kiem-nhanh.png",
-            "crm_customer_data/TC-05/screenshots/TC-05-step03-datagrid-loc-tuc-thi-danh-sach-khach-hang-khop-voi-tu-khoa-tim-kiem.png",
-            "crm_customer_data/TC-05/screenshots/TC-05-step04-con-tro-chuot-neon-kiem-tra-chi-tiet-ban-ghi-khach-hang-tim-thay.png",
-            "crm_customer_data/TC-05/screenshots/TC-05-step05-xoa-tu-khoa-tim-kiem-va-khoi-phuc-toan-bo-danh-sach-khach-hang-ban-dau.png"
-          ],
-          "videos": [
-            "crm_customer_data/TC-05/videos/video.webm"
-          ],
-          "traces": [
-            "crm_customer_data/TC-05/traces/trace.zip"
-          ]
-        },
-        "timestamp": "2026-10-16T04:43:01.528Z"
-      }
-    ]
-  }
+  "timestamp": "12:52:08 16/10/2026",
+  "totalTests": 17,
+  "totalPass": 15,
+  "totalFail": 2,
+  "pages": [
+    {
+      "name": "crm_overview",
+      "title": "Tổng quan CRM (Dashboard & KPI)",
+      "spec": "tests/crm_overview.spec.js",
+      "count": 4,
+      "passCount": 4,
+      "failCount": 0,
+      "statusText": "✅ 100% LOGIC PASS"
+    },
+    {
+      "name": "crm_customer_data",
+      "title": "Dữ liệu khách hàng (Customer Management)",
+      "spec": "tests/crm_customer_data.spec.js",
+      "count": 5,
+      "passCount": 4,
+      "failCount": 1,
+      "statusText": "❌ 1 LOGIC FAIL"
+    },
+    {
+      "name": "crm_service_tracking",
+      "title": "Theo dõi dịch vụ (Service & Contract Tracking)",
+      "spec": "tests/crm_service_tracking.spec.js",
+      "count": 4,
+      "passCount": 3,
+      "failCount": 1,
+      "statusText": "❌ 1 LOGIC FAIL"
+    },
+    {
+      "name": "crm_sales_pipeline",
+      "title": "Sales Pipeline (Kanban Opportunities)",
+      "spec": "tests/crm_sales_pipeline.spec.js",
+      "count": 3,
+      "passCount": 3,
+      "failCount": 0,
+      "statusText": "✅ 100% LOGIC PASS"
+    },
+    {
+      "name": "crm_business_flow",
+      "title": "Luồng nghiệp vụ liên màn hình CRM (Cross-Menu Business Flow)",
+      "spec": "tests/crm_business_flow.spec.js",
+      "count": 1,
+      "passCount": 1,
+      "failCount": 0,
+      "statusText": "✅ 100% LOGIC PASS"
+    }
+  ]
 }

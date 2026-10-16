@@ -1,0 +1,303 @@
+{
+  "menuId": "CRM-32",
+  "menuName": "Theo dõi lead Marketing",
+  "group": null,
+  "clickSuccess": false,
+  "crawledAt": "2026-10-16T02:28:05.738Z",
+  "screenshot": "CRM-32_theo_doi_lead_marketing.png",
+  "mainScreen": {
+    "contextName": "Theo dõi lead Marketing",
+    "fields": [
+      {
+        "index": 1,
+        "label": "Trường #1",
+        "controlType": "CheckBox",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": "true"
+      },
+      {
+        "index": 2,
+        "label": "Trường #2",
+        "controlType": "CheckBox",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": "true"
+      },
+      {
+        "index": 4,
+        "label": "Nhân viên",
+        "controlType": "DatePicker / DateBox",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": "2026-10-01"
+      },
+      {
+        "index": 6,
+        "label": "Tìm kiếm theo nội dung",
+        "controlType": "TextBox (Text / String)",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 8,
+        "label": "Excel",
+        "controlType": "TextBox (Text / String)",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 9,
+        "label": "Excel",
+        "controlType": "TextBox (Text / String)",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 10,
+        "label": "Excel",
+        "controlType": "TextBox (Text / String)",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 11,
+        "label": "Excel",
+        "controlType": "TextBox (Text / String)",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 12,
+        "label": "Excel",
+        "controlType": "TextBox (Text / String)",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 13,
+        "label": "Excel",
+        "controlType": "TextBox (Text / String)",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 14,
+        "label": "Excel",
+        "controlType": "TextBox (Text / String)",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 15,
+        "label": "Excel",
+        "controlType": "TextBox (Text / String)",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 16,
+        "label": "Excel",
+        "controlType": "TextBox (Text / String)",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 17,
+        "label": "Excel",
+        "controlType": "TextBox (Text / String)",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 18,
+        "label": "Excel",
+        "controlType": "TextBox (Text / String)",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 19,
+        "label": "Excel",
+        "controlType": "TextBox (Text / String)",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 20,
+        "label": "Excel",
+        "controlType": "TextBox (Text / String)",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 21,
+        "label": "Excel",
+        "controlType": "TextBox (Text / String)",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 22,
+        "label": "Excel",
+        "controlType": "TextBox (Text / String)",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 23,
+        "label": "Excel",
+        "controlType": "TextBox (Text / String)",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 26,
+        "label": "#",
+        "controlType": "TextBox (Text / String)",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 37,
+        "label": "Xếp hạng",
+        "controlType": "TextBox (Text / String)",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 39,
+        "label": "STT",
+        "controlType": "TextBox (Text / String)",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 41,
+        "label": "#",
+        "controlType": "TextBox (Text / String)",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      }
+    ],
+    "buttons": [
+      "Hủy",
+      "Đồng ý",
+      "OK",
+      "Share",
+      "Thêm/Sửa báo giá",
+      "Báo giá phần mềm",
+      "Tổng quan CRM",
+      "Quản trị nhân sự",
+      "Xuất báo giá",
+      "Lưu báo giá",
+      "Xóa",
+      "Tìm kiếm",
+      "Làm mới",
+      "Tạo báo giá mới",
+      "Excel",
+      "Thêm Lead",
+      "Tính toán lại",
+      "Quản lý danh sách KPI",
+      "Lưu cấu hình",
+      "Lọc",
+      "Đóng",
+      "Xuất Excel",
+      "Close all tabs",
+      "Close other tabs",
+      "Close all tabs on left",
+      "Close all tabs on right",
+      "Close this tab",
+      "Pin to taskbar",
+      "Open",
+      "Unpin to taskbar",
+      "Ðánh d?u t?t c? dã xem",
+      "Xem danh sách thông báo",
+      "Cài d?t",
+      "Stay",
+      "Select a file",
+      "Upload",
+      "Nhấn để thiết lập phím tắt",
+      "Hủy phím tắt"
+    ]
+  },
+  "modals": [],
+  "dataLineage": {
+    "isDownstreamScreen": false,
+    "hasDataTable": true,
+    "hasCreateButton": true,
+    "detectedMetadata": {},
+    "inferredStoredProcedures": [],
+    "recommendation": "Màn hình \"Theo dõi lead Marketing\" có sẵn form tạo/nhập dữ liệu trực tiếp."
+  },
+  "apiNetworkCalls": []
+}

@@ -1,0 +1,66 @@
+{
+  "tcId": "TC-02",
+  "pageName": "crm_overview",
+  "title": "Thẩm định Bộ lọc Kỳ dữ liệu (#filterType, #filterDate) & Nút Tính toán lại (#btnRecalculate)",
+  "testStatus": "PASSED",
+  "businessStatus": "PASSED",
+  "businessNotes": "PASS - Các bộ lọc thời gian và nút Tính toán lại phản hồi tốt, dữ liệu đồng bộ",
+  "failureAnalysis": {
+    "issue": "",
+    "expected": "",
+    "actual": "",
+    "rootCause": "",
+    "recommendation": ""
+  },
+  "status": "PASSED",
+  "duration": "28.51s",
+  "errors": "",
+  "stepScreenshots": [
+    {
+      "step": 1,
+      "title": "Kiểm tra dropdown chọn loại thời gian theo tuần tháng năm",
+      "fileName": "TC-02-step01-kiem-tra-dropdown-chon-loai-thoi-gian-theo-tuan-thang-nam.png",
+      "relPath": "crm_overview/TC-02/screenshots/TC-02-step01-kiem-tra-dropdown-chon-loai-thoi-gian-theo-tuan-thang-nam.png"
+    },
+    {
+      "step": 2,
+      "title": "Kiểm tra ô chọn kỳ tuần hiện tại",
+      "fileName": "TC-02-step02-kiem-tra-o-chon-ky-tuan-hien-tai.png",
+      "relPath": "crm_overview/TC-02/screenshots/TC-02-step02-kiem-tra-o-chon-ky-tuan-hien-tai.png"
+    },
+    {
+      "step": 3,
+      "title": "Thay đổi tùy chọn số dòng hiển thị trên bảng",
+      "fileName": "TC-02-step03-thay-doi-tuy-chon-so-dong-hien-thi-tren-bang.png",
+      "relPath": "crm_overview/TC-02/screenshots/TC-02-step03-thay-doi-tuy-chon-so-dong-hien-thi-tren-bang.png"
+    },
+    {
+      "step": 4,
+      "title": "Con trỏ Neon bấm nút Tính toán lại và bắt phản hồi hệ thống",
+      "fileName": "TC-02-step04-con-tro-neon-bam-nut-tinh-toan-lai-va-bat-phan-hoi-he-thong.png",
+      "relPath": "crm_overview/TC-02/screenshots/TC-02-step04-con-tro-neon-bam-nut-tinh-toan-lai-va-bat-phan-hoi-he-thong.png"
+    },
+    {
+      "step": 5,
+      "title": "Dữ liệu được tính toán lại thành công không bị gián đoạn",
+      "fileName": "TC-02-step05-du-lieu-duoc-tinh-toan-lai-thanh-cong-khong-bi-gian-doan.png",
+      "relPath": "crm_overview/TC-02/screenshots/TC-02-step05-du-lieu-duoc-tinh-toan-lai-thanh-cong-khong-bi-gian-doan.png"
+    }
+  ],
+  "attachments": {
+    "screenshots": [
+      "crm_overview/TC-02/screenshots/TC-02-step01-kiem-tra-dropdown-chon-loai-thoi-gian-theo-tuan-thang-nam.png",
+      "crm_overview/TC-02/screenshots/TC-02-step02-kiem-tra-o-chon-ky-tuan-hien-tai.png",
+      "crm_overview/TC-02/screenshots/TC-02-step03-thay-doi-tuy-chon-so-dong-hien-thi-tren-bang.png",
+      "crm_overview/TC-02/screenshots/TC-02-step04-con-tro-neon-bam-nut-tinh-toan-lai-va-bat-phan-hoi-he-thong.png",
+      "crm_overview/TC-02/screenshots/TC-02-step05-du-lieu-duoc-tinh-toan-lai-thanh-cong-khong-bi-gian-doan.png"
+    ],
+    "videos": [
+      "crm_overview/TC-02/videos/video.webm"
+    ],
+    "traces": [
+      "crm_overview/TC-02/traces/trace.zip"
+    ]
+  },
+  "timestamp": "2026-10-16T05:29:42.910Z"
+}

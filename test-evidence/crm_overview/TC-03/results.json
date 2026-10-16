@@ -1,0 +1,66 @@
+{
+  "tcId": "TC-03",
+  "pageName": "crm_overview",
+  "title": "Thẩm định Nút Thiết lập (#btnSettings) & Đóng/Mở Modal Cấu hình KPI",
+  "testStatus": "PASSED",
+  "businessStatus": "PASSED",
+  "businessNotes": "PASS - Modal Cấu hình KPI mở và đóng mượt mà, đầy đủ các trường thiết lập",
+  "failureAnalysis": {
+    "issue": "",
+    "expected": "",
+    "actual": "",
+    "rootCause": "",
+    "recommendation": ""
+  },
+  "status": "PASSED",
+  "duration": "23.01s",
+  "errors": "",
+  "stepScreenshots": [
+    {
+      "step": 1,
+      "title": "Xác định vị trí nút Thiết lập cấu hình KPI",
+      "fileName": "TC-03-step01-xac-dinh-vi-tri-nut-thiet-lap-cau-hinh-kpi.png",
+      "relPath": "crm_overview/TC-03/screenshots/TC-03-step01-xac-dinh-vi-tri-nut-thiet-lap-cau-hinh-kpi.png"
+    },
+    {
+      "step": 2,
+      "title": "Modal Cấu hình KPI hiển thị trực quan trên màn hình",
+      "fileName": "TC-03-step02-modal-cau-hinh-kpi-hien-thi-truc-quan-tren-man-hinh.png",
+      "relPath": "crm_overview/TC-03/screenshots/TC-03-step02-modal-cau-hinh-kpi-hien-thi-truc-quan-tren-man-hinh.png"
+    },
+    {
+      "step": 3,
+      "title": "Kiểm tra các trường thiết lập tỷ lệ và tiêu chí KPI",
+      "fileName": "TC-03-step03-kiem-tra-cac-truong-thiet-lap-ty-le-va-tieu-chi-kpi.png",
+      "relPath": "crm_overview/TC-03/screenshots/TC-03-step03-kiem-tra-cac-truong-thiet-lap-ty-le-va-tieu-chi-kpi.png"
+    },
+    {
+      "step": 4,
+      "title": "Con trỏ Neon bấm nút Đóng modal cấu hình KPI",
+      "fileName": "TC-03-step04-con-tro-neon-bam-nut-dong-modal-cau-hinh-kpi.png",
+      "relPath": "crm_overview/TC-03/screenshots/TC-03-step04-con-tro-neon-bam-nut-dong-modal-cau-hinh-kpi.png"
+    },
+    {
+      "step": 5,
+      "title": "Modal đóng an toàn không để lại overlay chắn giao diện",
+      "fileName": "TC-03-step05-modal-dong-an-toan-khong-de-lai-overlay-chan-giao-dien.png",
+      "relPath": "crm_overview/TC-03/screenshots/TC-03-step05-modal-dong-an-toan-khong-de-lai-overlay-chan-giao-dien.png"
+    }
+  ],
+  "attachments": {
+    "screenshots": [
+      "crm_overview/TC-03/screenshots/TC-03-step01-xac-dinh-vi-tri-nut-thiet-lap-cau-hinh-kpi.png",
+      "crm_overview/TC-03/screenshots/TC-03-step02-modal-cau-hinh-kpi-hien-thi-truc-quan-tren-man-hinh.png",
+      "crm_overview/TC-03/screenshots/TC-03-step03-kiem-tra-cac-truong-thiet-lap-ty-le-va-tieu-chi-kpi.png",
+      "crm_overview/TC-03/screenshots/TC-03-step04-con-tro-neon-bam-nut-dong-modal-cau-hinh-kpi.png",
+      "crm_overview/TC-03/screenshots/TC-03-step05-modal-dong-an-toan-khong-de-lai-overlay-chan-giao-dien.png"
+    ],
+    "videos": [
+      "crm_overview/TC-03/videos/video.webm"
+    ],
+    "traces": [
+      "crm_overview/TC-03/traces/trace.zip"
+    ]
+  },
+  "timestamp": "2026-10-16T05:30:07.612Z"
+}

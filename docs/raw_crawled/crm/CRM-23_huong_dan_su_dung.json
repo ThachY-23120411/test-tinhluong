@@ -1,0 +1,1901 @@
+{
+  "code": "CRM-23",
+  "appId": "MnuHRS3250",
+  "menuName": "Hướng dẫn sử dụng",
+  "group": "Hỗ trợ",
+  "clickSuccess": true,
+  "crawledAt": "2026-10-16T02:35:04.144Z",
+  "screenshot": "CRM-23_huong_dan_su_dung.png",
+  "mainScreen": {
+    "contextName": "Hướng dẫn sử dụng",
+    "fields": [
+      {
+        "index": 1,
+        "label": "Trường #1",
+        "controlType": "CheckBox",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": "true"
+      },
+      {
+        "index": 2,
+        "label": "Trường #2",
+        "controlType": "CheckBox",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": "true"
+      },
+      {
+        "index": 8,
+        "label": "Nhân viên",
+        "controlType": "DatePicker / DateBox",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": "2026-10-01"
+      },
+      {
+        "index": 10,
+        "label": "Chọn cột hiển thị",
+        "controlType": "TextBox (Text / String)",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 11,
+        "label": "Tìm kiếm theo nội dung",
+        "controlType": "TextBox (Text / String)",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 64,
+        "label": "Nhân viên",
+        "controlType": "DatePicker / DateBox",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": "2026-10-01"
+      },
+      {
+        "index": 66,
+        "label": "Tìm kiếm theo nội dung",
+        "controlType": "TextBox (Text / String)",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 104,
+        "label": "Tìm kiếm theo nội dung",
+        "controlType": "TextBox (Text / String)",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 116,
+        "label": "Trường #116",
+        "controlType": "Dropdown / SelectBox",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 117,
+        "label": "Trường #117",
+        "controlType": "Dropdown / SelectBox",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 118,
+        "label": "Trường #118",
+        "controlType": "Dropdown / SelectBox",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 119,
+        "label": "Chọn cột hiển thị",
+        "controlType": "TextBox (Text / String)",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 120,
+        "label": "Trường #120",
+        "controlType": "CheckBox",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": "false"
+      },
+      {
+        "index": 122,
+        "label": "Chọn cột hiển thị",
+        "controlType": "TextBox (Text / String)",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 127,
+        "label": "Nhân viên",
+        "controlType": "Dropdown / SelectBox",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": "2026-09-16"
+      },
+      {
+        "index": 128,
+        "label": "Chọn cột hiển thị",
+        "controlType": "TextBox (Text / String)",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 129,
+        "label": "Tìm kiếm theo nội dung",
+        "controlType": "TextBox (Text / String)",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 130,
+        "label": "Trường #130",
+        "controlType": "CheckBox",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": "false"
+      },
+      {
+        "index": 132,
+        "label": "Ngày tạo",
+        "controlType": "DatePicker / DateBox",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 133,
+        "label": "Mã nhân viên",
+        "controlType": "TextBox (Text / String)",
+        "state": "DISABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 134,
+        "label": "Công ty",
+        "controlType": "TextBox (Text / String)",
+        "state": "DISABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 135,
+        "label": "Mã số thuế",
+        "controlType": "TextBox (Text / String)",
+        "state": "DISABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 136,
+        "label": "Ngành",
+        "controlType": "Dropdown / SelectBox",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 137,
+        "label": "Địa chỉ",
+        "controlType": "TextBox (Text / String)",
+        "state": "DISABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 138,
+        "label": "Người liên hệ",
+        "controlType": "TextBox (Text / String)",
+        "state": "DISABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 139,
+        "label": "Điện thoại",
+        "controlType": "TextBox (Text / String)",
+        "state": "DISABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 140,
+        "label": "EMAIL",
+        "controlType": "TextBox (Text / String)",
+        "state": "DISABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 141,
+        "label": "Chức vụ công việc",
+        "controlType": "Dropdown / SelectBox",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 142,
+        "label": "Quy mô công ty",
+        "controlType": "Dropdown / SelectBox",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 143,
+        "label": "Nguồn",
+        "controlType": "TextBox (Text / String)",
+        "state": "DISABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 144,
+        "label": "Ghi chú",
+        "controlType": "TextArea",
+        "state": "DISABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 145,
+        "label": "Trạng thái",
+        "controlType": "TextBox (Text / String)",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 146,
+        "label": "Vui lòng nhập lý do từ chối",
+        "controlType": "TextArea",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 147,
+        "label": "Nhân viên",
+        "controlType": "DatePicker / DateBox",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": "2026-10-12"
+      },
+      {
+        "index": 148,
+        "label": "Nhân viên",
+        "controlType": "DatePicker / DateBox",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 150,
+        "label": "Tìm kiếm theo nội dung",
+        "controlType": "TextBox (Text / String)",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 152,
+        "label": "Tìm kiếm theo nội dung",
+        "controlType": "TextBox (Text / String)",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 155,
+        "label": "Tiêu đề",
+        "controlType": "TextBox (Text / String)",
+        "state": "ENABLED",
+        "required": "YES (*)",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Bắt buộc nhập (*)",
+        "currentValue": ""
+      },
+      {
+        "index": 156,
+        "label": "Địa\n                            điểm",
+        "controlType": "TextBox (Text / String)",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 157,
+        "label": "Bắt\n                            đầu",
+        "controlType": "DatePicker / DateBox",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 158,
+        "label": "Kết\n                            thúc",
+        "controlType": "DatePicker / DateBox",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 159,
+        "label": "Người tham dự",
+        "controlType": "TextBox (Text / String)",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 160,
+        "label": "Nội dung",
+        "controlType": "Dropdown / SelectBox",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": "#000000"
+      },
+      {
+        "index": 161,
+        "label": "Nhắc\n                            trước",
+        "controlType": "NumberInput",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Chỉ nhận giá trị số",
+        "currentValue": "15"
+      },
+      {
+        "index": 162,
+        "label": "Nhân viên",
+        "controlType": "DatePicker / DateBox",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": "2026-10-12"
+      },
+      {
+        "index": 164,
+        "label": "Tìm kiếm theo nội dung",
+        "controlType": "TextBox (Text / String)",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 167,
+        "label": "Thời gian",
+        "controlType": "DatePicker / DateBox",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 168,
+        "label": "Chủ đề",
+        "controlType": "TextBox (Text / String)",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 169,
+        "label": "Trạng thái",
+        "controlType": "Dropdown / SelectBox",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 170,
+        "label": "Loại bài đăng",
+        "controlType": "Dropdown / SelectBox",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 171,
+        "label": "Link bài đăng",
+        "controlType": "TextBox (Text / String)",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 172,
+        "label": "Ghi chú",
+        "controlType": "Dropdown / SelectBox",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": "#000000"
+      },
+      {
+        "index": 173,
+        "label": "Đính kèm",
+        "controlType": "TextBox (Text / String)",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 174,
+        "label": "Nhân viên",
+        "controlType": "DatePicker / DateBox",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": "2026-10-12"
+      },
+      {
+        "index": 175,
+        "label": "Chọn cột hiển thị",
+        "controlType": "TextBox (Text / String)",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 176,
+        "label": "Tìm kiếm theo nội dung",
+        "controlType": "TextBox (Text / String)",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 202,
+        "label": "Chọn cột hiển thị",
+        "controlType": "TextBox (Text / String)",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 203,
+        "label": "Tìm kiếm theo nội dung",
+        "controlType": "TextBox (Text / String)",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 206,
+        "label": "Chọn cột hiển thị",
+        "controlType": "TextBox (Text / String)",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 207,
+        "label": "Thêm",
+        "controlType": "TextBox (Text / String)",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 208,
+        "label": "Tìm kiếm theo nội dung",
+        "controlType": "TextBox (Text / String)",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 218,
+        "label": "Trường #218",
+        "controlType": "Dropdown / SelectBox",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 219,
+        "label": "Chọn cột hiển thị",
+        "controlType": "TextBox (Text / String)",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 220,
+        "label": "Tìm kiếm theo nội dung",
+        "controlType": "TextBox (Text / String)",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 221,
+        "label": "Trường #221",
+        "controlType": "CheckBox",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": "false"
+      },
+      {
+        "index": 223,
+        "label": "Xem tất cả ngày",
+        "controlType": "DatePicker / DateBox",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": "2026-10-12"
+      },
+      {
+        "index": 228,
+        "label": "Tìm kiếm theo nội dung",
+        "controlType": "TextBox (Text / String)",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 252,
+        "label": "Ngày tạo",
+        "controlType": "DatePicker / DateBox",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 253,
+        "label": "Kéo thả hình ảnh để AI phân tích",
+        "controlType": "TextBox (Text / String)",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 254,
+        "label": "Xem của tôi",
+        "controlType": "CheckBox",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": "on"
+      },
+      {
+        "index": 255,
+        "label": "Chọn cột hiển thị",
+        "controlType": "TextBox (Text / String)",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 256,
+        "label": "Tìm kiếm theo nội dung",
+        "controlType": "TextBox (Text / String)",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 276,
+        "label": "Nhân viên",
+        "controlType": "DatePicker / DateBox",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": "2026-10-01"
+      },
+      {
+        "index": 278,
+        "label": "Tìm kiếm theo nội dung",
+        "controlType": "TextBox (Text / String)",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 280,
+        "label": "Excel",
+        "controlType": "TextBox (Text / String)",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 281,
+        "label": "Excel",
+        "controlType": "TextBox (Text / String)",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 282,
+        "label": "Excel",
+        "controlType": "TextBox (Text / String)",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 283,
+        "label": "Excel",
+        "controlType": "TextBox (Text / String)",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 284,
+        "label": "Excel",
+        "controlType": "TextBox (Text / String)",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 285,
+        "label": "Excel",
+        "controlType": "TextBox (Text / String)",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 286,
+        "label": "Excel",
+        "controlType": "TextBox (Text / String)",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 287,
+        "label": "Excel",
+        "controlType": "TextBox (Text / String)",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 288,
+        "label": "Excel",
+        "controlType": "TextBox (Text / String)",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 289,
+        "label": "Excel",
+        "controlType": "TextBox (Text / String)",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 290,
+        "label": "Excel",
+        "controlType": "TextBox (Text / String)",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 291,
+        "label": "Excel",
+        "controlType": "TextBox (Text / String)",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 292,
+        "label": "Excel",
+        "controlType": "TextBox (Text / String)",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 293,
+        "label": "Excel",
+        "controlType": "TextBox (Text / String)",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 294,
+        "label": "Excel",
+        "controlType": "TextBox (Text / String)",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 295,
+        "label": "Excel",
+        "controlType": "TextBox (Text / String)",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 298,
+        "label": "#",
+        "controlType": "TextBox (Text / String)",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 309,
+        "label": "Xếp hạng",
+        "controlType": "TextBox (Text / String)",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 311,
+        "label": "STT",
+        "controlType": "TextBox (Text / String)",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 313,
+        "label": "#",
+        "controlType": "TextBox (Text / String)",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      }
+    ],
+    "buttons": [
+      "Không",
+      "Đồng ý",
+      "OK",
+      "Share",
+      "Hướng dẫn sử dụng",
+      "Tổng quan hỗ trợ",
+      "Lịch sử xuất kho",
+      "Lịch sử nhập kho",
+      "Danh mục sản phẩm",
+      "Thêm/Sửa phân hệ",
+      "Quản lý phân hệ",
+      "Thêm/Sửa báo giá",
+      "Báo giá phần mềm",
+      "Tạo yêu cầu",
+      "Tìm kiếm",
+      "Làm mới",
+      "Thêm mới",
+      "Chọn cột hiển thị",
+      "Lưu",
+      "Thêm phân hệ",
+      "Xoá",
+      "Lọc dữ liệu",
+      "Chuyển dữ liệu",
+      "＋ Thêm tổ hợp",
+      "✕ Xóa tổ hợp",
+      "Cào theo tổ hợp",
+      "Dừng cào hàng loạt",
+      "Tải lại",
+      "Từ chối",
+      "Duyệt",
+      "Đóng",
+      "Hủy",
+      "Tạo cuộc họp mới",
+      "Bình thường",
+      "16px",
+      "Khôi phục mặc định",
+      "Áp dụng",
+      "Start Recording",
+      "Xóa",
+      "Lưu cuộc họp",
+      "Thêm nội dung",
+      "Xóa hình ảnh",
+      "Lưu dữ liệu",
+      "Gửi",
+      "Soạn thư",
+      "Tất cả",
+      "Bạn bè",
+      "Nhóm",
+      "Khách hàng",
+      "Thêm",
+      "Export",
+      "Tuần",
+      "Tháng",
+      "Quý",
+      "Năm",
+      "Quay lại",
+      "+ Thêm mới",
+      "Chỉnh sửa",
+      "Import",
+      "Danh sách bổ xung",
+      "Dữ liệu thu thập",
+      "Lead",
+      "Đã liên hệ",
+      "Đã demo & gửi báo giá",
+      "Cần chăm sóc",
+      "Sắp chốt đơn",
+      "Thành công",
+      "Thất bại",
+      "Hôm nay",
+      "Tuần này",
+      "Tháng này",
+      "? Áp dụng",
+      "Lưu thông tin liên hệ",
+      "Xuất báo giá",
+      "Lưu báo giá",
+      "Tạo báo giá mới",
+      "Excel",
+      "Thêm Lead",
+      "Tính toán lại",
+      "Quản lý danh sách KPI",
+      "Lưu cấu hình",
+      "Lọc",
+      "Xuất Excel",
+      "Close all tabs",
+      "Close other tabs",
+      "Close all tabs on left",
+      "Close all tabs on right",
+      "Close this tab",
+      "Pin to taskbar",
+      "Open",
+      "Unpin to taskbar",
+      "Ðánh d?u t?t c? dã xem",
+      "Xem danh sách thông báo",
+      "Cài d?t",
+      "Stay",
+      "Select a file",
+      "Upload",
+      "Nhấn để thiết lập phím tắt",
+      "Hủy phím tắt"
+    ]
+  },
+  "modals": [],
+  "dataLineage": {
+    "isDownstreamScreen": false,
+    "hasDataTable": true,
+    "hasCreateButton": true,
+    "detectedMetadata": {},
+    "inferredStoredProcedures": [
+      "sp_CRM_UserGuide"
+    ],
+    "recommendation": "Màn hình \"Hướng dẫn sử dụng\" có sẵn form tạo/nhập dữ liệu trực tiếp."
+  },
+  "apiNetworkCalls": [
+    {
+      "type": "request",
+      "url": "https://paradisehrm.com/Tai3/hpa/paradise2",
+      "method": "POST",
+      "resourceType": "fetch",
+      "postData": {
+        "content": "02xY5O3N3CIcOd20zC0/ATOZWT00Qk6gu0O5yKQbIIEcfCdU/s8ytsWyvFSnIpV6f8iCZwbnFvhBfAcJ38yADIAe350jXqD0APv3lxYIsZfMljF7zN3npoBJDKSrsf+kQiTqIMeqNrzomX8S1Hyvo8f4G0HCrlZ2CENcB73W1/ouzGTW2LxDmj09ndA+d4bRzzvT0NnRWZ1Ir9wN7Hw/OfMnoKwueYvrxU+iDKj+L/yqNnfWSvukUPn7hdFhdHW1dHz0C7r08yYH1/J4giIshwZWB1v0NBJsXXlmIQpPtKioADTUV4o4Ug9wqHCgpAxo0mliOzikrH9j51SMTDMGng==",
+        "paradiseType": "2"
+      },
+      "timestamp": "2026-10-16T02:34:51.743Z"
+    },
+    {
+      "type": "request",
+      "url": "https://paradisehrm.com/Tai3/hpa/paradise2",
+      "method": "POST",
+      "resourceType": "fetch",
+      "postData": {
+        "content": "02xY5O3N3CIcOd20zC0/ATOZWT00Qk6gu0O5yKQbIIEcfCdU/s8ytsWyvFSnIpV6f8iCZwbnFvhBfAcJ38yADIAe350jXqD0APv3lxYIsZfMljF7zN3npoBJDKSrsf+kQiTqIMeqNrzomX8S1Hyvo8f4G0HCrlZ2CENcB73W1/ouzGTW2LxDmj09ndA+d4bRnfHkcut/cXY9g1+j5oMtWzf2s8b6liVAou4aarswLsppQf0m42fzRFAE804wYojljeS/wvulP3ce9Um8hvsQAQAJ1/zvPoBnb7lJxhKfBVz/Df7bfebCZq33PYJny2fImNjEWLhrC2wbmMojd4qZB3XdRcYK81sK47GR3zwBe1177HdGJDHlLCX5PNE9wectRDDczQ2FSNp0x2G6DNmdSGUX8iSvk/WsVLeL0CdsY8HGwDLTokIXL/z22M2hLjwWoN1eKUG6JDx8ONG4PDR2tT/3411geK5n2N2kYK3+tLE=",
+        "paradiseType": "2"
+      },
+      "timestamp": "2026-10-16T02:34:51.764Z"
+    },
+    {
+      "type": "request",
+      "url": "https://paradisehrm.com/Tai3/api/hpa/paradise?&name=paradisepublic&param=[%22paradisepublic%22,%22sp_CRM_UserGuide%22,%22LanguageID%22,%22VN%22,%22ParadiseVersion%22,-1826092684]&user=paradisepublic&password=3C9909AFEC25354D551DAE21590BB26E38D53F2173B8D3DC3EEE4C047E7AB1C1EB8B85103E3BE7BA613B31BB5C9C36214DC9F14A42FD7A2FDB84856BCA5C44C2&_cb=VN_-1826092684",
+      "method": "GET",
+      "resourceType": "xhr",
+      "postData": null,
+      "timestamp": "2026-10-16T02:34:51.770Z"
+    },
+    {
+      "type": "response",
+      "url": "https://paradisehrm.com/Tai3/hpa/paradise2",
+      "status": 200,
+      "responseBody": {
+        "result": "success",
+        "reason": "",
+        "data": [
+          [
+            {
+              "ParadiseVersion": "-1826092684"
+            }
+          ]
+        ],
+        "dataSchema": [
+          [
+            {
+              "name": "ParadiseVersion",
+              "type": "System.String"
+            }
+          ]
+        ]
+      },
+      "timestamp": "2026-10-16T02:34:51.771Z"
+    },
+    {
+      "type": "response",
+      "url": "https://paradisehrm.com/Tai3/hpa/paradise2",
+      "status": 200,
+      "responseBody": {
+        "result": "success",
+        "reason": "",
+        "data": [],
+        "dataSchema": []
+      },
+      "timestamp": "2026-10-16T02:34:51.784Z"
+    },
+    {
+      "type": "request",
+      "url": "https://paradisehrm.com/Tai3/api/hpa/paradise?&name=paradisepublic&param=[%22paradisepublic%22,%22sp_CRM_UserGuide%22,%22LanguageID%22,%22VN%22,%22ParadiseVersion%22,-1826092684]&user=paradisepublic&password=3C9909AFEC25354D551DAE21590BB26E38D53F2173B8D3DC3EEE4C047E7AB1C1EB8B85103E3BE7BA613B31BB5C9C36214DC9F14A42FD7A2FDB84856BCA5C44C2&_cb=VN_-1826092684",
+      "method": "GET",
+      "resourceType": "xhr",
+      "postData": null,
+      "timestamp": "2026-10-16T02:34:51.800Z"
+    },
+    {
+      "type": "response",
+      "url": "https://paradisehrm.com/Tai3/api/hpa/paradise?&name=paradisepublic&param=[%22paradisepublic%22,%22sp_CRM_UserGuide%22,%22LanguageID%22,%22VN%22,%22ParadiseVersion%22,-1826092684]&user=paradisepublic&password=3C9909AFEC25354D551DAE21590BB26E38D53F2173B8D3DC3EEE4C047E7AB1C1EB8B85103E3BE7BA613B31BB5C9C36214DC9F14A42FD7A2FDB84856BCA5C44C2&_cb=VN_-1826092684",
+      "status": 200,
+      "responseBody": {
+        "result": "success",
+        "reason": "",
+        "data": [
+          [
+            {
+              "bytes": "\r\n\r\n<div id=\"sp_CRM_UserGuide_html\" style=\"height: calc(100vh - 55px); display: flex; flex-direction: column; overflow: hidden; width: 100%;\">\r\n    <style>\r\n        #sp_CRM_UserGuide_html {\r\n            --guide-border-color: var(--bs-border-color);\r\n            --guide-bg-color: var(--bs-body-bg);\r\n            --guide-sidebar-width: 250px;\r\n            font-family: var(--bs-body-font-family);\r\n            width: 100%; height: 100%; display: flex; background: var(--guide-bg-color);\r\n            overflow: hidden !important; box-sizing: border-box; margin: 0;\r\n        }\r\n        #sp_CRM_UserGuide_html .guide-layout { display: flex; flex: 1; height: 100%; }\r\n        #sp_CRM_UserGuide_html .guide-sidebar {\r\n            width: var(--guide-sidebar-width); min-width: 180px; max-width: 450px; flex-shrink: 0;\r\n            border-right: 1px solid var(--guide-border-color); background: var(--bs-secondary-bg);\r\n            display: flex; flex-direction: column; position: relative;\r\n        }\r\n        #sp_CRM_UserGuide_html .sidebar-header { padding: 12px 15px; border-bottom: 1px solid var(--guide-border-color); }\r\n        #sp_CRM_UserGuide_html .sidebar-header h5 { margin:0; font-weight:700; font-size:12px; color:var(--text-color); text-transform:uppercase; }\r\n        #sp_CRM_UserGuide_html .sidebar-body { flex: 1; overflow-y: auto; padding: 5px; }\r\n\r\n        #sp_CRM_UserGuide_html .guide-main { flex: 1; display: flex; flex-direction: column; background: var(--bs-body-bg); }\r\n        #sp_CRM_UserGuide_html .main-header { height: 50px; border-bottom: 1px solid var(--guide-border-color); display: flex; align-items: center; justify-content: flex-end; padding: 0 15px; background: var(--bs-body-bg); }\r\n        #sp_CRM_UserGuide_html .main-body { flex: 1; padding: 10px; background: var(--bs-tertiary-bg); display: flex; flex-direction: column; }\r\n        #sp_CRM_UserGuide_html .viewer-container { width: 100%; flex: 1; border: 1px solid var(--guide-border-color); background: var(--bs-body-bg); border-radius: 4px; overflow: hidden; position: relative; }\r\n\r\n        /* NÚT BẤM ICON-ONLY - VIỀN BORDER - BỎ HOVER */\r\n        #sp_CRM_UserGuide_html .dx-button {\r\n            background-color: var(--bs-body-bg) !important; border: 1px solid var(--guide-border-color) !important;\r\n            box-shadow: none !important; color: var(--text-color) !important; width: 34px !important; height: 34px !important;\r\n            display: flex; align-items: center; justify-content: center; margin-left: 8px; border-radius: 4px;\r\n        }\r\n        #sp_CRM_UserGuide_html .dx-button.dx-state-hover,\r\n        #sp_CRM_UserGuide_html .dx-button.dx-state-active,\r\n        #sp_CRM_UserGuide_html .dx-state-focused { background-color: var(--bs-body-bg) !important; opacity: 1 !important; }\r\n\r\n        #sp_CRM_UserGuide_html .icon-add-doc i { color: var(--bs-success) !important; }\r\n        #sp_CRM_UserGuide_html .icon-delete-doc i { color: var(--bs-danger) !important; }\r\n        #sp_CRM_UserGuide_html .icon-download-doc i { color: var(--bs-primary) !important; }\r\n\r\n        /* HIGHLIGHT MỤC LỤC CHA VÀ CON */\r\n        #sp_CRM_UserGuide_html .dx-treeview-node.dx-state-selected > .dx-treeview-item,\r\n        #sp_CRM_UserGuide_html .dx-treeview-item.dx-state-selected {\r\n            background-color: rgba(var(--bs-primary-rgb, 13, 110, 253), 0.15) !important;\r\n            color: var(--bs-primary, #0d6efd) !important;\r\n            font-weight: bold !important;\r\n            border-radius: 4px;\r\n        }\r\n        #sp_CRM_UserGuide_html .dx-treeview-node:has(.dx-state-selected) > .dx-treeview-item {\r\n            color: var(--bs-primary, #0d6efd) !important;\r\n            font-weight: bold !important;\r\n        }\r\n\r\n        #sp_CRM_UserGuide_html .dx-fileuploader-upload-button { display: none !important; }\r\n\r\n        .dx-toast-wrapper { z-index: 9999 !important; }\r\n        @media (max-width: 768px) { #sp_CRM_UserGuide_html .guide-layout { flex-direction: column; } #sp_CRM_UserGuide_html .guide-sidebar { width: 100%; height: 35%; border-right: none; } }\r\n\r\n        /* Popup Header Styling - Corporate Theme */\r\n        .dx-overlay-content.guide-popup-header .dx-popup-title {\r\n            background-color: var(--bs-primary) !important;\r\n            border-bottom: 1px solid var(--bs-primary) !important;\r\n            padding: 10px 15px !important;\r\n        }\r\n        .dx-overlay-content.guide-popup-header .dx-popup-title .dx-toolbar-label {\r\n            color: var(--bs-light) !important;\r\n            font-weight: bold;\r\n            font-size: 1.1rem;\r\n        }\r\n        .dx-overlay-content.guide-popup-header .dx-closebutton .dx-icon {\r\n            color: var(--bs-light) !important;\r\n        }\r\n    </style>\r\n\r\n    <div class=\"guide-layout\">\r\n        <!-- Sidebar Mục lục -->\r\n        <div class=\"guide-sidebar\" id=\"resizableSidebar\">\r\n            <div class=\"sidebar-header\">\r\n                <h5>MỤC LỤC HƯỚNG DẪN</h5>\r\n            </div>\r\n            <div class=\"sidebar-body\">\r\n                <div id=\"guideTreeView\"></div>\r\n            </div>\r\n        </div>\r\n\r\n        <!-- Nội dung chính -->\r\n        <div class=\"guide-main\">\r\n            <div class=\"main-header\">\r\n                <div id=\"topToolbar\"></div>\r\n            </div>\r\n            <div class=\"main-body\">\r\n                <div class=\"viewer-container\">\r\n                    <div id=\"emptyContent\" style=\"width:100%; height:100%; display:flex; flex-direction:column; align-items:center; justify-content:center;\">\r\n                        <i class=\"bi bi-file-earmark-check\" style=\"font-size:3rem; color:var(--bs-primary); opacity:0.5;\"></i>\r\n                        <p class=\"text-secondary mt-2 small\">Chọn tài liệu để hiển thị...</p>\r\n                    </div>\r\n                    <div id=\"fileRenderArea\" style=\"width:100%; height:100%; display:none;\"></div>\r\n                </div>\r\n            </div>\r\n        </div>\r\n    </div>\r\n\r\n    <!-- POPUP UPLOAD FORM -->\r\n    <div style=\"display:none;\">\r\n        <div id=\"uploadPopupContent\">\r\n            <div class=\"p-3\">\r\n                <p class=\"text-secondary small mb-3\" style=\"color:#00673b;\">Tải lên tệp đính kèm (PDF) vào thư viện hướng dẫn.</p>\r\n                <div class=\"mb-3\">\r\n                    <label class=\"small fw-bold mb-1\" style=\"color:var(--bs-primary);\">Tên tài liệu *</label>\r\n                    <div id=\"txtDocName\"></div>\r\n                </div>\r\n                <div class=\"mb-3\">\r\n                    <label class=\"small fw-bold mb-1\" style=\"color:var(--bs-primary);\">Thư mục lưu trữ *</label>\r\n                    <div style=\"display:flex; gap:8px;\">\r\n                        <div id=\"cbCategory\" style=\"flex:1;\"></div>\r\n                        <div id=\"btnAddNewCategory\"></div>\r\n                    </div>\r\n                </div>\r\n                <div class=\"mb-3\">\r\n                    <label class=\"small fw-bold mb-1\" style=\"color:var(--bs-primary);\">Phân quyền xem (Nhóm) *</label>\r\n                    <div id=\"tagParentLogin\"></div>\r\n                </div>\r\n                <div class=\"mb-3\">\r\n                    <label class=\"small fw-bold mb-1\" style=\"color:var(--bs-primary);\">Tệp đính kèm *</label>\r\n                    <div id=\"fileUploader\"></div>\r\n                </div>\r\n                <div class=\"d-flex justify-content-end gap-2 mt-4 pt-3 border-top\">\r\n                    <div id=\"btnCancelUpload\"></div>\r\n                    <div id=\"btnSaveUpload\"></div>\r\n                </div>\r\n            </div>\r\n        </div>\r\n    </div>\r\n\r\n    <div id=\"uploadPopup\"></div>\r\n\r\n    <script>\r\n        $(document).ready(function () {\r\n            let selectedFile = null;\r\n            let isEditMode = false;\r\n            let currentEditID = null;\r\n\r\n            function drawTree(targetId) {\r\n                AjaxHPAParadiseAsync({\r\n                    data: { name: \"sp_CRM_UserGuide_GetList\", param: [\"LoginID\", UserID] },\r\n                    success: function(res) {\r\n                        let json = typeof res === \"string\" ? JSON.parse(res) : res;\r\n                        let raw = json.data && json.data[0] ? json.data[0] : [];\r\n                        let grouped = {};\r\n                        raw.forEach(item => {\r\n                            if(!grouped[item.parentCategory]) {\r\n                                grouped[item.parentCategory] = { id: item.parentCategoryID, text: item.parentCategory, expanded: true, items: [] };\r\n                            }\r\n                            grouped[item.parentCategory].items.push({ ...item, icon: \"file\" });\r\n                        });\r\n                        const tree = $(\"#guideTreeView\").dxTreeView(\"instance\");\r\n                        if(tree) {\r\n                            tree.option(\"dataSource\", Object.values(grouped));\r\n                            \r\n                            // Nếu có mục tiêu, thực hiện tìm và chọn\r\n                            if(targetId) {\r\n                                let fresh = raw.find(x => x.id == targetId);\r\n                                if(fresh) {\r\n                                    selectedFile = { ...fresh, icon: \"file\" };\r\n                                    setTimeout(function() {\r\n                                        tree.selectItem(targetId);\r\n                                        renderFile(selectedFile);\r\n                                    }, 200);\r\n                                }\r\n                            }\r\n                        }\r\n                    }\r\n                });\r\n            }\r\n\r\n            function drawCats(cbInstance) {\r\n                AjaxHPAParadiseAsync({\r\n                    data: { name: \"sp_CRM_UserCategory_GetList\", param: [] },\r\n                    success: function(res) {\r\n                        let json = typeof res === \"string\" ? JSON.parse(res) : res;\r\n                        let catData = json.data && json.data[0] ? json.data[0] : [];\r\n                        if(cbInstance) cbInstance.option(\"dataSource\", catData);\r\n                    }\r\n                });\r\n            }\r\n\r\n            $(\"#resizableSidebar\").dxResizable({\r\n                handles: \"right\",\r\n                onResize: function(e) { $(\"#resizableSidebar\").width(e.width); }\r\n            });\r\n\r\n            $(\"#guideTreeView\").dxTreeView({\r\n                selectionMode: \"single\",\r\n                selectByClick: true,\r\n                searchEnabled: true,\r\n                expandEvent: \"click\",\r\n                onItemClick: function(e) {\r\n                    if(e.itemData.filePath) {\r\n                        if(selectedFile && selectedFile.id === e.itemData.id) return;\r\n                        selectedFile = e.itemData;\r\n                        renderFile(e.itemData);\r\n                    }\r\n                }\r\n            });\r\n\r\n            let userPerms = { HasCustomerAccess: 0 };\r\n\r\n            function loadPermissions(callback) {\r\n                AjaxHPAParadiseAsync({\r\n                    data: { name: \"sp_Common_GetUserPermissions\", param: [\"LoginID\", UserID] },\r\n                    success: function(res) {\r\n                        let json = typeof res === \"string\" ? JSON.parse(res) : res;\r\n                        if (json && json.data && json.data[0] && json.data[0][0]) {\r\n                            userPerms = json.data[0][0];\r\n                        }\r\n                        if(callback) callback();\r\n                    }\r\n                });\r\n            }\r\n\r\n            loadPermissions(function() {\r\n                $(\"#topToolbar\").dxToolbar({\r\n                    items: [\r\n                        { \r\n                            location: \"after\", \r\n                            widget: \"dxButton\", \r\n                            visible: userPerms.HasCustomerAccess != 1,\r\n                            options: { icon: \"plus\", hint: \"Thêm tài liệu\", elementAttr: { class: \"icon-add-doc\" },\r\n                                onClick: function() { \r\n                                    isEditMode = false;\r\n                                    currentEditID = null;\r\n                                    $(\"#uploadPopup\").dxPopup(\"option\", \"title\", \"Tải tài liệu mới\");\r\n                                    $(\"#uploadPopup\").dxPopup(\"show\"); \r\n                                }\r\n                            }\r\n                        },\r\n                        { \r\n                            location: \"after\", \r\n                            widget: \"dxButton\", \r\n                            visible: userPerms.HasCustomerAccess != 1,\r\n                            options: { icon: \"edit\", hint: \"Sửa thông tin\", elementAttr: { class: \"icon-edit-doc\" },\r\n                                onClick: function() { \r\n                                    if(!selectedFile) {\r\n                                        uiManager.showAlert({type:\"warning\", message:\"Vui lòng chọn tài liệu cần sửa!\"});\r\n                                        return;\r\n                                    }\r\n                                    isEditMode = true;\r\n                                    currentEditID = selectedFile.id;\r\n                                    $(\"#uploadPopup\").dxPopup(\"option\", \"title\", \"Chỉnh sửa tài liệu\");\r\n                                    $(\"#uploadPopup\").dxPopup(\"show\"); \r\n                                }\r\n                            }\r\n                        },\r\n                        { \r\n                            location: \"after\", \r\n                            widget: \"dxButton\",\r\n                            visible: userPerms.HasCustomerAccess != 1,\r\n                            options: { icon: \"trash\", hint: \"Xóa\", elementAttr: { class: \"icon-delete-doc\" },\r\n                                onClick: function() {\r\n                                    var treeInstance = $(\"#guideTreeView\").dxTreeView(\"instance\");\r\n                                    var selectedNodes = treeInstance.getSelectedNodes();\r\n                                    if(!selectedNodes || selectedNodes.length === 0) {\r\n                                        uiManager.showAlert({type:\"warning\", message:\"Vui lòng chọn mục cần xóa!\"});\r\n                                        return;\r\n                                    }\r\n                                    var node = selectedNodes[0];\r\n                                    var isFile = node.itemData.filePath ? true : false;\r\n                                    var typeDel = isFile ? \"FILE\" : \"CATEGORY\";\r\n\r\n                                    showConfirmPopup({\r\n                                        title: \"Xác nhận xóa\",\r\n                                        message: \"Bạn có chắc chắn muốn xóa mục này?\",\r\n                                        YesText: \"Xóa\",\r\n                                        NoText: \"Hủy\",\r\n                                        onYes: function () {\r\n                                            AjaxHPAParadiseAsync({\r\n                                                data: { name: \"sp_CRM_UserGuide_Delete\", param: [\"Type\", typeDel, \"ID\", node.key] },\r\n                                                success: function(res) {\r\n                                                    uiManager.showAlert({type:\"success\", message:\"Đã xóa thành công!\"});\r\n                                                    drawTree();\r\n                                                    selectedFile = null;\r\n                                                    $(\"#emptyContent\").show();\r\n                                                    $(\"#fileRenderArea\").hide().html(\"\");\r\n                                                }\r\n                                            });\r\n                                        }\r\n                                    });\r\n                                }\r\n                            }\r\n                        },\r\n                        { \r\n                            location: \"after\", \r\n                            widget: \"dxButton\", \r\n                            options: { icon: \"download\", hint: \"Tải về\", elementAttr: { class: \"icon-download-doc\" },\r\n                                onClick: function() {\r\n                                    if(!selectedFile || !selectedFile.filePath) {\r\n                                        uiManager.showAlert({type:\"warning\", message:\"Vui lòng chọn tài liệu cần tải!\"});\r\n                                        return;\r\n                                    }\r\n                                    \r\n                                    AjaxHPAParadiseAsync({\r\n                                        data: { name: \"paradisefile_sp_GetFileAPI\", param: [\"FilePath\", selectedFile.filePath] },\r\n                                        xhrFields: { responseType: \"blob\" },\r\n                                        success: function (blob) {\r\n                                            var url = URL.createObjectURL(new Blob([blob], { type: \"application/pdf\" }));\r\n                                            var a = document.createElement(\"a\");\r\n                                            a.href = url;\r\n                                            a.download = selectedFile.text + \".pdf\";\r\n                                            document.body.appendChild(a);\r\n                                            a.click();\r\n                                            setTimeout(function() {\r\n                                                document.body.removeChild(a);\r\n                                                window.URL.revokeObjectURL(url);\r\n                                            }, 100);\r\n                                        },\r\n                                        error: function() {\r\n                                            uiManager.showAlert({type:\"error\", message:\"Không thể tải tệp tin này!\"});\r\n                                        }\r\n                                    });\r\n                                }\r\n                            }\r\n                        }\r\n                    ]\r\n                });\r\n            });\r\n\r\n            function renderFile(file) { \r\n                $(\"#emptyContent\").hide();\r\n                $(\"#fileRenderArea\").show().html('<div style=\"width:100%; height:100%; display:flex; align-items:center; justify-content:center;\"><div class=\"spinner-border text-secondary\"></div></div>');\r\n\r\n                AjaxHPAParadiseAsync({\r\n                    data: { name: \"paradisefile_sp_GetFileAPI\", param: [\"FilePath\", file.filePath] },\r\n                    xhrFields: { responseType: \"blob\" },\r\n                    success: function (blob) {\r\n                        var url = URL.createObjectURL(new Blob([blob], { type: \"application/pdf\" }));\r\n                        $(\"#fileRenderArea\").html('<iframe src=\"' + url + '#toolbar=0\" style=\"width:100%; height:100%; border:none;\"></iframe>');\r\n                    }\r\n                });\r\n            }\r\n\r\n            $(\"#uploadPopup\").dxPopup({\r\n                title: \"Tải tài liệu mới\",\r\n                width: 500,\r\n                height: \"auto\",\r\n                visible: false,\r\n                elementAttr: { class: \"guide-popup-header\" },\r\n                contentTemplate: function() {\r\n                    return $(\"#uploadPopupContent\").clone().show();\r\n                },\r\n                onShown: function() {\r\n                    $(\".dx-popup-wrapper\").last().css(\"z-index\", \"2000\");\r\n                    var $content = $(\"#uploadPopup\").dxPopup(\"instance\").content();\r\n\r\n                    if ($content.hasClass(\"initialized\")) {\r\n                        $content.find(\"#txtDocName\").dxTextBox(\"instance\").option(\"value\", isEditMode ? selectedFile.text : \"\");\r\n                        $content.find(\"#cbCategory\").dxSelectBox(\"instance\").option(\"value\", isEditMode ? selectedFile.parentCategory : null);\r\n                        \r\n                        let oldLogins = [];\r\n                        if(isEditMode && selectedFile.ParentLoginID) {\r\n                            oldLogins = String(selectedFile.ParentLoginID).split(\",\").map(id => parseInt(id.trim())).filter(id => !isNaN(id));\r\n                        }\r\n                        \r\n                        let tagBox = $content.find(\"#tagParentLogin\").dxTagBox(\"instance\");\r\n                        tagBox.option(\"value\", oldLogins);\r\n                        \r\n                        $content.find(\"#fileUploader\").dxFileUploader(\"instance\").option(\"value\", []);\r\n                        return;\r\n                    }\r\n                    $content.addClass(\"initialized\");\r\n\r\n                    $content.find(\"#txtDocName\").dxTextBox({ \r\n                        placeholder: \"Nhập tên tài liệu...\",\r\n                        value: isEditMode ? selectedFile.text : \"\"\r\n                    });\r\n\r\n                    $content.find(\"#btnAddNewCategory\").dxButton({\r\n                        icon: \"plus\",\r\n                        onClick: function() { $content.find(\"#cbCategory\").dxSelectBox(\"instance\").focus(); }\r\n                    });\r\n\r\n                    var catBox = $content.find(\"#cbCategory\").dxSelectBox({\r\n                        displayExpr: \"CategoryName\",\r\n                        valueExpr: \"CategoryName\",\r\n                        searchEnabled: true,\r\n                        acceptCustomValue: true,\r\n                        placeholder: \"Chọn thư mục...\",\r\n                        value: isEditMode ? selectedFile.parentCategory : null,\r\n                        onCustomItemCreating: function(args) {\r\n                            var newItem = { CategoryName: args.text };\r\n                            args.customItem = newItem;\r\n                        }\r\n                    }).dxSelectBox(\"instance\");\r\n                    drawCats(catBox);\r\n\r\n                    $content.find(\"#tagParentLogin\").dxTagBox({\r\n                        displayExpr: \"LoginName\",\r\n                        valueExpr: \"LoginID\",\r\n                        searchEnabled: true,\r\n                        showSelectionControls: true,\r\n                        placeholder: \"Chọn nhóm phân quyền...\",\r\n                        value: (function() {\r\n                            if(!isEditMode || !selectedFile.ParentLoginID) return [];\r\n                            return String(selectedFile.ParentLoginID).split(\",\").map(id => parseInt(id.trim())).filter(id => !isNaN(id));\r\n                        })()\r\n                    });\r\n                    \r\n                    AjaxHPAParadiseAsync({\r\n                        data: { name: \"sp_getParentLoginIDGuide\", param: [] },\r\n                        success: function(res) {\r\n                            let json = typeof res === \"string\" ? JSON.parse(res) : res;\r\n                            let grpData = json.data && json.data[0] ? json.data[0] : [];\r\n                            $content.find(\"#tagParentLogin\").dxTagBox(\"instance\").option(\"dataSource\", grpData);\r\n                        }\r\n                    });\r\n                    \r\n                    $content.find(\"#fileUploader\").dxFileUploader({\r\n                        multiple: false,\r\n                        accept: \".pdf\",\r\n                        uploadMode: \"useButtons\",\r\n                        selectButtonText: \"Chọn tệp PDF\",\r\n                        labelText: \"Chỉ hỗ trợ file .pdf\",\r\n                        onValueChanged: function(e) {\r\n                            var files = e.value;\r\n                            if (files && files.length > 0) {\r\n                                if (files.length > 1) {\r\n                                    uiManager.showAlert({type:\"warning\", message:\"Chỉ được phép tải lên 1 tài liệu!\"});\r\n                                    e.component.option(\"value\", []);\r\n                                    return;\r\n                                }\r\n                                let ext = files[0].name.split('.').pop().toLowerCase();\r\n                                if (ext !== \"pdf\") {\r\n                                    uiManager.showAlert({type:\"warning\", message:\"Chỉ hỗ trợ PDF. Vui lòng chọn lại!\"});\r\n                                    e.component.option(\"value\", []);\r\n                                    return;\r\n                                }\r\n                            }\r\n                        }\r\n                    });\r\n\r\n                    $content.find(\"#btnCancelUpload\").dxButton({\r\n                        text: \"Hủy\",\r\n                        onClick: function() { $(\"#uploadPopup\").dxPopup(\"hide\"); }\r\n                    });\r\n\r\n                    $content.find(\"#btnSaveUpload\").dxButton({\r\n                        text: \"Lưu\",\r\n                        type: \"success\",\r\n                        onClick: async function() {\r\n                            var btnInstance = $content.find(\"#btnSaveUpload\").dxButton(\"instance\");\r\n                            btnInstance.option(\"disabled\", true);\r\n                            var oldText = btnInstance.option(\"text\");\r\n\r\n                            var name = $content.find(\"#txtDocName\").dxTextBox(\"instance\").option(\"value\");\r\n                            var cat = $content.find(\"#cbCategory\").dxSelectBox(\"instance\").option(\"value\");\r\n                            var logins = $content.find(\"#tagParentLogin\").dxTagBox(\"instance\").option(\"value\");\r\n                            var files = $content.find(\"#fileUploader\").dxFileUploader(\"instance\").option(\"value\");\r\n\r\n                            var parentLoginStr = (logins && logins.length > 0) ? logins.join(\",\") : \"\";\r\n\r\n                            if(!name || !cat || parentLoginStr === \"\" || (!isEditMode && files.length === 0)) {\r\n                                uiManager.showAlert({type:\"warning\", message:\"Vui lòng nhập đầy đủ thông tin (Tên, Chuyên mục, Quyền)!\"});\r\n                                btnInstance.option(\"disabled\", false);\r\n                                return;\r\n                            }\r\n                            \r\n                            if (isEditMode && files.length === 0) {\r\n                                btnInstance.option(\"text\", \"Đang cập nhật...\");\r\n                                    AjaxHPAParadiseAsync({\r\n                                        data: {\r\n                                            name: \"sp_CRM_UserGuide_Update\",\r\n                                            param: [\"GuideID\", currentEditID, \"GuideName\", name, \"CategoryName\", cat, \"ParentLoginID\", parentLoginStr, \"RelativePath\", \"\"]\r\n                                        },\r\n                                        success: function() {\r\n                                            uiManager.showAlert({type:\"success\", message: \"Đã cập nhật thành công!\"});\r\n                                            $(\"#uploadPopup\").dxPopup(\"hide\");\r\n                                            drawTree(currentEditID); // Reload và trỏ tới mục vừa sửa\r\n                                        },\r\n                                        error: function() { uiManager.showAlert({type:\"error\", message:\"%UG_UpdateError%\"}); },\r\n                                        complete: function() { \r\n                                            btnInstance.option(\"disabled\", false); \r\n                                            btnInstance.option(\"text\", oldText); \r\n                                        }\r\n                                    });\r\n                                return;\r\n                            }\r\n\r\n                            if (files.length > 0 && files[0].name.split('.').pop().toLowerCase() !== \"pdf\") {\r\n                                uiManager.showAlert({type:\"warning\", message:\"Chỉ hỗ trợ PDF. Vui lòng chọn lại!\"});\r\n                                btnInstance.option(\"disabled\", false);\r\n                                return;\r\n                            }\r\n\r\n                            var reader = new FileReader();\r\n                            reader.readAsDataURL(files[0]);\r\n                            reader.onloadend = async function() {\r\n                                var uploadOK = await uploadFile(reader.result.split(',')[1], files[0].name, function(current, total) {\r\n                                    let percent = Math.round((current / total) * 100);\r\n                                    btnInstance.option(\"text\", \"Đang tải file... \" + percent + \"%\");\r\n                                });\r\n                                \r\n                                if(!uploadOK) {\r\n                                    uiManager.showAlert({type:\"error\", message:\"Lỗi tải file lên server!\"});\r\n                                    btnInstance.option(\"disabled\", false);\r\n                                    btnInstance.option(\"text\", oldText);\r\n                                    return;\r\n                                }\r\n\r\n                                var apiName = isEditMode ? \"sp_CRM_UserGuide_Update\" : \"sp_CRM_UserGuide_Insert\";\r\n                                var finalParam = isEditMode \r\n                                    ? [\"GuideID\", currentEditID, \"GuideName\", name, \"CategoryName\", cat, \"ParentLoginID\", parentLoginStr, \"RelativePath\", \"FileHuongDan/\" + files[0].name]\r\n                                    : [\"LoginID\", UserID, \"GuideName\", name, \"CategoryName\", cat, \"RelativePath\", \"FileHuongDan/\" + files[0].name, \"ParentLoginID\", parentLoginStr];\r\n\r\n                                AjaxHPAParadiseAsync({\r\n                                    data: { name: apiName, param: finalParam },\r\n                                    success: function(res) {\r\n                                        uiManager.showAlert({type:\"success\", message: isEditMode ? \"Đã cập nhật thành công!\" : \"Đã lưu thành công!\"});\r\n                                        $(\"#uploadPopup\").dxPopup(\"hide\");\r\n                                        \r\n                                        let targetId = currentEditID;\r\n                                        if(!isEditMode) {\r\n                                            // Nếu là thêm mới, cố gắng lấy ID từ kết quả trả về\r\n                                            let json = typeof res === \"string\" ? JSON.parse(res) : res;\r\n                                            if(json.data && json.data[0] && json.data[0][0]) {\r\n                                                targetId = json.data[0][0].GuideID;\r\n                                            }\r\n                                        }\r\n\r\n                                        // Chờ 500ms để server ghi tệp xong rồi mới load lại\r\n                                        setTimeout(function() {\r\n                                            drawTree(targetId);\r\n                                        }, 500);\r\n                                    },\r\n                                    error: function() { uiManager.showAlert({type:\"error\", message:\"Lỗi lưu dữ liệu!\"}); },\r\n                                    complete: function() {\r\n                                        btnInstance.option(\"disabled\", false);\r\n                                        btnInstance.option(\"text\", oldText);\r\n                                    }\r\n                                });\r\n                            };\r\n                        }\r\n                    });\r\n                }\r\n            });\r\n\r\n            const sleep = ms => new Promise(r => setTimeout(r, ms));\r\n\r\n            async function uploadFile(src, fileName, onProgress) {\r\n                console.log(\"=== UPLOAD START ===\");\r\n                console.log(\"fileName:\", fileName);\r\n                var destPath = \"C:/DATA/Folder có dấu Tiếng Việt/FileHuongDan/\" + fileName;\r\n                \r\n                var splitImage = src.match(/.{1,1000000}/g);\r\n                var totalIndex = splitImage.length;\r\n                console.log(\"Total chunks:\", totalIndex);\r\n\r\n                for (var index = 0; index < totalIndex; index++) {\r\n                    console.log(\"Sending chunk \" + index + \"...\");\r\n                    if (onProgress) onProgress(index + 1, totalIndex);\r\n                    try {\r\n                        await new Promise((resolve, reject) => {\r\n                            AjaxHPAParadiseParadiseAsync({\r\n                                data: {\r\n                                    sendEncryption: false,\r\n                                    name: \"MergeFileSplit\",\r\n                                    param: [splitImage[index], index, totalIndex, fileName, destPath]\r\n                                },\r\n                                success: function(data) {\r\n                                    resolve(data);\r\n                                },\r\n                                error: function(error) {\r\n                                    // Bắt chước code gốc: Nếu error nhảy vào catch nhưng HTTP 200 thì vẫn đi tiếp\r\n                                    if (error && error.status && error.status == 200) {\r\n                                        resolve(true);\r\n                                    } else {\r\n                                        reject(error);\r\n                                    }\r\n                                }\r\n                            });\r\n                        });\r\n                    } catch(err) {\r\n                        console.error(\"Chunk \" + index + \" FAILED:\", err);\r\n                        return false; // Hủy ngay\r\n                    }\r\n                }\r\n                return true;\r\n            }\r\n\r\n            drawTree();\r\n        });\r\n    </script>\r\n</div>\r\n",
+              "bytes_filename": "sp_CRM_UserGuide.html"
+            }
+          ]
+        ],
+        "dataSchema": [
+          [
+            {
+              "name": "bytes",
+              "type": "System.String"
+            },
+            {
+              "name": "bytes_filename",
+              "type": "System.String"
+            }
+          ]
+        ]
+      },
+      "timestamp": "2026-10-16T02:34:51.801Z"
+    },
+    {
+      "type": "request",
+      "url": "https://paradisehrm.com/Tai3/hpa/paradise2",
+      "method": "POST",
+      "resourceType": "fetch",
+      "postData": {
+        "content": "02xY5O3N3CIcOd20zC0/ATOZWT00Qk6gu0O5yKQbIIEcfCdU/s8ytsWyvFSnIpV6f8iCZwbnFvhBfAcJ38yADIAe350jXqD0APv3lxYIsZfMljF7zN3npoBJDKSrsf+kQiTqIMeqNrzomX8S1Hyvo8f4G0HCrlZ2CENcB73W1/ouzGTW2LxDmj09ndA+d4bRLAU8bRUpcNFlQfjgxj+auxWDi2fwa4/GRCtJ9LK/uqNMNTEXK8T13EY8/3Z815as+AGc5mpsv94=",
+        "paradiseType": "2"
+      },
+      "timestamp": "2026-10-16T02:34:51.869Z"
+    },
+    {
+      "type": "request",
+      "url": "https://paradisehrm.com/Tai3/hpa/paradise2",
+      "method": "POST",
+      "resourceType": "fetch",
+      "postData": {
+        "content": "02xY5O3N3CIcOd20zC0/ATOZWT00Qk6gu0O5yKQbIIEcfCdU/s8ytsWyvFSnIpV6f8iCZwbnFvhBfAcJ38yADIAe350jXqD0APv3lxYIsZfMljF7zN3npoBJDKSrsf+kQiTqIMeqNrzomX8S1Hyvo8f4G0HCrlZ2CENcB73W1/ouzGTW2LxDmj09ndA+d4bRpWH3WGZP83Swtxw/sc0e7f6TV2VA8fJF1jmP71TYfk0XBpPpMFXw6ORklSs0VR73jjbkdPoLB54=",
+        "paradiseType": "2"
+      },
+      "timestamp": "2026-10-16T02:34:51.870Z"
+    },
+    {
+      "type": "request",
+      "url": "https://paradisehrm.com/Tai3/hpa/paradise2",
+      "method": "POST",
+      "resourceType": "fetch",
+      "postData": {
+        "content": "02xY5O3N3CIcOd20zC0/ATOZWT00Qk6gu0O5yKQbIIEcfCdU/s8ytsWyvFSnIpV6f8iCZwbnFvhBfAcJ38yADIAe350jXqD0APv3lxYIsZfMljF7zN3npoBJDKSrsf+kQiTqIMeqNrzomX8S1Hyvo8f4G0HCrlZ2CENcB73W1/ouzGTW2LxDmj09ndA+d4bRzzvT0NnRWZ1Ir9wN7Hw/OfMnoKwueYvrxU+iDKj+L/yqNnfWSvukUPn7hdFhdHW1dHz0C7r08yYH1/J4giIshwZWB1v0NBJsXXlmIQpPtKhNh4oYyan49Ljoem1Ee90WfTnh/F9B6MwXVEwmo8lIkY425HT6Cwee",
+        "paradiseType": "2"
+      },
+      "timestamp": "2026-10-16T02:34:51.907Z"
+    },
+    {
+      "type": "response",
+      "url": "https://paradisehrm.com/Tai3/api/hpa/paradise?&name=paradisepublic&param=[%22paradisepublic%22,%22sp_CRM_UserGuide%22,%22LanguageID%22,%22VN%22,%22ParadiseVersion%22,-1826092684]&user=paradisepublic&password=3C9909AFEC25354D551DAE21590BB26E38D53F2173B8D3DC3EEE4C047E7AB1C1EB8B85103E3BE7BA613B31BB5C9C36214DC9F14A42FD7A2FDB84856BCA5C44C2&_cb=VN_-1826092684",
+      "status": 200,
+      "responseBody": {
+        "result": "success",
+        "reason": "",
+        "data": [
+          [
+            {
+              "bytes": "\r\n\r\n<div id=\"sp_CRM_UserGuide_html\" style=\"height: calc(100vh - 55px); display: flex; flex-direction: column; overflow: hidden; width: 100%;\">\r\n    <style>\r\n        #sp_CRM_UserGuide_html {\r\n            --guide-border-color: var(--bs-border-color);\r\n            --guide-bg-color: var(--bs-body-bg);\r\n            --guide-sidebar-width: 250px;\r\n            font-family: var(--bs-body-font-family);\r\n            width: 100%; height: 100%; display: flex; background: var(--guide-bg-color);\r\n            overflow: hidden !important; box-sizing: border-box; margin: 0;\r\n        }\r\n        #sp_CRM_UserGuide_html .guide-layout { display: flex; flex: 1; height: 100%; }\r\n        #sp_CRM_UserGuide_html .guide-sidebar {\r\n            width: var(--guide-sidebar-width); min-width: 180px; max-width: 450px; flex-shrink: 0;\r\n            border-right: 1px solid var(--guide-border-color); background: var(--bs-secondary-bg);\r\n            display: flex; flex-direction: column; position: relative;\r\n        }\r\n        #sp_CRM_UserGuide_html .sidebar-header { padding: 12px 15px; border-bottom: 1px solid var(--guide-border-color); }\r\n        #sp_CRM_UserGuide_html .sidebar-header h5 { margin:0; font-weight:700; font-size:12px; color:var(--text-color); text-transform:uppercase; }\r\n        #sp_CRM_UserGuide_html .sidebar-body { flex: 1; overflow-y: auto; padding: 5px; }\r\n\r\n        #sp_CRM_UserGuide_html .guide-main { flex: 1; display: flex; flex-direction: column; background: var(--bs-body-bg); }\r\n        #sp_CRM_UserGuide_html .main-header { height: 50px; border-bottom: 1px solid var(--guide-border-color); display: flex; align-items: center; justify-content: flex-end; padding: 0 15px; background: var(--bs-body-bg); }\r\n        #sp_CRM_UserGuide_html .main-body { flex: 1; padding: 10px; background: var(--bs-tertiary-bg); display: flex; flex-direction: column; }\r\n        #sp_CRM_UserGuide_html .viewer-container { width: 100%; flex: 1; border: 1px solid var(--guide-border-color); background: var(--bs-body-bg); border-radius: 4px; overflow: hidden; position: relative; }\r\n\r\n        /* NÚT BẤM ICON-ONLY - VIỀN BORDER - BỎ HOVER */\r\n        #sp_CRM_UserGuide_html .dx-button {\r\n            background-color: var(--bs-body-bg) !important; border: 1px solid var(--guide-border-color) !important;\r\n            box-shadow: none !important; color: var(--text-color) !important; width: 34px !important; height: 34px !important;\r\n            display: flex; align-items: center; justify-content: center; margin-left: 8px; border-radius: 4px;\r\n        }\r\n        #sp_CRM_UserGuide_html .dx-button.dx-state-hover,\r\n        #sp_CRM_UserGuide_html .dx-button.dx-state-active,\r\n        #sp_CRM_UserGuide_html .dx-state-focused { background-color: var(--bs-body-bg) !important; opacity: 1 !important; }\r\n\r\n        #sp_CRM_UserGuide_html .icon-add-doc i { color: var(--bs-success) !important; }\r\n        #sp_CRM_UserGuide_html .icon-delete-doc i { color: var(--bs-danger) !important; }\r\n        #sp_CRM_UserGuide_html .icon-download-doc i { color: var(--bs-primary) !important; }\r\n\r\n        /* HIGHLIGHT MỤC LỤC CHA VÀ CON */\r\n        #sp_CRM_UserGuide_html .dx-treeview-node.dx-state-selected > .dx-treeview-item,\r\n        #sp_CRM_UserGuide_html .dx-treeview-item.dx-state-selected {\r\n            background-color: rgba(var(--bs-primary-rgb, 13, 110, 253), 0.15) !important;\r\n            color: var(--bs-primary, #0d6efd) !important;\r\n            font-weight: bold !important;\r\n            border-radius: 4px;\r\n        }\r\n        #sp_CRM_UserGuide_html .dx-treeview-node:has(.dx-state-selected) > .dx-treeview-item {\r\n            color: var(--bs-primary, #0d6efd) !important;\r\n            font-weight: bold !important;\r\n        }\r\n\r\n        #sp_CRM_UserGuide_html .dx-fileuploader-upload-button { display: none !important; }\r\n\r\n        .dx-toast-wrapper { z-index: 9999 !important; }\r\n        @media (max-width: 768px) { #sp_CRM_UserGuide_html .guide-layout { flex-direction: column; } #sp_CRM_UserGuide_html .guide-sidebar { width: 100%; height: 35%; border-right: none; } }\r\n\r\n        /* Popup Header Styling - Corporate Theme */\r\n        .dx-overlay-content.guide-popup-header .dx-popup-title {\r\n            background-color: var(--bs-primary) !important;\r\n            border-bottom: 1px solid var(--bs-primary) !important;\r\n            padding: 10px 15px !important;\r\n        }\r\n        .dx-overlay-content.guide-popup-header .dx-popup-title .dx-toolbar-label {\r\n            color: var(--bs-light) !important;\r\n            font-weight: bold;\r\n            font-size: 1.1rem;\r\n        }\r\n        .dx-overlay-content.guide-popup-header .dx-closebutton .dx-icon {\r\n            color: var(--bs-light) !important;\r\n        }\r\n    </style>\r\n\r\n    <div class=\"guide-layout\">\r\n        <!-- Sidebar Mục lục -->\r\n        <div class=\"guide-sidebar\" id=\"resizableSidebar\">\r\n            <div class=\"sidebar-header\">\r\n                <h5>MỤC LỤC HƯỚNG DẪN</h5>\r\n            </div>\r\n            <div class=\"sidebar-body\">\r\n                <div id=\"guideTreeView\"></div>\r\n            </div>\r\n        </div>\r\n\r\n        <!-- Nội dung chính -->\r\n        <div class=\"guide-main\">\r\n            <div class=\"main-header\">\r\n                <div id=\"topToolbar\"></div>\r\n            </div>\r\n            <div class=\"main-body\">\r\n                <div class=\"viewer-container\">\r\n                    <div id=\"emptyContent\" style=\"width:100%; height:100%; display:flex; flex-direction:column; align-items:center; justify-content:center;\">\r\n                        <i class=\"bi bi-file-earmark-check\" style=\"font-size:3rem; color:var(--bs-primary); opacity:0.5;\"></i>\r\n                        <p class=\"text-secondary mt-2 small\">Chọn tài liệu để hiển thị...</p>\r\n                    </div>\r\n                    <div id=\"fileRenderArea\" style=\"width:100%; height:100%; display:none;\"></div>\r\n                </div>\r\n            </div>\r\n        </div>\r\n    </div>\r\n\r\n    <!-- POPUP UPLOAD FORM -->\r\n    <div style=\"display:none;\">\r\n        <div id=\"uploadPopupContent\">\r\n            <div class=\"p-3\">\r\n                <p class=\"text-secondary small mb-3\" style=\"color:#00673b;\">Tải lên tệp đính kèm (PDF) vào thư viện hướng dẫn.</p>\r\n                <div class=\"mb-3\">\r\n                    <label class=\"small fw-bold mb-1\" style=\"color:var(--bs-primary);\">Tên tài liệu *</label>\r\n                    <div id=\"txtDocName\"></div>\r\n                </div>\r\n                <div class=\"mb-3\">\r\n                    <label class=\"small fw-bold mb-1\" style=\"color:var(--bs-primary);\">Thư mục lưu trữ *</label>\r\n                    <div style=\"display:flex; gap:8px;\">\r\n                        <div id=\"cbCategory\" style=\"flex:1;\"></div>\r\n                        <div id=\"btnAddNewCategory\"></div>\r\n                    </div>\r\n                </div>\r\n                <div class=\"mb-3\">\r\n                    <label class=\"small fw-bold mb-1\" style=\"color:var(--bs-primary);\">Phân quyền xem (Nhóm) *</label>\r\n                    <div id=\"tagParentLogin\"></div>\r\n                </div>\r\n                <div class=\"mb-3\">\r\n                    <label class=\"small fw-bold mb-1\" style=\"color:var(--bs-primary);\">Tệp đính kèm *</label>\r\n                    <div id=\"fileUploader\"></div>\r\n                </div>\r\n                <div class=\"d-flex justify-content-end gap-2 mt-4 pt-3 border-top\">\r\n                    <div id=\"btnCancelUpload\"></div>\r\n                    <div id=\"btnSaveUpload\"></div>\r\n                </div>\r\n            </div>\r\n        </div>\r\n    </div>\r\n\r\n    <div id=\"uploadPopup\"></div>\r\n\r\n    <script>\r\n        $(document).ready(function () {\r\n            let selectedFile = null;\r\n            let isEditMode = false;\r\n            let currentEditID = null;\r\n\r\n            function drawTree(targetId) {\r\n                AjaxHPAParadiseAsync({\r\n                    data: { name: \"sp_CRM_UserGuide_GetList\", param: [\"LoginID\", UserID] },\r\n                    success: function(res) {\r\n                        let json = typeof res === \"string\" ? JSON.parse(res) : res;\r\n                        let raw = json.data && json.data[0] ? json.data[0] : [];\r\n                        let grouped = {};\r\n                        raw.forEach(item => {\r\n                            if(!grouped[item.parentCategory]) {\r\n                                grouped[item.parentCategory] = { id: item.parentCategoryID, text: item.parentCategory, expanded: true, items: [] };\r\n                            }\r\n                            grouped[item.parentCategory].items.push({ ...item, icon: \"file\" });\r\n                        });\r\n                        const tree = $(\"#guideTreeView\").dxTreeView(\"instance\");\r\n                        if(tree) {\r\n                            tree.option(\"dataSource\", Object.values(grouped));\r\n                            \r\n                            // Nếu có mục tiêu, thực hiện tìm và chọn\r\n                            if(targetId) {\r\n                                let fresh = raw.find(x => x.id == targetId);\r\n                                if(fresh) {\r\n                                    selectedFile = { ...fresh, icon: \"file\" };\r\n                                    setTimeout(function() {\r\n                                        tree.selectItem(targetId);\r\n                                        renderFile(selectedFile);\r\n                                    }, 200);\r\n                                }\r\n                            }\r\n                        }\r\n                    }\r\n                });\r\n            }\r\n\r\n            function drawCats(cbInstance) {\r\n                AjaxHPAParadiseAsync({\r\n                    data: { name: \"sp_CRM_UserCategory_GetList\", param: [] },\r\n                    success: function(res) {\r\n                        let json = typeof res === \"string\" ? JSON.parse(res) : res;\r\n                        let catData = json.data && json.data[0] ? json.data[0] : [];\r\n                        if(cbInstance) cbInstance.option(\"dataSource\", catData);\r\n                    }\r\n                });\r\n            }\r\n\r\n            $(\"#resizableSidebar\").dxResizable({\r\n                handles: \"right\",\r\n                onResize: function(e) { $(\"#resizableSidebar\").width(e.width); }\r\n            });\r\n\r\n            $(\"#guideTreeView\").dxTreeView({\r\n                selectionMode: \"single\",\r\n                selectByClick: true,\r\n                searchEnabled: true,\r\n                expandEvent: \"click\",\r\n                onItemClick: function(e) {\r\n                    if(e.itemData.filePath) {\r\n                        if(selectedFile && selectedFile.id === e.itemData.id) return;\r\n                        selectedFile = e.itemData;\r\n                        renderFile(e.itemData);\r\n                    }\r\n                }\r\n            });\r\n\r\n            let userPerms = { HasCustomerAccess: 0 };\r\n\r\n            function loadPermissions(callback) {\r\n                AjaxHPAParadiseAsync({\r\n                    data: { name: \"sp_Common_GetUserPermissions\", param: [\"LoginID\", UserID] },\r\n                    success: function(res) {\r\n                        let json = typeof res === \"string\" ? JSON.parse(res) : res;\r\n                        if (json && json.data && json.data[0] && json.data[0][0]) {\r\n                            userPerms = json.data[0][0];\r\n                        }\r\n                        if(callback) callback();\r\n                    }\r\n                });\r\n            }\r\n\r\n            loadPermissions(function() {\r\n                $(\"#topToolbar\").dxToolbar({\r\n                    items: [\r\n                        { \r\n                            location: \"after\", \r\n                            widget: \"dxButton\", \r\n                            visible: userPerms.HasCustomerAccess != 1,\r\n                            options: { icon: \"plus\", hint: \"Thêm tài liệu\", elementAttr: { class: \"icon-add-doc\" },\r\n                                onClick: function() { \r\n                                    isEditMode = false;\r\n                                    currentEditID = null;\r\n                                    $(\"#uploadPopup\").dxPopup(\"option\", \"title\", \"Tải tài liệu mới\");\r\n                                    $(\"#uploadPopup\").dxPopup(\"show\"); \r\n                                }\r\n                            }\r\n                        },\r\n                        { \r\n                            location: \"after\", \r\n                            widget: \"dxButton\", \r\n                            visible: userPerms.HasCustomerAccess != 1,\r\n                            options: { icon: \"edit\", hint: \"Sửa thông tin\", elementAttr: { class: \"icon-edit-doc\" },\r\n                                onClick: function() { \r\n                                    if(!selectedFile) {\r\n                                        uiManager.showAlert({type:\"warning\", message:\"Vui lòng chọn tài liệu cần sửa!\"});\r\n                                        return;\r\n                                    }\r\n                                    isEditMode = true;\r\n                                    currentEditID = selectedFile.id;\r\n                                    $(\"#uploadPopup\").dxPopup(\"option\", \"title\", \"Chỉnh sửa tài liệu\");\r\n                                    $(\"#uploadPopup\").dxPopup(\"show\"); \r\n                                }\r\n                            }\r\n                        },\r\n                        { \r\n                            location: \"after\", \r\n                            widget: \"dxButton\",\r\n                            visible: userPerms.HasCustomerAccess != 1,\r\n                            options: { icon: \"trash\", hint: \"Xóa\", elementAttr: { class: \"icon-delete-doc\" },\r\n                                onClick: function() {\r\n                                    var treeInstance = $(\"#guideTreeView\").dxTreeView(\"instance\");\r\n                                    var selectedNodes = treeInstance.getSelectedNodes();\r\n                                    if(!selectedNodes || selectedNodes.length === 0) {\r\n                                        uiManager.showAlert({type:\"warning\", message:\"Vui lòng chọn mục cần xóa!\"});\r\n                                        return;\r\n                                    }\r\n                                    var node = selectedNodes[0];\r\n                                    var isFile = node.itemData.filePath ? true : false;\r\n                                    var typeDel = isFile ? \"FILE\" : \"CATEGORY\";\r\n\r\n                                    showConfirmPopup({\r\n                                        title: \"Xác nhận xóa\",\r\n                                        message: \"Bạn có chắc chắn muốn xóa mục này?\",\r\n                                        YesText: \"Xóa\",\r\n                                        NoText: \"Hủy\",\r\n                                        onYes: function () {\r\n                                            AjaxHPAParadiseAsync({\r\n                                                data: { name: \"sp_CRM_UserGuide_Delete\", param: [\"Type\", typeDel, \"ID\", node.key] },\r\n                                                success: function(res) {\r\n                                                    uiManager.showAlert({type:\"success\", message:\"Đã xóa thành công!\"});\r\n                                                    drawTree();\r\n                                                    selectedFile = null;\r\n                                                    $(\"#emptyContent\").show();\r\n                                                    $(\"#fileRenderArea\").hide().html(\"\");\r\n                                                }\r\n                                            });\r\n                                        }\r\n                                    });\r\n                                }\r\n                            }\r\n                        },\r\n                        { \r\n                            location: \"after\", \r\n                            widget: \"dxButton\", \r\n                            options: { icon: \"download\", hint: \"Tải về\", elementAttr: { class: \"icon-download-doc\" },\r\n                                onClick: function() {\r\n                                    if(!selectedFile || !selectedFile.filePath) {\r\n                                        uiManager.showAlert({type:\"warning\", message:\"Vui lòng chọn tài liệu cần tải!\"});\r\n                                        return;\r\n                                    }\r\n                                    \r\n                                    AjaxHPAParadiseAsync({\r\n                                        data: { name: \"paradisefile_sp_GetFileAPI\", param: [\"FilePath\", selectedFile.filePath] },\r\n                                        xhrFields: { responseType: \"blob\" },\r\n                                        success: function (blob) {\r\n                                            var url = URL.createObjectURL(new Blob([blob], { type: \"application/pdf\" }));\r\n                                            var a = document.createElement(\"a\");\r\n                                            a.href = url;\r\n                                            a.download = selectedFile.text + \".pdf\";\r\n                                            document.body.appendChild(a);\r\n                                            a.click();\r\n                                            setTimeout(function() {\r\n                                                document.body.removeChild(a);\r\n                                                window.URL.revokeObjectURL(url);\r\n                                            }, 100);\r\n                                        },\r\n                                        error: function() {\r\n                                            uiManager.showAlert({type:\"error\", message:\"Không thể tải tệp tin này!\"});\r\n                                        }\r\n                                    });\r\n                                }\r\n                            }\r\n                        }\r\n                    ]\r\n                });\r\n            });\r\n\r\n            function renderFile(file) { \r\n                $(\"#emptyContent\").hide();\r\n                $(\"#fileRenderArea\").show().html('<div style=\"width:100%; height:100%; display:flex; align-items:center; justify-content:center;\"><div class=\"spinner-border text-secondary\"></div></div>');\r\n\r\n                AjaxHPAParadiseAsync({\r\n                    data: { name: \"paradisefile_sp_GetFileAPI\", param: [\"FilePath\", file.filePath] },\r\n                    xhrFields: { responseType: \"blob\" },\r\n                    success: function (blob) {\r\n                        var url = URL.createObjectURL(new Blob([blob], { type: \"application/pdf\" }));\r\n                        $(\"#fileRenderArea\").html('<iframe src=\"' + url + '#toolbar=0\" style=\"width:100%; height:100%; border:none;\"></iframe>');\r\n                    }\r\n                });\r\n            }\r\n\r\n            $(\"#uploadPopup\").dxPopup({\r\n                title: \"Tải tài liệu mới\",\r\n                width: 500,\r\n                height: \"auto\",\r\n                visible: false,\r\n                elementAttr: { class: \"guide-popup-header\" },\r\n                contentTemplate: function() {\r\n                    return $(\"#uploadPopupContent\").clone().show();\r\n                },\r\n                onShown: function() {\r\n                    $(\".dx-popup-wrapper\").last().css(\"z-index\", \"2000\");\r\n                    var $content = $(\"#uploadPopup\").dxPopup(\"instance\").content();\r\n\r\n                    if ($content.hasClass(\"initialized\")) {\r\n                        $content.find(\"#txtDocName\").dxTextBox(\"instance\").option(\"value\", isEditMode ? selectedFile.text : \"\");\r\n                        $content.find(\"#cbCategory\").dxSelectBox(\"instance\").option(\"value\", isEditMode ? selectedFile.parentCategory : null);\r\n                        \r\n                        let oldLogins = [];\r\n                        if(isEditMode && selectedFile.ParentLoginID) {\r\n                            oldLogins = String(selectedFile.ParentLoginID).split(\",\").map(id => parseInt(id.trim())).filter(id => !isNaN(id));\r\n                        }\r\n                        \r\n                        let tagBox = $content.find(\"#tagParentLogin\").dxTagBox(\"instance\");\r\n                        tagBox.option(\"value\", oldLogins);\r\n                        \r\n                        $content.find(\"#fileUploader\").dxFileUploader(\"instance\").option(\"value\", []);\r\n                        return;\r\n                    }\r\n                    $content.addClass(\"initialized\");\r\n\r\n                    $content.find(\"#txtDocName\").dxTextBox({ \r\n                        placeholder: \"Nhập tên tài liệu...\",\r\n                        value: isEditMode ? selectedFile.text : \"\"\r\n                    });\r\n\r\n                    $content.find(\"#btnAddNewCategory\").dxButton({\r\n                        icon: \"plus\",\r\n                        onClick: function() { $content.find(\"#cbCategory\").dxSelectBox(\"instance\").focus(); }\r\n                    });\r\n\r\n                    var catBox = $content.find(\"#cbCategory\").dxSelectBox({\r\n                        displayExpr: \"CategoryName\",\r\n                        valueExpr: \"CategoryName\",\r\n                        searchEnabled: true,\r\n                        acceptCustomValue: true,\r\n                        placeholder: \"Chọn thư mục...\",\r\n                        value: isEditMode ? selectedFile.parentCategory : null,\r\n                        onCustomItemCreating: function(args) {\r\n                            var newItem = { CategoryName: args.text };\r\n                            args.customItem = newItem;\r\n                        }\r\n                    }).dxSelectBox(\"instance\");\r\n                    drawCats(catBox);\r\n\r\n                    $content.find(\"#tagParentLogin\").dxTagBox({\r\n                        displayExpr: \"LoginName\",\r\n                        valueExpr: \"LoginID\",\r\n                        searchEnabled: true,\r\n                        showSelectionControls: true,\r\n                        placeholder: \"Chọn nhóm phân quyền...\",\r\n                        value: (function() {\r\n                            if(!isEditMode || !selectedFile.ParentLoginID) return [];\r\n                            return String(selectedFile.ParentLoginID).split(\",\").map(id => parseInt(id.trim())).filter(id => !isNaN(id));\r\n                        })()\r\n                    });\r\n                    \r\n                    AjaxHPAParadiseAsync({\r\n                        data: { name: \"sp_getParentLoginIDGuide\", param: [] },\r\n                        success: function(res) {\r\n                            let json = typeof res === \"string\" ? JSON.parse(res) : res;\r\n                            let grpData = json.data && json.data[0] ? json.data[0] : [];\r\n                            $content.find(\"#tagParentLogin\").dxTagBox(\"instance\").option(\"dataSource\", grpData);\r\n                        }\r\n                    });\r\n                    \r\n                    $content.find(\"#fileUploader\").dxFileUploader({\r\n                        multiple: false,\r\n                        accept: \".pdf\",\r\n                        uploadMode: \"useButtons\",\r\n                        selectButtonText: \"Chọn tệp PDF\",\r\n                        labelText: \"Chỉ hỗ trợ file .pdf\",\r\n                        onValueChanged: function(e) {\r\n                            var files = e.value;\r\n                            if (files && files.length > 0) {\r\n                                if (files.length > 1) {\r\n                                    uiManager.showAlert({type:\"warning\", message:\"Chỉ được phép tải lên 1 tài liệu!\"});\r\n                                    e.component.option(\"value\", []);\r\n                                    return;\r\n                                }\r\n                                let ext = files[0].name.split('.').pop().toLowerCase();\r\n                                if (ext !== \"pdf\") {\r\n                                    uiManager.showAlert({type:\"warning\", message:\"Chỉ hỗ trợ PDF. Vui lòng chọn lại!\"});\r\n                                    e.component.option(\"value\", []);\r\n                                    return;\r\n                                }\r\n                            }\r\n                        }\r\n                    });\r\n\r\n                    $content.find(\"#btnCancelUpload\").dxButton({\r\n                        text: \"Hủy\",\r\n                        onClick: function() { $(\"#uploadPopup\").dxPopup(\"hide\"); }\r\n                    });\r\n\r\n                    $content.find(\"#btnSaveUpload\").dxButton({\r\n                        text: \"Lưu\",\r\n                        type: \"success\",\r\n                        onClick: async function() {\r\n                            var btnInstance = $content.find(\"#btnSaveUpload\").dxButton(\"instance\");\r\n                            btnInstance.option(\"disabled\", true);\r\n                            var oldText = btnInstance.option(\"text\");\r\n\r\n                            var name = $content.find(\"#txtDocName\").dxTextBox(\"instance\").option(\"value\");\r\n                            var cat = $content.find(\"#cbCategory\").dxSelectBox(\"instance\").option(\"value\");\r\n                            var logins = $content.find(\"#tagParentLogin\").dxTagBox(\"instance\").option(\"value\");\r\n                            var files = $content.find(\"#fileUploader\").dxFileUploader(\"instance\").option(\"value\");\r\n\r\n                            var parentLoginStr = (logins && logins.length > 0) ? logins.join(\",\") : \"\";\r\n\r\n                            if(!name || !cat || parentLoginStr === \"\" || (!isEditMode && files.length === 0)) {\r\n                                uiManager.showAlert({type:\"warning\", message:\"Vui lòng nhập đầy đủ thông tin (Tên, Chuyên mục, Quyền)!\"});\r\n                                btnInstance.option(\"disabled\", false);\r\n                                return;\r\n                            }\r\n                            \r\n                            if (isEditMode && files.length === 0) {\r\n                                btnInstance.option(\"text\", \"Đang cập nhật...\");\r\n                                    AjaxHPAParadiseAsync({\r\n                                        data: {\r\n                                            name: \"sp_CRM_UserGuide_Update\",\r\n                                            param: [\"GuideID\", currentEditID, \"GuideName\", name, \"CategoryName\", cat, \"ParentLoginID\", parentLoginStr, \"RelativePath\", \"\"]\r\n                                        },\r\n                                        success: function() {\r\n                                            uiManager.showAlert({type:\"success\", message: \"Đã cập nhật thành công!\"});\r\n                                            $(\"#uploadPopup\").dxPopup(\"hide\");\r\n                                            drawTree(currentEditID); // Reload và trỏ tới mục vừa sửa\r\n                                        },\r\n                                        error: function() { uiManager.showAlert({type:\"error\", message:\"%UG_UpdateError%\"}); },\r\n                                        complete: function() { \r\n                                            btnInstance.option(\"disabled\", false); \r\n                                            btnInstance.option(\"text\", oldText); \r\n                                        }\r\n                                    });\r\n                                return;\r\n                            }\r\n\r\n                            if (files.length > 0 && files[0].name.split('.').pop().toLowerCase() !== \"pdf\") {\r\n                                uiManager.showAlert({type:\"warning\", message:\"Chỉ hỗ trợ PDF. Vui lòng chọn lại!\"});\r\n                                btnInstance.option(\"disabled\", false);\r\n                                return;\r\n                            }\r\n\r\n                            var reader = new FileReader();\r\n                            reader.readAsDataURL(files[0]);\r\n                            reader.onloadend = async function() {\r\n                                var uploadOK = await uploadFile(reader.result.split(',')[1], files[0].name, function(current, total) {\r\n                                    let percent = Math.round((current / total) * 100);\r\n                                    btnInstance.option(\"text\", \"Đang tải file... \" + percent + \"%\");\r\n                                });\r\n                                \r\n                                if(!uploadOK) {\r\n                                    uiManager.showAlert({type:\"error\", message:\"Lỗi tải file lên server!\"});\r\n                                    btnInstance.option(\"disabled\", false);\r\n                                    btnInstance.option(\"text\", oldText);\r\n                                    return;\r\n                                }\r\n\r\n                                var apiName = isEditMode ? \"sp_CRM_UserGuide_Update\" : \"sp_CRM_UserGuide_Insert\";\r\n                                var finalParam = isEditMode \r\n                                    ? [\"GuideID\", currentEditID, \"GuideName\", name, \"CategoryName\", cat, \"ParentLoginID\", parentLoginStr, \"RelativePath\", \"FileHuongDan/\" + files[0].name]\r\n                                    : [\"LoginID\", UserID, \"GuideName\", name, \"CategoryName\", cat, \"RelativePath\", \"FileHuongDan/\" + files[0].name, \"ParentLoginID\", parentLoginStr];\r\n\r\n                                AjaxHPAParadiseAsync({\r\n                                    data: { name: apiName, param: finalParam },\r\n                                    success: function(res) {\r\n                                        uiManager.showAlert({type:\"success\", message: isEditMode ? \"Đã cập nhật thành công!\" : \"Đã lưu thành công!\"});\r\n                                        $(\"#uploadPopup\").dxPopup(\"hide\");\r\n                                        \r\n                                        let targetId = currentEditID;\r\n                                        if(!isEditMode) {\r\n                                            // Nếu là thêm mới, cố gắng lấy ID từ kết quả trả về\r\n                                            let json = typeof res === \"string\" ? JSON.parse(res) : res;\r\n                                            if(json.data && json.data[0] && json.data[0][0]) {\r\n                                                targetId = json.data[0][0].GuideID;\r\n                                            }\r\n                                        }\r\n\r\n                                        // Chờ 500ms để server ghi tệp xong rồi mới load lại\r\n                                        setTimeout(function() {\r\n                                            drawTree(targetId);\r\n                                        }, 500);\r\n                                    },\r\n                                    error: function() { uiManager.showAlert({type:\"error\", message:\"Lỗi lưu dữ liệu!\"}); },\r\n                                    complete: function() {\r\n                                        btnInstance.option(\"disabled\", false);\r\n                                        btnInstance.option(\"text\", oldText);\r\n                                    }\r\n                                });\r\n                            };\r\n                        }\r\n                    });\r\n                }\r\n            });\r\n\r\n            const sleep = ms => new Promise(r => setTimeout(r, ms));\r\n\r\n            async function uploadFile(src, fileName, onProgress) {\r\n                console.log(\"=== UPLOAD START ===\");\r\n                console.log(\"fileName:\", fileName);\r\n                var destPath = \"C:/DATA/Folder có dấu Tiếng Việt/FileHuongDan/\" + fileName;\r\n                \r\n                var splitImage = src.match(/.{1,1000000}/g);\r\n                var totalIndex = splitImage.length;\r\n                console.log(\"Total chunks:\", totalIndex);\r\n\r\n                for (var index = 0; index < totalIndex; index++) {\r\n                    console.log(\"Sending chunk \" + index + \"...\");\r\n                    if (onProgress) onProgress(index + 1, totalIndex);\r\n                    try {\r\n                        await new Promise((resolve, reject) => {\r\n                            AjaxHPAParadiseParadiseAsync({\r\n                                data: {\r\n                                    sendEncryption: false,\r\n                                    name: \"MergeFileSplit\",\r\n                                    param: [splitImage[index], index, totalIndex, fileName, destPath]\r\n                                },\r\n                                success: function(data) {\r\n                                    resolve(data);\r\n                                },\r\n                                error: function(error) {\r\n                                    // Bắt chước code gốc: Nếu error nhảy vào catch nhưng HTTP 200 thì vẫn đi tiếp\r\n                                    if (error && error.status && error.status == 200) {\r\n                                        resolve(true);\r\n                                    } else {\r\n                                        reject(error);\r\n                                    }\r\n                                }\r\n                            });\r\n                        });\r\n                    } catch(err) {\r\n                        console.error(\"Chunk \" + index + \" FAILED:\", err);\r\n                        return false; // Hủy ngay\r\n                    }\r\n                }\r\n                return true;\r\n            }\r\n\r\n            drawTree();\r\n        });\r\n    </script>\r\n</div>\r\n",
+              "bytes_filename": "sp_CRM_UserGuide.html"
+            }
+          ]
+        ],
+        "dataSchema": [
+          [
+            {
+              "name": "bytes",
+              "type": "System.String"
+            },
+            {
+              "name": "bytes_filename",
+              "type": "System.String"
+            }
+          ]
+        ]
+      },
+      "timestamp": "2026-10-16T02:34:51.908Z"
+    },
+    {
+      "type": "request",
+      "url": "https://paradisehrm.com/Tai3/hpa/paradise2",
+      "method": "POST",
+      "resourceType": "fetch",
+      "postData": {
+        "content": "02xY5O3N3CIcOd20zC0/ATOZWT00Qk6gu0O5yKQbIIEcfCdU/s8ytsWyvFSnIpV6f8iCZwbnFvhAhgzJRLtfjYAe350jXqD0APv3lxYIsZfMljF7zN3npoBJDKSrsf+kQiTqIMeqNrzomX8S1Hyvo8f4G0HCrlZ2CENcB73W1/ouzGTW2LxDmj09ndA+d4bRXlzu2lVbXFnL1x51Ifrcf1GfrhmJftsUZLJTFLHcbVUED8+Kb2SJncFXeFF1Mp3nlUYEcOjI4SAElpaXJ/HF8Yn6nIexv/3Ng9/aMcCNDHSKbMexcLQTec1WehVFTcoNcY6Zwze5iOxE1Bswc8Ty0IPqVGPlush2LqUcg3MXRZSAKnf2anyP71aSFMf3BietAAKp6eHBMa8=",
+        "paradiseType": "2"
+      },
+      "timestamp": "2026-10-16T02:34:52.014Z"
+    },
+    {
+      "type": "request",
+      "url": "https://paradisehrm.com/Tai3/hpa/paradise2",
+      "method": "POST",
+      "resourceType": "fetch",
+      "postData": {
+        "content": "02xY5O3N3CIcOd20zC0/ATOZWT00Qk6gu0O5yKQbIIEcfCdU/s8ytsWyvFSnIpV6f8iCZwbnFvhAhgzJRLtfjYAe350jXqD0APv3lxYIsZfMljF7zN3npoBJDKSrsf+kQiTqIMeqNrzomX8S1Hyvo8f4G0HCrlZ2CENcB73W1/ouzGTW2LxDmj09ndA+d4bRXlzu2lVbXFnL1x51Ifrcf1GfrhmJftsUZLJTFLHcbVUED8+Kb2SJncFXeFF1Mp3nlUYEcOjI4SAElpaXJ/HF8Yn6nIexv/3Ng9/aMcCNDHSKbMexcLQTec1WehVFTcoNcY6Zwze5iOxE1Bswc8Ty0IPqVGPlush2LqUcg3MXRZSAKnf2anyP71aSFMf3BietAAKp6eHBMa8=",
+        "paradiseType": "2"
+      },
+      "timestamp": "2026-10-16T02:34:52.025Z"
+    },
+    {
+      "type": "request",
+      "url": "https://paradisehrm.com/Tai3/hpa/paradise2",
+      "method": "POST",
+      "resourceType": "fetch",
+      "postData": {
+        "content": "02xY5O3N3CIcOd20zC0/ATOZWT00Qk6gu0O5yKQbIIEcfCdU/s8ytsWyvFSnIpV6f8iCZwbnFvhAhgzJRLtfjYAe350jXqD0APv3lxYIsZfMljF7zN3npoBJDKSrsf+kQiTqIMeqNrzomX8S1Hyvo8f4G0HCrlZ2CENcB73W1/ouzGTW2LxDmj09ndA+d4bRLAU8bRUpcNFlQfjgxj+auxWDi2fwa4/GRCtJ9LK/uqNMNTEXK8T13EY8/3Z815as+AGc5mpsv94=",
+        "paradiseType": "2"
+      },
+      "timestamp": "2026-10-16T02:34:52.056Z"
+    },
+    {
+      "type": "request",
+      "url": "https://paradisehrm.com/Tai3/hpa/paradise2",
+      "method": "POST",
+      "resourceType": "fetch",
+      "postData": {
+        "content": "02xY5O3N3CIcOd20zC0/ATOZWT00Qk6gu0O5yKQbIIEcfCdU/s8ytsWyvFSnIpV6f8iCZwbnFvhAhgzJRLtfjYAe350jXqD0APv3lxYIsZfMljF7zN3npoBJDKSrsf+kQiTqIMeqNrzomX8S1Hyvo8f4G0HCrlZ2CENcB73W1/ouzGTW2LxDmj09ndA+d4bRpWH3WGZP83Swtxw/sc0e7f6TV2VA8fJF1jmP71TYfk0XBpPpMFXw6ORklSs0VR73jjbkdPoLB54=",
+        "paradiseType": "2"
+      },
+      "timestamp": "2026-10-16T02:34:52.057Z"
+    },
+    {
+      "type": "response",
+      "url": "https://paradisehrm.com/Tai3/hpa/paradise2",
+      "status": 200,
+      "responseBody": {
+        "result": "success",
+        "reason": "",
+        "data": [
+          [
+            {
+              "LoginID": 22,
+              "HasFullAccess": true,
+              "HasManagerAccess": false,
+              "HasCustomerAccess": false,
+              "HasUsersAccess": false,
+              "AccessLevel": "Full Access",
+              "IsAdmin": 1,
+              "IsCustomer": 0
+            }
+          ]
+        ],
+        "dataSchema": [
+          [
+            {
+              "name": "LoginID",
+              "type": "System.Int32"
+            },
+            {
+              "name": "HasFullAccess",
+              "type": "System.Boolean"
+            },
+            {
+              "name": "HasManagerAccess",
+              "type": "System.Boolean"
+            },
+            {
+              "name": "HasCustomerAccess",
+              "type": "System.Boolean"
+            },
+            {
+              "name": "HasUsersAccess",
+              "type": "System.Boolean"
+            },
+            {
+              "name": "AccessLevel",
+              "type": "System.String"
+            },
+            {
+              "name": "IsAdmin",
+              "type": "System.Int32"
+            },
+            {
+              "name": "IsCustomer",
+              "type": "System.Int32"
+            }
+          ]
+        ]
+      },
+      "timestamp": "2026-10-16T02:34:52.108Z"
+    },
+    {
+      "type": "response",
+      "url": "https://paradisehrm.com/Tai3/hpa/paradise2",
+      "status": 200,
+      "responseBody": {
+        "result": "success",
+        "reason": "",
+        "data": [
+          [
+            {
+              "ParadiseVersion": "-1826092684"
+            }
+          ]
+        ],
+        "dataSchema": [
+          [
+            {
+              "name": "ParadiseVersion",
+              "type": "System.String"
+            }
+          ]
+        ]
+      },
+      "timestamp": "2026-10-16T02:34:52.108Z"
+    },
+    {
+      "type": "response",
+      "url": "https://paradisehrm.com/Tai3/hpa/paradise2",
+      "status": 200,
+      "responseBody": {
+        "result": "success",
+        "reason": "",
+        "data": [
+          [
+            {
+              "TotalTickets": 0,
+              "NewTicketsThisMonth": null,
+              "ProcessingTickets": null,
+              "CompletedTickets": null
+            }
+          ],
+          [
+            {
+              "Label": "Tháng 1",
+              "Total": 0
+            },
+            {
+              "Label": "Tháng 2",
+              "Total": 0
+            },
+            {
+              "Label": "Tháng 3",
+              "Total": 3
+            },
+            {
+              "Label": "Tháng 4",
+              "Total": 0
+            },
+            {
+              "Label": "Tháng 5",
+              "Total": 3
+            },
+            {
+              "Label": "Tháng 6",
+              "Total": 87
+            },
+            {
+              "Label": "Tháng 7",
+              "Total": 119
+            },
+            {
+              "Label": "Tháng 8",
+              "Total": 69
+            },
+            {
+              "Label": "Tháng 9",
+              "Total": 91
+            },
+            {
+              "Label": "Tháng 10",
+              "Total": 0
+            },
+            {
+              "Label": "Tháng 11",
+              "Total": 0
+            },
+            {
+              "Label": "Tháng 12",
+              "Total": 0
+            }
+          ],
+          [],
+          [],
+          [],
+          [],
+          [
+            {
+              "CompanyFullName": "VIET TIN SOFTWARE SOLUTION COMPANY LIMITED"
+            }
+          ]
+        ],
+        "dataSchema": [
+          [
+            {
+              "name": "TotalTickets",
+              "type": "System.Int32"
+            },
+            {
+              "name": "NewTicketsThisMonth",
+              "type": "System.Int32"
+            },
+            {
+              "name": "ProcessingTickets",
+              "type": "System.Int32"
+            },
+            {
+              "name": "CompletedTickets",
+              "type": "System.Int32"
+            }
+          ],
+          [
+            {
+              "name": "Label",
+              "type": "System.String"
+            },
+            {
+              "name": "Total",
+              "type": "System.Int32"
+            }
+          ],
+          [
+            {
+              "name": "TicketStatusID",
+              "type": "System.Int32"
+            },
+            {
+              "name": "StatusName",
+              "type": "System.String"
+            },
+            {
+              "name": "Total",
+              "type": "System.Int32"
+            }
+          ],
+          [
+            {
+              "name": "SupportLevelID",
+              "type": "System.Int32"
+            },
+            {
+              "name": "LevelName",
+              "type": "System.String"
+            },
+            {
+              "name": "Total",
+              "type": "System.Int32"
+            }
+          ],
+          [
+            {
+              "name": "DepartmentName",
+              "type": "System.String"
+            },
+            {
+              "name": "Total",
+              "type": "System.Int32"
+            }
+          ],
+          [
+            {
+              "name": "TicketID",
+              "type": "System.Int32"
+            },
+            {
+              "name": "ShortDescription",
+              "type": "System.String"
+            },
+            {
+              "name": "CreatedBy",
+              "type": "System.String"
+            },
+            {
+              "name": "AssignedTo",
+              "type": "System.String"
+            },
+            {
+              "name": "CreatedDate",
+              "type": "System.DateTime"
+            },
+            {
+              "name": "StatusName",
+              "type": "System.String"
+            },
+            {
+              "name": "LevelName",
+              "type": "System.String"
+            }
+          ],
+          [
+            {
+              "name": "CompanyFullName",
+              "type": "System.String"
+            }
+          ]
+        ]
+      },
+      "timestamp": "2026-10-16T02:34:52.140Z"
+    },
+    {
+      "type": "response",
+      "url": "https://paradisehrm.com/Tai3/hpa/paradise2",
+      "status": 200,
+      "responseBody": {
+        "result": "success",
+        "reason": "",
+        "data": [
+          [
+            {
+              "TotalTickets": 0,
+              "NewTicketsThisMonth": null,
+              "ProcessingTickets": null,
+              "CompletedTickets": null
+            }
+          ],
+          [
+            {
+              "Label": "Tháng 1",
+              "Total": 0
+            },
+            {
+              "Label": "Tháng 2",
+              "Total": 0
+            },
+            {
+              "Label": "Tháng 3",
+              "Total": 3
+            },
+            {
+              "Label": "Tháng 4",
+              "Total": 0
+            },
+            {
+              "Label": "Tháng 5",
+              "Total": 3
+            },
+            {
+              "Label": "Tháng 6",
+              "Total": 87
+            },
+            {
+              "Label": "Tháng 7",
+              "Total": 119
+            },
+            {
+              "Label": "Tháng 8",
+              "Total": 69
+            },
+            {
+              "Label": "Tháng 9",
+              "Total": 91
+            },
+            {
+              "Label": "Tháng 10",
+              "Total": 0
+            },
+            {
+              "Label": "Tháng 11",
+              "Total": 0
+            },
+            {
+              "Label": "Tháng 12",
+              "Total": 0
+            }
+          ],
+          [],
+          [],
+          [],
+          [],
+          [
+            {
+              "CompanyFullName": "VIET TIN SOFTWARE SOLUTION COMPANY LIMITED"
+            }
+          ]
+        ],
+        "dataSchema": [
+          [
+            {
+              "name": "TotalTickets",
+              "type": "System.Int32"
+            },
+            {
+              "name": "NewTicketsThisMonth",
+              "type": "System.Int32"
+            },
+            {
+              "name": "ProcessingTickets",
+              "type": "System.Int32"
+            },
+            {
+              "name": "CompletedTickets",
+              "type": "System.Int32"
+            }
+          ],
+          [
+            {
+              "name": "Label",
+              "type": "System.String"
+            },
+            {
+              "name": "Total",
+              "type": "System.Int32"
+            }
+          ],
+          [
+            {
+              "name": "TicketStatusID",
+              "type": "System.Int32"
+            },
+            {
+              "name": "StatusName",
+              "type": "System.String"
+            },
+            {
+              "name": "Total",
+              "type": "System.Int32"
+            }
+          ],
+          [
+            {
+              "name": "SupportLevelID",
+              "type": "System.Int32"
+            },
+            {
+              "name": "LevelName",
+              "type": "System.String"
+            },
+            {
+              "name": "Total",
+              "type": "System.Int32"
+            }
+          ],
+          [
+            {
+              "name": "DepartmentName",
+              "type": "System.String"
+            },
+            {
+              "name": "Total",
+              "type": "System.Int32"
+            }
+          ],
+          [
+            {
+              "name": "TicketID",
+              "type": "System.Int32"
+            },
+            {
+              "name": "ShortDescription",
+              "type": "System.String"
+            },
+            {
+              "name": "CreatedBy",
+              "type": "System.String"
+            },
+            {
+              "name": "AssignedTo",
+              "type": "System.String"
+            },
+            {
+              "name": "CreatedDate",
+              "type": "System.DateTime"
+            },
+            {
+              "name": "StatusName",
+              "type": "System.String"
+            },
+            {
+              "name": "LevelName",
+              "type": "System.String"
+            }
+          ],
+          [
+            {
+              "name": "CompanyFullName",
+              "type": "System.String"
+            }
+          ]
+        ]
+      },
+      "timestamp": "2026-10-16T02:34:52.140Z"
+    },
+    {
+      "type": "response",
+      "url": "https://paradisehrm.com/Tai3/hpa/paradise2",
+      "status": 200,
+      "responseBody": {
+        "result": "success",
+        "reason": "",
+        "data": [
+          [
+            {
+              "LoginID": 22,
+              "HasFullAccess": true,
+              "HasManagerAccess": false,
+              "HasCustomerAccess": false,
+              "HasUsersAccess": false,
+              "AccessLevel": "Full Access",
+              "IsAdmin": 1,
+              "IsCustomer": 0
+            }
+          ]
+        ],
+        "dataSchema": [
+          [
+            {
+              "name": "LoginID",
+              "type": "System.Int32"
+            },
+            {
+              "name": "HasFullAccess",
+              "type": "System.Boolean"
+            },
+            {
+              "name": "HasManagerAccess",
+              "type": "System.Boolean"
+            },
+            {
+              "name": "HasCustomerAccess",
+              "type": "System.Boolean"
+            },
+            {
+              "name": "HasUsersAccess",
+              "type": "System.Boolean"
+            },
+            {
+              "name": "AccessLevel",
+              "type": "System.String"
+            },
+            {
+              "name": "IsAdmin",
+              "type": "System.Int32"
+            },
+            {
+              "name": "IsCustomer",
+              "type": "System.Int32"
+            }
+          ]
+        ]
+      },
+      "timestamp": "2026-10-16T02:34:52.178Z"
+    },
+    {
+      "type": "response",
+      "url": "https://paradisehrm.com/Tai3/hpa/paradise2",
+      "status": 200,
+      "responseBody": {
+        "result": "success",
+        "reason": "",
+        "data": [
+          [
+            {
+              "id": "B33BECDA-FA43-4DCD-9398-C641C5C392D7",
+              "text": "Hướng dẫn sử dụng Ticket",
+              "parentCategory": "Ticket",
+              "parentCategoryID": "4E49D8F6-5DF0-4A3F-91FA-FDB664E2CC3D",
+              "filePath": null,
+              "ParentLoginID": "94,9",
+              "icon": "file"
+            }
+          ]
+        ],
+        "dataSchema": [
+          [
+            {
+              "name": "id",
+              "type": "System.String"
+            },
+            {
+              "name": "text",
+              "type": "System.String"
+            },
+            {
+              "name": "parentCategory",
+              "type": "System.String"
+            },
+            {
+              "name": "parentCategoryID",
+              "type": "System.String"
+            },
+            {
+              "name": "filePath",
+              "type": "System.String"
+            },
+            {
+              "name": "ParentLoginID",
+              "type": "System.String"
+            },
+            {
+              "name": "icon",
+              "type": "System.String"
+            }
+          ]
+        ]
+      },
+      "timestamp": "2026-10-16T02:34:52.193Z"
+    },
+    {
+      "type": "response",
+      "url": "https://paradisehrm.com/Tai3/hpa/paradise2",
+      "status": 200,
+      "responseBody": {
+        "result": "success",
+        "reason": "",
+        "data": [
+          [
+            {
+              "id": "B33BECDA-FA43-4DCD-9398-C641C5C392D7",
+              "text": "Hướng dẫn sử dụng Ticket",
+              "parentCategory": "Ticket",
+              "parentCategoryID": "4E49D8F6-5DF0-4A3F-91FA-FDB664E2CC3D",
+              "filePath": null,
+              "ParentLoginID": "94,9",
+              "icon": "file"
+            }
+          ]
+        ],
+        "dataSchema": [
+          [
+            {
+              "name": "id",
+              "type": "System.String"
+            },
+            {
+              "name": "text",
+              "type": "System.String"
+            },
+            {
+              "name": "parentCategory",
+              "type": "System.String"
+            },
+            {
+              "name": "parentCategoryID",
+              "type": "System.String"
+            },
+            {
+              "name": "filePath",
+              "type": "System.String"
+            },
+            {
+              "name": "ParentLoginID",
+              "type": "System.String"
+            },
+            {
+              "name": "icon",
+              "type": "System.String"
+            }
+          ]
+        ]
+      },
+      "timestamp": "2026-10-16T02:34:52.241Z"
+    }
+  ]
+}

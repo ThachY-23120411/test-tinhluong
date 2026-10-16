@@ -1,0 +1,1515 @@
+{
+  "code": "CRM-17",
+  "appId": "MnuCSM003",
+  "menuName": "Quản lý phân hệ",
+  "group": "Báo giá",
+  "clickSuccess": true,
+  "crawledAt": "2026-10-16T02:33:49.334Z",
+  "screenshot": "CRM-17_quan_ly_phan_he.png",
+  "mainScreen": {
+    "contextName": "Quản lý phân hệ",
+    "fields": [
+      {
+        "index": 1,
+        "label": "Trường #1",
+        "controlType": "CheckBox",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": "true"
+      },
+      {
+        "index": 2,
+        "label": "Trường #2",
+        "controlType": "CheckBox",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": "true"
+      },
+      {
+        "index": 5,
+        "label": "Tìm kiếm theo nội dung",
+        "controlType": "TextBox (Text / String)",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 17,
+        "label": "Trường #17",
+        "controlType": "Dropdown / SelectBox",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 18,
+        "label": "Trường #18",
+        "controlType": "Dropdown / SelectBox",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 19,
+        "label": "Trường #19",
+        "controlType": "Dropdown / SelectBox",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 20,
+        "label": "Chọn cột hiển thị",
+        "controlType": "TextBox (Text / String)",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 21,
+        "label": "Trường #21",
+        "controlType": "CheckBox",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": "false"
+      },
+      {
+        "index": 23,
+        "label": "Chọn cột hiển thị",
+        "controlType": "TextBox (Text / String)",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 28,
+        "label": "Nhân viên",
+        "controlType": "Dropdown / SelectBox",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": "2026-09-16"
+      },
+      {
+        "index": 29,
+        "label": "Chọn cột hiển thị",
+        "controlType": "TextBox (Text / String)",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 30,
+        "label": "Tìm kiếm theo nội dung",
+        "controlType": "TextBox (Text / String)",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 31,
+        "label": "Trường #31",
+        "controlType": "CheckBox",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": "false"
+      },
+      {
+        "index": 33,
+        "label": "Ngày tạo",
+        "controlType": "DatePicker / DateBox",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 34,
+        "label": "Mã nhân viên",
+        "controlType": "TextBox (Text / String)",
+        "state": "DISABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 35,
+        "label": "Công ty",
+        "controlType": "TextBox (Text / String)",
+        "state": "DISABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 36,
+        "label": "Mã số thuế",
+        "controlType": "TextBox (Text / String)",
+        "state": "DISABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 37,
+        "label": "Ngành",
+        "controlType": "Dropdown / SelectBox",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 38,
+        "label": "Địa chỉ",
+        "controlType": "TextBox (Text / String)",
+        "state": "DISABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 39,
+        "label": "Người liên hệ",
+        "controlType": "TextBox (Text / String)",
+        "state": "DISABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 40,
+        "label": "Điện thoại",
+        "controlType": "TextBox (Text / String)",
+        "state": "DISABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 41,
+        "label": "EMAIL",
+        "controlType": "TextBox (Text / String)",
+        "state": "DISABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 42,
+        "label": "Chức vụ công việc",
+        "controlType": "Dropdown / SelectBox",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 43,
+        "label": "Quy mô công ty",
+        "controlType": "Dropdown / SelectBox",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 44,
+        "label": "Nguồn",
+        "controlType": "TextBox (Text / String)",
+        "state": "DISABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 45,
+        "label": "Ghi chú",
+        "controlType": "TextArea",
+        "state": "DISABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 46,
+        "label": "Trạng thái",
+        "controlType": "TextBox (Text / String)",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 47,
+        "label": "Vui lòng nhập lý do từ chối",
+        "controlType": "TextArea",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 48,
+        "label": "Nhân viên",
+        "controlType": "DatePicker / DateBox",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": "2026-10-12"
+      },
+      {
+        "index": 49,
+        "label": "Nhân viên",
+        "controlType": "DatePicker / DateBox",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 51,
+        "label": "Tìm kiếm theo nội dung",
+        "controlType": "TextBox (Text / String)",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 53,
+        "label": "Tìm kiếm theo nội dung",
+        "controlType": "TextBox (Text / String)",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 56,
+        "label": "Tiêu đề",
+        "controlType": "TextBox (Text / String)",
+        "state": "ENABLED",
+        "required": "YES (*)",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Bắt buộc nhập (*)",
+        "currentValue": ""
+      },
+      {
+        "index": 57,
+        "label": "Địa\n                            điểm",
+        "controlType": "TextBox (Text / String)",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 58,
+        "label": "Bắt\n                            đầu",
+        "controlType": "DatePicker / DateBox",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 59,
+        "label": "Kết\n                            thúc",
+        "controlType": "DatePicker / DateBox",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 60,
+        "label": "Người tham dự",
+        "controlType": "TextBox (Text / String)",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 61,
+        "label": "Nội dung",
+        "controlType": "Dropdown / SelectBox",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": "#000000"
+      },
+      {
+        "index": 62,
+        "label": "Nhắc\n                            trước",
+        "controlType": "NumberInput",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Chỉ nhận giá trị số",
+        "currentValue": "15"
+      },
+      {
+        "index": 63,
+        "label": "Nhân viên",
+        "controlType": "DatePicker / DateBox",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": "2026-10-12"
+      },
+      {
+        "index": 65,
+        "label": "Tìm kiếm theo nội dung",
+        "controlType": "TextBox (Text / String)",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 68,
+        "label": "Thời gian",
+        "controlType": "DatePicker / DateBox",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 69,
+        "label": "Chủ đề",
+        "controlType": "TextBox (Text / String)",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 70,
+        "label": "Trạng thái",
+        "controlType": "Dropdown / SelectBox",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 71,
+        "label": "Loại bài đăng",
+        "controlType": "Dropdown / SelectBox",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 72,
+        "label": "Link bài đăng",
+        "controlType": "TextBox (Text / String)",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 73,
+        "label": "Ghi chú",
+        "controlType": "Dropdown / SelectBox",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": "#000000"
+      },
+      {
+        "index": 74,
+        "label": "Đính kèm",
+        "controlType": "TextBox (Text / String)",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 75,
+        "label": "Nhân viên",
+        "controlType": "DatePicker / DateBox",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": "2026-10-12"
+      },
+      {
+        "index": 76,
+        "label": "Chọn cột hiển thị",
+        "controlType": "TextBox (Text / String)",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 77,
+        "label": "Tìm kiếm theo nội dung",
+        "controlType": "TextBox (Text / String)",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 103,
+        "label": "Chọn cột hiển thị",
+        "controlType": "TextBox (Text / String)",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 104,
+        "label": "Tìm kiếm theo nội dung",
+        "controlType": "TextBox (Text / String)",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 107,
+        "label": "Chọn cột hiển thị",
+        "controlType": "TextBox (Text / String)",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 108,
+        "label": "Thêm",
+        "controlType": "TextBox (Text / String)",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 109,
+        "label": "Tìm kiếm theo nội dung",
+        "controlType": "TextBox (Text / String)",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 119,
+        "label": "Trường #119",
+        "controlType": "Dropdown / SelectBox",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 120,
+        "label": "Chọn cột hiển thị",
+        "controlType": "TextBox (Text / String)",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 121,
+        "label": "Tìm kiếm theo nội dung",
+        "controlType": "TextBox (Text / String)",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 122,
+        "label": "Trường #122",
+        "controlType": "CheckBox",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": "false"
+      },
+      {
+        "index": 124,
+        "label": "Xem tất cả ngày",
+        "controlType": "DatePicker / DateBox",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": "2026-10-12"
+      },
+      {
+        "index": 129,
+        "label": "Tìm kiếm theo nội dung",
+        "controlType": "TextBox (Text / String)",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 153,
+        "label": "Ngày tạo",
+        "controlType": "DatePicker / DateBox",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 154,
+        "label": "Kéo thả hình ảnh để AI phân tích",
+        "controlType": "TextBox (Text / String)",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 155,
+        "label": "Xem của tôi",
+        "controlType": "CheckBox",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": "on"
+      },
+      {
+        "index": 156,
+        "label": "Chọn cột hiển thị",
+        "controlType": "TextBox (Text / String)",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 157,
+        "label": "Tìm kiếm theo nội dung",
+        "controlType": "TextBox (Text / String)",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 177,
+        "label": "Nhân viên",
+        "controlType": "DatePicker / DateBox",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": "2026-10-01"
+      },
+      {
+        "index": 179,
+        "label": "Tìm kiếm theo nội dung",
+        "controlType": "TextBox (Text / String)",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 181,
+        "label": "Excel",
+        "controlType": "TextBox (Text / String)",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 182,
+        "label": "Excel",
+        "controlType": "TextBox (Text / String)",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 183,
+        "label": "Excel",
+        "controlType": "TextBox (Text / String)",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 184,
+        "label": "Excel",
+        "controlType": "TextBox (Text / String)",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 185,
+        "label": "Excel",
+        "controlType": "TextBox (Text / String)",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 186,
+        "label": "Excel",
+        "controlType": "TextBox (Text / String)",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 187,
+        "label": "Excel",
+        "controlType": "TextBox (Text / String)",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 188,
+        "label": "Excel",
+        "controlType": "TextBox (Text / String)",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 189,
+        "label": "Excel",
+        "controlType": "TextBox (Text / String)",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 190,
+        "label": "Excel",
+        "controlType": "TextBox (Text / String)",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 191,
+        "label": "Excel",
+        "controlType": "TextBox (Text / String)",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 192,
+        "label": "Excel",
+        "controlType": "TextBox (Text / String)",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 193,
+        "label": "Excel",
+        "controlType": "TextBox (Text / String)",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 194,
+        "label": "Excel",
+        "controlType": "TextBox (Text / String)",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 195,
+        "label": "Excel",
+        "controlType": "TextBox (Text / String)",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 196,
+        "label": "Excel",
+        "controlType": "TextBox (Text / String)",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 199,
+        "label": "#",
+        "controlType": "TextBox (Text / String)",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 210,
+        "label": "Xếp hạng",
+        "controlType": "TextBox (Text / String)",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 212,
+        "label": "STT",
+        "controlType": "TextBox (Text / String)",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      },
+      {
+        "index": 214,
+        "label": "#",
+        "controlType": "TextBox (Text / String)",
+        "state": "ENABLED",
+        "required": "NO",
+        "conditional": "Hiển thị mặc định",
+        "sourceValidation": "Tùy chọn (Optional)",
+        "currentValue": ""
+      }
+    ],
+    "buttons": [
+      "Không",
+      "Đồng ý",
+      "OK",
+      "Share",
+      "Quản lý phân hệ",
+      "Thêm/Sửa báo giá",
+      "Báo giá phần mềm",
+      "Lọc dữ liệu",
+      "Thu thập dữ liệu",
+      "Import bất thường",
+      "Các cuộc họp",
+      "Nội dung đăng tải",
+      "Email gửi thủ công",
+      "Thêm phân hệ",
+      "Xoá",
+      "Chuyển dữ liệu",
+      "Chọn cột hiển thị",
+      "＋ Thêm tổ hợp",
+      "✕ Xóa tổ hợp",
+      "Cào theo tổ hợp",
+      "Dừng cào hàng loạt",
+      "Tải lại",
+      "Từ chối",
+      "Duyệt",
+      "Tìm kiếm",
+      "Làm mới",
+      "Đóng",
+      "Hủy",
+      "Tạo cuộc họp mới",
+      "Bình thường",
+      "16px",
+      "Khôi phục mặc định",
+      "Áp dụng",
+      "Start Recording",
+      "Xóa",
+      "Lưu cuộc họp",
+      "Thêm nội dung",
+      "Xóa hình ảnh",
+      "Lưu dữ liệu",
+      "Gửi",
+      "Soạn thư",
+      "Tất cả",
+      "Bạn bè",
+      "Nhóm",
+      "Khách hàng",
+      "Thêm",
+      "Export",
+      "Tuần",
+      "Tháng",
+      "Quý",
+      "Năm",
+      "Quay lại",
+      "+ Thêm mới",
+      "Chỉnh sửa",
+      "Import",
+      "Danh sách bổ xung",
+      "Dữ liệu thu thập",
+      "Lead",
+      "Đã liên hệ",
+      "Đã demo & gửi báo giá",
+      "Cần chăm sóc",
+      "Sắp chốt đơn",
+      "Thành công",
+      "Thất bại",
+      "Hôm nay",
+      "Tuần này",
+      "Tháng này",
+      "? Áp dụng",
+      "Lưu thông tin liên hệ",
+      "Xuất báo giá",
+      "Lưu báo giá",
+      "Tạo báo giá mới",
+      "Excel",
+      "Thêm Lead",
+      "Tính toán lại",
+      "Quản lý danh sách KPI",
+      "Lưu cấu hình",
+      "Lọc",
+      "Xuất Excel",
+      "Close all tabs",
+      "Close other tabs",
+      "Close all tabs on left",
+      "Close all tabs on right",
+      "Close this tab",
+      "Pin to taskbar",
+      "Open",
+      "Unpin to taskbar",
+      "Ðánh d?u t?t c? dã xem",
+      "Xem danh sách thông báo",
+      "Cài d?t",
+      "Stay",
+      "Select a file",
+      "Upload",
+      "Nhấn để thiết lập phím tắt",
+      "Hủy phím tắt"
+    ]
+  },
+  "modals": [],
+  "dataLineage": {
+    "isDownstreamScreen": false,
+    "hasDataTable": true,
+    "hasCreateButton": true,
+    "detectedMetadata": {
+      "status": "1"
+    },
+    "inferredStoredProcedures": [
+      "sp_Sub_SubProduct"
+    ],
+    "recommendation": "Màn hình \"Quản lý phân hệ\" có sẵn form tạo/nhập dữ liệu trực tiếp."
+  },
+  "apiNetworkCalls": [
+    {
+      "type": "request",
+      "url": "https://paradisehrm.com/Tai3/hpa/paradise2",
+      "method": "POST",
+      "resourceType": "fetch",
+      "postData": {
+        "content": "02xY5O3N3CIcOd20zC0/ATOZWT00Qk6gu0O5yKQbIIEcfCdU/s8ytsWyvFSnIpV63DhwyA8Sm8hUTEoLGs7N6oAe350jXqD0APv3lxYIsZfMljF7zN3npoBJDKSrsf+kQiTqIMeqNrzomX8S1Hyvo8f4G0HCrlZ2CENcB73W1/ouzGTW2LxDmj09ndA+d4bRzzvT0NnRWZ1Ir9wN7Hw/OfMnoKwueYvrxU+iDKj+L/yqNnfWSvukUK8zaEPU4onvM5kMmhjHfCxJurZqGqyATAPcpo9uEgyqYpOzgZyKEZun0fK9TpM5I4dhAaglsP7npd4SdfOID1ckEawspwtrOQ==",
+        "paradiseType": "2"
+      },
+      "timestamp": "2026-10-16T02:33:36.961Z"
+    },
+    {
+      "type": "request",
+      "url": "https://paradisehrm.com/Tai3/hpa/paradise2",
+      "method": "POST",
+      "resourceType": "fetch",
+      "postData": {
+        "content": "02xY5O3N3CIcOd20zC0/ATOZWT00Qk6gu0O5yKQbIIEcfCdU/s8ytsWyvFSnIpV63DhwyA8Sm8hUTEoLGs7N6oAe350jXqD0APv3lxYIsZfMljF7zN3npoBJDKSrsf+kQiTqIMeqNrzomX8S1Hyvo8f4G0HCrlZ2CENcB73W1/ouzGTW2LxDmj09ndA+d4bRnfHkcut/cXY9g1+j5oMtWzf2s8b6liVAou4aarswLsppQf0m42fzRFAE804wYojljeS/wvulP3ce9Um8hvsQAQAJ1/zvPoBnb7lJxhKfBVz/Df7bfebCZq33PYJny2fImNjEWLhrC2wbmMojd4qZB3XdRcYK81sK47GR3zwBe1177HdGJDHlLBMse/JQ9FwMAaGJwYNlLGCNeiq+ra6QQO5s7z6+f253MYO3Hg9KaQOHtNZF7QHtjmzVbxbFX1sZEXM6HoU/sZM6Vgd2We6EMgpZ70RfPvEkJBGsLKcLazk=",
+        "paradiseType": "2"
+      },
+      "timestamp": "2026-10-16T02:33:36.964Z"
+    },
+    {
+      "type": "request",
+      "url": "https://paradisehrm.com/Tai3/api/hpa/paradise?&name=paradisepublic&param=[%22paradisepublic%22,%22sp_Sub_SubProduct%22,%22LanguageID%22,%22VN%22,%22ParadiseVersion%22,877651494]&user=paradisepublic&password=3C9909AFEC25354D551DAE21590BB26E38D53F2173B8D3DC3EEE4C047E7AB1C1EB8B85103E3BE7BA613B31BB5C9C36214DC9F14A42FD7A2FDB84856BCA5C44C2&_cb=VN_877651494",
+      "method": "GET",
+      "resourceType": "xhr",
+      "postData": null,
+      "timestamp": "2026-10-16T02:33:36.982Z"
+    },
+    {
+      "type": "response",
+      "url": "https://paradisehrm.com/Tai3/hpa/paradise2",
+      "status": 200,
+      "responseBody": {
+        "result": "success",
+        "reason": "",
+        "data": [
+          [
+            {
+              "ParadiseVersion": "877651494"
+            }
+          ]
+        ],
+        "dataSchema": [
+          [
+            {
+              "name": "ParadiseVersion",
+              "type": "System.String"
+            }
+          ]
+        ]
+      },
+      "timestamp": "2026-10-16T02:33:36.982Z"
+    },
+    {
+      "type": "response",
+      "url": "https://paradisehrm.com/Tai3/hpa/paradise2",
+      "status": 200,
+      "responseBody": {
+        "result": "success",
+        "reason": "",
+        "data": [],
+        "dataSchema": []
+      },
+      "timestamp": "2026-10-16T02:33:36.991Z"
+    },
+    {
+      "type": "request",
+      "url": "https://paradisehrm.com/Tai3/api/hpa/paradise?&name=paradisepublic&param=[%22paradisepublic%22,%22sp_Sub_SubProduct%22,%22LanguageID%22,%22VN%22,%22ParadiseVersion%22,877651494]&user=paradisepublic&password=3C9909AFEC25354D551DAE21590BB26E38D53F2173B8D3DC3EEE4C047E7AB1C1EB8B85103E3BE7BA613B31BB5C9C36214DC9F14A42FD7A2FDB84856BCA5C44C2&_cb=VN_877651494",
+      "method": "GET",
+      "resourceType": "xhr",
+      "postData": null,
+      "timestamp": "2026-10-16T02:33:37.134Z"
+    },
+    {
+      "type": "response",
+      "url": "https://paradisehrm.com/Tai3/api/hpa/paradise?&name=paradisepublic&param=[%22paradisepublic%22,%22sp_Sub_SubProduct%22,%22LanguageID%22,%22VN%22,%22ParadiseVersion%22,877651494]&user=paradisepublic&password=3C9909AFEC25354D551DAE21590BB26E38D53F2173B8D3DC3EEE4C047E7AB1C1EB8B85103E3BE7BA613B31BB5C9C36214DC9F14A42FD7A2FDB84856BCA5C44C2&_cb=VN_877651494",
+      "status": 200,
+      "responseBody": {
+        "result": "success",
+        "reason": "",
+        "data": [
+          [
+            {
+              "bytes": "<style>\r\n  #sp_Sub_SubProduct_html .badge-status {\r\n    padding: 0.25rem 0.75rem;\r\n    border-radius: 999px;\r\n    font-size: 0.75rem;\r\n    font-weight: 700;\r\n    display: inline-block;\r\n    color: #fff;\r\n  }\r\n  #sp_Sub_SubProduct_html .btn-add-SubProduct {\r\n    white-space: nowrap;\r\n    padding: 6px 18px;\r\n    font-weight: 500;\r\n    font-size: 0.9rem;\r\n    border: none;\r\n    box-shadow: 0 2px 4px rgba(74, 158, 15, 0.2);\r\n    transition: background-color 0.2s;\r\n  }\r\n</style>\r\n\r\n<div id=\"sp_Sub_SubProduct_html\">\r\n  <div class=\"header-section pb-3\">\r\n    <div\r\n      class=\"d-flex flex-column flex-md-row justify-content-between align-items-start align-items-md-center gap-3\"\r\n    >\r\n      <div>\r\n        <h3 class=\"mb-1 fw-bold\">\r\n          <i class=\"bi bi-grid-fill me-2\"></i>Quản lý phân hệ (Subsystem)\r\n        </h3>\r\n        <p class=\"mb-0 opacity-75\">Quản lý danh mục các gói phần mềm và giá tiền niêm yết.</p>\r\n      </div>\r\n    </div>\r\n  </div>\r\n  <div id=\"gridSubProductList\" style=\"height: 100%\"></div>\r\n</div>\r\n<script>\r\n  (() => {\r\n    let api = true; // m?c d?nh load call API. n?u mu?n tìm ki?m ch? load l?i dataSource dã load thì set = false\r\n    let DataSource = [];\r\n    let _pageCache = {};\r\n    let _currentKeyword = \"\";\r\n    let dataStore_gridSubProductList = null;\r\n\r\n    window.InstancegridSubProductListP8F9FB1B1CC3A4599BCFD3BE6C5D75A53 = null;\r\n    // Thêm responsive styles cho grid header\r\n    const stylegridSubProductList = document.createElement(\"style\");\r\n    stylegridSubProductList.textContent = `\r\n                            /* =============== RESPONSIVE POPUP STYLES =============== */\r\n                            .dx-datagrid-search-panel .dx-placeholder {\r\n                                display: none !important;\r\n                            }\r\n\r\n                            /* =============== FIX TEXTBOX TRONG GRID =============== */\r\n                            .dx-datagrid .dx-texteditor {\r\n                                width: 100% !important;\r\n                                min-width: 0 !important;\r\n                            }\r\n\r\n   .dx-datagrid .dx-texteditor-input {\r\n                                width: 100% !important;\r\n                                min-width: 0 !important;\r\n                                box-sizing: border-box !important;\r\n                            }\r\n\r\n                            .dx-datagrid-rowsview .dx-row > td > div {\r\n                                white-space: nowrap;\r\n                                overflow: hidden;\r\n                                text-overflow: ellipsis;\r\n                                word-break: break-word !important;\r\n                                line-height: 1.4 !important;\r\n                            }\r\n\r\n                            .dx-popup.hpa-responsive {\r\n                                max-width: 95vw !important;\r\n                                max-height: 95vh !important;\r\n                                width: 95vw !important;\r\n                                left: 0 !important;\r\n                                top: 0 !important;\r\n                            }\r\n\r\n                            .dx-popup.hpa-responsive .dx-popup-content {\r\n                                height: calc(95vh - 120px) !important;\r\n                                max-height: calc(95vh - 120px) !important;\r\n                                overflow-y: auto !important;\r\n            padding: 8px !important;\r\n                                display: flex !important;\r\n      flex-direction: column !important;\r\n                            }\r\n\r\n                 .dx-popup.hpa-responsive .dx-popup-content-scrollable {\r\n                                flex: 1 !important;\r\n min-height: 0 !important;\r\n   overflow: auto !important;\r\n                            }\r\n\r\n                            .dx-popup-content.dx-popup-content-scrollable {\r\n                  height: auto !important;\r\n                            }\r\n\r\n                            .dx-popup.hpa-responsive .dx-toolbar-items {\r\n                                padding: 4px 0 !important;\r\n                  flex-wrap: wrap;\r\n                            }\r\n\r\n                            .dx-popup.hpa-responsive .dx-toolbar-item {\r\n                                margin: 2px 2px !important;\r\n                            }\r\n\r\n                            /* =============== GRID HEADER STYLES =============== */\r\n                     .dx-datagrid {\r\n                                font-size: 14px;\r\n                                table-layout: fixed !important;\r\n                            }\r\n\r\n                            /* FIX COLUMN WIDTH ALIGNMENT */\r\n                            .dx-datagrid-table {\r\n                                table-layout: fixed !important;\r\n width: 100% !important;\r\n                            }\r\n\r\n                            .dx-datagrid-headers .dx-datagrid-table {\r\n                                table-layout: fixed !important;\r\n                          }\r\n\r\n                            .dx-datagrid-rowsview .dx-datagrid-table {\r\n                                table-layout: fixed !important;\r\n                            }\r\n\r\n                            /* Ensure header and content cells have same width calculation */\r\n                            .dx-datagrid .dx-header-row > td,\r\n                            .dx-datagrid .dx-data-row > td {\r\n                                box-sizing: border-box !important;\r\n                                overflow: hidden !important;\r\n                            }\r\n\r\n                            .dx-datagrid-headers {\r\n                                white-space: normal;\r\n                                word-break: break-word;\r\n                            }\r\n\r\n                            .dx-datagrid-header-panel {\r\n                                padding: 8px;\r\n                            }\r\n\r\n                            .dx-datagrid .dx-header-row {\r\n     height: auto;\r\n     min-height: 44px;\r\n     }\r\n\r\n                            .dx-datagrid .dx-row > td {\r\n                                padding: 8px !important;\r\n                                vertical-align: middle !important;\r\n                            }\r\n\r\n                            .dx-datagrid .dx-col-fixed {\r\n                                z-index: 800 !important;\r\n                            }\r\n\r\n                            /* FORCE COLUMN WIDTH CONSISTENCY */\r\n                            .dx-datagrid .dx-header-row > td,\r\n                            .dx-datagrid .dx-data-row > td {\r\n                                min-width: 0 !important;\r\n                                width: auto !important;\r\n                                max-width: none !important;\r\n                            }\r\n\r\n                            /* Prevent column width calculation conflicts */\r\n                            .dx-datagrid-headers .dx-header-row td,\r\n                            .dx-datagrid-rowsview .dx-data-row td {\r\n                                position: relative !important;\r\n                            }\r\n\r\n                            /* Group row - sát mép */\r\n                            .dx-datagrid .dx-group-row {\r\n\r\n                             padding: 0 !important;\r\n                          }\r\n\r\n                            .dx-datagrid .dx-group-row > td {\r\n                                padding: 8px !important;\r\n                            }\r\n\r\n                            .dx-datagrid .dx-group-row .dx-group-text {\r\n                                padding: 0 !important;\r\n                                margin: 0 !important;\r\n                            }\r\n\r\n            /* Mobile responsive */\r\n  @media (max-width: 1024px) {\r\n                                .dx-popup.hpa-responsive {\r\n                                    max-width: 90vw !important;\r\n                                max-height: 90vh !important;\r\n                                    width: 90vw !important;\r\n                                    left: 5vw !important;\r\n                                }\r\n    .dx-overlay-content.dx-popup-normal.dx-popup-draggable.dx-resizable {\r\n                                    width: 90vw !important;\r\n     max-width: 90vw !important;\r\n   }\r\n                                .dx-popup.hpa-responsive .dx-popup-content {\r\n                                    max-height: calc(95vh - 120px) !important;\r\n                                }\r\n\r\n                                /* Fix grid width alignment on tablet */\r\n                                .dx-datagrid-table {\r\n            min-width: 100% !important;\r\n                                }\r\n                            }\r\n\r\n                            @media (max-width: 768px) {\r\n               .dx-datagrid {\r\n                                    font-size: 12px;\r\n                                }\r\n\r\n               /* Maintain fixed table layout on mobile */\r\n          .dx-datagrid-table {\r\n                                    table-layout: fixed !important;\r\n                                    min-width: 100% !important;\r\n                                }\r\n\r\n                                .dx-datagrid-headers {\r\n                                    padding: 4px !important;\r\n                                }\r\n\r\n                                .dx-datagrid .dx-header-row {\r\n                                    height: auto;\r\n                         min-height: 36px;\r\n                                    padding: 0 !important;\r\n                   }\r\n\r\n                                .dx-datagrid-text-content {\r\n                                    padding: 4px 2px !important;\r\n                                    font-size: 11px !important;\r\n     line-height: 1.3 !important;\r\n       overflow: hidden !important;\r\n                         white-space: nowrap !important;\r\n                                    text-overflow: ellipsis !important;\r\n                                    word-break: break-word !important;\r\n                                }\r\n\r\n                                .dx-datagrid-text-content.dx-header-filter {\r\n                                    padding: 2px 1px !important;\r\n                                }\r\n\r\n                                .dx-checkbox {\r\n                                    width: 24px !important;\r\n                             height: 24px !important;\r\n                  }\r\n\r\n                                .dx-datagrid-rowsview {\r\n                                    padding: 0 !important;\r\n                                }\r\n\r\n                                .dx-datagrid .dx-row {\r\n                                    height: auto;\r\n                                    min-height: 36px !important;\r\n                                    padding: 0 !important;\r\n                                }\r\n\r\n                                .dx-datagrid .dx-data-row > td > div {\r\n                                    padding: 4px 8px !important;\r\n\r\n   white-space: nowrap !important;\r\n                   text-overflow: ellipsis !important;\r\n                                    word-break: break-word !important;\r\n                                    vertical-align: middle !important;\r\n                                    overflow: hidden !important;\r\n                                    box-sizing: border-box !important;\r\n                                }\r\n\r\n                                .dx-datagrid .dx-group-row > td {\r\n                                    padding: 4px 2px !important;\r\n               }\r\n\r\n       .dx-pager {\r\n                                    padding: 4px 0 !important;\r\n                                }\r\n\r\n                                .dx-pager-page,\r\n                                .dx-pager-navigation {\r\n                                    padding: 2px 4px !important;\r\n                                    font-size: 11px !important;\r\n                                }\r\n\r\n                                .dx-searchbox {\r\n                                    width: 100% !important;\r\n                                    max-width: none !important;\r\n                     }\r\n\r\n                       .dx-searchbox .dx-texteditor-input {\r\n                                    padding: 4px !important;\r\n                                    font-size: 12px !important;\r\n                        height: 32px !important;\r\n                                }\r\n\r\n                                .dx-popup.hpa-responsive {\r\n                                    max-width: 95vw !important;\r\n                                   max-height: 85vh !important;\r\n                                    width: 95vw !important;\r\n                                    left: 2.5vw !important;\r\n                                    top: 5vh !important;\r\n                                }\r\n                                .dx-overlay-content.dx-popup-normal.dx-popup-draggable.dx-resizable {\r\n              width: 95vw !important;\r\n                     max-width: 95vw !important;\r\n                                    height: auto !important;\r\n                                    max-height: 85vh !important;\r\n                                }\r\n                                .dx-popup.hpa-responsive .dx-overlay-wrapper {\r\n                                    position: fixed !important;\r\n                                }\r\n       .dx-popup.hpa-responsive .dx-popup-content {\r\n                                    height: calc(95vh - 120px) !important;\r\n                                    max-height: calc(95vh - 120px) !important;\r\n                            font-size: 13px !important;\r\n                                    padding: 6px !important;\r\n               display: flex !important;\r\n    flex-direction: column !important;\r\n                                }\r\n\r\n                                .dx-popup.hpa-responsive .dx-popup-content-scrollable {\r\n                                    flex: 1 !important;\r\n                                    min-height: 0 !important;\r\n                                    overflow: auto !important;\r\n                                }\r\n\r\n                                .dx-popup-content.dx-popup-content-scrollable {\r\n                                    height: auto !important;\r\n                                }\r\n\r\n                     /* Toolbar buttons */\r\n                                .dx-popup.hpa-responsive .dx-toolbar-item .dx-button {\r\n                                    padding: 6px 12px !important;\r\n                                    font-size: 12px !important;\r\n                                    min-height: 36px !important;\r\n                                width: auto !important;\r\n                                }\r\n                                .dx-popup.hpa-responsive .dx-toolbar-item .dx-button .dx-button-text {\r\n                        font-size: 12px !important;\r\n                    }\r\n                                .dx-popup.hpa-responsive .dx-button {\r\n                                    padding: 6px 12px !important;\r\n                                    font-size: 12px !important;\r\n                                    min-height: 36px !important;\r\n                                    width: auto !important;\r\n                                }\r\n                                .dx-popup.hpa-responsive .dx-button .dx-button-text {\r\n                                    font-size: 12px !important;\r\n     }\r\n     .dx-popup.hpa-responsive .dx-datagrid {\r\n                       font-size: 11px !important;\r\n                                }\r\n                                .dx-popup.hpa-responsive .dx-datagrid .dx-data-row td {\r\n                                    padding: 4px 2px !important;\r\n                                }\r\n                            }\r\n\r\n                            @media (max-width: 480px) {\r\n                                .dx-datagrid {\r\n\r\n\r\n                                    font-size: 12px;\r\n                                }\r\n\r\n                                .dx-datagrid-headers {\r\n        padding: 2px !important;\r\n   }\r\n\r\n   .dx-datagrid .dx-header-row {\r\n                              min-height: 32px;\r\n                                }\r\n\r\n                                .dx-datagrid-text-content {\r\n                         padding: 2px 1px !important;\r\n                                    font-size: 12px !important;\r\n               }\r\n\r\n                                .dx-checkbox {\r\nwidth: 20px !important;\r\n                                    height: 20px !important;\r\n                                }\r\n\r\n                                .dx-datagrid .dx-row {\r\n                                    min-height: 32px;\r\n                                }\r\n\r\n                                .dx-datagrid .dx-data-row > td > div {\r\n                     padding: 8px !important;\r\n                                    font-size: 12px !important;\r\n                                }\r\n\r\n                  .dx-pager-page,\r\n                                .dx-pager-navigation {\r\n            padding: 1px 2px !important;\r\n                                    font-size: 12px !important;\r\n                                }\r\n\r\n                              .dx-popup.hpa-responsive {\r\n                                    max-width: 98vw !important;\r\n               max-height: 80vh !important;\r\n                      width: 98vw !important;\r\n                          left: 1vw !important;\r\n                       top: 10vh !important;\r\n                                }\r\n                                .dx-overlay-content.dx-popup-normal.dx-popup-draggable.dx-resizable {\r\n                                    width: 98vw !important;\r\n                                    max-width: 98vw !important;\r\n                                    height: auto !important;\r\n                                    max-height: 80vh !important;\r\n                                }\r\n                                .dx-popup.hpa-responsive .dx-overlay-wrapper {\r\n\r\n                                    position: fixed !important;\r\n                    }\r\n                                .dx-popup.hpa-responsive .dx-popup-content {\r\n                                    height: calc(95vh - 120px) !important;\r\n                                    max-height: calc(95vh - 120px) !important;\r\n                                    font-size: 12px !important;\r\n                                    padding: 4px !important;\r\n                                    display: flex !important;\r\n                                 flex-direction: column !important;\r\n }\r\n\r\n                                .dx-popup.hpa-responsive .dx-popup-content-scrollable {\r\n                                    flex: 1 !important;\r\n                                    min-height: 0 !important;\r\n                                    overflow: auto !important;\r\n                                }\r\n\r\n                                .dx-popup-content.dx-popup-content-scrollable {\r\n                                    height: auto !important;\r\n                                }\r\n                                /* Toolbar buttons */\r\n                                .dx-popup.hpa-responsive .dx-toolbar-item .dx-button {\r\n      padding: 4px 8px !important;\r\n          font-size: 11px !important;\r\n                  min-height: 32px !important;\r\n                                    width: auto !important;\r\n                                }\r\n                                .dx-popup.hpa-responsive .dx-toolbar-item .dx-button .dx-button-text {\r\n                                    font-size: 11px !important;\r\n                                }\r\n                                .dx-popup.hpa-responsive .dx-button {\r\n                                    padding: 4px 8px !important;\r\n                                    font-size: 11px !important;\r\n                                    min-height: 32px !important;\r\n                                    width: auto !important;\r\n                                }\r\n.dx-popup.hpa-responsive .dx-button .dx-button-text {\r\n            font-size: 11px !important;\r\n                                }\r\n                                .dx-popup.hpa-responsive .dx-datagrid {\r\n                                    font-size: 10px !important;\r\n                                }\r\n\r\n                                .dx-popup.hpa-responsive .dx-datagrid .dx-data-row td {\r\n                        padding: 2px 1px !important;\r\n                                    font-size: 10px !important;\r\n                                }\r\n                                .dx-popup.hpa-responsive .dx-datagrid .dx-header-row {\r\n                                    min-height: 28px !important;\r\n    }\r\n                                .dx-popup.hpa-responsive .dx-checkbox {\r\n                                   width: 18px !important;\r\n                height: 18px !important;\r\n       }\r\n      }\r\n                        `;\r\n    document.head.appendChild(stylegridSubProductList);\r\n\r\n    // Helper normalize function: bỏ dấu - dùng chung cho search/grid\r\n    window.normalizeVietnameseText =\r\n      window.normalizeVietnameseText ||\r\n      function (value) {\r\n        if (value === undefined || value === null) return \"\";\r\n        let text = String(value);\r\n        if (typeof RemoveToneMarks_Js === \"function\") {\r\n          text = RemoveToneMarks_Js(text);\r\n        } else if (text.normalize) {\r\n          text = text.normalize(\"NFD\").replace(/[\\u0300-\\u036f]/g, \"\");\r\n        }\r\n        return text.replace(/đ/g, \"d\").replace(/Đ/g, \"D\").toLowerCase();\r\n      };\r\n\r\n    // ===== Column chooser persistence helpers (shared) =====\r\n    let gridName = \"gridSubProductList\";\r\n    //window.hpaColumnChooser = window.hpaColumnChooser || { saveTimers: {} };\r\n\r\n    InstancegridSubProductListP8F9FB1B1CC3A4599BCFD3BE6C5D75A53 = $(\"#gridSubProductList\")\r\n      .dxDataGrid({\r\n        dataSource: [],\r\n        keyExpr: \"SubID\",\r\n        height: \"100%\",\r\n        width: \"100%\",\r\n        showBorders: true,\r\n        showRowLines: true,\r\n        rowAlternationEnabled: false,\r\n        hoverStateEnabled: false,\r\n        //columnAutoWidth: false,\r\n        allowColumnReordering: true,\r\n        allowColumnResizing: true,\r\n        //columnResizingMode: \"widget\",\r\n        columnResizingMode: \"nextColumn\",\r\n        columnMinWidth: 80,\r\n        wordWrapEnabled: true,\r\n        scrolling: {\r\n          mode: \"standard\",\r\n          showScrollbar: \"onHover\",\r\n        },\r\n        paging: {\r\n          enabled: true,\r\n          pageSize: 50,\r\n        },\r\n\r\n        selection: {\r\n          mode: \"single\",\r\n          showCheckBoxesMode: \"none\",\r\n          allowSelectAll: false,\r\n        },\r\n\r\n        searchPanel: {\r\n          visible: true,\r\n          width: 400,\r\n          highlightSearchResults: false,\r\n          highlightCaseSensitive: false,\r\n          placeholder: \"Tìm kiếm theo nội dung\",\r\n        },\r\n\r\n        stateStoring: {\r\n          enabled: false,\r\n          type: \"localStorage\",\r\n          storageKey: \"gridState_gridSubProductList\",\r\n        },\r\n        groupPanel: { visible: false },\r\n        editing: {\r\n          mode: \"cell\",\r\n          allowUpdating: false,\r\n        },\r\n        rowDragging: {\r\n          allowReordering: false,\r\n          showDragIcons: false,\r\n        },\r\n        noDataText: \"Không có dữ liệu\",\r\n        columns: [\r\n          {\r\n            dataField: \"SubName\",\r\n            caption: \"Tên Phân Hệ\",\r\n            width: 400,\r\n            alignment: \"left\",\r\n          },\r\n\r\n          {\r\n            dataField: \"SubLicensePrice\",\r\n            caption: \"Giá Bản Quyền\",\r\n            width: 300,\r\n            alignment: \"left\",\r\n            format: \"#,##0 đ\",\r\n          },\r\n\r\n          {\r\n            dataField: \"SubCustomizePrice\",\r\n            caption: \"Giá Triển Khai\",\r\n            width: 300,\r\n            alignment: \"left\",\r\n            allowSorting: true,\r\n            format: \"#,##0 đ\",\r\n          },\r\n\r\n          {\r\n            dataField: \"Priority\",\r\n            caption: \"Ưu tiên\",\r\n            width: 300,\r\n            alignment: \"left\",\r\n            allowSorting: true,        \r\n          },\r\n            {\r\n              caption: \"Thao tác\",\r\n              type: \"buttons\",\r\n              width: 200,\r\n              name: \"updateBtn\",\r\n              buttons: [\r\n                {\r\n                  hint: \"Sửa\",\r\n                  icon: \"edit\",\r\n                  onClick: function (e) {\r\n                    let key = e.row.data.SubID\r\n                    if ([\"Android\", \"iOS\"].includes(getMobileOperatingSystem())) {\r\n                          OpenFormParamMobile(`sp_Sub_CUSubProduct`,{SubID: key});\r\n                      } else {\r\n                        openFormParam(`sp_Sub_CUSubProduct`, {SubID: key});\r\n                      }\r\n                  },\r\n                },\r\n              ],\r\n            },\r\n        ],\r\n          /*onRowDblClick: function(e) {\r\n             if ([\"Android\", \"iOS\"].includes(getMobileOperatingSystem())) {\r\n                      OpenFormParamMobile(`sp_Sub_CUSubProduct`,{SubID: e.key});\r\n                  } else {\r\n                    openFormParam(`sp_Sub_CUSubProduct`, {SubID: e.key});\r\n                  }\r\n          },*/\r\n          onToolbarPreparing: function (e) {\r\n            e.toolbarOptions.items.unshift({\r\n              location: \"after\",\r\n              template: function () {\r\n                const $wrap = $(\r\n                  '<div class=\"toolbar-right d-flex align-items-center gap-2\"></div>',\r\n                );\r\n                const $btnAdd =\r\n                  $(`<button class=\"btn btn-add-SubProduct btn-success\">\r\n                                              <i class=\"bi bi-plus-lg\"></i> Thêm phân hệ\r\n                                                  </button>\r\n                                                  `);\r\n                $btnAdd.off(\"click\").on(\"click\", function () {\r\n                       if ([\"Android\", \"iOS\"].includes(getMobileOperatingSystem())) {\r\n                        OpenFormParamMobile(`sp_Sub_CUSubProduct`);\r\n                    } else {\r\n                        openFormParam(`sp_Sub_CUSubProduct`);\r\n                    }\r\n                });\r\n                const $btnGroup = $(\r\n                  '<div class=\"d-flex align-items-center gap-2\"></div>',\r\n                );\r\n                $btnGroup.append($btnAdd);\r\n                $wrap.append($btnGroup);\r\n                return $wrap;\r\n              },\r\n            },)\r\n          }\r\n      })\r\n      .dxDataGrid(\"instance\");\r\n\r\n\r\n    // Shared grid data source registry so detail forms can trigger refreshes\r\n    window.hpaSharedGridDataSources = window.hpaSharedGridDataSources || {};\r\n\r\n    if (!window.reloadSharedGridDataSource) {\r\n      window.reloadSharedGridDataSource = function (name, params) {\r\n        const registry = window.hpaSharedGridDataSources || {};\r\n        const entry = registry[name];\r\n        if (!entry || typeof entry.reload !== \"function\") {\r\n          console.warn(\"[SharedGrid] Grid\", name, \"is not registered\");\r\n          return Promise.resolve([]);\r\n        }\r\n        return entry.reload(params);\r\n      };\r\n    }\r\n\r\n    if (!window.getSharedGridDataSource) {\r\n      window.getSharedGridDataSource = function (name) {\r\n        const registry = window.hpaSharedGridDataSources || {};\r\n        return registry[name];\r\n      };\r\n    }\r\n\r\n    if (!window.updateSharedGridRow) {\r\n      window.updateSharedGridRow = function (name, rowData, options) {\r\n        const registry = window.hpaSharedGridDataSources || {};\r\n        const entry = registry[name];\r\n        if (!entry || typeof entry.applyRowChanges !== \"function\") {\r\n          console.warn(\"[SharedGrid] Grid\", name, \"cannot accept row updates\");\r\n          return Promise.resolve(false);\r\n        }\r\n        return entry.applyRowChanges(rowData, options);\r\n      };\r\n    }\r\n\r\n    if (!window.syncSharedGridData) {\r\n      window.syncSharedGridData = function (name) {\r\n        const registry = window.hpaSharedGridDataSources || {};\r\n        const entry = registry[name];\r\n        if (!entry || typeof entry.syncFromGrid !== \"function\") {\r\n          console.warn(\"[SharedGrid] Grid\", name, \"cannot sync\");\r\n          return [];\r\n        }\r\n        return entry.syncFromGrid();\r\n      };\r\n    }\r\n\r\n    if (!window.removeSharedGridRow) {\r\n      window.removeSharedGridRow = function (name, options) {\r\n        const registry = window.hpaSharedGridDataSources || {};\r\n        const entry = registry[name];\r\n        if (!entry || typeof entry.removeRow !== \"function\") {\r\n          console.warn(\"[SharedGrid] Grid\", name, \"cannot remove rows\");\r\n          return Promise.resolve(false);\r\n        }\r\n        return entry.removeRow(options);\r\n      };\r\n    }\r\n\r\n    (function setupSharedGridSource() {\r\n      const sharedKey = gridName;\r\n      const primaryKeyField = \"SubID\";\r\n\r\n      const loginValue =\r\n        typeof window.UserID !== \"undefined\"\r\n          ? window.UserID\r\n          : typeof LoginID !== \"undefined\"\r\n            ? LoginID\r\n            : null;\r\n      const languageValue =\r\n        typeof window.LanguageID !== \"undefined\"\r\n          ? window.LanguageID\r\n          : typeof LanguageID !== \"undefined\"\r\n            ? LanguageID\r\n            : null;\r\n\r\n      const snapshotGridData = function (instance) {\r\n        if (!instance) return [];\r\n        try {\r\n          // Ưu tiên đọc raw dataSource trước - luôn có FULL data\r\n          // kể cả khi toolbar search/filter đang active\r\n          if (typeof instance.option === \"function\") {\r\n            const rawData = instance.option(\"dataSource\");\r\n            if (Array.isArray(rawData) && rawData.length > 0) {\r\n              return rawData.map(function (item) {\r\n                return item && typeof item === \"object\"\r\n                  ? Object.assign({}, item)\r\n                  : item;\r\n              });\r\n            }\r\n          }\r\n\r\n          // Fallback: ds.items() - CHÚ Ý: chỉ trả về filtered rows\r\n          if (typeof instance.getDataSource === \"function\") {\r\n            const ds = instance.getDataSource();\r\n            if (ds && typeof ds.items === \"function\") {\r\n              const dsItems = ds.items();\r\n              if (Array.isArray(dsItems) && dsItems.length > 0) {\r\n                return dsItems.map(function (item) {\r\n                  return item && typeof item === \"object\"\r\n                    ? Object.assign({}, item)\r\n                    : item;\r\n                });\r\n              }\r\n            }\r\n          }\r\n        } catch (snapshotErr) {\r\n          console.warn(\r\n            \"[SharedGrid] Unable to snapshot grid data\",\r\n            snapshotErr,\r\n          );\r\n        }\r\n        return [];\r\n      };\r\n\r\n      let sharedEntry = window.hpaSharedGridDataSources[sharedKey];\r\n      if (!sharedEntry) {\r\n        sharedEntry = {\r\n          data: [],\r\n\r\n          subscribers: [],\r\n          loading: false,\r\n        };\r\n      }\r\n\r\n      sharedEntry.primaryKey = sharedEntry.primaryKey || primaryKeyField;\r\n      sharedEntry.data = Array.isArray(sharedEntry.data)\r\n        ? sharedEntry.data\r\n        : [];\r\n      sharedEntry.subscribers = Array.isArray(sharedEntry.subscribers)\r\n        ? sharedEntry.subscribers\r\n        : [];\r\n\r\n      sharedEntry.loading = !!sharedEntry.loading;\r\n\r\n      if (typeof sharedEntry.normalizeParams !== \"function\") {\r\n        sharedEntry.normalizeParams = function (customParams) {\r\n          const base = [];\r\n          if (loginValue !== null && loginValue !== undefined) {\r\n            base.push(\"LoginID\", loginValue);\r\n          }\r\n          if (languageValue !== null && languageValue !== undefined) {\r\n            base.push(\"LanguageID\", languageValue);\r\n          }\r\n\r\n          if (Array.isArray(customParams) && customParams.length > 0) {\r\n            return base.concat(customParams);\r\n          }\r\n\r\n          if (customParams && typeof customParams === \"object\") {\r\n            const extras = [];\r\n            Object.keys(customParams).forEach(function (key) {\r\n              extras.push(key, customParams[key]);\r\n            });\r\n            return base.concat(extras);\r\n          }\r\n\r\n          return base;\r\n        };\r\n      }\r\n\r\n      if (typeof sharedEntry.notify !== \"function\") {\r\n        sharedEntry.notify = function () {\r\n          this.subscribers.forEach(function (callback) {\r\n            try {\r\n              callback(this.data);\r\n            } catch (err) {\r\n              console.error(\"[SharedGrid] subscriber error\", err);\r\n            }\r\n          }, this);\r\n        };\r\n      }\r\n\r\n      if (typeof sharedEntry.subscribe !== \"function\") {\r\n        sharedEntry.subscribe = function (callback) {\r\n          if (typeof callback === \"function\") {\r\n            this.subscribers.push(callback);\r\n          }\r\n          return () => {\r\n            this.subscribers = this.subscribers.filter(function (fn) {\r\n              return fn !== callback;\r\n            });\r\n          };\r\n        };\r\n      }\r\n\r\n      if (typeof sharedEntry.applyRowChanges !== \"function\") {\r\n        sharedEntry.applyRowChanges = function (rowData, options) {\r\n          const opts = options || {};\r\n          const keyField = this.primaryKey;\r\n          let keyValue = opts.key;\r\n          if (\r\n            (keyValue === undefined || keyValue === null) &&\r\n            rowData &&\r\n            rowData[keyField] !== undefined\r\n          ) {\r\n            keyValue = rowData[keyField];\r\n          }\r\n\r\n          if (keyValue === undefined || keyValue === null) {\r\n            console.warn(\r\n              \"[SharedGrid] Missing key when applying row changes for\",\r\n              sharedKey,\r\n            );\r\n            return Promise.resolve(false);\r\n          }\r\n\r\n          if (typeof this.ensureLocalData === \"function\") {\r\n            this.ensureLocalData();\r\n          }\r\n\r\n          const compare =\r\n            opts.strict === true\r\n              ? function (candidate) {\r\n                  return candidate === keyValue;\r\n                }\r\n              : function (candidate) {\r\n                  if (candidate === undefined || candidate === null)\r\n                    return candidate === keyValue;\r\n                  if (keyValue === undefined || keyValue === null) return false;\r\n                  return String(candidate) === String(keyValue);\r\n                };\r\n\r\n          const nextData = Array.isArray(this.data) ? this.data.slice() : [];\r\n          let targetIndex = nextData.findIndex(function (item) {\r\n            return item ? compare(item[keyField]) : false;\r\n          });\r\n\r\n          const normalizedRow = Object.assign(\r\n            {},\r\n            targetIndex > -1 ? nextData[targetIndex] : {},\r\n            rowData,\r\n          );\r\n\r\n          if (targetIndex === -1) {\r\n            if (opts.ignoreMissing === true) {\r\n              return Promise.resolve(false);\r\n            }\r\n   if (opts.append === true) {\r\n              nextData.push(normalizedRow);\r\n              targetIndex = nextData.length - 1;\r\n            } else {\r\n              nextData.unshift(normalizedRow);\r\n              targetIndex = 0;\r\n            }\r\n          } else {\r\n            nextData[targetIndex] = normalizedRow;\r\n          }\r\n\r\n          this.data = nextData;\r\n          try {\r\n            if (this.instance && typeof this.instance.option === \"function\") {\r\n              this.instance.option(\"dataSource\", nextData);\r\n              this.instance.refresh();\r\n            }\r\n          } catch (applyErr) {\r\n            console.warn(\"[SharedGrid] Unable to push row update\", applyErr);\r\n          }\r\n          this.notify();\r\n          return Promise.resolve({ index: targetIndex, data: normalizedRow });\r\n        };\r\n      }\r\n\r\n      if (typeof sharedEntry.removeRow !== \"function\") {\r\n        sharedEntry.removeRow = function (options) {\r\n          const opts = options || {};\r\n          const keyField = this.primaryKey;\r\n          const keyValue = opts.key;\r\n\r\n          if (keyValue === undefined || keyValue === null) {\r\n            console.warn(\r\n              \"[SharedGrid] Missing key when removing row for\",\r\n              sharedKey,\r\n            );\r\n            return Promise.resolve(false);\r\n          }\r\n\r\n          if (typeof this.ensureLocalData === \"function\") {\r\n            this.ensureLocalData();\r\n          }\r\n\r\n          const filtered = (Array.isArray(this.data) ? this.data : []).filter(\r\n            function (item) {\r\n              if (!item) return true;\r\n              const candidate = item[keyField];\r\n              if (opts.strict === true) {\r\n                return candidate !== keyValue;\r\n              }\r\n\r\n              if (candidate === undefined || candidate === null) {\r\n                return keyValue !== candidate;\r\n              }\r\n              return String(candidate) !== String(keyValue);\r\n            },\r\n          );\r\n\r\n          if (\r\n            filtered.length ===\r\n            (Array.isArray(this.data) ? this.data.length : 0)\r\n          ) {\r\n            return Promise.resolve(false);\r\n          }\r\n\r\n          this.data = filtered;\r\n          try {\r\n            if (this.instance && typeof this.instance.option === \"function\") {\r\n              this.instance.option(\"dataSource\", filtered);\r\n              this.instance.refresh();\r\n            }\r\n          } catch (removeErr) {\r\n            console.warn(\"[SharedGrid] Unable to remove row\", removeErr);\r\n          }\r\n          this.notify();\r\n          return Promise.resolve(true);\r\n        };\r\n      }\r\n\r\n      sharedEntry.instance =\r\n        InstancegridSubProductListP8F9FB1B1CC3A4599BCFD3BE6C5D75A53;\r\n\r\n      if (typeof sharedEntry.ensureLocalData !== \"function\") {\r\n        sharedEntry.ensureLocalData = function () {\r\n          if (Array.isArray(this.data) && this.data.length > 0) {\r\n            return;\r\n          }\r\n          const snapshot = snapshotGridData(this.instance);\r\n          if (snapshot.length > 0) {\r\n            this.data = snapshot;\r\n          }\r\n        };\r\n      }\r\n\r\n      const currentSnapshot = snapshotGridData(sharedEntry.instance);\r\n      if (currentSnapshot.length > 0) {\r\n        sharedEntry.data = currentSnapshot;\r\n      }\r\n\r\n      sharedEntry.getData = function () {\r\n        return this.data;\r\n      };\r\n\r\n      // Gọi sau khi API reload data mới để sync lại cache\r\n      sharedEntry.syncFromGrid = function () {\r\n        const fresh = snapshotGridData(this.instance);\r\n        if (fresh.length > 0) {\r\n          this.data = fresh;\r\n        }\r\n        return this.data;\r\n      };\r\n\r\n      window.hpaSharedGridDataSources[sharedKey] = sharedEntry;\r\n    })();\r\n\r\n    window.currentRecordID_SubID = null;\r\n\r\n    function clearPageCache() {\r\n      _pageCache = {};\r\n    }\r\n\r\n    function getGridHeight() {\r\n      const gridEl =\r\n        InstancegridSubProductListP8F9FB1B1CC3A4599BCFD3BE6C5D75A53.element();\r\n      const domElement = gridEl.jquery ? gridEl[0] : gridEl;\r\n      const top = domElement.getBoundingClientRect().top;\r\n      return window.innerHeight - top - 20;\r\n    }\r\n\r\n    function ReloadData(pageNumber, pageSize, keyword = null) {\r\n      _pageCache = {};\r\n\r\n      let _currentKeyword = String(\r\n        keyword != null\r\n          ? keyword\r\n          : InstancegridSubProductListP8F9FB1B1CC3A4599BCFD3BE6C5D75A53.option(\r\n              \"searchPanel.text\",\r\n            ) || \"\",\r\n      ).trim();\r\n\r\n      function _applyRecord(results) {\r\n        window.syncSharedGridData(\"gridSubProductList\");\r\n      }\r\n\r\n      dataStore_gridSubProductList = new DevExpress.data.CustomStore({\r\n        key: \"SubID\",\r\n        load: function (loadOptions) {\r\n          const deferred = $.Deferred();\r\n\r\n          if (!api) {\r\n            const results = DataSource || [];\r\n            const skip = loadOptions.skip || 0;\r\n            const take = loadOptions.take || 50;\r\n            const pageData = results.slice(skip, skip + take);\r\n            deferred.resolve({\r\n              data: pageData,\r\n              totalCount: results.length,\r\n            });\r\n            api = true;\r\n            return deferred.promise();\r\n          }\r\n\r\n          let params = [];\r\n\r\n          // SP nghiệp vụ\r\n          params.push(\"@ProcName\", \"sp_Sub_SubProduct_Get\");\r\n\r\n          // Tham số của tên thủ tục load Data\r\n          let procParam = \"\";\r\n          // @LoginID = window.UserID, @LanguageID = window.LanguageID,......\r\n\r\n          params.push(\"@ProcParam\", procParam);\r\n\r\n          // Phân trang\r\n          params.push(\"@Take\", loadOptions.take || 50);\r\n          params.push(\"@Skip\", loadOptions.skip || 0);\r\n\r\n          // TotalCount\r\n          if (loadOptions.requireTotalCount) {\r\n            params.push(\"@RequireTotalCount\", 1);\r\n          }\r\n\r\n          // Sort\r\n          const sort = loadOptions.sort\r\n            ? loadOptions.sort\r\n                .map((s) => s.selector + (s.desc ? \" DESC\" : \" ASC\"))\r\n                .join(\",\")\r\n            : \"SubID ASC\"; // này cho mặc định. tự chỉnh theo menu mỗi người\r\n\r\n          params.push(\"@Sort\", \"ORDER BY \" + sort);\r\n\r\n          // Search\r\n          if (_currentKeyword) {\r\n            params.push(\"@SearchValue\", _currentKeyword);\r\n            params.push(\"@ColumnSearch\", \"\");\r\n            // tên cột muốn search, không dc để trống nếu có search\r\n          }\r\n\r\n          // Filter\r\n          if (loadOptions.filter) {\r\n            // Kiểm tra filter item có phải function không\r\n            const isJSFunction = (item) => typeof item === \"function\";\r\n\r\n            const hasFunction = JSON.stringify(\r\n              loadOptions.filter,\r\n              (key, val) => {\r\n                if (typeof val === \"function\") return \"FUNCTION\";\r\n                return val;\r\n              },\r\n            ).includes(\"FUNCTION\");\r\n\r\n            if (!hasFunction) {\r\n              params.push(\"@Filters\", createConditionQuery(loadOptions.filter));\r\n            }\r\n          }\r\n          // Filter\r\n          // if (loadOptions.filter) {\r\n          //     params.push(\"@Filters\", createConditionQuery(loadOptions.filter));\r\n          // }\r\n\r\n          // Group\r\n          if (loadOptions.group) {\r\n            let selectGroup = \"\",\r\n              groupBy = \"GROUP BY \";\r\n            loadOptions.group.forEach((item, index) => {\r\n              if (selectGroup) selectGroup += \", \";\r\n              if (groupBy !== \"GROUP BY \") groupBy += \", \";\r\n              if (item.groupInterval) {\r\n                selectGroup += `${item.groupInterval.toUpperCase()}(${item.selector}) as col${index}`;\r\n                groupBy += `${item.groupInterval.toUpperCase()}(${item.selector})`;\r\n              } else {\r\n                selectGroup += `${item.selector} as col${index}`;\r\n                groupBy += `${item.selector}`;\r\n              }\r\n            });\r\n            selectGroup += `, Count(*) as totalCount`;\r\n            params.push(\"@SelectGroup\", selectGroup);\r\n            params.push(\"@GroupBy\", groupBy);\r\n   }\r\n\r\n          // Summary\r\n          if (loadOptions.totalSummary) {\r\n            const summary = loadOptions.totalSummary.map((item) => {\r\n              const type =\r\n                item.summaryType === \"custom\"\r\n                  ? `count(CASE WHEN [${item.selector}] = 1 THEN 1 END) as ${item.selector}_COUNT`\r\n                  : `${item.summaryType}([${item.selector}]) as ${item.selector}_${item.summaryType.toUpperCase()}`;\r\n              return type;\r\n            });\r\n            params.push(\"@TotalSummary\", summary.join(\", \"));\r\n          }\r\n\r\n          AjaxHPAParadise({\r\n            data: {\r\n              name: \"sp_LoadGridUsingAPI\",\r\n              param: params,\r\n            },\r\n            success: function (res) {\r\n              const json = typeof res === \"string\" ? JSON.parse(res) : res;\r\n              const results = Array.isArray(json?.data?.[0])\r\n                ? json.data[0]\r\n                : [];\r\n\r\n              let result = { data: results };\r\n\r\n              if (loadOptions.requireTotalCount) {\r\n                result.totalCount = json?.data?.[1]?.[0]?.TotalCount ?? 0;\r\n                if (loadOptions.totalSummary) {\r\n                  result.summary = Object.values(json?.data?.[2]?.[0] ?? {});\r\n                }\r\n              } else {\r\n                if (loadOptions.totalSummary) {\r\n                  result.summary = Object.values(json?.data?.[1]?.[0] ?? {});\r\n                }\r\n              }\r\n\r\n              DataSource = results;\r\n              _applyRecord(results);\r\n\r\n              deferred.resolve(result);\r\n            },\r\n            error: function (err) {\r\n              deferred.reject(\"Data Loading Error\");\r\n            },\r\n          });\r\n\r\n          return deferred.promise();\r\n        },\r\n      });\r\n\r\n      const gridInstance =\r\n        InstancegridSubProductListP8F9FB1B1CC3A4599BCFD3BE6C5D75A53;\r\n      gridInstance.beginUpdate();\r\n      gridInstance.option(\"remoteOperations\", {\r\n        paging: true,\r\n        filtering: true,\r\n        sorting: true,\r\n        searching: true,\r\n      });\r\n\r\n      // scrolling mode, nếu phân trang bình thường thì bỏ scrolling\r\n      gridInstance.option(\"scrolling.mode\", \"infinite\");\r\n      gridInstance.option(\"scrolling.rowRenderingMode\", \"virtual\");\r\n      gridInstance.option(\"scrolling.preloadEnabled\", false);\r\n\r\n      gridInstance.option(\"paging.enabled\", true);\r\n      gridInstance.option(\"paging.pageSize\", 50);\r\n      gridInstance.option(\"pager.visible\", false); // bật cái này để hiện số trang, dùng cho list click vô số trang rồi mở trang đó.\r\n      gridInstance.option(\"pager.allowedPageSizes\", [50]);\r\n      gridInstance.option(\"searchPanel.highlightSearchText\", false);\r\n      gridInstance.option(\"dataSource\", dataStore_gridSubProductList);\r\n      gridInstance.option(\"height\", getGridHeight());\r\n      gridInstance.option(\"onOptionChanged\", function (e) {\r\n        if (e.name === \"searchPanel\" && e.fullName === \"searchPanel.text\") {\r\n          const raw = e.value || \"\";\r\n          let t = String(raw);\r\n          _currentKeyword = t.trim();\r\n          _pageCache = {};\r\n        }\r\n      });\r\n      gridInstance.endUpdate();\r\n    }\r\n  \r\n\r\n    ReloadData();\r\n  })();\r\n</script>\r\n\r\n ",
+              "bytes_filename": "sp_Sub_SubProduct.html"
+            }
+          ]
+        ],
+        "dataSchema": [
+          [
+            {
+              "name": "bytes",
+              "type": "System.String"
+            },
+            {
+              "name": "bytes_filename",
+              "type": "System.String"
+            }
+          ]
+        ]
+      },
+      "timestamp": "2026-10-16T02:33:37.137Z"
+    },
+    {
+      "type": "request",
+      "url": "https://paradisehrm.com/Tai3/hpa/paradise2",
+      "method": "POST",
+      "resourceType": "fetch",
+      "postData": {
+        "content": "02xY5O3N3CIcOd20zC0/ATOZWT00Qk6gu0O5yKQbIIEcfCdU/s8ytsWyvFSnIpV63DhwyA8Sm8hPnyDDuVN+T4Ae350jXqD0APv3lxYIsZfMljF7zN3npoBJDKSrsf+kQiTqIMeqNrzomX8S1Hyvo8f4G0HCrlZ2CENcB73W1/ouzGTW2LxDmj09ndA+d4bRdmi3/pTDPBuJ2VWO7eTeE/g1Zo3bJOF1Ap3sHBV1LcxZGXGhtoxeDZSYAfWkh8lhM5kMmhjHfCxV4gD5YrgHOHut55+7ie/qflblL/pYQFkf8KwsoGIZpQ+PyVfERtZiusvcavuVvG+BC9UaBMsa4BR/jhmDRisYxhnGvu9tTmGzzKOy9a3ysg==",
+        "paradiseType": "2"
+      },
+      "timestamp": "2026-10-16T02:33:37.157Z"
+    },
+    {
+      "type": "request",
+      "url": "https://paradisehrm.com/Tai3/hpa/paradise2",
+      "method": "POST",
+      "resourceType": "fetch",
+      "postData": {
+        "content": "02xY5O3N3CIcOd20zC0/ATOZWT00Qk6gu0O5yKQbIIEcfCdU/s8ytsWyvFSnIpV63DhwyA8Sm8hPnyDDuVN+T4Ae350jXqD0APv3lxYIsZfMljF7zN3npoBJDKSrsf+kQiTqIMeqNrzomX8S1Hyvo8f4G0HCrlZ2CENcB73W1/ouzGTW2LxDmj09ndA+d4bRzzvT0NnRWZ1Ir9wN7Hw/OfMnoKwueYvrxU+iDKj+L/yqNnfWSvukUK8zaEPU4onvM5kMmhjHfCxJurZqGqyATAPcpo9uEgyqYpOzgZyKEZtEv8KIxKL91reyoMf5YlN2NGEl7Str3AOHyLV0ZA3Uabyf0Smah1sF",
+        "paradiseType": "2"
+      },
+      "timestamp": "2026-10-16T02:33:37.303Z"
+    },
+    {
+      "type": "response",
+      "url": "https://paradisehrm.com/Tai3/api/hpa/paradise?&name=paradisepublic&param=[%22paradisepublic%22,%22sp_Sub_SubProduct%22,%22LanguageID%22,%22VN%22,%22ParadiseVersion%22,877651494]&user=paradisepublic&password=3C9909AFEC25354D551DAE21590BB26E38D53F2173B8D3DC3EEE4C047E7AB1C1EB8B85103E3BE7BA613B31BB5C9C36214DC9F14A42FD7A2FDB84856BCA5C44C2&_cb=VN_877651494",
+      "status": 200,
+      "responseBody": {
+        "result": "success",
+        "reason": "",
+        "data": [
+          [
+            {
+              "bytes": "<style>\r\n  #sp_Sub_SubProduct_html .badge-status {\r\n    padding: 0.25rem 0.75rem;\r\n    border-radius: 999px;\r\n    font-size: 0.75rem;\r\n    font-weight: 700;\r\n    display: inline-block;\r\n    color: #fff;\r\n  }\r\n  #sp_Sub_SubProduct_html .btn-add-SubProduct {\r\n    white-space: nowrap;\r\n    padding: 6px 18px;\r\n    font-weight: 500;\r\n    font-size: 0.9rem;\r\n    border: none;\r\n    box-shadow: 0 2px 4px rgba(74, 158, 15, 0.2);\r\n    transition: background-color 0.2s;\r\n  }\r\n</style>\r\n\r\n<div id=\"sp_Sub_SubProduct_html\">\r\n  <div class=\"header-section pb-3\">\r\n    <div\r\n      class=\"d-flex flex-column flex-md-row justify-content-between align-items-start align-items-md-center gap-3\"\r\n    >\r\n      <div>\r\n        <h3 class=\"mb-1 fw-bold\">\r\n          <i class=\"bi bi-grid-fill me-2\"></i>Quản lý phân hệ (Subsystem)\r\n        </h3>\r\n        <p class=\"mb-0 opacity-75\">Quản lý danh mục các gói phần mềm và giá tiền niêm yết.</p>\r\n      </div>\r\n    </div>\r\n  </div>\r\n  <div id=\"gridSubProductList\" style=\"height: 100%\"></div>\r\n</div>\r\n<script>\r\n  (() => {\r\n    let api = true; // m?c d?nh load call API. n?u mu?n tìm ki?m ch? load l?i dataSource dã load thì set = false\r\n    let DataSource = [];\r\n    let _pageCache = {};\r\n    let _currentKeyword = \"\";\r\n    let dataStore_gridSubProductList = null;\r\n\r\n    window.InstancegridSubProductListP8F9FB1B1CC3A4599BCFD3BE6C5D75A53 = null;\r\n    // Thêm responsive styles cho grid header\r\n    const stylegridSubProductList = document.createElement(\"style\");\r\n    stylegridSubProductList.textContent = `\r\n                            /* =============== RESPONSIVE POPUP STYLES =============== */\r\n                            .dx-datagrid-search-panel .dx-placeholder {\r\n                                display: none !important;\r\n                            }\r\n\r\n                            /* =============== FIX TEXTBOX TRONG GRID =============== */\r\n                            .dx-datagrid .dx-texteditor {\r\n                                width: 100% !important;\r\n                                min-width: 0 !important;\r\n                            }\r\n\r\n   .dx-datagrid .dx-texteditor-input {\r\n                                width: 100% !important;\r\n                                min-width: 0 !important;\r\n                                box-sizing: border-box !important;\r\n                            }\r\n\r\n                            .dx-datagrid-rowsview .dx-row > td > div {\r\n                                white-space: nowrap;\r\n                                overflow: hidden;\r\n                                text-overflow: ellipsis;\r\n                                word-break: break-word !important;\r\n                                line-height: 1.4 !important;\r\n                            }\r\n\r\n                            .dx-popup.hpa-responsive {\r\n                                max-width: 95vw !important;\r\n                                max-height: 95vh !important;\r\n                                width: 95vw !important;\r\n                                left: 0 !important;\r\n                                top: 0 !important;\r\n                            }\r\n\r\n                            .dx-popup.hpa-responsive .dx-popup-content {\r\n                                height: calc(95vh - 120px) !important;\r\n                                max-height: calc(95vh - 120px) !important;\r\n                                overflow-y: auto !important;\r\n            padding: 8px !important;\r\n                                display: flex !important;\r\n      flex-direction: column !important;\r\n                            }\r\n\r\n                 .dx-popup.hpa-responsive .dx-popup-content-scrollable {\r\n                                flex: 1 !important;\r\n min-height: 0 !important;\r\n   overflow: auto !important;\r\n                            }\r\n\r\n                            .dx-popup-content.dx-popup-content-scrollable {\r\n                  height: auto !important;\r\n                            }\r\n\r\n                            .dx-popup.hpa-responsive .dx-toolbar-items {\r\n                                padding: 4px 0 !important;\r\n                  flex-wrap: wrap;\r\n                            }\r\n\r\n                            .dx-popup.hpa-responsive .dx-toolbar-item {\r\n                                margin: 2px 2px !important;\r\n                            }\r\n\r\n                            /* =============== GRID HEADER STYLES =============== */\r\n                     .dx-datagrid {\r\n                                font-size: 14px;\r\n                                table-layout: fixed !important;\r\n                            }\r\n\r\n                            /* FIX COLUMN WIDTH ALIGNMENT */\r\n                            .dx-datagrid-table {\r\n                                table-layout: fixed !important;\r\n width: 100% !important;\r\n                            }\r\n\r\n                            .dx-datagrid-headers .dx-datagrid-table {\r\n                                table-layout: fixed !important;\r\n                          }\r\n\r\n                            .dx-datagrid-rowsview .dx-datagrid-table {\r\n                                table-layout: fixed !important;\r\n                            }\r\n\r\n                            /* Ensure header and content cells have same width calculation */\r\n                            .dx-datagrid .dx-header-row > td,\r\n                            .dx-datagrid .dx-data-row > td {\r\n                                box-sizing: border-box !important;\r\n                                overflow: hidden !important;\r\n                            }\r\n\r\n                            .dx-datagrid-headers {\r\n                                white-space: normal;\r\n                                word-break: break-word;\r\n                            }\r\n\r\n                            .dx-datagrid-header-panel {\r\n                                padding: 8px;\r\n                            }\r\n\r\n                            .dx-datagrid .dx-header-row {\r\n     height: auto;\r\n     min-height: 44px;\r\n     }\r\n\r\n                            .dx-datagrid .dx-row > td {\r\n                                padding: 8px !important;\r\n                                vertical-align: middle !important;\r\n                            }\r\n\r\n                            .dx-datagrid .dx-col-fixed {\r\n                                z-index: 800 !important;\r\n                            }\r\n\r\n                            /* FORCE COLUMN WIDTH CONSISTENCY */\r\n                            .dx-datagrid .dx-header-row > td,\r\n                            .dx-datagrid .dx-data-row > td {\r\n                                min-width: 0 !important;\r\n                                width: auto !important;\r\n                                max-width: none !important;\r\n                            }\r\n\r\n                            /* Prevent column width calculation conflicts */\r\n                            .dx-datagrid-headers .dx-header-row td,\r\n                            .dx-datagrid-rowsview .dx-data-row td {\r\n                                position: relative !important;\r\n                            }\r\n\r\n                            /* Group row - sát mép */\r\n                            .dx-datagrid .dx-group-row {\r\n\r\n                             padding: 0 !important;\r\n                          }\r\n\r\n                            .dx-datagrid .dx-group-row > td {\r\n                                padding: 8px !important;\r\n                            }\r\n\r\n                            .dx-datagrid .dx-group-row .dx-group-text {\r\n                                padding: 0 !important;\r\n                                margin: 0 !important;\r\n                            }\r\n\r\n            /* Mobile responsive */\r\n  @media (max-width: 1024px) {\r\n                                .dx-popup.hpa-responsive {\r\n                                    max-width: 90vw !important;\r\n                                max-height: 90vh !important;\r\n                                    width: 90vw !important;\r\n                                    left: 5vw !important;\r\n                                }\r\n    .dx-overlay-content.dx-popup-normal.dx-popup-draggable.dx-resizable {\r\n                                    width: 90vw !important;\r\n     max-width: 90vw !important;\r\n   }\r\n                                .dx-popup.hpa-responsive .dx-popup-content {\r\n                                    max-height: calc(95vh - 120px) !important;\r\n                                }\r\n\r\n                                /* Fix grid width alignment on tablet */\r\n                                .dx-datagrid-table {\r\n            min-width: 100% !important;\r\n                                }\r\n                            }\r\n\r\n                            @media (max-width: 768px) {\r\n               .dx-datagrid {\r\n                                    font-size: 12px;\r\n                                }\r\n\r\n               /* Maintain fixed table layout on mobile */\r\n          .dx-datagrid-table {\r\n                                    table-layout: fixed !important;\r\n                                    min-width: 100% !important;\r\n                                }\r\n\r\n                                .dx-datagrid-headers {\r\n                                    padding: 4px !important;\r\n                                }\r\n\r\n                                .dx-datagrid .dx-header-row {\r\n                                    height: auto;\r\n                         min-height: 36px;\r\n                                    padding: 0 !important;\r\n                   }\r\n\r\n                                .dx-datagrid-text-content {\r\n                                    padding: 4px 2px !important;\r\n                                    font-size: 11px !important;\r\n     line-height: 1.3 !important;\r\n       overflow: hidden !important;\r\n                         white-space: nowrap !important;\r\n                                    text-overflow: ellipsis !important;\r\n                                    word-break: break-word !important;\r\n                                }\r\n\r\n                                .dx-datagrid-text-content.dx-header-filter {\r\n                                    padding: 2px 1px !important;\r\n                                }\r\n\r\n                                .dx-checkbox {\r\n                                    width: 24px !important;\r\n                             height: 24px !important;\r\n                  }\r\n\r\n                                .dx-datagrid-rowsview {\r\n                                    padding: 0 !important;\r\n                                }\r\n\r\n                                .dx-datagrid .dx-row {\r\n                                    height: auto;\r\n                                    min-height: 36px !important;\r\n                                    padding: 0 !important;\r\n                                }\r\n\r\n                                .dx-datagrid .dx-data-row > td > div {\r\n                                    padding: 4px 8px !important;\r\n\r\n   white-space: nowrap !important;\r\n                   text-overflow: ellipsis !important;\r\n                                    word-break: break-word !important;\r\n                                    vertical-align: middle !important;\r\n                                    overflow: hidden !important;\r\n                                    box-sizing: border-box !important;\r\n                                }\r\n\r\n                                .dx-datagrid .dx-group-row > td {\r\n                                    padding: 4px 2px !important;\r\n               }\r\n\r\n       .dx-pager {\r\n                                    padding: 4px 0 !important;\r\n                                }\r\n\r\n                                .dx-pager-page,\r\n                                .dx-pager-navigation {\r\n                                    padding: 2px 4px !important;\r\n                                    font-size: 11px !important;\r\n                                }\r\n\r\n                                .dx-searchbox {\r\n                                    width: 100% !important;\r\n                                    max-width: none !important;\r\n                     }\r\n\r\n                       .dx-searchbox .dx-texteditor-input {\r\n                                    padding: 4px !important;\r\n                                    font-size: 12px !important;\r\n                        height: 32px !important;\r\n                                }\r\n\r\n                                .dx-popup.hpa-responsive {\r\n                                    max-width: 95vw !important;\r\n                                   max-height: 85vh !important;\r\n                                    width: 95vw !important;\r\n                                    left: 2.5vw !important;\r\n                                    top: 5vh !important;\r\n                                }\r\n                                .dx-overlay-content.dx-popup-normal.dx-popup-draggable.dx-resizable {\r\n              width: 95vw !important;\r\n                     max-width: 95vw !important;\r\n                                    height: auto !important;\r\n                                    max-height: 85vh !important;\r\n                                }\r\n                                .dx-popup.hpa-responsive .dx-overlay-wrapper {\r\n                                    position: fixed !important;\r\n                                }\r\n       .dx-popup.hpa-responsive .dx-popup-content {\r\n                                    height: calc(95vh - 120px) !important;\r\n                                    max-height: calc(95vh - 120px) !important;\r\n                            font-size: 13px !important;\r\n                                    padding: 6px !important;\r\n               display: flex !important;\r\n    flex-direction: column !important;\r\n                                }\r\n\r\n                                .dx-popup.hpa-responsive .dx-popup-content-scrollable {\r\n                                    flex: 1 !important;\r\n                                    min-height: 0 !important;\r\n                                    overflow: auto !important;\r\n                                }\r\n\r\n                                .dx-popup-content.dx-popup-content-scrollable {\r\n                                    height: auto !important;\r\n                                }\r\n\r\n                     /* Toolbar buttons */\r\n                                .dx-popup.hpa-responsive .dx-toolbar-item .dx-button {\r\n                                    padding: 6px 12px !important;\r\n                                    font-size: 12px !important;\r\n                                    min-height: 36px !important;\r\n                                width: auto !important;\r\n                                }\r\n                                .dx-popup.hpa-responsive .dx-toolbar-item .dx-button .dx-button-text {\r\n                        font-size: 12px !important;\r\n                    }\r\n                                .dx-popup.hpa-responsive .dx-button {\r\n                                    padding: 6px 12px !important;\r\n                                    font-size: 12px !important;\r\n                                    min-height: 36px !important;\r\n                                    width: auto !important;\r\n                                }\r\n                                .dx-popup.hpa-responsive .dx-button .dx-button-text {\r\n                                    font-size: 12px !important;\r\n     }\r\n     .dx-popup.hpa-responsive .dx-datagrid {\r\n                       font-size: 11px !important;\r\n                                }\r\n                                .dx-popup.hpa-responsive .dx-datagrid .dx-data-row td {\r\n                                    padding: 4px 2px !important;\r\n                                }\r\n                            }\r\n\r\n                            @media (max-width: 480px) {\r\n                                .dx-datagrid {\r\n\r\n\r\n                                    font-size: 12px;\r\n                                }\r\n\r\n                                .dx-datagrid-headers {\r\n        padding: 2px !important;\r\n   }\r\n\r\n   .dx-datagrid .dx-header-row {\r\n                              min-height: 32px;\r\n                                }\r\n\r\n                                .dx-datagrid-text-content {\r\n                         padding: 2px 1px !important;\r\n                                    font-size: 12px !important;\r\n               }\r\n\r\n                                .dx-checkbox {\r\nwidth: 20px !important;\r\n                                    height: 20px !important;\r\n                                }\r\n\r\n                                .dx-datagrid .dx-row {\r\n                                    min-height: 32px;\r\n                                }\r\n\r\n                                .dx-datagrid .dx-data-row > td > div {\r\n                     padding: 8px !important;\r\n                                    font-size: 12px !important;\r\n                                }\r\n\r\n                  .dx-pager-page,\r\n                                .dx-pager-navigation {\r\n            padding: 1px 2px !important;\r\n                                    font-size: 12px !important;\r\n                                }\r\n\r\n                              .dx-popup.hpa-responsive {\r\n                                    max-width: 98vw !important;\r\n               max-height: 80vh !important;\r\n                      width: 98vw !important;\r\n                          left: 1vw !important;\r\n                       top: 10vh !important;\r\n                                }\r\n                                .dx-overlay-content.dx-popup-normal.dx-popup-draggable.dx-resizable {\r\n                                    width: 98vw !important;\r\n                                    max-width: 98vw !important;\r\n                                    height: auto !important;\r\n                                    max-height: 80vh !important;\r\n                                }\r\n                                .dx-popup.hpa-responsive .dx-overlay-wrapper {\r\n\r\n                                    position: fixed !important;\r\n                    }\r\n                                .dx-popup.hpa-responsive .dx-popup-content {\r\n                                    height: calc(95vh - 120px) !important;\r\n                                    max-height: calc(95vh - 120px) !important;\r\n                                    font-size: 12px !important;\r\n                                    padding: 4px !important;\r\n                                    display: flex !important;\r\n                                 flex-direction: column !important;\r\n }\r\n\r\n                                .dx-popup.hpa-responsive .dx-popup-content-scrollable {\r\n                                    flex: 1 !important;\r\n                                    min-height: 0 !important;\r\n                                    overflow: auto !important;\r\n                                }\r\n\r\n                                .dx-popup-content.dx-popup-content-scrollable {\r\n                                    height: auto !important;\r\n                                }\r\n                                /* Toolbar buttons */\r\n                                .dx-popup.hpa-responsive .dx-toolbar-item .dx-button {\r\n      padding: 4px 8px !important;\r\n          font-size: 11px !important;\r\n                  min-height: 32px !important;\r\n                                    width: auto !important;\r\n                                }\r\n                                .dx-popup.hpa-responsive .dx-toolbar-item .dx-button .dx-button-text {\r\n                                    font-size: 11px !important;\r\n                                }\r\n                                .dx-popup.hpa-responsive .dx-button {\r\n                                    padding: 4px 8px !important;\r\n                                    font-size: 11px !important;\r\n                                    min-height: 32px !important;\r\n                                    width: auto !important;\r\n                                }\r\n.dx-popup.hpa-responsive .dx-button .dx-button-text {\r\n            font-size: 11px !important;\r\n                                }\r\n                                .dx-popup.hpa-responsive .dx-datagrid {\r\n                                    font-size: 10px !important;\r\n                                }\r\n\r\n                                .dx-popup.hpa-responsive .dx-datagrid .dx-data-row td {\r\n                        padding: 2px 1px !important;\r\n                                    font-size: 10px !important;\r\n                                }\r\n                                .dx-popup.hpa-responsive .dx-datagrid .dx-header-row {\r\n                                    min-height: 28px !important;\r\n    }\r\n                                .dx-popup.hpa-responsive .dx-checkbox {\r\n                                   width: 18px !important;\r\n                height: 18px !important;\r\n       }\r\n      }\r\n                        `;\r\n    document.head.appendChild(stylegridSubProductList);\r\n\r\n    // Helper normalize function: bỏ dấu - dùng chung cho search/grid\r\n    window.normalizeVietnameseText =\r\n      window.normalizeVietnameseText ||\r\n      function (value) {\r\n        if (value === undefined || value === null) return \"\";\r\n        let text = String(value);\r\n        if (typeof RemoveToneMarks_Js === \"function\") {\r\n          text = RemoveToneMarks_Js(text);\r\n        } else if (text.normalize) {\r\n          text = text.normalize(\"NFD\").replace(/[\\u0300-\\u036f]/g, \"\");\r\n        }\r\n        return text.replace(/đ/g, \"d\").replace(/Đ/g, \"D\").toLowerCase();\r\n      };\r\n\r\n    // ===== Column chooser persistence helpers (shared) =====\r\n    let gridName = \"gridSubProductList\";\r\n    //window.hpaColumnChooser = window.hpaColumnChooser || { saveTimers: {} };\r\n\r\n    InstancegridSubProductListP8F9FB1B1CC3A4599BCFD3BE6C5D75A53 = $(\"#gridSubProductList\")\r\n      .dxDataGrid({\r\n        dataSource: [],\r\n        keyExpr: \"SubID\",\r\n        height: \"100%\",\r\n        width: \"100%\",\r\n        showBorders: true,\r\n        showRowLines: true,\r\n        rowAlternationEnabled: false,\r\n        hoverStateEnabled: false,\r\n        //columnAutoWidth: false,\r\n        allowColumnReordering: true,\r\n        allowColumnResizing: true,\r\n        //columnResizingMode: \"widget\",\r\n        columnResizingMode: \"nextColumn\",\r\n        columnMinWidth: 80,\r\n        wordWrapEnabled: true,\r\n        scrolling: {\r\n          mode: \"standard\",\r\n          showScrollbar: \"onHover\",\r\n        },\r\n        paging: {\r\n          enabled: true,\r\n          pageSize: 50,\r\n        },\r\n\r\n        selection: {\r\n          mode: \"single\",\r\n          showCheckBoxesMode: \"none\",\r\n          allowSelectAll: false,\r\n        },\r\n\r\n        searchPanel: {\r\n          visible: true,\r\n          width: 400,\r\n          highlightSearchResults: false,\r\n          highlightCaseSensitive: false,\r\n          placeholder: \"Tìm kiếm theo nội dung\",\r\n        },\r\n\r\n        stateStoring: {\r\n          enabled: false,\r\n          type: \"localStorage\",\r\n          storageKey: \"gridState_gridSubProductList\",\r\n        },\r\n        groupPanel: { visible: false },\r\n        editing: {\r\n          mode: \"cell\",\r\n          allowUpdating: false,\r\n        },\r\n        rowDragging: {\r\n          allowReordering: false,\r\n          showDragIcons: false,\r\n        },\r\n        noDataText: \"Không có dữ liệu\",\r\n        columns: [\r\n          {\r\n            dataField: \"SubName\",\r\n            caption: \"Tên Phân Hệ\",\r\n            width: 400,\r\n            alignment: \"left\",\r\n          },\r\n\r\n          {\r\n            dataField: \"SubLicensePrice\",\r\n            caption: \"Giá Bản Quyền\",\r\n            width: 300,\r\n            alignment: \"left\",\r\n            format: \"#,##0 đ\",\r\n          },\r\n\r\n          {\r\n            dataField: \"SubCustomizePrice\",\r\n            caption: \"Giá Triển Khai\",\r\n            width: 300,\r\n            alignment: \"left\",\r\n            allowSorting: true,\r\n            format: \"#,##0 đ\",\r\n          },\r\n\r\n          {\r\n            dataField: \"Priority\",\r\n            caption: \"Ưu tiên\",\r\n            width: 300,\r\n            alignment: \"left\",\r\n            allowSorting: true,        \r\n          },\r\n            {\r\n              caption: \"Thao tác\",\r\n              type: \"buttons\",\r\n              width: 200,\r\n              name: \"updateBtn\",\r\n              buttons: [\r\n                {\r\n                  hint: \"Sửa\",\r\n                  icon: \"edit\",\r\n                  onClick: function (e) {\r\n                    let key = e.row.data.SubID\r\n                    if ([\"Android\", \"iOS\"].includes(getMobileOperatingSystem())) {\r\n                          OpenFormParamMobile(`sp_Sub_CUSubProduct`,{SubID: key});\r\n                      } else {\r\n                        openFormParam(`sp_Sub_CUSubProduct`, {SubID: key});\r\n                      }\r\n                  },\r\n                },\r\n              ],\r\n            },\r\n        ],\r\n          /*onRowDblClick: function(e) {\r\n             if ([\"Android\", \"iOS\"].includes(getMobileOperatingSystem())) {\r\n                      OpenFormParamMobile(`sp_Sub_CUSubProduct`,{SubID: e.key});\r\n                  } else {\r\n                    openFormParam(`sp_Sub_CUSubProduct`, {SubID: e.key});\r\n                  }\r\n          },*/\r\n          onToolbarPreparing: function (e) {\r\n            e.toolbarOptions.items.unshift({\r\n              location: \"after\",\r\n              template: function () {\r\n                const $wrap = $(\r\n                  '<div class=\"toolbar-right d-flex align-items-center gap-2\"></div>',\r\n                );\r\n                const $btnAdd =\r\n                  $(`<button class=\"btn btn-add-SubProduct btn-success\">\r\n                                              <i class=\"bi bi-plus-lg\"></i> Thêm phân hệ\r\n                                                  </button>\r\n                                                  `);\r\n                $btnAdd.off(\"click\").on(\"click\", function () {\r\n                       if ([\"Android\", \"iOS\"].includes(getMobileOperatingSystem())) {\r\n                        OpenFormParamMobile(`sp_Sub_CUSubProduct`);\r\n                    } else {\r\n                        openFormParam(`sp_Sub_CUSubProduct`);\r\n                    }\r\n                });\r\n                const $btnGroup = $(\r\n                  '<div class=\"d-flex align-items-center gap-2\"></div>',\r\n                );\r\n                $btnGroup.append($btnAdd);\r\n                $wrap.append($btnGroup);\r\n                return $wrap;\r\n              },\r\n            },)\r\n          }\r\n      })\r\n      .dxDataGrid(\"instance\");\r\n\r\n\r\n    // Shared grid data source registry so detail forms can trigger refreshes\r\n    window.hpaSharedGridDataSources = window.hpaSharedGridDataSources || {};\r\n\r\n    if (!window.reloadSharedGridDataSource) {\r\n      window.reloadSharedGridDataSource = function (name, params) {\r\n        const registry = window.hpaSharedGridDataSources || {};\r\n        const entry = registry[name];\r\n        if (!entry || typeof entry.reload !== \"function\") {\r\n          console.warn(\"[SharedGrid] Grid\", name, \"is not registered\");\r\n          return Promise.resolve([]);\r\n        }\r\n        return entry.reload(params);\r\n      };\r\n    }\r\n\r\n    if (!window.getSharedGridDataSource) {\r\n      window.getSharedGridDataSource = function (name) {\r\n        const registry = window.hpaSharedGridDataSources || {};\r\n        return registry[name];\r\n      };\r\n    }\r\n\r\n    if (!window.updateSharedGridRow) {\r\n      window.updateSharedGridRow = function (name, rowData, options) {\r\n        const registry = window.hpaSharedGridDataSources || {};\r\n        const entry = registry[name];\r\n        if (!entry || typeof entry.applyRowChanges !== \"function\") {\r\n          console.warn(\"[SharedGrid] Grid\", name, \"cannot accept row updates\");\r\n          return Promise.resolve(false);\r\n        }\r\n        return entry.applyRowChanges(rowData, options);\r\n      };\r\n    }\r\n\r\n    if (!window.syncSharedGridData) {\r\n      window.syncSharedGridData = function (name) {\r\n        const registry = window.hpaSharedGridDataSources || {};\r\n        const entry = registry[name];\r\n        if (!entry || typeof entry.syncFromGrid !== \"function\") {\r\n          console.warn(\"[SharedGrid] Grid\", name, \"cannot sync\");\r\n          return [];\r\n        }\r\n        return entry.syncFromGrid();\r\n      };\r\n    }\r\n\r\n    if (!window.removeSharedGridRow) {\r\n      window.removeSharedGridRow = function (name, options) {\r\n        const registry = window.hpaSharedGridDataSources || {};\r\n        const entry = registry[name];\r\n        if (!entry || typeof entry.removeRow !== \"function\") {\r\n          console.warn(\"[SharedGrid] Grid\", name, \"cannot remove rows\");\r\n          return Promise.resolve(false);\r\n        }\r\n        return entry.removeRow(options);\r\n      };\r\n    }\r\n\r\n    (function setupSharedGridSource() {\r\n      const sharedKey = gridName;\r\n      const primaryKeyField = \"SubID\";\r\n\r\n      const loginValue =\r\n        typeof window.UserID !== \"undefined\"\r\n          ? window.UserID\r\n          : typeof LoginID !== \"undefined\"\r\n            ? LoginID\r\n            : null;\r\n      const languageValue =\r\n        typeof window.LanguageID !== \"undefined\"\r\n          ? window.LanguageID\r\n          : typeof LanguageID !== \"undefined\"\r\n            ? LanguageID\r\n            : null;\r\n\r\n      const snapshotGridData = function (instance) {\r\n        if (!instance) return [];\r\n        try {\r\n          // Ưu tiên đọc raw dataSource trước - luôn có FULL data\r\n          // kể cả khi toolbar search/filter đang active\r\n          if (typeof instance.option === \"function\") {\r\n            const rawData = instance.option(\"dataSource\");\r\n            if (Array.isArray(rawData) && rawData.length > 0) {\r\n              return rawData.map(function (item) {\r\n                return item && typeof item === \"object\"\r\n                  ? Object.assign({}, item)\r\n                  : item;\r\n              });\r\n            }\r\n          }\r\n\r\n          // Fallback: ds.items() - CHÚ Ý: chỉ trả về filtered rows\r\n          if (typeof instance.getDataSource === \"function\") {\r\n            const ds = instance.getDataSource();\r\n            if (ds && typeof ds.items === \"function\") {\r\n              const dsItems = ds.items();\r\n              if (Array.isArray(dsItems) && dsItems.length > 0) {\r\n                return dsItems.map(function (item) {\r\n                  return item && typeof item === \"object\"\r\n                    ? Object.assign({}, item)\r\n                    : item;\r\n                });\r\n              }\r\n            }\r\n          }\r\n        } catch (snapshotErr) {\r\n          console.warn(\r\n            \"[SharedGrid] Unable to snapshot grid data\",\r\n            snapshotErr,\r\n          );\r\n        }\r\n        return [];\r\n      };\r\n\r\n      let sharedEntry = window.hpaSharedGridDataSources[sharedKey];\r\n      if (!sharedEntry) {\r\n        sharedEntry = {\r\n          data: [],\r\n\r\n          subscribers: [],\r\n          loading: false,\r\n        };\r\n      }\r\n\r\n      sharedEntry.primaryKey = sharedEntry.primaryKey || primaryKeyField;\r\n      sharedEntry.data = Array.isArray(sharedEntry.data)\r\n        ? sharedEntry.data\r\n        : [];\r\n      sharedEntry.subscribers = Array.isArray(sharedEntry.subscribers)\r\n        ? sharedEntry.subscribers\r\n        : [];\r\n\r\n      sharedEntry.loading = !!sharedEntry.loading;\r\n\r\n      if (typeof sharedEntry.normalizeParams !== \"function\") {\r\n        sharedEntry.normalizeParams = function (customParams) {\r\n          const base = [];\r\n          if (loginValue !== null && loginValue !== undefined) {\r\n            base.push(\"LoginID\", loginValue);\r\n          }\r\n          if (languageValue !== null && languageValue !== undefined) {\r\n            base.push(\"LanguageID\", languageValue);\r\n          }\r\n\r\n          if (Array.isArray(customParams) && customParams.length > 0) {\r\n            return base.concat(customParams);\r\n          }\r\n\r\n          if (customParams && typeof customParams === \"object\") {\r\n            const extras = [];\r\n            Object.keys(customParams).forEach(function (key) {\r\n              extras.push(key, customParams[key]);\r\n            });\r\n            return base.concat(extras);\r\n          }\r\n\r\n          return base;\r\n        };\r\n      }\r\n\r\n      if (typeof sharedEntry.notify !== \"function\") {\r\n        sharedEntry.notify = function () {\r\n          this.subscribers.forEach(function (callback) {\r\n            try {\r\n              callback(this.data);\r\n            } catch (err) {\r\n              console.error(\"[SharedGrid] subscriber error\", err);\r\n            }\r\n          }, this);\r\n        };\r\n      }\r\n\r\n      if (typeof sharedEntry.subscribe !== \"function\") {\r\n        sharedEntry.subscribe = function (callback) {\r\n          if (typeof callback === \"function\") {\r\n            this.subscribers.push(callback);\r\n          }\r\n          return () => {\r\n            this.subscribers = this.subscribers.filter(function (fn) {\r\n              return fn !== callback;\r\n            });\r\n          };\r\n        };\r\n      }\r\n\r\n      if (typeof sharedEntry.applyRowChanges !== \"function\") {\r\n        sharedEntry.applyRowChanges = function (rowData, options) {\r\n          const opts = options || {};\r\n          const keyField = this.primaryKey;\r\n          let keyValue = opts.key;\r\n          if (\r\n            (keyValue === undefined || keyValue === null) &&\r\n            rowData &&\r\n            rowData[keyField] !== undefined\r\n          ) {\r\n            keyValue = rowData[keyField];\r\n          }\r\n\r\n          if (keyValue === undefined || keyValue === null) {\r\n            console.warn(\r\n              \"[SharedGrid] Missing key when applying row changes for\",\r\n              sharedKey,\r\n            );\r\n            return Promise.resolve(false);\r\n          }\r\n\r\n          if (typeof this.ensureLocalData === \"function\") {\r\n            this.ensureLocalData();\r\n          }\r\n\r\n          const compare =\r\n            opts.strict === true\r\n              ? function (candidate) {\r\n                  return candidate === keyValue;\r\n                }\r\n              : function (candidate) {\r\n                  if (candidate === undefined || candidate === null)\r\n                    return candidate === keyValue;\r\n                  if (keyValue === undefined || keyValue === null) return false;\r\n                  return String(candidate) === String(keyValue);\r\n                };\r\n\r\n          const nextData = Array.isArray(this.data) ? this.data.slice() : [];\r\n          let targetIndex = nextData.findIndex(function (item) {\r\n            return item ? compare(item[keyField]) : false;\r\n          });\r\n\r\n          const normalizedRow = Object.assign(\r\n            {},\r\n            targetIndex > -1 ? nextData[targetIndex] : {},\r\n            rowData,\r\n          );\r\n\r\n          if (targetIndex === -1) {\r\n            if (opts.ignoreMissing === true) {\r\n              return Promise.resolve(false);\r\n            }\r\n   if (opts.append === true) {\r\n              nextData.push(normalizedRow);\r\n              targetIndex = nextData.length - 1;\r\n            } else {\r\n              nextData.unshift(normalizedRow);\r\n              targetIndex = 0;\r\n            }\r\n          } else {\r\n            nextData[targetIndex] = normalizedRow;\r\n          }\r\n\r\n          this.data = nextData;\r\n          try {\r\n            if (this.instance && typeof this.instance.option === \"function\") {\r\n              this.instance.option(\"dataSource\", nextData);\r\n              this.instance.refresh();\r\n            }\r\n          } catch (applyErr) {\r\n            console.warn(\"[SharedGrid] Unable to push row update\", applyErr);\r\n          }\r\n          this.notify();\r\n          return Promise.resolve({ index: targetIndex, data: normalizedRow });\r\n        };\r\n      }\r\n\r\n      if (typeof sharedEntry.removeRow !== \"function\") {\r\n        sharedEntry.removeRow = function (options) {\r\n          const opts = options || {};\r\n          const keyField = this.primaryKey;\r\n          const keyValue = opts.key;\r\n\r\n          if (keyValue === undefined || keyValue === null) {\r\n            console.warn(\r\n              \"[SharedGrid] Missing key when removing row for\",\r\n              sharedKey,\r\n            );\r\n            return Promise.resolve(false);\r\n          }\r\n\r\n          if (typeof this.ensureLocalData === \"function\") {\r\n            this.ensureLocalData();\r\n          }\r\n\r\n          const filtered = (Array.isArray(this.data) ? this.data : []).filter(\r\n            function (item) {\r\n              if (!item) return true;\r\n              const candidate = item[keyField];\r\n              if (opts.strict === true) {\r\n                return candidate !== keyValue;\r\n              }\r\n\r\n              if (candidate === undefined || candidate === null) {\r\n                return keyValue !== candidate;\r\n              }\r\n              return String(candidate) !== String(keyValue);\r\n            },\r\n          );\r\n\r\n          if (\r\n            filtered.length ===\r\n            (Array.isArray(this.data) ? this.data.length : 0)\r\n          ) {\r\n            return Promise.resolve(false);\r\n          }\r\n\r\n          this.data = filtered;\r\n          try {\r\n            if (this.instance && typeof this.instance.option === \"function\") {\r\n              this.instance.option(\"dataSource\", filtered);\r\n              this.instance.refresh();\r\n            }\r\n          } catch (removeErr) {\r\n            console.warn(\"[SharedGrid] Unable to remove row\", removeErr);\r\n          }\r\n          this.notify();\r\n          return Promise.resolve(true);\r\n        };\r\n      }\r\n\r\n      sharedEntry.instance =\r\n        InstancegridSubProductListP8F9FB1B1CC3A4599BCFD3BE6C5D75A53;\r\n\r\n      if (typeof sharedEntry.ensureLocalData !== \"function\") {\r\n        sharedEntry.ensureLocalData = function () {\r\n          if (Array.isArray(this.data) && this.data.length > 0) {\r\n            return;\r\n          }\r\n          const snapshot = snapshotGridData(this.instance);\r\n          if (snapshot.length > 0) {\r\n            this.data = snapshot;\r\n          }\r\n        };\r\n      }\r\n\r\n      const currentSnapshot = snapshotGridData(sharedEntry.instance);\r\n      if (currentSnapshot.length > 0) {\r\n        sharedEntry.data = currentSnapshot;\r\n      }\r\n\r\n      sharedEntry.getData = function () {\r\n        return this.data;\r\n      };\r\n\r\n      // Gọi sau khi API reload data mới để sync lại cache\r\n      sharedEntry.syncFromGrid = function () {\r\n        const fresh = snapshotGridData(this.instance);\r\n        if (fresh.length > 0) {\r\n          this.data = fresh;\r\n        }\r\n        return this.data;\r\n      };\r\n\r\n      window.hpaSharedGridDataSources[sharedKey] = sharedEntry;\r\n    })();\r\n\r\n    window.currentRecordID_SubID = null;\r\n\r\n    function clearPageCache() {\r\n      _pageCache = {};\r\n    }\r\n\r\n    function getGridHeight() {\r\n      const gridEl =\r\n        InstancegridSubProductListP8F9FB1B1CC3A4599BCFD3BE6C5D75A53.element();\r\n      const domElement = gridEl.jquery ? gridEl[0] : gridEl;\r\n      const top = domElement.getBoundingClientRect().top;\r\n      return window.innerHeight - top - 20;\r\n    }\r\n\r\n    function ReloadData(pageNumber, pageSize, keyword = null) {\r\n      _pageCache = {};\r\n\r\n      let _currentKeyword = String(\r\n        keyword != null\r\n          ? keyword\r\n          : InstancegridSubProductListP8F9FB1B1CC3A4599BCFD3BE6C5D75A53.option(\r\n              \"searchPanel.text\",\r\n            ) || \"\",\r\n      ).trim();\r\n\r\n      function _applyRecord(results) {\r\n        window.syncSharedGridData(\"gridSubProductList\");\r\n      }\r\n\r\n      dataStore_gridSubProductList = new DevExpress.data.CustomStore({\r\n        key: \"SubID\",\r\n        load: function (loadOptions) {\r\n          const deferred = $.Deferred();\r\n\r\n          if (!api) {\r\n            const results = DataSource || [];\r\n            const skip = loadOptions.skip || 0;\r\n            const take = loadOptions.take || 50;\r\n            const pageData = results.slice(skip, skip + take);\r\n            deferred.resolve({\r\n              data: pageData,\r\n              totalCount: results.length,\r\n            });\r\n            api = true;\r\n            return deferred.promise();\r\n          }\r\n\r\n          let params = [];\r\n\r\n          // SP nghiệp vụ\r\n          params.push(\"@ProcName\", \"sp_Sub_SubProduct_Get\");\r\n\r\n          // Tham số của tên thủ tục load Data\r\n          let procParam = \"\";\r\n          // @LoginID = window.UserID, @LanguageID = window.LanguageID,......\r\n\r\n          params.push(\"@ProcParam\", procParam);\r\n\r\n          // Phân trang\r\n          params.push(\"@Take\", loadOptions.take || 50);\r\n          params.push(\"@Skip\", loadOptions.skip || 0);\r\n\r\n          // TotalCount\r\n          if (loadOptions.requireTotalCount) {\r\n            params.push(\"@RequireTotalCount\", 1);\r\n          }\r\n\r\n          // Sort\r\n          const sort = loadOptions.sort\r\n            ? loadOptions.sort\r\n                .map((s) => s.selector + (s.desc ? \" DESC\" : \" ASC\"))\r\n                .join(\",\")\r\n            : \"SubID ASC\"; // này cho mặc định. tự chỉnh theo menu mỗi người\r\n\r\n          params.push(\"@Sort\", \"ORDER BY \" + sort);\r\n\r\n          // Search\r\n          if (_currentKeyword) {\r\n            params.push(\"@SearchValue\", _currentKeyword);\r\n            params.push(\"@ColumnSearch\", \"\");\r\n            // tên cột muốn search, không dc để trống nếu có search\r\n          }\r\n\r\n          // Filter\r\n          if (loadOptions.filter) {\r\n            // Kiểm tra filter item có phải function không\r\n            const isJSFunction = (item) => typeof item === \"function\";\r\n\r\n            const hasFunction = JSON.stringify(\r\n              loadOptions.filter,\r\n              (key, val) => {\r\n                if (typeof val === \"function\") return \"FUNCTION\";\r\n                return val;\r\n              },\r\n            ).includes(\"FUNCTION\");\r\n\r\n            if (!hasFunction) {\r\n              params.push(\"@Filters\", createConditionQuery(loadOptions.filter));\r\n            }\r\n          }\r\n          // Filter\r\n          // if (loadOptions.filter) {\r\n          //     params.push(\"@Filters\", createConditionQuery(loadOptions.filter));\r\n          // }\r\n\r\n          // Group\r\n          if (loadOptions.group) {\r\n            let selectGroup = \"\",\r\n              groupBy = \"GROUP BY \";\r\n            loadOptions.group.forEach((item, index) => {\r\n              if (selectGroup) selectGroup += \", \";\r\n              if (groupBy !== \"GROUP BY \") groupBy += \", \";\r\n              if (item.groupInterval) {\r\n                selectGroup += `${item.groupInterval.toUpperCase()}(${item.selector}) as col${index}`;\r\n                groupBy += `${item.groupInterval.toUpperCase()}(${item.selector})`;\r\n              } else {\r\n                selectGroup += `${item.selector} as col${index}`;\r\n                groupBy += `${item.selector}`;\r\n              }\r\n            });\r\n            selectGroup += `, Count(*) as totalCount`;\r\n            params.push(\"@SelectGroup\", selectGroup);\r\n            params.push(\"@GroupBy\", groupBy);\r\n   }\r\n\r\n          // Summary\r\n          if (loadOptions.totalSummary) {\r\n            const summary = loadOptions.totalSummary.map((item) => {\r\n              const type =\r\n                item.summaryType === \"custom\"\r\n                  ? `count(CASE WHEN [${item.selector}] = 1 THEN 1 END) as ${item.selector}_COUNT`\r\n                  : `${item.summaryType}([${item.selector}]) as ${item.selector}_${item.summaryType.toUpperCase()}`;\r\n              return type;\r\n            });\r\n            params.push(\"@TotalSummary\", summary.join(\", \"));\r\n          }\r\n\r\n          AjaxHPAParadise({\r\n            data: {\r\n              name: \"sp_LoadGridUsingAPI\",\r\n              param: params,\r\n            },\r\n            success: function (res) {\r\n              const json = typeof res === \"string\" ? JSON.parse(res) : res;\r\n              const results = Array.isArray(json?.data?.[0])\r\n                ? json.data[0]\r\n                : [];\r\n\r\n              let result = { data: results };\r\n\r\n              if (loadOptions.requireTotalCount) {\r\n                result.totalCount = json?.data?.[1]?.[0]?.TotalCount ?? 0;\r\n                if (loadOptions.totalSummary) {\r\n                  result.summary = Object.values(json?.data?.[2]?.[0] ?? {});\r\n                }\r\n              } else {\r\n                if (loadOptions.totalSummary) {\r\n                  result.summary = Object.values(json?.data?.[1]?.[0] ?? {});\r\n                }\r\n              }\r\n\r\n              DataSource = results;\r\n              _applyRecord(results);\r\n\r\n              deferred.resolve(result);\r\n            },\r\n            error: function (err) {\r\n              deferred.reject(\"Data Loading Error\");\r\n            },\r\n          });\r\n\r\n          return deferred.promise();\r\n        },\r\n      });\r\n\r\n      const gridInstance =\r\n        InstancegridSubProductListP8F9FB1B1CC3A4599BCFD3BE6C5D75A53;\r\n      gridInstance.beginUpdate();\r\n      gridInstance.option(\"remoteOperations\", {\r\n        paging: true,\r\n        filtering: true,\r\n        sorting: true,\r\n        searching: true,\r\n      });\r\n\r\n      // scrolling mode, nếu phân trang bình thường thì bỏ scrolling\r\n      gridInstance.option(\"scrolling.mode\", \"infinite\");\r\n      gridInstance.option(\"scrolling.rowRenderingMode\", \"virtual\");\r\n      gridInstance.option(\"scrolling.preloadEnabled\", false);\r\n\r\n      gridInstance.option(\"paging.enabled\", true);\r\n      gridInstance.option(\"paging.pageSize\", 50);\r\n      gridInstance.option(\"pager.visible\", false); // bật cái này để hiện số trang, dùng cho list click vô số trang rồi mở trang đó.\r\n      gridInstance.option(\"pager.allowedPageSizes\", [50]);\r\n      gridInstance.option(\"searchPanel.highlightSearchText\", false);\r\n      gridInstance.option(\"dataSource\", dataStore_gridSubProductList);\r\n      gridInstance.option(\"height\", getGridHeight());\r\n      gridInstance.option(\"onOptionChanged\", function (e) {\r\n        if (e.name === \"searchPanel\" && e.fullName === \"searchPanel.text\") {\r\n          const raw = e.value || \"\";\r\n          let t = String(raw);\r\n          _currentKeyword = t.trim();\r\n          _pageCache = {};\r\n        }\r\n      });\r\n      gridInstance.endUpdate();\r\n    }\r\n  \r\n\r\n    ReloadData();\r\n  })();\r\n</script>\r\n\r\n ",
+              "bytes_filename": "sp_Sub_SubProduct.html"
+            }
+          ]
+        ],
+        "dataSchema": [
+          [
+            {
+              "name": "bytes",
+              "type": "System.String"
+            },
+            {
+              "name": "bytes_filename",
+              "type": "System.String"
+            }
+          ]
+        ]
+      },
+      "timestamp": "2026-10-16T02:33:37.306Z"
+    },
+    {
+      "type": "request",
+      "url": "https://paradisehrm.com/Tai3/hpa/paradise2",
+      "method": "POST",
+      "resourceType": "fetch",
+      "postData": {
+        "content": "02xY5O3N3CIcOd20zC0/ATOZWT00Qk6gu0O5yKQbIIEcfCdU/s8ytsWyvFSnIpV63DhwyA8Sm8hPnyDDuVN+T4Ae350jXqD0APv3lxYIsZfMljF7zN3npoBJDKSrsf+kQiTqIMeqNrzomX8S1Hyvo8f4G0HCrlZ2CENcB73W1/ouzGTW2LxDmj09ndA+d4bRdmi3/pTDPBuJ2VWO7eTeE/g1Zo3bJOF1Ap3sHBV1LcxZGXGhtoxeDZSYAfWkh8lhM5kMmhjHfCxV4gD5YrgHOHut55+7ie/qflblL/pYQFkf8KwsoGIZpQ+PyVfERtZiusvcavuVvG+BC9UaBMsa4BR/jhmDRisYxhnGvu9tTmGzzKOy9a3ysg==",
+        "paradiseType": "2"
+      },
+      "timestamp": "2026-10-16T02:33:37.312Z"
+    },
+    {
+      "type": "response",
+      "url": "https://paradisehrm.com/Tai3/hpa/paradise2",
+      "status": 200,
+      "responseBody": {
+        "result": "success",
+        "reason": "",
+        "data": [
+          [
+            {
+              "ParadiseVersion": "877651494"
+            }
+          ]
+        ],
+        "dataSchema": [
+          [
+            {
+              "name": "ParadiseVersion",
+              "type": "System.String"
+            }
+          ]
+        ]
+      },
+      "timestamp": "2026-10-16T02:33:37.385Z"
+    },
+    {
+      "type": "response",
+      "url": "https://paradisehrm.com/Tai3/hpa/paradise2",
+      "status": 200,
+      "responseBody": {
+        "result": "success",
+        "reason": "",
+        "data": [
+          [
+            {
+              "SubID": 1,
+              "SubName": "Quản lý nhân sự",
+              "SubLicensePrice": 0,
+              "SubCustomizePrice": 0,
+              "TotalAmount": 0,
+              "Status": 1,
+              "CreatedDate": "2026-01-14T09:10:01.06",
+              "Priority": 1,
+              "RowNum": 1
+            },
+            {
+              "SubID": 2,
+              "SubName": "Quản lý chấm công",
+              "SubLicensePrice": 0,
+              "SubCustomizePrice": 0,
+              "TotalAmount": 0,
+              "Status": 1,
+              "CreatedDate": "2026-01-16T15:24:05.54",
+              "Priority": 2,
+              "RowNum": 2
+            },
+            {
+              "SubID": 3,
+              "SubName": "Quản lý tính lương, BHXH - Thuế",
+              "SubLicensePrice": 0,
+              "SubCustomizePrice": 0,
+              "TotalAmount": 0,
+              "Status": 1,
+              "CreatedDate": "2026-01-16T15:25:45.723",
+              "Priority": 3,
+              "RowNum": 3
+            },
+            {
+              "SubID": 4,
+              "SubName": "Cổng thông tin nhân sự (ESS)",
+              "SubLicensePrice": 0,
+              "SubCustomizePrice": 0,
+              "TotalAmount": 0,
+              "Status": 1,
+              "CreatedDate": "2026-01-16T15:27:01.46",
+              "Priority": 4,
+              "RowNum": 4
+            },
+            {
+              "SubID": 5,
+              "SubName": "Kiểm định Công - Lương (AUDIT)",
+              "SubLicensePrice": 0,
+              "SubCustomizePrice": 0,
+              "TotalAmount": 0,
+              "Status": 1,
+              "CreatedDate": "2026-01-16T15:27:47.337",
+              "Priority": 5,
+              "RowNum": 5
+            },
+            {
+              "SubID": 6,
+              "SubName": "Phân hệ tuyển dụng",
+              "SubLicensePrice": 0,
+              "SubCustomizePrice": 0,
+              "TotalAmount": 0,
+              "Status": 1,
+              "CreatedDate": "2026-01-16T15:29:30.983",
+              "Priority": 6,
+              "RowNum": 6
+            },
+            {
+              "SubID": 7,
+              "SubName": "Phân hệ đào tạo",
+              "SubLicensePrice": 0,
+              "SubCustomizePrice": 0,
+              "TotalAmount": 0,
+              "Status": 1,
+              "CreatedDate": "2026-01-16T15:32:16.97",
+              "Priority": 7,
+              "RowNum": 7
+            },
+            {
+              "SubID": 8,
+              "SubName": "Phân hệ đánh giá",
+              "SubLicensePrice": 0,
+              "SubCustomizePrice": 0,
+              "TotalAmount": 0,
+              "Status": 1,
+              "CreatedDate": "2026-01-16T15:34:10.16",
+              "Priority": 8,
+              "RowNum": 8
+            },
+            {
+              "SubID": 9,
+              "SubName": "Quản lý suất ăn",
+              "SubLicensePrice": 0,
+              "SubCustomizePrice": 0,
+              "TotalAmount": 0,
+              "Status": 1,
+              "CreatedDate": "2026-01-16T15:35:15.86",
+              "Priority": 9,
+              "RowNum": 9
+            }
+          ]
+        ],
+        "dataSchema": [
+          [
+            {
+              "name": "SubID",
+              "type": "System.Int32"
+            },
+            {
+              "name": "SubName",
+              "type": "System.String"
+            },
+            {
+              "name": "SubLicensePrice",
+              "type": "System.Decimal"
+            },
+            {
+              "name": "SubCustomizePrice",
+              "type": "System.Decimal"
+            },
+            {
+              "name": "TotalAmount",
+              "type": "System.Decimal"
+            },
+            {
+              "name": "Status",
+              "type": "System.Int32"
+            },
+            {
+              "name": "CreatedDate",
+              "type": "System.DateTime"
+            },
+            {
+              "name": "Priority",
+              "type": "System.Int32"
+            },
+            {
+              "name": "RowNum",
+              "type": "System.Int64"
+            }
+          ]
+        ]
+      },
+      "timestamp": "2026-10-16T02:33:37.386Z"
+    },
+    {
+      "type": "response",
+      "url": "https://paradisehrm.com/Tai3/hpa/paradise2",
+      "status": 200,
+      "responseBody": {
+        "result": "success",
+        "reason": "",
+        "data": [
+          [
+            {
+              "SubID": 1,
+              "SubName": "Quản lý nhân sự",
+              "SubLicensePrice": 0,
+              "SubCustomizePrice": 0,
+              "TotalAmount": 0,
+              "Status": 1,
+              "CreatedDate": "2026-01-14T09:10:01.06",
+              "Priority": 1,
+              "RowNum": 1
+            },
+            {
+              "SubID": 2,
+              "SubName": "Quản lý chấm công",
+              "SubLicensePrice": 0,
+              "SubCustomizePrice": 0,
+              "TotalAmount": 0,
+              "Status": 1,
+              "CreatedDate": "2026-01-16T15:24:05.54",
+              "Priority": 2,
+              "RowNum": 2
+            },
+            {
+              "SubID": 3,
+              "SubName": "Quản lý tính lương, BHXH - Thuế",
+              "SubLicensePrice": 0,
+              "SubCustomizePrice": 0,
+              "TotalAmount": 0,
+              "Status": 1,
+              "CreatedDate": "2026-01-16T15:25:45.723",
+              "Priority": 3,
+              "RowNum": 3
+            },
+            {
+              "SubID": 4,
+              "SubName": "Cổng thông tin nhân sự (ESS)",
+              "SubLicensePrice": 0,
+              "SubCustomizePrice": 0,
+              "TotalAmount": 0,
+              "Status": 1,
+              "CreatedDate": "2026-01-16T15:27:01.46",
+              "Priority": 4,
+              "RowNum": 4
+            },
+            {
+              "SubID": 5,
+              "SubName": "Kiểm định Công - Lương (AUDIT)",
+              "SubLicensePrice": 0,
+              "SubCustomizePrice": 0,
+              "TotalAmount": 0,
+              "Status": 1,
+              "CreatedDate": "2026-01-16T15:27:47.337",
+              "Priority": 5,
+              "RowNum": 5
+            },
+            {
+              "SubID": 6,
+              "SubName": "Phân hệ tuyển dụng",
+              "SubLicensePrice": 0,
+              "SubCustomizePrice": 0,
+              "TotalAmount": 0,
+              "Status": 1,
+              "CreatedDate": "2026-01-16T15:29:30.983",
+              "Priority": 6,
+              "RowNum": 6
+            },
+            {
+              "SubID": 7,
+              "SubName": "Phân hệ đào tạo",
+              "SubLicensePrice": 0,
+              "SubCustomizePrice": 0,
+              "TotalAmount": 0,
+              "Status": 1,
+              "CreatedDate": "2026-01-16T15:32:16.97",
+              "Priority": 7,
+              "RowNum": 7
+            },
+            {
+              "SubID": 8,
+              "SubName": "Phân hệ đánh giá",
+              "SubLicensePrice": 0,
+              "SubCustomizePrice": 0,
+              "TotalAmount": 0,
+              "Status": 1,
+              "CreatedDate": "2026-01-16T15:34:10.16",
+              "Priority": 8,
+              "RowNum": 8
+            },
+            {
+              "SubID": 9,
+              "SubName": "Quản lý suất ăn",
+              "SubLicensePrice": 0,
+              "SubCustomizePrice": 0,
+              "TotalAmount": 0,
+              "Status": 1,
+              "CreatedDate": "2026-01-16T15:35:15.86",
+              "Priority": 9,
+              "RowNum": 9
+            }
+          ]
+        ],
+        "dataSchema": [
+          [
+            {
+              "name": "SubID",
+              "type": "System.Int32"
+            },
+            {
+              "name": "SubName",
+              "type": "System.String"
+            },
+            {
+              "name": "SubLicensePrice",
+              "type": "System.Decimal"
+            },
+            {
+              "name": "SubCustomizePrice",
+              "type": "System.Decimal"
+            },
+            {
+              "name": "TotalAmount",
+              "type": "System.Decimal"
+            },
+            {
+              "name": "Status",
+              "type": "System.Int32"
+            },
+            {
+              "name": "CreatedDate",
+              "type": "System.DateTime"
+            },
+            {
+              "name": "Priority",
+              "type": "System.Int32"
+            },
+            {
+              "name": "RowNum",
+              "type": "System.Int64"
+            }
+          ]
+        ]
+      },
+      "timestamp": "2026-10-16T02:33:37.445Z"
+    }
+  ]
+}

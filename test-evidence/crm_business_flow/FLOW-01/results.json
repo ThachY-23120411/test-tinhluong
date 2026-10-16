@@ -1,0 +1,115 @@
+{
+  "tcId": "FLOW-01",
+  "pageName": "crm_business_flow",
+  "title": "FLOW-01: Luồng Nghiệp Vụ Khép Kín: Dữ Liệu Khách Hàng -> Sales Pipeline -> Theo Dõi Dịch Vụ -> Tổng Quan CRM",
+  "testStatus": "PASSED",
+  "businessStatus": "PASSED",
+  "businessNotes": "PASS - Luồng nghiệp vụ khép kín xuyên suốt 4 menu CRM (Khách hàng -> Pipeline -> Dịch vụ -> Tổng quan) thực thi trơn tru, dữ liệu đồng bộ hoàn hảo",
+  "failureAnalysis": {
+    "issue": "",
+    "expected": "",
+    "actual": "",
+    "rootCause": "",
+    "recommendation": ""
+  },
+  "status": "PASSED",
+  "duration": "84.47s",
+  "errors": "",
+  "stepScreenshots": [
+    {
+      "step": 1,
+      "title": "Mở menu Dữ liệu khách hàng chuẩn bị tạo thực thể nguồn",
+      "fileName": "FLOW-01-step01-mo-menu-du-lieu-khach-hang-chuan-bi-tao-thuc-the-nguon.png",
+      "relPath": "crm_business_flow/FLOW-01/screenshots/FLOW-01-step01-mo-menu-du-lieu-khach-hang-chuan-bi-tao-thuc-the-nguon.png"
+    },
+    {
+      "step": 2,
+      "title": "Điền thông tin khách hàng nguồn: CTY_FLOW",
+      "fileName": "FLOW-01-step02-dien-thong-tin-khach-hang-nguon-cty-flow-636952.png",
+      "relPath": "crm_business_flow/FLOW-01/screenshots/FLOW-01-step02-dien-thong-tin-khach-hang-nguon-cty-flow-636952.png"
+    },
+    {
+      "step": 2,
+      "title": "Điền thông tin khách hàng nguồn: CTY_FLOW",
+      "fileName": "FLOW-01-step02-dien-thong-tin-khach-hang-nguon-cty-flow-733088.png",
+      "relPath": "crm_business_flow/FLOW-01/screenshots/FLOW-01-step02-dien-thong-tin-khach-hang-nguon-cty-flow-733088.png"
+    },
+    {
+      "step": 3,
+      "title": "Lưu khách hàng thành công và bắt gói phản hồi máy chủ",
+      "fileName": "FLOW-01-step03-luu-khach-hang-thanh-cong-va-bat-goi-phan-hoi-may-chu.png",
+      "relPath": "crm_business_flow/FLOW-01/screenshots/FLOW-01-step03-luu-khach-hang-thanh-cong-va-bat-goi-phan-hoi-may-chu.png"
+    },
+    {
+      "step": 4,
+      "title": "Điều hướng sang menu Sales Pipeline để kiểm chứng đồng bộ",
+      "fileName": "FLOW-01-step04-dieu-huong-sang-menu-sales-pipeline-de-kiem-chung-dong-bo.png",
+      "relPath": "crm_business_flow/FLOW-01/screenshots/FLOW-01-step04-dieu-huong-sang-menu-sales-pipeline-de-kiem-chung-dong-bo.png"
+    },
+    {
+      "step": 5,
+      "title": "Tìm kiếm khách hàng trên Sales Pipeline",
+      "fileName": "FLOW-01-step05-tim-kiem-khach-hang-cty-flow-636952-tren-sales-pipeline.png",
+      "relPath": "crm_business_flow/FLOW-01/screenshots/FLOW-01-step05-tim-kiem-khach-hang-cty-flow-636952-tren-sales-pipeline.png"
+    },
+    {
+      "step": 5,
+      "title": "Tìm kiếm khách hàng trên Sales Pipeline",
+      "fileName": "FLOW-01-step05-tim-kiem-khach-hang-cty-flow-733088-tren-sales-pipeline.png",
+      "relPath": "crm_business_flow/FLOW-01/screenshots/FLOW-01-step05-tim-kiem-khach-hang-cty-flow-733088-tren-sales-pipeline.png"
+    },
+    {
+      "step": 6,
+      "title": "Điều hướng sang menu Theo dõi dịch vụ kiểm tra dữ liệu",
+      "fileName": "FLOW-01-step06-dieu-huong-sang-menu-theo-doi-dich-vu-kiem-tra-du-lieu.png",
+      "relPath": "crm_business_flow/FLOW-01/screenshots/FLOW-01-step06-dieu-huong-sang-menu-theo-doi-dich-vu-kiem-tra-du-lieu.png"
+    },
+    {
+      "step": 7,
+      "title": "Thẩm định danh mục dịch vụ hoạt động ổn định và nhất quán",
+      "fileName": "FLOW-01-step07-tham-dinh-danh-muc-dich-vu-hoat-dong-on-dinh-va-nhat-quan.png",
+      "relPath": "crm_business_flow/FLOW-01/screenshots/FLOW-01-step07-tham-dinh-danh-muc-dich-vu-hoat-dong-on-dinh-va-nhat-quan.png"
+    },
+    {
+      "step": 8,
+      "title": "Khép kín luồng tại màn hình Tổng quan CRM",
+      "fileName": "FLOW-01-step08-khep-kin-luong-tai-man-hinh-tong-quan-crm.png",
+      "relPath": "crm_business_flow/FLOW-01/screenshots/FLOW-01-step08-khep-kin-luong-tai-man-hinh-tong-quan-crm.png"
+    },
+    {
+      "step": 9,
+      "title": "Bấm nút Tính toán lại và hoàn tất đồng bộ toàn phân hệ CRM",
+      "fileName": "FLOW-01-step09-bam-nut-tinh-toan-lai-va-hoan-tat-dong-bo-toan-phan-he-crm.png",
+      "relPath": "crm_business_flow/FLOW-01/screenshots/FLOW-01-step09-bam-nut-tinh-toan-lai-va-hoan-tat-dong-bo-toan-phan-he-crm.png"
+    },
+    {
+      "step": 10,
+      "title": "Nghiệm thu toàn diện luồng nghiệp vụ khép kín xuyên suốt 4 menu CRM",
+      "fileName": "FLOW-01-step10-nghiem-thu-toan-dien-luong-nghiep-vu-khep-kin-xuyen-suot-4-menu-crm.png",
+      "relPath": "crm_business_flow/FLOW-01/screenshots/FLOW-01-step10-nghiem-thu-toan-dien-luong-nghiep-vu-khep-kin-xuyen-suot-4-menu-crm.png"
+    }
+  ],
+  "attachments": {
+    "screenshots": [
+      "crm_business_flow/FLOW-01/screenshots/FLOW-01-step01-mo-menu-du-lieu-khach-hang-chuan-bi-tao-thuc-the-nguon.png",
+      "crm_business_flow/FLOW-01/screenshots/FLOW-01-step02-dien-thong-tin-khach-hang-nguon-cty-flow-636952.png",
+      "crm_business_flow/FLOW-01/screenshots/FLOW-01-step02-dien-thong-tin-khach-hang-nguon-cty-flow-733088.png",
+      "crm_business_flow/FLOW-01/screenshots/FLOW-01-step03-luu-khach-hang-thanh-cong-va-bat-goi-phan-hoi-may-chu.png",
+      "crm_business_flow/FLOW-01/screenshots/FLOW-01-step04-dieu-huong-sang-menu-sales-pipeline-de-kiem-chung-dong-bo.png",
+      "crm_business_flow/FLOW-01/screenshots/FLOW-01-step05-tim-kiem-khach-hang-cty-flow-636952-tren-sales-pipeline.png",
+      "crm_business_flow/FLOW-01/screenshots/FLOW-01-step05-tim-kiem-khach-hang-cty-flow-733088-tren-sales-pipeline.png",
+      "crm_business_flow/FLOW-01/screenshots/FLOW-01-step06-dieu-huong-sang-menu-theo-doi-dich-vu-kiem-tra-du-lieu.png",
+      "crm_business_flow/FLOW-01/screenshots/FLOW-01-step07-tham-dinh-danh-muc-dich-vu-hoat-dong-on-dinh-va-nhat-quan.png",
+      "crm_business_flow/FLOW-01/screenshots/FLOW-01-step08-khep-kin-luong-tai-man-hinh-tong-quan-crm.png",
+      "crm_business_flow/FLOW-01/screenshots/FLOW-01-step09-bam-nut-tinh-toan-lai-va-hoan-tat-dong-bo-toan-phan-he-crm.png",
+      "crm_business_flow/FLOW-01/screenshots/FLOW-01-step10-nghiem-thu-toan-dien-luong-nghiep-vu-khep-kin-xuyen-suot-4-menu-crm.png"
+    ],
+    "videos": [
+      "crm_business_flow/FLOW-01/videos/video.webm"
+    ],
+    "traces": [
+      "crm_business_flow/FLOW-01/traces/trace.zip"
+    ]
+  },
+  "timestamp": "2026-10-16T05:50:16.465Z"
+}

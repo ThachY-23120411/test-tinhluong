@@ -1,0 +1,66 @@
+{
+  "tcId": "TC-04",
+  "pageName": "crm_service_tracking",
+  "title": "Thẩm định Nút Chọn Cột Hiển thị (Column Chooser Panel)",
+  "testStatus": "PASSED",
+  "businessStatus": "PASSED",
+  "businessNotes": "PASS - Tính năng Column Chooser hoạt động mượt mà, hiển thị đầy đủ danh mục cột",
+  "failureAnalysis": {
+    "issue": "",
+    "expected": "",
+    "actual": "",
+    "rootCause": "",
+    "recommendation": ""
+  },
+  "status": "PASSED",
+  "duration": "23.50s",
+  "errors": "",
+  "stepScreenshots": [
+    {
+      "step": 1,
+      "title": "Xác định vị trí icon Chọn cột hiển thị trên toolbar",
+      "fileName": "TC-04-step01-xac-dinh-vi-tri-icon-chon-cot-hien-thi-tren-toolbar.png",
+      "relPath": "crm_service_tracking/TC-04/screenshots/TC-04-step01-xac-dinh-vi-tri-icon-chon-cot-hien-thi-tren-toolbar.png"
+    },
+    {
+      "step": 2,
+      "title": "Bảng chọn cột hiển thị (Column Chooser) mở ra trực quan",
+      "fileName": "TC-04-step02-bang-chon-cot-hien-thi-column-chooser-mo-ra-truc-quan.png",
+      "relPath": "crm_service_tracking/TC-04/screenshots/TC-04-step02-bang-chon-cot-hien-thi-column-chooser-mo-ra-truc-quan.png"
+    },
+    {
+      "step": 3,
+      "title": "Rà soát các tùy chọn bật/tắt hiển thị từng cột dữ liệu",
+      "fileName": "TC-04-step03-ra-soat-cac-tuy-chon-bat-tat-hien-thi-tung-cot-du-lieu.png",
+      "relPath": "crm_service_tracking/TC-04/screenshots/TC-04-step03-ra-soat-cac-tuy-chon-bat-tat-hien-thi-tung-cot-du-lieu.png"
+    },
+    {
+      "step": 4,
+      "title": "Con trỏ Neon bấm đóng panel Column Chooser",
+      "fileName": "TC-04-step04-con-tro-neon-bam-dong-panel-column-chooser.png",
+      "relPath": "crm_service_tracking/TC-04/screenshots/TC-04-step04-con-tro-neon-bam-dong-panel-column-chooser.png"
+    },
+    {
+      "step": 5,
+      "title": "Panel chọn cột đóng an toàn không gây crash giao diện",
+      "fileName": "TC-04-step05-panel-chon-cot-dong-an-toan-khong-gay-crash-giao-dien.png",
+      "relPath": "crm_service_tracking/TC-04/screenshots/TC-04-step05-panel-chon-cot-dong-an-toan-khong-gay-crash-giao-dien.png"
+    }
+  ],
+  "attachments": {
+    "screenshots": [
+      "crm_service_tracking/TC-04/screenshots/TC-04-step01-xac-dinh-vi-tri-icon-chon-cot-hien-thi-tren-toolbar.png",
+      "crm_service_tracking/TC-04/screenshots/TC-04-step02-bang-chon-cot-hien-thi-column-chooser-mo-ra-truc-quan.png",
+      "crm_service_tracking/TC-04/screenshots/TC-04-step03-ra-soat-cac-tuy-chon-bat-tat-hien-thi-tung-cot-du-lieu.png",
+      "crm_service_tracking/TC-04/screenshots/TC-04-step04-con-tro-neon-bam-dong-panel-column-chooser.png",
+      "crm_service_tracking/TC-04/screenshots/TC-04-step05-panel-chon-cot-dong-an-toan-khong-gay-crash-giao-dien.png"
+    ],
+    "videos": [
+      "crm_service_tracking/TC-04/videos/video.webm"
+    ],
+    "traces": [
+      "crm_service_tracking/TC-04/traces/trace.zip"
+    ]
+  },
+  "timestamp": "2026-10-16T05:41:04.333Z"
+}
