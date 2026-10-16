@@ -115,18 +115,203 @@ tests/ (Mã nguồn kịch bản)                test-evidence/ (Bằng chứng 
 
 ---
 
-## 2.1. MA TRẬN NGUYÊN TẮC VIẾT KỊCH BẢN TEST THEO TỪNG THÀNH PHẦN & TÌNH HUỐNG
+## 2.1. BỘ NGUYÊN TẮC TEST TỔNG QUÁT THEO TỪNG LOẠI CONTROL (UNIVERSAL CONTROL SPECIFICATION)
 
-*(Mọi file kịch bản `.spec.js` khi sinh ra hoặc bổ sung BẮT BUỘC phải tra cứu ma trận này để lập trình các điểm Assertion sâu, triệt tiêu hoàn toàn lối kiểm thử bề nổi hời hợt)*
+*(Áp dụng nhất quán cho MỌI menu, màn hình, phân hệ và dự án web. Mọi kịch bản `.spec.js` khi sinh ra hoặc mở rộng BẮT BUỘC phải tuân theo 3 lớp thẩm định: **UI/DOM ── Network API ── Logic Dữ Liệu**)*
 
-| Thành phần / Control | Bẫy thường gặp (Test sai/nông) | Nguyên tắc lập trình trong file `.js` (Test chuẩn nghiệp vụ) |
-| :--- | :--- | :--- |
-| **1. Chip Lọc / Dropdown Trạng Thái (Filters)** | Chỉ click và assert chip có class `.active` | **1. Thẩm định chu kỳ khôi phục (Round-trip):** Đếm số dòng ban đầu $N_0$ ở "Tất cả" $\rightarrow$ Click chip lọc $A$ $\rightarrow$ Bắt API $\rightarrow$ Assert số dòng $N_A \le N_0$ $\rightarrow$ Duyệt text từng dòng trên bảng xem đúng trạng thái $A$ không $\rightarrow$ **Click lại "Tất cả" lần 2** $\rightarrow$ Assert số dòng khôi phục $N_{restore} == N_0$ (bắt ngay lỗi mất dữ liệu do kẹt bộ lọc ngày). |
-| **2. Ô Tìm Kiếm Nhanh (Search Box)** | Nhập chuỗi cứng (ví dụ "abc") rồi không kiểm tra | **1. Động hóa từ khóa:** Trích xuất tên/mã của 1 dòng có thật trên DataGrid $\rightarrow$ Gõ từ khóa bằng `pressSequentially`.<br>**2. Assert kết quả:** Bắt API / lọc client $\rightarrow$ Mọi dòng hiển thị phải chứa từ khóa.<br>**3. Assert xóa tìm kiếm:** Xóa sạch ô tìm kiếm (`Ctrl+A` $\rightarrow$ `Backspace`) $\rightarrow$ Bảng phải khôi phục lại đủ danh sách ban đầu. |
-| **3. Form Thêm Mới Dữ Liệu (Create CRUD)** | Chỉ mở modal lên rồi bấm nút Hủy / Đóng | **1. Kiểm thử Validate (Negative):** Bấm Lưu khi form trống $\rightarrow$ Bắt buộc assert viền đỏ / thông báo lỗi các trường required.<br>**2. Nhập dữ liệu duy nhất (Positive):** Tạo mã/tên có tiền tố duy nhất (ví dụ `TEST_${Date.now()}`).<br>**3. Bắt API Lưu:** Bắt gói tin POST/PUT $\rightarrow$ Parse JSON assert `result.success === true`.<br>**4. Đọc lại (Read-back):** Assert DataGrid bên ngoài tự động reload và dòng mới vừa tạo xuất hiện trên bảng. |
-| **4. Xem Chi Tiết & Chỉnh Sửa (View/Edit)** | Nhấp đúp vào dòng, popup hiện lên là cho PASS | **1. Bắt API nạp chi tiết:** Chặn API (ví dụ `sp_..._Detail`) và đợi nạp form.<br>**2. Assert toàn vẹn dữ liệu:** Dữ liệu trong ô input/tab chi tiết phải khớp 100% với dòng vừa click (không được để trống `""`).<br>**3. Sửa & Lưu:** Đổi giá trị 1 trường $\rightarrow$ Bấm Lưu $\rightarrow$ Bắt API cập nhật $\rightarrow$ Đóng modal an toàn mà không làm crash DataGrid cha. |
-| **5. Chức Năng Xóa (Delete CRUD)** | Bấm nút Xóa rồi kết luận đã xóa | **1. Modal xác nhận:** Phải kiểm tra popup xác nhận ("Bạn có chắc muốn xóa?") xuất hiện.<br>**2. Bắt API Xóa:** Bắt API DELETE/POST và kiểm tra response thành công.<br>**3. Kiểm chứng biến mất:** DataGrid tự reload, số dòng giảm đi 1 ($N - 1$) và mã bản ghi đã xóa không còn tồn tại trên bất kỳ trang nào. |
-| **6. Phân Trang & Sắp Xếp (Pagination / Sort)** | Bấm nút "Trang 2" hoặc click cột mà không so sánh dữ liệu | **1. Phân trang:** Lưu text dòng 1 của Trang 1 $\rightarrow$ Bấm Trang 2 $\rightarrow$ Bắt API $\rightarrow$ Assert dòng 1 của Trang 2 PHẢI KHÁC dòng 1 của Trang 1.<br>**2. Sắp xếp:** Lưu danh sách trước khi sort $\rightarrow$ Click tiêu đề cột $\rightarrow$ Bắt API $\rightarrow$ Assert thứ tự các phần tử đã đảo chiều tăng/giảm theo đúng tiêu chí. |
+```
+┌────────────────────────────────────────────────────────────────────────┐
+│             3 LỚP THẨM ĐỊNH BẮT BUỘC CHO MỌI CONTROL (TRIPLE-LAYER)     │
+├───────────────────┬─────────────────────────────┬──────────────────────┤
+│ 1. UI / DOM Layer │ 2. Network / API Layer      │ 3. Data/State Layer  │
+│ - Trạng thái focus│ - Chặn waitForResponse      │ - Đối chiếu API vs UI│
+│ - Class .active   │ - Payload gửi đi đúng chuẩn │ - Round-trip khôi    │
+│ - Viền đỏ validate│ - HTTP Status & JSON Body   │   phục trạng thái    │
+│ - Enable/Disable  │ - Check cờ success/result   │ - Đọc lại (Read-back)│
+└───────────────────┴─────────────────────────────┴──────────────────────┘
+```
+
+---
+
+### NHÓM 1: CÁC CONTROL NHẬP LIỆU (INPUT CONTROLS)
+
+#### 1. Ô Nhập Văn Bản (Text Field / Textarea)
+* **Thao tác chuẩn**:
+  - Di chuột Neon vào giữa ô input $\rightarrow$ Click focus $\rightarrow$ Xóa trắng dữ liệu cũ (`fill('')` hoặc `selectText() + Backspace`).
+  - Gõ phím mô phỏng người thật: `pressSequentially(text, { delay: 35 })`.
+* **Thẩm định 3 lớp**:
+  1. *UI*: `expect(input).toHaveValue(text)`.
+  2. *Negative/Validation*: Khi xóa rỗng trường bắt buộc rồi blur ra ngoài $\rightarrow$ Bắt buộc assert xuất hiện viền đỏ hoặc thông báo lỗi `dx-invalid` / `.text-danger` / `.error-message`.
+  3. *Ký tự đặc biệt (Edge case)*: Thử nghiệm chuỗi có dấu tiếng Việt, khoảng trắng thừa ở 2 đầu, ký tự `'`, `"`, `&` $\rightarrow$ Đảm bảo không bị vỡ giao diện hoặc lỗi câu query SQL.
+
+#### 2. Ô Nhập Số / Tiền Tệ / Tỷ Lệ (Number / Currency / Percentage Input)
+* **Thao tác chuẩn**:
+  - Click focus $\rightarrow$ Nhập số bằng chuỗi số nguyên hoặc số thập phân.
+* **Thẩm định 3 lớp**:
+  1. *UI Formatting*: Kiểm tra định dạng tiền tệ tự động (vd: gõ `1000000` $\rightarrow$ UI phải format `1,000,000` hoặc `1.000.000 ₫`).
+  2. *Chống nhập sai (Negative)*: Cố tình gõ chữ cái `abc` hoặc ký tự lạ $\rightarrow$ Assert ô input không nhận ký tự chữ, giá trị giữ nguyên kiểu số.
+  3. *Giới hạn biên (Boundary)*: Nhập số âm (nếu không cho phép số âm), nhập `0`, hoặc nhập số vượt ngưỡng max $\rightarrow$ Assert thông báo chặn hợp lệ.
+
+#### 3. Bộ Chọn Ngày / Khoảng Ngày (Date Picker / Date Range Picker)
+* **Thao tác chuẩn**:
+  - Hạn chế gõ chuỗi tay nếu control dùng popup calendar $\rightarrow$ Click icon lịch $\rightarrow$ Chọn ngày cụ thể hoặc gõ định dạng chuẩn hệ thống (`dd/MM/yyyy`).
+* **Thẩm định 3 lớp**:
+  1. *UI*: Assert ngày hiển thị đúng định dạng `dd/MM/yyyy`.
+  2. *Ràng buộc logic (Cross-field Validation)*: Chọn `Từ ngày` > `Đến ngày` $\rightarrow$ Bắt buộc assert thông báo lỗi logic *"Từ ngày không được lớn hơn Đến ngày"*.
+  3. *Network*: Bắt API khi chọn ngày $\rightarrow$ Assert tham số `@FromDate`, `@ToDate` gửi lên server khớp đúng định dạng backend mong đợi (không bị lệch timezone).
+
+#### 4. Danh Sách Chọn Đơn (Single Select / Dropdown / Combobox)
+* **Thao tác chuẩn**:
+  - Di chuột Neon click mở dropdown $\rightarrow$ Đợi menu popup `.dx-dropdowneditor-overlay, .select2-dropdown` hiển thị $\rightarrow$ Gõ tìm kiếm hoặc cuộn tới option mục tiêu $\rightarrow$ Click chọn.
+* **Thẩm định 3 lớp**:
+  1. *UI*: Assert text hiển thị trên dropdown đổi sang option vừa chọn.
+  2. *Khóa liên động (Cascading Dropdown)*: Nếu Dropdown A quyết định Dropdown B (ví dụ: Tỉnh/Thành $\rightarrow$ Quận/Huyện) $\rightarrow$ Assert Dropdown B tự động nạp lại danh sách tương ứng và reset giá trị cũ.
+  3. *API*: Chặn API nạp danh sách dropdown $\rightarrow$ Đảm bảo có danh sách trả về, không bị mảng rỗng `[]`.
+
+#### 5. Danh Sách Chọn Nhiều (Multi-Select / TagBox / Chip Input)
+* **Thao tác chuẩn**:
+  - Mở dropdown $\rightarrow$ Tích chọn 2-3 phần tử $\rightarrow$ Click ra ngoài để đóng.
+* **Thẩm định 3 lớp**:
+  1. *UI*: Assert các Tags/Badges xuất hiện tương ứng trong ô input. Thử bấm nút `x` trên 1 tag để xóa $\rightarrow$ Assert tag đó biến mất.
+  2. *Chọn tất cả (Select All)*: Bấm nút "Chọn tất cả" $\rightarrow$ Assert toàn bộ items được tích và badge cập nhật số lượng.
+  3. *Network*: Payload gửi lên server phải là mảng hoặc chuỗi phân tách dấu phẩy (vd: `[1, 2, 3]` hoặc `'1,2,3'`).
+
+#### 6. Hộp Kiểm / Nút Gạt Trạng Thái (Checkbox / Toggle Switch)
+* **Thao tác chuẩn**:
+  - Di chuột Neon click trực tiếp vào checkbox/toggle.
+* **Thẩm định 3 lớp**:
+  1. *UI*: Assert trạng thái `expect(checkbox).toBeChecked()` hoặc toggle có class `.dx-switch-on`.
+  2. *Hiển thị có điều kiện (Conditional Visibility)*: Nếu checkbox điều khiển ẩn/hiện trường khác (vd: "Tích chọn để xuất hóa đơn VAT" $\rightarrow$ Hiện ô Mã số thuế) $\rightarrow$ Bắt buộc assert khu vực phụ xuất hiện khi ON và biến mất khi OFF.
+  3. *Đảo ngược trạng thái*: Click lần 1 (ON) $\rightarrow$ Click lần 2 (OFF) $\rightarrow$ Assert trạng thái trở về ban đầu nguyên vẹn.
+
+---
+
+### NHÓM 2: CÁC CONTROL LỌC, TÌM KIẾM & BỘ ĐIỀU HƯỚNG BẢNG
+
+#### 7. Thẻ Lọc Trạng Thái (Filter Chips / Status Pills / Pill Tabs)
+* **Thao tác chuẩn**:
+  - Ghi nhận số dòng ban đầu $N_0$ ở chip mặc định ("Tất cả").
+  - Click chip lọc cụ thể $A$ (vd: "Đã duyệt", "Chờ xử lý").
+* **Thẩm định 3 lớp (BẮT BUỘC ROUND-TRIP)**:
+  1. *UI*: Chip được click có class active/selected.
+  2. *Network*: Bắt API `/query` hoặc `/filter` $\rightarrow$ Assert payload gửi đúng mã trạng thái $A$ và response trả về dữ liệu tương ứng.
+  3. *Logic Dữ Liệu*:
+     - Mọi dòng trên bảng phải mang đúng nhãn trạng thái $A$.
+     - **Vòng lặp khôi phục bắt buộc**: Click quay lại chip "Tất cả" lần 2 $\rightarrow$ Bắt API $\rightarrow$ **Assert số dòng phục hồi $N_{restore} == N_0$** (chặn triệt để lỗi kẹt filter ngày hoặc đột biến state làm mất sạch dữ liệu).
+
+#### 8. Ô Tìm Kiếm Nhanh (Search Box / Instant Filter)
+* **Thao tác chuẩn**:
+  - Tuyệt đối không nhập chuỗi cứng bừa bãi.
+  - **Trích xuất từ khóa động**: Đọc text từ 1 dòng thực tế đang có trên bảng (vd: Tên khách hàng, Mã nhân viên) $\rightarrow$ Gõ vào ô search bằng `pressSequentially`.
+* **Thẩm định 3 lớp**:
+  1. *Instant Filter*: Đợi debounce 300-500ms $\rightarrow$ Mọi dòng hiển thị trên DataGrid bắt buộc phải chứa từ khóa tìm kiếm.
+  2. *Trường hợp không tìm thấy*: Gõ một chuỗi ngẫu nhiên không tồn tại (vd: `###XYZ_NO_DATA###`) $\rightarrow$ Assert bảng hiển thị giao diện rỗng: *"Không có dữ liệu"* (Empty state).
+  3. *Phục hồi khi xóa search*: Dùng `selectText() + Backspace` để xóa sạch ô tìm kiếm $\rightarrow$ Assert bảng tự động nạp lại đầy đủ danh sách ban đầu.
+
+#### 9. Bộ Phân Trang (Pagination: Next, Prev, Page Size, Jump)
+* **Thao tác chuẩn**:
+  - Đọc text dòng đầu tiên của Trang 1 $\rightarrow$ Bấm nút chuyển sang Trang 2 (hoặc số trang cụ thể).
+* **Thẩm định 3 lớp**:
+  1. *UI*: Nút Trang 2 chuyển sang active, nút "Previous" được enable (không còn disabled).
+  2. *Network*: Bắt API phân trang $\rightarrow$ Assert tham số `pageIndex=2` (hoặc `skip=20, take=20`).
+  3. *Dữ liệu*: Dòng đầu tiên của Trang 2 **PHẢI KHÁC** dòng đầu tiên của Trang 1.
+  4. *Đổi Page Size*: Chọn đổi số dòng từ `20` lên `50` $\rightarrow$ Assert số dòng trên bảng tăng lên tương ứng.
+
+#### 10. Sắp Xếp Cột & Lọc Đầu Cột (Column Sorting & Header Filter)
+* **Thao tác chuẩn**:
+  - Di chuột click vào tiêu đề cột (Column Header).
+* **Thẩm định 3 lớp**:
+  1. *UI*: Xuất hiện icon mũi tên sắp xếp tăng dần $\uparrow$ (click lần 1) hoặc giảm dần $\downarrow$ (click lần 2).
+  2. *Network*: Bắt API query $\rightarrow$ Assert tham số `sortColumn` và `sortDirection` (`ASC`/`DESC`).
+  3. *Logic*: So sánh giá trị dòng 1 và dòng 2 sau khi sắp xếp để đảm bảo đúng thứ tự chữ cái hoặc ngày tháng.
+
+---
+
+### NHÓM 3: BẢNG DỮ LIỆU & HIỂN THỊ (DATA DISPLAY CONTROLS)
+
+#### 11. Bảng Dữ Liệu (DataGrid / Table)
+* **Thao tác chuẩn**:
+  - Kiểm tra trạng thái nạp ban đầu, chọn dòng (single row / checkbox multi-row), double-click xem chi tiết.
+* **Thẩm định 3 lớp**:
+  1. *Đối chiếu API vs UI*: Bóc tách JSON payload từ API nạp bảng (`rawRows = JSON.parse(json.result)`) $\rightarrow$ So khớp `expect(uiRowCount).toBe(rawRows.length)`.
+  2. *Empty State*: Khi backend trả mảng rỗng `[]` $\rightarrow$ Bảng phải hiện thông báo "Không có dữ liệu" rõ ràng, không bị crash vỡ bảng.
+  3. *Double-click chi tiết*: Double click 1 dòng $\rightarrow$ Bắt API nạp chi tiết $\rightarrow$ Assert form chi tiết mở ra nạp đúng thông tin dòng đó.
+
+#### 12. Thẻ Chỉ Số Tổng Hợp (Metric / KPI Counter Cards)
+* **Thao tác chuẩn**:
+  - Thao tác các bộ lọc bên dưới bảng và quan sát thẻ KPI ở trên.
+* **Thẩm định 3 lớp**:
+  1. *UI*: Các thẻ chỉ số (Tổng số, Đang xử lý, Hoàn tất) có số lượng rõ ràng, không hiển thị `NaN`, `null`, `undefined`.
+  2. *Toán học / Logic tổng hợp*: Tổng số trên thẻ KPI phải bằng tổng các thẻ trạng thái con cộng lại, hoặc khớp đúng `totalCount` trả về từ API backend.
+
+---
+
+### NHÓM 4: CÁC CONTROL HÀNH ĐỘNG (ACTION & BUTTON CONTROLS)
+
+#### 13. Nút Hành Động Chính (Primary CTA: Lưu, Gửi, Duyệt, Tạo Mới)
+* **Thao tác chuẩn**:
+  - Di chuyển chuột Neon tới đúng tọa độ nút $\rightarrow$ Dừng ngắm trực quan $\rightarrow$ Click.
+* **Thẩm định 3 lớp**:
+  1. *Chống click kép (Debounce / Double-click prevention)*: Click nút Lưu $\rightarrow$ Nút phải lập tức chuyển sang trạng thái disabled hoặc có icon spinner xoay xoay để chống người dùng bấm liên tiếp tạo bản ghi trùng lặp.
+  2. *Network*: Bắt API POST/PUT $\rightarrow$ Assert HTTP 200, payload JSON trả về mã thành công (`result: "success"`, `Success: 1`).
+  3. *Đọc lại (Read-back)*: Modal đóng $\rightarrow$ Toast thành công hiện lên $\rightarrow$ Bản ghi mới/vừa cập nhật phải lập tức xuất hiện trên DataGrid.
+
+#### 14. Nút Hủy / Đóng (Cancel / Close / Dismiss)
+* **Thao tác chuẩn**:
+  - Thử nghiệm 2 trường hợp: (1) Form chưa sửa gì và (2) Form đã sửa dữ liệu dở dang (Dirty Form).
+* **Thẩm định 3 lớp**:
+  1. *Form chưa sửa*: Bấm Hủy $\rightarrow$ Modal đóng ngay lập tức, không gây lỗi.
+  2. *Form đã sửa dở dang (Dirty check)*: Nhập vài chữ vào form rồi bấm Hủy $\rightarrow$ Kiểm tra xem hệ thống có bật popup cảnh báo *"Dữ liệu chưa được lưu, bạn có chắc chắn muốn thoát?"* hay không.
+  3. *Bảo toàn trạng thái*: Đóng modal xong $\rightarrow$ Danh sách DataGrid bên ngoài vẫn giữ nguyên vị trí phân trang và bộ lọc, không bị reset trắng.
+
+#### 15. Nút Hành Động Xóa / Hủy Bỏ (Delete / Inactivate Action)
+* **Thao tác chuẩn**:
+  - Chọn dòng cần xóa $\rightarrow$ Bấm nút Xóa $\rightarrow$ Thao tác trên Modal xác nhận.
+* **Thẩm định 3 lớp (BẢO VỆ DỮ LIỆU)**:
+  1. *Bắt buộc có xác nhận*: Tuyệt đối không được xóa ngay khi vừa click icon xóa $\rightarrow$ Bắt buộc assert xuất hiện Popup/Confirm Dialog ("Bạn có chắc chắn muốn xóa bản ghi này?").
+  2. *Hành động Hủy xóa*: Bấm "Hủy" trên popup $\rightarrow$ Bản ghi vẫn giữ nguyên trên bảng.
+  3. *Hành động Đồng ý xóa*: Bấm "Xóa" $\rightarrow$ Bắt API Delete (HTTP 200) $\rightarrow$ Assert số dòng trên DataGrid giảm đi 1 ($N - 1$) và mã bản ghi đó biến mất hoàn toàn.
+
+#### 16. Menu Thao Tác Từng Dòng (Context Menu / Row Kebab Menu 3 chấm)
+* **Thao tác chuẩn**:
+  - Di chuột tới nút 3 chấm trên dòng $\rightarrow$ Click mở menu ngữ cảnh.
+* **Thẩm định 3 lớp**:
+  1. *UI Position*: Menu ngữ cảnh bung ra đúng vị trí chuột, không bị tràn ra ngoài màn hình (overflow) hoặc che khuất nút khác.
+  2. *Phân quyền*: Các nút hành động (Sửa, Xóa, Phê duyệt) hiển thị đúng theo quyền hạn tài khoản đang đăng nhập.
+  3. *Click ngoài*: Click chuột ra ngoài khoảng trống $\rightarrow$ Menu ngữ cảnh phải tự động đóng lại.
+
+---
+
+### NHÓM 5: KHUNG CHỨA & PHẢN HỒI (CONTAINERS & FEEDBACK CONTROLS)
+
+#### 17. Cửa Sổ Bật Lên (Modal / Dialog / Drawer / Popup)
+* **Thao tác chuẩn**:
+  - Mở modal $\rightarrow$ Thao tác bên trong $\rightarrow$ Đóng bằng nút `x`, nút Đóng, phím `Escape`, hoặc click vùng mờ Backdrop.
+* **Thẩm định 3 lớp**:
+  1. *Backdrop & Focus Trap*: Khi modal mở, thanh cuộn của trang chính phía sau phải bị khóa (không cuộn được trang nền) và phím `Tab` chỉ di chuyển bên trong modal.
+  2. *Phím Escape*: Bấm phím `Escape` $\rightarrow$ Modal phải đóng lại an toàn.
+  3. *Dọn dẹp DOM (Cleanup)*: Khi đóng modal $\rightarrow$ Các phần tử overlay trong DOM phải bị gỡ bỏ hoặc chuyển sang `display: none`, không được để lại màn mờ vô hình chặn chuột người dùng.
+
+#### 18. Tab Chuyển Đổi & Khung Thu Gọn (Tabs / Accordion / Panels)
+* **Thao tác chuẩn**:
+  - Đang ở Tab 1 (nhập dở dữ liệu) $\rightarrow$ Click chuyển sang Tab 2 $\rightarrow$ Click quay lại Tab 1.
+* **Thẩm định 3 lớp**:
+  1. *UI*: Tab được chọn đổi màu active, nội dung panel tương ứng hiển thị, panel cũ bị ẩn.
+  2. *Bảo toàn dữ liệu dở dang (Tab State Persistence)*: Dữ liệu đã gõ ở Tab 1 **không được bị xóa mất** khi chuyển qua lại giữa các Tab.
+  3. *Network Lazy Load*: Nếu tab có nạp dữ liệu riêng $\rightarrow$ Bắt API khi click tab, đảm bảo API chỉ gọi 1 lần và cache dữ liệu, không spam request mỗi lần click.
+
+#### 19. Thông Báo Phản Hồi (Toast Message / Alert Banner)
+* **Thao tác chuẩn**:
+  - Kích hoạt sau mỗi thao tác Lưu, Sửa, Xóa hoặc khi văng lỗi.
+* **Thẩm định 3 lớp**:
+  1. *Đúng phân loại ngữ nghĩa (Semantic Type)*:
+     - Thao tác thành công $\rightarrow$ Toast màu xanh lá (`success`).
+     - Lỗi nghiệp vụ / Lỗi server $\rightarrow$ Toast màu đỏ (`error` / `danger`).
+     - Cảnh báo $\rightarrow$ Toast màu vàng (`warning`).
+  2. *Nội dung thông báo rõ ràng*: Toast phải chứa thông điệp tiếng Việt có nghĩa (vd: *"Cập nhật thông tin thành công"*), không được hiện mã code thô ráp như `null`, `[object Object]` hay `Error: 500`.
+  3. *Tự động biến mất (Auto-dismiss)*: Toast tự biến mất sau 3-5 giây mà không cần người dùng bấm tắt.
+
+---
 
 ### QUY TẮC BẤT KHẢ XÂM PHẠM: "DUAL-ASSERTION" (UI + NETWORK PAYLOAD)
 1. **Tuyệt đối cấm viết `expect(response.status()).toBe(200)` đơn lẻ:**
