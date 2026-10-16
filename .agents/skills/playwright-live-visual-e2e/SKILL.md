@@ -533,7 +533,160 @@ Khi Agent hoặc Tester gặp một lỗi mới trong thực tế, **hãy mở f
 
 ---
 
+## 2.3. BỘ NGUYÊN TẮC TEST LUỒNG NGHIỆP VỤ & ĐỒNG BỘ LIÊN MÀN HÌNH (END-TO-END BUSINESS FLOW & DOWNSTREAM VERIFICATION)
+
+> **QUY TẮC BẤT BIẾN VỀ LUỒNG NGHIỆP VỤ (THE RIPPLE EFFECT / CASCADE LAW):**
+> Một hành động Tạo mới, Cập nhật, Xóa hoặc Phê duyệt tại **Menu Nguồn (Source Menu)** KHÔNG BAO GIỜ kết thúc tại chính menu đó.
+> Nó luôn tạo ra một "làn sóng ảnh hưởng" tới các **Màn hình Đích (Downstream Menus)**, các **Thẻ Báo cáo Thống kê (Dashboard KPIs)**, và các **Tài khoản Vai trò khác (Cross-Role Accounts)**.
+> **Kịch bản test chỉ được coi là HOÀN TẤT khi đã điều hướng đến các màn hình liên quan để kiểm chứng dữ liệu đã thật sự có mặt, bị xóa, cập nhật hoặc được tính toán chính xác!**
+
+```
+┌────────────────────────────────────────────────────────────────────────────────────────┐
+│                   HIỆU ỨNG GỢN SÓNG TRONG TEST LUỒNG NGHIỆP VỤ (RIPPLE EFFECT)          │
+│                                                                                        │
+│   [MENU NGUỒN: THAO TÁC]                                                               │
+│   Tạo / Sửa / Xóa / Phê duyệt                                                          │
+│              │                                                                         │
+│              ├──► 1. Menu Danh mục liên quan: Thực thể mới có xuất hiện trong Dropdown?│
+│              ├──► 2. Dashboard & KPI Cards: Số lượng tổng hợp có nhảy đồng bộ không?   │
+│              ├──► 3. Đa vai trò (Cross-Role): Quản lý duyệt -> Hồ sơ nhân viên cập nhật?│
+│              ├──► 4. Xử lý hạ nguồn (Downstream): Chấm công / Bảng lương / Công nợ?    │
+│              └──► 5. Audit Log / Lịch sử: Hệ thống có ghi nhận Người sửa & Giá trị cũ? │
+└────────────────────────────────────────────────────────────────────────────────────────┘
+```
+
+---
+
+### 5 MÔ HÌNH LUỒNG NGHIỆP VỤ LIÊN MÀN HÌNH BẮT BUỘC PHẢI KIỂM CHỨNG
+
+#### 1. Mô hình 1: Khởi Tạo Thực Thể $\rightarrow$ Lan Tỏa Danh Mục Liên Quan (Entity Ingestion Flow)
+* **Ý nghĩa nghiệp vụ**: Khi tạo mới một thực thể ở Menu A, thực thể đó phải lập tức khả dụng để chọn lựa ở các Menu nghiệp vụ tiếp theo (B, C, D).
+* **Quy trình kiểm thử chuẩn**:
+  1. *Tại Menu Nguồn (vd: Hồ sơ nhân viên / Danh mục khách hàng)*: Tạo mới 1 bản ghi với mã duy nhất `TEST_CODE_${Date.now()}`. Bấm Lưu và xác nhận thành công.
+  2. *Điều hướng sang Menu Đích 1 (vd: Hợp đồng lao động / Báo giá)*: Mở form tạo hợp đồng $\rightarrow$ Mở dropdown "Chọn nhân viên/khách hàng" $\rightarrow$ **Assert mã `TEST_CODE` vừa tạo phải xuất hiện trong danh sách dropdown**.
+  3. *Điều hướng sang Menu Đích 2 (vd: Bảng chấm công / Công nợ)*: Mở danh sách bảng chấm công tháng hiện tại $\rightarrow$ **Assert đã tự động sinh dòng chấm công cho nhân viên mới**.
+* **Đoạn mã Playwright mẫu**:
+  ```javascript
+  // BƯỚC 1: Tạo nhân viên tại Menu Nguồn
+  const newEmpCode = `NV_TEST_${Date.now()}`;
+  await createEmployee(page, { code: newEmpCode, name: 'Nguyễn Văn Test' });
+
+  // BƯỚC 2: Điều hướng sang Menu Đích kiểm tra Dropdown
+  await navigateToMenu(page, 'Hợp đồng lao động');
+  await page.locator('#btnCreateContract').click();
+  const empDropdown = page.locator('#selectEmployee');
+  await empDropdown.click();
+  // BẮT BUỘC: Nhân viên mới tạo phải có mặt trong danh sách chọn hợp đồng!
+  const option = page.locator(`.dx-item:has-text("${newEmpCode}")`);
+  await expect(option).toBeVisible();
+  ```
+
+#### 2. Mô hình 2: Quy Trình Phê Duyệt Đa Vai Trò & Bàn Giao Trạng Thái (Multi-Role Approval Flow)
+* **Ý nghĩa nghiệp vụ**: Đơn từ / Yêu cầu gửi đi bởi Vai trò 1 (Nhân viên) phải được chuyển giao đến Vai trò 2 (Quản lý) để duyệt; sau khi duyệt thì kết quả phải phản ánh ngược lại vào hồ sơ chính thức của Vai trò 1.
+* **Quy trình kiểm thử chuẩn (4 Chặng)**:
+  1. *Chặng 1 (Nhân viên nộp đơn)*: Đăng nhập tài khoản Nhân viên (`Tai.Dang`) $\rightarrow$ Gửi yêu cầu đổi thông tin (vd: đổi số tài khoản ngân hàng sang `999999999`) $\rightarrow$ Assert đơn có trạng thái "Chờ duyệt".
+  2. *Chặng 2 (Quản lý phê duyệt)*: Đăng xuất $\rightarrow$ Đăng nhập tài khoản Quản lý (`Cuong.Vu`) $\rightarrow$ Mở menu "Phê duyệt thay đổi" $\rightarrow$ Assert đơn của `Tai.Dang` xuất hiện trong danh sách chờ $\rightarrow$ Bấm nút "Phê duyệt" $\rightarrow$ Bắt API duyệt thành công.
+  3. *Chặng 3 (Kiểm tra phản hồi hồ sơ gốc)*: Đăng xuất $\rightarrow$ Đăng nhập lại Nhân viên (`Tai.Dang`) $\rightarrow$ Mở menu "Hồ sơ cá nhân / Thông tin ngân hàng" $\rightarrow$ **Assert số tài khoản đã cập nhật thành `999999999` (chặn đứng bug duyệt thành công nhưng hồ sơ vẫn rỗng)**.
+  4. *Chặng 4 (Hạ nguồn)*: Kiểm tra danh sách đơn chờ của Quản lý $\rightarrow$ Đơn đã biến mất khỏi tab "Chờ duyệt" và chuyển sang tab "Đã duyệt".
+
+#### 3. Mô hình 3: Chuyển Dịch Vòng Đời & Đồng Bộ Báo Cáo / KPI Dashboard (Lifecycle & Metric Sync)
+* **Ý nghĩa nghiệp vụ**: Khi trạng thái của một thực thể thay đổi, các số liệu thống kê tổng quan (Dashboard, Báo cáo KPI, Doanh số) phải được cập nhật tương ứng tức thì.
+* **Quy trình kiểm thử chuẩn**:
+  1. *Ghi nhận số liệu ban đầu trên Dashboard*:
+     - Mở Dashboard tổng quan: Ghi nhận Thẻ KPI `Số lượng Lead = L0`, `Số lượng Khách hàng chính thức = C0`.
+  2. *Thao tác chuyển trạng thái tại Menu Nghiệp Vụ*:
+     - Mở menu "Dữ liệu khách hàng" $\rightarrow$ Chọn 1 khách hàng đang ở trạng thái `Lead`.
+     - Chuyển trạng thái sang `Khách hàng chính thức` $\rightarrow$ Bấm Lưu.
+  3. *Kiểm chứng đối chiếu lại Dashboard*:
+     - Quay lại màn hình Dashboard (hoặc reload trang chủ).
+     - **Assert Thẻ KPI đã nhảy số chính xác**:
+       $$\text{Lead mới} == L_0 - 1 \quad \text{và} \quad \text{Khách hàng chính thức mới} == C_0 + 1$$
+     - Bắt API thống kê của Dashboard, đảm bảo số liệu trả về khớp 100% với giao diện.
+
+#### 4. Mô hình 4: Ràng Buộc Khóa Ngoại & Chống Xóa Dây Chuyền (Integrity Guard & Cascade Block)
+* **Ý nghĩa nghiệp vụ**: Dữ liệu trong hệ thống doanh nghiệp có tính liên kết chặt chẽ. Hệ thống phải bảo vệ tính toàn vẹn dữ liệu: không cho phép xóa thực thể mẹ khi đã có dữ liệu con phát sinh.
+* **Quy trình kiểm thử chuẩn (2 Chiều)**:
+  1. *Chiều Chặn Tiêu Cực (Negative Block)*:
+     - Chọn 1 Nhân viên hoặc Khách hàng **ĐÃ CÓ dữ liệu phát sinh** (đã có hợp đồng, đơn hàng, hóa đơn).
+     - Bấm nút "Xóa" $\rightarrow$ Xác nhận xóa trên Modal.
+     - **BẮT BUỘC**: Hệ thống phải CHẶN LẠI và hiển thị thông báo lỗi nghiệp vụ rõ ràng: *"Không thể xóa vì bản ghi này đã có phát sinh hợp đồng/giao dịch liên quan"*. Bản ghi không được phép bị mất khỏi DB!
+  2. *Chiều Xóa An Toàn (Positive Cascade)*:
+     - Chọn 1 bản ghi mới tạo thử nghiệm (chưa có liên kết).
+     - Bấm Xóa $\rightarrow$ Xác nhận $\rightarrow$ Bản ghi bị xóa thành công.
+     - Điều hướng sang các menu liên quan $\rightarrow$ Kiểm tra bản ghi đó **đã biến mất hoàn toàn khỏi các dropdown chọn lựa**.
+
+#### 5. Mô hình 5: Vết Lịch Sử Thao Tác & Kiểm Toán Nghiệp Vụ (Audit Trail & Activity Log)
+* **Ý nghĩa nghiệp vụ**: Trong các phần mềm quản trị (HRM/ERP/CRM), mọi hành động Sửa, Đổi trạng thái, Xóa đều phải lưu lại "dấu chân" để phục vụ kiểm toán nội bộ.
+* **Quy trình kiểm thử chuẩn**:
+  1. Mở 1 bản ghi (vd: Hợp đồng hoặc Khách hàng) $\rightarrow$ Đổi thông tin trường `Người phụ trách` từ *Nguyễn Văn A* sang *Trần Thị B*.
+  2. Bấm Lưu $\rightarrow$ Bắt API cập nhật thành công.
+  3. Mở tab hoặc modal **"Lịch sử thay đổi / Nhật ký hoạt động (Audit Trail)"** của bản ghi đó.
+  4. **Thẩm định các trường bắt buộc trong Log**:
+     - Cột `Trường thay đổi`: Đúng tên trường vừa sửa (`Người phụ trách`).
+     - Cột `Giá trị cũ (Old Value)`: Đúng giá trị trước khi sửa (`Nguyễn Văn A`).
+     - Cột `Giá trị mới (New Value)`: Đúng giá trị sau khi sửa (`Trần Thị B`).
+     - Cột `Người thực hiện`: Đúng tài khoản đang đăng nhập.
+     - Cột `Thời gian`: Khớp ngày giờ hiện tại (không bị lệch múi giờ).
+
+---
+
+### KỸ THUẬT LẬP TRÌNH PLAYWRIGHT `.spec.js` CHO TEST LUỒNG LIÊN MÀN HÌNH
+
+Để viết kịch bản test liên màn hình mượt mà, người viết test phải tuân thủ 3 kỹ thuật lập trình sau:
+
+1. **Kỹ thuật chia sẻ định danh dùng chung (Shared Identity State)**:
+   ```javascript
+   // Khai báo biến phạm vi toàn suite để dùng xuyên suốt các bước
+   const RUN_ID = Date.now();
+   const SHARED_DATA = {
+     empCode: `NV_${RUN_ID}`,
+     empName: `Nhân Viên Test ${RUN_ID}`,
+     bankAccount: `999${RUN_ID.toString().slice(-6)}`
+   };
+   ```
+
+2. **Kỹ thuật phân chia bước rõ ràng bằng `test.step`**:
+   ```javascript
+   test('FLOW-01: Luồng Nghiệp Vụ Khép Kín: Tạo Nhân Viên -> Duyệt Ngân Hàng -> Lên Bảng Chấm Công', async ({ page }) => {
+     await test.step('Bước 1: Tạo nhân viên mới tại Hồ sơ nhân sự', async () => {
+       // Thao tác tại Menu Hồ sơ nhân viên
+     });
+
+     await test.step('Bước 2: Gửi yêu cầu cập nhật thông tin ngân hàng', async () => {
+       // Thao tác gửi đơn
+     });
+
+     await test.step('Bước 3: Quản lý đăng nhập và phê duyệt', async () => {
+       // Đổi tài khoản duyệt
+     });
+
+     await test.step('Bước 4: Đối chiếu hồ sơ nhân sự đã cập nhật tài khoản', async () => {
+       // Kiểm chứng downstream 1
+     });
+
+     await test.step('Bước 5: Kiểm chứng nhân viên mới đã có mặt trên Bảng chấm công', async () => {
+       // Kiểm chứng downstream 2
+     });
+   });
+   ```
+
+3. **Kỹ thuật chuyển đổi tài khoản an toàn trong cùng 1 test case**:
+   ```javascript
+   // Hàm chuyển đổi tài khoản giữa các vai trò mà không cần mở trình duyệt mới
+   async function switchUser(page, username, password) {
+     await page.context().clearCookies();
+     await page.goto('/#login');
+     await page.locator('#username').fill(username);
+     await page.locator('input[type="password"]').fill(password);
+     await page.locator('#submitLogin').click();
+     await page.locator('.navbar, .dock').first().waitFor({ state: 'visible', timeout: 25000 });
+   }
+   ```
+
+---
+
 ## 3. Quy Trình Xử Lý Khi Người Dùng Yêu Cầu Viết Test Cho Một Trang/Menu
+
 
 
 ### Bước 1: Kiểm tra Trang đó ĐÃ TỪNG ĐƯỢC TEST CHƯA?
