@@ -20,8 +20,17 @@ async function runCrawler(options = {}) {
   const outputDir = path.resolve(__dirname, `../docs/raw_crawled`);
   fs.mkdirSync(outputDir, { recursive: true });
 
+  // Xác định tài khoản đăng nhập (Hỗ trợ đa vai trò: role hoặc username/password tùy biến)
+  let activeAuth = env.auth;
+  if (options.role && env.roles && env.roles[options.role]) {
+    activeAuth = { ...env.auth, ...env.roles[options.role] };
+  } else if (options.username && options.password) {
+    activeAuth = { ...env.auth, username: options.username, password: options.password };
+  }
+
   console.log(`🌐 [CRAWLER] Khởi chạy Chrome để cào nghiệp vụ: ${targetUrl}`);
   if (menuTarget) console.log(`🎯 [CRAWLER] Mục tiêu phân hệ: "${menuTarget}"`);
+  if (activeAuth && activeAuth.username) console.log(`👤 [CRAWLER] Tài khoản vai trò sử dụng: "${activeAuth.username}"`);
 
   const browser = await chromium.launch({
     headless: false,
@@ -76,11 +85,11 @@ async function runCrawler(options = {}) {
     await page.waitForTimeout(2000);
 
     // 2. Tự động đăng nhập nếu có form login
-    if (env.auth && (await page.locator(env.auth.usernameSelector || '#username').isVisible().catch(() => false))) {
-      console.log('🔑 [CRAWLER] Tự động đăng nhập với tài khoản:', env.auth.username);
-      await page.fill(env.auth.usernameSelector || '#username', env.auth.username);
-      await page.fill(env.auth.passwordSelector || 'input[type="password"]', env.auth.password);
-      await page.click(env.auth.submitSelector || '#submitLogin');
+    if (activeAuth && (await page.locator(activeAuth.usernameSelector || '#username').isVisible().catch(() => false))) {
+      console.log('🔑 [CRAWLER] Tự động đăng nhập với tài khoản:', activeAuth.username);
+      await page.fill(activeAuth.usernameSelector || '#username', activeAuth.username);
+      await page.fill(activeAuth.passwordSelector || 'input[type="password"]', activeAuth.password);
+      await page.click(activeAuth.submitSelector || '#submitLogin');
       await page.locator('.dock, .navbar, body').first().waitFor({ state: 'visible', timeout: 30000 });
       await page.waitForTimeout(2500);
       console.log('✅ [CRAWLER] Đăng nhập thành công!');
@@ -293,11 +302,17 @@ if (require.main === module) {
   const args = process.argv.slice(2);
   let menu = '';
   let url = '';
+  let role = '';
+  let username = '';
+  let password = '';
   for (let i = 0; i < args.length; i++) {
     if (args[i] === '--menu' && args[i + 1]) menu = args[i + 1];
     if (args[i] === '--url' && args[i + 1]) url = args[i + 1];
+    if (args[i] === '--role' && args[i + 1]) role = args[i + 1];
+    if (args[i] === '--username' && args[i + 1]) username = args[i + 1];
+    if (args[i] === '--password' && args[i + 1]) password = args[i + 1];
   }
-  runCrawler({ menu, url }).catch(err => {
+  runCrawler({ menu, url, role, username, password }).catch(err => {
     console.error('❌ [CRAWLER ERROR]:', err);
     process.exit(1);
   });

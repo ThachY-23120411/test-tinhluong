@@ -84,6 +84,26 @@ Script này tự động:
 
 ---
 
+### Kỹ Thuật Truy Vết Nguồn Gốc Dữ Liệu & Quy Tắc Đổi Role (Data Lineage & Cross-Role Protocol)
+
+Khi cào một Menu hiển thị danh sách (DataGrid / Table) mà **KHÔNG CÓ nút Tạo mới / Thêm mới** (Màn hình Hạ nguồn / Consumer / Phê duyệt):
+1. **Phân tích dấu vết API & Metadata**:
+   - Kiểm tra Response JSON hoặc Stored Procedure (`sp_*`) để tìm các trường: `CreatedBy`, `CreatedByRole`, `SourceType`, `Status` (ví dụ `PENDING`, `WAITING_APPROVAL`).
+   - Xác định dữ liệu này do vai trò (Role) nào tạo ra hoặc gửi lên từ chức năng thượng nguồn nào.
+2. **QUY TẮC BẮT BUỘC TƯƠNG TÁC VỚI NGƯỜI DÙNG**:
+   - Nếu phát hiện dữ liệu bắt nguồn từ một vai trò/tài khoản khác (ví dụ: Nhân viên nộp đơn, Khách hàng đăng ký, Quản lý đề xuất), Agent **BẮT BUỘC DỪNG LẠI VÀ HỎI NGƯỜI DÙNG**:
+     > *"Tôi phát hiện màn hình [Tên Menu hiện tại] hiển thị danh sách [Thực thể] nhưng không có nút tạo mới. Dữ liệu này được tạo từ vai trò [Tên Role] (tại chức năng [Tên chức năng]). Bạn vui lòng cung cấp tài khoản & mật khẩu của vai trò [Tên Role] để tôi đăng nhập cào tiếp màn hình tạo dữ liệu nhé!"*
+   - Tuyệt đối không tự đoán mò tài khoản. Đợi người dùng cung cấp tài khoản rồi mới tiếp tục.
+3. **Thực thi sau khi người dùng cung cấp tài khoản**:
+   - Lưu thông tin vào `test.env.json` dưới mục `roles.<ten_role>`.
+   - Chạy cào màn hình của vai trò mới:
+     ```powershell
+     node helpers/crawler_engine.cjs --menu "<Menu_Tao_Moi>" --username "<user>" --password "<pass>"
+     ```
+   - Kết nối 2 màn hình vào chung một chuỗi hồ sơ User Story liên hoàn và vẽ sơ đồ Mermaid Swimlane thể hiện sự luân chuyển giữa các vai trò!
+
+---
+
 ### Bước 3: Phân Tích & Phân Rã Thành Các User Stories
 Dựa trên file JSON thu thập được, Agent phân tách nghiệp vụ thành:
 1. **Epic Tổng Quan**: Bao quát toàn bộ giao diện và các luồng chức năng của phân hệ.
