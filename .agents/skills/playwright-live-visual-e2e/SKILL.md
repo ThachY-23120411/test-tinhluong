@@ -115,6 +115,40 @@ tests/ (Mã nguồn kịch bản)                test-evidence/ (Bằng chứng 
 
 ---
 
+## 2.1. MA TRẬN NGUYÊN TẮC VIẾT KỊCH BẢN TEST THEO TỪNG THÀNH PHẦN & TÌNH HUỐNG
+
+*(Mọi file kịch bản `.spec.js` khi sinh ra hoặc bổ sung BẮT BUỘC phải tra cứu ma trận này để lập trình các điểm Assertion sâu, triệt tiêu hoàn toàn lối kiểm thử bề nổi hời hợt)*
+
+| Thành phần / Control | Bẫy thường gặp (Test sai/nông) | Nguyên tắc lập trình trong file `.js` (Test chuẩn nghiệp vụ) |
+| :--- | :--- | :--- |
+| **1. Chip Lọc / Dropdown Trạng Thái (Filters)** | Chỉ click và assert chip có class `.active` | **1. Thẩm định chu kỳ khôi phục (Round-trip):** Đếm số dòng ban đầu $N_0$ ở "Tất cả" $\rightarrow$ Click chip lọc $A$ $\rightarrow$ Bắt API $\rightarrow$ Assert số dòng $N_A \le N_0$ $\rightarrow$ Duyệt text từng dòng trên bảng xem đúng trạng thái $A$ không $\rightarrow$ **Click lại "Tất cả" lần 2** $\rightarrow$ Assert số dòng khôi phục $N_{restore} == N_0$ (bắt ngay lỗi mất dữ liệu do kẹt bộ lọc ngày). |
+| **2. Ô Tìm Kiếm Nhanh (Search Box)** | Nhập chuỗi cứng (ví dụ "abc") rồi không kiểm tra | **1. Động hóa từ khóa:** Trích xuất tên/mã của 1 dòng có thật trên DataGrid $\rightarrow$ Gõ từ khóa bằng `pressSequentially`.<br>**2. Assert kết quả:** Bắt API / lọc client $\rightarrow$ Mọi dòng hiển thị phải chứa từ khóa.<br>**3. Assert xóa tìm kiếm:** Xóa sạch ô tìm kiếm (`Ctrl+A` $\rightarrow$ `Backspace`) $\rightarrow$ Bảng phải khôi phục lại đủ danh sách ban đầu. |
+| **3. Form Thêm Mới Dữ Liệu (Create CRUD)** | Chỉ mở modal lên rồi bấm nút Hủy / Đóng | **1. Kiểm thử Validate (Negative):** Bấm Lưu khi form trống $\rightarrow$ Bắt buộc assert viền đỏ / thông báo lỗi các trường required.<br>**2. Nhập dữ liệu duy nhất (Positive):** Tạo mã/tên có tiền tố duy nhất (ví dụ `TEST_${Date.now()}`).<br>**3. Bắt API Lưu:** Bắt gói tin POST/PUT $\rightarrow$ Parse JSON assert `result.success === true`.<br>**4. Đọc lại (Read-back):** Assert DataGrid bên ngoài tự động reload và dòng mới vừa tạo xuất hiện trên bảng. |
+| **4. Xem Chi Tiết & Chỉnh Sửa (View/Edit)** | Nhấp đúp vào dòng, popup hiện lên là cho PASS | **1. Bắt API nạp chi tiết:** Chặn API (ví dụ `sp_..._Detail`) và đợi nạp form.<br>**2. Assert toàn vẹn dữ liệu:** Dữ liệu trong ô input/tab chi tiết phải khớp 100% với dòng vừa click (không được để trống `""`).<br>**3. Sửa & Lưu:** Đổi giá trị 1 trường $\rightarrow$ Bấm Lưu $\rightarrow$ Bắt API cập nhật $\rightarrow$ Đóng modal an toàn mà không làm crash DataGrid cha. |
+| **5. Chức Năng Xóa (Delete CRUD)** | Bấm nút Xóa rồi kết luận đã xóa | **1. Modal xác nhận:** Phải kiểm tra popup xác nhận ("Bạn có chắc muốn xóa?") xuất hiện.<br>**2. Bắt API Xóa:** Bắt API DELETE/POST và kiểm tra response thành công.<br>**3. Kiểm chứng biến mất:** DataGrid tự reload, số dòng giảm đi 1 ($N - 1$) và mã bản ghi đã xóa không còn tồn tại trên bất kỳ trang nào. |
+| **6. Phân Trang & Sắp Xếp (Pagination / Sort)** | Bấm nút "Trang 2" hoặc click cột mà không so sánh dữ liệu | **1. Phân trang:** Lưu text dòng 1 của Trang 1 $\rightarrow$ Bấm Trang 2 $\rightarrow$ Bắt API $\rightarrow$ Assert dòng 1 của Trang 2 PHẢI KHÁC dòng 1 của Trang 1.<br>**2. Sắp xếp:** Lưu danh sách trước khi sort $\rightarrow$ Click tiêu đề cột $\rightarrow$ Bắt API $\rightarrow$ Assert thứ tự các phần tử đã đảo chiều tăng/giảm theo đúng tiêu chí. |
+
+### QUY TẮC BẤT KHẢ XÂM PHẠM: "DUAL-ASSERTION" (UI + NETWORK PAYLOAD)
+1. **Tuyệt đối cấm viết `expect(response.status()).toBe(200)` đơn lẻ:**
+   Luôn luôn phải bóc tách sâu vào JSON Body:
+   ```javascript
+   const json = await response.json();
+   // Không chỉ kiểm tra mã 200, mà phải kiểm tra dữ liệu nghiệp vụ bên trong
+   expect(json.status || json.result).toBeDefined();
+   ```
+2. **Đối chiếu chéo (Cross-check) giữa API và UI:**
+   ```javascript
+   // Dữ liệu từ API nạp về bao nhiêu bản ghi thì DataGrid phải render bấy nhiêu dòng
+   const apiRows = JSON.parse(json.result);
+   const uiRows = await page.locator('#grid tbody tr.dx-data-row').count();
+   expect(uiRows).toBe(apiRows.length);
+   ```
+3. **Phân biệt rạch ròi Test Runner vs Logic Nghiệp Vụ:**
+   - Kịch bản test bắt được Bug của hệ thống thì **Test Runner (Playwright) vẫn là PASS** (vì script chạy thông suốt, bắt được chính xác lỗi).
+   - Nhưng **Trạng thái Logic (Business Status) trong Báo cáo phải đánh dấu ❌ FAIL**, kèm khối `> [!CAUTION] 🚨 PHÂN TÍCH NGUYÊN NHÂN THẤT BẠI (FAILURE ANALYSIS)`.
+
+---
+
 ## 3. Quy Trình Xử Lý Khi Người Dùng Yêu Cầu Viết Test Cho Một Trang/Menu
 
 ### Bước 1: Kiểm tra Trang đó ĐÃ TỪNG ĐƯỢC TEST CHƯA?
