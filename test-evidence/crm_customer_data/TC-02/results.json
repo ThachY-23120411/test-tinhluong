@@ -1,0 +1,66 @@
+{
+  "tcId": "TC-02",
+  "pageName": "crm_customer_data",
+  "title": "Kiểm tra Bộ lọc Trạng thái (Status Pills) & Tùy chọn \"Xem của tôi\"",
+  "testStatus": "PASSED",
+  "businessStatus": "PASSED",
+  "businessNotes": "PASS - Các nút bộ lọc trạng thái và tùy chọn Xem của tôi phản hồi tức thì, chuyển đổi mượt mà",
+  "failureAnalysis": {
+    "issue": "",
+    "expected": "",
+    "actual": "",
+    "rootCause": "",
+    "recommendation": ""
+  },
+  "status": "PASSED",
+  "duration": "33.42s",
+  "errors": "",
+  "stepScreenshots": [
+    {
+      "step": 1,
+      "title": "Kiểm tra thanh bộ lọc trạng thái mặc định (Tất cả đang kích hoạt)",
+      "fileName": "TC-02-step01-kiem-tra-thanh-bo-loc-trang-thai-mac-dinh-tat-ca-dang-kich-hoat.png",
+      "relPath": "crm_customer_data/TC-02/screenshots/TC-02-step01-kiem-tra-thanh-bo-loc-trang-thai-mac-dinh-tat-ca-dang-kich-hoat.png"
+    },
+    {
+      "step": 2,
+      "title": "Chọn bộ lọc trạng thái Lead và kiểm tra phản hồi của DataGrid",
+      "fileName": "TC-02-step02-chon-bo-loc-trang-thai-lead-va-kiem-tra-phan-hoi-cua-datagrid.png",
+      "relPath": "crm_customer_data/TC-02/screenshots/TC-02-step02-chon-bo-loc-trang-thai-lead-va-kiem-tra-phan-hoi-cua-datagrid.png"
+    },
+    {
+      "step": 3,
+      "title": "Chuyển đổi sang bộ lọc Đã liên hệ và kiểm tra danh sách lọc",
+      "fileName": "TC-02-step03-chuyen-doi-sang-bo-loc-da-lien-he-va-kiem-tra-danh-sach-loc.png",
+      "relPath": "crm_customer_data/TC-02/screenshots/TC-02-step03-chuyen-doi-sang-bo-loc-da-lien-he-va-kiem-tra-danh-sach-loc.png"
+    },
+    {
+      "step": 4,
+      "title": "Kích hoạt tùy chọn lọc Xem của tôi để lọc dữ liệu phụ trách",
+      "fileName": "TC-02-step04-kich-hoat-tuy-chon-loc-xem-cua-toi-de-loc-du-lieu-phu-trach.png",
+      "relPath": "crm_customer_data/TC-02/screenshots/TC-02-step04-kich-hoat-tuy-chon-loc-xem-cua-toi-de-loc-du-lieu-phu-trach.png"
+    },
+    {
+      "step": 5,
+      "title": "Khôi phục bộ lọc Tất cả và hoàn tất kiểm tra chuyển đổi trạng thái",
+      "fileName": "TC-02-step05-khoi-phuc-bo-loc-tat-ca-va-hoan-tat-kiem-tra-chuyen-doi-trang-thai.png",
+      "relPath": "crm_customer_data/TC-02/screenshots/TC-02-step05-khoi-phuc-bo-loc-tat-ca-va-hoan-tat-kiem-tra-chuyen-doi-trang-thai.png"
+    }
+  ],
+  "attachments": {
+    "screenshots": [
+      "crm_customer_data/TC-02/screenshots/TC-02-step01-kiem-tra-thanh-bo-loc-trang-thai-mac-dinh-tat-ca-dang-kich-hoat.png",
+      "crm_customer_data/TC-02/screenshots/TC-02-step02-chon-bo-loc-trang-thai-lead-va-kiem-tra-phan-hoi-cua-datagrid.png",
+      "crm_customer_data/TC-02/screenshots/TC-02-step03-chuyen-doi-sang-bo-loc-da-lien-he-va-kiem-tra-danh-sach-loc.png",
+      "crm_customer_data/TC-02/screenshots/TC-02-step04-kich-hoat-tuy-chon-loc-xem-cua-toi-de-loc-du-lieu-phu-trach.png",
+      "crm_customer_data/TC-02/screenshots/TC-02-step05-khoi-phuc-bo-loc-tat-ca-va-hoan-tat-kiem-tra-chuyen-doi-trang-thai.png"
+    ],
+    "videos": [
+      "crm_customer_data/TC-02/videos/video.webm"
+    ],
+    "traces": [
+      "crm_customer_data/TC-02/traces/trace.zip"
+    ]
+  },
+  "timestamp": "2026-10-16T04:05:59.139Z"
+}

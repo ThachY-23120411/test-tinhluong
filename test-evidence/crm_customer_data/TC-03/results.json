@@ -1,0 +1,66 @@
+{
+  "tcId": "TC-03",
+  "pageName": "crm_customer_data",
+  "title": "Kiểm tra Modal \"Thêm dữ liệu mới\" (+) - Ràng buộc (*) & Nhập liệu an toàn",
+  "testStatus": "PASSED",
+  "businessStatus": "PASSED",
+  "businessNotes": "PASS - Modal Thêm dữ liệu mới hiển thị đầy đủ trường thông tin, kiểm soát ràng buộc chặt chẽ và đóng an toàn",
+  "failureAnalysis": {
+    "issue": "",
+    "expected": "",
+    "actual": "",
+    "rootCause": "",
+    "recommendation": ""
+  },
+  "status": "PASSED",
+  "duration": "37.27s",
+  "errors": "",
+  "stepScreenshots": [
+    {
+      "step": 1,
+      "title": "Con trỏ chuột Neon di chuyển và bấm nút Thêm dữ liệu mới (+)",
+      "fileName": "TC-03-step01-con-tro-chuot-neon-di-chuyen-va-bam-nut-them-du-lieu-moi.png",
+      "relPath": "crm_customer_data/TC-03/screenshots/TC-03-step01-con-tro-chuot-neon-di-chuyen-va-bam-nut-them-du-lieu-moi.png"
+    },
+    {
+      "step": 2,
+      "title": "Modal Thêm dữ liệu mới hiển thị chi tiết 2 phân vùng thông tin",
+      "fileName": "TC-03-step02-modal-them-du-lieu-moi-hien-thi-chi-tiet-2-phan-vung-thong-tin.png",
+      "relPath": "crm_customer_data/TC-03/screenshots/TC-03-step02-modal-them-du-lieu-moi-hien-thi-chi-tiet-2-phan-vung-thong-tin.png"
+    },
+    {
+      "step": 3,
+      "title": "Kiểm tra các trường ràng buộc bắt buộc có dấu sao đỏ trên form",
+      "fileName": "TC-03-step03-kiem-tra-cac-truong-rang-buoc-bat-buoc-co-dau-sao-do-tren-form.png",
+      "relPath": "crm_customer_data/TC-03/screenshots/TC-03-step03-kiem-tra-cac-truong-rang-buoc-bat-buoc-co-dau-sao-do-tren-form.png"
+    },
+    {
+      "step": 4,
+      "title": "Nhập thông tin thử nghiệm trực quan vào các trường trên form",
+      "fileName": "TC-03-step04-nhap-thong-tin-thu-nghiem-truc-quan-vao-cac-truong-tren-form.png",
+      "relPath": "crm_customer_data/TC-03/screenshots/TC-03-step04-nhap-thong-tin-thu-nghiem-truc-quan-vao-cac-truong-tren-form.png"
+    },
+    {
+      "step": 5,
+      "title": "Đóng Modal an toàn và quay trở về giao diện danh sách khách hàng",
+      "fileName": "TC-03-step05-dong-modal-an-toan-va-quay-tro-ve-giao-dien-danh-sach-khach-hang.png",
+      "relPath": "crm_customer_data/TC-03/screenshots/TC-03-step05-dong-modal-an-toan-va-quay-tro-ve-giao-dien-danh-sach-khach-hang.png"
+    }
+  ],
+  "attachments": {
+    "screenshots": [
+      "crm_customer_data/TC-03/screenshots/TC-03-step01-con-tro-chuot-neon-di-chuyen-va-bam-nut-them-du-lieu-moi.png",
+      "crm_customer_data/TC-03/screenshots/TC-03-step02-modal-them-du-lieu-moi-hien-thi-chi-tiet-2-phan-vung-thong-tin.png",
+      "crm_customer_data/TC-03/screenshots/TC-03-step03-kiem-tra-cac-truong-rang-buoc-bat-buoc-co-dau-sao-do-tren-form.png",
+      "crm_customer_data/TC-03/screenshots/TC-03-step04-nhap-thong-tin-thu-nghiem-truc-quan-vao-cac-truong-tren-form.png",
+      "crm_customer_data/TC-03/screenshots/TC-03-step05-dong-modal-an-toan-va-quay-tro-ve-giao-dien-danh-sach-khach-hang.png"
+    ],
+    "videos": [
+      "crm_customer_data/TC-03/videos/video.webm"
+    ],
+    "traces": [
+      "crm_customer_data/TC-03/traces/trace.zip"
+    ]
+  },
+  "timestamp": "2026-10-16T04:06:38.979Z"
+}

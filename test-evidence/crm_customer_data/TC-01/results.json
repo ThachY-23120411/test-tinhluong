@@ -1,0 +1,66 @@
+{
+  "tcId": "TC-01",
+  "pageName": "crm_customer_data",
+  "title": "Kiểm tra Khởi động, Điều hướng và Hiển thị Giao diện Dữ liệu khách hàng (Header, DataGrid, Toolbar)",
+  "testStatus": "PASSED",
+  "businessStatus": "PASSED",
+  "businessNotes": "PASS - Giao diện Dữ liệu khách hàng hiển thị hoàn chỉnh, thanh công cụ sẵn sàng và DataGrid nạp thành công 20 dòng dữ liệu",
+  "failureAnalysis": {
+    "issue": "",
+    "expected": "",
+    "actual": "",
+    "rootCause": "",
+    "recommendation": ""
+  },
+  "status": "PASSED",
+  "duration": "24.38s",
+  "errors": "",
+  "stepScreenshots": [
+    {
+      "step": 1,
+      "title": "Đăng nhập thành công và mở trang chủ hệ thống Paradise HRM",
+      "fileName": "TC-01-step01-dang-nhap-thanh-cong-va-mo-trang-chu-he-thong-paradise-hrm.png",
+      "relPath": "crm_customer_data/TC-01/screenshots/TC-01-step01-dang-nhap-thanh-cong-va-mo-trang-chu-he-thong-paradise-hrm.png"
+    },
+    {
+      "step": 2,
+      "title": "Mở màn hình Dữ liệu khách hàng từ menu phân hệ CRM",
+      "fileName": "TC-01-step02-mo-man-hinh-du-lieu-khach-hang-tu-menu-phan-he-crm.png",
+      "relPath": "crm_customer_data/TC-01/screenshots/TC-01-step02-mo-man-hinh-du-lieu-khach-hang-tu-menu-phan-he-crm.png"
+    },
+    {
+      "step": 3,
+      "title": "Kiểm tra thanh công cụ Toolbar và các nút chức năng thao tác",
+      "fileName": "TC-01-step03-kiem-tra-thanh-cong-cu-toolbar-va-cac-nut-chuc-nang-thao-tac.png",
+      "relPath": "crm_customer_data/TC-01/screenshots/TC-01-step03-kiem-tra-thanh-cong-cu-toolbar-va-cac-nut-chuc-nang-thao-tac.png"
+    },
+    {
+      "step": 4,
+      "title": "Kiểm tra bảng DataGrid danh sách khách hàng và các cột dữ liệu chính",
+      "fileName": "TC-01-step04-kiem-tra-bang-datagrid-danh-sach-khach-hang-va-cac-cot-du-lieu-chinh.png",
+      "relPath": "crm_customer_data/TC-01/screenshots/TC-01-step04-kiem-tra-bang-datagrid-danh-sach-khach-hang-va-cac-cot-du-lieu-chinh.png"
+    },
+    {
+      "step": 5,
+      "title": "Hệ thống nạp đầy đủ danh sách khách hàng và hiển thị DataGrid thành công",
+      "fileName": "TC-01-step05-he-thong-nap-day-du-danh-sach-khach-hang-va-hien-thi-datagrid-thanh-cong.png",
+      "relPath": "crm_customer_data/TC-01/screenshots/TC-01-step05-he-thong-nap-day-du-danh-sach-khach-hang-va-hien-thi-datagrid-thanh-cong.png"
+    }
+  ],
+  "attachments": {
+    "screenshots": [
+      "crm_customer_data/TC-01/screenshots/TC-01-step01-dang-nhap-thanh-cong-va-mo-trang-chu-he-thong-paradise-hrm.png",
+      "crm_customer_data/TC-01/screenshots/TC-01-step02-mo-man-hinh-du-lieu-khach-hang-tu-menu-phan-he-crm.png",
+      "crm_customer_data/TC-01/screenshots/TC-01-step03-kiem-tra-thanh-cong-cu-toolbar-va-cac-nut-chuc-nang-thao-tac.png",
+      "crm_customer_data/TC-01/screenshots/TC-01-step04-kiem-tra-bang-datagrid-danh-sach-khach-hang-va-cac-cot-du-lieu-chinh.png",
+      "crm_customer_data/TC-01/screenshots/TC-01-step05-he-thong-nap-day-du-danh-sach-khach-hang-va-hien-thi-datagrid-thanh-cong.png"
+    ],
+    "videos": [
+      "crm_customer_data/TC-01/videos/video.webm"
+    ],
+    "traces": [
+      "crm_customer_data/TC-01/traces/trace.zip"
+    ]
+  },
+  "timestamp": "2026-10-16T04:05:23.637Z"
+}
