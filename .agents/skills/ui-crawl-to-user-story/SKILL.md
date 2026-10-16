@@ -185,20 +185,66 @@ Script này tự động:
 ### Kỹ Thuật Truy Vết Nguồn Gốc Dữ Liệu & Quy Tắc Đổi Role (Data Lineage & Cross-Role Protocol)
 
 Khi cào một Menu hiển thị danh sách (DataGrid / Table) mà **KHÔNG CÓ nút Tạo mới / Thêm mới** (Màn hình Hạ nguồn / Consumer / Phê duyệt):
-1. **Phân tích dấu vết API & Metadata**:
-   - Kiểm tra Response JSON hoặc Stored Procedure (`sp_*`) để tìm các trường: `CreatedBy`, `CreatedByRole`, `SourceType`, `Status` (ví dụ `PENDING`, `WAITING_APPROVAL`).
-   - Xác định dữ liệu này do vai trò (Role) nào tạo ra hoặc gửi lên từ chức năng thượng nguồn nào.
-2. **QUY TẮC BẮT BUỘC TƯƠNG TÁC VỚI NGƯỜI DÙNG**:
-   - Nếu phát hiện dữ liệu bắt nguồn từ một vai trò/tài khoản khác (ví dụ: Nhân viên nộp đơn, Khách hàng đăng ký, Quản lý đề xuất), Agent **BẮT BUỘC DỪNG LẠI VÀ HỎI NGƯỜI DÙNG**:
-     > *"Tôi phát hiện màn hình [Tên Menu hiện tại] hiển thị danh sách [Thực thể] nhưng không có nút tạo mới. Dữ liệu này được tạo từ vai trò [Tên Role] (tại chức năng [Tên chức năng]). Bạn vui lòng cung cấp tài khoản & mật khẩu của vai trò [Tên Role] để tôi đăng nhập cào tiếp màn hình tạo dữ liệu nhé!"*
-   - Tuyệt đối không tự đoán mò tài khoản. Đợi người dùng cung cấp tài khoản rồi mới tiếp tục.
-3. **Thực thi sau khi người dùng cung cấp tài khoản**:
-   - Lưu thông tin vào `test.env.json` dưới mục `roles.<ten_role>`.
-   - Chạy cào màn hình của vai trò mới:
-     ```powershell
-     node helpers/crawler_engine.cjs --menu "<Menu_Tao_Moi>" --username "<user>" --password "<pass>"
-     ```
-   - Kết nối 2 màn hình vào chung một chuỗi hồ sơ User Story liên hoàn và vẽ sơ đồ Mermaid Swimlane thể hiện sự luân chuyển giữa các vai trò!
+
+#### 4 CƠ CHẾ KỸ THUẬT DÒ TÌM NGUỒN GỐC DỮ LIỆU:
+
+##### CƠ CHẾ 1: Đọc "Dấu vân tay" trong API & Stored Procedure (Network Fingerprinting)
+Khi Menu A tải dữ liệu của B lên bảng, Playwright đã bắt được gói tin `XHR/Fetch` hoặc Stored Procedure trả về. Cỗ máy crawler mổ xẻ JSON trả về của dòng dữ liệu đó:
+* **Các trường siêu dữ liệu (Metadata Fields) luôn tố cáo nguồn gốc**:
+  - `CreatedBy` / `CreatedByRole`: Ví dụ trả về `Tai.Dang` $\rightarrow$ Biết ngay do tài khoản nhân viên tạo ra, không phải do Admin tự gõ.
+  - `SourceType` / `OriginModule`: Ví dụ trả về `FROM_MOBILE_APP` hoặc `LEAVE_REQUEST` $\rightarrow$ Biết ngay dữ liệu sinh ra từ App mobile hoặc từ Phân hệ Nghỉ phép.
+  - `Status` / `State`: Nếu có các giá trị như `PENDING`, `SUBMITTED`, `WAITING_APPROVAL` $\rightarrow$ Khẳng định 100% đây là **Luồng yêu cầu - phê duyệt (Approval Flow)**, dữ liệu phải do người nộp đơn gửi lên trước.
+* **Tên Stored Procedure / API**:
+  - Nếu Menu A gọi `sp_GetList_EmployeeChange_Pending` $\rightarrow$ Từ chữ `EmployeeChange`, Agent lập tức biết phải đi tìm chức năng "Thay đổi thông tin nhân viên" ở phía nhân viên.
+
+##### CƠ CHẾ 2: Dò quét chéo cây Menu cùng tài khoản (Cross-Menu Entity Matching)
+Khi Playwright mở trang web, hàm `extractSidebarMenus()` tự động quét toàn bộ cây Sidebar (Menu cha, menu con).
+Nếu Menu A là "Danh sách B" mà không có nút tạo:
+* Agent dùng thuật toán so khớp ngữ nghĩa (Semantic & Entity Matcher) để xác định thực thể là gì (Ví dụ: Hợp đồng, Quyết định lương, Bảo hiểm).
+* Tự động lùng sục trên thanh Menu xem có menu nào chứa động từ hành động liên quan không: *"Tạo hợp đồng"*, *"Đăng ký gói"*, *"Điều chỉnh lương"*, *"Nhập dữ liệu Excel"*...
+* Agent điều khiển trình duyệt click thử sang menu đó để xác nhận xem form tạo mới có chứa các trường trùng khớp với các cột của bảng B ở Menu A hay không.
+
+##### CƠ CHẾ 3: Ma trận Đa tài khoản / Đa vai trò (Multi-Role Matrix Crawling)
+Đây chính là trường hợp "B được tạo từ một Account / Role khác" (như luồng `employee_bank_approval`: Quản lý `Cuong.Vu` duyệt bản ghi do Nhân viên `Tai.Dang` tạo).
+* Danh sách các Role được khai báo trong `test.env.json`:
+  ```json
+  {
+    "roles": {
+      "nhan_vien": { "username": "Tai.Dang", "password": "123" },
+      "quan_ly": { "username": "Cuong.Vu", "password": "123" },
+      "admin": { "username": "Chien.nguyen", "password": "123" }
+    }
+  }
+  ```
+* Khi Agent nhận thấy Menu ở Role Quản lý chỉ có "Duyệt/Xem" và dữ liệu mang tính chất "Yêu cầu từ nhân viên", Agent sẽ:
+  1. Đăng xuất khỏi tài khoản Quản lý.
+  2. Tự động đăng nhập vào tài khoản Role Nhân viên (`Tai.Dang`).
+  3. Quét form gửi yêu cầu tương ứng bên phía nhân viên.
+
+##### CƠ CHẾ 4: Truy vết ngược từ Database / Codebase (Backend Inbound Trace)
+Nếu có mã nguồn backend hoặc database (qua MCP Graph / SQL):
+* Chạy truy vấn tìm kiếm: *"Ai thực hiện lệnh `INSERT INTO tbl_B`?"*
+* Ngay lập tức sẽ lộ ra chính xác API nào, Controller nào, hoặc màn hình nào đã tạo ra bản ghi B đó mà không cần phải đoán mò.
+
+---
+
+#### QUY TẮC BẮT BUỘC TƯƠNG TÁC VỚI NGƯỜI DÙNG:
+* Nếu phát hiện dữ liệu bắt nguồn từ một vai trò/tài khoản khác mà chưa có cấu hình trong `test.env.json`, Agent **BẮT BUỘC DỪNG LẠI VÀ HỎI NGƯỜI DÙNG**:
+  > *"Tôi phát hiện màn hình [Tên Menu hiện tại] hiển thị danh sách [Thực thể] nhưng không có nút tạo mới. Dữ liệu này được tạo từ vai trò [Tên Role] (tại chức năng [Tên chức năng]). Bạn vui lòng cung cấp tài khoản & mật khẩu của vai trò [Tên Role] để tôi đăng nhập cào tiếp màn hình tạo dữ liệu nhé!"*
+* Tuyệt đối không tự đoán mò tài khoản. Đợi người dùng cung cấp tài khoản rồi mới tiếp tục.
+
+---
+
+#### 💡 CÁCH ĐƯA DỮ LIỆU TRUY VẾT VÀO TÀI LIỆU ĐẶC TẢ USER STORY:
+Toàn bộ phát hiện trên sẽ được đưa thẳng vào **3 mục quan trọng nhất** của tài liệu đặc tả chuẩn `/spec-epic-user-story`:
+1. **Mục Tiền điều kiện (Preconditions)**:
+   > *"Dữ liệu bản ghi B phải được tạo trước từ Menu X (bởi Role Nhân viên) với trạng thái 'Chờ duyệt'."*
+2. **Cột Ghi chú nghiệp vụ (Cột 6 trong Bảng 6 cột)**:
+   > *"Cột 'Số tài khoản' là trường Read-only nạp từ dữ liệu do Nhân viên gửi lên tại form Yêu cầu thay đổi hồ sơ."*
+3. **Sơ đồ Mermaid Activity Diagram Swimlane (Phân làn vai trò đa bên)**:
+   * **Làn 1 (Nhân viên)** $\rightarrow$ Điền form và Gửi yêu cầu.
+   * **Làn 2 (Hệ thống / Database)** $\rightarrow$ Lưu bản ghi vào bảng tạm với trạng thái `PENDING`.
+   * **Làn 3 (Quản lý - Menu A)** $\rightarrow$ Hiển thị danh sách yêu cầu chờ duyệt $\rightarrow$ Bấm nút Duyệt.
 
 ---
 

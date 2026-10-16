@@ -152,7 +152,19 @@ async function runCrawler(options = {}) {
       }
     }
 
-    // 6. TỔNG HỢP KẾT QUẢ ĐẦY ĐỦ
+    // 6. TRUY VẾT NGUỒN GỐC DỮ LIỆU & BẢN ĐỒ CÂY MENU (DATA LINEAGE & CROSS-ROLE DISCOVERY)
+    console.log('🧭 [CRAWLER] Đang quét bản đồ cây Menu và phân tích Data Lineage...');
+    const availableMenus = await extractSidebarMenus(page);
+    const dataLineage = await analyzeDataLineage(page, mainScreenData, networkCalls, availableMenus, menuTarget);
+
+    if (dataLineage.isDownstreamScreen) {
+      console.log('\n⚠️ [DATA LINEAGE PHÁT HIỆN]:');
+      console.log(`   👉 Màn hình "${menuTarget}" là Màn hình HẠ NGUỒN (hiển thị danh sách nhưng KHÔNG có nút Tạo mới).`);
+      console.log(`   🔍 Dấu vết siêu dữ liệu:`, JSON.stringify(dataLineage.detectedMetadata));
+      console.log(`   💡 Khuyến nghị: ${dataLineage.recommendation}\n`);
+    }
+
+    // 7. TỔNG HỢP KẾT QUẢ ĐẦY ĐỦ
     const safeMenuName = (menuTarget || 'general')
       .normalize('NFD').replace(/[\u0300-\u036f]/g, '')
       .toLowerCase().replace(/[^a-z0-9]+/g, '_').replace(/^_+|_+$/g, '');
@@ -161,6 +173,9 @@ async function runCrawler(options = {}) {
       targetUrl,
       menuTarget: menuTarget || 'Toàn bộ trang',
       crawledAt: new Date().toISOString(),
+      activeRole: options.role || (activeAuth ? activeAuth.username : 'default'),
+      availableMenuMap: availableMenus,
+      dataLineage,
       mainScreen: mainScreenData,
       modals: modalDataList,
       apiNetworkCalls: filterRelevantApiCalls(networkCalls)
@@ -274,6 +289,101 @@ async function extractPageStructure(page, contextName, rootLocator = null) {
       buttons
     };
   }, { ctxName: contextName });
+}
+
+// QUÉT TOÀN BỘ CÂY MENU ĐỂ PHỤC VỤ DÒ TÌM MENU ĐỐI ỨNG (CƠ CHẾ 2)
+async function extractSidebarMenus(page) {
+  return await page.evaluate(() => {
+    const menus = [];
+    const elements = document.querySelectorAll(`
+      .sidebar a, .nav a, .dx-treeview-item, .menu a, .dock a,
+      [role="menuitem"], .nav-item, .dx-menu-item
+    `);
+    elements.forEach(el => {
+      const text = el.innerText ? el.innerText.trim().replace(/\n/g, ' ') : '';
+      if (text && text.length > 1 && text.length < 60 && !menus.includes(text)) {
+        menus.push(text);
+      }
+    });
+    return menus;
+  }).catch(() => []);
+}
+
+// CƠ CHẾ 1 & 2: PHÂN TÍCH DATA LINEAGE & TRUY VẾT NGUỒN GỐC DỮ LIỆU
+async function analyzeDataLineage(page, mainScreenData, networkCalls, availableMenus, menuTarget) {
+  const hasTable = await page.evaluate(() => {
+    return document.querySelectorAll('table, .dx-datagrid, .dx-grid, [role="grid"], .grid').length > 0;
+  }).catch(() => false);
+
+  const hasCreateButton = mainScreenData.buttons.some(b => 
+    /thêm|tạo|add|create|new|đăng ký/i.test(b)
+  );
+
+  const isDownstream = hasTable && !hasCreateButton;
+  const findings = {
+    isDownstreamScreen: isDownstream,
+    hasDataTable: hasTable,
+    hasCreateButton: hasCreateButton,
+    screenRoleType: isDownstream ? 'DOWNSTREAM_CONSUMER_OR_APPROVAL' : (hasCreateButton ? 'UPSTREAM_PRODUCER' : 'GENERAL'),
+    detectedMetadata: {},
+    inferredStoredProcedures: [],
+    candidateOriginMenus: [],
+    recommendation: ''
+  };
+
+  const metaKeys = ['createdby', 'createdbyrole', 'created_by', 'submittedby', 'status', 'state', 'sourcetype', 'origin', 'requesttype', 'approvalstatus'];
+  
+  for (const call of networkCalls) {
+    if (!call.url) continue;
+
+    const spMatch = call.url.match(/(sp_[a-zA-Z0-9_]+)/i);
+    if (spMatch && !findings.inferredStoredProcedures.includes(spMatch[1])) {
+      findings.inferredStoredProcedures.push(spMatch[1]);
+    }
+
+    if (call.responseBody) {
+      scanObjectForMetadata(call.responseBody, metaKeys, findings.detectedMetadata);
+    }
+  }
+
+  if (isDownstream && availableMenus && availableMenus.length > 0) {
+    const currentKeywords = (menuTarget || '').split(/\s+/).filter(w => w.length > 2);
+    for (const m of availableMenus) {
+      if (m === menuTarget) continue;
+      const isCandidate = currentKeywords.some(kw => m.toLowerCase().includes(kw.toLowerCase())) ||
+        /thêm|tạo|đăng ký|nộp|hồ sơ|cập nhật/i.test(m);
+      if (isCandidate && !findings.candidateOriginMenus.includes(m)) {
+        findings.candidateOriginMenus.push(m);
+      }
+    }
+  }
+
+  if (isDownstream) {
+    let roleHint = findings.detectedMetadata.createdby || findings.detectedMetadata.createdbyrole || 'Role Nhân viên / Người nộp đơn';
+    findings.recommendation = `Màn hình "${menuTarget}" là màn hình Hạ nguồn (chỉ xem/duyệt). Dữ liệu nhiều khả năng bắt nguồn từ vai trò "${roleHint}" hoặc tạo từ các menu đối ứng: [${findings.candidateOriginMenus.slice(0, 3).join(', ')}].`;
+  } else {
+    findings.recommendation = `Màn hình "${menuTarget}" có sẵn chức năng tạo/nhập dữ liệu trực tiếp.`;
+  }
+
+  return findings;
+}
+
+function scanObjectForMetadata(obj, targetKeys, result, depth = 0) {
+  if (!obj || depth > 4) return;
+  if (Array.isArray(obj)) {
+    obj.slice(0, 3).forEach(item => scanObjectForMetadata(item, targetKeys, result, depth + 1));
+    return;
+  }
+  if (typeof obj === 'object') {
+    for (const [key, val] of Object.entries(obj)) {
+      const lower = key.toLowerCase();
+      if (targetKeys.includes(lower) && (typeof val === 'string' || typeof val === 'number')) {
+        if (!result[lower]) result[lower] = String(val);
+      } else if (typeof val === 'object') {
+        scanObjectForMetadata(val, targetKeys, result, depth + 1);
+      }
+    }
+  }
 }
 
 // LỌC CÁC API THỰC SỰ CHỨA LOGIC NGHIỆP VỤ (BỎ QUA FILE TĨNH .JS, .CSS, .PNG)
