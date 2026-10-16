@@ -100,6 +100,18 @@ tests/ (Mã nguồn kịch bản)                test-evidence/ (Bằng chứng 
    - Sử dụng trợ lý `const { loginAsAdmin } = require('../helpers/auth')` trong `beforeEach` hoặc cấu hình `storageState: 'auth.json'` để tránh phải lặp lại mã đăng nhập trong từng test case.
 3. **Cơ chế 1-Click Bất Tử (Dynamic Test Discovery)**:
    - File batch ngoài Desktop (`Run-ParadiseHR-Interactive.bat`) sử dụng thuật toán quét động `tests/**/*.spec.js`. Khi Agent thêm file mới hoặc thêm test case mới, menu sẽ **tự động cập nhật thêm tùy chọn mới** mà người dùng không cần sửa lại file `.bat`.
+4. **Bắt Buộc Thẩm Định Sự Kiện Mạng & Phản Hồi API (Network & API Validation)**:
+   - **Tuyệt đối không chỉ kiểm tra class CSS, DOM ảo hay visual bề nổi**: Khi tương tác với bất kỳ control nào (click chip/nút lọc, tích chọn checkbox, nhập ô tìm kiếm, chuyển trang phân trang), script **BẮT BUỘC PHẢI CHẶN VÀ KIỂM TRA SỰ KIỆN MẠNG** (`page.waitForResponse(...)`).
+   - Kiểm tra đầy đủ:
+     * Endpoint API được gọi đúng và có phương thức chuẩn (POST/GET).
+     * HTTP Status Code trả về thành công (`200 OK`).
+     * Nội dung Response Body trả về dữ liệu hợp lệ (ví dụ: `result: "success"`, danh sách `data: [...]`).
+     * Đối chiếu tính toàn vẹn dữ liệu: các dòng trên DataGrid/bảng phải được render đồng bộ với dữ liệu trả về từ API backend.
+5. **Kiểm Thử Chức Năng Nghiệp Vụ Thực Sự (True Business Function / CRUD Testing)**:
+   - **Tuyệt đối không chỉ mở form/modal rồi bấm Đóng hoặc Hủy**: Khi kiểm thử một phân hệ hay menu, Agent bắt buộc phải thực thi trọn vẹn các chức năng nghiệp vụ cốt lõi:
+     * **Chức năng Tạo mới (Create)**: Điền đầy đủ dữ liệu hợp lệ vào form $\rightarrow$ Di chuyển chuột Neon bấm nút **Lưu** $\rightarrow$ Bắt API lưu dữ liệu (Status 200, phản hồi thành công) $\rightarrow$ Kiểm tra thông báo Toast/Alert $\rightarrow$ Đối chiếu bản ghi mới xuất hiện trên DataGrid.
+     * **Chức năng Xem chi tiết / Cập nhật (View/Edit)**: Mở bản ghi từ danh sách $\rightarrow$ Bắt API nạp chi tiết $\rightarrow$ Kiểm tra hiển thị đầy đủ thông tin $\rightarrow$ Cập nhật dữ liệu $\rightarrow$ Bấm Lưu $\rightarrow$ Bắt API cập nhật.
+     * **Chức năng Lọc / Tìm kiếm (Filter/Search)**: Lọc theo tiêu chí $\rightarrow$ Bắt API truy vấn $\rightarrow$ Kiểm tra bảng hiển thị đúng các dòng thuộc tiêu chí đó.
 
 ---
 

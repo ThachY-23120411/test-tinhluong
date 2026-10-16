@@ -1,0 +1,66 @@
+{
+  "tcId": "TC-05",
+  "pageName": "crm_customer_data",
+  "title": "Kiểm tra Chức năng Tìm kiếm Nhanh (Search Box) & Lọc Dữ liệu Tức thì trên DataGrid",
+  "testStatus": "PASSED",
+  "businessStatus": "PASSED",
+  "businessNotes": "PASS - Chức năng Tìm kiếm nhanh hoạt động tức thì, lọc chính xác theo từ khóa \"Nguyễn\" và khôi phục đầy đủ 20 bản ghi",
+  "failureAnalysis": {
+    "issue": "",
+    "expected": "",
+    "actual": "",
+    "rootCause": "",
+    "recommendation": ""
+  },
+  "status": "PASSED",
+  "duration": "27.93s",
+  "errors": "",
+  "stepScreenshots": [
+    {
+      "step": 1,
+      "title": "Xác định ô Tìm kiếm nhanh trên thanh công cụ Dữ liệu khách hàng",
+      "fileName": "TC-05-step01-xac-dinh-o-tim-kiem-nhanh-tren-thanh-cong-cu-du-lieu-khach-hang.png",
+      "relPath": "crm_customer_data/TC-05/screenshots/TC-05-step01-xac-dinh-o-tim-kiem-nhanh-tren-thanh-cong-cu-du-lieu-khach-hang.png"
+    },
+    {
+      "step": 2,
+      "title": "Nhập từ khóa tìm kiếm \"Nguyễn\" trực quan vào ô tìm kiếm nhanh",
+      "fileName": "TC-05-step02-nhap-tu-khoa-tim-kiem-nguyen-truc-quan-vao-o-tim-kiem-nhanh.png",
+      "relPath": "crm_customer_data/TC-05/screenshots/TC-05-step02-nhap-tu-khoa-tim-kiem-nguyen-truc-quan-vao-o-tim-kiem-nhanh.png"
+    },
+    {
+      "step": 3,
+      "title": "DataGrid lọc tức thì danh sách khách hàng khớp với từ khóa tìm kiếm",
+      "fileName": "TC-05-step03-datagrid-loc-tuc-thi-danh-sach-khach-hang-khop-voi-tu-khoa-tim-kiem.png",
+      "relPath": "crm_customer_data/TC-05/screenshots/TC-05-step03-datagrid-loc-tuc-thi-danh-sach-khach-hang-khop-voi-tu-khoa-tim-kiem.png"
+    },
+    {
+      "step": 4,
+      "title": "Con trỏ chuột Neon kiểm tra chi tiết bản ghi khách hàng tìm thấy",
+      "fileName": "TC-05-step04-con-tro-chuot-neon-kiem-tra-chi-tiet-ban-ghi-khach-hang-tim-thay.png",
+      "relPath": "crm_customer_data/TC-05/screenshots/TC-05-step04-con-tro-chuot-neon-kiem-tra-chi-tiet-ban-ghi-khach-hang-tim-thay.png"
+    },
+    {
+      "step": 5,
+      "title": "Xóa từ khóa tìm kiếm và khôi phục toàn bộ danh sách khách hàng ban đầu",
+      "fileName": "TC-05-step05-xoa-tu-khoa-tim-kiem-va-khoi-phuc-toan-bo-danh-sach-khach-hang-ban-dau.png",
+      "relPath": "crm_customer_data/TC-05/screenshots/TC-05-step05-xoa-tu-khoa-tim-kiem-va-khoi-phuc-toan-bo-danh-sach-khach-hang-ban-dau.png"
+    }
+  ],
+  "attachments": {
+    "screenshots": [
+      "crm_customer_data/TC-05/screenshots/TC-05-step01-xac-dinh-o-tim-kiem-nhanh-tren-thanh-cong-cu-du-lieu-khach-hang.png",
+      "crm_customer_data/TC-05/screenshots/TC-05-step02-nhap-tu-khoa-tim-kiem-nguyen-truc-quan-vao-o-tim-kiem-nhanh.png",
+      "crm_customer_data/TC-05/screenshots/TC-05-step03-datagrid-loc-tuc-thi-danh-sach-khach-hang-khop-voi-tu-khoa-tim-kiem.png",
+      "crm_customer_data/TC-05/screenshots/TC-05-step04-con-tro-chuot-neon-kiem-tra-chi-tiet-ban-ghi-khach-hang-tim-thay.png",
+      "crm_customer_data/TC-05/screenshots/TC-05-step05-xoa-tu-khoa-tim-kiem-va-khoi-phuc-toan-bo-danh-sach-khach-hang-ban-dau.png"
+    ],
+    "videos": [
+      "crm_customer_data/TC-05/videos/video.webm"
+    ],
+    "traces": [
+      "crm_customer_data/TC-05/traces/trace.zip"
+    ]
+  },
+  "timestamp": "2026-10-16T04:43:01.528Z"
+}

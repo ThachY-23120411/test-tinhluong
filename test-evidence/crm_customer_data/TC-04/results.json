@@ -1,10 +1,10 @@
 {
   "tcId": "TC-04",
   "pageName": "crm_customer_data",
-  "title": "Kiểm tra Ô Tìm kiếm nhanh (Search Box) & Lọc dữ liệu tức thì trên DataGrid",
+  "title": "Kiểm tra Chức năng Nghiệp vụ: XEM CHI TIẾT KHÁCH HÀNG (View Customer Detail End-to-End)",
   "testStatus": "PASSED",
   "businessStatus": "PASSED",
-  "businessNotes": "PASS - Ô tìm kiếm nhanh phản hồi tức thì, lọc chính xác theo từ khóa \"Ms\" và khôi phục đầy đủ 20 bản ghi",
+  "businessNotes": "PASS - Chức năng Xem chi tiết khách hàng hoạt động chính xác: API sp_CRM_CompanyDetail phản hồi HTTP 200, nạp đầy đủ thông tin chi tiết và điều hướng tab mượt mà",
   "failureAnalysis": {
     "issue": "",
     "expected": "",
@@ -13,47 +13,47 @@
     "recommendation": ""
   },
   "status": "PASSED",
-  "duration": "29.54s",
+  "duration": "25.99s",
   "errors": "",
   "stepScreenshots": [
     {
       "step": 1,
-      "title": "Xác định ô Tìm kiếm nhanh trên thanh công cụ Dữ liệu khách hàng",
-      "fileName": "TC-04-step01-xac-dinh-o-tim-kiem-nhanh-tren-thanh-cong-cu-du-lieu-khach-hang.png",
-      "relPath": "crm_customer_data/TC-04/screenshots/TC-04-step01-xac-dinh-o-tim-kiem-nhanh-tren-thanh-cong-cu-du-lieu-khach-hang.png"
+      "title": "Xác định dòng dữ liệu khách hàng cần xem chi tiết trên DataGrid",
+      "fileName": "TC-04-step01-xac-dinh-dong-du-lieu-khach-hang-can-xem-chi-tiet-tren-datagrid.png",
+      "relPath": "crm_customer_data/TC-04/screenshots/TC-04-step01-xac-dinh-dong-du-lieu-khach-hang-can-xem-chi-tiet-tren-datagrid.png"
     },
     {
       "step": 2,
-      "title": "Nhập từ khóa tìm kiếm \"Ms\" trực quan vào ô tìm kiếm nhanh",
-      "fileName": "TC-04-step02-nhap-tu-khoa-tim-kiem-ms-truc-quan-vao-o-tim-kiem-nhanh.png",
-      "relPath": "crm_customer_data/TC-04/screenshots/TC-04-step02-nhap-tu-khoa-tim-kiem-ms-truc-quan-vao-o-tim-kiem-nhanh.png"
+      "title": "Con trỏ chuột Neon di chuyển vào dòng khách hàng để thực hiện mở chi tiết",
+      "fileName": "TC-04-step02-con-tro-chuot-neon-di-chuyen-vao-dong-khach-hang-de-thuc-hien-mo-chi-tiet.png",
+      "relPath": "crm_customer_data/TC-04/screenshots/TC-04-step02-con-tro-chuot-neon-di-chuyen-vao-dong-khach-hang-de-thuc-hien-mo-chi-tiet.png"
     },
     {
       "step": 3,
-      "title": "DataGrid lọc tức thì danh sách khách hàng khớp với từ khóa tìm kiếm",
-      "fileName": "TC-04-step03-datagrid-loc-tuc-thi-danh-sach-khach-hang-khop-voi-tu-khoa-tim-kiem.png",
-      "relPath": "crm_customer_data/TC-04/screenshots/TC-04-step03-datagrid-loc-tuc-thi-danh-sach-khach-hang-khop-voi-tu-khoa-tim-kiem.png"
+      "title": "Màn hình Chi tiết thông tin công ty hiển thị đầy đủ thông tin doanh nghiệp và người đại diện",
+      "fileName": "TC-04-step03-man-hinh-chi-tiet-thong-tin-cong-ty-hien-thi-day-du-thong-tin-doanh-nghiep-va-nguoi-dai-dien.png",
+      "relPath": "crm_customer_data/TC-04/screenshots/TC-04-step03-man-hinh-chi-tiet-thong-tin-cong-ty-hien-thi-day-du-thong-tin-doanh-nghiep-va-nguoi-dai-dien.png"
     },
     {
       "step": 4,
-      "title": "Con trỏ chuột Neon kiểm tra chi tiết bản ghi khách hàng tìm thấy",
-      "fileName": "TC-04-step04-con-tro-chuot-neon-kiem-tra-chi-tiet-ban-ghi-khach-hang-tim-thay.png",
-      "relPath": "crm_customer_data/TC-04/screenshots/TC-04-step04-con-tro-chuot-neon-kiem-tra-chi-tiet-ban-ghi-khach-hang-tim-thay.png"
+      "title": "Con trỏ chuột Neon di chuyển lên tab Dữ liệu khách hàng để quay lại danh sách",
+      "fileName": "TC-04-step04-con-tro-chuot-neon-di-chuyen-len-tab-du-lieu-khach-hang-de-quay-lai-danh-sach.png",
+      "relPath": "crm_customer_data/TC-04/screenshots/TC-04-step04-con-tro-chuot-neon-di-chuyen-len-tab-du-lieu-khach-hang-de-quay-lai-danh-sach.png"
     },
     {
       "step": 5,
-      "title": "Xóa từ khóa tìm kiếm và khôi phục toàn bộ danh sách khách hàng ban đầu",
-      "fileName": "TC-04-step05-xoa-tu-khoa-tim-kiem-va-khoi-phuc-toan-bo-danh-sach-khach-hang-ban-dau.png",
-      "relPath": "crm_customer_data/TC-04/screenshots/TC-04-step05-xoa-tu-khoa-tim-kiem-va-khoi-phuc-toan-bo-danh-sach-khach-hang-ban-dau.png"
+      "title": "Quay trở lại giao diện danh sách khách hàng an toàn và duy trì trạng thái dữ liệu",
+      "fileName": "TC-04-step05-quay-tro-lai-giao-dien-danh-sach-khach-hang-an-toan-va-duy-tri-trang-thai-du-lieu.png",
+      "relPath": "crm_customer_data/TC-04/screenshots/TC-04-step05-quay-tro-lai-giao-dien-danh-sach-khach-hang-an-toan-va-duy-tri-trang-thai-du-lieu.png"
     }
   ],
   "attachments": {
     "screenshots": [
-      "crm_customer_data/TC-04/screenshots/TC-04-step01-xac-dinh-o-tim-kiem-nhanh-tren-thanh-cong-cu-du-lieu-khach-hang.png",
-      "crm_customer_data/TC-04/screenshots/TC-04-step02-nhap-tu-khoa-tim-kiem-ms-truc-quan-vao-o-tim-kiem-nhanh.png",
-      "crm_customer_data/TC-04/screenshots/TC-04-step03-datagrid-loc-tuc-thi-danh-sach-khach-hang-khop-voi-tu-khoa-tim-kiem.png",
-      "crm_customer_data/TC-04/screenshots/TC-04-step04-con-tro-chuot-neon-kiem-tra-chi-tiet-ban-ghi-khach-hang-tim-thay.png",
-      "crm_customer_data/TC-04/screenshots/TC-04-step05-xoa-tu-khoa-tim-kiem-va-khoi-phuc-toan-bo-danh-sach-khach-hang-ban-dau.png"
+      "crm_customer_data/TC-04/screenshots/TC-04-step01-xac-dinh-dong-du-lieu-khach-hang-can-xem-chi-tiet-tren-datagrid.png",
+      "crm_customer_data/TC-04/screenshots/TC-04-step02-con-tro-chuot-neon-di-chuyen-vao-dong-khach-hang-de-thuc-hien-mo-chi-tiet.png",
+      "crm_customer_data/TC-04/screenshots/TC-04-step03-man-hinh-chi-tiet-thong-tin-cong-ty-hien-thi-day-du-thong-tin-doanh-nghiep-va-nguoi-dai-dien.png",
+      "crm_customer_data/TC-04/screenshots/TC-04-step04-con-tro-chuot-neon-di-chuyen-len-tab-du-lieu-khach-hang-de-quay-lai-danh-sach.png",
+      "crm_customer_data/TC-04/screenshots/TC-04-step05-quay-tro-lai-giao-dien-danh-sach-khach-hang-an-toan-va-duy-tri-trang-thai-du-lieu.png"
     ],
     "videos": [
       "crm_customer_data/TC-04/videos/video.webm"
@@ -62,5 +62,5 @@
       "crm_customer_data/TC-04/traces/trace.zip"
     ]
   },
-  "timestamp": "2026-10-16T04:07:11.007Z"
+  "timestamp": "2026-10-16T04:42:31.171Z"
 }

@@ -1,10 +1,10 @@
 {
   "tcId": "TC-03",
   "pageName": "crm_customer_data",
-  "title": "Kiểm tra Modal \"Thêm dữ liệu mới\" (+) - Ràng buộc (*) & Nhập liệu an toàn",
+  "title": "Kiểm tra Chức năng Nghiệp vụ: THÊM MỚI KHÁCH HÀNG THỰC TẾ (Create Customer End-to-End)",
   "testStatus": "PASSED",
   "businessStatus": "PASSED",
-  "businessNotes": "PASS - Modal Thêm dữ liệu mới hiển thị đầy đủ trường thông tin, kiểm soát ràng buộc chặt chẽ và đóng an toàn",
+  "businessNotes": "PASS - Chức năng Thêm mới khách hàng hoạt động hoàn hảo: API lưu phản hồi HTTP 200 (Success), dữ liệu được ghi vào DB và khách hàng \"Công ty TNHH Paradise E2E 4230\" hiển thị ngay trên DataGrid",
   "failureAnalysis": {
     "issue": "",
     "expected": "",
@@ -13,7 +13,7 @@
     "recommendation": ""
   },
   "status": "PASSED",
-  "duration": "37.27s",
+  "duration": "41.28s",
   "errors": "",
   "stepScreenshots": [
     {
@@ -24,36 +24,36 @@
     },
     {
       "step": 2,
-      "title": "Modal Thêm dữ liệu mới hiển thị chi tiết 2 phân vùng thông tin",
-      "fileName": "TC-03-step02-modal-them-du-lieu-moi-hien-thi-chi-tiet-2-phan-vung-thong-tin.png",
-      "relPath": "crm_customer_data/TC-03/screenshots/TC-03-step02-modal-them-du-lieu-moi-hien-thi-chi-tiet-2-phan-vung-thong-tin.png"
+      "title": "Modal Thêm dữ liệu mới hiển thị đầy đủ các trường thông tin công ty và liên hệ",
+      "fileName": "TC-03-step02-modal-them-du-lieu-moi-hien-thi-day-du-cac-truong-thong-tin-cong-ty-va-lien-he.png",
+      "relPath": "crm_customer_data/TC-03/screenshots/TC-03-step02-modal-them-du-lieu-moi-hien-thi-day-du-cac-truong-thong-tin-cong-ty-va-lien-he.png"
     },
     {
       "step": 3,
-      "title": "Kiểm tra các trường ràng buộc bắt buộc có dấu sao đỏ trên form",
-      "fileName": "TC-03-step03-kiem-tra-cac-truong-rang-buoc-bat-buoc-co-dau-sao-do-tren-form.png",
-      "relPath": "crm_customer_data/TC-03/screenshots/TC-03-step03-kiem-tra-cac-truong-rang-buoc-bat-buoc-co-dau-sao-do-tren-form.png"
+      "title": "Điền đầy đủ thông tin khách hàng thử nghiệm vào các trường bắt buộc (*)",
+      "fileName": "TC-03-step03-dien-day-du-thong-tin-khach-hang-thu-nghiem-vao-cac-truong-bat-buoc.png",
+      "relPath": "crm_customer_data/TC-03/screenshots/TC-03-step03-dien-day-du-thong-tin-khach-hang-thu-nghiem-vao-cac-truong-bat-buoc.png"
     },
     {
       "step": 4,
-      "title": "Nhập thông tin thử nghiệm trực quan vào các trường trên form",
-      "fileName": "TC-03-step04-nhap-thong-tin-thu-nghiem-truc-quan-vao-cac-truong-tren-form.png",
-      "relPath": "crm_customer_data/TC-03/screenshots/TC-03-step04-nhap-thong-tin-thu-nghiem-truc-quan-vao-cac-truong-tren-form.png"
+      "title": "Con trỏ chuột Neon di chuyển và bấm nút Lưu thông tin liên hệ",
+      "fileName": "TC-03-step04-con-tro-chuot-neon-di-chuyen-va-bam-nut-luu-thong-tin-lien-he.png",
+      "relPath": "crm_customer_data/TC-03/screenshots/TC-03-step04-con-tro-chuot-neon-di-chuyen-va-bam-nut-luu-thong-tin-lien-he.png"
     },
     {
       "step": 5,
-      "title": "Đóng Modal an toàn và quay trở về giao diện danh sách khách hàng",
-      "fileName": "TC-03-step05-dong-modal-an-toan-va-quay-tro-ve-giao-dien-danh-sach-khach-hang.png",
-      "relPath": "crm_customer_data/TC-03/screenshots/TC-03-step05-dong-modal-an-toan-va-quay-tro-ve-giao-dien-danh-sach-khach-hang.png"
+      "title": "Khách hàng mới tạo đã được lưu vào cơ sở dữ liệu và hiển thị ngay trên DataGrid",
+      "fileName": "TC-03-step05-khach-hang-moi-tao-da-duoc-luu-vao-co-so-du-lieu-va-hien-thi-ngay-tren-datagrid.png",
+      "relPath": "crm_customer_data/TC-03/screenshots/TC-03-step05-khach-hang-moi-tao-da-duoc-luu-vao-co-so-du-lieu-va-hien-thi-ngay-tren-datagrid.png"
     }
   ],
   "attachments": {
     "screenshots": [
       "crm_customer_data/TC-03/screenshots/TC-03-step01-con-tro-chuot-neon-di-chuyen-va-bam-nut-them-du-lieu-moi.png",
-      "crm_customer_data/TC-03/screenshots/TC-03-step02-modal-them-du-lieu-moi-hien-thi-chi-tiet-2-phan-vung-thong-tin.png",
-      "crm_customer_data/TC-03/screenshots/TC-03-step03-kiem-tra-cac-truong-rang-buoc-bat-buoc-co-dau-sao-do-tren-form.png",
-      "crm_customer_data/TC-03/screenshots/TC-03-step04-nhap-thong-tin-thu-nghiem-truc-quan-vao-cac-truong-tren-form.png",
-      "crm_customer_data/TC-03/screenshots/TC-03-step05-dong-modal-an-toan-va-quay-tro-ve-giao-dien-danh-sach-khach-hang.png"
+      "crm_customer_data/TC-03/screenshots/TC-03-step02-modal-them-du-lieu-moi-hien-thi-day-du-cac-truong-thong-tin-cong-ty-va-lien-he.png",
+      "crm_customer_data/TC-03/screenshots/TC-03-step03-dien-day-du-thong-tin-khach-hang-thu-nghiem-vao-cac-truong-bat-buoc.png",
+      "crm_customer_data/TC-03/screenshots/TC-03-step04-con-tro-chuot-neon-di-chuyen-va-bam-nut-luu-thong-tin-lien-he.png",
+      "crm_customer_data/TC-03/screenshots/TC-03-step05-khach-hang-moi-tao-da-duoc-luu-vao-co-so-du-lieu-va-hien-thi-ngay-tren-datagrid.png"
     ],
     "videos": [
       "crm_customer_data/TC-03/videos/video.webm"
@@ -62,5 +62,5 @@
       "crm_customer_data/TC-03/traces/trace.zip"
     ]
   },
-  "timestamp": "2026-10-16T04:06:38.979Z"
+  "timestamp": "2026-10-16T04:42:03.441Z"
 }

@@ -1,10 +1,10 @@
 {
   "tcId": "TC-01",
   "pageName": "crm_customer_data",
-  "title": "Kiểm tra Khởi động, Điều hướng và Hiển thị Giao diện Dữ liệu khách hàng (Header, DataGrid, Toolbar)",
+  "title": "Kiểm tra Khởi động, Điều hướng và Thẩm định API Nạp Danh sách Khách hàng",
   "testStatus": "PASSED",
   "businessStatus": "PASSED",
-  "businessNotes": "PASS - Giao diện Dữ liệu khách hàng hiển thị hoàn chỉnh, thanh công cụ sẵn sàng và DataGrid nạp thành công 20 dòng dữ liệu",
+  "businessNotes": "PASS - Khởi động thành công, API nạp dữ liệu phản hồi HTTP 200 (Success) và DataGrid hiển thị 4 bản ghi khách hàng",
   "failureAnalysis": {
     "issue": "",
     "expected": "",
@@ -13,7 +13,7 @@
     "recommendation": ""
   },
   "status": "PASSED",
-  "duration": "24.38s",
+  "duration": "40.90s",
   "errors": "",
   "stepScreenshots": [
     {
@@ -24,36 +24,36 @@
     },
     {
       "step": 2,
-      "title": "Mở màn hình Dữ liệu khách hàng từ menu phân hệ CRM",
-      "fileName": "TC-01-step02-mo-man-hinh-du-lieu-khach-hang-tu-menu-phan-he-crm.png",
-      "relPath": "crm_customer_data/TC-01/screenshots/TC-01-step02-mo-man-hinh-du-lieu-khach-hang-tu-menu-phan-he-crm.png"
+      "title": "Mở màn hình Dữ liệu khách hàng và thẩm định phản hồi API HTTP 200 thành công",
+      "fileName": "TC-01-step02-mo-man-hinh-du-lieu-khach-hang-va-tham-dinh-phan-hoi-api-http-200-thanh-cong.png",
+      "relPath": "crm_customer_data/TC-01/screenshots/TC-01-step02-mo-man-hinh-du-lieu-khach-hang-va-tham-dinh-phan-hoi-api-http-200-thanh-cong.png"
     },
     {
       "step": 3,
-      "title": "Kiểm tra thanh công cụ Toolbar và các nút chức năng thao tác",
-      "fileName": "TC-01-step03-kiem-tra-thanh-cong-cu-toolbar-va-cac-nut-chuc-nang-thao-tac.png",
-      "relPath": "crm_customer_data/TC-01/screenshots/TC-01-step03-kiem-tra-thanh-cong-cu-toolbar-va-cac-nut-chuc-nang-thao-tac.png"
+      "title": "Kiểm tra thanh công cụ Toolbar (Nút Thêm +, Tùy chọn ⋮, Tìm kiếm 🔍)",
+      "fileName": "TC-01-step03-kiem-tra-thanh-cong-cu-toolbar-nut-them-tuy-chon-tim-kiem.png",
+      "relPath": "crm_customer_data/TC-01/screenshots/TC-01-step03-kiem-tra-thanh-cong-cu-toolbar-nut-them-tuy-chon-tim-kiem.png"
     },
     {
       "step": 4,
-      "title": "Kiểm tra bảng DataGrid danh sách khách hàng và các cột dữ liệu chính",
-      "fileName": "TC-01-step04-kiem-tra-bang-datagrid-danh-sach-khach-hang-va-cac-cot-du-lieu-chinh.png",
-      "relPath": "crm_customer_data/TC-01/screenshots/TC-01-step04-kiem-tra-bang-datagrid-danh-sach-khach-hang-va-cac-cot-du-lieu-chinh.png"
+      "title": "Kiểm tra cấu trúc DataGrid với các cột thông tin khách hàng chính",
+      "fileName": "TC-01-step04-kiem-tra-cau-truc-datagrid-voi-cac-cot-thong-tin-khach-hang-chinh.png",
+      "relPath": "crm_customer_data/TC-01/screenshots/TC-01-step04-kiem-tra-cau-truc-datagrid-voi-cac-cot-thong-tin-khach-hang-chinh.png"
     },
     {
       "step": 5,
-      "title": "Hệ thống nạp đầy đủ danh sách khách hàng và hiển thị DataGrid thành công",
-      "fileName": "TC-01-step05-he-thong-nap-day-du-danh-sach-khach-hang-va-hien-thi-datagrid-thanh-cong.png",
-      "relPath": "crm_customer_data/TC-01/screenshots/TC-01-step05-he-thong-nap-day-du-danh-sach-khach-hang-va-hien-thi-datagrid-thanh-cong.png"
+      "title": "Xác nhận DataGrid hiển thị đầy đủ danh sách khách hàng khớp với dữ liệu API backend",
+      "fileName": "TC-01-step05-xac-nhan-datagrid-hien-thi-day-du-danh-sach-khach-hang-khop-voi-du-lieu-api-backend.png",
+      "relPath": "crm_customer_data/TC-01/screenshots/TC-01-step05-xac-nhan-datagrid-hien-thi-day-du-danh-sach-khach-hang-khop-voi-du-lieu-api-backend.png"
     }
   ],
   "attachments": {
     "screenshots": [
       "crm_customer_data/TC-01/screenshots/TC-01-step01-dang-nhap-thanh-cong-va-mo-trang-chu-he-thong-paradise-hrm.png",
-      "crm_customer_data/TC-01/screenshots/TC-01-step02-mo-man-hinh-du-lieu-khach-hang-tu-menu-phan-he-crm.png",
-      "crm_customer_data/TC-01/screenshots/TC-01-step03-kiem-tra-thanh-cong-cu-toolbar-va-cac-nut-chuc-nang-thao-tac.png",
-      "crm_customer_data/TC-01/screenshots/TC-01-step04-kiem-tra-bang-datagrid-danh-sach-khach-hang-va-cac-cot-du-lieu-chinh.png",
-      "crm_customer_data/TC-01/screenshots/TC-01-step05-he-thong-nap-day-du-danh-sach-khach-hang-va-hien-thi-datagrid-thanh-cong.png"
+      "crm_customer_data/TC-01/screenshots/TC-01-step02-mo-man-hinh-du-lieu-khach-hang-va-tham-dinh-phan-hoi-api-http-200-thanh-cong.png",
+      "crm_customer_data/TC-01/screenshots/TC-01-step03-kiem-tra-thanh-cong-cu-toolbar-nut-them-tuy-chon-tim-kiem.png",
+      "crm_customer_data/TC-01/screenshots/TC-01-step04-kiem-tra-cau-truc-datagrid-voi-cac-cot-thong-tin-khach-hang-chinh.png",
+      "crm_customer_data/TC-01/screenshots/TC-01-step05-xac-nhan-datagrid-hien-thi-day-du-danh-sach-khach-hang-khop-voi-du-lieu-api-backend.png"
     ],
     "videos": [
       "crm_customer_data/TC-01/videos/video.webm"
@@ -62,5 +62,5 @@
       "crm_customer_data/TC-01/traces/trace.zip"
     ]
   },
-  "timestamp": "2026-10-16T04:05:23.637Z"
+  "timestamp": "2026-10-16T04:40:38.146Z"
 }

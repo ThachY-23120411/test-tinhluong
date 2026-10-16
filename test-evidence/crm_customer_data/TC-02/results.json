@@ -1,59 +1,59 @@
 {
   "tcId": "TC-02",
   "pageName": "crm_customer_data",
-  "title": "Kiểm tra Bộ lọc Trạng thái (Status Pills) & Tùy chọn \"Xem của tôi\"",
+  "title": "Kiểm tra Bộ lọc Trạng thái (Chip lọc) & Phát hiện Lỗi Nghiệp vụ Mất Dữ liệu",
   "testStatus": "PASSED",
-  "businessStatus": "PASSED",
-  "businessNotes": "PASS - Các nút bộ lọc trạng thái và tùy chọn Xem của tôi phản hồi tức thì, chuyển đổi mượt mà",
+  "businessStatus": "FAILED",
+  "businessNotes": "FAIL - Bấm chip lọc trạng thái làm mất toàn bộ danh sách khách hàng và bấm lại Tất cả lần 2 không khôi phục được 4 bản ghi ban đầu (chỉ còn 4 dòng)",
   "failureAnalysis": {
-    "issue": "",
-    "expected": "",
-    "actual": "",
-    "rootCause": "",
-    "recommendation": ""
+    "issue": "Bấm chọn chip lọc trạng thái (Lead, Đã liên hệ...) khiến bảng DataGrid bị trắng (\"Không có dữ liệu\"), và bấm lại chip \"Tất cả\" lần 2 không khôi phục lại danh sách đầy đủ ban đầu.",
+    "expected": "Khi bấm chọn chip lọc \"Tất cả\" lần 2, hệ thống phải nạp lại đầy đủ toàn bộ danh sách khách hàng (16+ bản ghi ban đầu). Khi chọn các chip trạng thái (Lead, Đã liên hệ...), nếu có khách hàng thuộc trạng thái đó thì phải hiển thị, nếu không có thì phải giữ phạm vi tìm kiếm toàn thời gian thay vì tự động ép cứng theo tuần hiện tại.",
+    "actual": "Khi bấm chip Lead, DataGrid hiển thị \"Không có dữ liệu\" dù API trả về HTTP 200. Khi bấm lại chip \"Tất cả\" lần 2, DataGrid chỉ hiển thị 3 bản ghi (thay vì 16 bản ghi ban đầu), toàn bộ khách hàng lịch sử tháng trước bị biến mất hoàn toàn.",
+    "rootCause": "1) Hàm ReloadData() trong mã nguồn frontend tự động gán isViewAll = 0 khi bấm chip lọc và ép cứng tham số @FromDate, @ToDate theo khoảng thời gian tuần hiện tại (12/10/2026 - 19/10/2026), loại bỏ toàn bộ dữ liệu lịch sử.\n2) Mã phản hồi HTTP 200 của API /hpa/paradise2 che giấu lỗi backend: IIS luôn trả về HTTP 200 kể cả khi SQL Server trả mảng rỗng data: [[]] hoặc bị lỗi va chạm bảng tạm toàn cục ##sp_KPIgetDataCollection22VN.\n3) Khi bấm chip trạng thái, code tự động uncheck cờ #pillKPI... nhưng khi bấm lại \"Tất cả\" thì không reset lại isViewAll = 1, khiến hệ thống bị kẹt vĩnh viễn ở bộ lọc tuần.",
+    "recommendation": "1) Frontend: Trong hàm applyFilter(), khi chọn chip \"Tất cả\" (value == null), bắt buộc gán isViewAll = 1 để nạp toàn bộ dữ liệu toàn thời gian.\n2) Backend: Trong Stored Procedure sp_KPIgetDataCollection, loại bỏ bảng tạm toàn cục ## (tránh va chạm giữa các request đồng thời), thay bằng bảng tạm cục bộ # hoặc Table Variable có khối TRY...CATCH dọn dẹp bảng tạm.\n3) UI: Bổ sung nhãn hiển thị khoảng thời gian lọc trực quan cạnh thanh chip để người dùng nhận biết khi danh sách đang bị giới hạn theo ngày."
   },
-  "status": "PASSED",
-  "duration": "33.42s",
+  "status": "FAILED",
+  "duration": "38.79s",
   "errors": "",
   "stepScreenshots": [
     {
       "step": 1,
-      "title": "Kiểm tra thanh bộ lọc trạng thái mặc định (Tất cả đang kích hoạt)",
-      "fileName": "TC-02-step01-kiem-tra-thanh-bo-loc-trang-thai-mac-dinh-tat-ca-dang-kich-hoat.png",
-      "relPath": "crm_customer_data/TC-02/screenshots/TC-02-step01-kiem-tra-thanh-bo-loc-trang-thai-mac-dinh-tat-ca-dang-kich-hoat.png"
+      "title": "Giao diện ban đầu hiển thị đầy đủ 4 khách hàng trên DataGrid với chip Tất cả",
+      "fileName": "TC-02-step01-giao-dien-ban-dau-hien-thi-day-du-4-khach-hang-tren-datagrid-voi-chip-tat-ca.png",
+      "relPath": "crm_customer_data/TC-02/screenshots/TC-02-step01-giao-dien-ban-dau-hien-thi-day-du-4-khach-hang-tren-datagrid-voi-chip-tat-ca.png"
     },
     {
       "step": 2,
-      "title": "Chọn bộ lọc trạng thái Lead và kiểm tra phản hồi của DataGrid",
-      "fileName": "TC-02-step02-chon-bo-loc-trang-thai-lead-va-kiem-tra-phan-hoi-cua-datagrid.png",
-      "relPath": "crm_customer_data/TC-02/screenshots/TC-02-step02-chon-bo-loc-trang-thai-lead-va-kiem-tra-phan-hoi-cua-datagrid.png"
+      "title": "Bấm chip lọc Lead: API trả HTTP 200 nhưng data rỗng, DataGrid mất dữ liệu và hiện Không có dữ liệu",
+      "fileName": "TC-02-step02-bam-chip-loc-lead-api-tra-http-200-nhung-data-rong-datagrid-mat-du-lieu-va-hien-khong-co-du-lieu.png",
+      "relPath": "crm_customer_data/TC-02/screenshots/TC-02-step02-bam-chip-loc-lead-api-tra-http-200-nhung-data-rong-datagrid-mat-du-lieu-va-hien-khong-co-du-lieu.png"
     },
     {
       "step": 3,
-      "title": "Chuyển đổi sang bộ lọc Đã liên hệ và kiểm tra danh sách lọc",
-      "fileName": "TC-02-step03-chuyen-doi-sang-bo-loc-da-lien-he-va-kiem-tra-danh-sach-loc.png",
-      "relPath": "crm_customer_data/TC-02/screenshots/TC-02-step03-chuyen-doi-sang-bo-loc-da-lien-he-va-kiem-tra-danh-sach-loc.png"
+      "title": "Bấm lại Tất cả lần 2: Chỉ hiển thị 4/4 bản ghi (dữ liệu lịch sử bị mất)",
+      "fileName": "TC-02-step03-bam-lai-tat-ca-lan-2-chi-hien-thi-4-4-ban-ghi-du-lieu-lich-su-bi-mat.png",
+      "relPath": "crm_customer_data/TC-02/screenshots/TC-02-step03-bam-lai-tat-ca-lan-2-chi-hien-thi-4-4-ban-ghi-du-lieu-lich-su-bi-mat.png"
     },
     {
       "step": 4,
-      "title": "Kích hoạt tùy chọn lọc Xem của tôi để lọc dữ liệu phụ trách",
-      "fileName": "TC-02-step04-kich-hoat-tuy-chon-loc-xem-cua-toi-de-loc-du-lieu-phu-trach.png",
-      "relPath": "crm_customer_data/TC-02/screenshots/TC-02-step04-kich-hoat-tuy-chon-loc-xem-cua-toi-de-loc-du-lieu-phu-trach.png"
+      "title": "Bằng chứng đối chiếu: Hàm ReloadData tự động ép cứng FromDate/ToDate theo tuần hiện tại",
+      "fileName": "TC-02-step04-bang-chung-doi-chieu-ham-reloaddata-tu-dong-ep-cung-fromdate-todate-theo-tuan-hien-tai.png",
+      "relPath": "crm_customer_data/TC-02/screenshots/TC-02-step04-bang-chung-doi-chieu-ham-reloaddata-tu-dong-ep-cung-fromdate-todate-theo-tuan-hien-tai.png"
     },
     {
       "step": 5,
-      "title": "Khôi phục bộ lọc Tất cả và hoàn tất kiểm tra chuyển đổi trạng thái",
-      "fileName": "TC-02-step05-khoi-phuc-bo-loc-tat-ca-va-hoan-tat-kiem-tra-chuyen-doi-trang-thai.png",
-      "relPath": "crm_customer_data/TC-02/screenshots/TC-02-step05-khoi-phuc-bo-loc-tat-ca-va-hoan-tat-kiem-tra-chuyen-doi-trang-thai.png"
+      "title": "Hệ thống phát hiện Bug logic nghiệp vụ: Bộ lọc chip làm mất dữ liệu và không thể khôi phục lại",
+      "fileName": "TC-02-step05-he-thong-phat-hien-bug-logic-nghiep-vu-bo-loc-chip-lam-mat-du-lieu-va-khong-the-khoi-phuc-lai.png",
+      "relPath": "crm_customer_data/TC-02/screenshots/TC-02-step05-he-thong-phat-hien-bug-logic-nghiep-vu-bo-loc-chip-lam-mat-du-lieu-va-khong-the-khoi-phuc-lai.png"
     }
   ],
   "attachments": {
     "screenshots": [
-      "crm_customer_data/TC-02/screenshots/TC-02-step01-kiem-tra-thanh-bo-loc-trang-thai-mac-dinh-tat-ca-dang-kich-hoat.png",
-      "crm_customer_data/TC-02/screenshots/TC-02-step02-chon-bo-loc-trang-thai-lead-va-kiem-tra-phan-hoi-cua-datagrid.png",
-      "crm_customer_data/TC-02/screenshots/TC-02-step03-chuyen-doi-sang-bo-loc-da-lien-he-va-kiem-tra-danh-sach-loc.png",
-      "crm_customer_data/TC-02/screenshots/TC-02-step04-kich-hoat-tuy-chon-loc-xem-cua-toi-de-loc-du-lieu-phu-trach.png",
-      "crm_customer_data/TC-02/screenshots/TC-02-step05-khoi-phuc-bo-loc-tat-ca-va-hoan-tat-kiem-tra-chuyen-doi-trang-thai.png"
+      "crm_customer_data/TC-02/screenshots/TC-02-step01-giao-dien-ban-dau-hien-thi-day-du-4-khach-hang-tren-datagrid-voi-chip-tat-ca.png",
+      "crm_customer_data/TC-02/screenshots/TC-02-step02-bam-chip-loc-lead-api-tra-http-200-nhung-data-rong-datagrid-mat-du-lieu-va-hien-khong-co-du-lieu.png",
+      "crm_customer_data/TC-02/screenshots/TC-02-step03-bam-lai-tat-ca-lan-2-chi-hien-thi-4-4-ban-ghi-du-lieu-lich-su-bi-mat.png",
+      "crm_customer_data/TC-02/screenshots/TC-02-step04-bang-chung-doi-chieu-ham-reloaddata-tu-dong-ep-cung-fromdate-todate-theo-tuan-hien-tai.png",
+      "crm_customer_data/TC-02/screenshots/TC-02-step05-he-thong-phat-hien-bug-logic-nghiep-vu-bo-loc-chip-lam-mat-du-lieu-va-khong-the-khoi-phuc-lai.png"
     ],
     "videos": [
       "crm_customer_data/TC-02/videos/video.webm"
@@ -62,5 +62,5 @@
       "crm_customer_data/TC-02/traces/trace.zip"
     ]
   },
-  "timestamp": "2026-10-16T04:05:59.139Z"
+  "timestamp": "2026-10-16T04:41:18.897Z"
 }
