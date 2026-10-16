@@ -59,9 +59,107 @@ docs/
             └── README.md
 ```
 
+```
+
 ---
 
-## 3. Quy Trình 5 Bước Thực Thi Của Agent (Step-by-Step Execution)
+## 3. Cẩm Nang Cấu Hình & Tùy Biến Bộ Máy Crawler Engine (`helpers/crawler_engine.cjs`)
+
+Cỗ máy cào nghiệp vụ [`helpers/crawler_engine.cjs`](file:///c:/Users/Y.Thach/Desktop/paradiseHR/helpers/crawler_engine.cjs) là một **Master Engine dùng chung** cho toàn bộ mọi menu trên website. Dưới đây là chi tiết các thông số cấu hình và cách tùy biến:
+
+### A. Các Tham Số Dòng Lệnh (CLI Flags & Parameters)
+
+Khi gọi chạy cỗ máy bằng lệnh terminal hoặc thông qua Agent:
+
+```powershell
+node helpers/crawler_engine.cjs [OPTIONS]
+```
+
+| Tham số CLI | Ý nghĩa & Mô tả | Ví dụ thực tế |
+| :--- | :--- | :--- |
+| `--menu "<tên>"` | **Tên menu mục tiêu**: Chuỗi văn bản hiển thị trên giao diện của menu cần click mở. | `--menu "Hồ sơ nhân viên"` |
+| `--url "<link>"` | **URL website mục tiêu**: Nếu không truyền, mặc định đọc `baseUrl` từ `test.env.json`. | `--url "https://paradisehrm.com/Tai3/#"` |
+| `--role "<vai_trò>"` | **Vai trò đăng nhập**: Nạp tài khoản tương ứng từ mục `roles.<vai_trò>` trong `test.env.json`. | `--role "quan_ly"` hoặc `--role "nhan_vien"` |
+| `--username "<user>"` | **Tài khoản chỉ định trực tiếp**: Ghi đè tài khoản đăng nhập mà không cần sửa file cấu hình. | `--username "Cuong.Vu"` |
+| `--password "<pass>"` | **Mật khẩu chỉ định trực tiếp**: Đi kèm với `--username`. | `--password "123"` |
+
+---
+
+### B. Cấu Hình File Môi Trường Liên Kết (`test.env.json`)
+
+Engine tự động đọc file `test.env.json` tại thư mục gốc của dự án:
+
+```json
+{
+  "baseUrl": "https://paradisehrm.com/Tai3/#",
+  "auth": {
+    "username": "Tai.Dang",
+    "password": "123",
+    "usernameSelector": "#username",
+    "passwordSelector": "input[type=\"password\"]",
+    "submitSelector": "#submitLogin"
+  },
+  "roles": {
+    "nhan_vien": {
+      "username": "Tai.Dang",
+      "password": "123"
+    },
+    "quan_ly": {
+      "username": "Cuong.Vu",
+      "password": "123"
+    },
+    "admin": {
+      "username": "Chien.nguyen",
+      "password": "123"
+    }
+  }
+}
+```
+
+* **`baseUrl`**: Đường dẫn trang chủ của hệ thống.
+* **`auth`**: Tài khoản mặc định kèm bộ chọn CSS của form đăng nhập (`usernameSelector`, `passwordSelector`, `submitSelector`).
+* **`roles`**: Danh bạ tài khoản đa vai trò, cho phép cỗ máy tự động chuyển đổi giữa các vai trò khi truy vết dữ liệu chéo.
+
+---
+
+### C. Các Khối Cấu Hình Kỹ Thuật Nội Tại Của Engine
+
+Bên trong mã nguồn [`helpers/crawler_engine.cjs`](file:///c:/Users/Y.Thach/Desktop/paradiseHR/helpers/crawler_engine.cjs), bạn có thể tùy biến các thông số sau tùy theo đặc thù website:
+
+1. **Cấu hình Trình duyệt & Hiển thị (`chromium.launch`)**:
+   ```javascript
+   headless: false,              // Mở Chrome thật trên màn hình để quan sát
+   channel: 'chrome',            // Sử dụng Google Chrome chính thức của Windows
+   slowMo: 50,                   // Độ trễ 50ms giữa các hành động để DOM kịp phản hồi
+   args: ['--start-maximized']   // Mở toàn màn hình để tránh menu responsive bị ẩn
+   ```
+2. **Quản lý Thời Gian Chờ (Timeouts)**:
+   * `page.goto(..., { timeout: 45000 })`: Thời gian chờ tải trang tối đa 45 giây.
+   * `login waitFor({ timeout: 30000 })`: Thời gian chờ đăng nhập thành công tối đa 30 giây.
+   * `menuLocator.isVisible({ timeout: 5000 })`: Thời gian chờ menu xuất hiện 5 giây.
+   * `activeModal.isVisible({ timeout: 3000 })`: Thời gian chờ modal popup nổi lên 3 giây.
+3. **Bộ Chọn Khung Form Wrapper (`formItems`)**:
+   ```javascript
+   .dx-field, .dx-form-group, .form-group, .form-item, tr, .field-wrapper, .sec-field, .dx-item.dx-field-item
+   ```
+   *Quét đồng thời cả DevExtreme, Bootstrap, AntDesign, HTML table rows.* Nếu gặp website dùng thư viện khác (như Material UI), có thể thêm `.MuiFormControl-root` vào danh sách này.
+4. **Bộ Phân Loại Kiểu Control (`detectControlType`)**:
+   * Tự động nhận diện 7 loại control chính: `Dropdown / SelectBox`, `DatePicker / DateBox`, `NumberInput`, `CheckBox`, `RadioGroup`, `TextArea`, `TextBox`.
+5. **Bộ Từ Khóa Kích Hoạt Modal / Popup Ẩn (`editBtns`)**:
+   ```javascript
+   /chỉnh sửa|sửa|thêm|thêm mới|tạo mới|chi tiết|cập nhật|edit|create|add|new/i
+   ```
+   * Tự động click thử tối đa `btnCount = 8` nút tiêu biểu trên màn hình để kích hoạt form modal ẩn bên dưới.
+   * Sau khi cào xong, tự động tìm nút Đóng/Hủy hoặc nhấn phím `Escape` để đóng modal trước khi sang nút kế tiếp.
+6. **Bộ Lọc Network API (`filterRelevantApiCalls`)**:
+   * Tự động loại bỏ toàn bộ tài nguyên tĩnh (`.css`, `.js`, `.png`, `.jpg`, `.svg`, `.woff`...).
+   * Chỉ giữ lại các API `XHR` / `Fetch` chứa dữ liệu nghiệp vụ và các Stored Procedure (`sp_*`).
+7. **Thư Mục Đầu Ra**:
+   * Dữ liệu bóc tách được lưu tự động tại: `docs/raw_crawled/<safe_menu_name>.json`.
+
+---
+
+## 4. Quy Trình 5 Bước Thực Thi Của Agent (Step-by-Step Execution)
 
 ### Bước 1: Tiếp Nhận Mục Tiêu & Cấu Hình Môi Trường
 1. Đọc thông tin kết nối từ file `test.env.json` (URL website, tài khoản, mật khẩu, selectors đăng nhập).
@@ -200,7 +298,7 @@ flowchart TB
 
 ---
 
-## 4. Tiêu Chuẩn Thẩm Định Bàn Giao (Definition of Done)
+## 5. Tiêu Chuẩn Thẩm Định Bàn Giao (Definition of Done)
 
 Hồ sơ đặc tả chỉ được coi là hoàn tất khi đạt đủ các tiêu chí:
 1. ✅ **Thực tế 100%**: Tất cả các trường, nút bấm, dropdown và API đều được trích xuất từ web đang chạy thật, không bịa đặt.
