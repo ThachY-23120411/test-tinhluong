@@ -5,9 +5,10 @@ const evidenceDir = path.resolve(__dirname, '../test-evidence');
 
 const targetPages = [
   { name: 'crm_overview', title: 'Tổng quan CRM (Dashboard & KPI)', spec: 'tests/crm_overview.spec.js' },
-  { name: 'crm_customer_data', title: 'Dữ liệu khách hàng (Customer Management)', spec: 'tests/crm_customer_data.spec.js' },
   { name: 'crm_service_tracking', title: 'Theo dõi dịch vụ (Service & Contract Tracking)', spec: 'tests/crm_service_tracking.spec.js' },
+  { name: 'crm_customer_data', title: 'Dữ liệu khách hàng (Customer Management)', spec: 'tests/crm_customer_data.spec.js' },
   { name: 'crm_sales_pipeline', title: 'Sales Pipeline (Kanban Opportunities)', spec: 'tests/crm_sales_pipeline.spec.js' },
+  { name: 'crm_sales_revenue', title: 'Doanh số (Sales Revenue & Charts)', spec: 'tests/crm_sales_revenue.spec.js' },
   { name: 'crm_business_flow', title: 'Luồng nghiệp vụ liên màn hình CRM (Cross-Menu Business Flow)', spec: 'tests/crm_business_flow.spec.js' }
 ];
 
@@ -40,6 +41,72 @@ for (const p of targetPages) {
 
   const passCount = tcList.filter(t => t.businessStatus === 'PASSED').length;
   const failCount = tcList.length - passCount;
+
+  // Generate page-level test-report.md with ALL test cases
+  let pageMd = `# BÁO CÁO KIỂM THỬ TRANG: ${p.name.toUpperCase()}\n\n`;
+  pageMd += `> Thời gian kiểm thử: **${new Date().toLocaleString('vi-VN')}**\n`;
+  pageMd += `> Tổng số kịch bản: **${tcList.length}** | `;
+  pageMd += `✅ LOGIC PASS: **${passCount}** | ❌ LOGIC FAIL: **${failCount}**\n\n`;
+  pageMd += `## BẢNG ĐỐI CHIẾU TRẠNG THÁI TEST & LOGIC NGHIỆP VỤ\n\n`;
+  pageMd += `| Mã TC | Tiêu đề Kịch bản | Trạng thái Test | Trạng thái Logic | Đánh giá Nghiệp vụ |\n`;
+  pageMd += `| :--- | :--- | :---: | :---: | :--- |\n`;
+  for (const tc of tcList) {
+    const testBadge = tc.testStatus === 'PASSED' ? '✅ PASS' : '❌ FAIL';
+    const bizBadge = tc.businessStatus === 'PASSED' ? '✅ PASS' : '❌ FAIL';
+    pageMd += `| **${tc.tcId}** | ${tc.title} | ${testBadge} | ${bizBadge} | ${tc.businessNotes || '—'} |\n`;
+  }
+  pageMd += `\n---\n\n`;
+
+  for (const tc of tcList) {
+    const testBadge = tc.testStatus === 'PASSED' ? '✅ PASS' : '❌ FAIL';
+    const bizBadge = tc.businessStatus === 'PASSED' ? '✅ PASS' : '❌ FAIL';
+    pageMd += `### ${tc.tcId}: ${tc.title}\n\n`;
+    pageMd += `* **Trạng thái thực thi Test (Kỹ thuật)**: ${testBadge} (Thời gian thực thi: \`${tc.duration}\`)\n`;
+    pageMd += `* **Trạng thái Logic Nghiệp vụ (Business Output)**: ${bizBadge}\n`;
+    pageMd += `* **Đánh giá tổng quát**: ${tc.businessNotes}\n`;
+    pageMd += `* **Thư mục lưu trữ**: \`test-evidence/${p.name}/${tc.tcId}/\`\n\n`;
+
+    if (tc.businessStatus === 'FAILED' || tc.testStatus === 'FAILED') {
+      const evidenceObj = tc.defectEvidence || tc.failureAnalysis || {};
+      pageMd += `> [!CAUTION] 🚨 THÔNG TIN LỖI PHÁT HIỆN TỪ THỰC THI (DEFECT EVIDENCE - FACTS ONLY)\n`;
+      pageMd += `>\n`;
+      pageMd += `> * **Vấn đề ghi nhận**: ${evidenceObj.issue || tc.businessNotes}\n`;
+      if (evidenceObj.expected) pageMd += `> * **Kỳ vọng nghiệp vụ (Expected Output)**: ${evidenceObj.expected}\n`;
+      if (evidenceObj.actual) pageMd += `> * **Thực tế hệ thống (Actual Output)**: ${evidenceObj.actual}\n`;
+      if (evidenceObj.evidence) {
+        const evStr = typeof evidenceObj.evidence === 'object' ? JSON.stringify(evidenceObj.evidence, null, 2) : evidenceObj.evidence;
+        pageMd += `> * **Dữ liệu kỹ thuật liên quan (Technical Evidence)**:\n\`\`\`json\n${evStr}\n\`\`\`\n`;
+      }
+      pageMd += `>\n`;
+      pageMd += `> 📌 **Lưu ý**: Kịch bản Test chỉ ghi nhận dữ liệu thực tế và sai khác. Phân tích nguyên nhân gốc (Root Cause) và giải pháp khắc phục sẽ do AI Agent điều tra và brainstorm trực tiếp từ Database & Source Code khi người dùng yêu cầu.\n`;
+      pageMd += `\n`;
+    }
+
+    pageMd += `#### 📸 Bằng chứng trực quan từng bước (Step-by-Step Evidence):\n\n`;
+    if (tc.stepScreenshots && tc.stepScreenshots.length > 0) {
+      for (const s of tc.stepScreenshots) {
+        pageMd += `##### 🔹 Bước ${s.step}: ${s.title}\n`;
+        pageMd += `![Bước ${s.step}: ${s.title}](${tc.tcId}/screenshots/${s.fileName})\n\n`;
+      }
+    } else {
+      pageMd += `*(Không có ảnh chụp màn hình)*\n\n`;
+    }
+
+    pageMd += `#### 🎥 Video & Dấu vết kiểm thử (Video & Trace):\n`;
+    if (tc.attachments && tc.attachments.videos && tc.attachments.videos.length > 0) {
+      for (const v of tc.attachments.videos) {
+        pageMd += `- **Video phiên chạy thực tế**: [${path.basename(v)}](${tc.tcId}/videos/${path.basename(v)})\n`;
+      }
+    }
+    if (tc.attachments && tc.attachments.traces && tc.attachments.traces.length > 0) {
+      for (const t of tc.attachments.traces) {
+        pageMd += `- **Playwright Trace**: [${path.basename(t)}](${tc.tcId}/traces/${path.basename(t)}) *(Mở bằng: \`npx playwright show-trace test-evidence/${t}\`)*\n`;
+      }
+    }
+    pageMd += `\n---\n\n`;
+  }
+
+  fs.writeFileSync(path.join(pageDir, 'test-report.md'), pageMd, 'utf8');
 
   pageSummaries.push({
     ...p,
@@ -74,14 +141,19 @@ masterMd += `## 2. DANH MỤC LỖI NGHIỆP VỤ & LỖI BACKEND PHÁT HIỆN Q
 const failedTCs = allTCs.filter(t => t.businessStatus === 'FAILED');
 if (failedTCs.length > 0) {
   for (const ft of failedTCs) {
+    const evidenceObj = ft.defectEvidence || ft.failureAnalysis || {};
     masterMd += `### 🚨 [${ft.pageName}] ${ft.tcId}: ${ft.title}\n\n`;
-    masterMd += `> [!CAUTION] PHÂN TÍCH NGUYÊN NHÂN THẤT BẠI (FAILURE ANALYSIS)\n`;
+    masterMd += `> [!CAUTION] THÔNG TIN LỖI PHÁT HIỆN TỪ THỰC THI (DEFECT EVIDENCE - FACTS ONLY)\n`;
     masterMd += `>\n`;
-    masterMd += `> * **Vấn đề / Mã lỗi**: ${ft.failureAnalysis.issue || ft.businessNotes}\n`;
-    if (ft.failureAnalysis.expected) masterMd += `> * **Kỳ vọng nghiệp vụ**: ${ft.failureAnalysis.expected}\n`;
-    if (ft.failureAnalysis.actual) masterMd += `> * **Thực tế hệ thống**: ${ft.failureAnalysis.actual}\n`;
-    if (ft.failureAnalysis.rootCause) masterMd += `> * **Nguyên nhân cốt lõi**: ${ft.failureAnalysis.rootCause}\n`;
-    if (ft.failureAnalysis.recommendation) masterMd += `> * **Đề xuất khắc phục**: ${ft.failureAnalysis.recommendation}\n`;
+    masterMd += `> * **Vấn đề ghi nhận**: ${evidenceObj.issue || ft.businessNotes}\n`;
+    if (evidenceObj.expected) masterMd += `> * **Kỳ vọng nghiệp vụ**: ${evidenceObj.expected}\n`;
+    if (evidenceObj.actual) masterMd += `> * **Thực tế hệ thống**: ${evidenceObj.actual}\n`;
+    if (evidenceObj.evidence) {
+      const evStr = typeof evidenceObj.evidence === 'object' ? JSON.stringify(evidenceObj.evidence, null, 2) : evidenceObj.evidence;
+      masterMd += `> * **Dữ liệu kỹ thuật liên quan**:\n\`\`\`json\n${evStr}\n\`\`\`\n`;
+    }
+    masterMd += `>\n`;
+    masterMd += `> 📌 **Lưu ý**: Kịch bản Test chỉ ghi nhận dữ liệu thực tế và sai khác. Phân tích nguyên nhân gốc (Root Cause) và giải pháp khắc phục sẽ do AI Agent điều tra và brainstorm trực tiếp từ Database & Source Code khi người dùng yêu cầu.\n`;
     masterMd += `\n`;
   }
 } else {

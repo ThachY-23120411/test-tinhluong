@@ -1,0 +1,238 @@
+{
+  "systemName": "Paradise HRM - Phân hệ Chấm công & Tính lương",
+  "pageName": "Kịch bản Kiểm thử Chuẩn chỉnh Luồng Chấm công & Tính lương (E2E Payroll Workflow)",
+  "menuUrl": "https://paradisehrm.com/Tai3/# (Phân hệ Cổng thông tin nhân sự, Chấm công & Tính lương)",
+  "createdDate": "02/11/2026",
+  "inventory": [
+    {
+      "name": "Form Tạo đơn xác nhận công / Xin bù công",
+      "group": "Portal Nhân viên (MnuWPT000 > Xin bù công)",
+      "selector": "#AttDate, #select_inout, #TimeInOut, #Note, .btnRegister",
+      "action": "Chọn ngày bù công (#AttDate), ca làm việc, chọn giờ Vào/Ra (#select_inout), nhập thời gian (#TimeInOut), nhập lý do (#Note) và bấm Đăng ký (.btnRegister)"
+    },
+    {
+      "name": "Tab Lịch sử đơn xin bù công",
+      "group": "Portal Nhân viên (MnuWPT000 > Xin bù công)",
+      "selector": "button.custom-tab-btn:has-text('Lịch sử')",
+      "action": "Hiển thị danh sách các đơn bù công của nhân viên kèm trạng thái Chờ duyệt (1), Đã duyệt (2) hoặc Từ chối (3)"
+    },
+    {
+      "name": "Danh sách phê duyệt đơn của Quản lý",
+      "group": "Portal Quản lý (MnuWPT000 > Danh sách phê duyệt)",
+      "selector": "button:has-text('Chờ duyệt'), .btn:has-text('Chờ duyệt')",
+      "action": "Hiển thị danh sách các lá đơn chờ duyệt của cấp dưới trên tài khoản Quản lý cấp cao cuong.vu (Vũ Đình Cường - 014)"
+    },
+    {
+      "name": "Modal Thẩm định & Nút Phê duyệt",
+      "group": "Portal Quản lý (MnuWPT000 > Chi tiết đơn)",
+      "selector": "button.btn-success:has-text('Duyệt'), button.btn-danger:has-text('Từ chối')",
+      "action": "Quản lý thẩm định chi tiết đơn, nhấp nút Duyệt để phê duyệt hoặc Từ chối kèm lý do"
+    },
+    {
+      "name": "Bảng dữ liệu chấm công hằng ngày",
+      "group": "Chấm công TAD (MnuTAD000 > Chấm công)",
+      "selector": "#GridDailyAttendanceData, .dx-datagrid",
+      "action": "Hiển thị chi tiết giờ quẹt thẻ In/Out thực tế của từng nhân viên theo từng ngày trong tháng"
+    },
+    {
+      "name": "Xử lý tổng hợp công cả tháng",
+      "group": "Tổng hợp công TAD (MnuTAD000 > Chấm công)",
+      "selector": "button#btnProcessMonthlySummary",
+      "action": "Gọi Stored Procedure sp_ProcessAttendanceSummaryMonthly chốt tổng số ngày công chuẩn và công thực tế"
+    },
+    {
+      "name": "Khóa dữ liệu chấm công kỳ lương",
+      "group": "Khóa công TAD (MnuTAD000)",
+      "selector": "button#btnLockAttendancePeriod",
+      "action": "Cập nhật isLock = 1 trong tblSal_Lock, đóng cổng không cho sửa đổi dữ liệu công"
+    },
+    {
+      "name": "Thuật toán Tính lương tự động (SALCAL_MAIN)",
+      "group": "Tính lương PRL (MnuPRL000 > Lương nhân viên)",
+      "selector": "button#btnCalculateSalaryMain",
+      "action": "Thực thi thuật toán tính toàn bộ bảng lương: lương thời gian, phụ cấp, OT, BHXH, Thuế TNCN, Thực lãnh"
+    },
+    {
+      "name": "Khóa bảng lương chính thức",
+      "group": "Duyệt lương PRL (MnuPRL000)",
+      "selector": "button#btnLockSalaryOfficial",
+      "action": "Khóa sổ kế toán kỳ lương, chốt dữ liệu để xuất file ngân hàng và phát hành phiếu lương"
+    },
+    {
+      "name": "Giao diện Phiếu lương nhân viên",
+      "group": "Portal Nhân viên (MnuWPT000 > Phiếu lương)",
+      "selector": "#viewSalarySlipContainer, sp_salaryslip_html",
+      "action": "Hiển thị chi tiết 5 phần: Thông tin cá nhân, Thông tin lương công, Thu nhập khác, Khấu trừ, Thuế TNCN & Thực lãnh"
+    }
+  ],
+  "controlCases": [
+    {
+      "id": "TC-CTL-01",
+      "title": "Kiểm tra Kiểm soát Ràng buộc trên Form Xin Bù Công (Validation Controls)",
+      "objective": "Thẩm định các ràng buộc bắt buộc (ngày bù công, giờ vào/ra, thời gian, lý do) trên form Xin bù công",
+      "precondition": "Nhân viên tai.dang (Pass: 123, Mã: 046) đã đăng nhập vào Portal và mở menu 'Xin bù công'",
+      "testData": "Nhân viên: tai.dang (Mã: 046), Pass: 123, Ngày: 2026-10-15, Giờ vào: 08:00, Lý do: 'Quên quẹt thẻ do đi công tác gặp khách hàng'",
+      "steps": [
+        "Bước 1: Mở menu Cổng thông tin nhân sự (Dock: MnuWPT000) > Xin bù công",
+        "Bước 2: Để trống trường Giờ và Lý do, bấm 'Đăng ký' để kiểm tra validation",
+        "Bước 3: Xác nhận hệ thống kiểm soát chặt chẽ các trường bắt buộc có dấu (*)",
+        "Bước 4: Nhập Ngày làm việc = 2026-10-15, Chiều = Vào, Thời gian = 08:00",
+        "Bước 5: Nhập lý do giải trình thực tế: 'Quên quẹt thẻ do đi công tác gặp khách hàng'",
+        "Bước 6: Nhấn nút 'Đăng ký' và ghi nhận phản hồi lưu trữ thành công"
+      ],
+      "expected": "Hệ thống kiểm soát đầy đủ các trường thông tin bắt buộc, nộp đơn thành công và tạo bản ghi mới với trạng thái Chờ duyệt (1).",
+      "dbQuery": {
+        "sql": "SELECT TOP 1 IdentityID, EmployeeID, AttDate, Approve_Status, Remark FROM tblAttendanceConfirmRequest WHERE EmployeeID = '046' ORDER BY CreateTime DESC",
+        "expectedResult": "Bản ghi tồn tại với EmployeeID = '046', Approve_Status = 1 (Chờ duyệt)"
+      }
+    },
+    {
+      "id": "TC-CTL-02",
+      "title": "Kiểm tra Đối soát Lịch Sử Đơn Bù Công của Nhân viên",
+      "objective": "Thẩm định tab Lịch sử hiển thị chính xác các đơn bù công đã nộp của nhân viên",
+      "precondition": "Nhân viên tai.dang đã nộp đơn bù công và đang ở menu Xin bù công",
+      "testData": "Nhân viên: tai.dang (Mã: 046), Pass: 123; Tab: 'Lịch sử'",
+      "steps": [
+        "Bước 1: Trên giao diện Xin bù công, di chuột Neon nhấp tab 'Lịch sử'",
+        "Bước 2: Hệ thống chuyển sang danh sách lịch sử các lần xin bù công trước đây",
+        "Bước 3: Đối chiếu đơn mới tạo ngày 15/10/2026 hiển thị đúng trạng thái 'Chờ duyệt'",
+        "Bước 4: Kiểm tra chi tiết người duyệt cấp 1 (Mr. Long [011]) và cấp 2 (Mr. Cường [014])",
+        "Bước 5: Đánh giá tính toàn vẹn dữ liệu lịch sử đối chiếu với CSDL"
+      ],
+      "expected": "Tab Lịch sử nạp đầy đủ danh sách các đơn đã đăng ký, hiển thị đúng 2 cấp duyệt chỉ định.",
+      "dbQuery": {
+        "sql": "SELECT COUNT(*) AS TotalHistory FROM tblAttendanceConfirmRequest WHERE EmployeeID = '046'",
+        "expectedResult": "TotalHistory >= 20 bản ghi lịch sử"
+      }
+    }
+  ],
+  "crudCases": [
+    {
+      "id": "TC-CRUD-01",
+      "title": "Nghiệp vụ Tạo & Nộp Đơn Xin Bù Công (Staff Create Attendance Request)",
+      "objective": "Nhân viên hoàn tất điền thông tin và nộp đơn xin bù công ngày quên quẹt thẻ vào cơ sở dữ liệu",
+      "precondition": "Tài khoản tai.dang (Pass: 123, Mã: 046) đăng nhập Cổng thông tin nhân sự",
+      "testData": "Tài khoản: tai.dang / 123 (Mã NV: 046), Ngày bù công: 2026-10-15, Chiều: Vào, Giờ: 08:00, Lý do: 'Quên quẹt thẻ do đi công tác gặp khách hàng'",
+      "steps": [
+        "Bước 1: Nhân viên đăng nhập vào hệ thống với Username: tai.dang / Password: 123",
+        "Bước 2: Mở Cổng thông tin nhân sự (MnuWPT000) > Xin bù công",
+        "Bước 3: Nhập Ngày bù công: 2026-10-15 vào ô #AttDate",
+        "Bước 4: Chọn Chiều 'Vào' tại #select_inout và nhập thời gian 08:00 vào ô #TimeInOut",
+        "Bước 5: Nhập lý do chi tiết vào ô #Note và bấm nút 'Đăng ký'",
+        "Bước 6: Xác nhận thông báo gửi đơn thành công và đơn chuyển sang trạng thái chờ duyệt"
+      ],
+      "expected": "Bản ghi được ghi nhận vào bảng tblAttendanceConfirmRequest với Approve_Status = 1, sẵn sàng cho Quản lý phê duyệt.",
+      "dbQuery": {
+        "sql": "SELECT COUNT(*) AS PendingCount FROM tblAttendanceConfirmRequest WHERE EmployeeID = '046' AND Approve_Status = 1",
+        "expectedResult": "PendingCount >= 1 bản ghi"
+      }
+    },
+    {
+      "id": "TC-CRUD-02",
+      "title": "Nghiệp vụ Quản Lý Cấp Duyệt Phê Duyệt Đơn (Manager Approve Attendance Request)",
+      "objective": "Quản lý có thẩm quyền duyệt thẩm tra lý do và bấm Duyệt đơn xin xác nhận công trên màn hình Danh sách phê duyệt",
+      "precondition": "Tài khoản Quản lý cấp duyệt cuong.vu (Pass: 123, Mã: 014 - Giám đốc Nhân sự / Quản trị viên) đăng nhập hệ thống",
+      "testData": "Tài khoản: cuong.vu / 123 (Mã NV: 014), Đơn chờ duyệt: Đơn xin xác nhận công / nghỉ phép trên danh sách",
+      "steps": [
+        "Bước 1: Quản lý đăng nhập vào hệ thống với Username: cuong.vu / Password: 123",
+        "Bước 2: Mở Cổng thông tin nhân sự (MnuWPT000) > Danh sách phê duyệt",
+        "Bước 3: Quan sát danh sách các đơn đang chờ duyệt hiển thị với nút 'Chờ duyệt' màu xanh dương",
+        "Bước 4: Nhấp nút 'Chờ duyệt' trên dòng đơn để mở modal thẩm định chi tiết đơn",
+        "Bước 5: Xem thông tin người nộp, ngày làm việc, lý do và quá trình duyệt",
+        "Bước 6: Di chuột Neon nhấp nút 'Duyệt' (màu xanh lá cây) để hoàn tất phê duyệt"
+      ],
+      "expected": "Hệ thống cập nhật trạng thái đơn thành Đã duyệt (Approve_Status = 2), ghi nhận mã người duyệt ApproverID.",
+      "dbQuery": {
+        "sql": "SELECT COUNT(*) AS PendingForCuong FROM tblAttendanceConfirmRequest WHERE Approve_Status = 1",
+        "expectedResult": "Hệ thống truy xuất chính xác các đơn chờ duyệt trong CSDL"
+      }
+    },
+    {
+      "id": "TC-CRUD-03",
+      "title": "Nghiệp vụ Tổng Hợp Công Tháng & Khóa Kỳ Chấm Công (Process & Lock Attendance)",
+      "objective": "Chuyên viên Nhân sự C&B mở bảng chấm công ngày, chạy tổng hợp công tháng và khóa kỳ công",
+      "precondition": "Tài khoản Nhân sự C&B cuong.vu (Pass: 123) đăng nhập với quyền Quản trị chấm công",
+      "testData": "Tài khoản quản trị: cuong.vu / 123, Phân hệ Chấm công (Dock: MnuTAD000), Nhân sự đối soát: Đặng Minh Tài (Mã: 046)",
+      "steps": [
+        "Bước 1: Mở Topbar Icon Đồng hồ (MnuTAD000) > Chấm công",
+        "Bước 2: Tìm kiếm nhân viên Đặng Minh Tài (046) trên ô tìm kiếm nhanh",
+        "Bước 3: Xác nhận giờ vào ra thực tế đã được cập nhật sau khi đơn bù công được duyệt",
+        "Bước 4: Chạy tổng hợp công tháng (sp_ProcessAttendanceSummaryMonthly)",
+        "Bước 5: Chốt số công thực tế và thực hiện khóa kỳ chấm công trong tblSal_Lock"
+      ],
+      "expected": "Bảng chấm công ngày cập nhật đầy đủ dữ liệu giờ vào ra bù công. Kỳ công được chốt an toàn.",
+      "dbQuery": {
+        "sql": "SELECT Month, Year, isLock FROM tblSal_Lock WHERE Month = 8 AND Year = 2026",
+        "expectedResult": "Trạng thái khóa kỳ công được kiểm soát chặt chẽ trong CSDL"
+      }
+    },
+    {
+      "id": "TC-CRUD-04",
+      "title": "Nghiệp vụ Kế Toán Chạy Tính Lương Tự Động & Đối Soát Bảng Lương (Payroll Calculation)",
+      "objective": "Kế toán trưởng / Ban Giám đốc chạy thuật toán tính lương tự động SALCAL_MAIN và đối soát bảng lương",
+      "precondition": "Tài khoản Ban Giám đốc / Kế toán trưởng chien.nguyen (Pass: 123, Mã: 013) đăng nhập hệ thống",
+      "testData": "Tài khoản: chien.nguyen / 123 (Mã NV: 013), Phân hệ Tính lương (Dock: MnuPRL000 > Lương nhân viên)",
+      "steps": [
+        "Bước 1: Mở Topbar Icon Tiền (MnuPRL000) > Lương nhân viên",
+        "Bước 2: Quan sát bảng tổng hợp lương tháng của toàn bộ cán bộ công nhân viên",
+        "Bước 3: Đối soát cột Công chuẩn, Công thực tế, Lương ngày công và các khoản phụ cấp",
+        "Bước 4: Kiểm tra khấu trừ bảo hiểm bắt buộc (BHXH 8%, BHYT 1.5%, BHTN 1%) và Thuế TNCN",
+        "Bước 5: Thẩm định chỉ tiêu Thực lãnh (Net Take Home) và chốt bảng lương chính thức"
+      ],
+      "expected": "Bảng lương nạp đầy đủ các chỉ tiêu, tính toán chính xác dựa trên công thực tế đã tổng hợp.",
+      "dbQuery": {
+        "sql": "SELECT TOP 1 EmployeeID, StandardWDays, TotalPaidDays, NetTakeHome FROM tblSal_Sal WHERE EmployeeID = '013' ORDER BY Year DESC, Month DESC",
+        "expectedResult": "Bảng lương tồn tại bản ghi chính thức của nhân sự với số ngày công khớp 100% với dữ liệu chấm công"
+      }
+    },
+    {
+      "id": "TC-CRUD-05",
+      "title": "Nghiệp vụ Nhân Viên Nghiệm Thu Phiếu Lương Chi Tiết (Employee Payslip Acceptance)",
+      "objective": "Nhân viên mở xem Phiếu lương cá nhân trên Cổng thông tin và đối soát từng phân khu thu nhập",
+      "precondition": "Nhân viên tai.dang (Pass: 123, Mã: 046) đăng nhập Cổng thông tin nhân sự",
+      "testData": "Nhân viên: tai.dang / 123 (Mã NV: 046), Phân hệ Cổng thông tin (Dock: MnuWPT000 > Phiếu lương)",
+      "steps": [
+        "Bước 1: Nhân viên đăng nhập vào hệ thống với Username: tai.dang / Password: 123",
+        "Bước 2: Mở Cổng thông tin nhân sự (MnuWPT000) > Phiếu lương",
+        "Bước 3: Kiểm tra tiêu đề 'PHIẾU LƯƠNG NHÂN VIÊN' và thông tin hành chính (Họ tên, Mã NV, Chức vụ)",
+        "Bước 4: Cuộn trang kiểm tra Phân khu I (Thông tin lương) và Phân khu II (Thu nhập khác)",
+        "Bước 5: Cuộn trang kiểm tra Phân khu III (Khấu trừ), Phân khu IV (Thuế TNCN) và Phân khu V (Thực lãnh)"
+      ],
+      "expected": "Phiếu lương hiển thị chuẩn mực 5 phân khu, số ngày công thực tế phản ánh chính xác ngày đã được bù công.",
+      "dbQuery": {
+        "sql": "EXEC sp_PaySlipView @LoginID = 62, @Month = 8, @Year = 2026, @PeriodID = 0, @LanguageID = 'VN', @EmployeeID = '046'",
+        "expectedResult": "SP sp_PaySlipView trả về đầy đủ 10 datasets nguồn cho giao diện phiếu lương"
+      }
+    }
+  ],
+  "rippleEffects": [
+    {
+      "targetTable": "tblAttendanceConfirmRequest",
+      "action": "Tạo đơn xin bù công ngày quên quẹt thẻ",
+      "impactedSp": "sp_AttendanceConfirmRequest_Submit, sp_StaffInformation_LoadDataListPheDuyet",
+      "affectedScreens": "Cổng thông tin > Xin bù công (Lịch sử); Cổng thông tin > Danh sách phê duyệt",
+      "affectedRoles": "Nhân viên nộp đơn (tai.dang) và Quản lý cấp duyệt (cuong.vu)"
+    },
+    {
+      "targetTable": "tblAttendanceConfirmRequest",
+      "action": "Quản lý duyệt đơn bù công (Approve_Status = 2)",
+      "impactedSp": "sp_AttendanceConfirmRequest_Do_Approve, sp_InsertInOut",
+      "affectedScreens": "Cổng thông tin > Danh sách phê duyệt; Quản lý chấm công > Chấm công ngày",
+      "affectedRoles": "Quản lý duyệt (cuong.vu) và Nhân sự phụ trách chấm công"
+    },
+    {
+      "targetTable": "tblDailyAttendanceData",
+      "action": "Cập nhật giờ vào ra bù công vào công chuẩn",
+      "impactedSp": "sp_ProcessAttendanceSummaryMonthly",
+      "affectedScreens": "Quản lý chấm công > Bảng tổng hợp công cả tháng",
+      "affectedRoles": "Chuyên viên Nhân sự C&B (cuong.vu)"
+    },
+    {
+      "targetTable": "tblSal_Sal, tblSal_Sal_Detail",
+      "action": "Chạy thuật toán tính toán lương tự động (SALCAL_MAIN)",
+      "impactedSp": "sp_PaySlipView, sp_CompanySalarySummary",
+      "affectedScreens": "Tính lương > Lương nhân viên; Cổng thông tin > Phiếu lương cá nhân",
+      "affectedRoles": "Kế toán trưởng (chien.nguyen) và Toàn bộ nhân viên (tai.dang)"
+    }
+  ]
+}

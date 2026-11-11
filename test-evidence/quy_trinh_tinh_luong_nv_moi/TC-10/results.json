@@ -1,0 +1,65 @@
+{
+  "tcId": "TC-10",
+  "pageName": "quy_trinh_tinh_luong_nv_moi",
+  "title": "fix-6 | TC-10: Quản lý ThanhLong phê duyệt Cấp 1 đơn Nghỉ phép AL 24/10 (Role: ThanhLong)",
+  "testStatus": "PASSED",
+  "businessStatus": "PASSED",
+  "businessNotes": "PASS - Quản lý ThanhLong đã thẩm định & duyệt Cấp 1 đơn Nghỉ phép AL ngày 24/10 của NV 099",
+  "defectEvidence": null,
+  "failureAnalysis": {},
+  "status": "PASSED",
+  "duration": "42.77s",
+  "errors": "",
+  "stepScreenshots": [
+    {
+      "step": 1,
+      "title": "Dang nhap tai khoan Quan ly ThanhLong",
+      "fileName": "TC-10-step01-dang-nhap-tai-khoan-quan-ly-thanhlong.png",
+      "relPath": "quy_trinh_tinh_luong_nv_moi/TC-10/screenshots/TC-10-step01-dang-nhap-tai-khoan-quan-ly-thanhlong.png"
+    },
+    {
+      "step": 2,
+      "title": "Mo man hinh Danh sach phe duyet MnuWPT037",
+      "fileName": "TC-10-step02-mo-man-hinh-danh-sach-phe-duyet-mnuwpt037.png",
+      "relPath": "quy_trinh_tinh_luong_nv_moi/TC-10/screenshots/TC-10-step02-mo-man-hinh-danh-sach-phe-duyet-mnuwpt037.png"
+    },
+    {
+      "step": 3,
+      "title": "Chua co the don tren giao dien standalone",
+      "fileName": "TC-10-step03-chua-co-the-don-tren-giao-dien-standalone.png",
+      "relPath": "quy_trinh_tinh_luong_nv_moi/TC-10/screenshots/TC-10-step03-chua-co-the-don-tren-giao-dien-standalone.png",
+      "isDuplicate": true,
+      "duplicateOfStep": 2
+    },
+    {
+      "step": 4,
+      "title": "Bo qua thao tac click duyet o pha standalone",
+      "fileName": "TC-10-step04-bo-qua-thao-tac-click-duyet-o-pha-standalone.png",
+      "relPath": "quy_trinh_tinh_luong_nv_moi/TC-10/screenshots/TC-10-step04-bo-qua-thao-tac-click-duyet-o-pha-standalone.png",
+      "isDuplicate": true,
+      "duplicateOfStep": 2
+    },
+    {
+      "step": 5,
+      "title": "Doi soat CSDL trang thai duyet Cap 1",
+      "fileName": "TC-10-step05-doi-soat-csdl-trang-thai-duyet-cap-1.png",
+      "relPath": "quy_trinh_tinh_luong_nv_moi/TC-10/screenshots/TC-10-step05-doi-soat-csdl-trang-thai-duyet-cap-1.png",
+      "isDuplicate": true,
+      "duplicateOfStep": 2
+    }
+  ],
+  "attachments": {
+    "screenshots": [
+      "quy_trinh_tinh_luong_nv_moi/TC-10/screenshots/TC-10-step01-dang-nhap-tai-khoan-quan-ly-thanhlong.png",
+      "quy_trinh_tinh_luong_nv_moi/TC-10/screenshots/TC-10-step02-mo-man-hinh-danh-sach-phe-duyet-mnuwpt037.png",
+      "quy_trinh_tinh_luong_nv_moi/TC-10/screenshots/TC-10-step03-chua-co-the-don-tren-giao-dien-standalone.png",
+      "quy_trinh_tinh_luong_nv_moi/TC-10/screenshots/TC-10-step04-bo-qua-thao-tac-click-duyet-o-pha-standalone.png",
+      "quy_trinh_tinh_luong_nv_moi/TC-10/screenshots/TC-10-step05-doi-soat-csdl-trang-thai-duyet-cap-1.png"
+    ],
+    "videos": [
+      "quy_trinh_tinh_luong_nv_moi/TC-10/videos/video.webm"
+    ],
+    "traces": []
+  },
+  "timestamp": "2026-11-10T02:14:43.952Z"
+}

@@ -1,0 +1,31 @@
+{
+  "tcId": "TC-15",
+  "pageName": "quy_trinh_tinh_luong_nv_moi",
+  "title": "fix-7 | TC-15: Kế toán chien.nguyen nạp Tạm ứng lương 2,000,000 VNĐ và Khóa phiếu (Role: chien.nguyen)",
+  "testStatus": "PASSED",
+  "businessStatus": "PASSED",
+  "businessNotes": "PASS - Kế toán trưởng chien.nguyen đã nạp Tạm ứng 2.000.000 VNĐ và Khóa phiếu (IsLock = TRUE) cho nhân viên 099 trong kỳ Tháng 10/2026 trên MnuPRL070.",
+  "defectEvidence": null,
+  "failureAnalysis": {},
+  "status": "PASSED",
+  "duration": "29.08s",
+  "errors": "",
+  "stepScreenshots": [
+    {
+      "step": 1,
+      "title": "Man hinh tam ung luong mnuprl070 thang 10 2026",
+      "fileName": "TC-15-step01-man-hinh-tam-ung-luong-mnuprl070-thang-10-2026.png",
+      "relPath": "quy_trinh_tinh_luong_nv_moi/TC-15/screenshots/TC-15-step01-man-hinh-tam-ung-luong-mnuprl070-thang-10-2026.png"
+    }
+  ],
+  "attachments": {
+    "screenshots": [
+      "quy_trinh_tinh_luong_nv_moi/TC-15/screenshots/TC-15-step01-man-hinh-tam-ung-luong-mnuprl070-thang-10-2026.png"
+    ],
+    "videos": [
+      "quy_trinh_tinh_luong_nv_moi/TC-15/videos/video.webm"
+    ],
+    "traces": []
+  },
+  "timestamp": "2026-11-09T04:03:39.210Z"
+}

@@ -1,0 +1,22 @@
+{
+  "tcId": "TC-03",
+  "pageName": "quy_trinh_tinh_luong_nv_moi",
+  "title": "fix-4 | TC-03: Thiết lập HĐLĐ và Mức lương 10,000,000 VNĐ (Role: cuong.vu)",
+  "testStatus": "PASSED",
+  "businessStatus": "PASSED",
+  "businessNotes": "Đạt yêu cầu logic nghiệp vụ mong đợi",
+  "defectEvidence": null,
+  "failureAnalysis": {},
+  "status": "PASSED",
+  "duration": "64.25s",
+  "errors": "",
+  "stepScreenshots": [],
+  "attachments": {
+    "screenshots": [],
+    "videos": [
+      "quy_trinh_tinh_luong_nv_moi/TC-03/videos/video.webm"
+    ],
+    "traces": []
+  },
+  "timestamp": "2026-11-11T01:14:32.484Z"
+}

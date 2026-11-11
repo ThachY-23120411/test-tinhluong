@@ -1,0 +1,38 @@
+{
+  "tcId": "TC-14",
+  "pageName": "quy_trinh_tinh_luong_nv_moi",
+  "title": "fix-7 | TC-14: Kế toán chien.nguyen nạp Thưởng KPI 1,000,000 VNĐ Tháng 10/2026 (Role: chien.nguyen)",
+  "testStatus": "PASSED",
+  "businessStatus": "PASSED",
+  "businessNotes": "PASS - Kế toán trưởng chien.nguyen đã nạp Thưởng KPI 1.000.000 VNĐ cho nhân viên 099 trong kỳ Tháng 10/2026 trên MnuPRL036 (tblSal_Adjustment).",
+  "defectEvidence": null,
+  "failureAnalysis": {},
+  "status": "PASSED",
+  "duration": "30.90s",
+  "errors": "",
+  "stepScreenshots": [
+    {
+      "step": 1,
+      "title": "Dang nhap tai khoan ke toan truong chien nguyen",
+      "fileName": "TC-14-step01-dang-nhap-tai-khoan-ke-toan-truong-chien-nguyen.png",
+      "relPath": "quy_trinh_tinh_luong_nv_moi/TC-14/screenshots/TC-14-step01-dang-nhap-tai-khoan-ke-toan-truong-chien-nguyen.png"
+    },
+    {
+      "step": 2,
+      "title": "Man hinh thu nhap khong co dinh mnuprl036 thang 10 2026",
+      "fileName": "TC-14-step02-man-hinh-thu-nhap-khong-co-dinh-mnuprl036-thang-10-2026.png",
+      "relPath": "quy_trinh_tinh_luong_nv_moi/TC-14/screenshots/TC-14-step02-man-hinh-thu-nhap-khong-co-dinh-mnuprl036-thang-10-2026.png"
+    }
+  ],
+  "attachments": {
+    "screenshots": [
+      "quy_trinh_tinh_luong_nv_moi/TC-14/screenshots/TC-14-step01-dang-nhap-tai-khoan-ke-toan-truong-chien-nguyen.png",
+      "quy_trinh_tinh_luong_nv_moi/TC-14/screenshots/TC-14-step02-man-hinh-thu-nhap-khong-co-dinh-mnuprl036-thang-10-2026.png"
+    ],
+    "videos": [
+      "quy_trinh_tinh_luong_nv_moi/TC-14/videos/video.webm"
+    ],
+    "traces": []
+  },
+  "timestamp": "2026-11-09T04:03:10.131Z"
+}

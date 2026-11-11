@@ -1,0 +1,22 @@
+{
+  "tcId": "TC-02",
+  "pageName": "quy_trinh_tinh_luong_nv_moi",
+  "title": "fix-4 | TC-02: Cấp tài khoản đăng nhập ESS Portal test.nv (Role: cuong.vu)",
+  "testStatus": "PASSED",
+  "businessStatus": "PASSED",
+  "businessNotes": "Đạt yêu cầu logic nghiệp vụ mong đợi",
+  "defectEvidence": null,
+  "failureAnalysis": {},
+  "status": "PASSED",
+  "duration": "28.45s",
+  "errors": "",
+  "stepScreenshots": [],
+  "attachments": {
+    "screenshots": [],
+    "videos": [
+      "quy_trinh_tinh_luong_nv_moi/TC-02/videos/video.webm"
+    ],
+    "traces": []
+  },
+  "timestamp": "2026-11-09T08:12:13.625Z"
+}

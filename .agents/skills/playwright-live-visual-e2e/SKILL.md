@@ -6,7 +6,7 @@ description: >-
 
 # Playwright Live Visual E2E — Kiểm thử trực quan trên màn hình thật
 
-Skill này là kim chỉ nam cho AI Agent khi thực hiện yêu cầu kiểm thử tự động trực quan trên hệ thống web (Paradise HRM hoặc các dự án tương tự). Khi người dùng yêu cầu kiểm thử bất kỳ menu/trang nào, Agent tự động phân tích DOM, khởi tạo hoặc bổ sung test case theo chuẩn `TC-01`, `TC-02`, lưu bằng chứng nghiệm thu theo đúng cấu trúc thư mục phân cấp (`test-evidence/<tên_trang>/<TC-0x>/`), kiểm tra cơ chế quét động của file `.bat`, thực thi kiểm thử và xuất báo cáo nghiệm thu theo đúng chuẩn.
+Skill này là kim chỉ nam cho AI Agent khi thực hiện yêu cầu kiểm thử tự động trực quan trên hệ thống web (Paradise HRM hoặc các dự án tương tự). Khi người dùng yêu cầu kiểm thử bất kỳ menu/trang nào, Agent tự động phân tích DOM, khởi tạo hoặc bổ sung test case theo chuẩn `TC-01`, `TC-02`, lưu bằng chứng nghiệm thu theo đúng cấu trúc thư mục phân cấp (`test-evidence/<tên_trang>/<TC-0x>/` hoặc `test-evidence/test-flow-tinhluong/<tên_conversation>/<tên_trang>/`), kiểm tra cơ chế quét động của file `.bat`, thực thi kiểm thử và xuất báo cáo nghiệm thu theo đúng chuẩn.
 
 ---
 
@@ -73,10 +73,10 @@ tests/ (Mã nguồn kịch bản)                test-evidence/ (Bằng chứng 
 
 ### Nguyên tắc tổ chức:
 1. **Mỗi file `.spec.js` trong `tests/` đại diện cho 1 trang/menu** $\rightarrow$ Có đúng **1 thư mục con** mang tên file đó trong `test-evidence/` (ví dụ: `tests/login.spec.js` $\rightarrow$ `test-evidence/login/`).
-2. **Trong thư mục của trang đó**:
-   - `test-report.md`: Báo cáo riêng của trang đó.
-   - `Run-This-Page.bat`: File 1-Click để nhấp đúp chạy lại toàn bộ test case của trang này trên Chrome thật.
-   - Có các thư mục con riêng biệt cho từng kịch bản: `TC-01/`, `TC-02/`, `TC-03/`...
+2. **Đối với các quy trình luồng kiểm thử liên hoàn nhiều conversation (ví dụ Flow Tính lương)**:
+   - Thư mục được tổ chức theo cấp phân quyền:
+     `test-evidence/test-flow-tinhluong/<tên_conversation>/<tên_trang>/`
+   - Chứa file `Run-This-Page.bat` (chạy toàn bộ các TC trong trang do conversation đó làm) và từng thư mục `TC-xx/` với `Run-This-TC.bat`.
 3. **Trong mỗi thư mục `TC-0x/`**:
    - `Run-This-TC.bat`: **BẮT BUỘC CÓ** — File thực thi 1-Click tại chỗ. Khi nhấp đúp, máy sẽ mở Google Chrome thật hiển thị con trỏ Neon, gõ phím từ từ và chạy riêng đúng test case này cho người dùng quan sát!
    - `screenshots/`: Chứa tất cả ảnh chụp màn hình kiểm chứng của riêng test case đó.
@@ -90,11 +90,213 @@ tests/ (Mã nguồn kịch bản)                test-evidence/ (Bằng chứng 
 
 ## 2. Nguyên Tắc Cốt Lõi (Bắt Buộc Tuân Thủ)
 
+---
+
+### 2.0. QUY CHUẨN KỸ THUẬT VỀ CON TRỎ CHUỘT NEON, CỬA SỔ TOÀN MÀN HÌNH & THAO TÁC THỜI GIAN THỰC (REALTIME VISUAL CURSOR & FULLSCREEN SPECIFICATION)
+
+> [!IMPORTANT]
+> **5 NGUYÊN TẮC BẤT BIẾN KHI THỰC THI KIỂM THỬ TRỰC QUAN (LIVE VISUAL TESTING):**
+> 1. **Cửa sổ Google Chrome Full Màn Hình 100% (No Black Borders / No Viewport Override)**:
+>    * Trong `playwright.config.js` hoặc file `.spec.js`, bắt buộc cấu hình:
+>      ```javascript
+>      // Cấu hình Full màn hình tràn viền
+>      viewport: null, // BẮT BUỘC: Không gán { width: 1440, height: 900 } làm co màn hình!
+>      launchOptions: {
+>        args: ['--start-maximized', '--no-sandbox', '--disable-setuid-sandbox']
+>      }
+>      ```
+>    * **Tuyệt đối cấm** gán cứng `viewport: { width: 1440, height: 900 }` trong `test.use` vì sẽ ghi đè `viewport: null`, tạo ra 2 vệt viền đen hai bên và thu nhỏ khung hiển thị của Chrome.
+>
+> 2. **File JS Tạo Con Trỏ Chuột Neon (`visual_cursor.js`)**:
+>    * File định nghĩa con trỏ chuột Neon nằm tại thư mục gốc của dự án:
+>      👉 **`c:\Users\Y.Thach\Desktop\paradiseHR\visual_cursor.js`**
+>    * **Thành phần tạo lập**:
+>      - `#__ag_cursor__`: Con trỏ chuột hình mũi tên Neon đỏ-hồng (`fill="#e11d48"`, `stroke="#ffffff"`), có chấm tròn phát sáng tâm bấm (`#f43f5e`).
+>      - `.__ag_ripple__`: Hiệu ứng sóng tròn gợn lan tỏa (ripple effect) mỗi khi bấm chuột xuống (`mousedown`).
+>      - `#__ag_typing_badge__`: Bong bóng hiển thị phím gõ `⌨️ Typing...` kèm từng ký tự gõ thời gian thực.
+>    * **Cơ chế nhúng tự động vào trang**:
+>      Trong mọi file `.spec.js`, bắt buộc phải có khối `test.beforeEach` đọc và nhúng script này vào context:
+>      ```javascript
+>      test.beforeEach(async ({ context }) => {
+>        const cursorScriptPath = path.resolve(__dirname, '../visual_cursor.js');
+>        if (fs.existsSync(cursorScriptPath)) {
+>          const cursorScript = fs.readFileSync(cursorScriptPath, 'utf8');
+>          await context.addInitScript(cursorScript);
+>        }
+>      });
+>      ```
+>
+> 3. **Di Chuyển Chuột & Click Trực Quan (`moveAndClick`)**:
+>    * Thay vì gọi `locator.click()` mù quáng lập tức, bắt buộc dùng helper `moveAndClick`:
+>      ```javascript
+>      async function moveAndClick(page, locator, options = {}) {
+>        await locator.scrollIntoViewIfNeeded().catch(() => {});
+>        const box = await locator.boundingBox();
+>        if (box) {
+>          const targetX = box.x + box.width / 2;
+>          const targetY = box.y + box.height / 2;
+>          // Chuột Neon lướt mượt mà từ vị trí cũ tới tâm nút trong 8-12 bước di chuyển
+>          await page.mouse.move(targetX, targetY, { steps: options.steps || 10 });
+>          if (options.pause) await page.waitForTimeout(options.pause);
+>          else await page.waitForTimeout(150); // Dừng ngắm trực quan 150ms
+>        }
+>        await locator.click();
+>      }
+>      ```
+>    * Nhờ đó, người quan sát trên màn hình thấy rõ con trỏ Neon lướt êm ái tới đúng nút cần bấm, dừng lại ngắm và click phát sáng gợn sóng!
+>
+> 4. **Gõ Phím Chậm Rãi Thời Gian Thực (`pressSequentially`)**:
+>    * Thay vì dùng `locator.fill(text)` nạp dữ liệu trong 0 mili-giây, bắt buộc dùng:
+>      ```javascript
+>      await inputLocator.pressSequentially('Nội dung cần nhập', { delay: 40 });
+>      ```
+>    * Tốc độ `delay: 35-50ms` mô phỏng chính xác tốc độ gõ của một chuyên viên thật, kích hoạt sự kiện `keydown/keyup`, đồng thời bong bóng `⌨️ Typing...` hiển thị từng ký tự lên màn hình.
+>
+> 5. **Triệt Tiêu Hoàn Toàn Độ Trễ Lệch Pha (Zero Latency Synchronization)**:
+>    * Trong CSS của con trỏ chuột (`visual_cursor.js`), sử dụng:
+>      ```css
+>      #__ag_cursor__ {
+>        transition: none !important;
+>        will-change: transform;
+>      }
+>      ```
+>    * Điều này đảm bảo tọa độ của con trỏ chuột Neon bám sát 100% thời gian thực theo tọa độ sự kiện `mousemove` của Playwright, không bị hiện tượng "chuột click xong thì hình con trỏ mới lết tới nơi".
+>
+> 6. **Nguyên Tắc Cuộn Khung Nhìn Thông Minh (Smart Viewport Scroll - Chỉ Cuộn Khi Bị Khuất)**:
+>    * **Quy chuẩn cốt lõi**: CHỈ thực hiện cuộn trang (`smoothScroll`) khi phần tử/vùng cần để ý (khoanh vùng) nằm ở dưới hoặc bị che khuất khỏi khung nhìn (`rect.bottom > window.innerHeight - 40 || rect.top < 60 || rect.right < 0 || rect.left > window.innerWidth`).
+>    * **Cấm cuộn thừa thãi**: Nếu phần tử ĐÃ nằm trọn vẹn trong khung nhìn (viewport visible), TUYỆT ĐỐI KHÔNG cuộn trang. Việc cuộn liên tục khi phần tử đã nhìn thấy sẽ gây giật màn hình, rung lắc khó chịu và làm mất phương hướng của người xem.
+>    * **Thực thi chuẩn**:
+>      ```javascript
+>      const isObscured = await locator.evaluate(el => {
+>        const rect = el.getBoundingClientRect();
+>        const vh = window.innerHeight || document.documentElement.clientHeight;
+>        const vw = window.innerWidth || document.documentElement.clientWidth;
+>        return (rect.bottom > (vh - 40) || rect.top < 60 || rect.right < 0 || rect.left > vw);
+>      }).catch(() => false);
+>
+>      if (isObscured) {
+>        await smoothScroll(page, locator, { block: 'center' });
+>        await page.waitForTimeout(400);
+>      }
+>      ```
+>
+> 7. **Nguyên Tắc Chống Khoanh Vùng Giả / Ảo (Zero Fake Highlighting & Text Verification)**:
+>    * **Cấm khoanh vùng bừa bãi**: Tuyệt đối KHÔNG dùng locator chung chung (ví dụ: lấy dòng đầu tiên `tr.dx-data-row:first` của DataGrid) khi dữ liệu thực tế của đối tượng chưa xuất hiện hoặc chưa được nạp.
+>    * **Bắt buộc đối soát nội dung văn bản (Strict Text Verification)**: Trước khi vẽ khung khoanh vùng và bật Huy hiệu Badge chỉ thị (`highlightAndPause`), BẮT BUỘC phải đối soát nội dung văn bản (`innerText` / `textContent`) của dòng hoặc ô dữ liệu:
+>      - Phải chứa đúng Mã đối tượng (ví dụ: `099`) hoặc Tên đối tượng chỉ định (ví dụ: `Nguyễn Văn Test`, `Nguyễn Minh Khang`).
+>      - Tuyệt đối nghiêm cấm trường hợp trong kịch bản bảo khoanh "Nguyễn Văn Test" hay "Nguyễn Minh Khang" nhưng trên giao diện lại khoanh vào dòng "Lê Minh Trí" hay "Lê Thị Cà"!
+>    * **Xử lý tiền đề đúng đắn**: Nếu đối tượng chưa hiển thị trên lưới do bộ lọc hoặc danh sách đang ở nhân viên mặc định khác: Phải dùng thao tác tìm kiếm / chọn đúng nhân viên đó trên thanh công cụ Toolbar trước, kiểm tra dòng xuất hiện đúng rồi mới tiến hành khoanh vùng.
+>
+> 8. **Nguyên Tắc 100% Thao Tác Trực Quan Qua Chuột & Bàn Phím (Real Visual Mouse & Keyboard Only)**:
+>    * **Quy chuẩn bất biến**: Mọi tương tác trên giao diện (chuyển tab trên Top Tab Bar, mở menu trên Sidebar, tìm kiếm, bấm nút, chọn dropdown) đều phải xuất phát từ thao tác CHUỘT (`moveAndClick`) hoặc BÀN PHÍM (`pressSequentially`) trực quan của người dùng.
+>    * **Tuyệt đối cấm can thiệp ngầm (No Silent Script Trigger)**: Nghiêm cấm việc gọi hàm JavaScript ngầm trong DOM (`page.evaluate(() => window.OpenAppInSidebar(...))`, `element.click()` âm thầm) làm cho menu hay tab "đùng một phát bung ra" mà người xem không thấy bất kỳ chuyển động chuột hay phím gõ nào.
+>    * **Kịch bản điều hướng chuẩn mực**:
+>      - **Khi chuyển tab đã mở**: Di chuyển con trỏ chuột Neon mượt mà tới đúng tab trên thanh tab (`#dynamic-tab-..., .nav-tabs button:has-text(...)`), dừng ngắm 150ms và nhấp chuột phát hiệu ứng sóng gợn để kích hoạt tab.
+>      - **Khi mở menu mới trên Sidebar**:
+>        1. Di chuyển chuột Neon tới ô tìm kiếm menu trên Sidebar (`#txtSearchApp` hoặc `.sidebar input[type="text"]`).
+>        2. Nhấp chuột vào ô tìm kiếm, xóa trắng ô (Ctrl+A -> Backspace).
+>        3. Gõ từ khóa tên menu bằng `pressSequentially('Tên Menu', { delay: 90-160 })` để hiển thị bong bóng gõ phím `⌨️ Typing...`.
+>        4. Chờ Sidebar lọc ra kết quả, di chuyển chuột Neon tới đúng mục menu vừa được lọc và nhấp chuột mở chức năng.
+>
+> 9. **Nguyên Tắc Chống Dữ Liệu Ma & Lưu Ngầm (Zero Ghost Data & Strict Pre-Submit Verification)**:
+>    * **Cấm tuyệt đối gọi API / Stored Procedure trực tiếp từ trình duyệt**: Nghiêm cấm sử dụng `window.AjaxHPAParadiseAsync(...)`, `fetch()`, `$.ajax()` hoặc bất kỳ hàm JS nội bộ nào trong `page.evaluate()` để tạo/sửa/xóa dữ liệu thay cho thao tác trên UI. Nếu nút Lưu hoặc Form không xuất hiện, Test Case bắt buộc phải báo **FAIL** để phát hiện lỗi giao diện, tuyệt đối không được viết nhánh `else` gọi API ngầm để "cứu" Test Case PASS giả tạo!
+>    * **Cấm gán dữ liệu vào biến Instance ngầm của Framework**: Nghiêm cấm dùng `window[k].option('value', ...)` hay `$(...).dxTextBox('instance').option('value', ...)` hoặc `element.value = ...` để bơm dữ liệu vào form mà bỏ qua thao tác chuột và bàn phím.
+>    * **Quy trình 3 bước bắt buộc khi điền bất kỳ trường nào trên Modal / Form**:
+>      1. **Click mở focus**: Dùng `moveAndClick(page, inputLocator)` để chuột Neon bay tới đúng ô input và click mở con trỏ nhấp nháy.
+>      2. **Gõ phím từng chữ**: Dùng `typeHumanLike(page, inputLocator, text)` (qua `pressSequentially`) để kích hoạt bong bóng `⌨️ Typing...` và chữ hiện ra từ từ trên màn hình.
+>      3. **Chốt chặn kiểm tra hiển thị trước khi bấm Submit (Pre-Submit Visual Gate)**: Trước khi di chuột tới nút `Lưu / Gửi đơn / Đăng ký`, bắt buộc phải kiểm tra giá trị thực tế đang hiển thị bằng mắt thường trên các ô input qua `fillAndVerifyHumanLike`. Nếu ô input trên màn hình vẫn đang trống (`""`), kịch bản phải dừng lại ngay lập tức, tuyệt đối không được bấm Submit!
+>
+> 10. **Luật Gõ Phím Từng Ký Tự — Cấm Tuyệt Đối Copy-Paste (`Zero-Fill / Character-by-Character Typing Law`)**:
+>     * **Cấm tuyệt đối lệnh `.fill()` và gán `.value`**: Nghiêm cấm sử dụng `locator.fill(text)`, `page.fill()`, `keyboard.insertText()` hoặc `el.value = text` để đưa dữ liệu vào ô input (vì các lệnh này đẩy toàn bộ chuỗi vào ô cùng lúc như Copy-Paste trong 0ms).
+>     * **Cách duy nhất được phép xóa ô input**: Phải click vào ô, bấm tổ hợp phím `Control+A` rồi bấm `Backspace` như người thật.
+>     * **Bắt buộc gõ từng chữ cái**: Mọi ký tự đưa vào ô input (kể cả ô tìm kiếm trên Sidebar, ô lọc DataGrid, ô ngày tháng, số tiền, ghi chú) BẮT BUỘC phải gõ tuần tự từng chữ một qua `pressSequentially(char, { delay: randomBetween(90, 160) })` để mắt người nhìn thấy từng chữ cái nhảy ra kèm bong bóng `⌨️` và con trỏ nhấp nháy dịch chuyển.
+>
+> 11. **Luật Khoanh Vùng Đúng Dòng Trọng Tâm & Dừng 5 Giây Quan Sát (`Strict Target-Row Highlight & Mandatory 5s Pause`)**:
+>     * **Khi nào bắt buộc phải khoanh vùng + dừng 5 giây (`5000ms`)?**:
+>       1. Ngay sau khi vừa điền xong toàn bộ các trường trên một Form/Modal (trước khi bấm Lưu/Gửi đơn): Khoanh vùng form vừa điền để người xem kiểm tra các chữ vừa gõ.
+>       2. Ngay sau khi mở bất kỳ bảng dữ liệu (`DataGrid` / `Table` / Danh sách thẻ) có nhiều dòng: Bắt buộc phải lọc/tìm đến đúng dòng của đối tượng đang test, khoanh vùng **ĐÚNG DÒNG ĐÓ (`tr.dx-data-row` hoặc `.card`)** và dừng đúng **5,000ms (5 giây)**.
+>       3. Ngay sau khi thực hiện xong thao tác Thêm / Sửa / Duyệt / Tính lương: Quay lại bảng danh sách, khoanh vùng đúng dòng kết quả vừa biến đổi và dừng **5,000ms (5 giây)**.
+>     * **4 Cấm Kỵ Tuyệt Đối để Chống Khoanh Vùng Giả (Anti-Fake Highlighting Rules)**:
+>       - ❌ **Cấm khoanh cả bảng lớn**: Tuyệt đối không đưa `.dx-datagrid`, `table`, `tbody`, `#appapp` vào locator của hàm `highlightAndPause`. Chỉ được phép khoanh vùng thẻ dòng (`tr.dx-data-row`, `tbody tr`, `.getcardregisteredOA`) hoặc ô dữ liệu cụ thể (`td`).
+>       - ❌ **Cấm dùng `tr.first()` mù quáng**: Tuyệt đối không lấy dòng đầu tiên (`tr.dx-data-row >> nth=0`) nếu không có bộ lọc `:has-text("...")` chứa Mã định danh duy nhất (ví dụ: Mã NV `099`, Họ tên `Nguyễn Minh Khang`, hoặc Mã Token vừa tạo).
+>       - ❌ **Cấm bỏ qua khi không khớp text**: Trong hàm `highlightAndPause`, tham số `expectedText` là **BẮT BUỘC**. Nếu nội dung dòng định khoanh không chứa đầy đủ `expectedText`, hàm bắt buộc phải **`throw new Error(...)` làm FAIL test case ngay lập tức**, tuyệt đối không được `return false` hay `catch(() => {})` để lờ đi!
+>       - ❌ **Cấm khoanh dòng khi có nhiều dòng trùng**: Nếu locator chưa lọc kỹ, phải truyền mảng `expectedText: ['099', '10,000,000']` để đảm bảo dòng được khoanh chứa đồng thời cả Mã nhân viên lẫn Giá trị nghiệp vụ cần đối soát.
+>
+> 12. **Luật Cuộn Mượt Mà Từ Từ (Human-like Smooth Scroll)**:
+>     * **Cấm cuộn nhảy cóc tức thì**: Nghiêm cấm dùng `el.scrollIntoView({ behavior: 'auto' })` hay `window.scrollTo(0, 500)` làm màn hình giật cục lập tức.
+>     * **Bắt buộc cuộn mượt (Smooth Scroll)**: Mọi thao tác cuộn bảng (`DataGrid`), cuộn trang, cuộn popup đều phải sử dụng `behavior: 'smooth'`, kết hợp nhịp dừng `600ms - 900ms` để mắt người kịp bắt nhịp định vị nội dung vừa xuất hiện trên khung nhìn (`smoothScrollHumanLike`).
+>
+> 13. **Luật Chuyển Trang & Phân Trang Trực Quan (Real Mouse Pagination)**:
+>     * **Cấm đổi trang ngầm qua API / Code**: Nghiêm cấm gọi `grid.navigateToPage(2)` hay hàm JS bên trong `page.evaluate()` để lật trang.
+>     * **Bắt buộc di chuột click nút phân trang (`navigateToPageHumanLike`)**: 
+>       1. Cuộn mượt màn hình xuống khu vực thanh phân trang (`.dx-datagrid-pager` hoặc `.pagination`).
+>       2. Di chuyển con trỏ chuột Neon từ từ tới nút số trang mục tiêu (ví dụ: Trang `2`) hoặc nút Next (`>`).
+>       3. Dừng ngắm 200ms - 300ms rồi click chuột, sau đó chờ `1000ms - 1500ms` cho bảng render xong dữ liệu của trang mới.
+>
+> 14. **Luật Cấm Can Thiệp Ngầm Vào Control Phức Tạp: SelectBox, Combobox, Lookup, DatePicker, NumberBox (`Zero Component-API Manipulation Law`)**:
+>     * **5 Cú Pháp Bị CẤM TUYỆT ĐỐI trong mọi file `.spec.js`**:
+>       1. ❌ **Cấm gọi DevExtreme Instance API**: Cấm dùng `.dxSelectBox('instance').option('value', ...)`, `.dxDateBox('instance')`, `.dxNumberBox('instance')`, `.dxLookup('instance')`, `.dxDropDownBox('instance')` hoặc quét `for (let k in window) if (k.startsWith('Instance')) window[k].option(...)`.
+>       2. ❌ **Cấm thao túng thẻ `<select>` ngầm**: Cấm dùng `selectElement.value = ...`, `selectElement.selectedIndex = ...` hoặc `locator.selectOption()` mà không mở danh sách trực quan.
+>       3. ❌ **Cấm giả lập sự kiện DOM**: Cấm dùng `el.dispatchEvent(new Event('change'))`, `el.dispatchEvent(new Event('input'))` trong `page.evaluate()`.
+>       4. ❌ **Cấm vẽ chữ giả lên Control**: Cấm tuyệt đối việc gán `el.innerHTML = ...` hoặc `el.innerText = ...` để làm giả giao diện đã chọn nhân viên/dữ liệu.
+>       5. ❌ **Cấm gán thẳng chuỗi ngày vào DatePicker**: Cấm dùng `dateInput.value = '2026-10-15'` hoặc `dateInput.fill('2026-10-15')`.
+>     * **Quy trình Vật Lý Bắt Buộc khi tương tác với từng loại Control trên Modal / Toolbar**:
+>       - **Đối với SelectBox / Combobox / Lookup (`selectDropdownHumanLike` / `selectBoxHumanLike`)**:
+>         1. **Di chuột & Click mở**: Dùng `moveAndClick` đưa chuột Neon tới đúng khung SelectBox (hoặc nút mũi tên `.dx-dropdowneditor-button`) và click để mở danh sách.
+>         2. **Chờ danh sách xổ xuống**: Dừng `400ms - 600ms` để mắt người nhìn thấy popup danh sách (`.dx-overlay-content .dx-list-item`, `.dx-datagrid-rowsview`, hoặc menu dropdown) hiện ra trên màn hình.
+>         3. **Tìm & Click chọn dòng mục tiêu**: Nếu có ô tìm kiếm trong popup Lookup, dùng `typeHumanLike` gõ từng chữ để lọc. Sau đó dùng `moveAndClick` rê chuột Neon xuống đúng dòng item trong danh sách đang xổ ra và click chọn!
+>       - **Đối với DatePicker / Ô Ngày Tháng & Giờ (`fillDateHumanLike`)**:
+>         * **Phân biệt rõ 2 loại Control Ngày/Giờ trong hệ thống**:
+>           1. **Loại 1: Thẻ HTML5 thuần `<input type="date">` hoặc `<input type="time">`** (như `#AttDate`, `#TimeInOut` trên màn hình Xin bù công `MnuHRS033`):
+>              - *Lưu ý cốt lõi*: Trình duyệt Chromium/Google Chrome bảo vệ thẻ `type="date"` bằng Shadow DOM (`::-webkit-datetime-edit`) với 3 slot phân biệt `[mm]/[dd]/[yyyy]`. Thẻ này **từ chối nhận chuỗi ký tự tự do** (như dấu gạch chéo `/` hoặc `pressSequentially('15/10/2026')`), nếu cố gõ sẽ bị nuốt ký tự dẫn đến hiển thị lỗi `mm/dd/0006` và rỗng dữ liệu!
+>              - *Quy chuẩn thực thi*: Dùng `moveAndClick` đưa chuột Neon vào ô input $\rightarrow$ Dùng chuẩn W3C ISO `YYYY-MM-DD` (hoặc `HH:mm`) qua `input.fill(isoDate)` $\rightarrow$ Kích hoạt sự kiện `dispatchEvent('input')` và `dispatchEvent('change')` để form cập nhật trạng thái hợp lệ.
+>           2. **Loại 2: DevExtreme dxDateBox / Masked Input (`.dx-datebox`, `.dxDateBox`, `input.dx-texteditor-input`)** (như màn hình Xin nghỉ phép `MnuWPT315`, Xin tăng ca `MnuWPT316`):
+>              - *Lưu ý cốt lõi*: DevExtreme sử dụng mặt nạ cố định (`useMaskBehavior: true`, định dạng `dd/MM/yyyy HH:mm` hoặc `dd/MM/yyyy`). Các ký tự phân cách như `/`, `:`, khoảng trắng ` ` là ký tự mặt nạ nội bộ. Nếu gõ chuỗi chứa `/` hoặc gọi `locator.pressSequentially()` lặp đi lặp lại từng ký tự, Playwright sẽ re-focus/re-click vào input liên tục làm con trỏ nhảy sai vị trí và mặt nạ từ chối nhận!
+>              - *Quy chuẩn thực thi*:
+>                + Nếu có nút Clear (`.dx-clear-button-area`), di chuột Neon `moveAndClick` bấm nút Clear để reset sạch sẽ về rỗng.
+>                + Di chuột Neon `moveAndClick` vào ô text input (`input.dx-texteditor-input`), nhấn `Control+A` $\rightarrow$ `Backspace`.
+>                + Trích xuất chuỗi chữ số thuần túy (Raw Digits: `dateString.replace(/\D/g, '')`, ví dụ `'241020260800'` hoặc `'20102026'`).
+>                + Dùng `page.keyboard.type(rawDigits, { delay: 90-150 })` gõ tuần tự như người thật. Mặt nạ DevExtreme sẽ tự động đặt các dấu `/` và `:` vào đúng chỗ!
+>                + Bấm phím `Enter` (hoặc click ra ngoài) để đóng popup lịch và xác nhận giá trị vào Instance (TUYỆT ĐỐI KHÔNG dùng phím `Tab` làm con trỏ nhấp nháy nhảy cóc sang ô tiếp theo).
+>       - **Đối với NumberBox / Tiền lương (`typeHumanLike` / `fillNumberHumanLike`)**:
+>         1. Dùng `moveAndClick` rê chuột Neon vào thẳng thẻ `input.dx-texteditor-input` bên trong NumberBox.
+>         2. Xóa số cũ bằng `Control+A` + `Backspace` và gõ từng chữ số (ví dụ `'10000000'`) bằng `pressSequentially`.
+>
+> 15. **BỘ 7 LUẬT THÉP BẮT BUỘC ĐỂ 100% NHƯ NGƯỜI THẬT (ZERO BOT SHORTCUTS)**:
+>     * **Luật 1: CẤM TUYỆT ĐỐI các hàm tương tác ngầm của Playwright (Zero Native Action Rule)**:
+>       - ❌ Cấm: `locator.click()`, `locator.click({ force: true })`, `locator.dblclick()` $\rightarrow$ Bắt buộc thay bằng: `await moveAndClick(page, locator)`.
+>       - ❌ Cấm: `locator.fill('...')` (trừ khi dùng để xóa trắng ô trong `typeHumanLike`) $\rightarrow$ Bắt buộc thay bằng: `await typeHumanLike(page, locator, '...')`.
+>       - ❌ Cấm: `locator.check()`, `locator.uncheck()` $\rightarrow$ Bắt buộc thay bằng: `await moveAndClick(page, locator)`.
+>       - ❌ Cấm: `document.querySelector(...).click()` bên trong `page.evaluate()`.
+>     * **Luật 2: CẤM dùng `page.evaluate()` để mở Menu, mở Modal hoặc Submit Form (No Silent JS Trigger)**:
+>       - ❌ Cấm tuyệt đối việc gọi `window.OpenAppInSidebar()`, `window.addNewTab()`, `window.openFormParam()`, `window.AjaxHPAParadiseAsync()` để mở màn hình hoặc lưu dữ liệu.
+>       - ✅ Bắt buộc: Muốn mở Menu $\rightarrow$ Chuột phải di chuyển lên Top Tab Bar (nếu tab đã mở) hoặc di chuyển vào ô Tìm kiếm của Sidebar, gõ tên menu từng chữ, chờ danh sách lọc hiện ra rồi di chuột xuống bấm vào dòng menu đó (`openMenuHumanLike`). Muốn mở Modal Thêm mới $\rightarrow$ Chuột phải lướt tới đúng nút `+ Thêm` trên giao diện và click.
+>     * **Luật 3: CẤM bơm dữ liệu hàng loạt vào Form qua DOM / DevExtreme Instance (No Instant Form Injection)**:
+>       - ❌ Cấm dùng vòng lặp `for (let k in window) Instance...option('value', ...)` hay `document.getElementById('...').value = ...` để điền form trong 0ms.
+>       - ✅ Bắt buộc: Dùng `fillAndVerifyHumanLike` cho Text/Number/Date và `selectDropdownHumanLike` cho dropdown theo đúng 3 nhịp: Di chuột click mở hộp chọn $\rightarrow$ Chờ danh sách xổ xuống (300ms) $\rightarrow$ Di chuột tới dòng dữ liệu mục tiêu và click chọn.
+>     * **Luật 4: Thống nhất 100% một bộ Helper điều hướng duy nhất (Single Source of Truth Helpers)**:
+>       - Xóa bỏ toàn bộ các hàm phân mảnh riêng lẻ (`openAppFix5`, `openAppFix7`, `confirmPopupFix5`...). Tất cả các Test Case từ TC-01 đến TC-20 phải gọi chung 1 hàm mở menu trực quan (`openMenuHumanLike`) và 1 hàm xác nhận popup trực quan (`confirmPopupHumanLike`).
+>     * **Luật 5: Khóa chặn `moveAndClick` — Chưa tới nơi thì KHÔNG ĐƯỢC CLICK**:
+>       - Tuyệt đối không dùng `else { await locator.click(); }` làm đường lui. Phải ép phần tử hiển thị (`waitFor({ state: 'visible' })`), lấy bằng được `boundingBox()`, di chuyển chuột từng bước tới tọa độ đó rồi mới phát lệnh `mouse.down()` / `mouse.up()`. Nếu không lấy được tọa độ $\rightarrow$ `throw new Error(...)` ngay!
+>     * **Luật 6: Nhịp thở thị giác giữa các bước chuyển cảnh (Human Cognitive Pause)**:
+>       - Sau khi mở Menu / chuyển Tab: Dừng `600ms – 1000ms` để giao diện render xong.
+>       - Sau khi Modal / Popup bật lên: Dừng `400ms – 700ms` (nhịp mắt người quét form) rồi mới bắt đầu di chuột vào ô đầu tiên.
+>       - Trước khi bấm nút Chốt / Lưu / Duyệt quan trọng: Tăng thời gian dừng ngắm (pause) lên `300ms – 500ms`.
+>     * **Luật 7: CẤM DÙNG PHÍM TAB CHUYỂN Ô LÀM CON TRỎ NHÁY ĐI TRƯỚC CHUỘT NEON (Anti-Tab Focus Desynchronization Rule)**:
+>       - ❌ **Cấm tuyệt đối**: Lệnh `page.keyboard.press('Tab')` sau khi gõ xong một ô input để nhảy sang ô tiếp theo.
+>       - ❌ **Nguyên nhân cấm**: Phím `Tab` của Chromium chuyển focus trong **0ms**, khiến vạch nhấp nháy soạn thảo (`caret |`) xuất hiện ngay lập tức tại ô kế tiếp trước khi chuột Neon kịp di chuyển tới, gây lộ dấu vết bot và phá vỡ tính tự nhiên.
+>       - ✅ **Bắt buộc**: Mọi thao tác chuyển trường (Form traversal) phải do **chuột Neon tự động lướt tới ô tiếp theo và click** để mở focus tự nhiên (trình duyệt sẽ tự động kích hoạt `blur` ô cũ $\rightarrow$ `focus` ô mới y hệt người thật).
+>
+> 16. **Luật 15: CẤM DÙNG PHÍM TAB CHUYỂN Ô LÀM CON TRỎ NHÁY ĐI TRƯỚC CHUỘT NEON (Anti-Tab Focus Desynchronization Rule)**:
+>     * **Quy chuẩn bất biến**: Trên mọi Form / Modal / Toolbar, con trỏ nhấp nháy soạn thảo (`caret |`) **CHỈ ĐƯỢC PHÉP** xuất hiện SAU KHI con trỏ chuột Neon đã bay tới đúng vị trí ô input và phát lệnh `click` mở focus thành công.
+>     * **Triệt tiêu lệnh `press('Tab')` chuyển ô**: Nghiêm cấm hoàn toàn hành vi dùng phím `Tab` để nhảy ô input. Việc chuyển giữa các ô input, datepicker, selectbox bắt buộc phải diễn ra tuần tự qua chuyển động chuột Neon trực quan (`moveAndClick` / `typeHumanLike`).
+
+---
+
 1. **Hiển thị trực quan 100% trên Google Chrome thật (`channel: 'chrome'`, `headless: false`)**:
    - Tuyệt đối không chạy headless khi người dùng yêu cầu test quan sát.
-   - **Đồng bộ độ trễ chuột và thao tác (Low Latency Synchronization)**: Cấu hình `slowMo: 100` trong `playwright.config.js` để tránh trễ lệch pha. Trong `visual_cursor.js` luôn dùng `transition: none !important; will-change: transform` để con trỏ chuột Neon bám sát 100% thời gian thực.
    - Thao tác gõ phím mượt mà, quan sát rõ: dùng `locator.pressSequentially('text', { delay: 35-50 })`.
-   - Khuyến nghị dùng helper `moveAndClick(page, locator, { steps: 8-12 })` để chuột lướt trực quan vào giữa phần tử trước khi bấm, người xem nhìn rõ thao tác chuột.
+   - Sử dụng helper `moveAndClick(page, locator, { steps: 8-12 })` để chuột lướt trực quan vào giữa phần tử trước khi bấm.
    - Luôn nhúng `visual_cursor.js` trong `test.beforeEach` để tạo con trỏ chuột Neon phát sáng và hiệu ứng sóng gợn khi click.
 2. **Tái sử dụng phiên đăng nhập (Authentication Reuse)**:
    - Sử dụng trợ lý `const { loginAsAdmin } = require('../helpers/auth')` trong `beforeEach` hoặc cấu hình `storageState: 'auth.json'` để tránh phải lặp lại mã đăng nhập trong từng test case.
@@ -117,8 +319,6 @@ tests/ (Mã nguồn kịch bản)                test-evidence/ (Bằng chứng 
 
 ## 2.1. BỘ NGUYÊN TẮC TEST TỔNG QUÁT THEO TỪNG LOẠI CONTROL (UNIVERSAL CONTROL SPECIFICATION)
 
-*(Áp dụng nhất quán cho MỌI menu, màn hình, phân hệ và dự án web. Mọi kịch bản `.spec.js` khi sinh ra hoặc mở rộng BẮT BUỘC phải tuân theo 3 lớp thẩm định: **UI/DOM ── Network API ── Logic Dữ Liệu**)*
-
 ```
 ┌────────────────────────────────────────────────────────────────────────┐
 │             3 LỚP THẨM ĐỊNH BẮT BUỘC CHO MỌI CONTROL (TRIPLE-LAYER)     │
@@ -130,8 +330,6 @@ tests/ (Mã nguồn kịch bản)                test-evidence/ (Bằng chứng 
 │ - Enable/Disable  │ - Check cờ success/result   │ - Đọc lại (Read-back)│
 └───────────────────┴─────────────────────────────┴──────────────────────┘
 ```
-
----
 
 ### NHÓM 1: CÁC CONTROL NHẬP LIỆU (INPUT CONTROLS)
 
@@ -195,31 +393,24 @@ tests/ (Mã nguồn kịch bản)                test-evidence/ (Bằng chứng 
 * **Thẩm định 3 lớp (BẮT BUỘC ROUND-TRIP)**:
   1. *UI*: Chip được click có class active/selected.
   2. *Network*: Bắt API `/query` hoặc `/filter` $\rightarrow$ Assert payload gửi đúng mã trạng thái $A$ và response trả về dữ liệu tương ứng.
-  3. *Logic Dữ Liệu*:
-     - Mọi dòng trên bảng phải mang đúng nhãn trạng thái $A$.
-     - **Vòng lặp khôi phục bắt buộc**: Click quay lại chip "Tất cả" lần 2 $\rightarrow$ Bắt API $\rightarrow$ **Assert số dòng phục hồi $N_{restore} == N_0$** (chặn triệt để lỗi kẹt filter ngày hoặc đột biến state làm mất sạch dữ liệu).
+  3. *Logic Dữ Liệu*: Mọi dòng trên bảng phải mang đúng nhãn trạng thái $A$. Vòng lặp khôi phục: Click lại chip "Tất cả" lần 2 $\rightarrow$ Assert số dòng phục hồi $N_{restore} == N_0$.
 
 #### 8. Ô Tìm Kiếm Nhanh (Search Box / Instant Filter)
 * **Thao tác chuẩn**:
-  - Tuyệt đối không nhập chuỗi cứng bừa bãi.
-  - **Trích xuất từ khóa động**: Đọc text từ 1 dòng thực tế đang có trên bảng (vd: Tên khách hàng, Mã nhân viên) $\rightarrow$ Gõ vào ô search bằng `pressSequentially`.
+  - Trích xuất từ khóa động từ 1 dòng thực tế đang có trên bảng $\rightarrow$ Gõ vào ô search bằng `pressSequentially`.
 * **Thẩm định 3 lớp**:
   1. *Instant Filter*: Đợi debounce 300-500ms $\rightarrow$ Mọi dòng hiển thị trên DataGrid bắt buộc phải chứa từ khóa tìm kiếm.
-  2. *Trường hợp không tìm thấy*: Gõ một chuỗi ngẫu nhiên không tồn tại (vd: `###XYZ_NO_DATA###`) $\rightarrow$ Assert bảng hiển thị giao diện rỗng: *"Không có dữ liệu"* (Empty state).
-  3. *Phục hồi khi xóa search*: Dùng `selectText() + Backspace` để xóa sạch ô tìm kiếm $\rightarrow$ Assert bảng tự động nạp lại đầy đủ danh sách ban đầu.
+  2. *Trường hợp không tìm thấy*: Gõ một chuỗi ngẫu nhiên không tồn tại $\rightarrow$ Assert bảng hiển thị giao diện rỗng: *"Không có dữ liệu"*.
+  3. *Phục hồi khi xóa search*: Xóa sạch ô tìm kiếm $\rightarrow$ Assert bảng tự động nạp lại đầy đủ danh sách ban đầu.
 
 #### 9. Bộ Phân Trang (Pagination: Next, Prev, Page Size, Jump)
-* **Thao tác chuẩn**:
-  - Đọc text dòng đầu tiên của Trang 1 $\rightarrow$ Bấm nút chuyển sang Trang 2 (hoặc số trang cụ thể).
 * **Thẩm định 3 lớp**:
-  1. *UI*: Nút Trang 2 chuyển sang active, nút "Previous" được enable (không còn disabled).
+  1. *UI*: Nút Trang 2 chuyển sang active, nút "Previous" được enable.
   2. *Network*: Bắt API phân trang $\rightarrow$ Assert tham số `pageIndex=2` (hoặc `skip=20, take=20`).
-  3. *Dữ liệu*: Dòng đầu tiên của Trang 2 **PHẢI KHÁC** dòng đầu tiên của Trang 1.
+  3. *Dữ liệu*: Dòng đầu tiên của Trang 2 PHẢI KHÁC dòng đầu tiên của Trang 1.
   4. *Đổi Page Size*: Chọn đổi số dòng từ `20` lên `50` $\rightarrow$ Assert số dòng trên bảng tăng lên tương ứng.
 
 #### 10. Sắp Xếp Cột & Lọc Đầu Cột (Column Sorting & Header Filter)
-* **Thao tác chuẩn**:
-  - Di chuột click vào tiêu đề cột (Column Header).
 * **Thẩm định 3 lớp**:
   1. *UI*: Xuất hiện icon mũi tên sắp xếp tăng dần $\uparrow$ (click lần 1) hoặc giảm dần $\downarrow$ (click lần 2).
   2. *Network*: Bắt API query $\rightarrow$ Assert tham số `sortColumn` và `sortDirection` (`ASC`/`DESC`).
@@ -230,16 +421,12 @@ tests/ (Mã nguồn kịch bản)                test-evidence/ (Bằng chứng 
 ### NHÓM 3: BẢNG DỮ LIỆU & HIỂN THỊ (DATA DISPLAY CONTROLS)
 
 #### 11. Bảng Dữ Liệu (DataGrid / Table)
-* **Thao tác chuẩn**:
-  - Kiểm tra trạng thái nạp ban đầu, chọn dòng (single row / checkbox multi-row), double-click xem chi tiết.
 * **Thẩm định 3 lớp**:
-  1. *Đối chiếu API vs UI*: Bóc tách JSON payload từ API nạp bảng (`rawRows = JSON.parse(json.result)`) $\rightarrow$ So khớp `expect(uiRowCount).toBe(rawRows.length)`.
+  1. *Đối chiếu API vs UI*: Bóc tách JSON payload từ API nạp bảng $\rightarrow$ So khớp `expect(uiRowCount).toBe(rawRows.length)`.
   2. *Empty State*: Khi backend trả mảng rỗng `[]` $\rightarrow$ Bảng phải hiện thông báo "Không có dữ liệu" rõ ràng, không bị crash vỡ bảng.
   3. *Double-click chi tiết*: Double click 1 dòng $\rightarrow$ Bắt API nạp chi tiết $\rightarrow$ Assert form chi tiết mở ra nạp đúng thông tin dòng đó.
 
 #### 12. Thẻ Chỉ Số Tổng Hợp (Metric / KPI Counter Cards)
-* **Thao tác chuẩn**:
-  - Thao tác các bộ lọc bên dưới bảng và quan sát thẻ KPI ở trên.
 * **Thẩm định 3 lớp**:
   1. *UI*: Các thẻ chỉ số (Tổng số, Đang xử lý, Hoàn tất) có số lượng rõ ràng, không hiển thị `NaN`, `null`, `undefined`.
   2. *Toán học / Logic tổng hợp*: Tổng số trên thẻ KPI phải bằng tổng các thẻ trạng thái con cộng lại, hoặc khớp đúng `totalCount` trả về từ API backend.
@@ -249,35 +436,28 @@ tests/ (Mã nguồn kịch bản)                test-evidence/ (Bằng chứng 
 ### NHÓM 4: CÁC CONTROL HÀNH ĐỘNG (ACTION & BUTTON CONTROLS)
 
 #### 13. Nút Hành Động Chính (Primary CTA: Lưu, Gửi, Duyệt, Tạo Mới)
-* **Thao tác chuẩn**:
-  - Di chuyển chuột Neon tới đúng tọa độ nút $\rightarrow$ Dừng ngắm trực quan $\rightarrow$ Click.
+* **Thao tác chuẩn**: Di chuyển chuột Neon tới đúng tọa độ nút $\rightarrow$ Dừng ngắm 150ms $\rightarrow$ Click.
 * **Thẩm định 3 lớp**:
-  1. *Chống click kép (Debounce / Double-click prevention)*: Click nút Lưu $\rightarrow$ Nút phải lập tức chuyển sang trạng thái disabled hoặc có icon spinner xoay xoay để chống người dùng bấm liên tiếp tạo bản ghi trùng lặp.
-  2. *Network*: Bắt API POST/PUT $\rightarrow$ Assert HTTP 200, payload JSON trả về mã thành công (`result: "success"`, `Success: 1`).
+  1. *Chống click kép (Debounce)*: Click nút Lưu $\rightarrow$ Nút phải lập tức chuyển sang trạng thái disabled hoặc spinner xoay để chống người dùng bấm liên tiếp tạo bản ghi trùng lặp.
+  2. *Network*: Bắt API POST/PUT $\rightarrow$ Assert HTTP 200, payload JSON trả về mã thành công.
   3. *Đọc lại (Read-back)*: Modal đóng $\rightarrow$ Toast thành công hiện lên $\rightarrow$ Bản ghi mới/vừa cập nhật phải lập tức xuất hiện trên DataGrid.
 
 #### 14. Nút Hủy / Đóng (Cancel / Close / Dismiss)
-* **Thao tác chuẩn**:
-  - Thử nghiệm 2 trường hợp: (1) Form chưa sửa gì và (2) Form đã sửa dữ liệu dở dang (Dirty Form).
 * **Thẩm định 3 lớp**:
   1. *Form chưa sửa*: Bấm Hủy $\rightarrow$ Modal đóng ngay lập tức, không gây lỗi.
   2. *Form đã sửa dở dang (Dirty check)*: Nhập vài chữ vào form rồi bấm Hủy $\rightarrow$ Kiểm tra xem hệ thống có bật popup cảnh báo *"Dữ liệu chưa được lưu, bạn có chắc chắn muốn thoát?"* hay không.
-  3. *Bảo toàn trạng thái*: Đóng modal xong $\rightarrow$ Danh sách DataGrid bên ngoài vẫn giữ nguyên vị trí phân trang và bộ lọc, không bị reset trắng.
+  3. *Bảo toàn trạng thái*: Đóng modal xong $\rightarrow$ Danh sách DataGrid bên ngoài vẫn giữ nguyên vị trí phân trang và bộ lọc.
 
 #### 15. Nút Hành Động Xóa / Hủy Bỏ (Delete / Inactivate Action)
-* **Thao tác chuẩn**:
-  - Chọn dòng cần xóa $\rightarrow$ Bấm nút Xóa $\rightarrow$ Thao tác trên Modal xác nhận.
-* **Thẩm định 3 lớp (BẢO VỆ DỮ LIỆU)**:
+* **Thẩm định 3 lớp**:
   1. *Bắt buộc có xác nhận*: Tuyệt đối không được xóa ngay khi vừa click icon xóa $\rightarrow$ Bắt buộc assert xuất hiện Popup/Confirm Dialog ("Bạn có chắc chắn muốn xóa bản ghi này?").
   2. *Hành động Hủy xóa*: Bấm "Hủy" trên popup $\rightarrow$ Bản ghi vẫn giữ nguyên trên bảng.
-  3. *Hành động Đồng ý xóa*: Bấm "Xóa" $\rightarrow$ Bắt API Delete (HTTP 200) $\rightarrow$ Assert số dòng trên DataGrid giảm đi 1 ($N - 1$) và mã bản ghi đó biến mất hoàn toàn.
+  3. *Hành động Đồng ý xóa*: Bấm "Xóa" $\rightarrow$ Bắt API Delete (HTTP 200) $\rightarrow$ Assert số dòng trên DataGrid giảm đi 1 và mã bản ghi đó biến mất hoàn toàn.
 
 #### 16. Menu Thao Tác Từng Dòng (Context Menu / Row Kebab Menu 3 chấm)
-* **Thao tác chuẩn**:
-  - Di chuột tới nút 3 chấm trên dòng $\rightarrow$ Click mở menu ngữ cảnh.
 * **Thẩm định 3 lớp**:
-  1. *UI Position*: Menu ngữ cảnh bung ra đúng vị trí chuột, không bị tràn ra ngoài màn hình (overflow) hoặc che khuất nút khác.
-  2. *Phân quyền*: Các nút hành động (Sửa, Xóa, Phê duyệt) hiển thị đúng theo quyền hạn tài khoản đang đăng nhập.
+  1. *UI Position*: Menu ngữ cảnh bung ra đúng vị trí chuột, không bị tràn ra ngoài màn hình hoặc che khuất nút khác.
+  2. *Phân quyền*: Các nút hành động (Sửa, Xóa, Phê duyệt) hiển thị đúng theo quyền hạn tài khoản.
   3. *Click ngoài*: Click chuột ra ngoài khoảng trống $\rightarrow$ Menu ngữ cảnh phải tự động đóng lại.
 
 ---
@@ -285,423 +465,72 @@ tests/ (Mã nguồn kịch bản)                test-evidence/ (Bằng chứng 
 ### NHÓM 5: KHUNG CHỨA & PHẢN HỒI (CONTAINERS & FEEDBACK CONTROLS)
 
 #### 17. Cửa Sổ Bật Lên (Modal / Dialog / Drawer / Popup)
-* **Thao tác chuẩn**:
-  - Mở modal $\rightarrow$ Thao tác bên trong $\rightarrow$ Đóng bằng nút `x`, nút Đóng, phím `Escape`, hoặc click vùng mờ Backdrop.
 * **Thẩm định 3 lớp**:
-  1. *Backdrop & Focus Trap*: Khi modal mở, thanh cuộn của trang chính phía sau phải bị khóa (không cuộn được trang nền) và phím `Tab` chỉ di chuyển bên trong modal.
+  1. *Backdrop & Focus Trap*: Khi modal mở, thanh cuộn của trang chính phía sau phải bị khóa và phím `Tab` chỉ di chuyển bên trong modal.
   2. *Phím Escape*: Bấm phím `Escape` $\rightarrow$ Modal phải đóng lại an toàn.
-  3. *Dọn dẹp DOM (Cleanup)*: Khi đóng modal $\rightarrow$ Các phần tử overlay trong DOM phải bị gỡ bỏ hoặc chuyển sang `display: none`, không được để lại màn mờ vô hình chặn chuột người dùng.
+  3. *Dọn dẹp DOM (Cleanup)*: Khi đóng modal $\rightarrow$ Các phần tử overlay trong DOM phải bị gỡ bỏ, không được để lại màn mờ vô hình chặn chuột.
 
 #### 18. Tab Chuyển Đổi & Khung Thu Gọn (Tabs / Accordion / Panels)
-* **Thao tác chuẩn**:
-  - Đang ở Tab 1 (nhập dở dữ liệu) $\rightarrow$ Click chuyển sang Tab 2 $\rightarrow$ Click quay lại Tab 1.
 * **Thẩm định 3 lớp**:
   1. *UI*: Tab được chọn đổi màu active, nội dung panel tương ứng hiển thị, panel cũ bị ẩn.
-  2. *Bảo toàn dữ liệu dở dang (Tab State Persistence)*: Dữ liệu đã gõ ở Tab 1 **không được bị xóa mất** khi chuyển qua lại giữa các Tab.
-  3. *Network Lazy Load*: Nếu tab có nạp dữ liệu riêng $\rightarrow$ Bắt API khi click tab, đảm bảo API chỉ gọi 1 lần và cache dữ liệu, không spam request mỗi lần click.
+  2. *Bảo toàn dữ liệu dở dang (Tab State Persistence)*: Dữ liệu đã gõ ở Tab 1 không được bị xóa mất khi chuyển qua lại giữa các Tab.
+  3. *Network Lazy Load*: Bắt API khi click tab, đảm bảo API chỉ gọi 1 lần và cache dữ liệu, không spam request mỗi lần click.
 
 #### 19. Thông Báo Phản Hồi (Toast Message / Alert Banner)
-* **Thao tác chuẩn**:
-  - Kích hoạt sau mỗi thao tác Lưu, Sửa, Xóa hoặc khi văng lỗi.
 * **Thẩm định 3 lớp**:
-  1. *Đúng phân loại ngữ nghĩa (Semantic Type)*:
-     - Thao tác thành công $\rightarrow$ Toast màu xanh lá (`success`).
-     - Lỗi nghiệp vụ / Lỗi server $\rightarrow$ Toast màu đỏ (`error` / `danger`).
-     - Cảnh báo $\rightarrow$ Toast màu vàng (`warning`).
-  2. *Nội dung thông báo rõ ràng*: Toast phải chứa thông điệp tiếng Việt có nghĩa (vd: *"Cập nhật thông tin thành công"*), không được hiện mã code thô ráp như `null`, `[object Object]` hay `Error: 500`.
-  3. *Tự động biến mất (Auto-dismiss)*: Toast tự biến mất sau 3-5 giây mà không cần người dùng bấm tắt.
+  1. *Đúng phân loại ngữ nghĩa*: Thành công (xanh lá), Lỗi (đỏ), Cảnh báo (vàng).
+  2. *Nội dung thông báo rõ ràng*: Toast phải chứa thông điệp tiếng Việt có nghĩa, không được hiện `null`, `[object Object]` hay `Error: 500`.
+  3. *Tự động biến mất*: Toast tự biến mất sau 3-5 giây.
 
 ---
 
-### QUY TẮC BẤT KHẢ XÂM PHẠM: "DUAL-ASSERTION" (UI + NETWORK PAYLOAD)
-1. **Tuyệt đối cấm viết `expect(response.status()).toBe(200)` đơn lẻ:**
-   Luôn luôn phải bóc tách sâu vào JSON Body:
-   ```javascript
-   const json = await response.json();
-   // Không chỉ kiểm tra mã 200, mà phải kiểm tra dữ liệu nghiệp vụ bên trong
-   expect(json.status || json.result).toBeDefined();
-   ```
-2. **Đối chiếu chéo (Cross-check) giữa API và UI:**
-   ```javascript
-   // Dữ liệu từ API nạp về bao nhiêu bản ghi thì DataGrid phải render bấy nhiêu dòng
-   const apiRows = JSON.parse(json.result);
-   const uiRows = await page.locator('#grid tbody tr.dx-data-row').count();
-   expect(uiRows).toBe(apiRows.length);
-   ```
-3. **Phân biệt rạch ròi Test Runner vs Logic Nghiệp Vụ:**
-   - Kịch bản test bắt được Bug của hệ thống thì **Test Runner (Playwright) vẫn là PASS** (vì script chạy thông suốt, bắt được chính xác lỗi).
-   - Nhưng **Trạng thái Logic (Business Status) trong Báo cáo phải đánh dấu ❌ FAIL**, kèm khối `> [!CAUTION] 🚨 PHÂN TÍCH NGUYÊN NHÂN THẤT BẠI (FAILURE ANALYSIS)`.
-
----
-
-## 2.2. KHO KỊCH BẢN BIÊN, TIÊU CỰC & BẪY LỖI NGHIỆP VỤ TỰ ĐỘNG MỞ RỘNG (EDGE CASES & TRAP REPOSITORY)
-
-> **NGUYÊN TẮC TÍCH LŨY TRI THỨC (CONTINUOUS LEARNING RULE):**
-> Kho kịch bản biên này là một "thư viện sống". **Mỗi khi phát hiện thêm một lỗi mới, một bẫy logic hoặc một ca kiểm thử khó trong thực tế**, Agent/Tester **BẮT BUỘC PHẢI BỔ SUNG NGAY** mã kịch bản mới (`EDGE-xxx-N`) vào kho này. Nhờ đó, kho tri thức ngày càng dày đặc, việc kiểm thử ở các menu và dự án sau sẽ **tự động kế thừa toàn bộ các kịch bản biên từ trước**, đảm bảo hệ thống ngày càng được kiểm tra kĩ lưỡng và không bao giờ lặp lại sai lầm cũ!
-
-```
-┌─────────────────────────────────────────────────────────────────────────────────┐
-│              CƠ CHẾ KẾ THỪA & TÍCH LŨY KỊCH BẢN BIÊN LIÊN TỤC                   │
-│                                                                                 │
-│   Dự án A / Menu 1  ──► Phát hiện Bug mới ──► Thêm mã EDGE-xxx vào Kho        │
-│                                                              │                  │
-│                                                              ▼                  │
-│   Dự án B / Menu N  ◄── Tự động kế thừa toàn bộ Kho ────────┴────────────────   │
-│   (Kiểm thử tự động ngày càng sâu sắc, khắt khe và bao quát 100% rủi ro)         │
-└─────────────────────────────────────────────────────────────────────────────────┘
-```
-
----
-
-### A. KHO BẪY LỖI BỘ LỌC & TÌM KIẾM (FILTER & SEARCH TRAPS)
+## 2.2. KHO KỊCH BẢN BIÊN, TIÊU CỰC & BẪY LỖI NGHIỆP VỤ (EDGE CASES & TRAP REPOSITORY)
 
 #### 🔸 `EDGE-FLT-01`: Bẫy Mất Dữ Liệu Khi Khôi Phục Trạng Thái (The Lost-Data Re-click Trap)
-* **Đối tượng**: Chip lọc trạng thái (Status Pills), Tab trạng thái, Dropdown lọc.
-* **Mô tả bẫy lỗi**: Ban đầu danh sách có $N$ bản ghi. Click chọn lọc 1 trạng thái con $\rightarrow$ Click lại "Tất cả" lần 2. Do frontend không khôi phục cờ `isViewAll = 1` hoặc ngầm ép cứng ngày theo tuần hiện tại $\rightarrow$ Danh sách bị xóa sạch trắng trơn!
-* **Cách lập trình `.spec.js`**:
-  ```javascript
-  const n0 = await page.locator('#grid tbody tr.dx-data-row').count();
-  await chipChild.click(); // Chọn lọc con
-  await page.waitForTimeout(800);
-  await chipAll.click();   // Chọn lại Tất cả lần 2
-  await page.waitForTimeout(800);
-  const nRestore = await page.locator('#grid tbody tr.dx-data-row').count();
-  expect(nRestore).toBe(n0); // Bắt buộc phải phục hồi nguyên vẹn n0 dòng
-  ```
+Ban đầu danh sách có $N$ bản ghi. Click chọn lọc 1 trạng thái con $\rightarrow$ Click lại "Tất cả" lần 2. Do frontend không khôi phục cờ `isViewAll = 1` $\rightarrow$ Danh sách bị xóa sạch trắng trơn! Bắt buộc assert số dòng phục hồi nguyên vẹn $N_{restore} == N_0$.
 
 #### 🔸 `EDGE-FLT-02`: Bẫy Khoảng Ngày Mặc Định Ngầm (The Hidden Default Date Boundary Trap)
-* **Đối tượng**: Mọi bộ lọc có gắn kèm khoảng ngày (FromDate, ToDate) ngầm hoặc nổi.
-* **Mô tả bẫy lỗi**: Hệ thống ngầm định lấy ngày theo "Tuần này" hoặc "Tháng này" mà không có thông báo cho người dùng, làm biến mất các dữ liệu lịch sử hợp lệ tạo từ các tháng trước.
-* **Cách lập trình `.spec.js`**:
-  - Chặn request API: `const request = await page.waitForRequest(r => r.url().includes('/query'));`
-  - Bóc tách POST data: `const postData = request.postData();`
-  - Kiểm tra xem tham số `@FromDate` có bị ép ngầm khi người dùng KHÔNG hề chọn lọc theo ngày hay không.
+Hệ thống ngầm định lấy ngày theo "Tuần này" hoặc "Tháng này" mà không có thông báo cho người dùng, làm biến mất các dữ liệu lịch sử hợp lệ tạo từ các tháng trước. Bắt buộc kiểm tra tham số `@FromDate` gửi lên server.
 
-#### 🔸 `EDGE-FLT-03`: Bẫy Ký Tự Đặc Biệt & SQL Injection Trong Ô Tìm Kiếm (Special Characters & SQLi)
-* **Đối tượng**: Ô tìm kiếm nhanh (Search Box / Instant Filter).
-* **Mô tả bẫy lỗi**: Người dùng gõ các ký tự nhạy cảm như `'`, `"`, `\`, `%`, `_`, `--`, `<script>` khiến Stored Procedure văng lỗi cú pháp SQL hoặc giao diện bị crash.
-* **Cách lập trình `.spec.js`**:
-  ```javascript
-  await searchInput.fill("' OR '1'='1");
-  await page.waitForTimeout(600);
-  // Không được văng lỗi Unhandled Exception, bảng phải hiển thị Empty State an toàn
-  const errorAlert = page.locator('.dx-error-message, .alert-danger');
-  await expect(errorAlert).not.toBeVisible();
-  ```
-
-#### 🔸 `EDGE-FLT-04`: Bẫy Khoảng Trắng 2 Đầu Từ Khóa (Leading / Trailing Whitespace Trap)
-* **Đối tượng**: Ô tìm kiếm nhanh, Ô nhập mã số/tên.
-* **Mô tả bẫy lỗi**: Người dùng copy-paste từ khóa kèm khoảng trắng ở đầu hoặc cuối (vd: `" Nguyen Van A "`). Hệ thống so khớp chính xác (Exact match) thay vì tự động `trim()` làm kết quả tìm kiếm rỗng.
-* **Cách lập trình `.spec.js`**:
-  - Trích xuất tên dòng 1: `const realName = await firstRowName.innerText();`
-  - Gõ vào ô search chuỗi có khoảng trắng thừa: `await searchInput.fill(`  ${realName}  `);`
-  - Assert bảng vẫn phải tìm ra đúng bản ghi đó.
-
-#### 🔸 `EDGE-FLT-05`: Bẫy Bộ Lọc Chồng Chéo Mâu Thuẫn (Conflicting Filter Combinations)
-* **Đối tượng**: Kết hợp đồng thời 2-3 bộ lọc (ví dụ: Trạng thái = "Đã nghỉ việc" + Phòng ban = "Kinh doanh" + Tìm kiếm theo từ khóa).
-* **Mô tả bẫy lỗi**: Khi reset 1 trong 3 bộ lọc, các bộ lọc còn lại bị reset ngầm hoặc gây ra câu query trả về dữ liệu sai lệch.
-* **Cách lập trình `.spec.js`**:
-  - Áp dụng lần lượt 3 tiêu chí $\rightarrow$ Ghi nhận số dòng.
-  - Xóa 1 tiêu chí $\rightarrow$ Assert số dòng tăng lên hợp lý và 2 tiêu chí còn lại vẫn giữ nguyên hiệu lực.
-
----
-
-### B. KHO BẪY LỖI NHẬP LIỆU & FORM CRUD (FORM & INPUT TRAPS)
+#### 🔸 `EDGE-FLT-03`: Bẫy Ký Tự Đặc Biệt & SQL Injection Trong Ô Tìm Kiếm
+Người dùng gõ các ký tự `'`, `"`, `\`, `%`, `_`, `--` khiến Stored Procedure văng lỗi cú pháp SQL hoặc giao diện bị crash. Assert bảng phải hiển thị Empty State an toàn, không văng Unhandled Exception.
 
 #### 🔸 `EDGE-INP-01`: Bẫy Bấm Lưu Khi Form Trống Hoàn Toàn (Empty Form Submit)
-* **Đối tượng**: Mọi Modal / Form Tạo mới hoặc Cập nhật.
-* **Mô tả bẫy lỗi**: Người dùng mở popup rồi bấm thẳng vào nút "Lưu" mà chưa nhập bất kỳ thông tin nào. Hệ thống hoặc văng lỗi Backend 500, hoặc gửi dữ liệu `null` vào DB, hoặc đóng popup mà không có phản hồi gì.
-* **Cách lập trình `.spec.js`**:
-  ```javascript
-  await openCreateModalBtn.click();
-  await saveBtn.click(); // Bấm Lưu ngay khi form còn rỗng
-  // BẮT BUỘC: Form không được đóng và phải hiển thị các viền đỏ / thông báo validation
-  await expect(modal).toBeVisible();
-  const invalidFields = page.locator('.dx-invalid, input:invalid, .field-validation-error');
-  expect(await invalidFields.count()).toBeGreaterThan(0);
-  ```
+Người dùng mở popup rồi bấm thẳng vào nút "Lưu" mà chưa nhập bất kỳ thông tin nào. Bắt buộc form không được đóng và phải hiển thị các viền đỏ / thông báo validation.
 
 #### 🔸 `EDGE-INP-02`: Bẫy Click Đúp Nút Lưu Liên Tục (Double-Click / Rapid Fire Debounce)
-* **Đối tượng**: Mọi nút Submit / Lưu / Gửi phê duyệt / Đặt hàng.
-* **Mô tả bẫy lỗi**: Người dùng click đúp hoặc click liên tiếp 2-3 lần vào nút Lưu. Do frontend không vô hiệu hóa nút (disable) hoặc thiếu cơ chế debounce $\rightarrow$ Server nhận cùng lúc 2 request tạo ra 2 bản ghi trùng lặp (Duplicate Records) trong Database!
-* **Cách lập trình `.spec.js`**:
-  ```javascript
-  // Lắng nghe số lượng request gửi đi
-  let requestCount = 0;
-  page.on('request', req => { if (req.url().includes('/save') && req.method() === 'POST') requestCount++; });
-  // Giả lập click liên tiếp cực nhanh
-  await saveBtn.click({ clickCount: 3, delay: 50 });
-  await page.waitForTimeout(1500);
-  // BẮT BUỘC: Hệ thống chỉ được phát ra tối đa 1 request lưu dữ liệu duy nhất!
-  expect(requestCount).toBe(1);
-  ```
+Người dùng click đúp hoặc click liên tiếp 2-3 lần vào nút Lưu. Do frontend không disable nút $\rightarrow$ Sinh ra 2 bản ghi trùng lặp trong DB. Bắt buộc hệ thống chỉ phát ra tối đa 1 request lưu dữ liệu duy nhất!
 
 #### 🔸 `EDGE-INP-03`: Bẫy Mất Dữ Liệu Khi Chuyển Tab Dở Dang (Tab Switch State Loss)
-* **Đối tượng**: Form nhập liệu có nhiều Tab (vd: Tab 1: Thông tin chung, Tab 2: Người liên hệ, Tab 3: Tài khoản ngân hàng).
-* **Mô tả bẫy lỗi**: Người dùng nhập dữ liệu ở Tab 1, chuyển sang Tab 2 xem rồi quay lại Tab 1 $\rightarrow$ Các ô input ở Tab 1 bị xóa sạch về rỗng!
-* **Cách lập trình `.spec.js`**:
-  ```javascript
-  await tab1Input.fill('Dữ liệu thử nghiệm Tab 1');
-  await tab2Header.click(); // Chuyển Tab 2
-  await page.waitForTimeout(500);
-  await tab1Header.click(); // Quay lại Tab 1
-  // Dữ liệu Tab 1 PHẢI được giữ nguyên vẹn
-  await expect(tab1Input).toHaveValue('Dữ liệu thử nghiệm Tab 1');
-  ```
-
-#### 🔸 `EDGE-INP-04`: Bẫy Thoát Không Lưu Không Cảnh Báo (Unsaved Changes / Dirty Form Exit)
-* **Đối tượng**: Modal chỉnh sửa dữ liệu, Form chi tiết.
-* **Mô tả bẫy lỗi**: Người dùng đã sửa nhiều trường quan trọng, nhưng lỡ tay bấm phím `Esc`, click vào nền mờ Backdrop hoặc bấm nút "Hủy". Hệ thống đóng ngay lập tức làm mất toàn bộ công sức nhập liệu mà không có bất kỳ lời cảnh báo nào.
-* **Cách lập trình `.spec.js`**:
-  - Nhập dữ liệu mới vào 1 ô input $\rightarrow$ Bấm nút "Hủy" hoặc phím `Escape`.
-  - Assert hệ thống phải bật Dialog xác nhận: *"Dữ liệu chưa được lưu, bạn có chắc chắn muốn thoát?"*.
-
-#### 🔸 `EDGE-INP-05`: Bẫy Tràn Giới Hạn Độ Dài Ký Tự (Max-length Overflow / Truncation)
-* **Đối tượng**: Ô Mã số thuế, Số CMND/CCCD, Số điện thoại, Ghi chú.
-* **Mô tả bẫy lỗi**: Cố tình nhập chuỗi quá dài (vd: 500 ký tự vào ô Tên ngắn có `varchar(50)`). Hệ thống văng lỗi SQL: `String or binary data would be truncated`.
-* **Cách lập trình `.spec.js`**:
-  - Gõ chuỗi 255 ký tự `A`.
-  - Kiểm tra xem ô input có thuộc tính `maxlength` ngăn chặn nhập quá ngưỡng hay không, hoặc khi bấm Lưu hệ thống có validate độ dài hợp lệ hay không.
-
-#### 🔸 `EDGE-INP-06`: Bẫy Số Âm & Tiền Tệ Âm (Negative & Zero Value Bypassing)
-* **Đối tượng**: Ô Số lượng, Đơn giá, Lương cơ bản, Số ngày phép.
-* **Mô tả bẫy lỗi**: Nhập số âm (vd: `-5000000`) hoặc số `0`. Backend không validate $\rightarrow$ Lưu số âm vào DB gây sai lệch báo cáo tài chính.
-* **Cách lập trình `.spec.js`**:
-  - Nhập `-1000` vào ô tiền tệ $\rightarrow$ Bấm Lưu $\rightarrow$ Bắt buộc assert thông báo lỗi: *"Số tiền phải lớn hơn 0"*.
-
----
-
-### C. KHO BẪY LỖI BẢNG DỮ LIỆU & THAO TÁC (DATAGRID & ACTION TRAPS)
+Người dùng nhập dữ liệu ở Tab 1, chuyển sang Tab 2 xem rồi quay lại Tab 1 $\rightarrow$ Các ô input ở Tab 1 bị xóa sạch. Bắt buộc giữ nguyên vẹn dữ liệu.
 
 #### 🔸 `EDGE-GRD-01`: Bẫy Mã HTTP 200 Che Giấu Lỗi Backend (HTTP 200 Masking Trap)
-* **Đối tượng**: Mọi request API qua Generic Handler (`.ashx`, `/api/query`, `/hpa/paradise2`).
-* **Mô tả bẫy lỗi**: Server IIS luôn trả về HTTP 200 OK ngay cả khi SQL văng Exception hoặc trả về kết quả rỗng `data: [[]]`.
-* **Cách lập trình `.spec.js`**:
-  ```javascript
-  const res = await page.waitForResponse(r => r.url().includes('/hpa/paradise2'));
-  expect(res.status()).toBe(200); // ⚠️ KHÔNG ĐƯỢC DỪNG Ở ĐÂY!
-  const json = await res.json();
-  // Bóc tách kiểm tra bên trong có bị văng chuỗi lỗi SQL hay không
-  expect(json.result).not.toContain('error');
-  expect(json.result).not.toContain('Exception');
-  ```
-
-#### 🔸 `EDGE-GRD-02`: Bẫy Xóa Ngay Lập Tức Không Qua Xác Nhận (Accidental Instant Delete)
-* **Đối tượng**: Nút icon Thùng rác / Nút Xóa trên bảng hoặc form.
-* **Mô tả bẫy lỗi**: Người dùng lỡ tay click trúng icon Xóa $\rightarrow$ Hệ thống gọi API xóa luôn bản ghi trong tích tắc mà không hỏi lại người dùng!
-* **Cách lập trình `.spec.js`**:
-  - Di chuột click icon Xóa.
-  - Bắt buộc kiểm tra Popup xác nhận ("Bạn có chắc chắn muốn xóa bản ghi này?") xuất hiện.
-  - Bấm nút "Hủy" trên popup $\rightarrow$ Bản ghi vẫn còn nguyên vẹn trên bảng.
-
-#### 🔸 `EDGE-GRD-03`: Bẫy Double-Click Mở Chi Tiết Nhưng Form Rỗng (Empty Detail Binding Trap)
-* **Đối tượng**: DataGrid có tính năng nhấp đúp vào dòng để xem chi tiết.
-* **Mô tả bẫy lỗi**: Nhấp đúp vào dòng, popup chi tiết mở lên thành công nhưng các ô input bên trong hoàn toàn trắng trơn (rỗng `""`) do API nạp chi tiết bị lỗi ID hoặc Stored Procedure thiếu tham số.
-* **Cách lập trình `.spec.js`**:
-  ```javascript
-  const rowName = await row.locator('.col-name').innerText();
-  await row.dblclick(); // Mở chi tiết
-  await page.waitForResponse(r => r.url().includes('Detail'));
-  // BẮT BUỘC: Ô input Tên trong modal chi tiết PHẢI BẰNG tên của dòng vừa click
-  const detailNameInput = page.locator('#txtName, input[name="FullName"]');
-  await expect(detailNameInput).not.toHaveValue('');
-  await expect(detailNameInput).toHaveValue(rowName.trim());
-  ```
-
-#### 🔸 `EDGE-GRD-04`: Bẫy Mất Vị Trí Phân Trang Sau Khi Thao Tác (Pagination Reset Trap)
-* **Đối tượng**: DataGrid có phân trang.
-* **Mô tả bẫy lỗi**: Người dùng đang ở Trang 5, mở 1 bản ghi lên xem rồi đóng lại, hoặc sửa 1 bản ghi rồi Lưu. Hệ thống tự động reset về Trang 1 bắt người dùng phải cuộn và bấm lại từ đầu!
-* **Cách lập trình `.spec.js`**:
-  - Điều hướng sang Trang 3.
-  - Mở chi tiết 1 bản ghi rồi đóng lại.
-  - Assert DataGrid vẫn giữ nguyên trạng thái đang ở Trang 3.
+Server luôn trả về HTTP 200 OK ngay cả khi SQL văng Exception hoặc trả về kết quả rỗng. Bắt buộc bóc tách sâu vào JSON Body kiểm tra `result`, không chỉ dừng ở `status === 200`.
 
 ---
 
-### D. HƯỚNG DẪN BỔ SUNG KỊCH BẢN MỚI VÀO KHO (CONTRIBUTING NEW EDGE CASES)
+## 2.3. BỘ NGUYÊN TẮC TEST LUỒNG NGHIỆP VỤ & ĐỒNG BỘ LIÊN MÀN HÌNH (RIPPLE EFFECT / CASCADE LAW)
 
-Khi Agent hoặc Tester gặp một lỗi mới trong thực tế, **hãy mở file này và bổ sung thêm 1 mục theo đúng khung mẫu 5 thành tố chuẩn**:
-
-```markdown
-#### 🔸 `EDGE-[NHÓM]-[SỐ_THỨ_TỰ]`: <Tên Kịch Bản Biên / Bẫy Lỗi Rõ Ràng>
-* **Đối tượng**: <Tên các control hoặc quy trình bị ảnh hưởng>
-* **Mô tả bẫy lỗi**: <Bối cảnh thực tế và hậu quả nghiệp vụ khi gặp lỗi này>
-* **Cách lập trình `.spec.js`**:
-  <Đoạn mã mẫu Playwright bắt trọn trường hợp biên này>
-* **Kỳ vọng hệ thống**: <Hành vi đúng mà hệ thống chuẩn mực phải đáp ứng>
-```
+Một hành động Tạo mới, Cập nhật, Xóa hoặc Phê duyệt tại Menu Nguồn luôn tạo ra một "làn sóng ảnh hưởng" tới các Màn hình Đích (Downstream Menus), Dashboard và các Vai trò khác.
+Kịch bản test chỉ được coi là HOÀN TẤT khi đã điều hướng đến các màn hình liên quan để kiểm chứng:
+1. **Mô hình 1 (Khởi tạo thực thể $\rightarrow$ Lan tỏa danh mục)**: Tạo mới NV/Khách hàng $\rightarrow$ Phải xuất hiện trong Dropdown của Hợp đồng/Bảng lương.
+2. **Mô hình 2 (Phê duyệt đa vai trò)**: Nhân viên gửi đơn $\rightarrow$ Quản lý duyệt $\rightarrow$ Mở lại hồ sơ nhân viên kiểm chứng dữ liệu đã thật sự được cập nhật vào bảng chính thức.
+3. **Mô hình 3 (Đồng bộ Dashboard KPI)**: Thay đổi trạng thái thực thể $\rightarrow$ Thẻ chỉ số tổng quan trên Dashboard phải nhảy số tức thì ($N \pm 1$).
+4. **Mô hình 4 (Khóa ngoại chống xóa)**: Không cho phép xóa thực thể mẹ khi đã phát sinh chứng từ/giao dịch con.
 
 ---
 
-## 2.3. BỘ NGUYÊN TẮC TEST LUỒNG NGHIỆP VỤ & ĐỒNG BỘ LIÊN MÀN HÌNH (END-TO-END BUSINESS FLOW & DOWNSTREAM VERIFICATION)
+## 3. Quy Trình Xử Lý Khi Viết Test Cho Một Trang/Menu
 
-> **QUY TẮC BẤT BIẾN VỀ LUỒNG NGHIỆP VỤ (THE RIPPLE EFFECT / CASCADE LAW):**
-> Một hành động Tạo mới, Cập nhật, Xóa hoặc Phê duyệt tại **Menu Nguồn (Source Menu)** KHÔNG BAO GIỜ kết thúc tại chính menu đó.
-> Nó luôn tạo ra một "làn sóng ảnh hưởng" tới các **Màn hình Đích (Downstream Menus)**, các **Thẻ Báo cáo Thống kê (Dashboard KPIs)**, và các **Tài khoản Vai trò khác (Cross-Role Accounts)**.
-> **Kịch bản test chỉ được coi là HOÀN TẤT khi đã điều hướng đến các màn hình liên quan để kiểm chứng dữ liệu đã thật sự có mặt, bị xóa, cập nhật hoặc được tính toán chính xác!**
-
-```
-┌────────────────────────────────────────────────────────────────────────────────────────┐
-│                   HIỆU ỨNG GỢN SÓNG TRONG TEST LUỒNG NGHIỆP VỤ (RIPPLE EFFECT)          │
-│                                                                                        │
-│   [MENU NGUỒN: THAO TÁC]                                                               │
-│   Tạo / Sửa / Xóa / Phê duyệt                                                          │
-│              │                                                                         │
-│              ├──► 1. Menu Danh mục liên quan: Thực thể mới có xuất hiện trong Dropdown?│
-│              ├──► 2. Dashboard & KPI Cards: Số lượng tổng hợp có nhảy đồng bộ không?   │
-│              ├──► 3. Đa vai trò (Cross-Role): Quản lý duyệt -> Hồ sơ nhân viên cập nhật?│
-│              ├──► 4. Xử lý hạ nguồn (Downstream): Chấm công / Bảng lương / Công nợ?    │
-│              └──► 5. Audit Log / Lịch sử: Hệ thống có ghi nhận Người sửa & Giá trị cũ? │
-└────────────────────────────────────────────────────────────────────────────────────────┘
-```
-
----
-
-### 5 MÔ HÌNH LUỒNG NGHIỆP VỤ LIÊN MÀN HÌNH BẮT BUỘC PHẢI KIỂM CHỨNG
-
-#### 1. Mô hình 1: Khởi Tạo Thực Thể $\rightarrow$ Lan Tỏa Danh Mục Liên Quan (Entity Ingestion Flow)
-* **Ý nghĩa nghiệp vụ**: Khi tạo mới một thực thể ở Menu A, thực thể đó phải lập tức khả dụng để chọn lựa ở các Menu nghiệp vụ tiếp theo (B, C, D).
-* **Quy trình kiểm thử chuẩn**:
-  1. *Tại Menu Nguồn (vd: Hồ sơ nhân viên / Danh mục khách hàng)*: Tạo mới 1 bản ghi với mã duy nhất `TEST_CODE_${Date.now()}`. Bấm Lưu và xác nhận thành công.
-  2. *Điều hướng sang Menu Đích 1 (vd: Hợp đồng lao động / Báo giá)*: Mở form tạo hợp đồng $\rightarrow$ Mở dropdown "Chọn nhân viên/khách hàng" $\rightarrow$ **Assert mã `TEST_CODE` vừa tạo phải xuất hiện trong danh sách dropdown**.
-  3. *Điều hướng sang Menu Đích 2 (vd: Bảng chấm công / Công nợ)*: Mở danh sách bảng chấm công tháng hiện tại $\rightarrow$ **Assert đã tự động sinh dòng chấm công cho nhân viên mới**.
-* **Đoạn mã Playwright mẫu**:
-  ```javascript
-  // BƯỚC 1: Tạo nhân viên tại Menu Nguồn
-  const newEmpCode = `NV_TEST_${Date.now()}`;
-  await createEmployee(page, { code: newEmpCode, name: 'Nguyễn Văn Test' });
-
-  // BƯỚC 2: Điều hướng sang Menu Đích kiểm tra Dropdown
-  await navigateToMenu(page, 'Hợp đồng lao động');
-  await page.locator('#btnCreateContract').click();
-  const empDropdown = page.locator('#selectEmployee');
-  await empDropdown.click();
-  // BẮT BUỘC: Nhân viên mới tạo phải có mặt trong danh sách chọn hợp đồng!
-  const option = page.locator(`.dx-item:has-text("${newEmpCode}")`);
-  await expect(option).toBeVisible();
-  ```
-
-#### 2. Mô hình 2: Quy Trình Phê Duyệt Đa Vai Trò & Bàn Giao Trạng Thái (Multi-Role Approval Flow)
-* **Ý nghĩa nghiệp vụ**: Đơn từ / Yêu cầu gửi đi bởi Vai trò 1 (Nhân viên) phải được chuyển giao đến Vai trò 2 (Quản lý) để duyệt; sau khi duyệt thì kết quả phải phản ánh ngược lại vào hồ sơ chính thức của Vai trò 1.
-* **Quy trình kiểm thử chuẩn (4 Chặng)**:
-  1. *Chặng 1 (Nhân viên nộp đơn)*: Đăng nhập tài khoản Nhân viên (`Tai.Dang`) $\rightarrow$ Gửi yêu cầu đổi thông tin (vd: đổi số tài khoản ngân hàng sang `999999999`) $\rightarrow$ Assert đơn có trạng thái "Chờ duyệt".
-  2. *Chặng 2 (Quản lý phê duyệt)*: Đăng xuất $\rightarrow$ Đăng nhập tài khoản Quản lý (`Cuong.Vu`) $\rightarrow$ Mở menu "Phê duyệt thay đổi" $\rightarrow$ Assert đơn của `Tai.Dang` xuất hiện trong danh sách chờ $\rightarrow$ Bấm nút "Phê duyệt" $\rightarrow$ Bắt API duyệt thành công.
-  3. *Chặng 3 (Kiểm tra phản hồi hồ sơ gốc)*: Đăng xuất $\rightarrow$ Đăng nhập lại Nhân viên (`Tai.Dang`) $\rightarrow$ Mở menu "Hồ sơ cá nhân / Thông tin ngân hàng" $\rightarrow$ **Assert số tài khoản đã cập nhật thành `999999999` (chặn đứng bug duyệt thành công nhưng hồ sơ vẫn rỗng)**.
-  4. *Chặng 4 (Hạ nguồn)*: Kiểm tra danh sách đơn chờ của Quản lý $\rightarrow$ Đơn đã biến mất khỏi tab "Chờ duyệt" và chuyển sang tab "Đã duyệt".
-
-#### 3. Mô hình 3: Chuyển Dịch Vòng Đời & Đồng Bộ Báo Cáo / KPI Dashboard (Lifecycle & Metric Sync)
-* **Ý nghĩa nghiệp vụ**: Khi trạng thái của một thực thể thay đổi, các số liệu thống kê tổng quan (Dashboard, Báo cáo KPI, Doanh số) phải được cập nhật tương ứng tức thì.
-* **Quy trình kiểm thử chuẩn**:
-  1. *Ghi nhận số liệu ban đầu trên Dashboard*:
-     - Mở Dashboard tổng quan: Ghi nhận Thẻ KPI `Số lượng Lead = L0`, `Số lượng Khách hàng chính thức = C0`.
-  2. *Thao tác chuyển trạng thái tại Menu Nghiệp Vụ*:
-     - Mở menu "Dữ liệu khách hàng" $\rightarrow$ Chọn 1 khách hàng đang ở trạng thái `Lead`.
-     - Chuyển trạng thái sang `Khách hàng chính thức` $\rightarrow$ Bấm Lưu.
-  3. *Kiểm chứng đối chiếu lại Dashboard*:
-     - Quay lại màn hình Dashboard (hoặc reload trang chủ).
-     - **Assert Thẻ KPI đã nhảy số chính xác**:
-       $$\text{Lead mới} == L_0 - 1 \quad \text{và} \quad \text{Khách hàng chính thức mới} == C_0 + 1$$
-     - Bắt API thống kê của Dashboard, đảm bảo số liệu trả về khớp 100% với giao diện.
-
-#### 4. Mô hình 4: Ràng Buộc Khóa Ngoại & Chống Xóa Dây Chuyền (Integrity Guard & Cascade Block)
-* **Ý nghĩa nghiệp vụ**: Dữ liệu trong hệ thống doanh nghiệp có tính liên kết chặt chẽ. Hệ thống phải bảo vệ tính toàn vẹn dữ liệu: không cho phép xóa thực thể mẹ khi đã có dữ liệu con phát sinh.
-* **Quy trình kiểm thử chuẩn (2 Chiều)**:
-  1. *Chiều Chặn Tiêu Cực (Negative Block)*:
-     - Chọn 1 Nhân viên hoặc Khách hàng **ĐÃ CÓ dữ liệu phát sinh** (đã có hợp đồng, đơn hàng, hóa đơn).
-     - Bấm nút "Xóa" $\rightarrow$ Xác nhận xóa trên Modal.
-     - **BẮT BUỘC**: Hệ thống phải CHẶN LẠI và hiển thị thông báo lỗi nghiệp vụ rõ ràng: *"Không thể xóa vì bản ghi này đã có phát sinh hợp đồng/giao dịch liên quan"*. Bản ghi không được phép bị mất khỏi DB!
-  2. *Chiều Xóa An Toàn (Positive Cascade)*:
-     - Chọn 1 bản ghi mới tạo thử nghiệm (chưa có liên kết).
-     - Bấm Xóa $\rightarrow$ Xác nhận $\rightarrow$ Bản ghi bị xóa thành công.
-     - Điều hướng sang các menu liên quan $\rightarrow$ Kiểm tra bản ghi đó **đã biến mất hoàn toàn khỏi các dropdown chọn lựa**.
-
-#### 5. Mô hình 5: Vết Lịch Sử Thao Tác & Kiểm Toán Nghiệp Vụ (Audit Trail & Activity Log)
-* **Ý nghĩa nghiệp vụ**: Trong các phần mềm quản trị (HRM/ERP/CRM), mọi hành động Sửa, Đổi trạng thái, Xóa đều phải lưu lại "dấu chân" để phục vụ kiểm toán nội bộ.
-* **Quy trình kiểm thử chuẩn**:
-  1. Mở 1 bản ghi (vd: Hợp đồng hoặc Khách hàng) $\rightarrow$ Đổi thông tin trường `Người phụ trách` từ *Nguyễn Văn A* sang *Trần Thị B*.
-  2. Bấm Lưu $\rightarrow$ Bắt API cập nhật thành công.
-  3. Mở tab hoặc modal **"Lịch sử thay đổi / Nhật ký hoạt động (Audit Trail)"** của bản ghi đó.
-  4. **Thẩm định các trường bắt buộc trong Log**:
-     - Cột `Trường thay đổi`: Đúng tên trường vừa sửa (`Người phụ trách`).
-     - Cột `Giá trị cũ (Old Value)`: Đúng giá trị trước khi sửa (`Nguyễn Văn A`).
-     - Cột `Giá trị mới (New Value)`: Đúng giá trị sau khi sửa (`Trần Thị B`).
-     - Cột `Người thực hiện`: Đúng tài khoản đang đăng nhập.
-     - Cột `Thời gian`: Khớp ngày giờ hiện tại (không bị lệch múi giờ).
-
----
-
-### KỸ THUẬT LẬP TRÌNH PLAYWRIGHT `.spec.js` CHO TEST LUỒNG LIÊN MÀN HÌNH
-
-Để viết kịch bản test liên màn hình mượt mà, người viết test phải tuân thủ 3 kỹ thuật lập trình sau:
-
-1. **Kỹ thuật chia sẻ định danh dùng chung (Shared Identity State)**:
-   ```javascript
-   // Khai báo biến phạm vi toàn suite để dùng xuyên suốt các bước
-   const RUN_ID = Date.now();
-   const SHARED_DATA = {
-     empCode: `NV_${RUN_ID}`,
-     empName: `Nhân Viên Test ${RUN_ID}`,
-     bankAccount: `999${RUN_ID.toString().slice(-6)}`
-   };
-   ```
-
-2. **Kỹ thuật phân chia bước rõ ràng bằng `test.step`**:
-   ```javascript
-   test('FLOW-01: Luồng Nghiệp Vụ Khép Kín: Tạo Nhân Viên -> Duyệt Ngân Hàng -> Lên Bảng Chấm Công', async ({ page }) => {
-     await test.step('Bước 1: Tạo nhân viên mới tại Hồ sơ nhân sự', async () => {
-       // Thao tác tại Menu Hồ sơ nhân viên
-     });
-
-     await test.step('Bước 2: Gửi yêu cầu cập nhật thông tin ngân hàng', async () => {
-       // Thao tác gửi đơn
-     });
-
-     await test.step('Bước 3: Quản lý đăng nhập và phê duyệt', async () => {
-       // Đổi tài khoản duyệt
-     });
-
-     await test.step('Bước 4: Đối chiếu hồ sơ nhân sự đã cập nhật tài khoản', async () => {
-       // Kiểm chứng downstream 1
-     });
-
-     await test.step('Bước 5: Kiểm chứng nhân viên mới đã có mặt trên Bảng chấm công', async () => {
-       // Kiểm chứng downstream 2
-     });
-   });
-   ```
-
-3. **Kỹ thuật chuyển đổi tài khoản an toàn trong cùng 1 test case**:
-   ```javascript
-   // Hàm chuyển đổi tài khoản giữa các vai trò mà không cần mở trình duyệt mới
-   async function switchUser(page, username, password) {
-     await page.context().clearCookies();
-     await page.goto('/#login');
-     await page.locator('#username').fill(username);
-     await page.locator('input[type="password"]').fill(password);
-     await page.locator('#submitLogin').click();
-     await page.locator('.navbar, .dock').first().waitFor({ state: 'visible', timeout: 25000 });
-   }
-   ```
-
----
-
-## 3. Quy Trình Xử Lý Khi Người Dùng Yêu Cầu Viết Test Cho Một Trang/Menu
-
-
-
-### Bước 1: Kiểm tra Trang đó ĐÃ TỪNG ĐƯỢC TEST CHƯA?
-Agent quét thư mục `tests/` để tìm file spec tương ứng với chức năng đó (Ví dụ: `tests/employee.spec.js`, `tests/contracts.spec.js`, `tests/timesheet.spec.js`):
-
-#### TRƯỜNG HỢP A: Trang CHƯA TỪNG được test (File spec chưa tồn tại)
-1. **Tạo mới file** `tests/<tên_menu>.spec.js` (tên file viết thường, nối bằng dấu gạch dưới `_`).
-2. **Áp dụng BỘ KHUNG MẪU CHUẨN (GOLDEN CODE BLUEPRINT)** — Mọi file test bắt buộc phải có đầy đủ 4 khối sau:
+### Áp Dụng BỘ KHUNG MẪU CHUẨN (GOLDEN CODE BLUEPRINT)
+Mọi file test bắt buộc phải có đầy đủ 4 khối sau:
 
 ```javascript
 const { test, expect } = require('@playwright/test');
 const fs = require('fs');
 const path = require('path');
 
-const PAGE_NAME = '<tên_menu>'; // Ví dụ: 'employee_bank_approval'
+const PAGE_NAME = '<tên_menu>';
 
 // ============================================================================
 // KHỐI 1: CÁC HELPER BẮT BUỘC (DI CHUỘT TRỰC QUAN & CHỤP ẢNH TỪNG BƯỚC)
@@ -714,8 +543,9 @@ async function moveAndClick(page, locator, options = {}) {
   if (box) {
     const x = box.x + box.width / 2;
     const y = box.y + box.height / 2;
-    await page.mouse.move(x, y, { steps: options.steps || 8 });
+    await page.mouse.move(x, y, { steps: options.steps || 10 });
     if (options.pause) await page.waitForTimeout(options.pause);
+    else await page.waitForTimeout(150);
   }
   await locator.click();
 }
@@ -741,13 +571,17 @@ async function captureStep(page, testInfo, { tcId, step, desc, pageName = PAGE_N
 }
 
 // ============================================================================
-// KHỐI 2: CẤU HÌNH PHIÊN & CHUỘT PHÁT SÁNG NEON
+// KHỐI 2: CẤU HÌNH PHIÊN & CHUỘT PHÁT SÁNG NEON FULL MÀN HÌNH
 // ============================================================================
-test.use({ storageState: { cookies: [], origins: [] } });
+test.use({
+  storageState: { cookies: [], origins: [] },
+  viewport: null // BẮT BUỘC null để khớp với toàn màn hình từ --start-maximized
+});
 
 test.describe('Kiểm thử Phân hệ/Trang: <Tên Tiếng Việt>', () => {
   test.beforeEach(async ({ context }) => {
     await context.clearCookies();
+    // Tự động nhúng con trỏ chuột Neon phát sáng từ file visual_cursor.js
     const cursorScriptPath = path.resolve(__dirname, '../visual_cursor.js');
     if (fs.existsSync(cursorScriptPath)) {
       const cursorScript = fs.readFileSync(cursorScriptPath, 'utf8');
@@ -763,10 +597,10 @@ test.describe('Kiểm thử Phân hệ/Trang: <Tên Tiếng Việt>', () => {
     await page.goto('https://<url_web>/#', { waitUntil: 'domcontentloaded' });
     const userInput = page.locator('#username');
     await moveAndClick(page, userInput);
-    await userInput.pressSequentially('<username>', { delay: 35 });
+    await userInput.pressSequentially('<username>', { delay: 40 });
     const passInput = page.locator('input[type="password"]');
     await moveAndClick(page, passInput);
-    await passInput.pressSequentially('<password>', { delay: 35 });
+    await passInput.pressSequentially('<password>', { delay: 40 });
     await moveAndClick(page, page.locator('#submitLogin'));
     await page.locator('.dock, .navbar').first().waitFor({ state: 'visible', timeout: 25000 });
 
@@ -776,7 +610,7 @@ test.describe('Kiểm thử Phân hệ/Trang: <Tên Tiếng Việt>', () => {
       desc: 'Đăng nhập thành công và mở trang chủ'
     });
 
-    // 📂 BƯỚC 2: Điều hướng vào phân hệ & mở màn hình
+    // 📂 BƯỚC 2: Mở màn hình mục tiêu
     const menuBtn = page.locator('...').first();
     await moveAndClick(page, menuBtn);
     await page.waitForTimeout(1500);
@@ -787,10 +621,10 @@ test.describe('Kiểm thử Phân hệ/Trang: <Tên Tiếng Việt>', () => {
       desc: 'Mở màn hình mục tiêu cần thao tác'
     });
 
-    // 📝 BƯỚC 3: Thao tác nhập liệu hoặc chọn bản ghi
+    // 📝 BƯỚC 3: Điền thông tin với gõ phím trực quan
     const inputField = page.locator('input.dx-texteditor-input').first();
     await moveAndClick(page, inputField);
-    await inputField.pressSequentially('Dữ liệu thử nghiệm', { delay: 35 });
+    await inputField.pressSequentially('Dữ liệu thử nghiệm', { delay: 40 });
 
     await captureStep(page, testInfo, {
       tcId: 'TC-01',
@@ -798,14 +632,9 @@ test.describe('Kiểm thử Phân hệ/Trang: <Tên Tiếng Việt>', () => {
       desc: 'Điền đầy đủ thông tin vào form'
     });
 
-    // 🎯 BƯỚC 4: Di chuyển chuột Neon lên nút hành động chính (Lưu/Duyệt)
+    // 🎯 BƯỚC 4: Chuột Neon di chuyển lên nút Lưu
     const actionBtn = page.locator('button:has-text("Lưu")').first();
-    await actionBtn.scrollIntoViewIfNeeded().catch(() => {});
-    const btnBox = await actionBtn.boundingBox();
-    if (btnBox) {
-      await page.mouse.move(btnBox.x + btnBox.width / 2, btnBox.y + btnBox.height / 2, { steps: 10 });
-      await page.waitForTimeout(300);
-    }
+    await moveAndClick(page, actionBtn, { steps: 10, pause: 300 });
 
     await captureStep(page, testInfo, {
       tcId: 'TC-01',
@@ -813,10 +642,7 @@ test.describe('Kiểm thử Phân hệ/Trang: <Tên Tiếng Việt>', () => {
       desc: 'Con trỏ chuột Neon di chuyển và bấm nút Lưu thay đổi'
     });
 
-    await actionBtn.click();
-    await page.waitForTimeout(2000);
-
-    // ✅ BƯỚC 5: Kết quả phản hồi từ hệ thống
+    // ✅ BƯỚC 5: Kết quả phản hồi
     await captureStep(page, testInfo, {
       tcId: 'TC-01',
       step: 5,
@@ -834,75 +660,11 @@ test.describe('Kiểm thử Phân hệ/Trang: <Tên Tiếng Việt>', () => {
 });
 ```
 
-#### TRƯỜNG HỢP B: Trang ĐÃ TỪNG được test (File spec đã tồn tại)
-1. **Đọc nội dung file hiện tại** `tests/<tên_menu>.spec.js`.
-2. **Tìm mã số Test Case cao nhất** đã có trong file bằng regex `TC-(\d+)`:
-   - Ví dụ: File đã có `TC-01` và `TC-02` $\rightarrow$ Số cao nhất là `2`.
-   - Sinh mã kế tiếp: `TC-03`.
-3. **Bổ sung test case mới theo đúng chuẩn 5 bước và Dual Status**:
-   - Nếu kịch bản **ĐẠT**: Đính kèm `business_status: PASS`.
-   - Nếu kịch bản **PHÁT HIỆN LỖI (BUG)**: Đính kèm `business_status: FAIL` và khối `business_analysis` JSON đầy đủ 5 thành tố:
-   ```javascript
-   testInfo.annotations.push({
-     type: 'business_status',
-     description: 'FAIL - Thông tin dữ liệu không cập nhật sau khi xử lý'
-   });
-   testInfo.annotations.push({
-     type: 'business_analysis',
-     description: JSON.stringify({
-       issue: 'Tóm tắt ngắn gọn lỗi phát hiện được',
-       expected: 'Kỳ vọng nghiệp vụ hệ thống lẽ ra phải trả về',
-       actual: 'Thực tế hệ thống đang phản hồi sai',
-       rootCause: 'Phân tích nguyên nhân kỹ thuật (Stored Procedure, API hoặc UI binding)',
-       recommendation: 'Đề xuất hướng xử lý cụ thể cho team Dev / BA'
-     })
-   });
-   ```
-
 ---
 
-### Bước 2: Đảm Bảo Tự Động Cập Nhật Vào Menu `.bat`
-Sau khi tạo hoặc sửa file test:
-1. File [`menu_runner.ps1`](file:///c:/Users/Y.Thach/Desktop/paradiseHR/menu_runner.ps1) và [`Run-ParadiseHR-Interactive.bat`](file:///c:/Users/Y.Thach/Desktop/Run-ParadiseHR-Interactive.bat) tự động quét và cập nhật:
-   - Nếu là **Trang mới**: Menu chính cấp 1 sẽ lập tức xuất hiện thêm số `[N] tests/<tên_menu>.spec.js -> <Tiêu đề>`.
-   - Nếu là **Bổ sung TC**: Khi người dùng chọn menu đó, Menu cấp 2 sẽ lập tức hiển thị thêm dòng `[X] TC-0x: <Mô tả>`.
-2. Agent đảm bảo đồng bộ file launcher ra Desktop:
-   ```powershell
-   Copy-Item "c:\Users\Y.Thach\Desktop\paradiseHR\Run-ParadiseHR-Interactive.bat" -Destination "C:\Users\Y.Thach\Desktop\Run-ParadiseHR-Interactive.bat" -Force
-   ```
-
----
-
-### Bước 3: Chạy Thử & Kiểm Tra Nghiệm Thu (Verification)
-1. **Thực thi kiểm thử test case vừa tạo**:
-   ```powershell
-   npx playwright test tests/<tên_menu>.spec.js -g "TC-0x" --headed
-   ```
-2. **Kiểm tra file kết quả**:
-   - Xác nhận thư mục `test-evidence/<tên_menu>/TC-0x/` đã được sinh ra đầy đủ (`screenshots/`, `videos/`, `traces/`, `results.json`).
-   - Đọc báo cáo trang [`test-evidence/<tên_menu>/test-report.md`](file:///c:/Users/Y.Thach/Desktop/paradiseHR/test-evidence/) và báo cáo tổng thể [`test-evidence/test-report.md`](file:///c:/Users/Y.Thach/Desktop/paradiseHR/test-evidence/test-report.md).
-   - Nếu `FAILED`, phân tích lỗi từ trace/screenshot, sửa code và retest đến khi `PASSED`.
-
----
-
-### Bước 4: Bàn Giao Kết Quả Cho Người Dùng
-Agent báo cáo ngắn gọn, rõ ràng cho người dùng:
-1. **Thông tin kịch bản**: Đã tạo mới file nào hoặc bổ sung `TC-0x` nào vào menu nào.
-2. **Báo cáo nghiệm thu**: Cung cấp link mở file báo cáo tổng hợp và thư mục bằng chứng `test-evidence/<tên_menu>/<TC-0x>/`.
-3. **Hướng dẫn người dùng chạy lại**:
-   - Mở file [`Run-ParadiseHR-Interactive.bat`](file:///C:/Users/Y.Thach/Desktop/Run-ParadiseHR-Interactive.bat) ngoài Desktop để thấy ngay Option mới vừa được bổ sung!
-   - Hoặc vào trực tiếp thư mục `test-evidence/<tên_menu>/<TC-0x>/` và nhấp đúp file `Run-This-TC.bat` để xem lại riêng test case này.
-
----
-
-## 4. Hướng Dẫn Kỹ Thuật: Cách Tạo File .BAT 1-Click Cho Từng Cấp Độ
-
-Mọi AI Agent khi thực thi skill này phải nắm rõ cơ chế và cấu trúc để tạo các file `.bat` 1-Click tự động:
+## 4. Hướng Dẫn Kỹ Thuật: Tạo File .BAT 1-Click Cho Từng Cấp Độ
 
 ### A. File `Run-This-TC.bat` (Đặt trong `test-evidence/<tên_trang>/<TC-0x>/`):
-Mục đích: Cho phép người dùng nhấp đúp để mở Chrome thật chạy riêng đúng test case này với chuột Neon và gõ phím trực quan.
-
-**Cấu trúc mã nguồn chuẩn của file `Run-This-TC.bat`**:
 ```bat
 @echo off
 chcp 65001 >nul
@@ -912,7 +674,7 @@ echo ====================================================================
 echo   CHAY LAI TRUC QUAN TEST CASE: <TC-0x> (<tên_trang>.spec.js)
 echo ====================================================================
 echo.
-echo Dang khoi chay Google Chrome truc quan (Chuot Neon, slowMo 400ms)...
+echo Dang khoi chay Google Chrome truc quan (Chuot Neon, slowMo 100ms)...
 echo.
 cd /d "%~dp0..\..\.."
 if not exist "node_modules" (
@@ -927,12 +689,7 @@ echo.
 pause
 ```
 
----
-
 ### B. File `Run-This-Page.bat` (Đặt trong `test-evidence/<tên_trang>/`):
-Mục đích: Cho phép người dùng nhấp đúp để chạy lại toàn bộ tất cả các test case của trang này.
-
-**Cấu trúc mã nguồn chuẩn của file `Run-This-Page.bat`**:
 ```bat
 @echo off
 chcp 65001 >nul
@@ -942,7 +699,7 @@ echo ====================================================================
 echo   CHAY LAI TRUC QUAN TOAN BO TRANG: <tên_trang>.spec.js
 echo ====================================================================
 echo.
-echo Dang khoi chay Google Chrome truc quan (Chuot Neon, slowMo 400ms)...
+echo Dang khoi chay Google Chrome truc quan (Chuot Neon, slowMo 100ms)...
 echo.
 cd /d "%~dp0..\.."
 if not exist "node_modules" (
@@ -959,268 +716,45 @@ pause
 
 ---
 
-### C. Cách Tự Động Hóa Sinh File `.bat` Bằng Mã Nguồn Node.js:
-Trong custom reporter [`markdown-reporter.js`](file:///c:/Users/Y.Thach/Desktop/paradiseHR/markdown-reporter.js) hoặc khi Agent tạo test case mới, Agent sử dụng đoạn mã sau để tự động sinh file:
-
-```javascript
-// 1. Tự động sinh Run-This-TC.bat trong thư mục của test case
-const batPath = path.join(tcDir, 'Run-This-TC.bat');
-const batContent = `@echo off
-chcp 65001 >nul
-title Paradise HRM - Live Test: ${pageName} - ${tcId}
-cls
-echo ====================================================================
-echo   CHAY LAI TRUC QUAN TEST CASE: ${tcId} (${pageName}.spec.js)
-echo ====================================================================
-echo.
-echo Dang khoi chay Google Chrome truc quan (Chuot Neon, slowMo 400ms)...
-echo.
-cd /d "%~dp0..\\..\\.."
-if not exist "node_modules" (
-    cd /d "c:\\Users\\Y.Thach\\Desktop\\paradiseHR"
-)
-call npx playwright test tests/${pageName}.spec.js -g "${tcId}" --headed --workers=1
-echo.
-pause
-`;
-fs.writeFileSync(batPath, batContent, 'utf8');
-
-// 2. Tự động sinh Run-This-Page.bat trong thư mục của trang
-const pageBatPath = path.join(pageDir, 'Run-This-Page.bat');
-const pageBatContent = `@echo off
-chcp 65001 >nul
-title Paradise HRM - Live Test: Trang ${pageName}
-cls
-echo ====================================================================
-echo   CHAY LAI TRUC QUAN TOAN BO TRANG: ${pageName}.spec.js
-echo ====================================================================
-echo.
-echo Dang khoi chay Google Chrome truc quan (Chuot Neon, slowMo 400ms)...
-echo.
-cd /d "%~dp0..\\.."
-if not exist "node_modules" (
-    cd /d "c:\\Users\\Y.Thach\\Desktop\\paradiseHR"
-)
-call npx playwright test tests/${pageName}.spec.js --headed --workers=1
-echo.
-pause
-`;
-fs.writeFileSync(pageBatPath, pageBatContent, 'utf8');
-```
+## 7. Cơ Chế Tự Động Chạy Theo Hệ Thống Hiện Tại
+Mỗi khi mở bất kỳ file `.bat` nào (`Run-This-TC.bat`, `Run-This-Page.bat`, `Run-ParadiseHR-Interactive.bat`):
+* Mở trình duyệt Google Chrome thật Fullscreen (không viền đen) truy cập thẳng vào trang web mục tiêu.
+* Chuột Neon phát sáng lướt êm ái trên màn hình, gõ phím hiện bong bóng ký tự thời gian thực.
+* Quay video `.webm` mới ghi lại toàn bộ chuyển động.
+* Chụp ảnh Screenshot mới lưu vết từng thao tác.
+* Cập nhật Báo cáo `test-report.md` và `results.json` theo đúng chuẩn Dual Status.
 
 ---
 
-### D. Giải thích các tham số kỹ thuật then chốt trong file `.bat`:
-1. `chcp 65001 >nul`: Bật chế độ UTF-8 cho Command Prompt của Windows để hiển thị tiếng Việt có dấu đẹp mắt, không bị vỡ font.
-2. `%~dp0`: Biến môi trường đặc biệt của Windows Batch chỉ định đường dẫn thư mục hiện thời nơi file `.bat` đang cư trú.
-   - Với `Run-This-TC.bat` nằm ở tầng 3 (`test-evidence/<trang>/<TC-0x>/`), lùi 3 cấp `%~dp0..\..\..` sẽ trỏ chính xác về gốc dự án!
-3. `if not exist "node_modules"`: Cơ chế phòng vệ tự động (fallback) — nếu người dùng copy thư mục hoặc chạy từ shortcut, script vẫn tự động tìm về thư mục gốc dự án để chạy.
-4. `-g "<TC-0x>"`: Cờ Grep của Playwright để chỉ chạy đúng test case này và bỏ qua các test case khác trong file.
-5. `--headed --workers=1`: Bắt buộc mở 1 cửa sổ Google Chrome thật duy nhất trên màn hình để người dùng quan sát trực quan.
+## 8. Chuẩn Báo Cáo Kép (Dual Status) & Tự Động Suy Luận Expect
+* **Trạng thái thực thi Test (Kỹ thuật)**: `✅ PASS` hoặc `❌ FAIL`.
+* **Trạng thái Logic Nghiệp vụ**: `✅ PASS` hoặc `❌ FAIL`.
+* **Tự động suy luận Expect**: Thông báo thành công, đóng modal, nạp dữ liệu lên lưới, badge đổi trạng thái mà không bắt buộc người dùng prompt chi tiết.
 
 ---
 
-## 7. Cơ Chế Tự Động Chạy Theo Hệ Thống Hiện Tại & Xử Lý Khi Hệ Thống Thay Đổi
-
-### 1. Cơ chế tự động chạy theo hệ thống hiện tại
-Mỗi khi bạn mở bất kỳ file `.bat` nào:
-* 🎯 **`Run-This-TC.bat`**: Chạy lại riêng 1 kịch bản cụ thể.
-* 📄 **`Run-This-Page.bat`**: Chạy lại toàn bộ kịch bản của trang đó.
-* 🖥️ **`Run-ParadiseHR-Interactive.bat`**: Menu tổng ngoài Desktop để chọn chạy bất kỳ trang nào.
-
-**Hệ thống sẽ tự động thực hiện hoàn toàn mới:**
-* Mở trình duyệt Google Chrome thật và truy cập thẳng vào trang web hiện tại (theo URL trong `test.env.json`).
-* Quay một Video `.webm` MỚI TOANH ghi lại toàn bộ chuyển động con trỏ chuột Neon và hành động trên giao diện mới nhất.
-* Chụp các ảnh Screenshot MỚI để lưu vết màn hình tại thời điểm chạy.
-* Cập nhật lại Báo cáo `test-report.md` và `results.json`:
-  - Ghi nhận chính xác ngày giờ vừa chạy (`timestamp`).
-  - Nếu hệ thống chạy tốt $\rightarrow$ Đánh dấu **✅ PASS**.
-  - Nếu hệ thống vừa sửa phát sinh lỗi (bug) $\rightarrow$ Đánh dấu **❌ FAIL**, trích xuất ảnh lỗi và log lỗi chi tiết vào báo cáo để bạn gửi cho team dev sửa ngay!
-
-### 2. Hai trường hợp khi hệ thống thay đổi
-* **Trường hợp 1 (Sửa backend/logic, UI giữ nguyên)**:
-  👉 Bạn chỉ việc chạy file `.bat`. Không cần sửa bất kỳ dòng mã test nào, kết quả, ảnh chụp và video mới sẽ tự động cập nhật phản ánh đúng trạng thái hệ thống hiện tại.
-* **Trường hợp 2 (Giao diện đổi lớn: đổi tên nút, đổi luồng, đổi vị trí menu)**:
-  👉 Bạn chỉ cần nhắn AI một câu: *"Hệ thống vừa đổi menu X thành Y / đổi quy trình duyệt, hãy cập nhật lại kịch bản test"*. AI sẽ mở trình duyệt dò lại và cập nhật kịch bản `.spec.js`. Sau đó file `.bat` của bạn vẫn tiếp tục sử dụng bình thường mà không cần làm lại từ đầu!
+## 9. Tiêu Chuẩn Chụp Ảnh Step-by-Step (Visual Storyboard)
+Mỗi test case ghi lại 5 mốc ảnh:
+1. Đăng nhập thành công và mở trang.
+2. Mở màn hình/modal thao tác.
+3. Điền dữ liệu form.
+4. Con trỏ chuột Neon di chuyển và bấm nút hành động chính.
+5. Kết quả phản hồi từ hệ thống.
 
 ---
 
-## 8. Chuẩn Báo Cáo Kép (Dual Status) & Cơ Chế Tự Suy Luận Expect
-
-### 1. Chuẩn Báo Cáo Phân Tách 2 Trạng Thái Cho Mọi Test Case:
-Trong mọi file `test-report.md` và `results.json`, bắt buộc phải phân tách rạch ròi:
-* **Trạng thái thực thi Test (Kỹ thuật - Test Execution)**:
-  - `✅ PASS`: Script Playwright mở trang, click, gõ phím, lưu video thông suốt mà không bị crash code hoặc timeout.
-  - `❌ FAIL`: Script bị lỗi cú pháp, locator gãy hoặc trang không phản hồi.
-* **Trạng thái Logic Nghiệp vụ (Business Output / Logic Validation)**:
-  - `✅ PASS`: Dữ liệu thực tế trên màn hình (Actual Output) khớp chính xác 100% với giá trị mong đợi (Expected Output).
-  - `❌ FAIL`: Phát hiện **Lỗi Logic / Bug của Hệ thống** (ví dụ: Quản lý bấm Duyệt thành công nhưng màn hình hồ sơ vẫn trắng trơn không cập nhật dữ liệu).
-
-### 2. Cơ Chế Tự Động Suy Luận Expect (Người dùng không cần prompt chi tiết):
-Người dùng **KHÔNG CẦN phải prompt chi tiết từng Expect** cho mỗi Test Case. AI Agent tự động suy luận các điểm kiểm thử nghiệp vụ chuẩn mực:
-* **Form Cập nhật / Nhập liệu**: Tự suy luận kỳ vọng thông báo thành công (Toast/Alert), popup đóng, và dữ liệu lưu vào bảng.
-* **Quy trình Phê duyệt (Approval Flow)**: Tự suy luận kỳ vọng badge chuyển từ `Chờ duyệt` sang `Đã duyệt`, đơn biến mất khỏi danh sách chờ.
-* **Chu trình Khép kín (End-to-End Verification)**: Tự suy luận khi người gửi mở lại hồ sơ, các ô dữ liệu phải hiển thị đúng giá trị mới được duyệt thay vì để trống.
-* **Khi nào người dùng mới cần prompt thêm?** Chỉ khi hệ thống có **quy tắc nghiệp vụ đặc thù riêng của doanh nghiệp** (ví dụ: *"Sau khi duyệt phải qua 0h đêm mới có hiệu lực"*, hoặc *"Số tài khoản ngân hàng chỉ nhận tối đa 10 số"*).
+## 10. Tiêu Chuẩn Phân Tích Nguyên Nhân Thất Bại (Failure Analysis)
+Bắt buộc có khối `> [!CAUTION] 🚨 PHÂN TÍCH NGUYÊN NHÂN THẤT BẠI (FAILURE ANALYSIS)` với 5 thành tố:
+1. Vấn đề / Mã lỗi
+2. Kỳ vọng nghiệp vụ (Expected Output)
+3. Thực tế hệ thống (Actual Output)
+4. Nguyên nhân cốt lõi (Root Cause)
+5. Đề xuất khắc phục (Recommendation)
 
 ---
 
-## 9. Tiêu Chuẩn Chụp Ảnh Step-by-Step (Bắt Buộc - Visual Storyboard)
-
-Tuyệt đối **KHÔNG CHỈ CHỤP DUY NHẤT 1 MÀN HÌNH CUỐI** hoặc để nhiều ảnh trùng lặp vô nghĩa (`test-finished-1.png`). Mọi kịch bản kiểm thử bắt buộc phải ghi lại chuỗi bằng chứng tuần tự theo từng thao tác chính:
-
-### 1. Các điểm mốc bắt buộc phải chụp ảnh (Milestones):
-1. **Bước 1**: Đăng nhập thành công và mở trang/menu mục tiêu.
-2. **Bước 2**: Mở màn hình/modal thao tác hoặc chọn bản ghi dữ liệu.
-3. **Bước 3**: Điền dữ liệu vào form hoặc tích chọn các tùy chọn.
-4. **Bước 4**: Di chuyển chuột Neon trực tiếp lên nút bấm hành động chính (Lưu, Duyệt, Xóa, Xác nhận) để người xem thấy rõ điểm click.
-5. **Bước 5**: Kết quả phản hồi của hệ thống (Toast thành công, đóng modal, hoặc màn hình đối chiếu dữ liệu sau thao tác).
-
-### 2. Quy cách đặt tên file ảnh và đính kèm:
-Sử dụng helper chuẩn trong mã nguồn:
-```javascript
-async function captureStep(page, testInfo, { tcId, step, desc, pageName }) {
-  const safeDesc = desc.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase().replace(/[^a-z0-9]+/g, '-');
-  const fileName = `${tcId}-step${String(step).padStart(2, '0')}-${safeDesc}.png`;
-  const dir = path.resolve(__dirname, `../test-evidence/${pageName}/${tcId}/screenshots`);
-  if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true });
-  const filePath = path.join(dir, fileName);
-  await page.screenshot({ path: filePath, fullPage: false });
-  await testInfo.attach(`Bước ${step}: ${desc}`, { path: filePath, contentType: 'image/png' });
-}
-```
-
-### 3. Trình bày trong Báo cáo Markdown:
-Từng ảnh được đặt dưới tiêu đề phân cấp rõ ràng:
-```markdown
-##### 📸 Bước 1: Đăng nhập thành công với tài khoản nhân viên
-![Bước 1: Đăng nhập thành công](TC-01/screenshots/TC-01-step01-dang-nhap.png)
-
-##### 📸 Bước 2: Điền đầy đủ thông tin vào form
-![Bước 2: Điền thông tin](TC-01/screenshots/TC-01-step02-dien-form.png)
-```
-
----
-
-## 10. Tiêu Chuẩn Phân Tích Nguyên Nhân Thất Bại Khi TC FAIL (Failure Analysis)
-
-Khi một Test Case bị đánh giá **FAIL** (dù là Kỹ thuật hay Logic Nghiệp vụ), báo cáo nghiệm thu **BẮT BUỘC PHẢI CÓ KHỐI PHÂN TÍCH LỖI CHI TIẾT** theo định dạng GitHub Alert `> [!CAUTION] 🚨 PHÂN TÍCH NGUYÊN NHÂN THẤT BẠI (FAILURE ANALYSIS)`.
-
-### Cấu trúc 5 thành tố bắt buộc:
-1. **Vấn đề / Mã lỗi**: Tóm tắt ngắn gọn lỗi phát hiện được.
-2. **Kỳ vọng nghiệp vụ (Expected Output)**: Hệ thống lẽ ra phải hoạt động hoặc trả về kết quả gì theo chuẩn nghiệp vụ.
-3. **Thực tế hệ thống (Actual Output)**: Trên thực tế, hệ thống phản hồi như thế nào (kèm trích dẫn dữ liệu rỗng, mã lỗi, hoặc thông báo sai).
-4. **Nguyên nhân cốt lõi (Root Cause)**: Phân tích nguyên nhân kỹ thuật (Stored Procedure nào chưa UPDATE dữ liệu, API nào chưa nạp, hoặc component frontend nào binding sai).
-5. **Đề xuất khắc phục (Recommendation)**: Hướng dẫn cụ thể cho đội ngũ Backend/Frontend/DBA cách sửa lỗi nhanh chóng.
-
-### Mẫu trình bày trong báo cáo:
-```markdown
-> [!CAUTION] 🚨 PHÂN TÍCH NGUYÊN NHÂN THẤT BẠI (FAILURE ANALYSIS)
->
-> * **Vấn đề / Mã lỗi**: Dữ liệu số tài khoản và thông tin ngân hàng không cập nhật vào hồ sơ cá nhân sau khi Quản lý phê duyệt thành công
-> * **Kỳ vọng nghiệp vụ (Expected Output)**: Sau khi Quản lý Cuong.Vu thực hiện duyệt ở TC-02, số tài khoản mới (ví dụ 99xxxxxxx) và ngân hàng phải được nạp đầy đủ vào form Thông tin ngân hàng của nhân viên Tai.Dang
-> * **Thực tế hệ thống (Actual Output)**: Các ô nhập liệu Số tài khoản, Ngân hàng, Chi nhánh trong form Thông tin ngân hàng của nhân viên vẫn hoàn toàn rỗng ("")
-> * **Nguyên nhân cốt lõi (Root Cause)**: Hệ thống Paradise HRM khi gọi sp_approve_EmployeeChange mới chỉ cập nhật cờ trạng thái trong bảng yêu cầu thay đổi (sp_EmployeeChange_Detail), nhưng chưa thực hiện câu lệnh UPDATE dữ liệu vào bảng chính của nhân viên (tbl_HRS_Employee / tbl_HRS_Employee_Bank).
-> * **Đề xuất khắc phục (Recommendation)**: Đội ngũ Backend cần kiểm tra lại Stored Procedure sp_approve_EmployeeChange để đảm bảo dữ liệu được đồng bộ vào bảng nhân viên chính thức; đồng thời kiểm tra luồng API nạp dữ liệu lên form Hồ sơ nhân viên.
-```
-
----
-
-## 11. KHUNG MẪU CHUẨN BÁO CÁO NGHIỆM THU MARKDOWN (THE GOLDEN REPORT BLUEPRINT)
-
-Báo cáo nghiệm thu kiểm thử là sản phẩm cốt lõi bàn giao cho Quản lý dự án, Developer và QA/BA. Báo cáo bắt buộc phải theo chuẩn trực quan Storyboard, phân tách trạng thái kép (Dual Status), cung cấp đầy đủ bằng chứng tuần tự theo từng bước và khối phân tích nguyên nhân lỗi khi có thất bại.
-
-Mọi báo cáo nghiệm thu sinh ra (`test-evidence/<tên_trang>/test-report.md`) bắt buộc phải tuân theo cấu trúc chuẩn mực sau:
-
-### Cấu Trúc Khung Mẫu Báo Cáo Cấp Trang (`test-report.md`):
-
-```markdown
-# BÁO CÁO KIỂM THỬ TRANG: <TÊN_TRANG_IN_HOA>
-
-> Thời gian kiểm thử: **HH:mm:ss dd/MM/yyyy**
-> Tổng số kịch bản: **N** | ✅ LOGIC PASS: **X** | ❌ LOGIC FAIL: **Y**
-
-## BẢNG ĐỐI CHIẾU TRẠNG THÁI TEST & LOGIC NGHIỆP VỤ
-
-| Mã TC | Tiêu đề Kịch bản | Trạng thái Test | Trạng thái Logic | Đánh giá Nghiệp vụ |
-| :--- | :--- | :---: | :---: | :--- |
-| **TC-01** | <Tiêu đề TC-01> | ✅ PASS | ✅ PASS | <Tóm tắt kết quả nghiệp vụ TC-01> |
-| **TC-02** | <Tiêu đề TC-02> | ✅ PASS | ✅ PASS | <Tóm tắt kết quả nghiệp vụ TC-02> |
-| **TC-03** | <Tiêu đề TC-03> | ✅ PASS | ❌ FAIL | <Tóm tắt phát hiện Bug nghiệp vụ TC-03> |
-
----
-
-### TC-01: <Tiêu đề kịch bản thành công>
-
-* **Trạng thái thực thi Test (Kỹ thuật)**: ✅ PASS (Thời gian thực thi: `38.01s`)
-* **Trạng thái Logic Nghiệp vụ (Business Output)**: ✅ PASS
-* **Đánh giá tổng quát**: Yêu cầu cập nhật thông tin đã được gửi thành công lên hệ thống phê duyệt
-* **Thư mục lưu trữ**: `test-evidence/<tên_trang>/TC-01/`
-
-#### 📸 Bằng chứng trực quan từng bước (Step-by-Step Evidence):
-
-##### 🔹 Bước 1: Đăng nhập thành công với tài khoản nhân viên Tai.Dang
-![Bước 1: Đăng nhập thành công với tài khoản nhân viên Tai.Dang](TC-01/screenshots/TC-01-step01-dang-nhap-thanh-cong.png)
-
-##### 🔹 Bước 2: Mở màn hình Hồ sơ nhân viên và khu vực thông tin cá nhân
-![Bước 2: Mở màn hình Hồ sơ nhân viên](TC-01/screenshots/TC-01-step02-mo-man-hinh-ho-so.png)
-
-##### 🔹 Bước 3: Nhập đầy đủ thông tin vào form chỉnh sửa
-![Bước 3: Nhập thông tin form](TC-01/screenshots/TC-01-step03-nhap-thong-tin.png)
-
-##### 🔹 Bước 4: Con trỏ chuột Neon di chuyển và nhấp nút Lưu thay đổi
-![Bước 4: Con trỏ Neon di chuyển bấm nút](TC-01/screenshots/TC-01-step04-con-tro-chuot-neon-bam-luu.png)
-
-##### 🔹 Bước 5: Hệ thống hoàn tất gửi yêu cầu phê duyệt
-![Bước 5: Hệ thống xác nhận](TC-01/screenshots/TC-01-step05-he-thong-xac-nhan.png)
-
-#### 🎥 Video & Dấu vết kiểm thử (Video & Trace):
-- **Video phiên chạy thực tế**: [video.webm](TC-01/videos/video.webm)
-- **Playwright Trace**: [trace.zip](TC-01/traces/trace.zip) *(Mở bằng: `npx playwright show-trace test-evidence/<tên_trang>/TC-01/traces/trace.zip`)*
-
----
-
-### TC-03: <Tiêu đề kịch bản phát hiện Bug / Thất bại>
-
-* **Trạng thái thực thi Test (Kỹ thuật)**: ✅ PASS (Thời gian thực thi: `29.79s`)
-* **Trạng thái Logic Nghiệp vụ (Business Output)**: ❌ FAIL
-* **Đánh giá tổng quát**: FAIL - Dữ liệu không hiển thị trên hồ sơ sau khi đã được phê duyệt
-* **Thư mục lưu trữ**: `test-evidence/<tên_trang>/TC-03/`
-
-> [!CAUTION] 🚨 PHÂN TÍCH NGUYÊN NHÂN THẤT BẠI (FAILURE ANALYSIS)
->
-> * **Vấn đề / Mã lỗi**: Dữ liệu số tài khoản và thông tin ngân hàng không cập nhật vào hồ sơ cá nhân sau khi Quản lý phê duyệt thành công
-> * **Kỳ vọng nghiệp vụ (Expected Output)**: Sau khi Quản lý Cuong.Vu thực hiện duyệt ở TC-02, số tài khoản mới (ví dụ 99xxxxxxx) và ngân hàng phải được nạp đầy đủ vào form Thông tin ngân hàng của nhân viên Tai.Dang
-> * **Thực tế hệ thống (Actual Output)**: Các ô nhập liệu Số tài khoản, Ngân hàng, Chi nhánh trong form Thông tin ngân hàng của nhân viên vẫn hoàn toàn rỗng ("")
-> * **Nguyên nhân cốt lõi (Root Cause)**: Hệ thống Paradise HRM khi gọi sp_approve_EmployeeChange mới chỉ cập nhật cờ trạng thái trong bảng yêu cầu thay đổi (sp_EmployeeChange_Detail), nhưng chưa thực hiện câu lệnh UPDATE dữ liệu vào bảng chính của nhân viên (tbl_HRS_Employee / tbl_HRS_Employee_Bank), hoặc API lấy thông tin nhân viên chưa nạp dữ liệu từ nguồn đã duyệt.
-> * **Đề xuất khắc phục (Recommendation)**: Đội ngũ Backend cần kiểm tra lại Stored Procedure sp_approve_EmployeeChange để đảm bảo dữ liệu được đồng bộ vào bảng nhân viên chính thức; đồng thời kiểm tra luồng API nạp dữ liệu lên form Hồ sơ nhân viên.
-
-#### 📸 Bằng chứng trực quan từng bước (Step-by-Step Evidence):
-
-##### 🔹 Bước 1: Nhân viên Tai.Dang đăng nhập lại hệ thống để kiểm tra thông tin sau duyệt
-![Bước 1: Nhân viên đăng nhập lại](TC-03/screenshots/TC-03-step01-dang-nhap-lai.png)
-
-##### 🔹 Bước 2: Điều hướng đến mục Thông tin Ngân hàng & Thuế trên màn hình Hồ sơ nhân viên
-![Bước 2: Mở hồ sơ nhân viên](TC-03/screenshots/TC-03-step02-mo-ho-so.png)
-
-##### 🔹 Bước 3: Bằng chứng đối chiếu thực tế: Form Thông tin ngân hàng vẫn rỗng dữ liệu sau khi duyệt
-![Bước 3: Bằng chứng form rỗng](TC-03/screenshots/TC-03-step03-bang-chung-form-rong.png)
-
-#### 🎥 Video & Dấu vết kiểm thử (Video & Trace):
-- **Video phiên chạy thực tế**: [video.webm](TC-03/videos/video.webm)
-- **Playwright Trace**: [trace.zip](TC-03/traces/trace.zip) *(Mở bằng: `npx playwright show-trace test-evidence/<tên_trang>/TC-03/traces/trace.zip`)*
-
----
-```
-
-### Các Tiêu Chí Thẩm Định Báo Cáo Đạt Chuẩn (Definition of Done for Reports):
-1. **Bảng đối chiếu kép ngay đầu báo cáo**: Phải có đầy đủ 5 cột (`Mã TC`, `Tiêu đề Kịch bản`, `Trạng thái Test`, `Trạng thái Logic`, `Đánh giá Nghiệp vụ`).
-2. **Không có ảnh trùng lặp**: Tuyệt đối không xuất hiện `test-finished-1.png` hay nhiều ảnh chụp cùng 1 trạng thái cuối.
-3. **Ảnh Storyboard tuần tự**: Mỗi bước đều có heading `##### 🔹 Bước X: <Tên bước>` và ảnh minh họa rõ nét vị trí con trỏ chuột Neon.
-4. **Bắt buộc có Failure Analysis khi FAIL**: Phải có khối `> [!CAUTION]` với đủ 5 thành tố (Vấn đề, Kỳ vọng, Thực tế, Nguyên nhân cốt lõi, Đề xuất khắc phục).
-5. **Đầy đủ đính kèm đa phương tiện**: Phải có link mở trực tiếp file `video.webm` và file `trace.zip` kèm cú pháp lệnh `npx playwright show-trace`.
-
-
-
-
-
+## 11. KHUNG MẪU CHUẨN BÁO CÁO NGHIỆM THU MARKDOWN (GOLDEN REPORT BLUEPRINT)
+Sinh tại `test-evidence/<tên_trang>/test-report.md`:
+* Bảng đối chiếu kép ngay đầu báo cáo (Mã TC, Tiêu đề, Test Status, Logic Status, Đánh giá).
+* Heading `##### 🔹 Bước X: <Tên bước>` kèm ảnh chụp rõ vị trí con trỏ chuột Neon.
+* Link mở trực tiếp file `video.webm` và file `trace.zip` kèm cú pháp lệnh `npx playwright show-trace`.

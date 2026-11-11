@@ -41,7 +41,7 @@
         pointer-events: none;
         z-index: 2147483646;
         transform: translate(-50%, -50%) scale(0.2);
-        animation: __ag_ripple_anim__ 0.45s ease-out forwards;
+        animation: __ag_ripple_anim__ 0.38s ease-out forwards;
       }
       @keyframes __ag_ripple_anim__ {
         0% {
@@ -119,7 +119,7 @@
       ripple.style.top = `${e.clientY}px`;
       const container = document.body || document.documentElement;
       if (container) container.appendChild(ripple);
-      setTimeout(() => ripple.remove(), 500);
+      setTimeout(() => ripple.remove(), 400);
     }, { passive: true });
 
     // Lắng nghe gõ phím để hiển thị bong bóng ký tự trực quan
@@ -135,7 +135,7 @@
       typingTimer = setTimeout(() => {
         typingBadge.style.opacity = '0';
         setTimeout(() => { typingBadge.style.display = 'none'; }, 200);
-      }, 1200);
+      }, 900);
     }, { passive: true });
 
     console.log('[Antigravity Visual Cursor] -> Đã kích hoạt livestream con trỏ chuột trực quan.');

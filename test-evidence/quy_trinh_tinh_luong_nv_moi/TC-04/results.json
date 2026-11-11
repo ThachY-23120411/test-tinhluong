@@ -1,0 +1,22 @@
+{
+  "tcId": "TC-04",
+  "pageName": "quy_trinh_tinh_luong_nv_moi",
+  "title": "fix-4 | TC-04: Đăng ký 1 Người phụ thuộc giảm trừ gia cảnh (Role: cuong.vu)",
+  "testStatus": "PASSED",
+  "businessStatus": "PASSED",
+  "businessNotes": "Đạt yêu cầu logic nghiệp vụ mong đợi",
+  "defectEvidence": null,
+  "failureAnalysis": {},
+  "status": "PASSED",
+  "duration": "66.23s",
+  "errors": "",
+  "stepScreenshots": [],
+  "attachments": {
+    "screenshots": [],
+    "videos": [
+      "quy_trinh_tinh_luong_nv_moi/TC-04/videos/video.webm"
+    ],
+    "traces": []
+  },
+  "timestamp": "2026-11-11T01:15:38.669Z"
+}

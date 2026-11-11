@@ -30,51 +30,71 @@ async function loginAsAdmin(page, customCredentials = null) {
   const config = getEnvConfig();
   const credentials = customCredentials || config.auth;
   const targetUrl = config.baseUrl;
+  const AUTH_FILE = path.resolve(__dirname, '../.auth/storageState.json');
 
   const currentUrl = page.url();
   if (!currentUrl.includes(targetUrl.replace(/^https?:\/\//, '').split('/')[0])) {
     await page.goto(targetUrl, { waitUntil: 'domcontentloaded' });
-    await page.waitForTimeout(1500);
   }
 
-  // Kiểm tra xem đã đăng nhập chưa
-  const isAlreadyLoggedIn = await page.evaluate(() => {
-    return (typeof window.LoginID !== 'undefined' && window.LoginID !== null) ||
-           (document.querySelector('.dock') !== null && !document.querySelector('#username'));
-  });
+  // Dismiss any lingering overlay/popup
+  const okBtn = page.locator('.VC-Vu-btn-ok:visible, .vc-btn-ok:visible').first();
+  if (await okBtn.isVisible().catch(() => false)) {
+    await okBtn.click({ force: true, timeout: 2000 }).catch(() => {});
+    await page.waitForTimeout(500);
+  }
 
-const AUTH_FILE = path.resolve(__dirname, '../.auth/storageState.json');
+  // Chờ 1 trong 2 xuất hiện: hoặc là .dock/.navbar (đã đăng nhập), hoặc là ô nhập login (chưa đăng nhập)
+  const userSelector = credentials.usernameSelector || '#username';
+  const readyElement = await Promise.race([
+    page.locator('.dock, .navbar').first().waitFor({ state: 'visible', timeout: 15000 }).then(() => 'dock').catch(() => null),
+    page.locator(userSelector).first().waitFor({ state: 'visible', timeout: 15000 }).then(() => 'login').catch(() => null)
+  ]);
 
-  if (isAlreadyLoggedIn) {
-    console.log('⚡ [AUTH]: Phiên làm việc (Token/Cookies) hợp lệ từ storageState. Bỏ qua màn hình đăng nhập, vào thẳng chức năng!');
+  if (readyElement === 'dock') {
+    console.log('⚡ [AUTH]: Phiên làm việc (Token/Cookies) hợp lệ. Bỏ qua màn hình đăng nhập, vào thẳng chức năng!');
     return;
   }
 
-  // Nếu chưa đăng nhập, tiến hành đăng nhập trực quan và lưu lại storageState
-  const userSelector = credentials.usernameSelector || '#username';
-  const passSelector = credentials.passwordSelector || 'input[type="password"]';
-  const submitSelector = credentials.submitSelector || '#submitLogin';
+  // Nếu hiện ô login, tiến hành nhập thông tin
+  const userInput = page.locator(userSelector).first();
+  await userInput.waitFor({ state: 'visible', timeout: 8000 }).catch(() => {});
 
-  const userInput = page.locator(userSelector);
-  if (await userInput.isVisible({ timeout: 5000 }).catch(() => false)) {
-    console.log(`🔑 [AUTH]: Thực hiện đăng nhập lần đầu với tài khoản ${credentials.username}...`);
+  if (await userInput.isVisible().catch(() => false)) {
+    console.log(`🔑 [AUTH]: Thực hiện đăng nhập với tài khoản ${credentials.username}...`);
     await userInput.click();
-    await userInput.fill(credentials.username);
-    await page.waitForTimeout(200);
+    await userInput.fill('');
+    await userInput.pressSequentially(credentials.username, { delay: 35 });
+    await page.waitForTimeout(300);
 
-    const passInput = page.locator(passSelector);
+    const passSelector = credentials.passwordSelector || 'input[type="password"]';
+    const passInput = page.locator(passSelector).first();
     await passInput.click();
-    await passInput.fill(credentials.password);
-    await page.waitForTimeout(200);
+    await passInput.fill('');
+    await passInput.pressSequentially(credentials.password, { delay: 35 });
+    await page.waitForTimeout(300);
 
-    const submitBtn = page.locator(submitSelector);
+    const submitSelector = credentials.submitSelector || '#submitLogin';
+    const submitBtn = page.locator(submitSelector).first();
     await submitBtn.click();
 
-    // Chờ dock hoặc menu xuất hiện
-    await page.locator('.dock, .navbar').first().waitFor({ state: 'visible', timeout: 25000 });
-    await page.waitForTimeout(2000);
+    // Dismiss any modal popup that might block after login submit
+    await page.waitForTimeout(1000);
+    const okBtnAfter = page.locator('.VC-Vu-btn-ok:visible, .vc-btn-ok:visible, .modal .btn-primary:visible').first();
+    if (await okBtnAfter.isVisible().catch(() => false)) {
+      await okBtnAfter.click({ force: true, timeout: 2000 }).catch(() => {});
+    }
 
-    // Lưu phiên đăng nhập (Cookies, Token, LocalStorage) vào file để các lần test sau không phải đăng nhập lại
+    // Chờ dock hoặc menu xuất hiện với thời gian chờ an toàn
+    const dockNav = page.locator('.dock, .navbar').first();
+    const hasDock = await dockNav.waitFor({ state: 'visible', timeout: 15000 }).then(() => true).catch(() => false);
+    if (!hasDock) {
+      await page.goto(targetUrl, { waitUntil: 'domcontentloaded' });
+      await dockNav.waitFor({ state: 'visible', timeout: 20000 }).catch(() => {});
+    }
+    await page.waitForTimeout(1500);
+
+    // Lưu phiên đăng nhập (Cookies, Token, LocalStorage) vào file
     try {
       fs.mkdirSync(path.dirname(AUTH_FILE), { recursive: true });
       await page.context().storageState({ path: AUTH_FILE });
@@ -82,6 +102,8 @@ const AUTH_FILE = path.resolve(__dirname, '../.auth/storageState.json');
     } catch (e) {
       console.log('⚠️ [AUTH]: Không thể lưu storageState:', e.message);
     }
+  } else {
+    await page.locator('.dock, .navbar').first().waitFor({ state: 'visible', timeout: 15000 }).catch(() => {});
   }
 }
 

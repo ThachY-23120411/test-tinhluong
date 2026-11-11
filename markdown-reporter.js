@@ -1,5 +1,6 @@
 const fs = require('fs');
 const path = require('path');
+const crypto = require('crypto');
 
 class HierarchicalMarkdownReporter {
   constructor(options = {}) {
@@ -11,6 +12,32 @@ class HierarchicalMarkdownReporter {
   onBegin(config, suite) {
     if (!fs.existsSync(this.outputDir)) {
       fs.mkdirSync(this.outputDir, { recursive: true });
+    }
+  }
+
+  onTestBegin(test, result) {
+    // Tự động dọn sạch thư mục screenshots cũ của TC trước khi chạy lượt mới
+    const specFilePath = test.location ? test.location.file : '';
+    let pageName = 'common';
+    if (specFilePath) {
+      pageName = path.basename(specFilePath)
+        .replace(/\.spec\.[jt]s$/, '')
+        .replace(/\.[jt]s$/, '');
+    }
+    const tcMatch = test.title.match(/(?:TC|FLOW|E2E)-(\d+)/i);
+    const tcId = tcMatch ? tcMatch[0].toUpperCase() : null;
+    if (tcId) {
+      const screenshotsDir = path.join(this.outputDir, pageName, tcId, 'screenshots');
+      if (fs.existsSync(screenshotsDir)) {
+        try {
+          const files = fs.readdirSync(screenshotsDir);
+          for (const f of files) {
+            if (f.endsWith('.png')) {
+              fs.unlinkSync(path.join(screenshotsDir, f));
+            }
+          }
+        } catch (_) {}
+      }
     }
   }
 
@@ -136,28 +163,55 @@ class HierarchicalMarkdownReporter {
     // Sắp xếp các bước theo thứ tự tăng dần 1, 2, 3...
     stepScreenshots.sort((a, b) => a.step - b.step);
 
+    // 🛑 BỘ LỌC CHỐNG TRÙNG LẶP ẢNH THÔNG MINH (SMART IMAGE DEDUPLICATION)
+    // Nếu ảnh bước sau giống hệt 100% (cùng hash MD5) với ảnh bước trước:
+    // Đánh dấu isDuplicate = true và xoá file trùng để tránh hiển thị 1 ảnh nhiều lần liên tiếp
+    let prevHash = null;
+    let prevStepNum = null;
+    const deduplicatedScreenshots = [];
+
+    for (const item of stepScreenshots) {
+      const fullPath = path.join(screenshotsDir, item.fileName);
+      let currentHash = null;
+      try {
+        if (fs.existsSync(fullPath)) {
+          const buf = fs.readFileSync(fullPath);
+          currentHash = crypto.createHash('md5').update(buf).digest('hex');
+        }
+      } catch (_) {}
+
+      if (currentHash && currentHash === prevHash) {
+        // Ảnh trùng hệt 100% với bước trước!
+        try { fs.unlinkSync(fullPath); } catch (_) {}
+        deduplicatedScreenshots.push({
+          ...item,
+          isDuplicate: true,
+          duplicateOfStep: prevStepNum
+        });
+      } else {
+        prevHash = currentHash;
+        prevStepNum = item.step;
+        deduplicatedScreenshots.push(item);
+      }
+    }
+
     // Nếu có ảnh chụp theo bước thì xóa bỏ test-finished thừa để không làm loãng báo cáo
-    if (stepScreenshots.length > 0) {
+    if (deduplicatedScreenshots.length > 0) {
       for (const fb of fallbackScreenshots) {
         try { fs.unlinkSync(path.join(screenshotsDir, fb.fileName)); } catch (_) {}
       }
     }
 
-    const finalScreenshots = stepScreenshots.length > 0 ? stepScreenshots : fallbackScreenshots;
+    const finalScreenshots = deduplicatedScreenshots.length > 0 ? deduplicatedScreenshots : fallbackScreenshots;
 
     // 7. Đánh giá Trạng thái kép: Kỹ thuật (Playwright) và Logic Nghiệp vụ
     const bizAnn = (test.annotations || []).find(a => a.type === 'business_status');
-    const analysisAnn = (test.annotations || []).find(a => a.type === 'business_analysis');
+    const defectAnn = (test.annotations || []).find(a => a.type === 'defect_evidence');
+    const legacyAnalysisAnn = (test.annotations || []).find(a => a.type === 'business_analysis');
 
     let businessStatus = 'PASSED';
     let businessNotes = 'Đạt yêu cầu logic nghiệp vụ mong đợi';
-    let failureAnalysis = {
-      issue: '',
-      expected: '',
-      actual: '',
-      rootCause: '',
-      recommendation: ''
-    };
+    let defectEvidence = null;
 
     if (bizAnn) {
       const desc = bizAnn.description || '';
@@ -170,22 +224,27 @@ class HierarchicalMarkdownReporter {
       businessNotes = (result.errors || []).map(e => e.message || e.value).join('\n') || 'Lỗi thực thi trong quá trình test';
     }
 
-    // Trích xuất chi tiết phân tích lỗi nếu có
-    if (analysisAnn && analysisAnn.description) {
+    // Trích xuất bằng chứng lỗi khách quan (DEFECT EVIDENCE - FACTS ONLY)
+    if (defectAnn && defectAnn.description) {
       try {
-        const parsed = JSON.parse(analysisAnn.description);
-        failureAnalysis = { ...failureAnalysis, ...parsed };
+        defectEvidence = JSON.parse(defectAnn.description);
       } catch (_) {
-        failureAnalysis.issue = analysisAnn.description;
+        defectEvidence = { issue: defectAnn.description };
+      }
+    } else if (legacyAnalysisAnn && legacyAnalysisAnn.description) {
+      try {
+        defectEvidence = JSON.parse(legacyAnalysisAnn.description);
+      } catch (_) {
+        defectEvidence = { issue: legacyAnalysisAnn.description };
       }
     } else if (businessStatus === 'FAILED') {
       const expMatch = businessNotes.match(/Kỳ vọng[:\s]+([^,)]+)/i);
       const actMatch = businessNotes.match(/Thực tế[:\s]+([^,)]+)/i);
-      failureAnalysis.issue = businessNotes;
-      if (expMatch) failureAnalysis.expected = expMatch[1].trim();
-      if (actMatch) failureAnalysis.actual = actMatch[1].trim();
-      failureAnalysis.rootCause = 'Dữ liệu backend hoặc thao tác xử lý không cập nhật đúng vào cơ sở dữ liệu/giao diện';
-      failureAnalysis.recommendation = 'Kiểm tra Stored Procedure xử lý nghiệp vụ và luồng nạp dữ liệu lên form';
+      defectEvidence = {
+        issue: businessNotes,
+        expected: expMatch ? expMatch[1].trim() : 'Theo đặc tả chuẩn của hệ thống',
+        actual: actMatch ? actMatch[1].trim() : 'Thực tế phát sinh lỗi hoặc không đạt điều kiện kiểm tra'
+      };
     }
 
     let cleanTitle = test.title.replace(new RegExp(`^${tcId}[:\\s-]*`, 'i'), '').trim();
@@ -197,7 +256,8 @@ class HierarchicalMarkdownReporter {
       testStatus: status,
       businessStatus: businessStatus,
       businessNotes: businessNotes,
-      failureAnalysis,
+      defectEvidence,
+      failureAnalysis: defectEvidence || {},
       status: (status === 'PASSED' && businessStatus === 'PASSED') ? 'PASSED' : 'FAILED',
       duration: `${durationSec}s`,
       errors: (result.errors || []).map(e => e.message || e.value).join('\n'),
@@ -252,8 +312,27 @@ pause
 
     // 1. Tạo file báo cáo & file .bat riêng cho từng trang: test-evidence/<pageName>/
     for (const pageName of Object.keys(this.pageResults)) {
-      const list = this.pageResults[pageName];
       const pageDir = path.join(this.outputDir, pageName);
+
+      // Thu thập toàn bộ kết quả của trang (gộp giữa phiên chạy hiện tại và các TC đã chạy trước đó trên đĩa)
+      const mergedMap = new Map();
+      if (fs.existsSync(pageDir)) {
+        const subDirs = fs.readdirSync(pageDir, { withFileTypes: true })
+          .filter(d => d.isDirectory() && (d.name.startsWith('TC-') || d.name.startsWith('FLOW-')));
+        for (const sd of subDirs) {
+          const resPath = path.join(pageDir, sd.name, 'results.json');
+          if (fs.existsSync(resPath)) {
+            try {
+              const prevData = JSON.parse(fs.readFileSync(resPath, 'utf8'));
+              mergedMap.set(prevData.tcId, prevData);
+            } catch (_) {}
+          }
+        }
+      }
+      for (const curTc of (this.pageResults[pageName] || [])) {
+        mergedMap.set(curTc.tcId, curTc);
+      }
+      const list = Array.from(mergedMap.values()).sort((a, b) => a.tcId.localeCompare(b.tcId, undefined, { numeric: true }));
 
       // Tạo Run-This-Page.bat
       const pageBatPath = path.join(pageDir, 'Run-This-Page.bat');
@@ -308,23 +387,24 @@ pause
         pageMd += `* **Đánh giá tổng quát**: ${tc.businessNotes}\n`;
         pageMd += `* **Thư mục lưu trữ**: \`test-evidence/${pageName}/${tc.tcId}/\`\n\n`;
 
-        // 🚨 NẾU TC FAIL: Hiển thị Khối Phân Tích Nguyên Nhân Thất Bại (Failure Analysis)
+        // 🚨 NẾU TC FAIL: Hiển thị Khối Bằng Chứng Sai Khác Thực Tế (DEFECT EVIDENCE - FACTS ONLY)
         if (tc.businessStatus === 'FAILED' || tc.testStatus === 'FAILED') {
-          pageMd += `> [!CAUTION] 🚨 PHÂN TÍCH NGUYÊN NHÂN THẤT BẠI (FAILURE ANALYSIS)\n`;
+          const evidenceObj = tc.defectEvidence || tc.failureAnalysis || {};
+          pageMd += `> [!CAUTION] 🚨 THÔNG TIN LỖI PHÁT HIỆN TỪ THỰC THI (DEFECT EVIDENCE - FACTS ONLY)\n`;
           pageMd += `>\n`;
-          pageMd += `> * **Vấn đề / Mã lỗi**: ${tc.failureAnalysis.issue || tc.businessNotes}\n`;
-          if (tc.failureAnalysis.expected) {
-            pageMd += `> * **Kỳ vọng nghiệp vụ (Expected Output)**: ${tc.failureAnalysis.expected}\n`;
+          pageMd += `> * **Vấn đề ghi nhận**: ${evidenceObj.issue || tc.businessNotes}\n`;
+          if (evidenceObj.expected) {
+            pageMd += `> * **Kỳ vọng nghiệp vụ (Expected Output)**: ${evidenceObj.expected}\n`;
           }
-          if (tc.failureAnalysis.actual) {
-            pageMd += `> * **Thực tế hệ thống (Actual Output)**: ${tc.failureAnalysis.actual}\n`;
+          if (evidenceObj.actual) {
+            pageMd += `> * **Thực tế hệ thống (Actual Output)**: ${evidenceObj.actual}\n`;
           }
-          if (tc.failureAnalysis.rootCause) {
-            pageMd += `> * **Nguyên nhân cốt lõi (Root Cause)**: ${tc.failureAnalysis.rootCause}\n`;
+          if (evidenceObj.evidence) {
+            const evStr = typeof evidenceObj.evidence === 'object' ? JSON.stringify(evidenceObj.evidence, null, 2) : evidenceObj.evidence;
+            pageMd += `> * **Dữ liệu kỹ thuật liên quan (Technical Evidence)**:\n\`\`\`json\n${evStr}\n\`\`\`\n`;
           }
-          if (tc.failureAnalysis.recommendation) {
-            pageMd += `> * **Đề xuất khắc phục (Recommendation)**: ${tc.failureAnalysis.recommendation}\n`;
-          }
+          pageMd += `>\n`;
+          pageMd += `> 📌 **Lưu ý**: Kịch bản Test chỉ ghi nhận dữ liệu thực tế và sai khác. Phân tích nguyên nhân gốc (Root Cause) và giải pháp khắc phục sẽ do AI Agent điều tra và brainstorm trực tiếp từ Database & Source Code khi người dùng yêu cầu.\n`;
           pageMd += `\n`;
         }
 
@@ -333,13 +413,28 @@ pause
           pageMd += `\`\`\`\n${tc.errors}\n\`\`\`\n\n`;
         }
 
-        // BẰNG CHỨNG HÌNH ẢNH STEP-BY-STEP
+        // BẰNG CHỨNG HÌNH ẢNH STEP-BY-STEP (GOM NHÓM THEO BƯỚC)
         pageMd += `#### 📸 Bằng chứng trực quan từng bước (Step-by-Step Evidence):\n\n`;
         if (tc.stepScreenshots && tc.stepScreenshots.length > 0) {
+          // Gom nhóm ảnh theo Bước (Group by Step)
+          const stepGroups = new Map();
           for (const s of tc.stepScreenshots) {
-            const relToReport = s.relPath.replace(`${pageName}/`, '');
-            pageMd += `##### 🔹 Bước ${s.step}: ${s.title}\n`;
-            pageMd += `![Bước ${s.step}: ${s.title}](${relToReport})\n\n`;
+            if (!stepGroups.has(s.step)) {
+              stepGroups.set(s.step, { step: s.step, title: s.title, list: [] });
+            }
+            stepGroups.get(s.step).list.push(s);
+          }
+          const sortedSteps = Array.from(stepGroups.values()).sort((a, b) => a.step - b.step);
+          for (const grp of sortedSteps) {
+            pageMd += `##### 🔹 Bước ${grp.step}: ${grp.title}\n`;
+            for (const item of grp.list) {
+              if (item.isDuplicate) {
+                pageMd += `> *(Giao diện giữ nguyên, không phát sinh thay đổi so với Bước ${item.duplicateOfStep})*\n\n`;
+              } else {
+                const relToReport = item.relPath.replace(`${pageName}/`, '');
+                pageMd += `![Bước ${grp.step}: ${item.title}](${relToReport})\n\n`;
+              }
+            }
           }
         } else {
           pageMd += `*(Không có ảnh chụp màn hình)*\n\n`;
@@ -366,15 +461,44 @@ pause
     }
 
     // 2. Tạo báo cáo tổng hợp Master tại gốc: test-evidence/test-report.md
+    // Thu thập toàn bộ các trang và kịch bản có sẵn trong test-evidence để báo cáo master luôn đầy đủ
+    const allPageSummaries = {};
+    const masterTCList = [];
+    if (fs.existsSync(this.outputDir)) {
+      const pageDirs = fs.readdirSync(this.outputDir, { withFileTypes: true })
+        .filter(d => d.isDirectory() && !d.name.startsWith('.') && d.name !== 'node_modules');
+      for (const pd of pageDirs) {
+        const pDir = path.join(this.outputDir, pd.name);
+        const subDirs = fs.readdirSync(pDir, { withFileTypes: true })
+          .filter(d => d.isDirectory() && (d.name.startsWith('TC-') || d.name.startsWith('FLOW-')));
+        if (subDirs.length > 0) {
+          const tcList = [];
+          for (const sd of subDirs) {
+            const resPath = path.join(pDir, sd.name, 'results.json');
+            if (fs.existsSync(resPath)) {
+              try {
+                const tcData = JSON.parse(fs.readFileSync(resPath, 'utf8'));
+                tcList.push(tcData);
+                masterTCList.push(tcData);
+              } catch (_) {}
+            }
+          }
+          if (tcList.length > 0) {
+            allPageSummaries[pd.name] = tcList.sort((a, b) => a.tcId.localeCompare(b.tcId, undefined, { numeric: true }));
+          }
+        }
+      }
+    }
+
     let masterMd = `# BÁO CÁO KIỂM THỬ TỔNG HỢP E2E (MASTER TEST REPORT)\n\n`;
     masterMd += `> Thời gian kiểm thử: **${timestamp}**\n`;
-    masterMd += `> Tổng số trang: **${Object.keys(this.pageResults).length}** | Tổng số kịch bản: **${this.allResults.length}**\n\n`;
+    masterMd += `> Tổng số trang: **${Object.keys(allPageSummaries).length}** | Tổng số kịch bản: **${masterTCList.length}**\n\n`;
     masterMd += `## 1. TỔNG QUAN THEO TỪNG TRANG / MENU\n\n`;
     masterMd += `| Trang / Menu | File Kịch Bản | Số Test Case | Trạng thái Logic | Báo cáo chi tiết |\n`;
     masterMd += `| :--- | :--- | :--- | :--- | :--- |\n`;
 
-    for (const pageName of Object.keys(this.pageResults)) {
-      const list = this.pageResults[pageName];
+    for (const pageName of Object.keys(allPageSummaries).sort()) {
+      const list = allPageSummaries[pageName];
       const pCount = list.filter(t => t.businessStatus === 'PASSED').length;
       const fCount = list.length - pCount;
       const statusText = fCount === 0 ? '✅ 100% LOGIC PASS' : `❌ ${fCount} LOGIC FAIL`;
@@ -384,7 +508,7 @@ pause
     masterMd += `\n---\n\n`;
     masterMd += `## 2. CHI TIẾT TẤT CẢ TEST CASES\n\n`;
 
-    for (const tc of this.allResults) {
+    for (const tc of masterTCList) {
       const testBadge = tc.testStatus === 'PASSED' ? '✅ PASS' : '❌ FAIL';
       const bizBadge = tc.businessStatus === 'PASSED' ? '✅ PASS' : '❌ FAIL';
       masterMd += `### [${tc.pageName}] ${tc.tcId}: ${tc.title}\n\n`;
@@ -394,21 +518,22 @@ pause
       masterMd += `* **Thư mục bằng chứng**: [\`test-evidence/${tc.pageName}/${tc.tcId}/\`](file:///${path.resolve(this.outputDir, tc.pageName, tc.tcId).replace(/\\/g, '/')})\n\n`;
 
       if (tc.businessStatus === 'FAILED' || tc.testStatus === 'FAILED') {
-        masterMd += `> [!CAUTION] 🚨 PHÂN TÍCH NGUYÊN NHÂN THẤT BẠI (FAILURE ANALYSIS)\n`;
+        const evidenceObj = tc.defectEvidence || tc.failureAnalysis || {};
+        masterMd += `> [!CAUTION] 🚨 THÔNG TIN LỖI PHÁT HIỆN TỪ THỰC THI (DEFECT EVIDENCE - FACTS ONLY)\n`;
         masterMd += `>\n`;
-        masterMd += `> * **Vấn đề / Mã lỗi**: ${tc.failureAnalysis.issue || tc.businessNotes}\n`;
-        if (tc.failureAnalysis.expected) {
-          masterMd += `> * **Kỳ vọng nghiệp vụ (Expected Output)**: ${tc.failureAnalysis.expected}\n`;
+        masterMd += `> * **Vấn đề ghi nhận**: ${evidenceObj.issue || tc.businessNotes}\n`;
+        if (evidenceObj.expected) {
+          masterMd += `> * **Kỳ vọng nghiệp vụ (Expected Output)**: ${evidenceObj.expected}\n`;
         }
-        if (tc.failureAnalysis.actual) {
-          masterMd += `> * **Thực tế hệ thống (Actual Output)**: ${tc.failureAnalysis.actual}\n`;
+        if (evidenceObj.actual) {
+          masterMd += `> * **Thực tế hệ thống (Actual Output)**: ${evidenceObj.actual}\n`;
         }
-        if (tc.failureAnalysis.rootCause) {
-          masterMd += `> * **Nguyên nhân cốt lõi (Root Cause)**: ${tc.failureAnalysis.rootCause}\n`;
+        if (evidenceObj.evidence) {
+          const evStr = typeof evidenceObj.evidence === 'object' ? JSON.stringify(evidenceObj.evidence, null, 2) : evidenceObj.evidence;
+          masterMd += `> * **Dữ liệu kỹ thuật liên quan (Technical Evidence)**:\n\`\`\`json\n${evStr}\n\`\`\`\n`;
         }
-        if (tc.failureAnalysis.recommendation) {
-          masterMd += `> * **Đề xuất khắc phục (Recommendation)**: ${tc.failureAnalysis.recommendation}\n`;
-        }
+        masterMd += `>\n`;
+        masterMd += `> 📌 **Lưu ý**: Kịch bản Test chỉ ghi nhận dữ liệu thực tế và sai khác. Phân tích nguyên nhân gốc (Root Cause) và giải pháp khắc phục sẽ do AI Agent điều tra và brainstorm trực tiếp từ Database & Source Code khi người dùng yêu cầu.\n`;
         masterMd += `\n`;
       }
 
@@ -418,9 +543,23 @@ pause
 
       masterMd += `#### 📸 Bằng chứng trực quan từng bước (Step-by-Step Evidence):\n\n`;
       if (tc.stepScreenshots && tc.stepScreenshots.length > 0) {
+        const stepGroups = new Map();
         for (const s of tc.stepScreenshots) {
-          masterMd += `##### 🔹 Bước ${s.step}: ${s.title}\n`;
-          masterMd += `![Bước ${s.step}: ${s.title}](${s.relPath})\n\n`;
+          if (!stepGroups.has(s.step)) {
+            stepGroups.set(s.step, { step: s.step, title: s.title, list: [] });
+          }
+          stepGroups.get(s.step).list.push(s);
+        }
+        const sortedSteps = Array.from(stepGroups.values()).sort((a, b) => a.step - b.step);
+        for (const grp of sortedSteps) {
+          masterMd += `##### 🔹 Bước ${grp.step}: ${grp.title}\n`;
+          for (const item of grp.list) {
+            if (item.isDuplicate) {
+              masterMd += `> *(Giao diện giữ nguyên, không phát sinh thay đổi so với Bước ${item.duplicateOfStep})*\n\n`;
+            } else {
+              masterMd += `![Bước ${grp.step}: ${item.title}](${item.relPath})\n\n`;
+            }
+          }
         }
       }
 

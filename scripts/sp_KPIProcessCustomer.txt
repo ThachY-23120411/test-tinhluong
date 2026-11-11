@@ -1,0 +1,8 @@
+﻿CREATE PROCEDURE [dbo].[sp_KPIProcessCustomer](
+@LoginID int,
+@languageID varchar(5) = 'VN'
+)
+as
+begin
+	select top 1 html from tblHtmlScriptCache where TableName = 'sp_KPIProcessCustomer_html' and ScreenType = -1 and LanguageID = @LanguageID;
+end

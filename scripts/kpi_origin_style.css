@@ -1,0 +1,773 @@
+<style>
+        .card-info-item.support {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        /* Có người hỗ trợ */
+        .card-info-item.support.has-support {
+            color: #16a34a;
+        }
+
+        .card-info-item.support.has-support i {
+            color: #16a34a;
+        }
+
+        /* Chưa có */
+        .card-info-item.support.no-support {
+            color: #9ca3af;
+        }
+
+        .card-info-item.support.no-support i {
+            color: #9ca3af;
+        }
+
+        /* Dot indicator */
+        .support-dot {
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            margin-left: auto;
+        }
+
+        /* xanh */
+        .has-support .support-dot {
+            background: #16a34a;
+        }
+
+        /* xám */
+        .no-support .support-dot {
+            background: #d1d5db;
+        }
+
+        #customerKanbanComponent {
+            font-family: -apple-system, BlinkMacSystemFont, '' Segoe UI'', Roboto, '' Helvetica Neue'', Arial, sans-serif;
+            padding: 15px;
+        }
+
+        #customerKanbanComponent * {
+            box-sizing: border-box;
+        }
+
+        #customerKanbanComponent .kanban-container {
+            max-width: 100%;
+            margin: 0 auto;
+        }
+
+        #customerKanbanComponent .kanban-header {
+            padding: 0;
+            border-radius: 0;
+            margin-bottom: 10px;
+            border: none;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        #customerKanbanComponent .kanban-header h1 {
+            color: #09563c;
+            font-size: 28px;
+            font-weight: 600;
+            display: none;
+            align-items: center;
+            gap: 12px;
+        }
+
+        #customerKanbanComponent .header-actions {
+            display: flex;
+            gap: 12px;
+            align-items: flex-end;
+            flex-wrap: wrap;
+            width: 100%;
+        }
+
+        #customerKanbanComponent .date-filter {
+            display: flex;
+            align-items: flex-end;
+            gap: 12px;
+            padding: 0;
+            border-radius: 0;
+            flex-wrap: wrap;
+        }
+
+        #customerKanbanComponent .date-filter .date-input-group {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        #customerKanbanComponent .date-filter label {
+            font-size: 11px;
+            font-weight: 600;
+            color: #64748b;
+            margin: 0;
+            white-space: nowrap;
+        }
+
+        #customerKanbanComponent .date-filter input {
+            border-radius: 6px;
+            padding: 4px 8px;
+            font-size: 13px;
+            outline: none;
+            width: 130px;
+        }
+
+        #customerKanbanComponent .date-filter input:focus {
+            border-color: #198754;
+        }
+
+        #customerKanbanComponent .view-all-checkbox {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 11px;
+            color: #64748b;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+
+        #customerKanbanComponent .filter-checkbox-group {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+
+        #customerKanbanComponent .view-all-checkbox input[type="checkbox"] {
+            cursor: pointer;
+            width: 15px;
+            height: 15px;
+            accent-color: #198754;
+        }
+
+
+
+        #customerKanbanComponent .btn-primary {
+            background: #198754;
+            color: white;
+        }
+
+        #customerKanbanComponent .btn-refresh {
+            color: #198754;
+            border: 2px solid #198754;
+        }
+
+        #customerKanbanComponent .search-box-wrapper {
+            display: flex;
+            align-items: center;
+            position: relative;
+            width: 230px;
+            margin-right: 12px;
+        }
+
+        #customerKanbanComponent .search-box-wrapper i {
+            position: absolute;
+            left: 6px;
+            color: #6c757d;
+            font-size: 14px;
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        #customerKanbanComponent .kanban-search-input {
+            border: 1px solid #dee2e6;
+            border-radius: 6px;
+            padding: 6px 6px 6px 20px;
+            font-size: 13px;
+            outline: none;
+            width: 100%;
+            transition: all 0.25s ease;
+            box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+        }
+
+        #customerKanbanComponent .kanban-search-input::placeholder {
+            color: #adb5bd;
+            font-size: 12px;
+        }
+
+        #customerKanbanComponent .kanban-search-input:focus {
+            border-color: #198754;
+            box-shadow: 0 0 0 0.2rem rgba(25, 135, 84, 0.15);
+        }
+
+        #customerKanbanComponent .kanban-search-input:hover:not(:focus) {
+            border-color: #ced4da;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+        }
+
+        #customerKanbanComponent .btn-clear-search {
+            position: absolute;
+            right: 10px;
+            background: none;
+            border: none;
+            cursor: pointer;
+            color: #9ca3af;
+            font-size: 16px;
+            display: none;
+            padding: 2px 6px;
+            z-index: 2;
+            transition: color 0.2s ease;
+            text-align: center;
+        }
+
+        #customerKanbanComponent .btn-clear-search:hover {
+            color: #e74c3c;
+        }
+
+        #customerKanbanComponent .btn-clear-search i {
+            position: static;
+        }
+
+        #customerKanbanComponent .kanban-board {
+            display: flex;
+            gap: 20px;
+            overflow-x: auto;
+            padding-bottom: 20px;
+            position: relative;
+        }
+
+        #customerKanbanComponent .kanban-scroll-arrow {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 20;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: rgba(25, 135, 84, 0.9);
+            border: none;
+            color: white;
+            font-size: 20px;
+            cursor: pointer;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+            transition: all 0.2s ease;
+            padding: 0;
+        }
+
+        #customerKanbanComponent .kanban-scroll-arrow.right {
+            right: 10px;
+        }
+
+        #customerKanbanComponent .kanban-scroll-arrow.left {
+            left: 10px;
+        }
+
+        #customerKanbanComponent .kanban-board.has-overflow-right .kanban-scroll-arrow.right {
+            display: flex;
+        }
+
+        #customerKanbanComponent .kanban-board.has-overflow-left .kanban-scroll-arrow.left {
+            display: flex;
+        }
+
+        #customerKanbanComponent .kanban-scroll-arrow:hover {
+            background: rgba(25, 135, 84, 1);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+            transform: translateY(-50%) scale(1.05);
+        }
+
+        #customerKanbanComponent .kanban-columns-wrapper {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+        }
+
+        #customerKanbanComponent .kanban-content {
+
+
+
+            display: flex;
+            gap: 10px;
+            flex: 1;
+            overflow-x: auto;
+            padding-bottom: 20px;
+        }
+
+        #customerKanbanComponent .kanban-column {
+            flex: 0 0 220px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            backdrop-filter: blur(10px);
+            height: 80vh;
+            display: flex;
+            flex-direction: column;
+            transition: background 0.3s ease;
+        }
+
+        #customerKanbanComponent .column-header {
+            padding: 10px;
+            border-radius: 8px;
+            margin-bottom: 12px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            flex-shrink: 0;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+
+        #customerKanbanComponent .column-title {
+            font-size: 13px;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        #customerKanbanComponent .column-count {
+            background: #198754;
+            color: white;
+            padding: 4px 10px;
+            border-radius: 12px;
+            font-size: 12px;
+            font-weight: 600;
+        }
+
+       #customerKanbanComponent .column-cards {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            min-height: 100px;
+            flex-grow: 1;
+            overflow-y: auto;
+            overflow-x: hidden;
+            max-height: calc(100% - 80px);
+        }
+
+        #customerKanbanComponent .customer-card {
+            border-radius: 8px;
+            padding: 12px;
+            cursor: move;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            border-left: 4px solid #198754;
+        }
+
+        #customerKanbanComponent .customer-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        #customerKanbanComponent .customer-card.dragging {
+            opacity: 0.5;
+            transform: rotate(5deg);
+        }
+
+        #customerKanbanComponent .kanban-column.drag-over {
+            background: rgba(255, 255, 255, 0.2);
+            border: 2px dashed rgba(255, 255, 255, 0.5);
+        }
+
+        #customerKanbanComponent .card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 12px;
+        }
+
+        #customerKanbanComponent .card-name {
+            font-size: 13px;
+            font-weight: 600;
+
+            margin-bottom: 4px;
+        }
+
+        #customerKanbanComponent .card-company {
+            font-size: 12px;
+        }
+
+        #customerKanbanComponent .card-info {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+            margin-bottom: 12px;
+        }
+
+        #customerKanbanComponent .card-info-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 12px;
+
+        }
+
+        #customerKanbanComponent .card-info-item i {
+            /* color: #667eea; - Removed color for text icons */
+            width: 16px;
+        }
+
+        /* #customerKanbanComponent .card-content {
+            font-size: 13px;
+
+            padding: 8px;
+            border-radius: 6px;
+            margin-bottom: 8px;
+            max-height: 60px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        } */
+
+        #customerKanbanComponent .card-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        #customerKanbanComponent .card-assignee {
+   display: flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 12px;
+
+        }
+
+        #customerKanbanComponent .card-date {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 12px;
+
+        }
+
+        #customerKanbanComponent .card-actions {
+            display: flex;
+            gap: 8px;
+        }
+
+        #customerKanbanComponent .btn-icon {
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 4px;
+            border-radius: 4px;
+            transition: all 0.2s ease;
+
+        }
+
+        #customerKanbanComponent .badge {
+            display: inline-block;
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 11px;
+            font-weight: 600;
+        }
+
+        #customerKanbanComponent .badge-contact {
+            background: #d4edda;
+            color: #155724;
+        }
+
+        #customerKanbanComponent .badge-no-contact {
+            background: #f8d7da;
+            color: #721c24;
+        }
+
+        @keyframes kanbanFadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        #customerKanbanComponent .loading {
+
+            text-align: center;
+            padding: 40px;
+            color: #198754;
+            font-size: 18px;
+        }
+
+        #customerKanbanComponent .kanban-skeleton-column {
+            flex: 0 0 220px;
+            background: rgba(255, 255, 255, 0.06);
+            border-radius: 12px;
+            height: 80vh;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            padding: 12px;
+        }
+
+        #customerKanbanComponent .skeleton-line,
+        #customerKanbanComponent .skeleton-pill {
+            background: linear-gradient(90deg, #ececec 25%, #f5f5f5 50%, #ececec 75%);
+            background-size: 200% 100%;
+            animation: kanbanSkeletonShimmer 1.4s infinite;
+        }
+
+        #customerKanbanComponent .skeleton-line {
+            border-radius: 8px;
+            height: 12px;
+        }
+
+        #customerKanbanComponent .skeleton-pill {
+            border-radius: 999px;
+            height: 24px;
+            width: 52px;
+        }
+
+        #customerKanbanComponent .kanban-skeleton-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 12px;
+        }
+
+        #customerKanbanComponent .kanban-skeleton-title {
+            flex: 1;
+            max-width: 120px;
+            height: 14px;
+        }
+
+        #customerKanbanComponent .kanban-skeleton-card {
+            background: rgba(255, 255, 255, 0.08);
+            border-radius: 10px;
+            padding: 12px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        #customerKanbanComponent .kanban-skeleton-avatar {
+            width: 42px;
+            height: 42px;
+            border-radius: 50%;
+        }
+
+        #customerKanbanComponent .kanban-skeleton-body {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        #customerKanbanComponent .kanban-skeleton-body .skeleton-line:nth-child(1) {
+            width: 78%;
+        }
+
+        #customerKanbanComponent .kanban-skeleton-body .skeleton-line:nth-child(2) {
+            width: 60%;
+        }
+
+        #customerKanbanComponent .kanban-skeleton-body .skeleton-line:nth-child(3) {
+            width: 86%;
+        }
+
+        #customerKanbanComponent .col-loading-skeleton {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            padding: 8px;
+        }
+
+        #customerKanbanComponent .col-loading-skeleton-card {
+            background: rgba(0, 0, 0, 0.03);
+            border-radius: 8px;
+            padding: 14px 10px;
+            min-height: 96px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 8px;
+        }
+
+        #customerKanbanComponent .col-loading-skeleton-card .skeleton-line:nth-child(1) {
+            width: 72%;
+        }
+
+        #customerKanbanComponent .col-loading-skeleton-card .skeleton-line:nth-child(2) {
+            width: 56%;
+        }
+
+        #customerKanbanComponent .col-loading-skeleton-card .skeleton-line:nth-child(3) {
+            width: 84%;
+        }
+
+        @keyframes kanbanSkeletonShimmer {
+            0% {
+                background-position: 200% 0;
+            }
+
+            100% {
+                background-position: -200% 0;
+            }
+        }
+
+        #customerKanbanComponent .empty-state {
+            text-align: center;
+            padding: 40px 20px;
+
+        }
+
+
+        #customerKanbanComponent .empty-state i {
+            font-size: 48px;
+            margin-bottom: 5px;
+            opacity: 0.5;
+        }
+
+        /* Scrollbar styling */
+        #customerKanbanComponent .kanban-board::-webkit-scrollbar {
+            height: 8px;
+        }
+
+        #customerKanbanComponent .kanban-board::-webkit-scrollbar-track {
+            background: rgba(0, 0, 0, 0.05);
+            border-radius: 4px;
+        }
+
+        #customerKanbanComponent .kanban-board::-webkit-scrollbar-thumb {
+            background: #198754;
+            border-radius: 4px;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 1200px) {
+            #customerKanbanComponent .kanban-column {
+                flex: 0 0 220px;
+            }
+        }
+
+        @media (max-width: 992px) {
+            #customerKanbanComponent {
+                padding: 15px;
+            }
+
+            #customerKanbanComponent .kanban-column {
+                flex: 0 0 220px;
+                height: 500px;
+            }
+
+            #customerKanbanComponent .kanban-header {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 15px;
+            }
+
+            #customerKanbanComponent .header-actions {
+                width: 100%;
+            }
+
+            #customerKanbanComponent .date-filter {
+                width: 100%;
+            }
+
+        }
+
+        @media (max-width: 768px) {
+            #customerKanbanComponent {
+                padding: 10px;
+            }
+
+            #customerKanbanComponent .kanban-column {
+                flex: 0 0 220px;
+                height: 450px;
+                padding: 12px;
+            }
+
+            #customerKanbanComponent .column-header {
+                padding: 12px;
+                margin-bottom: 8px;
+            }
+
+            #customerKanbanComponent .column-title {
+                font-size: 14px;
+            }
+
+            #customerKanbanComponent .column-count {
+                padding: 3px 10px;
+                font-size: 11px;
+            }
+
+            #customerKanbanComponent .customer-card {
+                padding: 12px;
+            }
+
+            #customerKanbanComponent .card-name {
+                font-size: 14px;
+            }
+
+            #customerKanbanComponent .card-company {
+                font-size: 12px;
+            }
+
+            #customerKanbanComponent .card-info-item {
+                font-size: 12px;
+            }
+
+            #customerKanbanComponent .date-filter .date-input-group {
+                flex: 0 0 calc(50% - 6px);
+            }
+
+            #customerKanbanComponent .date-filter input {
+                width: 100%;
+            }
+        }
+
+        @media (max-width: 576px) {
+            #customerKanbanComponent {
+                padding: 8px;
+            }
+
+            #customerKanbanComponent .kanban-column {
+                flex: 0 0 200px;
+                height: 400px;
+                padding: 10px;
+            }
+
+            #customerKanbanComponent .column-header {
+                padding: 10px;
+                margin-bottom: 6px;
+            }
+
+            #customerKanbanComponent .column-title {
+                font-size: 13px;
+            }
+
+            #customerKanbanComponent .customer-card {
+                padding: 10px;
+            }
+
+            #customerKanbanComponent .card-name {
+                font-size: 13px;
+            }
+
+            #customerKanbanComponent .card-company {
+                font-size: 11px;
+            }
+
+            #customerKanbanComponent .card-info-item {
+                font-size: 11px;
+                gap: 4px;
+            }
+
+            #customerKanbanComponent .date-filter .date-input-group {
+                flex: 1 1 auto;
+            }
+
+            #customerKanbanComponent .date-filter label {
+                font-size: 11px;
+            }
+
+            #customerKanbanComponent .date-filter input {
+                width: 100%;
+                padding: 3px 6px;
+                font-size: 12px;
+            }
+
+
+            #customerKanbanComponent .form-control {
+                padding: 8px 10px;
+                font-size: 13px;
+            }
+        }
+   </style>

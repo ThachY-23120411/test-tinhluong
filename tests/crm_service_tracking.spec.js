@@ -271,13 +271,16 @@ test.describe('Kiểm thử Phân hệ CRM - Menu Theo Dõi Dịch Vụ & Hợp 
         description: `FAIL - Lỗi cú pháp SQL Backend khi tìm kiếm: ${sqlErrorReason}`
       });
       testInfo.annotations.push({
-        type: 'business_analysis',
+        type: 'defect_evidence',
         description: JSON.stringify({
           issue: 'DataGrid hiển thị "Không có dữ liệu" khi tìm kiếm dù từ khóa có thật trong danh sách',
           expected: 'Khi tìm kiếm "NIDEC" hoặc "CÔNG TY", hệ thống phải trả về các bản ghi khớp với từ khóa',
           actual: `Server IIS trả HTTP 200 nhưng payload trả lỗi SQL nội bộ: "${sqlErrorReason}", làm mảng data rỗng []`,
-          rootCause: 'Stored Procedure hoặc câu lệnh SQL động phía Backend xử lý tham số tìm kiếm bị sai cú pháp (Incorrect syntax near ")")',
-          recommendation: 'Đội ngũ Backend cần kiểm tra lại câu lệnh SQL ghép chuỗi tìm kiếm trong Stored Procedure của menu Theo dõi dịch vụ'
+          evidence: {
+            httpStatus: 200,
+            sqlErrorReason,
+            searchKeyword: sampleKeyword
+          }
         })
       });
     } else {

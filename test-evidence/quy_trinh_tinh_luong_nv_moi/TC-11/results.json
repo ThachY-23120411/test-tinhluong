@@ -1,0 +1,61 @@
+{
+  "tcId": "TC-11",
+  "pageName": "quy_trinh_tinh_luong_nv_moi",
+  "title": "fix-6 | TC-11: Quản lý LongKa phê duyệt Cấp 1 đơn Tăng ca OT 20/10 (Role: LongKa)",
+  "testStatus": "PASSED",
+  "businessStatus": "PASSED",
+  "businessNotes": "PASS - Quản lý LongKa đã thẩm định & duyệt Cấp 1 đơn Tăng ca OT ngày 20/10 của NV 099",
+  "defectEvidence": null,
+  "failureAnalysis": {},
+  "status": "PASSED",
+  "duration": "58.34s",
+  "errors": "",
+  "stepScreenshots": [
+    {
+      "step": 1,
+      "title": "Dang nhap tai khoan Quan ly tang ca LongKa",
+      "fileName": "TC-11-step01-dang-nhap-tai-khoan-quan-ly-tang-ca-longka.png",
+      "relPath": "quy_trinh_tinh_luong_nv_moi/TC-11/screenshots/TC-11-step01-dang-nhap-tai-khoan-quan-ly-tang-ca-longka.png"
+    },
+    {
+      "step": 2,
+      "title": "Mo man hinh Danh sach phe duyet MnuWPT037",
+      "fileName": "TC-11-step02-mo-man-hinh-danh-sach-phe-duyet-mnuwpt037.png",
+      "relPath": "quy_trinh_tinh_luong_nv_moi/TC-11/screenshots/TC-11-step02-mo-man-hinh-danh-sach-phe-duyet-mnuwpt037.png"
+    },
+    {
+      "step": 3,
+      "title": "Khoanh vung the don tang ca OT 20-10 can duyet",
+      "fileName": "TC-11-step03-khoanh-vung-the-don-tang-ca-ot-20-10-can-duyet.png",
+      "relPath": "quy_trinh_tinh_luong_nv_moi/TC-11/screenshots/TC-11-step03-khoanh-vung-the-don-tang-ca-ot-20-10-can-duyet.png"
+    },
+    {
+      "step": 4,
+      "title": "Di chuot bam nut Duyet Cap 1 OT va xac nhan",
+      "fileName": "TC-11-step04-di-chuot-bam-nut-duyet-cap-1-ot-va-xac-nhan.png",
+      "relPath": "quy_trinh_tinh_luong_nv_moi/TC-11/screenshots/TC-11-step04-di-chuot-bam-nut-duyet-cap-1-ot-va-xac-nhan.png"
+    },
+    {
+      "step": 5,
+      "title": "Doi soat CSDL trang thai duyet Cap 1 OT",
+      "fileName": "TC-11-step05-doi-soat-csdl-trang-thai-duyet-cap-1-ot.png",
+      "relPath": "quy_trinh_tinh_luong_nv_moi/TC-11/screenshots/TC-11-step05-doi-soat-csdl-trang-thai-duyet-cap-1-ot.png",
+      "isDuplicate": true,
+      "duplicateOfStep": 4
+    }
+  ],
+  "attachments": {
+    "screenshots": [
+      "quy_trinh_tinh_luong_nv_moi/TC-11/screenshots/TC-11-step01-dang-nhap-tai-khoan-quan-ly-tang-ca-longka.png",
+      "quy_trinh_tinh_luong_nv_moi/TC-11/screenshots/TC-11-step02-mo-man-hinh-danh-sach-phe-duyet-mnuwpt037.png",
+      "quy_trinh_tinh_luong_nv_moi/TC-11/screenshots/TC-11-step03-khoanh-vung-the-don-tang-ca-ot-20-10-can-duyet.png",
+      "quy_trinh_tinh_luong_nv_moi/TC-11/screenshots/TC-11-step04-di-chuot-bam-nut-duyet-cap-1-ot-va-xac-nhan.png",
+      "quy_trinh_tinh_luong_nv_moi/TC-11/screenshots/TC-11-step05-doi-soat-csdl-trang-thai-duyet-cap-1-ot.png"
+    ],
+    "videos": [
+      "quy_trinh_tinh_luong_nv_moi/TC-11/videos/video.webm"
+    ],
+    "traces": []
+  },
+  "timestamp": "2026-11-10T02:15:42.322Z"
+}

@@ -38,10 +38,91 @@ async function captureStep(page, testInfo, { tcId, step, desc, pageName = 'emplo
   console.log(`📸 [${tcId}] Đã chụp Bước ${step}: ${desc} -> ${fileName}`);
 }
 
+// Helper: Tự động hóa gửi yêu cầu thay đổi tài khoản ngân hàng của nhân viên Tai.Dang (Dùng cho TC-01 và làm Auto Pre-condition)
+async function performSubmitBankChange(page, customAccNo = null) {
+  await page.goto('https://paradisehrm.com/Tai3/#', { waitUntil: 'domcontentloaded' });
+  await page.waitForTimeout(1000);
+
+  const userInput = page.locator('#username');
+  await expect(userInput).toBeVisible({ timeout: 15000 });
+  await userInput.fill('');
+  await userInput.pressSequentially('Tai.Dang', { delay: 25 });
+
+  const passInput = page.locator('input[type="password"]');
+  await passInput.fill('');
+  await passInput.pressSequentially('123', { delay: 25 });
+
+  const submitBtn = page.locator('#submitLogin');
+  await submitBtn.click();
+  await page.locator('.dock, .navbar').first().waitFor({ state: 'visible', timeout: 25000 });
+  await page.waitForTimeout(1500);
+
+  const hrsIcon = page.locator('.dock .icon.MnuHRS000, .dock .open-MnuHRS000, .dock .icon.MnuHRS002, .dock .open-MnuHRS002').first();
+  await hrsIcon.click();
+  await page.waitForTimeout(1200);
+
+  const hosoItem = page.locator('#sidebar, .sidebar, #menu, body').locator('text="Hồ sơ nhân viên"').first();
+  await expect(hosoItem).toBeVisible({ timeout: 10000 });
+  await hosoItem.click();
+  await page.waitForTimeout(2500);
+
+  const editBtns = page.locator('button.sec-edit-btn');
+  const btnCount = await editBtns.count();
+  let editClicked = false;
+  for (let i = 0; i < btnCount; i++) {
+    const parentText = await editBtns.nth(i).evaluate(el => el.closest('.section, .card, div, tr')?.innerText || '');
+    if (parentText.includes('Thông tin Ngân hàng')) {
+      await editBtns.nth(i).click();
+      editClicked = true;
+      break;
+    }
+  }
+  if (!editClicked && btnCount > 3) {
+    await editBtns.nth(3).click();
+  }
+  await page.waitForTimeout(1500);
+
+  const popup = page.locator('.dx-overlay-content').filter({ hasText: 'Thông tin ngân hàng' });
+  await expect(popup).toBeVisible({ timeout: 10000 });
+  const textInputs = popup.locator('input.dx-texteditor-input');
+
+  const randomAccNumber = customAccNo || ('99' + Math.floor(10000000 + Math.random() * 90000000));
+  await textInputs.nth(0).fill('');
+  await textInputs.nth(0).pressSequentially(randomAccNumber, { delay: 25 });
+
+  await textInputs.nth(1).fill('');
+  await textInputs.nth(1).pressSequentially('DANG VAN TAI', { delay: 25 });
+
+  await textInputs.nth(2).click();
+  await page.waitForTimeout(600);
+  const bankOption = page.locator('.dx-list-item, .dx-item-content, [role="option"]').filter({ hasText: /Sacombank|Vietcombank|BIDV|MB/i }).first();
+  if (await bankOption.isVisible().catch(() => false)) {
+    await bankOption.click();
+    await page.waitForTimeout(300);
+  }
+
+  await textInputs.nth(3).fill('');
+  await textInputs.nth(3).pressSequentially('0318889999', { delay: 25 });
+
+  const saveBtn = popup.locator('button:has-text("Lưu thay đổi")').first();
+  await saveBtn.click();
+  await page.waitForTimeout(2000);
+
+  const confirmBtn = page.locator('button:has-text("OK"), button:has-text("Đồng ý"), button:has-text("Đóng")').first();
+  if (await confirmBtn.isVisible().catch(() => false)) {
+    await confirmBtn.click();
+    await page.waitForTimeout(800);
+  }
+  return randomAccNumber;
+}
+
 // Ghi đè storageState để bắt đầu với phiên mới cho kiểm thử đa người dùng (Tai.Dang & Cuong.Vu)
 test.use({ storageState: { cookies: [], origins: [] } });
 
 test.describe('Kiểm thử Luồng Cập nhật & Phê duyệt Thông tin Ngân hàng Nhân viên (Paradise HRM)', () => {
+  // Cấu hình chạy tuần tự các test case trong cùng file khi chạy toàn bộ trang
+  test.describe.configure({ mode: 'serial' });
+
   test.beforeEach(async ({ context }) => {
     // 1. Xóa cookie cũ để đảm bảo đăng nhập đúng tài khoản chỉ định
     await context.clearCookies();
@@ -206,7 +287,8 @@ test.describe('Kiểm thử Luồng Cập nhật & Phê duyệt Thông tin Ngân
     console.log('🎉 [TC-01] Hoàn thành cập nhật thông tin ngân hàng cho nhân viên Tai.Dang!');
   });
 
-  test('TC-02: Quản lý Cuong.Vu đăng nhập và Phê duyệt thay đổi hồ sơ', async ({ page }, testInfo) => {
+  test('TC-02: Quản lý Cuong.Vu đăng nhập và Phê duyệt thay đổi hồ sơ', async ({ page, browser }, testInfo) => {
+    test.setTimeout(120000);
     console.log('🌐 [TC-02] Bước 1: Mở trang web Paradise HRM...');
     await page.goto('https://paradisehrm.com/Tai3/#', { waitUntil: 'domcontentloaded' });
     await page.waitForTimeout(1000);
@@ -249,10 +331,38 @@ test.describe('Kiểm thử Luồng Cập nhật & Phê duyệt Thông tin Ngân
       desc: 'Quản lý Cuong.Vu truy cập thành công màn hình Danh sách phê duyệt'
     });
 
-    // Tìm dòng yêu cầu phê duyệt của Đặng Minh Tài
+    // Tìm dòng yêu cầu phê duyệt của Đặng Minh Tài (Kiểm tra và tự động kích hoạt tiền đề nếu chưa có đơn)
     console.log('🔍 [TC-02] Tìm yêu cầu "Duyệt thay đổi hồ sơ" của Đặng Minh Tài...');
-    const rowTai = page.locator('*:has-text("Đặng Minh Tài")').filter({ hasText: 'Duyệt thay đổi hồ sơ' }).last();
-    await expect(rowTai).toBeVisible({ timeout: 15000 });
+    const cardSelector = '.card.getcardregisteredOA, #cardregistered .card';
+    let rowTai = page.locator(cardSelector).filter({ hasText: 'Đặng Minh Tài' }).filter({ hasText: /thay đổi hồ sơ/i }).first();
+    let isRowVisible = await rowTai.isVisible({ timeout: 3500 }).catch(() => false);
+
+    if (!isRowVisible) {
+      console.log('⚠️ [TC-02] [AUTO PRE-CONDITION]: Không tìm thấy đơn chờ duyệt của Đặng Minh Tài (do chưa chạy TC-01 hoặc đã duyệt trước đó).');
+      console.log('⚡ [TC-02]: Đang tự động kích hoạt phiên Nhân viên Tai.Dang để gửi yêu cầu phê duyệt làm tiền đề kiểm thử...');
+      const preContext = await browser.newContext();
+      const prePage = await preContext.newPage();
+      await performSubmitBankChange(prePage);
+      await preContext.close();
+
+      console.log('🔄 [TC-02]: Làm mới danh sách phê duyệt của Quản lý Cuong.Vu...');
+      await page.reload({ waitUntil: 'domcontentloaded' });
+      await page.waitForTimeout(1500);
+
+      const refreshLaunchpad = page.locator('.open-lunchpad, .MnuHRS238, .bi-windows').first();
+      await moveAndClick(page, refreshLaunchpad);
+      await page.waitForTimeout(1000);
+
+      const refreshApprovalApp = page.locator('.child-launchpad:has-text("Danh sách phê duyệt"), [data-keywords*="Danh sách phê duyệt"]').first();
+      await expect(refreshApprovalApp).toBeVisible({ timeout: 10000 });
+      await moveAndClick(page, refreshApprovalApp);
+      await page.waitForTimeout(2500);
+
+      rowTai = page.locator(cardSelector).filter({ hasText: 'Đặng Minh Tài' }).filter({ hasText: /thay đổi hồ sơ/i }).first();
+      await expect(rowTai).toBeVisible({ timeout: 15000 });
+      console.log('✅ [TC-02]: Tiền đề đã sẵn sàng! Tìm thấy yêu cầu chờ duyệt mới của Đặng Minh Tài.');
+    }
+
     await moveAndClick(page, rowTai, { steps: 10, pause: 300 });
     await page.waitForTimeout(2500);
 
@@ -421,13 +531,11 @@ test.describe('Kiểm thử Luồng Cập nhật & Phê duyệt Thông tin Ngân
         description: 'FAIL - Thông tin tài khoản ngân hàng không hiển thị trên hồ sơ nhân viên sau khi đã được phê duyệt'
       });
       testInfo.annotations.push({
-        type: 'business_analysis',
+        type: 'defect_evidence',
         description: JSON.stringify({
           issue: 'Dữ liệu số tài khoản và thông tin ngân hàng không cập nhật vào hồ sơ cá nhân sau khi Quản lý phê duyệt thành công',
           expected: 'Sau khi Quản lý Cuong.Vu thực hiện duyệt ở TC-02, số tài khoản mới (ví dụ 99xxxxxxx) và ngân hàng phải được nạp đầy đủ vào form Thông tin ngân hàng của nhân viên Tai.Dang',
-          actual: 'Các ô nhập liệu Số tài khoản, Ngân hàng, Chi nhánh trong form Thông tin ngân hàng của nhân viên vẫn hoàn toàn rỗng ("")',
-          rootCause: 'Hệ thống Paradise HRM khi gọi sp_approve_EmployeeChange mới chỉ cập nhật cờ trạng thái trong bảng yêu cầu thay đổi (sp_EmployeeChange_Detail), nhưng chưa thực hiện câu lệnh UPDATE dữ liệu vào bảng chính của nhân viên (tbl_HRS_Employee / tbl_HRS_Employee_Bank), hoặc API lấy thông tin nhân viên chưa nạp dữ liệu từ nguồn đã duyệt.',
-          recommendation: 'Đội ngũ Backend cần kiểm tra lại Stored Procedure sp_approve_EmployeeChange để đảm bảo dữ liệu được đồng bộ vào bảng nhân viên chính thức; đồng thời kiểm tra luồng API nạp dữ liệu lên form Hồ sơ nhân viên.'
+          actual: `Các ô nhập liệu Số tài khoản, Ngân hàng, Chi nhánh trong form Thông tin ngân hàng của nhân viên vẫn hoàn toàn rỗng ("${actualAccNo}")`
         })
       });
       console.log('❌ [TC-03] ĐÁNH GIÁ LOGIC: FAIL - Dữ liệu chưa đồng bộ vào hồ sơ sau khi duyệt!');

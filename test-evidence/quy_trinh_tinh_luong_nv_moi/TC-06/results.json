@@ -1,0 +1,52 @@
+{
+  "tcId": "TC-06",
+  "pageName": "quy_trinh_tinh_luong_nv_moi",
+  "title": "fix-5 | TC-06: Khảo sát hiện trạng Before ngày 15/10 và tổng công tháng 10 (Role: test.nv)",
+  "testStatus": "PASSED",
+  "businessStatus": "PASSED",
+  "businessNotes": "PASS - Khảo sát Baseline Before ngày 15/10 (0.0h) và tổng công Tháng 10 (21.0 công) hoàn tất thành công.",
+  "defectEvidence": null,
+  "failureAnalysis": {},
+  "status": "PASSED",
+  "duration": "32.22s",
+  "errors": "",
+  "stepScreenshots": [
+    {
+      "step": 1,
+      "title": "Dang nhap tai khoan nhan vien moi test nv",
+      "fileName": "TC-06-step01-dang-nhap-tai-khoan-nhan-vien-moi-test-nv.png",
+      "relPath": "quy_trinh_tinh_luong_nv_moi/TC-06/screenshots/TC-06-step01-dang-nhap-tai-khoan-nhan-vien-moi-test-nv.png"
+    },
+    {
+      "step": 2,
+      "title": "Khao sat Before ngay 15-10 tren MnuHRS225",
+      "fileName": "TC-06-step02-khao-sat-before-ngay-15-10-tren-mnuhrs225.png",
+      "relPath": "quy_trinh_tinh_luong_nv_moi/TC-06/screenshots/TC-06-step02-khao-sat-before-ngay-15-10-tren-mnuhrs225.png"
+    },
+    {
+      "step": 3,
+      "title": "Khao sat Before tong cong thang 10 tren MnuTAD1000",
+      "fileName": "TC-06-step03-khao-sat-before-tong-cong-thang-10-tren-mnutad1000.png",
+      "relPath": "quy_trinh_tinh_luong_nv_moi/TC-06/screenshots/TC-06-step03-khao-sat-before-tong-cong-thang-10-tren-mnutad1000.png"
+    },
+    {
+      "step": 4,
+      "title": "Doi soat CSDL baseline before thanh cong",
+      "fileName": "TC-06-step04-doi-soat-csdl-baseline-before-thanh-cong.png",
+      "relPath": "quy_trinh_tinh_luong_nv_moi/TC-06/screenshots/TC-06-step04-doi-soat-csdl-baseline-before-thanh-cong.png"
+    }
+  ],
+  "attachments": {
+    "screenshots": [
+      "quy_trinh_tinh_luong_nv_moi/TC-06/screenshots/TC-06-step01-dang-nhap-tai-khoan-nhan-vien-moi-test-nv.png",
+      "quy_trinh_tinh_luong_nv_moi/TC-06/screenshots/TC-06-step02-khao-sat-before-ngay-15-10-tren-mnuhrs225.png",
+      "quy_trinh_tinh_luong_nv_moi/TC-06/screenshots/TC-06-step03-khao-sat-before-tong-cong-thang-10-tren-mnutad1000.png",
+      "quy_trinh_tinh_luong_nv_moi/TC-06/screenshots/TC-06-step04-doi-soat-csdl-baseline-before-thanh-cong.png"
+    ],
+    "videos": [
+      "quy_trinh_tinh_luong_nv_moi/TC-06/videos/video.webm"
+    ],
+    "traces": []
+  },
+  "timestamp": "2026-11-11T01:20:02.841Z"
+}
