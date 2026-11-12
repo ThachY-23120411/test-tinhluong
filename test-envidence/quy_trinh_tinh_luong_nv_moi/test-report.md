@@ -1,6 +1,6 @@
 # BÁO CÁO KIỂM THỬ TRANG: QUY_TRINH_TINH_LUONG_NV_MOI
 
-> Thời gian kiểm thử: **21:31:18 12/11/2026**
+> Thời gian kiểm thử: **22:26:15 12/11/2026**
 > Tổng số kịch bản: **20** | ✅ LOGIC PASS: **19** | ❌ LOGIC FAIL: **1**
 
 ## BẢNG ĐỐI CHIẾU TRẠNG THÁI TEST & LOGIC NGHIỆP VỤ
@@ -25,7 +25,7 @@
 | **TC-16** | fix-7 | TC-16: Mô phỏng thao tác chạy Tính tiền lương Tháng 10/2026 (MnuPRL040) | ✅ PASS | ✅ PASS | Đạt yêu cầu logic nghiệp vụ mong đợi |
 | **TC-17** | fix-7 | TC-17: Mô phỏng thao tác Khóa chấm công (MnuTAD125), Khóa lương (MnuPRL080) & Đăng xuất | ✅ PASS | ✅ PASS | Đạt yêu cầu logic nghiệp vụ mong đợi |
 | **TC-18** | fix-8 | TC-18: Replay Kế toán mở Danh sách trả lương, xem Bảng lương tổng hợp (trượt ngang NV 099), nhảy Phiếu lương & Đăng xuất (Role: Chien.nguyen) | ✅ PASS | ✅ PASS | Đạt yêu cầu logic nghiệp vụ mong đợi |
-| **TC-19** | fix-8 | TC-19: Replay Nhân viên test.nv mở Phiếu lương, cuộn từng mục & khoanh vùng pause 5s (Role: test.nv) | ✅ PASS | ✅ PASS | Đạt yêu cầu logic nghiệp vụ mong đợi |
+| **TC-19** | fix-8 | TC-19: Replay Nhân viên test.nv mở Phiếu lương -> Tab Lịch sử -> Xem -> Cuộn/Khoanh 5s các mục -> 3 Modal chi tiết (Role: test.nv) | ✅ PASS | ✅ PASS | Đạt yêu cầu logic nghiệp vụ mong đợi |
 | **TC-20** | fix-8 | TC-20: Replay Nhân viên test.nv mở Tab Lịch sử, bấm Xem & mở/khoanh vùng 5s 3 Modal chi tiết (Role: test.nv) | ✅ PASS | ✅ PASS | Đạt yêu cầu logic nghiệp vụ mong đợi |
 
 ---
@@ -433,7 +433,7 @@ Error: page.waitForTimeout: Target page, context or browser has been closed
 
 ### TC-18: fix-8 | TC-18: Replay Kế toán mở Danh sách trả lương, xem Bảng lương tổng hợp (trượt ngang NV 099), nhảy Phiếu lương & Đăng xuất (Role: Chien.nguyen)
 
-* **Trạng thái thực thi Test (Kỹ thuật)**: ✅ PASS (Thời gian thực thi: `106.28s`)
+* **Trạng thái thực thi Test (Kỹ thuật)**: ✅ PASS (Thời gian thực thi: `137.32s`)
 * **Trạng thái Logic Nghiệp vụ (Business Output)**: ✅ PASS
 * **Đánh giá tổng quát**: Đạt yêu cầu logic nghiệp vụ mong đợi
 * **Thư mục lưu trữ**: `test-evidence/quy_trinh_tinh_luong_nv_moi/TC-18/`
@@ -446,8 +446,8 @@ Error: page.waitForTimeout: Target page, context or browser has been closed
 ##### 🔹 Bước 2: Mo man hinh Danh sach tra luong MnuPRL092 qua Launchpad
 ![Bước 2: Mo man hinh Danh sach tra luong MnuPRL092 qua Launchpad](TC-18/screenshots/TC-18-step02-mo-man-hinh-danh-sach-tra-luong-mnuprl092-qua-launchpad.png)
 
-##### 🔹 Bước 3: Chon ky luong Thang 10
-![Bước 3: Chon ky luong Thang 10](TC-18/screenshots/TC-18-step03-chon-ky-luong-thang-10.png)
+##### 🔹 Bước 3: Chon ky luong Thang 10 Nam 2026
+![Bước 3: Chon ky luong Thang 10 Nam 2026](TC-18/screenshots/TC-18-step03-chon-ky-luong-thang-10-nam-2026.png)
 
 ##### 🔹 Bước 4: Bang luong tong hop - Khoanh vung NV 099 (Cot trai)
 ![Bước 4: Bang luong tong hop - Khoanh vung NV 099 (Cot trai)](TC-18/screenshots/TC-18-step04-bang-luong-tong-hop-khoanh-vung-nv-099-cot-trai.png)
@@ -458,23 +458,38 @@ Error: page.waitForTimeout: Target page, context or browser has been closed
 ##### 🔹 Bước 6: Bang luong tong hop - Truot ngang cuoi phai NV 099
 ![Bước 6: Bang luong tong hop - Truot ngang cuoi phai NV 099](TC-18/screenshots/TC-18-step06-bang-luong-tong-hop-truot-ngang-cuoi-phai-nv-099.png)
 
-##### 🔹 Bước 7: Phieu luong trang 82 - Khoanh vung thong tin NV 099
-![Bước 7: Phieu luong trang 82 - Khoanh vung thong tin NV 099](TC-18/screenshots/TC-18-step07-phieu-luong-trang-82-khoanh-vung-thong-tin-nv-099.png)
+##### 🔹 Bước 7: Phieu luong trang 33 - Khoanh vung thong tin NV 099
+![Bước 7: Phieu luong trang 33 - Khoanh vung thong tin NV 099](TC-18/screenshots/TC-18-step07-phieu-luong-trang-33-khoanh-vung-thong-tin-nv-099.png)
 
-##### 🔹 Bước 8: Phieu luong trang 82 - Khoanh vung Thuc lanh NV 099
-![Bước 8: Phieu luong trang 82 - Khoanh vung Thuc lanh NV 099](TC-18/screenshots/TC-18-step08-phieu-luong-trang-82-khoanh-vung-thuc-lanh-nv-099.png)
+##### 🔹 Bước 8: Phieu luong trang 33 - Khoanh vung Muc I Thong tin luong
+![Bước 8: Phieu luong trang 33 - Khoanh vung Muc I Thong tin luong](TC-18/screenshots/TC-18-step08-phieu-luong-trang-33-khoanh-vung-muc-i-thong-tin-luong.png)
 
-##### 🔹 Bước 9: Dang xuat khoi tai khoan Chien nguyen thanh cong
-![Bước 9: Dang xuat khoi tai khoan Chien nguyen thanh cong](TC-18/screenshots/TC-18-step09-dang-xuat-khoi-tai-khoan-chien-nguyen-thanh-cong.png)
+##### 🔹 Bước 9: Phieu luong trang 33 - Khoanh vung Muc II Phu cap
+![Bước 9: Phieu luong trang 33 - Khoanh vung Muc II Phu cap](TC-18/screenshots/TC-18-step09-phieu-luong-trang-33-khoanh-vung-muc-ii-phu-cap.png)
+
+##### 🔹 Bước 10: Phieu luong trang 33 - Khoanh vung Muc III Thu nhap khac va Tong luong
+![Bước 10: Phieu luong trang 33 - Khoanh vung Muc III Thu nhap khac va Tong luong](TC-18/screenshots/TC-18-step10-phieu-luong-trang-33-khoanh-vung-muc-iii-thu-nhap-khac-va-tong-luong.png)
+
+##### 🔹 Bước 11: Phieu luong trang 33 - Khoanh vung Muc IV Cac khoan khau tru
+![Bước 11: Phieu luong trang 33 - Khoanh vung Muc IV Cac khoan khau tru](TC-18/screenshots/TC-18-step11-phieu-luong-trang-33-khoanh-vung-muc-iv-cac-khoan-khau-tru.png)
+
+##### 🔹 Bước 12: Phieu luong trang 33 - Khoanh vung Muc V Thue TNCN
+![Bước 12: Phieu luong trang 33 - Khoanh vung Muc V Thue TNCN](TC-18/screenshots/TC-18-step12-phieu-luong-trang-33-khoanh-vung-muc-v-thue-tncn.png)
+
+##### 🔹 Bước 13: Phieu luong trang 33 - Khoanh vung Thuc lanh NV 099
+![Bước 13: Phieu luong trang 33 - Khoanh vung Thuc lanh NV 099](TC-18/screenshots/TC-18-step13-phieu-luong-trang-33-khoanh-vung-thuc-lanh-nv-099.png)
+
+##### 🔹 Bước 14: Dang xuat khoi tai khoan Chien nguyen thanh cong
+![Bước 14: Dang xuat khoi tai khoan Chien nguyen thanh cong](TC-18/screenshots/TC-18-step14-dang-xuat-khoi-tai-khoan-chien-nguyen-thanh-cong.png)
 
 #### 🎥 Video & Dấu vết kiểm thử (Video & Trace):
 - **Video phiên chạy thực tế**: [video.webm](TC-18/videos/video.webm)
 
 ---
 
-### TC-19: fix-8 | TC-19: Replay Nhân viên test.nv mở Phiếu lương, cuộn từng mục & khoanh vùng pause 5s (Role: test.nv)
+### TC-19: fix-8 | TC-19: Replay Nhân viên test.nv mở Phiếu lương -> Tab Lịch sử -> Xem -> Cuộn/Khoanh 5s các mục -> 3 Modal chi tiết (Role: test.nv)
 
-* **Trạng thái thực thi Test (Kỹ thuật)**: ✅ PASS (Thời gian thực thi: `65.62s`)
+* **Trạng thái thực thi Test (Kỹ thuật)**: ✅ PASS (Thời gian thực thi: `110.63s`)
 * **Trạng thái Logic Nghiệp vụ (Business Output)**: ✅ PASS
 * **Đánh giá tổng quát**: Đạt yêu cầu logic nghiệp vụ mong đợi
 * **Thư mục lưu trữ**: `test-evidence/quy_trinh_tinh_luong_nv_moi/TC-19/`
@@ -487,20 +502,38 @@ Error: page.waitForTimeout: Target page, context or browser has been closed
 ##### 🔹 Bước 2: Mo man hinh Phieu luong MnuPRL445 qua Launchpad
 ![Bước 2: Mo man hinh Phieu luong MnuPRL445 qua Launchpad](TC-19/screenshots/TC-19-step02-mo-man-hinh-phieu-luong-mnuprl445-qua-launchpad.png)
 
-##### 🔹 Bước 3: Khoanh vung 5s Thong tin nhan vien 099
-![Bước 3: Khoanh vung 5s Thong tin nhan vien 099](TC-19/screenshots/TC-19-step03-khoanh-vung-5s-thong-tin-nhan-vien-099.png)
+##### 🔹 Bước 3: Tab Lich Su - Khoanh vung 5s ky luong 10/2026
+![Bước 3: Tab Lich Su - Khoanh vung 5s ky luong 10/2026](TC-19/screenshots/TC-19-step03-tab-lich-su-khoanh-vung-5s-ky-luong-10-2026.png)
 
-##### 🔹 Bước 4: Scroll + Khoanh vung 5s Muc I Thong tin luong
-![Bước 4: Scroll + Khoanh vung 5s Muc I Thong tin luong](TC-19/screenshots/TC-19-step04-scroll-khoanh-vung-5s-muc-i-thong-tin-luong.png)
+##### 🔹 Bước 4: Bam nut Xem tu Lich Su mo Phieu luong 10/2026
+![Bước 4: Bam nut Xem tu Lich Su mo Phieu luong 10/2026](TC-19/screenshots/TC-19-step04-bam-nut-xem-tu-lich-su-mo-phieu-luong-10-2026.png)
 
-##### 🔹 Bước 5: Scroll + Khoanh vung 5s Thu nhap khac va Tong thu nhap
-![Bước 5: Scroll + Khoanh vung 5s Thu nhap khac va Tong thu nhap](TC-19/screenshots/TC-19-step05-scroll-khoanh-vung-5s-thu-nhap-khac-va-tong-thu-nhap.png)
+##### 🔹 Bước 5: Khoanh vung 5s Thong tin nhan vien 099
+![Bước 5: Khoanh vung 5s Thong tin nhan vien 099](TC-19/screenshots/TC-19-step05-khoanh-vung-5s-thong-tin-nhan-vien-099.png)
 
-##### 🔹 Bước 6: Scroll + Khoanh vung 5s Cac khoan giam tru
-![Bước 6: Scroll + Khoanh vung 5s Cac khoan giam tru](TC-19/screenshots/TC-19-step06-scroll-khoanh-vung-5s-cac-khoan-giam-tru.png)
+##### 🔹 Bước 6: Scroll + Khoanh vung 5s Muc I Thong tin luong
+![Bước 6: Scroll + Khoanh vung 5s Muc I Thong tin luong](TC-19/screenshots/TC-19-step06-scroll-khoanh-vung-5s-muc-i-thong-tin-luong.png)
 
-##### 🔹 Bước 7: Scroll + Khoanh vung 5s Luong thuc lanh
-![Bước 7: Scroll + Khoanh vung 5s Luong thuc lanh](TC-19/screenshots/TC-19-step07-scroll-khoanh-vung-5s-luong-thuc-lanh.png)
+##### 🔹 Bước 7: Scroll + Khoanh vung 5s Thu nhap khac va Tong thu nhap
+![Bước 7: Scroll + Khoanh vung 5s Thu nhap khac va Tong thu nhap](TC-19/screenshots/TC-19-step07-scroll-khoanh-vung-5s-thu-nhap-khac-va-tong-thu-nhap.png)
+
+##### 🔹 Bước 8: Scroll + Khoanh vung 5s Cac khoan giam tru
+![Bước 8: Scroll + Khoanh vung 5s Cac khoan giam tru](TC-19/screenshots/TC-19-step08-scroll-khoanh-vung-5s-cac-khoan-giam-tru.png)
+
+##### 🔹 Bước 9: Scroll + Khoanh vung 5s Thue TNCN
+![Bước 9: Scroll + Khoanh vung 5s Thue TNCN](TC-19/screenshots/TC-19-step09-scroll-khoanh-vung-5s-thue-tncn.png)
+
+##### 🔹 Bước 10: Scroll + Khoanh vung 5s Luong thuc lanh
+![Bước 10: Scroll + Khoanh vung 5s Luong thuc lanh](TC-19/screenshots/TC-19-step10-scroll-khoanh-vung-5s-luong-thuc-lanh.png)
+
+##### 🔹 Bước 11: Modal Tang ca - Khoanh vung 5s quan sat chi tiet
+![Bước 11: Modal Tang ca - Khoanh vung 5s quan sat chi tiet](TC-19/screenshots/TC-19-step11-modal-tang-ca-khoanh-vung-5s-quan-sat-chi-tiet.png)
+
+##### 🔹 Bước 12: Modal Di tre Ve som - Khoanh vung 5s quan sat chi tiet
+![Bước 12: Modal Di tre Ve som - Khoanh vung 5s quan sat chi tiet](TC-19/screenshots/TC-19-step12-modal-di-tre-ve-som-khoanh-vung-5s-quan-sat-chi-tiet.png)
+
+##### 🔹 Bước 13: Modal Ngay nghi - Khoanh vung 5s quan sat chi tiet
+![Bước 13: Modal Ngay nghi - Khoanh vung 5s quan sat chi tiet](TC-19/screenshots/TC-19-step13-modal-ngay-nghi-khoanh-vung-5s-quan-sat-chi-tiet.png)
 
 #### 🎥 Video & Dấu vết kiểm thử (Video & Trace):
 - **Video phiên chạy thực tế**: [video.webm](TC-19/videos/video.webm)

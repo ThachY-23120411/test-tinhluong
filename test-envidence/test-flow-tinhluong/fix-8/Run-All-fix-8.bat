@@ -4,7 +4,7 @@ title Paradise HRM - Live Test: fix-8 (quy_trinh_tinh_luong_nv_moi)
 cls
 echo ====================================================================
 echo   CHAY LAI TRUC QUAN TAT CA TEST CASE CUA FIX-8: quy_trinh_tinh_luong_nv_moi
-echo   Pham vi: TC-18, TC-19, TC-20 (Bang luong & Nghiem thu Phieu luong)
+echo   Pham vi: TC-18, TC-19 (Bang luong & Nghiem thu Phieu luong, Lich su, 3 Modal)
 echo   Vai tro: chien.nguyen (Ke toan truong), test.nv (Nhan vien moi 099)
 echo ====================================================================
 echo.

@@ -1,7 +1,7 @@
 {
   "status": "passed",
-  "timestamp": "21:31:18 12/11/2026",
-  "totalTests": 3,
+  "timestamp": "22:26:15 12/11/2026",
+  "totalTests": 2,
   "pages": {
     "quy_trinh_tinh_luong_nv_moi": [
       {
@@ -14,7 +14,7 @@
         "defectEvidence": null,
         "failureAnalysis": {},
         "status": "PASSED",
-        "duration": "106.28s",
+        "duration": "137.32s",
         "errors": "",
         "stepScreenshots": [
           {
@@ -31,9 +31,9 @@
           },
           {
             "step": 3,
-            "title": "Chon ky luong Thang 10",
-            "fileName": "TC-18-step03-chon-ky-luong-thang-10.png",
-            "relPath": "quy_trinh_tinh_luong_nv_moi/TC-18/screenshots/TC-18-step03-chon-ky-luong-thang-10.png"
+            "title": "Chon ky luong Thang 10 Nam 2026",
+            "fileName": "TC-18-step03-chon-ky-luong-thang-10-nam-2026.png",
+            "relPath": "quy_trinh_tinh_luong_nv_moi/TC-18/screenshots/TC-18-step03-chon-ky-luong-thang-10-nam-2026.png"
           },
           {
             "step": 4,
@@ -55,53 +55,88 @@
           },
           {
             "step": 7,
-            "title": "Phieu luong trang 82 - Khoanh vung thong tin NV 099",
-            "fileName": "TC-18-step07-phieu-luong-trang-82-khoanh-vung-thong-tin-nv-099.png",
-            "relPath": "quy_trinh_tinh_luong_nv_moi/TC-18/screenshots/TC-18-step07-phieu-luong-trang-82-khoanh-vung-thong-tin-nv-099.png"
+            "title": "Phieu luong trang 33 - Khoanh vung thong tin NV 099",
+            "fileName": "TC-18-step07-phieu-luong-trang-33-khoanh-vung-thong-tin-nv-099.png",
+            "relPath": "quy_trinh_tinh_luong_nv_moi/TC-18/screenshots/TC-18-step07-phieu-luong-trang-33-khoanh-vung-thong-tin-nv-099.png"
           },
           {
             "step": 8,
-            "title": "Phieu luong trang 82 - Khoanh vung Thuc lanh NV 099",
-            "fileName": "TC-18-step08-phieu-luong-trang-82-khoanh-vung-thuc-lanh-nv-099.png",
-            "relPath": "quy_trinh_tinh_luong_nv_moi/TC-18/screenshots/TC-18-step08-phieu-luong-trang-82-khoanh-vung-thuc-lanh-nv-099.png"
+            "title": "Phieu luong trang 33 - Khoanh vung Muc I Thong tin luong",
+            "fileName": "TC-18-step08-phieu-luong-trang-33-khoanh-vung-muc-i-thong-tin-luong.png",
+            "relPath": "quy_trinh_tinh_luong_nv_moi/TC-18/screenshots/TC-18-step08-phieu-luong-trang-33-khoanh-vung-muc-i-thong-tin-luong.png"
           },
           {
             "step": 9,
+            "title": "Phieu luong trang 33 - Khoanh vung Muc II Phu cap",
+            "fileName": "TC-18-step09-phieu-luong-trang-33-khoanh-vung-muc-ii-phu-cap.png",
+            "relPath": "quy_trinh_tinh_luong_nv_moi/TC-18/screenshots/TC-18-step09-phieu-luong-trang-33-khoanh-vung-muc-ii-phu-cap.png"
+          },
+          {
+            "step": 10,
+            "title": "Phieu luong trang 33 - Khoanh vung Muc III Thu nhap khac va Tong luong",
+            "fileName": "TC-18-step10-phieu-luong-trang-33-khoanh-vung-muc-iii-thu-nhap-khac-va-tong-luong.png",
+            "relPath": "quy_trinh_tinh_luong_nv_moi/TC-18/screenshots/TC-18-step10-phieu-luong-trang-33-khoanh-vung-muc-iii-thu-nhap-khac-va-tong-luong.png"
+          },
+          {
+            "step": 11,
+            "title": "Phieu luong trang 33 - Khoanh vung Muc IV Cac khoan khau tru",
+            "fileName": "TC-18-step11-phieu-luong-trang-33-khoanh-vung-muc-iv-cac-khoan-khau-tru.png",
+            "relPath": "quy_trinh_tinh_luong_nv_moi/TC-18/screenshots/TC-18-step11-phieu-luong-trang-33-khoanh-vung-muc-iv-cac-khoan-khau-tru.png"
+          },
+          {
+            "step": 12,
+            "title": "Phieu luong trang 33 - Khoanh vung Muc V Thue TNCN",
+            "fileName": "TC-18-step12-phieu-luong-trang-33-khoanh-vung-muc-v-thue-tncn.png",
+            "relPath": "quy_trinh_tinh_luong_nv_moi/TC-18/screenshots/TC-18-step12-phieu-luong-trang-33-khoanh-vung-muc-v-thue-tncn.png"
+          },
+          {
+            "step": 13,
+            "title": "Phieu luong trang 33 - Khoanh vung Thuc lanh NV 099",
+            "fileName": "TC-18-step13-phieu-luong-trang-33-khoanh-vung-thuc-lanh-nv-099.png",
+            "relPath": "quy_trinh_tinh_luong_nv_moi/TC-18/screenshots/TC-18-step13-phieu-luong-trang-33-khoanh-vung-thuc-lanh-nv-099.png"
+          },
+          {
+            "step": 14,
             "title": "Dang xuat khoi tai khoan Chien nguyen thanh cong",
-            "fileName": "TC-18-step09-dang-xuat-khoi-tai-khoan-chien-nguyen-thanh-cong.png",
-            "relPath": "quy_trinh_tinh_luong_nv_moi/TC-18/screenshots/TC-18-step09-dang-xuat-khoi-tai-khoan-chien-nguyen-thanh-cong.png"
+            "fileName": "TC-18-step14-dang-xuat-khoi-tai-khoan-chien-nguyen-thanh-cong.png",
+            "relPath": "quy_trinh_tinh_luong_nv_moi/TC-18/screenshots/TC-18-step14-dang-xuat-khoi-tai-khoan-chien-nguyen-thanh-cong.png"
           }
         ],
         "attachments": {
           "screenshots": [
             "quy_trinh_tinh_luong_nv_moi/TC-18/screenshots/TC-18-step01-dang-nhap-tai-khoan-chien-nguyen.png",
             "quy_trinh_tinh_luong_nv_moi/TC-18/screenshots/TC-18-step02-mo-man-hinh-danh-sach-tra-luong-mnuprl092-qua-launchpad.png",
-            "quy_trinh_tinh_luong_nv_moi/TC-18/screenshots/TC-18-step03-chon-ky-luong-thang-10.png",
+            "quy_trinh_tinh_luong_nv_moi/TC-18/screenshots/TC-18-step03-chon-ky-luong-thang-10-nam-2026.png",
             "quy_trinh_tinh_luong_nv_moi/TC-18/screenshots/TC-18-step04-bang-luong-tong-hop-khoanh-vung-nv-099-cot-trai.png",
             "quy_trinh_tinh_luong_nv_moi/TC-18/screenshots/TC-18-step05-bang-luong-tong-hop-truot-ngang-giua-bang-nv-099.png",
             "quy_trinh_tinh_luong_nv_moi/TC-18/screenshots/TC-18-step06-bang-luong-tong-hop-truot-ngang-cuoi-phai-nv-099.png",
-            "quy_trinh_tinh_luong_nv_moi/TC-18/screenshots/TC-18-step07-phieu-luong-trang-82-khoanh-vung-thong-tin-nv-099.png",
-            "quy_trinh_tinh_luong_nv_moi/TC-18/screenshots/TC-18-step08-phieu-luong-trang-82-khoanh-vung-thuc-lanh-nv-099.png",
-            "quy_trinh_tinh_luong_nv_moi/TC-18/screenshots/TC-18-step09-dang-xuat-khoi-tai-khoan-chien-nguyen-thanh-cong.png"
+            "quy_trinh_tinh_luong_nv_moi/TC-18/screenshots/TC-18-step07-phieu-luong-trang-33-khoanh-vung-thong-tin-nv-099.png",
+            "quy_trinh_tinh_luong_nv_moi/TC-18/screenshots/TC-18-step08-phieu-luong-trang-33-khoanh-vung-muc-i-thong-tin-luong.png",
+            "quy_trinh_tinh_luong_nv_moi/TC-18/screenshots/TC-18-step09-phieu-luong-trang-33-khoanh-vung-muc-ii-phu-cap.png",
+            "quy_trinh_tinh_luong_nv_moi/TC-18/screenshots/TC-18-step10-phieu-luong-trang-33-khoanh-vung-muc-iii-thu-nhap-khac-va-tong-luong.png",
+            "quy_trinh_tinh_luong_nv_moi/TC-18/screenshots/TC-18-step11-phieu-luong-trang-33-khoanh-vung-muc-iv-cac-khoan-khau-tru.png",
+            "quy_trinh_tinh_luong_nv_moi/TC-18/screenshots/TC-18-step12-phieu-luong-trang-33-khoanh-vung-muc-v-thue-tncn.png",
+            "quy_trinh_tinh_luong_nv_moi/TC-18/screenshots/TC-18-step13-phieu-luong-trang-33-khoanh-vung-thuc-lanh-nv-099.png",
+            "quy_trinh_tinh_luong_nv_moi/TC-18/screenshots/TC-18-step14-dang-xuat-khoi-tai-khoan-chien-nguyen-thanh-cong.png"
           ],
           "videos": [
             "quy_trinh_tinh_luong_nv_moi/TC-18/videos/video.webm"
           ],
           "traces": []
         },
-        "timestamp": "2026-11-12T14:29:07.094Z"
+        "timestamp": "2026-11-12T15:24:24.370Z"
       },
       {
         "tcId": "TC-19",
         "pageName": "quy_trinh_tinh_luong_nv_moi",
-        "title": "fix-8 | TC-19: Replay Nhân viên test.nv mở Phiếu lương, cuộn từng mục & khoanh vùng pause 5s (Role: test.nv)",
+        "title": "fix-8 | TC-19: Replay Nhân viên test.nv mở Phiếu lương -> Tab Lịch sử -> Xem -> Cuộn/Khoanh 5s các mục -> 3 Modal chi tiết (Role: test.nv)",
         "testStatus": "PASSED",
         "businessStatus": "PASSED",
         "businessNotes": "Đạt yêu cầu logic nghiệp vụ mong đợi",
         "defectEvidence": null,
         "failureAnalysis": {},
         "status": "PASSED",
-        "duration": "65.62s",
+        "duration": "110.63s",
         "errors": "",
         "stepScreenshots": [
           {
@@ -118,117 +153,93 @@
           },
           {
             "step": 3,
-            "title": "Khoanh vung 5s Thong tin nhan vien 099",
-            "fileName": "TC-19-step03-khoanh-vung-5s-thong-tin-nhan-vien-099.png",
-            "relPath": "quy_trinh_tinh_luong_nv_moi/TC-19/screenshots/TC-19-step03-khoanh-vung-5s-thong-tin-nhan-vien-099.png"
+            "title": "Tab Lich Su - Khoanh vung 5s ky luong 10/2026",
+            "fileName": "TC-19-step03-tab-lich-su-khoanh-vung-5s-ky-luong-10-2026.png",
+            "relPath": "quy_trinh_tinh_luong_nv_moi/TC-19/screenshots/TC-19-step03-tab-lich-su-khoanh-vung-5s-ky-luong-10-2026.png"
           },
           {
             "step": 4,
-            "title": "Scroll + Khoanh vung 5s Muc I Thong tin luong",
-            "fileName": "TC-19-step04-scroll-khoanh-vung-5s-muc-i-thong-tin-luong.png",
-            "relPath": "quy_trinh_tinh_luong_nv_moi/TC-19/screenshots/TC-19-step04-scroll-khoanh-vung-5s-muc-i-thong-tin-luong.png"
+            "title": "Bam nut Xem tu Lich Su mo Phieu luong 10/2026",
+            "fileName": "TC-19-step04-bam-nut-xem-tu-lich-su-mo-phieu-luong-10-2026.png",
+            "relPath": "quy_trinh_tinh_luong_nv_moi/TC-19/screenshots/TC-19-step04-bam-nut-xem-tu-lich-su-mo-phieu-luong-10-2026.png"
           },
           {
             "step": 5,
-            "title": "Scroll + Khoanh vung 5s Thu nhap khac va Tong thu nhap",
-            "fileName": "TC-19-step05-scroll-khoanh-vung-5s-thu-nhap-khac-va-tong-thu-nhap.png",
-            "relPath": "quy_trinh_tinh_luong_nv_moi/TC-19/screenshots/TC-19-step05-scroll-khoanh-vung-5s-thu-nhap-khac-va-tong-thu-nhap.png"
+            "title": "Khoanh vung 5s Thong tin nhan vien 099",
+            "fileName": "TC-19-step05-khoanh-vung-5s-thong-tin-nhan-vien-099.png",
+            "relPath": "quy_trinh_tinh_luong_nv_moi/TC-19/screenshots/TC-19-step05-khoanh-vung-5s-thong-tin-nhan-vien-099.png"
           },
           {
             "step": 6,
-            "title": "Scroll + Khoanh vung 5s Cac khoan giam tru",
-            "fileName": "TC-19-step06-scroll-khoanh-vung-5s-cac-khoan-giam-tru.png",
-            "relPath": "quy_trinh_tinh_luong_nv_moi/TC-19/screenshots/TC-19-step06-scroll-khoanh-vung-5s-cac-khoan-giam-tru.png"
+            "title": "Scroll + Khoanh vung 5s Muc I Thong tin luong",
+            "fileName": "TC-19-step06-scroll-khoanh-vung-5s-muc-i-thong-tin-luong.png",
+            "relPath": "quy_trinh_tinh_luong_nv_moi/TC-19/screenshots/TC-19-step06-scroll-khoanh-vung-5s-muc-i-thong-tin-luong.png"
           },
           {
             "step": 7,
+            "title": "Scroll + Khoanh vung 5s Thu nhap khac va Tong thu nhap",
+            "fileName": "TC-19-step07-scroll-khoanh-vung-5s-thu-nhap-khac-va-tong-thu-nhap.png",
+            "relPath": "quy_trinh_tinh_luong_nv_moi/TC-19/screenshots/TC-19-step07-scroll-khoanh-vung-5s-thu-nhap-khac-va-tong-thu-nhap.png"
+          },
+          {
+            "step": 8,
+            "title": "Scroll + Khoanh vung 5s Cac khoan giam tru",
+            "fileName": "TC-19-step08-scroll-khoanh-vung-5s-cac-khoan-giam-tru.png",
+            "relPath": "quy_trinh_tinh_luong_nv_moi/TC-19/screenshots/TC-19-step08-scroll-khoanh-vung-5s-cac-khoan-giam-tru.png"
+          },
+          {
+            "step": 9,
+            "title": "Scroll + Khoanh vung 5s Thue TNCN",
+            "fileName": "TC-19-step09-scroll-khoanh-vung-5s-thue-tncn.png",
+            "relPath": "quy_trinh_tinh_luong_nv_moi/TC-19/screenshots/TC-19-step09-scroll-khoanh-vung-5s-thue-tncn.png"
+          },
+          {
+            "step": 10,
             "title": "Scroll + Khoanh vung 5s Luong thuc lanh",
-            "fileName": "TC-19-step07-scroll-khoanh-vung-5s-luong-thuc-lanh.png",
-            "relPath": "quy_trinh_tinh_luong_nv_moi/TC-19/screenshots/TC-19-step07-scroll-khoanh-vung-5s-luong-thuc-lanh.png"
+            "fileName": "TC-19-step10-scroll-khoanh-vung-5s-luong-thuc-lanh.png",
+            "relPath": "quy_trinh_tinh_luong_nv_moi/TC-19/screenshots/TC-19-step10-scroll-khoanh-vung-5s-luong-thuc-lanh.png"
+          },
+          {
+            "step": 11,
+            "title": "Modal Tang ca - Khoanh vung 5s quan sat chi tiet",
+            "fileName": "TC-19-step11-modal-tang-ca-khoanh-vung-5s-quan-sat-chi-tiet.png",
+            "relPath": "quy_trinh_tinh_luong_nv_moi/TC-19/screenshots/TC-19-step11-modal-tang-ca-khoanh-vung-5s-quan-sat-chi-tiet.png"
+          },
+          {
+            "step": 12,
+            "title": "Modal Di tre Ve som - Khoanh vung 5s quan sat chi tiet",
+            "fileName": "TC-19-step12-modal-di-tre-ve-som-khoanh-vung-5s-quan-sat-chi-tiet.png",
+            "relPath": "quy_trinh_tinh_luong_nv_moi/TC-19/screenshots/TC-19-step12-modal-di-tre-ve-som-khoanh-vung-5s-quan-sat-chi-tiet.png"
+          },
+          {
+            "step": 13,
+            "title": "Modal Ngay nghi - Khoanh vung 5s quan sat chi tiet",
+            "fileName": "TC-19-step13-modal-ngay-nghi-khoanh-vung-5s-quan-sat-chi-tiet.png",
+            "relPath": "quy_trinh_tinh_luong_nv_moi/TC-19/screenshots/TC-19-step13-modal-ngay-nghi-khoanh-vung-5s-quan-sat-chi-tiet.png"
           }
         ],
         "attachments": {
           "screenshots": [
             "quy_trinh_tinh_luong_nv_moi/TC-19/screenshots/TC-19-step01-dang-nhap-tai-khoan-nhan-vien-test-nv.png",
             "quy_trinh_tinh_luong_nv_moi/TC-19/screenshots/TC-19-step02-mo-man-hinh-phieu-luong-mnuprl445-qua-launchpad.png",
-            "quy_trinh_tinh_luong_nv_moi/TC-19/screenshots/TC-19-step03-khoanh-vung-5s-thong-tin-nhan-vien-099.png",
-            "quy_trinh_tinh_luong_nv_moi/TC-19/screenshots/TC-19-step04-scroll-khoanh-vung-5s-muc-i-thong-tin-luong.png",
-            "quy_trinh_tinh_luong_nv_moi/TC-19/screenshots/TC-19-step05-scroll-khoanh-vung-5s-thu-nhap-khac-va-tong-thu-nhap.png",
-            "quy_trinh_tinh_luong_nv_moi/TC-19/screenshots/TC-19-step06-scroll-khoanh-vung-5s-cac-khoan-giam-tru.png",
-            "quy_trinh_tinh_luong_nv_moi/TC-19/screenshots/TC-19-step07-scroll-khoanh-vung-5s-luong-thuc-lanh.png"
+            "quy_trinh_tinh_luong_nv_moi/TC-19/screenshots/TC-19-step03-tab-lich-su-khoanh-vung-5s-ky-luong-10-2026.png",
+            "quy_trinh_tinh_luong_nv_moi/TC-19/screenshots/TC-19-step04-bam-nut-xem-tu-lich-su-mo-phieu-luong-10-2026.png",
+            "quy_trinh_tinh_luong_nv_moi/TC-19/screenshots/TC-19-step05-khoanh-vung-5s-thong-tin-nhan-vien-099.png",
+            "quy_trinh_tinh_luong_nv_moi/TC-19/screenshots/TC-19-step06-scroll-khoanh-vung-5s-muc-i-thong-tin-luong.png",
+            "quy_trinh_tinh_luong_nv_moi/TC-19/screenshots/TC-19-step07-scroll-khoanh-vung-5s-thu-nhap-khac-va-tong-thu-nhap.png",
+            "quy_trinh_tinh_luong_nv_moi/TC-19/screenshots/TC-19-step08-scroll-khoanh-vung-5s-cac-khoan-giam-tru.png",
+            "quy_trinh_tinh_luong_nv_moi/TC-19/screenshots/TC-19-step09-scroll-khoanh-vung-5s-thue-tncn.png",
+            "quy_trinh_tinh_luong_nv_moi/TC-19/screenshots/TC-19-step10-scroll-khoanh-vung-5s-luong-thuc-lanh.png",
+            "quy_trinh_tinh_luong_nv_moi/TC-19/screenshots/TC-19-step11-modal-tang-ca-khoanh-vung-5s-quan-sat-chi-tiet.png",
+            "quy_trinh_tinh_luong_nv_moi/TC-19/screenshots/TC-19-step12-modal-di-tre-ve-som-khoanh-vung-5s-quan-sat-chi-tiet.png",
+            "quy_trinh_tinh_luong_nv_moi/TC-19/screenshots/TC-19-step13-modal-ngay-nghi-khoanh-vung-5s-quan-sat-chi-tiet.png"
           ],
           "videos": [
             "quy_trinh_tinh_luong_nv_moi/TC-19/videos/video.webm"
           ],
           "traces": []
         },
-        "timestamp": "2026-11-12T14:30:12.712Z"
-      },
-      {
-        "tcId": "TC-20",
-        "pageName": "quy_trinh_tinh_luong_nv_moi",
-        "title": "fix-8 | TC-20: Replay Nhân viên test.nv mở Tab Lịch sử, bấm Xem & mở/khoanh vùng 5s 3 Modal chi tiết (Role: test.nv)",
-        "testStatus": "PASSED",
-        "businessStatus": "PASSED",
-        "businessNotes": "Đạt yêu cầu logic nghiệp vụ mong đợi",
-        "defectEvidence": null,
-        "failureAnalysis": {},
-        "status": "PASSED",
-        "duration": "65.50s",
-        "errors": "",
-        "stepScreenshots": [
-          {
-            "step": 1,
-            "title": "Dang nhap test nv va mo man hinh Phieu luong",
-            "fileName": "TC-20-step01-dang-nhap-test-nv-va-mo-man-hinh-phieu-luong.png",
-            "relPath": "quy_trinh_tinh_luong_nv_moi/TC-20/screenshots/TC-20-step01-dang-nhap-test-nv-va-mo-man-hinh-phieu-luong.png"
-          },
-          {
-            "step": 2,
-            "title": "Tab Lich Su - Khoanh vung 5s ky luong 10/2026",
-            "fileName": "TC-20-step02-tab-lich-su-khoanh-vung-5s-ky-luong-10-2026.png",
-            "relPath": "quy_trinh_tinh_luong_nv_moi/TC-20/screenshots/TC-20-step02-tab-lich-su-khoanh-vung-5s-ky-luong-10-2026.png"
-          },
-          {
-            "step": 3,
-            "title": "Bam nut Xem tu Lich Su quay ve Phieu luong",
-            "fileName": "TC-20-step03-bam-nut-xem-tu-lich-su-quay-ve-phieu-luong.png",
-            "relPath": "quy_trinh_tinh_luong_nv_moi/TC-20/screenshots/TC-20-step03-bam-nut-xem-tu-lich-su-quay-ve-phieu-luong.png"
-          },
-          {
-            "step": 4,
-            "title": "Modal Tang ca - Khoanh vung 5s quan sat chi tiet",
-            "fileName": "TC-20-step04-modal-tang-ca-khoanh-vung-5s-quan-sat-chi-tiet.png",
-            "relPath": "quy_trinh_tinh_luong_nv_moi/TC-20/screenshots/TC-20-step04-modal-tang-ca-khoanh-vung-5s-quan-sat-chi-tiet.png"
-          },
-          {
-            "step": 5,
-            "title": "Modal Di tre Ve som - Khoanh vung 5s quan sat chi tiet",
-            "fileName": "TC-20-step05-modal-di-tre-ve-som-khoanh-vung-5s-quan-sat-chi-tiet.png",
-            "relPath": "quy_trinh_tinh_luong_nv_moi/TC-20/screenshots/TC-20-step05-modal-di-tre-ve-som-khoanh-vung-5s-quan-sat-chi-tiet.png"
-          },
-          {
-            "step": 6,
-            "title": "Modal Ngay nghi - Khoanh vung 5s quan sat chi tiet",
-            "fileName": "TC-20-step06-modal-ngay-nghi-khoanh-vung-5s-quan-sat-chi-tiet.png",
-            "relPath": "quy_trinh_tinh_luong_nv_moi/TC-20/screenshots/TC-20-step06-modal-ngay-nghi-khoanh-vung-5s-quan-sat-chi-tiet.png"
-          }
-        ],
-        "attachments": {
-          "screenshots": [
-            "quy_trinh_tinh_luong_nv_moi/TC-20/screenshots/TC-20-step01-dang-nhap-test-nv-va-mo-man-hinh-phieu-luong.png",
-            "quy_trinh_tinh_luong_nv_moi/TC-20/screenshots/TC-20-step02-tab-lich-su-khoanh-vung-5s-ky-luong-10-2026.png",
-            "quy_trinh_tinh_luong_nv_moi/TC-20/screenshots/TC-20-step03-bam-nut-xem-tu-lich-su-quay-ve-phieu-luong.png",
-            "quy_trinh_tinh_luong_nv_moi/TC-20/screenshots/TC-20-step04-modal-tang-ca-khoanh-vung-5s-quan-sat-chi-tiet.png",
-            "quy_trinh_tinh_luong_nv_moi/TC-20/screenshots/TC-20-step05-modal-di-tre-ve-som-khoanh-vung-5s-quan-sat-chi-tiet.png",
-            "quy_trinh_tinh_luong_nv_moi/TC-20/screenshots/TC-20-step06-modal-ngay-nghi-khoanh-vung-5s-quan-sat-chi-tiet.png"
-          ],
-          "videos": [
-            "quy_trinh_tinh_luong_nv_moi/TC-20/videos/video.webm"
-          ],
-          "traces": []
-        },
-        "timestamp": "2026-11-12T14:31:18.222Z"
+        "timestamp": "2026-11-12T15:26:15.002Z"
       }
     ]
   }

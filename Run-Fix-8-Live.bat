@@ -3,12 +3,11 @@ chcp 65001 >nul
 title Paradise HRM - Live Visual Test: FIX-8 (Quy trinh Tinh luong NV moi)
 cls
 echo ====================================================================
-echo   CHAY TRUC QUAN FIX-8: QUY TRINH TINH LUONG NV MOI (TC-18 den TC-20)
+echo   CHAY TRUC QUAN FIX-8: QUY TRINH TINH LUONG NV MOI (TC-18 den TC-19)
 echo   Vai tro: chien.nguyen (Ke toan truong), test.nv (Nhan vien moi 099)
 echo   Pham vi kiem thu (Priority P5 - Chang cuoi ve dich):
-echo     [TC-18]: Ke toan doi soat Bang luong tong hop toan cong ty (MnuPRL092)
-echo     [TC-19]: Nhan vien moi dang nhap & Nghiem thu 17 chi tieu Phieu luong (MnuPRL445)
-echo     [TC-20]: Kiem tra tuong tac 3 Modal con mat va Tab Lich su phieu luong (MnuPRL445)
+echo     [TC-18]: Ke toan doi soat Bang luong tong hop toan cong ty & Phieu luong (MnuPRL092)
+echo     [TC-19]: Nhan vien moi dang nhap, doi soat Phieu luong, Tab Lich su & 3 Modal chi tiet (MnuPRL445)
 echo ====================================================================
 echo.
 echo Dang khoi chay Google Chrome truc quan (Chuot Neon, slowMo, Headed)...

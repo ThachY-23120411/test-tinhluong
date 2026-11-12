@@ -3925,7 +3925,7 @@ async function inspectExcelRowWithHorizontalPanFix8(page, testInfo, tcId, previe
 
 // >>> [START_TC_18] - CONVERSATION: fix-8
 test('fix-8 | TC-18: Replay Kế toán mở Danh sách trả lương, xem Bảng lương tổng hợp (trượt ngang NV 099), nhảy Phiếu lương & Đăng xuất (Role: Chien.nguyen)', async ({ page }, testInfo) => {
-  test.setTimeout(180000);
+  test.setTimeout(240000);
   console.log('\n================ [TC-18]: REPLAY MnuPRL092 BẢNG LƯƠNG TỔNG HỢP -> PHIẾU LƯƠNG -> ĐĂNG XUẤT ================');
 
   // Bước 1: Đăng nhập tài khoản Chien.nguyen / 123 (bàn phím từng chữ + chuột Neon)
@@ -3938,13 +3938,20 @@ test('fix-8 | TC-18: Replay Kế toán mở Danh sách trả lương, xem Bảng
   await page.waitForTimeout(1000);
   await captureStepFix8(page, testInfo, 'TC-18', 2, 'Mo man hinh Danh sach tra luong MnuPRL092 qua Launchpad');
 
-  // Bước 3: Mở dropdown Tháng (#P682FA188ED5B4BD38C89E22CD6E72646) chọn Tháng 10
+  // Bước 3: Mở dropdown Tháng (#P682FA188ED5B4BD38C89E22CD6E72646) chọn Tháng 10 và dropdown Năm (#P911AA562E7AC44CEBC3FC7FAB611E906) chọn Năm 2026
   const monthBox = page.locator('#P682FA188ED5B4BD38C89E22CD6E72646').first();
   if (await monthBox.isVisible({ timeout: 3500 }).catch(() => false)) {
+    console.log('👉 [TC-18]: Di chuột Neon chọn Tháng 10...');
     await selectBoxHumanLike(page, monthBox, '10').catch(() => {});
+    await page.waitForTimeout(500);
   }
-  await page.waitForTimeout(800);
-  await captureStepFix8(page, testInfo, 'TC-18', 3, 'Chon ky luong Thang 10');
+  const yearBox = page.locator('#P911AA562E7AC44CEBC3FC7FAB611E906').first();
+  if (await yearBox.isVisible({ timeout: 3500 }).catch(() => false)) {
+    console.log('👉 [TC-18]: Di chuột Neon chọn Năm 2026...');
+    await selectBoxHumanLike(page, yearBox, '2026').catch(() => {});
+  }
+  await page.waitForTimeout(900);
+  await captureStepFix8(page, testInfo, 'TC-18', 3, 'Chon ky luong Thang 10 Nam 2026');
 
   // Bước 4: Bấm nút "Bảng lương tổng hợp" (#btnPrint), khoanh vùng dòng NV 099 & trượt thanh trượt ngang hết bảng (mỗi chặng pause 5s)
   const btnPrint = page.locator('#btnPrint, button:has-text("Bảng lương tổng hợp")').first();
@@ -4051,6 +4058,30 @@ test('fix-8 | TC-18: Replay Kế toán mở Danh sách trả lương, xem Bảng
       }
     }
 
+    // Nhóm các phần I -> V trong .html-payslip-page thành từng khối logic để khoanh vùng cả tiêu đề + số liệu + dòng tổng
+    await page.evaluate(() => {
+      const root = document.querySelector('#preview-body .html-payslip-page');
+      if (!root || root.dataset.secWrapped === '1') return;
+      root.dataset.secWrapped = '1';
+      const children = Array.from(root.children);
+      let secIdx = 0;
+      let currentWrap = null;
+      for (const el of children) {
+        if (el.classList.contains('ps-section-title')) {
+          secIdx += 1;
+          currentWrap = document.createElement('div');
+          currentWrap.setAttribute('data-fix8-payslip-sec', String(secIdx));
+          currentWrap.style.borderRadius = '6px';
+          root.insertBefore(currentWrap, el);
+          currentWrap.appendChild(el);
+        } else if (el.classList.contains('ps-net')) {
+          currentWrap = null;
+        } else if (currentWrap) {
+          currentWrap.appendChild(el);
+        }
+      }
+    });
+
     // Khoanh vùng 1 (Thông tin NV 099 - Nguyễn Văn Test & Công thực tế) -> Pause 5s
     const empGrid = page.locator('#preview-body .html-payslip-page .ps-grid').first();
     if (await empGrid.isVisible({ timeout: 4000 }).catch(() => false)) {
@@ -4062,7 +4093,52 @@ test('fix-8 | TC-18: Replay Kế toán mở Danh sách trả lương, xem Bảng
       await captureStepFix8(page, testInfo, 'TC-18', 7, `Phieu luong trang ${landedPage} - Khoanh vung thong tin NV 099`);
     }
 
-    // Cuộn mượt xuống cuối trang -> Khoanh vùng 2 (Thực lãnh cuối kỳ) -> Pause 5s
+    // Khoanh vùng 2 -> 6: Cuộn mượt & dừng 5s từng Mục I -> V trong Phiếu lương NV 099
+    const adminPayslipSections = [
+      {
+        step: 8,
+        secId: '1',
+        label: `Phiếu lương (Trang ${landedPage}/${totalPages}) - Mục I: Thông tin lương`,
+        shotName: `Phieu luong trang ${landedPage} - Khoanh vung Muc I Thong tin luong`
+      },
+      {
+        step: 9,
+        secId: '2',
+        label: `Phiếu lương (Trang ${landedPage}/${totalPages}) - Mục II: Phụ cấp`,
+        shotName: `Phieu luong trang ${landedPage} - Khoanh vung Muc II Phu cap`
+      },
+      {
+        step: 10,
+        secId: '3',
+        label: `Phiếu lương (Trang ${landedPage}/${totalPages}) - Mục III: Thu nhập khác & Tổng lương`,
+        shotName: `Phieu luong trang ${landedPage} - Khoanh vung Muc III Thu nhap khac va Tong luong`
+      },
+      {
+        step: 11,
+        secId: '4',
+        label: `Phiếu lương (Trang ${landedPage}/${totalPages}) - Mục IV: Các khoản khấu trừ`,
+        shotName: `Phieu luong trang ${landedPage} - Khoanh vung Muc IV Cac khoan khau tru`
+      },
+      {
+        step: 12,
+        secId: '5',
+        label: `Phiếu lương (Trang ${landedPage}/${totalPages}) - Mục V: Khấu trừ thuế TNCN`,
+        shotName: `Phieu luong trang ${landedPage} - Khoanh vung Muc V Thue TNCN`
+      }
+    ];
+
+    for (const s of adminPayslipSections) {
+      await highlightAndPauseSectionFix8(
+        page,
+        page.locator(`#preview-body .html-payslip-page [data-fix8-payslip-sec="${s.secId}"]`),
+        s.label,
+        '',
+        5000
+      );
+      await captureStepFix8(page, testInfo, 'TC-18', s.step, s.shotName);
+    }
+
+    // Cuộn mượt xuống cuối trang -> Khoanh vùng 7 (Thực lãnh cuối kỳ) -> Pause 5s
     const netRow = page.locator('#preview-body .html-payslip-page .ps-net').first();
     await highlightAndPauseSectionFix8(
       page,
@@ -4071,7 +4147,7 @@ test('fix-8 | TC-18: Replay Kế toán mở Danh sách trả lương, xem Bảng
       'b',
       5000
     );
-    await captureStepFix8(page, testInfo, 'TC-18', 8, `Phieu luong trang ${landedPage} - Khoanh vung Thuc lanh NV 099`);
+    await captureStepFix8(page, testInfo, 'TC-18', 13, `Phieu luong trang ${landedPage} - Khoanh vung Thuc lanh NV 099`);
   }
 
   // Bước 6: Đăng xuất tài khoản Chien.nguyen (#randomAvatar -> #txtLogoutOpt -> #successModalButtonAddNew)
@@ -4095,96 +4171,20 @@ test('fix-8 | TC-18: Replay Kế toán mở Danh sách trả lương, xem Bảng
       }
     }
   }
-  await captureStepFix8(page, testInfo, 'TC-18', 9, 'Dang xuat khoi tai khoan Chien nguyen thanh cong');
+  await captureStepFix8(page, testInfo, 'TC-18', 14, 'Dang xuat khoi tai khoan Chien nguyen thanh cong');
 });
 // <<< [END_TC_18]
 
 // >>> [START_TC_19] - CONVERSATION: fix-8
-test('fix-8 | TC-19: Replay Nhân viên test.nv mở Phiếu lương, cuộn từng mục & khoanh vùng pause 5s (Role: test.nv)', async ({ page }, testInfo) => {
-  test.setTimeout(150000);
-  console.log('\n================ [TC-19]: REPLAY NHÂN VIÊN test.nv MỞ PHIẾU LƯƠNG -> SCROLL + KHOANH VÙNG 5S ================');
+test('fix-8 | TC-19: Replay Nhân viên test.nv mở Phiếu lương -> Tab Lịch sử -> Xem -> Cuộn/Khoanh 5s các mục -> 3 Modal chi tiết (Role: test.nv)', async ({ page }, testInfo) => {
+  test.setTimeout(240000);
+  console.log('\n================ [TC-19]: REPLAY NHÂN VIÊN test.nv (JSON 9:56 PM) -> LỊCH SỬ -> XEM -> SCROLL & KHOANH 5S -> 3 MODAL ================');
 
-  // Bước 1: Đăng nhập Nhân viên test.nv / 123 (bàn phím từng chữ + chuột Neon)
+  // Bước 1: Đăng nhập Nhân viên test.nv / 123 (khớp JSON Recording 9:56 PM, đã lọc bỏ nhịp gõ nhầm "nv.té")
   await loginFix8(page, ACCOUNTS.STAFF_NEW.username, ACCOUNTS.STAFF_NEW.password);
   await captureStepFix8(page, testInfo, 'TC-19', 1, 'Dang nhap tai khoan nhan vien test nv');
 
-  // Bước 2: Mở Windows Launchpad -> Gõ "phiếu lương" -> Nhấp mở Phiếu lương (MnuPRL445)
-  await openMenuFix8(page, 'MnuPRL445', 'phiếu lương');
-
-  const slipContainer = page.locator('#psPayslip, .salary-slip, #sp_salaryslip_html').first();
-  await slipContainer.waitFor({ state: 'visible', timeout: 15000 });
-  await page.waitForFunction(() => {
-    const el = document.getElementById('psEmpID');
-    return el && el.innerText.trim().length > 0;
-  }, { timeout: 15000 });
-  await page.waitForTimeout(1200);
-  await captureStepFix8(page, testInfo, 'TC-19', 2, 'Mo man hinh Phieu luong MnuPRL445 qua Launchpad');
-
-  // Bước 3: Scroll + Khoanh vùng + Pause 5s từng khu vực thông số trên Phiếu lương
-  // 3a. Thông tin nhân viên 099
-  await highlightAndPause(page, page.locator('#psPayslip > .ps-info-grid').first(), {
-    expectedText: ['099', 'Nguyễn Văn Test'],
-    duration: 5000,
-    label: 'Phiếu lương NV 099 - Thông tin nhân viên',
-    targetSubSelector: '#psFullName'
-  });
-  await captureStepFix8(page, testInfo, 'TC-19', 3, 'Khoanh vung 5s Thong tin nhan vien 099');
-
-  // 3b. Mục I: Thông tin lương, Ngày công, OT, Nghỉ phép & Lương cơ bản
-  await highlightAndPauseSectionFix8(
-    page,
-    page.locator('#psPayslip .ps-section:has(#psBasicSalary)'),
-    'Mục I - Công chuẩn, Thực tế, OT, Ngày nghỉ & Lương cơ bản',
-    '#psBasicSalary',
-    5000
-  );
-  await captureStepFix8(page, testInfo, 'TC-19', 4, 'Scroll + Khoanh vung 5s Muc I Thong tin luong');
-
-  // 3c. Mục II/III: Thu nhập khác (Thưởng KPI) & Tổng thu nhập
-  await highlightAndPauseSectionFix8(
-    page,
-    page.locator('#psPayslip .ps-section:has(#psTotalIncome)'),
-    'Mục III - Thu nhập khác (Thưởng KPI) & Tổng thu nhập',
-    '#psTotalIncome',
-    5000
-  );
-  await captureStepFix8(page, testInfo, 'TC-19', 5, 'Scroll + Khoanh vung 5s Thu nhap khac va Tong thu nhap');
-
-  // 3d. Mục IV: Các khoản giảm trừ (Tạm ứng / Bảo hiểm)
-  await highlightAndPauseSectionFix8(
-    page,
-    page.locator('#psPayslip .ps-section:has(#psTotalDeductions)'),
-    'Mục IV - Các khoản giảm trừ (Tạm ứng & Bảo hiểm)',
-    '#psTotalDeductions',
-    5000
-  );
-  await captureStepFix8(page, testInfo, 'TC-19', 6, 'Scroll + Khoanh vung 5s Cac khoan giam tru');
-
-  // 3e. Cuối phiếu: Lương Thực Lĩnh (#psNetSalary)
-  await highlightAndPauseSectionFix8(
-    page,
-    page.locator('#psPayslip .ps-section:has(#psNetSalary)'),
-    'Cuối phiếu - LƯƠNG THỰC LĨNH NV 099',
-    '#psNetSalary',
-    5000
-  );
-  await captureStepFix8(page, testInfo, 'TC-19', 7, 'Scroll + Khoanh vung 5s Luong thuc lanh');
-
-  // Cuộn mượt trở lại phần đầu phiếu để kết thúc gọn gàng
-  const empIdEl = page.locator('#psEmpID, .ps-info-grid').first();
-  if (await empIdEl.isVisible({ timeout: 3000 }).catch(() => false)) {
-    await smoothScrollHumanLike(page, empIdEl, { block: 'center', wait: 1000 });
-  }
-});
-// <<< [END_TC_19]
-
-// >>> [START_TC_20] - CONVERSATION: fix-8
-test('fix-8 | TC-20: Replay Nhân viên test.nv mở Tab Lịch sử, bấm Xem & mở/khoanh vùng 5s 3 Modal chi tiết (Role: test.nv)', async ({ page }, testInfo) => {
-  test.setTimeout(180000);
-  console.log('\n================ [TC-20]: REPLAY TAB LỊCH SỬ -> XEM -> 3 MODAL (PAUSE 5S + KHOANH VÙNG) ================');
-
-  // Bước 1: Đăng nhập test.nv & mở Phiếu lương (MnuPRL445) qua Launchpad
-  await loginFix8(page, ACCOUNTS.STAFF_NEW.username, ACCOUNTS.STAFF_NEW.password);
+  // Bước 2: Mở Windows Launchpad (MnuHRS238) -> Gõ "phiếu lương" -> Nhấp mở Phiếu lương (MnuPRL445)
   await openMenuFix8(page, 'MnuPRL445', 'phiếu lương');
 
   const slipContainer = page.locator('#psPayslip, .salary-slip, #sp_salaryslip_html').first();
@@ -4194,111 +4194,143 @@ test('fix-8 | TC-20: Replay Nhân viên test.nv mở Tab Lịch sử, bấm Xem 
     return el && el.innerText.trim().length > 0;
   }, { timeout: 15000 });
   await page.waitForTimeout(1000);
-  await captureStepFix8(page, testInfo, 'TC-20', 1, 'Dang nhap test nv va mo man hinh Phieu luong');
+  await captureStepFix8(page, testInfo, 'TC-19', 2, 'Mo man hinh Phieu luong MnuPRL445 qua Launchpad');
 
-  // Bước 2: Di chuột Neon bấm Tab "Lịch Sử" -> Khoanh vùng 5s kỳ lương -> Bấm nút "Xem"
-  const historyTabBtn = page.locator('button.ps-tab-btn:has-text("Lịch Sử"), button[onclick*="psHistory"]').first();
+  // Bước 3 (khớp JSON): Nhấp ngay Tab "Lịch Sử" -> Khoanh vùng 5s kỳ lương 10/2026
+  const historyTabBtn = page.locator('#dynamic-pane-MnuPRL445 button.ps-tab-btn:has-text("Lịch Sử"), button:has-text("Lịch Sử")').first();
   if (await historyTabBtn.isVisible({ timeout: 5000 }).catch(() => false)) {
-    console.log('👉 [TC-20]: Di chuột Neon nhấp Tab "Lịch Sử"...');
+    await smoothScrollHumanLike(page, historyTabBtn, { block: 'center', wait: 400 });
+    console.log('👉 [TC-19]: Di chuột Neon nhấp Tab "Lịch Sử"...');
     await moveAndClick(page, historyTabBtn, { steps: 10, pause: 300 });
     await page.locator('#psHistory, #psHistoryContent').first().waitFor({ state: 'visible', timeout: 8000 }).catch(() => {});
     await page.waitForTimeout(1000);
 
-    // Khoanh vùng dòng kỳ lương trong Tab Lịch Sử 5s để quan sát trước khi bấm Xem
-    const historyRowOrCard = page.locator('#psHistory tr:has-text("10/2026"), #psHistory div:has(> button:has-text("Xem"))').first();
-    await highlightAndPauseSectionFix8(
-      page,
-      historyRowOrCard,
-      'Tab Lịch Sử - Kỳ lương Tháng 10/2026',
-      'button',
-      5000
-    );
-    await captureStepFix8(page, testInfo, 'TC-20', 2, 'Tab Lich Su - Khoanh vung 5s ky luong 10/2026');
+    const historyRowOrCard = page.locator('#psHistory .ps-payslip-item:has-text("10/2026"), #psHistory div:has(> button:has-text("Xem"))').first();
+    await highlightAndPauseSectionFix8(page, historyRowOrCard, 'Tab Lịch Sử - Kỳ lương Tháng 10/2026', 'button', 5000);
+    await captureStepFix8(page, testInfo, 'TC-19', 3, 'Tab Lich Su - Khoanh vung 5s ky luong 10/2026');
 
-    const historyViewBtn = page.locator('#psHistory button:has-text("Xem"):visible, #psHistory button:visible').first();
+    // Bước 4 (khớp JSON): Nhấp nút "Xem" trong Tab Lịch Sử để mở Phiếu lương kỳ 10/2026
+    const historyViewBtn = page.locator('#psHistory .ps-payslip-item:has-text("10/2026") button, #psHistory button[onclick*="viewPayslipPs(10"], #psHistory button:visible').first();
     if (await historyViewBtn.isVisible({ timeout: 5000 }).catch(() => false)) {
-      await smoothScrollHumanLike(page, historyViewBtn, { block: 'center', wait: 500 });
-      console.log('👉 [TC-20]: Di chuột Neon nhấp nút "Xem" trên Tab Lịch Sử...');
+      await smoothScrollHumanLike(page, historyViewBtn, { block: 'center', wait: 400 });
+      console.log('👉 [TC-19]: Di chuột Neon nhấp nút "Xem" trên Tab Lịch Sử...');
       await moveAndClick(page, historyViewBtn, { steps: 10, pause: 300 });
       await page.locator('#psPayslip').first().waitFor({ state: 'visible', timeout: 8000 }).catch(() => {});
-      await page.waitForTimeout(1000);
-      await captureStepFix8(page, testInfo, 'TC-20', 3, 'Bam nut Xem tu Lich Su quay ve Phieu luong');
+      await page.waitForTimeout(1200);
+      await captureStepFix8(page, testInfo, 'TC-19', 4, 'Bam nut Xem tu Lich Su mo Phieu luong 10/2026');
     }
   }
 
-  // Bước 3: Mở, Khoanh vùng 5s & Đóng Modal 1 — Tăng ca (Overtime)
-  const otEye = page.locator('i.ps-eye[onclick*="overtime"], #psOTHours + i, .eye-ot').first();
-  if (await otEye.isVisible({ timeout: 4000 }).catch(() => false)) {
-    await smoothScrollHumanLike(page, otEye, { block: 'center', wait: 500 });
-    console.log('👉 [TC-20]: Di chuột Neon nhấp icon con mắt Tăng ca...');
-    await moveAndClick(page, otEye, { steps: 10, pause: 250 });
-    await page.locator('#psModalOvertime').waitFor({ state: 'visible', timeout: 6000 }).catch(() => {});
-    await highlightAndPauseSectionFix8(
-      page,
-      page.locator('#psModalOvertime .ps-modal-content, #psModalOvertime > div'),
-      'Modal Chi tiết Tăng ca (Overtime)',
-      '',
-      5000
-    );
-    await captureStepFix8(page, testInfo, 'TC-20', 4, 'Modal Tang ca - Khoanh vung 5s quan sat chi tiet');
+  // Bước 5-10: Scroll + Khoanh vùng + Pause 5s từng khu vực thông số trên Phiếu lương 10/2026
+  await highlightAndPause(page, page.locator('#psPayslip > .ps-info-grid').first(), {
+    expectedText: ['099', 'Nguyễn Văn Test'],
+    duration: 5000,
+    label: 'Phiếu lương NV 099 - Thông tin nhân viên',
+    targetSubSelector: '#psFullName'
+  });
+  await captureStepFix8(page, testInfo, 'TC-19', 5, 'Khoanh vung 5s Thong tin nhan vien 099');
 
-    const closeOt = page.locator('#psModalOvertime .ps-modal-close, #psModalOvertime button[onclick*="close"]').first();
-    if (await closeOt.isVisible({ timeout: 3000 }).catch(() => false)) {
-      await moveAndClick(page, closeOt, { steps: 8, pause: 250 });
-      await page.locator('#psModalOvertime').waitFor({ state: 'hidden', timeout: 4000 }).catch(() => {});
-      await page.waitForTimeout(600);
+  const payslipSections = [
+    {
+      step: 6,
+      selector: '#psPayslip .ps-section:has(#psBasicSalary)',
+      label: 'Mục I - Công chuẩn, Thực tế, OT, Ngày nghỉ & Lương cơ bản',
+      subSelector: '#psBasicSalary',
+      shotName: 'Scroll + Khoanh vung 5s Muc I Thong tin luong'
+    },
+    {
+      step: 7,
+      selector: '#psPayslip .ps-section:has(#psTotalIncome)',
+      label: 'Mục III - Thu nhập khác (Thưởng KPI) & Tổng thu nhập',
+      subSelector: '#psTotalIncome',
+      shotName: 'Scroll + Khoanh vung 5s Thu nhap khac va Tong thu nhap'
+    },
+    {
+      step: 8,
+      selector: '#psPayslip .ps-section:has(#psTotalDeductions)',
+      label: 'Mục IV - Các khoản giảm trừ (Tạm ứng & Bảo hiểm)',
+      subSelector: '#psTotalDeductions',
+      shotName: 'Scroll + Khoanh vung 5s Cac khoan giam tru'
+    },
+    {
+      step: 9,
+      selector: '#psPayslip .ps-section:has(#psPIT)',
+      label: 'Mục V - Giảm trừ gia cảnh & Thuế TNCN',
+      subSelector: '#psPIT',
+      shotName: 'Scroll + Khoanh vung 5s Thue TNCN'
+    },
+    {
+      step: 10,
+      selector: '#psPayslip .ps-section:has(#psNetSalary)',
+      label: 'Cuối phiếu - LƯƠNG THỰC LĨNH NV 099',
+      subSelector: '#psNetSalary',
+      shotName: 'Scroll + Khoanh vung 5s Luong thuc lanh'
+    }
+  ];
+
+  for (const sec of payslipSections) {
+    await highlightAndPauseSectionFix8(page, page.locator(sec.selector), sec.label, sec.subSelector, 5000);
+    await captureStepFix8(page, testInfo, 'TC-19', sec.step, sec.shotName);
+  }
+
+  // Bước 11-13 (khớp JSON): Mở, Khoanh vùng 5s & Đóng 3 Modal con mắt đúng thứ tự Tăng ca -> Đi trễ / Về sớm -> Ngày nghỉ
+  const modalChecks = [
+    {
+      step: 11,
+      eyeSelector: 'i.ps-eye[onclick*="overtime"], #psOTHours + i, .eye-ot',
+      modalSelector: '#psModalOvertime',
+      label: 'Modal Chi tiết Tăng ca (Overtime)',
+      shotName: 'Modal Tang ca - Khoanh vung 5s quan sat chi tiet',
+      logLabel: 'Tăng ca'
+    },
+    {
+      step: 12,
+      eyeSelector: 'i.ps-eye[onclick*="lateearly"], #psLateEarly + i, .eye-io',
+      modalSelector: '#psModalLateearly',
+      label: 'Modal Chi tiết Đi trễ / Về sớm',
+      shotName: 'Modal Di tre Ve som - Khoanh vung 5s quan sat chi tiet',
+      logLabel: 'Đi trễ / Về sớm'
+    },
+    {
+      step: 13,
+      eyeSelector: 'i.ps-eye[onclick*="daysoff"], #psDaysOff + i, .eye-leave',
+      modalSelector: '#psModalDaysoff',
+      label: 'Modal Chi tiết Ngày nghỉ',
+      shotName: 'Modal Ngay nghi - Khoanh vung 5s quan sat chi tiet',
+      logLabel: 'Ngày nghỉ'
+    }
+  ];
+
+  for (const m of modalChecks) {
+    const eyeIcon = page.locator(m.eyeSelector).first();
+    if (await eyeIcon.isVisible({ timeout: 4000 }).catch(() => false)) {
+      await smoothScrollHumanLike(page, eyeIcon, { block: 'center', wait: 500 });
+      console.log(`👉 [TC-19]: Di chuột Neon nhấp icon con mắt ${m.logLabel}...`);
+      await moveAndClick(page, eyeIcon, { steps: 10, pause: 250 });
+      await page.locator(m.modalSelector).waitFor({ state: 'visible', timeout: 6000 }).catch(() => {});
+      await highlightAndPauseSectionFix8(
+        page,
+        page.locator(`${m.modalSelector} .ps-modal-content, ${m.modalSelector} > div`),
+        m.label,
+        '',
+        5000
+      );
+      await captureStepFix8(page, testInfo, 'TC-19', m.step, m.shotName);
+
+      const closeBtn = page.locator(`${m.modalSelector} .ps-modal-close, ${m.modalSelector} button[onclick*="close"], ${m.modalSelector} button`).first();
+      if (await closeBtn.isVisible({ timeout: 3000 }).catch(() => false)) {
+        await moveAndClick(page, closeBtn, { steps: 8, pause: 250 });
+        await page.locator(m.modalSelector).waitFor({ state: 'hidden', timeout: 4000 }).catch(() => {});
+        await page.waitForTimeout(600);
+      }
     }
   }
 
-  // Bước 4: Mở, Khoanh vùng 5s & Đóng Modal 2 — Đi trễ / Về sớm (Late/Early) đúng thứ tự JSON Recorder
-  const leEye = page.locator('i.ps-eye[onclick*="lateearly"], #psLateEarly + i, .eye-io').first();
-  if (await leEye.isVisible({ timeout: 4000 }).catch(() => false)) {
-    await smoothScrollHumanLike(page, leEye, { block: 'center', wait: 500 });
-    console.log('👉 [TC-20]: Di chuột Neon nhấp icon con mắt Đi trễ / Về sớm...');
-    await moveAndClick(page, leEye, { steps: 10, pause: 250 });
-    await page.locator('#psModalLateearly').waitFor({ state: 'visible', timeout: 6000 }).catch(() => {});
-    await highlightAndPauseSectionFix8(
-      page,
-      page.locator('#psModalLateearly .ps-modal-content, #psModalLateearly > div'),
-      'Modal Chi tiết Đi trễ / Về sớm',
-      '',
-      5000
-    );
-    await captureStepFix8(page, testInfo, 'TC-20', 5, 'Modal Di tre Ve som - Khoanh vung 5s quan sat chi tiet');
-
-    const closeLe = page.locator('#psModalLateearly .ps-modal-close, #psModalLateearly button[onclick*="close"]').first();
-    if (await closeLe.isVisible({ timeout: 3000 }).catch(() => false)) {
-      await moveAndClick(page, closeLe, { steps: 8, pause: 250 });
-      await page.locator('#psModalLateearly').waitFor({ state: 'hidden', timeout: 4000 }).catch(() => {});
-      await page.waitForTimeout(600);
-    }
+  // Cuộn mượt trở lại phần đầu phiếu & giữ màn hình 3 giây cuối để kết thúc gọn gàng
+  const empIdEl = page.locator('#psEmpID, .ps-info-grid').first();
+  if (await empIdEl.isVisible({ timeout: 3000 }).catch(() => false)) {
+    await smoothScrollHumanLike(page, empIdEl, { block: 'center', wait: 1000 });
   }
-
-  // Bước 5: Mở, Khoanh vùng 5s & Đóng Modal 3 — Ngày nghỉ (Days Off) đúng thứ tự JSON Recorder
-  const doEye = page.locator('i.ps-eye[onclick*="daysoff"], #psDaysOff + i, .eye-leave').first();
-  if (await doEye.isVisible({ timeout: 4000 }).catch(() => false)) {
-    await smoothScrollHumanLike(page, doEye, { block: 'center', wait: 500 });
-    console.log('👉 [TC-20]: Di chuột Neon nhấp icon con mắt Ngày nghỉ...');
-    await moveAndClick(page, doEye, { steps: 10, pause: 250 });
-    await page.locator('#psModalDaysoff').waitFor({ state: 'visible', timeout: 6000 }).catch(() => {});
-    await highlightAndPauseSectionFix8(
-      page,
-      page.locator('#psModalDaysoff .ps-modal-content, #psModalDaysoff > div'),
-      'Modal Chi tiết Ngày nghỉ',
-      '',
-      5000
-    );
-    await captureStepFix8(page, testInfo, 'TC-20', 6, 'Modal Ngay nghi - Khoanh vung 5s quan sat chi tiet');
-
-    const closeDo = page.locator('#psModalDaysoff .ps-modal-close, #psModalDaysoff button[onclick*="close"]').first();
-    if (await closeDo.isVisible({ timeout: 3000 }).catch(() => false)) {
-      await moveAndClick(page, closeDo, { steps: 8, pause: 250 });
-      await page.locator('#psModalDaysoff').waitFor({ state: 'hidden', timeout: 4000 }).catch(() => {});
-      await page.waitForTimeout(600);
-    }
-  }
-
-  // Giữ màn hình 3 giây cuối để người dùng quan sát tổng thể trước khi kết thúc
-  await page.waitForTimeout(3000);
+  await page.waitForTimeout(2000);
 });
-// <<< [END_TC_20]
+// <<< [END_TC_19]
