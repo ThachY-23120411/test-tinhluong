@@ -1,0 +1,2613 @@
+
+
+        <style>
+            #sp_SalaryHistory_List_html {
+                height: calc(100vh - 110px) !important;
+                max-height: calc(100vh - 110px) !important;
+                width: 100% !important;
+                display: flex;
+                flex-direction: column;
+                border-top: 1px solid var(--bs-border-color);
+                overflow: hidden;
+            }
+
+            #gridSalaryHistory .dx-toolbar .dx-checkbox {
+                vertical-align: middle !important;
+            }
+
+            #gridSalaryHistory .dx-toolbar {
+                container-type: inline-size;
+                height: auto !important;
+                overflow: visible !important;
+            }
+
+            @container (max-width: 850px) {
+                #gridSalaryHistory .dx-toolbar-items-container {
+                    display: flex !important;
+                    flex-direction: column !important;
+                    align-items: stretch !important;
+                    gap: 4px !important;
+                    height: auto !important;
+                    min-height: 72px !important;
+                }
+
+                #gridSalaryHistory .dx-toolbar-before,
+                #gridSalaryHistory .dx-toolbar-after {
+                    position: static !important;
+                    width: 100% !important;
+                    max-width: 100% !important;
+                    transform: none !important;
+                    display: flex !important;
+                    align-items: center !important;
+                }
+
+                #gridSalaryHistory .dx-toolbar-before {
+                    order: 1;
+                }
+
+                #gridSalaryHistory .dx-toolbar-after {
+                    order: 2;
+                    justify-content: flex-end !important;
+                    padding-left: 0 !important;
+                    padding-right: 0 !important;
+                    white-space: nowrap !important;
+                }
+
+                #gridSalaryHistory .dx-toolbar-center {
+                    display: none !important;
+                }
+
+                #gridSalaryHistory .dx-datagrid-search-panel {
+                    width: min(260px, calc(100cqw - 220px)) !important;
+                    min-width: 140px !important;
+                }
+            }
+        </style>
+        <div id="sp_SalaryHistory_List_html" style="height: 100%; display: flex; flex-direction: column;">
+            <div id="gridSalaryHistory" style="flex: 1; min-height: 0;"></div>
+        </div>
+        <script>
+            (() => {
+                window.currentRecordID_SalaryHistoryID = null;
+                let api = true;
+                let DataSource = [];
+                let _pageCache = {};
+                let _summaryCache = {};
+                let _currentKeyword = "";
+                let dataStore_gridSalaryHistory = null;
+                let _showtoolbarGrid_PD66259053F5E42B48615BBB3D277D02F = true;
+                let _showtoolbarAdd_PD66259053F5E42B48615BBB3D277D02F = true;
+                let dataParams = {
+                    ViewAllRecord: 0,
+                    NewEmp: 0
+                };
+
+                // ============================================================
+                // 0. KHAI BAO CAC HAM SU KIEN MAC DINH CHO GRID
+                // ============================================================
+                function addSalaryHistoryID() {
+                    window.currentSalaryHistorySelected = {};
+                    if (typeof openFormParam === 'function') {
+                        openFormParam('sp_SalaryHistory_Insert', {});
+                    } else {
+                      //  console.log("addSalaryHistoryID: openFormParam is not defined.");
+                    }
+                };
+                function openDetailID(rowData) {
+                 //   console.log("Row Clicked Data:", rowData);
+                    window.currentSalaryHistorySelected = rowData || {};
+                    if (rowData && typeof openFormParam === 'function') {
+                        openFormParam('sp_SalaryHistory_Insert', rowData);
+                    } else {
+                      //  console.log("openDetailID: openFormParam is not defined. Data:", rowData);
+                    }
+                };
+
+                // Hàm tính tổng động đè lên summary của grid cho sp_SalaryHistory_List_Grid
+                async function fn_thanh_sumFull_SalaryHistory(columnName) {
+                    let filterStr = "";
+                    let grid = $("#gridSalaryHistory").dxDataGrid("instance");
+                    if (grid) {
+                        try {
+                            let filterExpr = grid.getCombinedFilter();
+                            if (filterExpr) {
+                                filterStr = createConditionQuery(filterExpr);
+                                if (filterStr) {
+                                    filterStr = filterStr.replace(/=\s*true\b/gi, "= 1").replace(/=\s*false\b/gi, "= 0");
+                                }
+                            }
+                        } catch (e) {
+                            console.warn("getCombinedFilter error:", e);
+                        }
+                    }
+
+                    return new Promise((resolve) => {
+                        AjaxHPAParadise({
+                            data: {
+                                name: "sp_thanh_sumFull_SalaryHistory",
+                 param: [
+                                    "LoginID", window.UserID || window.LoginID,
+                                    "LanguageID", window.LanguageID || "VN",
+      "ViewAllRecord", dataParams.ViewAllRecord,
+                                    "NewEmp", dataParams.NewEmp,
+                                    "Filters", filterStr,
+                                    "SearchValue", _currentKeyword || "",
+                                    "ColumnSearch", "EmployeeID,DepartmentName,FullName",
+                                    "ColumnName", (columnName || "").trim()
+    ]
+                           },
+                            success: function (res) {
+                                const json = typeof res === "string" ? JSON.parse(res) : res;
+                                const sumVal = json?.data?.[0]?.[0]?.SumValue ?? 0;
+                                resolve(sumVal);
+                            },
+                            error: function () {
+                                resolve(0);
+                            }
+                        });
+                    });
+                }
+
+        // ============================================================
+                // 1. KHỞI TẠO DATASTORE DUY NHẤT MỘT LẦN
+                // ============================================================
+                dataStore_gridSalaryHistory = new DevExpress.data.CustomStore({
+                    key: "SalaryHistoryID",
+                    load: function(loadOptions) {
+                        const deferred = $.Deferred();
+
+                            if (!api) {
+         const results = DataSource || [];
+                            const skip = loadOptions.skip || 0;
+                            const take = loadOptions.take || 50;
+                            const pageData = results.slice(skip, skip + take);
+                            deferred.resolve({
+                                data: pageData,
+                        totalCount: results.length
+                            });
+                            api = true;
+                            return deferred.promise();
+                        }
+
+                        let params = [];
+                        // SP nghiệp vụ
+                        params.push("@ProcName", "sp_SalaryHistory_List_Grid");
+
+                        // Tham số của tên thủ tục load Data
+                        let procParam = "@LoginID = " + (window.UserID || window.LoginID) +
+                                        ", @LanguageID = " + window.LanguageID +
+                                        ", @ViewAllRecord = " + dataParams.ViewAllRecord +
+                                        ", @NewEmp = " + dataParams.NewEmp +
+                                        ", @Month = " + ((window.sp_SalaryHistory_List_param || {}).Month || 0) +
+                                        ", @Year = " + ((window.sp_SalaryHistory_List_param || {}).Year || 0) +
+                                        ", @DivisionIDS = '" + ((window.sp_SalaryHistory_List_param || {}).DivisionIDS || "") + "'";
+
+                        params.push("@ProcParam", procParam);
+
+                        // Phân trang
+                        params.push("@Take", loadOptions.take || 50);
+                        params.push("@Skip", loadOptions.skip || 0);
+
+                        // TotalCount
+                        if (loadOptions.requireTotalCount) {
+                            params.push("@RequireTotalCount", 1);
+                        }
+
+                        // Sort
+                        const sort = loadOptions.sort
+                            ? loadOptions.sort.map(s => s.selector + (s.desc ? " DESC" : " ASC")).join(",")
+                            : "";
+
+                        params.push("@Sort", sort != "" ? "ORDER BY " + sort : "");
+
+                        // Search
+                        if (_currentKeyword) {
+                            params.push("@SearchValue", _currentKeyword);
+                            params.push("@ColumnSearch", "EmployeeID,DepartmentName,FullName");
+} else if (loadOptions.searchValue) {
+                            params.push("@SearchValue", loadOptions.searchValue);
+                            params.push("@ColumnSearch", "EmployeeID,DepartmentName,FullName");
+                        }
+
+                        // Filter
+                        let activeFilter = loadOptions.filter;
+
+                        if (activeFilter) {
+                            // Kiểm tra filter item có phải function không
+                            const isJSFunction = (item) => typeof item === "function";
+
+                            const hasFunction = JSON.stringify(activeFilter, (key, val) => {
+                                if (typeof val === "function") return "FUNCTION";
+                                return val;
+                            }).includes("FUNCTION");
+
+
+                           if (!hasFunction) {
+                                let filterStr = createConditionQuery(activeFilter);
+                                if (filterStr) {
+                                    filterStr = filterStr.replace(/=\s*true\b/gi, "= 1").replace(/=\s*false\b/gi, "= 0");
+                                }
+                                params.push("@Filters", filterStr);
+                            }
+                        }
+
+                        // Summary
+                        const summaryKey = JSON.stringify({
+                            procParam: procParam,
+                            search: _currentKeyword || "",
+                            filter: loadOptions.filter || null,
+                            totalSummary: loadOptions.totalSummary || null
+                        });
+
+                        const hasSummaryCache = !!_summaryCache[summaryKey];
+
+                        if (loadOptions.totalSummary && !hasSummaryCache) {
+                            const summary = loadOptions.totalSummary.map(item => {
+                                const selector = item.selector || item.column;
+                                if (!selector) return null;
+                                const type = item.summaryType === "custom"
+                                    ? `count(CASE WHEN [${selector}] = 1 THEN 1 END) as ${selector}_COUNT`
+                                    : `${item.summaryType}([${selector}]) as ${selector}_${item.summaryType.toUpperCase()}`;
+                                return type;
+                            }).filter(Boolean);
+                            if (summary.length > 0) {
+                                params.push("@TotalSummary", summary.join(", "));
+                            }
+                        }
+
+                      //  console.log("🤷‍♂️ hoangthanh~ params api load data:", params);
+                        AjaxHPAParadise({
+                            data: {
+                                name: "sp_LoadGridUsingAPI",
+                                param: params
+                            },
+                            success: function (res) {
+                                const json = typeof res === "string" ? JSON.parse(res) : res;
+                                const results = Array.isArray(json?.data?.[0]) ? json.data[0] : [];
+                                let result = { data: results };
+
+                                if (loadOptions.requireTotalCount) {
+                                    result.totalCount = json?.data?.[1]?.[0]?.TotalCount ?? 0;
+                                }
+
+                                if (loadOptions.totalSummary) {
+                                    if (hasSummaryCache) {
+                                        result.summary = _summaryCache[summaryKey];
+                                        DataSource = results;
+                                        if (typeof window.syncSharedGridData === "function") {
+                                            window.syncSharedGridData("gridSalaryHistory");
+                      }
+                                   deferred.resolve(result);
+                                    } else {
+                                        let promises = loadOptions.totalSummary.map(item => {
+                                            let colName = item.selector || item.column;
+                                            return fn_thanh_sumFull_SalaryHistory(colName);
+                                        });
+
+                                        Promise.all(promises).then(function(sumVals) {
+                                            result.summary = sumVals;
+                                            _summaryCache[summaryKey] = result.summary;
+                                            DataSource = results;
+                                            if (typeof window.syncSharedGridData === "function") {
+                                                window.syncSharedGridData("gridSalaryHistory");
+                                            }
+                                            deferred.resolve(result);
+                                        }).catch(function() {
+                                            result.summary = loadOptions.totalSummary.map(() => 0);
+                                            DataSource = results;
+                                            if (typeof window.syncSharedGridData === "function") {
+                                                window.syncSharedGridData("gridSalaryHistory");
+                                            }
+                                            deferred.resolve(result);
+                                        });
+                                    }
+                                } else {
+                                    DataSource = results;
+                                    if (typeof window.syncSharedGridData === "function") {
+                                        window.syncSharedGridData("gridSalaryHistory");
+                                    }
+                                    deferred.resolve(result);
+                                }
+                            },
+                            error: function (err) {
+                                deferred.reject("Data Loading Error");
+                            }
+                        });
+
+                        return deferred.promise();
+                    }
+                });
+
+                
+                        window.InstancegridSalaryHistoryPD66259053F5E42B48615BBB3D277D02F = null;
+                        { // Scope block to prevent style re-declaration conflicts
+                             // Thêm responsive styles cho grid header
+                        const stylegridSalaryHistory = document.createElement("style");
+                        stylegridSalaryHistory.textContent = `
+                            /* =============== RESPONSIVE POPUP STYLES =============== */
+                            #gridSalaryHistory .dx-datagrid-search-panel .dx-placeholder {
+                                display: none !important;
+                             }
+                             #gridSalaryHistory .dx-item-content.dx-toolbar-item-content {
+                                 margin-right: 5px !important;
+                             }
+
+                            /* =============== FIX TEXTBOX TRONG GRID =============== */
+                            #gridSalaryHistory .dx-datagrid .dx-texteditor {
+                                width: 100% !important;
+                                min-width: 0 !important;
+                            }
+
+   #gridSalaryHistory .dx-datagrid .dx-texteditor-input {
+                                width: 100% !important;
+                                min-width: 0 !important;
+                                box-sizing: border-box !important;
+                            }
+
+                            #gridSalaryHistory .dx-datagrid-rowsview .dx-row > td > div {
+                                white-space: nowrap;
+                                overflow: hidden;
+                                text-overflow: ellipsis;
+                                word-break: break-word !important;
+                                line-height: 1.4 !important;
+                            }
+
+                            #gridSalaryHistory .dx-popup.hpa-responsive {
+                                max-width: 95vw !important;
+                                max-height: 95vh !important;
+                                width: 95vw !important;
+                                left: 0 !important;
+                                top: 0 !important;
+                            }
+
+                            #gridSalaryHistory .dx-popup.hpa-responsive .dx-popup-content {
+                                height: calc(95vh - 120px) !important;
+                                max-height: calc(95vh - 120px) !important;
+                                overflow-y: auto !important;
+            padding: 8px !important;
+                                display: flex !important;
+      flex-direction: column !important;
+                            }
+
+                 #gridSalaryHistory .dx-popup.hpa-responsive .dx-popup-content-scrollable {
+                                flex: 1 !important;
+ min-height: 0 !important;
+   overflow: auto !important;
+                            }
+
+                            #gridSalaryHistory .dx-popup-content.dx-popup-content-scrollable {
+                  height: auto !important;
+                            }
+
+                            #gridSalaryHistory .dx-popup.hpa-responsive .dx-toolbar-items {
+           padding: 4px 0 !important;
+                         flex-wrap: wrap;
+    }
+
+                #gridSalaryHistory .dx-popup.hpa-responsive .dx-toolbar-item {
+   margin: 2px 2px !important;
+       }
+
+  /* =============== GRID HEADER STYLES =============== */
+             #gridSalaryHistory .dx-datagrid {
+                            font-size: 14px;
+                             table-layout: fixed !important;
+                            }
+
+                /* FIX COLUMN WIDTH ALIGNMENT */
+                            #gridSalaryHistory .dx-datagrid-table {
+                                table-layout: fixed !important;
+ width: 100% !important;
+                            }
+
+                            #gridSalaryHistory .dx-datagrid-headers .dx-datagrid-table {
+                                table-layout: fixed !important;
+           }
+
+                            #gridSalaryHistory .dx-datagrid-rowsview .dx-datagrid-table {
+                                table-layout: fixed !important;
+                      }
+
+              /* Ensure header and content cells have same width calculation */
+                            #gridSalaryHistory .dx-datagrid .dx-header-row > td,
+                            #gridSalaryHistory .dx-datagrid .dx-data-row > td {
+                                box-sizing: border-box !important;
+                                overflow: hidden !important;
+                            }
+
+                            #gridSalaryHistory .dx-datagrid-headers {
+                                white-space: normal;
+                                word-break: break-word;
+                            }
+
+                            #gridSalaryHistory .dx-datagrid-header-panel {
+                                padding: 8px;
+                            }
+
+                            #gridSalaryHistory .dx-datagrid .dx-header-row {
+     height: auto;
+     min-height: 44px;
+     }
+
+                            #gridSalaryHistory .dx-datagrid .dx-row > td {
+                                padding: 8px !important;
+                                vertical-align: middle !important;
+                            }
+
+                            #gridSalaryHistory .dx-datagrid .dx-col-fixed {
+                                z-index: 800 !important;
+                            }
+
+                            /* FORCE COLUMN WIDTH CONSISTENCY */
+                            #gridSalaryHistory .dx-datagrid .dx-header-row > td,
+                            #gridSalaryHistory .dx-datagrid .dx-data-row > td {
+                                min-width: 0 !important;
+                                width: auto !important;
+                                max-width: none !important;
+                            }
+
+                            /* Prevent column width calculation conflicts */
+                            #gridSalaryHistory .dx-datagrid-headers .dx-header-row td,
+                            #gridSalaryHistory .dx-datagrid-rowsview .dx-data-row td {
+                                position: relative !important;
+                            }
+
+                            /* Group row - sát mép */
+                            #gridSalaryHistory .dx-datagrid .dx-group-row {
+
+                             padding: 0 !important;
+                          }
+
+                            #gridSalaryHistory .dx-datagrid .dx-group-row > td {
+                                padding: 8px !important;
+                            }
+
+                            #gridSalaryHistory .dx-datagrid .dx-group-row .dx-group-text {
+                                padding: 0 !important;
+                                margin: 0 !important;
+                            }
+
+            /* Mobile responsive */
+  @media (max-width: 1024px) {
+                                #gridSalaryHistory .dx-popup.hpa-responsive {
+  max-width: 90vw !important;
+  max-height: 90vh !important;
+                                    width: 90vw !important;
+                                    left: 5vw !important;
+                                }
+                                #gridSalaryHistory .dx-overlay-content.dx-popup-normal.dx-popup-draggable.dx-resizable {
+                  width: 90vw !important;
+     max-width: 90vw !important;
+   }
+                                #gridSalaryHistory .dx-popup.hpa-responsive .dx-popup-content {
+
+                                    max-height: calc(95vh - 120px) !important;
+ }
+
+              /* Fix grid width alignment on tablet */
+                                #gridSalaryHistory .dx-datagrid-table {
+            min-width: 100% !important;
+                                }
+                            }
+
+                            @media (max-width: 768px) {
+               #gridSalaryHistory .dx-datagrid {
+                                    font-size: 12px;
+                                }
+
+               /* Maintain fixed table layout on mobile */
+          #gridSalaryHistory .dx-datagrid-table {
+                     table-layout: fixed !important;
+            min-width: 100% !important;
+                       }
+
+                                #gridSalaryHistory .dx-datagrid-headers {
+         padding: 4px !important;
+                               }
+
+          #gridSalaryHistory .dx-datagrid .dx-header-row {
+                                    height: auto;
+                         min-height: 36px;
+                                    padding: 0 !important;
+                   }
+
+                                #gridSalaryHistory .dx-datagrid-text-content {
+                                    padding: 4px 2px !important;
+                                    font-size: 11px !important;
+     line-height: 1.3 !important;
+       overflow: hidden !important;
+                         white-space: nowrap !important;
+                                    text-overflow: ellipsis !important;
+                                    word-break: break-word !important;
+                                }
+
+                                #gridSalaryHistory .dx-datagrid-text-content.dx-header-filter {
+                                    padding: 2px 1px !important;
+                                }
+
+                                #gridSalaryHistory .dx-checkbox {
+                                    width: 24px !important;
+                             height: 24px !important;
+                  }
+
+                                #gridSalaryHistory .dx-datagrid-rowsview {
+                                    padding: 0 !important;
+                                }
+
+                                #gridSalaryHistory .dx-datagrid .dx-row {
+                                    height: auto;
+                                    min-height: 36px !important;
+                                    padding: 0 !important;
+                                }
+
+                                #gridSalaryHistory .dx-datagrid .dx-data-row > td > div {
+                                    padding: 4px 8px !important;
+
+   white-space: nowrap !important;
+                   text-overflow: ellipsis !important;
+                                    word-break: break-word !important;
+                                    vertical-align: middle !important;
+                                    overflow: hidden !important;
+                                    box-sizing: border-box !important;
+                                }
+
+                                #gridSalaryHistory .dx-datagrid .dx-group-row > td {
+                                    padding: 4px 2px !important;
+               }
+
+       #gridSalaryHistory .dx-pager {
+                                    padding: 4px 0 !important;
+                                }
+
+                                #gridSalaryHistory .dx-pager-page,
+                        #gridSalaryHistory .dx-pager-navigation {
+        padding: 2px 4px !important;
+                                    font-size: 11px !important;
+                                }
+
+              #gridSalaryHistory .dx-searchbox {
+                                    width: 100% !important;
+                                max-width: none !important;
+                     }
+
+                       #gridSalaryHistory .dx-searchbox .dx-texteditor-input {
+  padding: 4px !important;
+              font-size: 12px !important;
+                        height: 32px !important;
+           }
+
+      #gridSalaryHistory .dx-popup.hpa-responsive {
+                 max-width: 95vw !important;
+max-height: 85vh !important;
+                                    width: 95vw !important;
+                                    left: 2.5vw !important;
+                                    top: 5vh !important;
+                                }
+                                #gridSalaryHistory .dx-overlay-content.dx-popup-normal.dx-popup-draggable.dx-resizable {
+              width: 95vw !important;
+                     max-width: 95vw !important;
+        height: auto !important;
+                                    max-height: 85vh !important;
+   }
+            #gridSalaryHistory .dx-popup.hpa-responsive .dx-overlay-wrapper {
+                        position: fixed !important;
+                                }
+       #gridSalaryHistory .dx-popup.hpa-responsive .dx-popup-content {
+             height: calc(95vh - 120px) !important;
+                                    max-height: calc(95vh - 120px) !important;
+                            font-size: 13px !important;
+                                    padding: 6px !important;
+               display: flex !important;
+    flex-direction: column !important;
+                                }
+
+                                #gridSalaryHistory .dx-popup.hpa-responsive .dx-popup-content-scrollable {
+                                    flex: 1 !important;
+                                    min-height: 0 !important;
+                                    overflow: auto !important;
+                                }
+
+                                #gridSalaryHistory .dx-popup-content.dx-popup-content-scrollable {
+                                    height: auto !important;
+                                }
+
+                     /* Toolbar buttons */
+                                #gridSalaryHistory .dx-popup.hpa-responsive .dx-toolbar-item .dx-button {
+                                    padding: 6px 12px !important;
+                                    font-size: 12px !important;
+                                    min-height: 36px !important;
+                                width: auto !important;
+                                }
+                                #gridSalaryHistory .dx-popup.hpa-responsive .dx-toolbar-item .dx-button .dx-button-text {
+                        font-size: 12px !important;
+                    }
+                                #gridSalaryHistory .dx-popup.hpa-responsive .dx-button {
+                                    padding: 6px 12px !important;
+                                    font-size: 12px !important;
+                                    min-height: 36px !important;
+                                    width: auto !important;
+                                }
+                                #gridSalaryHistory .dx-popup.hpa-responsive .dx-button .dx-button-text {
+                                    font-size: 12px !important;
+     }
+     #gridSalaryHistory .dx-popup.hpa-responsive .dx-datagrid {
+                       font-size: 11px !important;
+                                }
+                                #gridSalaryHistory .dx-popup.hpa-responsive .dx-datagrid .dx-data-row td {
+                                    padding: 4px 2px !important;
+                 }
+                            }
+
+                            @media (max-width: 480px) {
+             #gridSalaryHistory .dx-datagrid {
+                                    font-size: 12px;
+                                }
+
+             #gridSalaryHistory .dx-datagrid-headers {
+        padding: 2px !important;
+   }
+
+                                #gridSalaryHistory .dx-datagrid .dx-header-row {
+                      min-height: 32px;
+                           }
+
+                                #gridSalaryHistory .dx-datagrid-text-content {
+  padding: 2px 1px !important;
+                                    font-size: 12px !important;
+    }
+
+   #gridSalaryHistory .dx-checkbox {
+width: 20px !important;
+                                    height: 20px !important;
+
+                                }
+
+
+                                #gridSalaryHistory .dx-datagrid .dx-row {
+          min-height: 32px;
+                     }
+
+                                #gridSalaryHistory .dx-datagrid .dx-data-row > td > div {
+                     padding: 8px !important;
+                                    font-size: 12px !important;
+                                }
+
+                  #gridSalaryHistory .dx-pager-page,
+                                #gridSalaryHistory .dx-pager-navigation {
+            padding: 1px 2px !important;
+                                    font-size: 12px !important;
+         }
+
+                              #gridSalaryHistory .dx-popup.hpa-responsive {
+                      max-width: 98vw !important;
+               max-height: 80vh !important;
+                      width: 98vw !important;
+                left: 1vw !important;
+  top: 10vh !important;
+                                }
+                                #gridSalaryHistory .dx-overlay-content.dx-popup-normal.dx-popup-draggable.dx-resizable {
+                                    width: 98vw !important;
+                                    max-width: 98vw !important;
+                                    height: auto !important;
+                                    max-height: 80vh !important;
+                                }
+                                #gridSalaryHistory .dx-popup.hpa-responsive .dx-overlay-wrapper {
+
+                                    position: fixed !important;
+                    }
+                                #gridSalaryHistory .dx-popup.hpa-responsive .dx-popup-content {
+                                    height: calc(95vh - 120px) !important;
+                                    max-height: calc(95vh - 120px) !important;
+                                    font-size: 12px !important;
+                                    padding: 4px !important;
+                                    display: flex !important;
+                                 flex-direction: column !important;
+ }
+
+                                #gridSalaryHistory .dx-popup.hpa-responsive .dx-popup-content-scrollable {
+                                    flex: 1 !important;
+                                    min-height: 0 !important;
+                                    overflow: auto !important;
+                                }
+
+                                #gridSalaryHistory .dx-popup-content.dx-popup-content-scrollable {
+                                    height: auto !important;
+                                }
+                                /* Toolbar buttons */
+                                #gridSalaryHistory .dx-popup.hpa-responsive .dx-toolbar-item .dx-button {
+      padding: 4px 8px !important;
+          font-size: 11px !important;
+                  min-height: 32px !important;
+                                    width: auto !important;
+                                }
+                                #gridSalaryHistory .dx-popup.hpa-responsive .dx-toolbar-item .dx-button .dx-button-text {
+                                    font-size: 11px !important;
+                                }
+   #gridSalaryHistory .dx-popup.hpa-responsive .dx-button {
+                      padding: 4px 8px !important;
+                                    font-size: 11px !important;
+                                    min-height: 32px !important;
+                                    width: auto !important;
+                                }
+#gridSalaryHistory .dx-popup.hpa-responsive .dx-button .dx-button-text {
+                                    font-size: 11px !important;
+                                }
+                                #gridSalaryHistory .dx-popup.hpa-responsive .dx-datagrid {
+                                    font-size: 10px !important;
+                 }
+
+                                #gridSalaryHistory .dx-popup.hpa-responsive .dx-datagrid .dx-data-row td {
+                        padding: 2px 1px !important;
+                 font-size: 10px !important;
+                                }
+                                #gridSalaryHistory .dx-popup.hpa-responsive .dx-datagrid .dx-header-row {
+                       min-height: 28px !important;
+    }
+    #gridSalaryHistory .dx-popup.hpa-responsive .dx-checkbox {
+                                   width: 18px !important;
+                height: 18px !important;
+       }
+      }
+                        `;
+                        document.head.appendChild(stylegridSalaryHistory);
+                        }
+
+                      // Helper normalize function: bỏ dấu - dùng chung cho search/grid
+   window.normalizeVietnameseText = window.normalizeVietnameseText || function(value) {
+if (value === undefined || value === null) return "";
+                            let text = String(value);
+  if (typeof RemoveToneMarks_Js === "function") {
+                                text = RemoveToneMarks_Js(text);
+    } else if (text.normalize) {
+                                text = text.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+                            }
+                            return text.replace(/đ/g, "d").replace(/Đ/g, "D").toLowerCase();
+                        };
+
+ // ===== Column chooser persistence helpers (shared) =====
+                        let gridName = "gridSalaryHistory";
+                        window.hpaColumnChooser = window.hpaColumnChooser || { saveTimers: {} };
+                        let chooser = window.hpaColumnChooser;
+
+                        if (!chooser.normalize) {
+                            chooser.normalize = function(res) {
+                                if (typeof res === "string" && res.trim() !== "") {
+       return res.includes("{") ? JSON.parse(res) : JSON.parse(EncryptionStringDecryption(res));
+               }
+                                return res;
+                            };
+                        }
+
+                        if (!chooser.load) {
+                            chooser.load = function(gridInstance, gridNameParam) {
+                                AjaxHPAParadise({
+                                    data: {
+                                        name: "sp_GridColumnChooser_Load",
+                                        param: [
+                                            "LoginID", window.UserID,
+                                            "GridName", gridNameParam
+          ]
+        },
+                                    success: function(res) {
+                                        const json = chooser.normalize(res);
+           const rows = (json?.data && json.data[0]) || [];
+                                        const settingsJson = rows[0]?.SettingsJson;
+                                        if (!settingsJson) return;
+                                        let arr = [];
+                                        try { arr = JSON.parse(settingsJson) || []; } catch(e) { arr = []; }
+                                        arr.forEach(r => {
+           if (!r.ColumnName) return;
+                                            const opts = {};
+     if (r.IsVisible !== undefined && r.IsVisible !== null) opts.visible = r.IsVisible === 1;
+                                            if (r.OrderIndex !== undefined && r.OrderIndex !== null) opts.visibleIndex = r.OrderIndex;
+
+                                            if (r.ColumnWidth !== undefined && r.ColumnWidth !== null) opts.width = r.ColumnWidth;
+ gridInstance.columnOption(r.ColumnName, opts);
+  });
+   }
+                                });
+                            };
+                        }
+
+                        if (!chooser.save) {
+               chooser.save = function(gridInstance, gridNameParam) {
+           const cols = (gridInstance.getColumns() || [])
+   .map(c => {
+               const name = c.dataField || c.name;
+                                   if (!name) return null;
+            return {
+ColumnName: name,
+        IsVisible: c.visible !== false ? 1 : 0,
+                 OrderIndex: c.visibleIndex,
+  ColumnWidth: c.width ? parseInt(c.width) : null
+   };
+    })
+           .filter(Boolean);
+
+                       AjaxHPAParadise({
+       data: {
+name: "sp_GridColumnChooser_Save",
+     param: [
+              "LoginID", window.UserID,
+               "GridName", gridNameParam,
+                      "Columns", JSON.stringify(cols)
+          ]
+                             },
+                                    success: function(res) {
+                                        if (typeof res === "string" && res.trim() !== "") {
+                         res = res.includes("{") ? res : EncryptionStringDecryption(res);
+                                        }
+                                    }
+                                });
+                            };
+                        }
+
+         // =============== GRID CONFIG DYNAMIC BASED ON DATA SIZE ===============
+              // Hàm tính remoteOperations dựa trên số lượng dòng
+                window.getGridConfig_gridSalaryHistory = function(dataArray) {
+                            const dataSize = Array.isArray(dataArray) ? dataArray.length : 0;
+                            const isLargeDataset = dataSize > 1000;
+
+                            return {
+                                remoteOperations: isLargeDataset,
+                                pageSize: 50,
+                                allowedPageSizes: [5, 10, 50, 100]
+                            };
+                        };
+
+                        InstancegridSalaryHistoryPD66259053F5E42B48615BBB3D277D02F = $("#gridSalaryHistory").dxDataGrid({
+                            dataSource: [],
+                   keyExpr: "SalaryHistoryID",
+        height: "100%",
+                            width: "100%",
+    showBorders: true,
+                            showRowLines: true,
+          rowAlternationEnabled: false,
+                            hoverStateEnabled: false,
+            columnAutoWidth: true,
+allowColumnReordering: true,
+                            allowColumnResizing: true,
+                            columnResizingMode: "widget",
+                            columnMinWidth: 80,
+                            wordWrapEnabled: true,
+
+                            scrolling: {
+                                mode: "standard",
+                                showScrollbar: "onHover"
+                            },
+
+                            paging: {
+                               enabled: true,
+   pageSize: 50
+                            },
+
+                            pager: {
+  visible: true,
+                                allowedPageSizes: [5, 10, 50, 100],
+                          showPageSizeSelector: true,
+              showInfo: true,
+                                showNavigationButtons: true
+       },
+
+                            selection: {
+   mode: "single",
+                   showCheckBoxesMode: "none",
+                                allowSelectAll: false
+       },
+
+      searchPanel: {
+   visible: true,
+ width: 260,
+highlightSearchResults: false,
+                             highlightCaseSensitive: false,
+                                placeholder: "Tìm kiếm theo nội dung"
+                            },
+
+
+                       headerFilter: { visible: true },
+
+             columnChooser: {
+               enabled: true,
+               mode: "select",
+                            title: "Chọn cột hiển thị",
+           allowSearch: true
+  },
+
+                            stateStoring: {
+                   enabled: false,
+     type: "localStorage",
+                                storageKey: "gridState_gridSalaryHistory"
+                            },
+
+                    grouping: {
+              autoExpandAll: false,
+         contextMenuEnabled: false,
+            allowCollapsing: false
+          },
+
+                     groupPanel: { visible: false },
+
+                    columnFixing: { enabled: false },
+
+                    customizeColumns: function(columns) {
+
+                                const normalizeText = window.normalizeVietnameseText || function(val) {
+                           if (val === undefined || val === null) return "";
+
+                                    return String(val).toLowerCase();
+     };
+
+                           columns.forEach(function(column) {
+                                    if (column._hpaSearchNormalized) return;
+    column._hpaSearchNormalized = true;
+
+                                    const originalCalculate = column.calculateFilterExpression;
+                                    const dataFieldPath = column.dataField || column.name || "";
+                                    const getValue = column.calculateCellValue
+                                        ? column.calculateCellValue.bind(column)
+                                        : function(dataObj) {
+                                            if (!dataObj || !dataFieldPath) return null;
+                                            if (dataFieldPath.indexOf(".") === -1) {
+                                                return dataObj[dataFieldPath];
+                                            }
+                 return dataFieldPath.split(".").reduce(function(acc, key) {
+                                return acc && acc[key] !== undefined ? acc[key] : null;
+                        }, dataObj);
+                                        };
+
+         column.calculateFilterExpression = function(filterValue, selectedFilterOperation, target) {
+                                   if (target === "search") {
+                       const normalizedFilter = normalizeText(filterValue);
+                                            if (!normalizedFilter) {
+                                                if (originalCalculate) {
+                                                    return originalCalculate.call(this, filterValue, selectedFilterOperation, target);
+                                                }
+                                                if (this.defaultCalculateFilterExpression) {
+                                                    return this.defaultCalculateFilterExpression(filterValue, selectedFilterOperation, target);
+        }
+                                                return null;
+                                            }
+
+       return function(dataItem) {
+    const rawValue = getValue ? getValue(dataItem) : null;
+                                           const normalizedValue = normalizeText(rawValue);
+     return normalizedValue.indexOf(normalizedFilter) > -1;
+          };
+                         }
+
+                                        if (originalCalculate) {
+                               return originalCalculate.call(this, filterValue, selectedFilterOperation, target);
+    }
+
+       if (this.defaultCalculateFilterExpression) {
+                                            return this.defaultCalculateFilterExpression(filterValue, selectedFilterOperation, target);
+                         }
+
+          return null;
+                                    };
+                                });
+                 },
+
+                            editing: {
+                   mode: "cell",
+                                allowUpdating: false
+                         },
+                        rowDragging: {
+                                allowReordering: false,
+                                showDragIcons: false
+   }
+         ,
+                            onToolbarPreparing: function(e) {
+       // Nút thêm (+) — _showtoolbarAdd_<UID>
+                                if (typeof _showtoolbarAdd_PD66259053F5E42B48615BBB3D277D02F !== "undefined" && _showtoolbarAdd_PD66259053F5E42B48615BBB3D277D02F == true) {
+                                    let index = e.toolbarOptions.items.findIndex(i => i.name === "columnChooserButton");
+                                    if (index === -1) index = e.toolbarOptions.items.length;
+
+                                    e.toolbarOptions.items.splice(index, 0, {
+                                        location: "after",
+                                        widget: "dxButton",
+                                        options: {
+                                            icon: "add",
+                                            text: "",
+                                            stylingMode: "text",
+                                            elementAttr: { style: "color: var(--bs-body-color, #000);" },
+                                            onClick: function() {
+                                                    addSalaryHistoryID();
+                                            }
+                                        }
+                                    });
+                                }
+                                // Nút reload — _showtoolbarGrid_<UID>
+                                if (typeof _showtoolbarGrid_PD66259053F5E42B48615BBB3D277D02F !== "undefined" && _showtoolbarGrid_PD66259053F5E42B48615BBB3D277D02F == true) {
+                                    let index = e.toolbarOptions.items.findIndex(i => i.name === "columnChooserButton");
+                                    if (index === -1) index = e.toolbarOptions.items.length;
+
+                                    e.toolbarOptions.items.splice(index, 0, {
+                                        location: "after",
+                                        widget: "dxButton",
+                                        options: {
+                                            icon: "refresh",
+                                            stylingMode: "text",
+                                            elementAttr: { style: "color: var(--bs-body-color, #000);" },
+                                            onClick: function() {
+                                                    ReloadData();
+                                            }
+                                        }
+                                    });
+                                }
+                            },
+                            noDataText: "Không có dữ liệu",
+                            columns: [
+                                
+                {
+                    dataField: "EmployeeID",
+                    caption: "Employee ID",
+                 width: 150,
+                    alignment: "left",
+                    minWidth: 80,
+                    maxWidth: 400,
+                    allowSorting: true,
+                    allowFiltering: true,
+                    cellTemplate: function(cellElement, cellInfo){
+                                const val = cellInfo.value;
+                                if (val === undefined || val === null || val === "") {
+                                    $("<div>").addClass("dx-placeholder").text("").appendTo(cellElement);
+                                    return;
+                                }
+                                $("<div>").text(val).appendTo(cellElement);
+                            },
+                            allowEditing: false,
+                },
+                    
+                {
+                    dataField: "FullName",
+                    caption: "Full Name",
+                 width: 215,
+                    alignment: "left",
+                    minWidth: 80,
+                    maxWidth: 400,
+                    allowSorting: true,
+                    allowFiltering: true,
+                    cellTemplate: function(cellElement, cellInfo){
+                                const val = cellInfo.value;
+                                if (val === undefined || val === null || val === "") {
+                                    $("<div>").addClass("dx-placeholder").text("").appendTo(cellElement);
+                                    return;
+                                }
+                                $("<div>").text(val).appendTo(cellElement);
+                            },
+                            allowEditing: false,
+                },
+                    
+                {
+                    dataField: "DepartmentName",
+                    caption: "Department",
+                 width: 150,
+                    alignment: "left",
+                    minWidth: 80,
+                    maxWidth: 400,
+                    allowSorting: true,
+                    allowFiltering: true,
+                    cellTemplate: function(cellElement, cellInfo){
+                                const val = cellInfo.value;
+                                if (val === undefined || val === null || val === "") {
+                                    $("<div>").addClass("dx-placeholder").text("").appendTo(cellElement);
+                                    return;
+                                }
+                                $("<div>").text(val).appendTo(cellElement);
+                            },
+                            allowEditing: false,
+                },
+                    
+                {
+                    dataField: "Date",
+                    caption: "Effective Date",
+                 width: 150,
+                    alignment: "left",
+                    minWidth: 80,
+                    maxWidth: 400,
+                    allowSorting: true,
+                    allowFiltering: true,
+                    cellTemplate: function(cellElement, cellInfo){
+                                const val = cellInfo.value;
+                     if (!val || val === "") {
+                                    $("<div>").addClass("dx-placeholder").text("").appendTo(cellElement);
+                 return;
+            }
+  const d = new Date(val);
+  let text = ""; text = DevExpress.localization.formatDate(d, "dd/MM/yyyy");
+                                $("<div>").text(text).appendTo(cellElement);
+                            },
+                            allowEditing: false,
+                },
+                    
+                {
+                    dataField: "Salary",
+                    caption: "Basic Salary",
+                 width: 150,
+                    alignment: "left",
+                    minWidth: 80,
+                    maxWidth: 400,
+                    allowSorting: true,
+                    allowFiltering: true,
+                    cellTemplate: function(cellElement, cellInfo){
+                                const val = cellInfo.value;
+                                if (val === undefined || val === null || val === "") {
+                                    $("<div>").addClass("dx-placeholder").text("").appendTo(cellElement);
+                                    return;
+                                }
+                                const num = Number(val);
+                                if (isNaN(num)) {
+                                    $("<div>").text(val).appendTo(cellElement);
+                                } else {
+                                    $("<div>").text(num.toLocaleString("vi-VN")).appendTo(cellElement);
+                                }
+                            },
+                            allowEditing: false,
+                },
+                    
+                {
+                    dataField: "InsSalary",
+                    caption: "Insurance Salary",
+                 width: 150,
+                    alignment: "left",
+                    minWidth: 80,
+                    maxWidth: 400,
+                    allowSorting: true,
+                    allowFiltering: true,
+                    cellTemplate: function(cellElement, cellInfo){
+                                const val = cellInfo.value;
+                                if (val === undefined || val === null || val === "") {
+                                    $("<div>").addClass("dx-placeholder").text("").appendTo(cellElement);
+                                    return;
+                                }
+                                const num = Number(val);
+                                if (isNaN(num)) {
+                                    $("<div>").text(val).appendTo(cellElement);
+                                } else {
+                                    $("<div>").text(num.toLocaleString("vi-VN")).appendTo(cellElement);
+                                }
+                            },
+                            allowEditing: false,
+                },
+                    
+                {
+                    dataField: "Trans_AL",
+                    caption: "Customer Visit",
+                 width: 150,
+                    alignment: "left",
+                    minWidth: 80,
+                    maxWidth: 400,
+                    allowSorting: true,
+                    allowFiltering: true,
+                    cellTemplate: function(cellElement, cellInfo){
+                                const val = cellInfo.value;
+                                if (val === undefined || val === null || val === "") {
+                                    $("<div>").addClass("dx-placeholder").text("").appendTo(cellElement);
+                                    return;
+                                }
+                                const num = Number(val);
+                                if (isNaN(num)) {
+                                    $("<div>").text(val).appendTo(cellElement);
+                                } else {
+                                    $("<div>").text(num.toLocaleString("vi-VN")).appendTo(cellElement);
+                                }
+                            },
+                            allowEditing: false,
+                },
+                    
+                {
+                    dataField: "Pos_AL",
+                    caption: "Position",
+                 width: 150,
+                    alignment: "left",
+                    minWidth: 80,
+                    maxWidth: 400,
+                    allowSorting: true,
+                    allowFiltering: true,
+                    cellTemplate: function(cellElement, cellInfo){
+                                const val = cellInfo.value;
+                                if (val === undefined || val === null || val === "") {
+                                    $("<div>").addClass("dx-placeholder").text("").appendTo(cellElement);
+                                    return;
+                                }
+                                const num = Number(val);
+                                if (isNaN(num)) {
+                                    $("<div>").text(val).appendTo(cellElement);
+                                } else {
+                                    $("<div>").text(num.toLocaleString("vi-VN")).appendTo(cellElement);
+                                }
+                            },
+                            allowEditing: false,
+                },
+                    
+                {
+                    dataField: "IsNet",
+                    caption: "Is Net?",
+                 width: 150,
+                    alignment: "left",
+                    minWidth: 80,
+                    maxWidth: 400,
+                    allowSorting: true,
+                    allowFiltering: true,
+                    cellTemplate: function(cellElement, cellInfo){
+                                const checked = cellInfo.value == 1 || cellInfo.value === true;
+                                const color = getComputedStyle(document.documentElement).getPropertyValue("--paradise-color-checkbox").trim() || "#198754";
+                                const $icon = $("<div>").css({
+                                    display: "flex",
+                                    alignItems: "left",
+                                    justifyContent: "left",
+                                    height: "100%"
+                                });
+                                if (checked) {
+                                    $icon.html(
+                                        "<svg width='18' height='18' viewBox='0 0 18 18' fill='none' xmlns='http://www.w3.org/2000/svg'>" +
+                                        "<rect width='18' height='18' rx='4' fill='" + color + "'/>" +
+                                        "<polyline points='4,9 7.5,13 14,5' stroke='#fff' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round' fill='none'/>" +
+                                        "</svg>"
+                           );
+         } else {
+    $icon.html(
+                                        "<svg width='18' height='18' viewBox='0 0 18 18' fill='none' xmlns='http://www.w3.org/2000/svg'>" +
+              "<rect width='17' height='17' x='0.5' y='0.5' rx='3.5' stroke='" + color + "' stroke-opacity='0.45' fill='none'/>" +
+                                        "</svg>"
+                                    );
+                                }
+                                $icon.appendTo(cellElement);
+                            },
+                            allowEditing: false,
+                },
+                    
+                {
+                    dataField: "DependentNumber",
+                    caption: "Dependents",
+                 width: 150,
+                    alignment: "left",
+                    minWidth: 80,
+                    maxWidth: 400,
+                    allowSorting: true,
+                    allowFiltering: true,
+                    cellTemplate: function(cellElement, cellInfo){
+                                const val = cellInfo.value;
+                                if (val === undefined || val === null || val === "") {
+                                    $("<div>").addClass("dx-placeholder").text("").appendTo(cellElement);
+                                    return;
+                                }
+                                $("<div>").text(val).appendTo(cellElement);
+                            },
+                            allowEditing: false,
+                },
+                    
+                {
+                    dataField: "TotalIncome",
+                    caption: "Total Income",
+                 width: 150,
+                    alignment: "left",
+                    minWidth: 80,
+                    maxWidth: 400,
+                    allowSorting: true,
+                    allowFiltering: true,
+                    cellTemplate: function(cellElement, cellInfo){
+                                const val = cellInfo.value;
+                                if (val === undefined || val === null || val === "") {
+                                    $("<div>").addClass("dx-placeholder").text("").appendTo(cellElement);
+                                    return;
+                                }
+                                const num = Number(val);
+                                if (isNaN(num)) {
+                                    $("<div>").text(val).appendTo(cellElement);
+                                } else {
+                                    $("<div>").text(num.toLocaleString("vi-VN")).appendTo(cellElement);
+                                }
+                            },
+                            allowEditing: false,
+                },
+                    
+                {
+                    dataField: "SalCalRuleID",
+                    caption: "Salary Formula",
+                 width: 150,
+                    alignment: "left",
+                    minWidth: 80,
+                    maxWidth: 400,
+                    allowSorting: true,
+                    allowFiltering: true,
+                    lookup: {
+                                dataSource: window["DataSource_SalCalRuleID"] || [],
+                                valueExpr: "ID",
+                                displayExpr: "Name"
+                            },
+                            cellTemplate: function(cellElement, cellInfo){
+
+                const val = cellInfo.value;
+
+          if (val === null || val === undefined || val === "") {
+                            $("<div>").addClass("dx-placeholder").text("").appendTo(cellElement);
+                                    return;
+                               }
+        const ds = window["DataSource_SalCalRuleID"];
+
+        if (ds && Array.isArray(ds)) {
+                                    const f = ds.find(x => x.id == val || x.ID == val);
+                                    if (f) {
+                                        $("<div>").text(f.Text || f.Name || "").appendTo(cellElement);
+ return;
+      }
+}
+
+   $("<div>").text(val).appendTo(cellElement);
+              },
+                            allowEditing: false,
+                },
+                    
+                {
+                    dataField: "EmployeeStatusID",
+                    caption: "Status",
+                 width: 150,
+                    alignment: "left",
+                    minWidth: 80,
+                    maxWidth: 400,
+                    allowSorting: true,
+                    allowFiltering: true,
+                    cellTemplate: function(cellElement, cellInfo){
+                                const val = cellInfo.value;
+                                if (val === undefined || val === null || val === "") {
+                                    $("<div>").addClass("dx-placeholder").text("").appendTo(cellElement);
+                                    return;
+                                }
+                                $("<div>").text(val).appendTo(cellElement);
+                            },
+                            allowEditing: false,
+                },
+                    
+                {
+                    dataField: "Note",
+                    caption: "Note",
+                 width: 150,
+                    alignment: "left",
+                    minWidth: 80,
+                    maxWidth: 400,
+                    allowSorting: true,
+                    allowFiltering: true,
+                    cellTemplate: function(cellElement, cellInfo){
+                                const val = cellInfo.value;
+                                if (val === undefined || val === null || val === "") {
+                                    $("<div>").addClass("dx-placeholder").text("").appendTo(cellElement);
+                                    return;
+                                }
+                                $("<div>").text(val).appendTo(cellElement);
+                            },
+                            allowEditing: false,
+                },
+                    
+                {
+                    dataField: "GrossTakeHome",
+                    caption: "Current net salary",
+                 width: 150,
+                    alignment: "left",
+                    minWidth: 80,
+                    maxWidth: 400,
+                    allowSorting: true,
+                    allowFiltering: true,
+                    cellTemplate: function(cellElement, cellInfo){
+                                const val = cellInfo.value;
+                                if (val === undefined || val === null || val === "") {
+                                    $("<div>").addClass("dx-placeholder").text("").appendTo(cellElement);
+                                    return;
+                                }
+                                const num = Number(val);
+                                if (isNaN(num)) {
+                                    $("<div>").text(val).appendTo(cellElement);
+                                } else {
+                                    $("<div>").text(num.toLocaleString("vi-VN")).appendTo(cellElement);
+                                }
+                            },
+                            allowEditing: false,
+                },
+                    
+                {
+                    dataField: "AttDays",
+                    caption: "Attendance days",
+                 width: 150,
+                    alignment: "left",
+                    minWidth: 80,
+                    maxWidth: 400,
+                    allowSorting: true,
+                    allowFiltering: true,
+                    cellTemplate: function(cellElement, cellInfo){
+                                const val = cellInfo.value;
+                                if (val === undefined || val === null || val === "") {
+                                    $("<div>").addClass("dx-placeholder").text("").appendTo(cellElement);
+                                    return;
+                                }
+                                $("<div>").text(val).appendTo(cellElement);
+                            },
+                            allowEditing: false,
+                },
+                    
+                {
+                    dataField: "LastWorkingDate",
+                    caption: "Last working date",
+                 width: 150,
+                    alignment: "left",
+                    minWidth: 80,
+                    maxWidth: 400,
+                    allowSorting: true,
+                    allowFiltering: true,
+                    cellTemplate: function(cellElement, cellInfo){
+                                const val = cellInfo.value;
+                     if (!val || val === "") {
+                                    $("<div>").addClass("dx-placeholder").text("").appendTo(cellElement);
+                 return;
+            }
+  const d = new Date(val);
+  let text = ""; text = DevExpress.localization.formatDate(d, "dd/MM/yyyy");
+                                $("<div>").text(text).appendTo(cellElement);
+                            },
+                            allowEditing: false,
+                },
+                    
+                {
+                    dataField: "PayrollMonth",
+                    caption: "Payroll month",
+                 width: 150,
+                    alignment: "left",
+                    minWidth: 80,
+                    maxWidth: 400,
+                    allowSorting: true,
+                    allowFiltering: true,
+                    cellTemplate: function(cellElement, cellInfo){
+                                const val = cellInfo.value;
+                                if (val === undefined || val === null || val === "") {
+                                    $("<div>").addClass("dx-placeholder").text("").appendTo(cellElement);
+                                    return;
+                                }
+                                $("<div>").text(val).appendTo(cellElement);
+                            },
+                            allowEditing: false,
+                },
+                    
+                {
+                    dataField: "PayrollYear",
+                    caption: "Payroll year",
+                 width: 150,
+                    alignment: "left",
+                    minWidth: 80,
+                    maxWidth: 400,
+                    allowSorting: true,
+                    allowFiltering: true,
+                    cellTemplate: function(cellElement, cellInfo){
+                                const val = cellInfo.value;
+                                if (val === undefined || val === null || val === "") {
+                                    $("<div>").addClass("dx-placeholder").text("").appendTo(cellElement);
+                                    return;
+                                }
+                                $("<div>").text(val).appendTo(cellElement);
+                            },
+                            allowEditing: false,
+                },
+                    
+                {
+                    dataField: "PreviousActualMonthlyBasic",
+                    caption: "Previous basic salary",
+                 width: 150,
+                    alignment: "left",
+                    minWidth: 80,
+                    maxWidth: 400,
+                    allowSorting: true,
+                    allowFiltering: true,
+                    cellTemplate: function(cellElement, cellInfo){
+                                const val = cellInfo.value;
+                                if (val === undefined || val === null || val === "") {
+                                    $("<div>").addClass("dx-placeholder").text("").appendTo(cellElement);
+                                    return;
+                                }
+                                const num = Number(val);
+                                if (isNaN(num)) {
+                                    $("<div>").text(val).appendTo(cellElement);
+                                } else {
+                                    $("<div>").text(num.toLocaleString("vi-VN")).appendTo(cellElement);
+                                }
+                            },
+                            allowEditing: false,
+                },
+                    
+                {
+                    dataField: "CurrentActualMonthlyBasic",
+                    caption: "Current basic salary",
+                 width: 150,
+                    alignment: "left",
+                    minWidth: 80,
+                    maxWidth: 400,
+                    allowSorting: true,
+                    allowFiltering: true,
+                    cellTemplate: function(cellElement, cellInfo){
+                                const val = cellInfo.value;
+                                if (val === undefined || val === null || val === "") {
+                                    $("<div>").addClass("dx-placeholder").text("").appendTo(cellElement);
+                                    return;
+                                }
+                                const num = Number(val);
+                                if (isNaN(num)) {
+                                    $("<div>").text(val).appendTo(cellElement);
+                                } else {
+                                    $("<div>").text(num.toLocaleString("vi-VN")).appendTo(cellElement);
+                                }
+                            },
+                            allowEditing: false,
+                },
+                    
+                {
+                    dataField: "BasicSalaryDifference",
+                    caption: "Basic salary difference",
+                 width: 150,
+                    alignment: "left",
+                    minWidth: 80,
+                    maxWidth: 400,
+                    allowSorting: true,
+                    allowFiltering: true,
+                    cellTemplate: function(cellElement, cellInfo){
+                                const val = cellInfo.value;
+                                if (val === undefined || val === null || val === "") {
+                                    $("<div>").addClass("dx-placeholder").text("").appendTo(cellElement);
+                                    return;
+                                }
+                                const num = Number(val);
+                                if (isNaN(num)) {
+                                    $("<div>").text(val).appendTo(cellElement);
+                                } else {
+                                    $("<div>").text(num.toLocaleString("vi-VN")).appendTo(cellElement);
+                                }
+                            },
+                            allowEditing: false,
+                },
+                    
+                {
+                    dataField: "BasicSalaryChangePercent",
+                    caption: "Basic salary change (%)",
+                 width: 150,
+                    alignment: "left",
+                    minWidth: 80,
+                    maxWidth: 400,
+                    allowSorting: true,
+                    allowFiltering: true,
+                    cellTemplate: function(cellElement, cellInfo){
+                                const val = cellInfo.value;
+                                if (val === undefined || val === null || val === "") {
+                                    $("<div>").addClass("dx-placeholder").text("").appendTo(cellElement);
+                                    return;
+                                }
+                                $("<div>").text(val).appendTo(cellElement);
+                            },
+                            allowEditing: false,
+                },
+                    
+                {
+                    dataField: "RetroAmount",
+                    caption: "Retro amount",
+                 width: 150,
+                    alignment: "left",
+                    minWidth: 80,
+                    maxWidth: 400,
+                    allowSorting: true,
+                    allowFiltering: true,
+                    cellTemplate: function(cellElement, cellInfo){
+                                const val = cellInfo.value;
+                                if (val === undefined || val === null || val === "") {
+                                    $("<div>").addClass("dx-placeholder").text("").appendTo(cellElement);
+                                    return;
+                                }
+                                const num = Number(val);
+                                if (isNaN(num)) {
+                                    $("<div>").text(val).appendTo(cellElement);
+                                } else {
+                                    $("<div>").text(num.toLocaleString("vi-VN")).appendTo(cellElement);
+                                }
+                            },
+                            allowEditing: false,
+                },
+                    
+                {
+                    dataField: "RetroRemark",
+                    caption: "Retro remark",
+                 width: 150,
+                    alignment: "left",
+                    minWidth: 80,
+                    maxWidth: 400,
+                    allowSorting: true,
+                    allowFiltering: true,
+                    cellTemplate: function(cellElement, cellInfo){
+                                const val = cellInfo.value;
+                                if (val === undefined || val === null || val === "") {
+                                    $("<div>").addClass("dx-placeholder").text("").appendTo(cellElement);
+                                    return;
+                                }
+                                $("<div>").text(val).appendTo(cellElement);
+                            },
+                            allowEditing: false,
+                },
+                    
+                {
+                    dataField: "RetroIsImported",
+                    caption: "Retro processed",
+                 width: 150,
+                    alignment: "left",
+                    minWidth: 80,
+                    maxWidth: 400,
+                    allowSorting: true,
+                    allowFiltering: true,
+                    cellTemplate: function(cellElement, cellInfo){
+                                const checked = cellInfo.value == 1 || cellInfo.value === true;
+                                const color = getComputedStyle(document.documentElement).getPropertyValue("--paradise-color-checkbox").trim() || "#198754";
+                                const $icon = $("<div>").css({
+                                    display: "flex",
+                                    alignItems: "left",
+                                    justifyContent: "left",
+                                    height: "100%"
+                                });
+                                if (checked) {
+                                    $icon.html(
+                                        "<svg width='18' height='18' viewBox='0 0 18 18' fill='none' xmlns='http://www.w3.org/2000/svg'>" +
+                                        "<rect width='18' height='18' rx='4' fill='" + color + "'/>" +
+                                        "<polyline points='4,9 7.5,13 14,5' stroke='#fff' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round' fill='none'/>" +
+                                        "</svg>"
+                           );
+         } else {
+    $icon.html(
+                                        "<svg width='18' height='18' viewBox='0 0 18 18' fill='none' xmlns='http://www.w3.org/2000/svg'>" +
+              "<rect width='17' height='17' x='0.5' y='0.5' rx='3.5' stroke='" + color + "' stroke-opacity='0.45' fill='none'/>" +
+                                        "</svg>"
+                                    );
+                                }
+                                $icon.appendTo(cellElement);
+                            },
+                            allowEditing: false,
+                },
+                            ],
+              onCellClick(e) {
+                                if (0 !== 1) return;
+
+              // Nếu có multi select:
+                                // - Click vào detail column (_detailAction) thì mở detail
+   // - Click vào checkbox column thì chỉ select
+                               // - Click vào columns khác thì không làm gì
+                                if (0 === 1) {
+                                    if (e.column.dataField === "_detailAction") {
+        // Click vào detail button - mở detail
+          const rowDataObject = e.data;
+                                        const recordID = e.key ?? e.data?.["SalaryHistoryID"];
+                                        if (!recordID) return;
+  window.currentClicked_gridSalaryHistory = recordID;
+                                        window.currentRecordID_SalaryHistoryID = recordID;
+                             openDetailSalaryHistoryID?.(rowDataObject);
+        }
+       return; // Không xử lý các column khác khi có multi select
+                     }
+
+                                const rowDataObject = e.data;
+
+                                const recordID = e.key ?? e.data?.["SalaryHistoryID"];
+                                if (!recordID) return;
+                                window.currentClicked_gridSalaryHistory = recordID;
+                    window.currentRecordID_SalaryHistoryID = recordID;
+openDetailSalaryHistoryID?.(rowDataObject);
+                    },
+                            onRowPrepared(e) {
+
+ }
+                           ,
+                            onOptionChanged(e) {
+                                // Persist column chooser changes (visibility/order/width)
+                          if (e.fullName && e.fullName.startsWith("columns[")) {
+     const timers = chooser.saveTimers;
+                                    if (timers[gridName]) {
+                                        clearTimeout(timers[gridName]);
+                                    }
+                          timers[gridName] = setTimeout(function(){
+                                        chooser.save(InstancegridSalaryHistoryPD66259053F5E42B48615BBB3D277D02F, gridName);
+                                    }, 400);
+  }
+                            }
+
+                        }).dxDataGrid("instance");
+
+                        // Load saved column chooser settings after grid init
+                        chooser.load(InstancegridSalaryHistoryPD66259053F5E42B48615BBB3D277D02F, gridName);
+
+                        // Shared grid data source registry so detail forms can trigger refreshes
+                        window.hpaSharedGridDataSources = window.hpaSharedGridDataSources || {};
+
+                        if (!window.reloadSharedGridDataSource) {
+                            window.reloadSharedGridDataSource = function(name, params) {
+                                const registry = window.hpaSharedGridDataSources || {};
+                         const entry = registry[name];
+                                if (!entry || typeof entry.reload !== "function") {
+                                    console.warn("[SharedGrid] Grid", name, "is not registered");
+                                    return Promise.resolve([]);
+                          }
+ return entry.reload(params);
+                            };
+                        }
+
+ if (!window.getSharedGridDataSource) {
+                      window.getSharedGridDataSource = function(name) {
+                                const registry = window.hpaSharedGridDataSources || {};
+                                return registry[name];
+                            };
+                        }
+
+       if (!window.updateSharedGridRow) {
+                       window.updateSharedGridRow = function(name, rowData, options) {
+                              const registry = window.hpaSharedGridDataSources || {};
+                         const entry = registry[name];
+                                if (!entry || typeof entry.pushRow !== "function") {
+                               console.warn("[SharedGrid] Grid", name, "cannot accept row updates");
+                                    return Promise.resolve(false);
+                                }
+                           return entry.pushRow(rowData, options);
+         };
+                        }
+
+                        if (!window.syncSharedGridData) {
+                     window.syncSharedGridData = function(name) {
+                                const registry = window.hpaSharedGridDataSources || {};
+                                const entry = registry[name];
+         if (!entry || typeof entry.syncFromGrid !== "function") {
+    console.warn("[SharedGrid] Grid", name, "cannot sync");
+                                    return [];
+                     }
+    return entry.syncFromGrid();
+                          };
+         }
+
+                        if (!window.removeSharedGridRow) {
+        window.removeSharedGridRow = function(name, options) {
+                         const registry = window.hpaSharedGridDataSources || {};
+const entry = registry[name];
+                                if (!entry || typeof entry.removeRow !== "function") {
+                                    console.warn("[SharedGrid] Grid", name, "cannot remove rows");
+                  return Promise.resolve(false);
+           }
+                                return entry.removeRow(options);
+                            };
+                        }
+
+                        (function setupSharedGridSource() {
+                            const sharedKey = gridName;
+                            const primaryKeyField = "SalaryHistoryID";
+
+                            const loginValue = typeof window.UserID !== "undefined"
+                    ? window.UserID
+                                : (typeof LoginID !== "undefined" ? LoginID : null);
+                            const languageValue = typeof window.LanguageID !== "undefined"
+                                ? window.LanguageID
+                                : (typeof LanguageID !== "undefined" ? LanguageID : null);
+
+                            const snapshotGridData = function(instance) {
+if (!instance) return [];
+                                try {
+                                    // Ưu tiên đọc raw dataSource trước - luôn có FULL data
+                                    // kể cả khi toolbar search/filter đang active
+                                    if (typeof instance.option === "function") {
+  const rawData = instance.option("dataSource");
+                                        if (Array.isArray(rawData) && rawData.length > 0) {
+                                            return rawData.map(function(item) {
+                                                return item && typeof item === "object" ? Object.assign({}, item) : item;
+                                            });
+                                        }
+                                    }
+
+                           // Fallback: ds.items() - CHÚ Ý: chỉ trả về filtered rows
+                                    if (typeof instance.getDataSource === "function") {
+       const ds = instance.getDataSource();
+                                        if (ds && typeof ds.items === "function") {
+                                       const dsItems = ds.items();
+                                            if (Array.isArray(dsItems) && dsItems.length > 0) {
+                    return dsItems.map(function(item) {
+                                                    return item && typeof item === "object" ? Object.assign({}, item) : item;
+                });
+      }
+                                        }
+                                    }
+              } catch (snapshotErr) {
+       console.warn("[SharedGrid] Unable to snapshot grid data", snapshotErr);
+}
+                                return [];
+                            };
+
+                            let sharedEntry = window.hpaSharedGridDataSources[sharedKey];
+                            if (!sharedEntry) {
+     sharedEntry = {
+data: [],
+                                    subscribers: [],
+loading: false
+  };
+                      }
+
+sharedEntry.primaryKey = sharedEntry.primaryKey || primaryKeyField;
+                            sharedEntry.data = Array.isArray(sharedEntry.data) ? sharedEntry.data : [];
+                            sharedEntry.subscribers = Array.isArray(sharedEntry.subscribers) ? sharedEntry.subscribers : [];
+
+                        sharedEntry.loading = !!sharedEntry.loading;
+
+ if (typeof sharedEntry.normalizeParams !== "function") {
+   sharedEntry.normalizeParams = function(customParams) {
+                                    const base = [];
+      if (loginValue !== null && loginValue !== undefined) {
+                 base.push("LoginID", loginValue);
+                                    }
+             if (languageValue !== null && languageValue !== undefined) {
+                                        base.push("LanguageID", languageValue);
+                                    }
+
+                     if (Array.isArray(customParams) && customParams.length > 0) {
+  return base.concat(customParams);
+                                    }
+
+                                    if (customParams && typeof customParams === "object") {
+             const extras = [];
+                                        Object.keys(customParams).forEach(function(key) {
+              extras.push(key, customParams[key]);
+                                        });
+                                        return base.concat(extras);
+                                    }
+
+       return base;
+                                };
+                            }
+
+                            if (typeof sharedEntry.notify !== "function") {
+                                sharedEntry.notify = function() {
+                         this.subscribers.forEach(function(callback) {
+                              try {
+                                            callback(this.data);
+                                        } catch (err) {
+                                            console.error("[SharedGrid] subscriber error", err);
+                                        }
+                                    }, this);
+                                };
+                       }
+
+                            if (typeof sharedEntry.subscribe !== "function") {
+                                sharedEntry.subscribe = function(callback) {
+                               if (typeof callback === "function") {
+                                        this.subscribers.push(callback);
+               }
+                                    return () => {
+
+                                        this.subscribers = this.subscribers.filter(function(fn) {
+           return fn !== callback;
+                                        });
+        };
+                                };
+  }
+
+                  if (typeof sharedEntry.pushRow !== "function") {
+                  sharedEntry.pushRow = function(rowData, options) {
+     const opts = options || {};
+                                    const keyField = this.primaryKey;
+                                    let keyValue = opts.key;
+                                   if ((keyValue === undefined || keyValue === null) && rowData && rowData[keyField] !== undefined) {
+                    keyValue = rowData[keyField];
+ }
+
+    if (keyValue === undefined || keyValue === null) {
+                    console.warn("[SharedGrid] Missing key when applying row changes for", sharedKey);
+                       return Promise.resolve(false);
+         }
+
+  if (typeof this.ensureLocalData === "function") {
+                                        this.ensureLocalData();
+              }
+
+   const compare = opts.strict === true
+        ? function(candidate) { return candidate === keyValue; }
+   : function(candidate) {
+                                            if (candidate === undefined || candidate === null) return candidate === keyValue;
+                                if (keyValue === undefined || keyValue === null) return false;
+                                            return String(candidate) === String(keyValue);
+                                     };
+
+                                const nextData = Array.isArray(this.data) ? this.data.slice() : [];
+                                    let targetIndex = nextData.findIndex(function(item) {
+                                        return item ? compare(item[keyField]) : false;
+                     });
+
+                                    const normalizedRow = Object.assign({}, targetIndex > -1 ? nextData[targetIndex] : {}, rowData);
+
+                                    if (targetIndex === -1) {
+                                        if (opts.ignoreMissing === true) {
+                  return Promise.resolve(false);
+                                        }
+                       if (opts.append === true) {
+                        nextData.push(normalizedRow);
+            targetIndex = nextData.length - 1;
+                                        } else {
+                                  nextData.unshift(normalizedRow);
+                                            targetIndex = 0;
+             }
+                  } else {
+                         nextData[targetIndex] = normalizedRow;
+                                    }
+
+        this.data = nextData;
+   try {
+                                         if (this.instance && typeof this.instance.option === "function") {
+                            const ds = this.instance.getDataSource();
+                            const store = ds && typeof ds.store === "function" ? ds.store() : null;
+
+                            // FIX: Nếu là CustomStore/RemoteStore thì dùng push() để không làm hỏng Store gốc
+                            if (store && typeof store.push === "function" && !Array.isArray(this.instance.option("dataSource"))) {
+                                store.push([{ type: (targetIndex === -1 ? "insert" : "update"), key: keyValue, data: normalizedRow }]);
+                            } else {
+                                // Nếu là Array Grid bình thường thì mới ghi đè dataSource
+                                this.instance.option("dataSource", nextData);
+                            }
+                            this.instance.refresh();
+                        }
+                                    } catch (applyErr) {
+                                        console.warn("[SharedGrid] Unable to push row update", applyErr);
+                             }
+                                    this.notify();
+                                    return Promise.resolve({ index: targetIndex, data: normalizedRow });
+                        };
+      }
+
+                            if (typeof sharedEntry.removeRow !== "function") {
+          sharedEntry.removeRow = function(options) {
+                                    const opts = options || {};
+          const keyField = this.primaryKey;
+                                    const keyValue = opts.key;
+
+                                if (keyValue === undefined || keyValue === null) {
+                                        console.warn("[SharedGrid] Missing key when removing row for", sharedKey);
+          return Promise.resolve(false);
+                                    }
+
+                                    if (typeof this.ensureLocalData === "function") {
+         this.ensureLocalData();
+                                    }
+
+                           const filtered = (Array.isArray(this.data) ? this.data : []).filter(function(item) {
+                     if (!item) return true;
+   const candidate = item[keyField];
+                    if (opts.strict === true) {
+            return candidate !== keyValue;
+             }
+                                        if (candidate === undefined || candidate === null) {
+                                            return keyValue !== candidate;
+    }
+                                        return String(candidate) !== String(keyValue);
+                                    });
+
+
+          if (filtered.length === (Array.isArray(this.data) ? this.data.length : 0)) {
+                             return Promise.resolve(false);
+       }
+
+       this.data = filtered;
+                                    try {
+                                        if (this.instance && typeof this.instance.option === "function") {
+                  this.instance.option("dataSource", filtered);
+                                            this.instance.refresh();
+                         }
+} catch (removeErr) {
+                                        console.warn("[SharedGrid] Unable to remove row", removeErr);
+                     }
+this.notify();
+                                    return Promise.resolve(true);
+                            };
+                            }
+
+ sharedEntry.instance = InstancegridSalaryHistoryPD66259053F5E42B48615BBB3D277D02F;
+
+                  if (typeof sharedEntry.ensureLocalData !== "function") {
+                                sharedEntry.ensureLocalData = function() {
+             if (Array.isArray(this.data) && this.data.length > 0) {
+                                        return;
+                   }
+  const snapshot = snapshotGridData(this.instance);
+                                    if (snapshot.length > 0) {
+                                        this.data = snapshot;
+      }
+                                };
+                    }
+
+                            const currentSnapshot = snapshotGridData(sharedEntry.instance);
+                            if (currentSnapshot.length > 0) {
+                                sharedEntry.data = currentSnapshot;
+                            }
+
+                            sharedEntry.getData = function() {
+                                return this.data;
+                            };
+
+                            // Gọi sau khi API reload data mới để sync lại cache
+                            sharedEntry.syncFromGrid = function() {
+                                const fresh = snapshotGridData(this.instance);
+                                if (fresh.length > 0) {
+                         this.data = fresh;
+                                }
+                                return this.data;
+                            };
+
+                            window.hpaSharedGridDataSources[sharedKey] = sharedEntry;
+                        })();
+                    
+
+           // Load DataSource: sp_loadSalaryCalculationRule
+    if ("sp_loadSalaryCalculationRule" && "sp_loadSalaryCalculationRule".trim() !== "") {
+     loadDataSourceCommon("SalCalRuleID", "sp_loadSalaryCalculationRule", function(data) {
+        // Data được shared qua callback
+                    });
+                }
+
+            function loadDataSourceCommon(columnName, dataSourceSP, onSuccessCallback) {
+                if (!columnName || !dataSourceSP || dataSourceSP.trim() === "") {
+                    console.warn("[loadDataSourceCommon] Missing columnName or dataSourceSP");
+    return;
+                }
+
+                const dataSourceKey = "DataSource_" + columnName;
+           // Sử dụng format: columnNameDataSourceLoaded để tương thích với code hiện tại
+                const loadedKey = columnName + "DataSourceLoaded";
+
+        // Kiểm tra nếu đã load rồi thì không load lại
+
+                if (window[loadedKey] === true) {
+    if (typeof onSuccessCallback === "function") {
+      onSuccessCallback(window[dataSourceKey] || []);
+                    }
+               return;
+         }
+
+                // Kiểm tra nếu đang load thì đợi
+                if (window[loadedKey] === "loading") {
+                    // Đợi một chút rồi thử lại
+       setTimeout(function() {
+                        loadDataSourceCommon(columnName, dataSourceSP, onSuccessCallback);
+            }, 100);
+
+                    return;
+                }
+
+
+                // Đánh dấu đang load để tránh load trùng lặp
+                window[loadedKey] = "loading";
+
+                return new Promise((resolve, reject) => {
+                    AjaxHPAParadise({
+                        data: {
+                            name: dataSourceSP,
+            param: ["LoginID", LoginID, "LanguageID", LanguageID]
+                },
+                        success: function (res) {
+                            const json = typeof res === "string" ? JSON.parse(res) : res;
+
+               window[dataSourceKey] = (json.data && json.data[0]) || [];
+                            window[loadedKey] = true;
+
+                            // Ưu tiên lấy từ json response (nếu API trả về explicit)
+              // Sau đó mới fallback query dataSchema
+                            let idField = json.valueExpr;
+                let nameField = json.displayExpr;
+
+                            if (!idField || !nameField) {
+                                if (json.dataSchema && json.dataSchema[0]) {
+                                    const schema = json.dataSchema[0];
+     if (!idField) idField = schema[0]?.name;
+                                    if (!nameField) nameField = schema[1]?.name;
+            }
+                            }
+
+                            window["DataSourceIDField_" + columnName]   = idField || "ID";
+                            window["DataSourceNameField_" + columnName] = nameField || "Name";
+
+                            const data = window[dataSourceKey];
+
+                            // callback trước
+                            if (typeof onSuccessCallback === "function") {
+                                onSuccessCallback(data, json);
+                            }
+
+                            // resolve sau
+                            resolve(data);
+                        },
+                        error: function (err) {
+                  console.error("[loadDataSourceCommon] Failed to load datasource for", columnName, ":", err);
+          window[loadedKey] = false;
+
+                            if (typeof onSuccessCallback === "function") {
+              onSuccessCallback([]);
+          }
+
+                            reject(err);
+                        }
+    });
+                });
+         }
+
+
+
+                function clearPageCache() {
+                    _pageCache = {};
+                }
+
+                function updateGridHeight() {
+                    try {
+                        const gridInstance = InstancegridSalaryHistoryPD66259053F5E42B48615BBB3D277D02F;
+                        if (gridInstance) {
+                            gridInstance.updateDimensions();
+                        }
+                    } catch (e) {
+                        console.warn("🤷‍♂️ hoangthanh~ updateGridHeight lỗi:", e);
+                    }
+                }
+
+                // ============================================================
+                // 2. KHỞI TẠO GRID LAYOUT MỘT LẦN DUY NHẤT
+                // ============================================================
+                const gridInstance = InstancegridSalaryHistoryPD66259053F5E42B48615BBB3D277D02F;
+                gridInstance.beginUpdate();
+                let cols = gridInstance.option("columns");
+                if (cols) {
+                    cols.forEach(function (col) {
+                        if (col.dataField === "IsNet") {
+                            col.dataType = "boolean";
+                            col.cellTemplate = function(cellElement, cellInfo) {
+                                const checked = cellInfo.value == 1 || cellInfo.value === true;
+                                const color = getComputedStyle(document.documentElement).getPropertyValue("--paradise-color-checkbox").trim() || "#198754";
+           const $icon = $("<div>").css({
+                            display: "flex",
+                                    alignItems: "center",
+                                    justifyContent: "left",
+                                    height: "100%"
+                                });
+                                if (checked) {
+                                    $icon.html(
+                                        "<svg width='18' height='18' viewBox='0 0 18 18' fill='none' xmlns='http://www.w3.org/2000/svg'>" +
+                                        "<rect width='18' height='18' rx='4' fill='" + color + "'/>" +
+                                        "<polyline points='4,9 7.5,13 14,5' stroke='#fff' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round' fill='none'/>" +
+                                        "</svg>"
+                                    );
+                                } else {
+                                    $icon.html(
+                                        "<svg width='18' height='18' viewBox='0 0 18 18' fill='none' xmlns='http://www.w3.org/2000/svg'>" +
+                                        "<rect width='17' height='17' x='0.5' y='0.5' rx='3.5' stroke='" + color + "' stroke-opacity='0.45' fill='none'/>" +
+                                        "</svg>"
+                                    );
+                                }
+                                $icon.appendTo(cellElement);
+                            };
+                        }
+                    });
+                    gridInstance.option("columns", cols);
+                }
+                gridInstance.option("remoteOperations", {
+                    paging: true, filtering: true, sorting: true, searching: true, summary: true
+                });
+
+                // Dynamically construct summary items for numeric/allowance columns
+                const nonSumFields = [
+                    'EmployeeID', 'FullName', 'Date', 'IsNet', 'SalCalRuleID', 'Note',
+                    'DepartmentName', 'EmployeeStatusID', 'DependentNumber', 'SectionName',
+           'PositionID', 'PositionName', 'AccountNo', 'BankName', 'BankCode',
+                    'TaxRegNo', 'SI_NEED_INPUTSALARY', 'BaseSalRegionalID', 'SalaryHistoryID',
+                    '_detailAction', 'RetroDate'
+                ];
+                const gridColumns = gridInstance.option("columns") || [];
+                const summaryItems = [];
+                gridColumns.forEach(col => {
+                    const field = col.dataField || col.name;
+                    if (field && !nonSumFields.includes(field)) {
+                        summaryItems.push({
+         column: field,
+                            summaryType: "sum",
+                            valueFormat: "#,##0",
+                            displayFormat: (window.LanguageID === "VN" ? "Tổng: {0}" : "Sum: {0}")
+                        });
+                    }
+                });
+
+                gridInstance.option({
+                    "scrolling.mode": "infinite",
+                    "scrolling.rowRenderingMode": "virtual",
+                    "scrolling.preloadEnabled": false,
+                    "paging.enabled": true,
+                    "paging.pageSize": 50,
+                    "pager.visible": false,
+                    "searchPanel.highlightSearchText": false,
+                    "dataSource": dataStore_gridSalaryHistory,
+                    "height": "100%",
+                    "width": "100%",
+                    "headerFilter": {
+                        "visible": true
+                    },
+                    "filterRow": {
+                        "visible": false
+                    },
+                    "summary": {
+                        totalItems: summaryItems
+                    },
+                    "onRowClick": function(e) {
+if (e.data) {
+                            openDetailID(e.data);
+                        }
+                    }
+                });
+
+                gridInstance.option("onOptionChanged", function (e) {
+                    if (e.name === "searchPanel" && e.fullName === "searchPanel.text") {
+                        _currentKeyword = (e.value || "").trim();
+                        _pageCache = {};
+                        _summaryCache = {};
+                    }
+                    if (e.fullName && (e.fullName.indexOf("filterValue") >= 0 || e.fullName.indexOf("filterValues") >= 0 || e.fullName.indexOf("selectedFilterOperation") >= 0)) {
+                        _pageCache = {};
+                        _summaryCache = {};
+                    }
+                });
+
+                let oldOnToolbarPreparing = gridInstance.option("onToolbarPreparing");
+                gridInstance.option("onToolbarPreparing", function(e) {
+                    if (typeof oldOnToolbarPreparing === "function") {
+                        oldOnToolbarPreparing(e);
+                    }
+
+                    const toolbarItems = e.toolbarOptions.items;
+
+                    // Ensure Reload button is present
+                    const hasReload = toolbarItems.some(i => i.options && i.options.icon === "refresh");
+                    if (!hasReload) {
+                        let idx = toolbarItems.findIndex(i => i.name === "columnChooserButton");
+                        if (idx === -1) idx = toolbarItems.length;
+                        toolbarItems.splice(idx, 0, {
+                            location: "after",
+                            widget: "dxButton",
+                            options: {
+                                icon: "refresh",
+                                stylingMode: "text",
+                                elementAttr: { style: "color: var(--bs-body-color, #000);" },
+                                onClick: function() {
+                                    ReloadData();
+                                }
+                            }
+                        });
+                    }
+
+                    // Ensure Add button is present
+                    const hasAdd = toolbarItems.some(i => i.options && i.options.icon === "add");
+                    if (!hasAdd) {
+                        let idx = toolbarItems.findIndex(i => i.name === "columnChooserButton");
+                        if (idx === -1) idx = toolbarItems.length;
+                        toolbarItems.splice(idx, 0, {
+                            location: "after",
+                            widget: "dxButton",
+                            options: {
+                                icon: "add",
+                                text: "",
+                                stylingMode: "text",
+                                elementAttr: { style: "color: var(--bs-body-color, #000);" },
+                                onClick: function() {
+                                    addSalaryHistoryID();
+                                }
+                            }
+                        });
+                    }
+
+                    const defaultExportIndex = toolbarItems.findIndex(i => i.name === "exportButton");
+                    if (defaultExportIndex >= 0) toolbarItems.splice(defaultExportIndex, 1);
+
+                    const searchPanelIndex = toolbarItems.findIndex(i => i.name === "searchPanel");
+                    const insertIndex = searchPanelIndex >= 0 ? searchPanelIndex : 0;
+
+                    // 1. Checkbox: Xem lịch sử lương
+                    toolbarItems.splice(insertIndex, 0, {
+                        location: "before",
+                        widget: "dxCheckBox",
+                        options: {
+                            text: "View Salary History",
+                            value: dataParams.ViewAllRecord === 1,
+              onValueChanged: function(chk) {
+              dataParams.ViewAllRecord = chk.value ? 1 : 0;
+                                ReloadData();
+                            }
+                        }
+                    });
+
+                    // 2. Checkbox: Nhân viên mới chưa nhập lương
+                    toolbarItems.splice(insertIndex + 1, 0, {
+                        location: "before",
+                        widget: "dxCheckBox",
+                        options: {
+                            text: "New employees without salary",
+                            value: dataParams.NewEmp === 1,
+                            onValueChanged: function(chk) {
+                                dataParams.NewEmp = chk.value ? 1 : 0;
+                                ReloadData();
+                            }
+                        }
+                    });
+
+                    const addButtonIndex = toolbarItems.findIndex(i => i.name === "addRowButton");
+                    if (addButtonIndex >= 0) {
+                        toolbarItems[addButtonIndex].options.onClick = function() {
+                            addSalaryHistoryID();
+                        };
+                    }
+                    const buttonInsertIndex = addButtonIndex >= 0 ? addButtonIndex : 0;
+
+                    // 3. Button: Xuất excel
+                  toolbarItems.splice(buttonInsertIndex, 0, {
+                        location: "after",
+                        widget: "dxButton",
+                        options: {
+                            icon: "exportxlsx",
+                            hint: "Export Excel",
+                            onClick: function() {
+      if (typeof ExcelJS !== "undefined") {
+            var workbook = new ExcelJS.Workbook();
+                                    var worksheet = workbook.addWorksheet("LichSuLuong");
+                                    DevExpress.excelExporter.exportDataGrid({
+                                        component: gridInstance,
+                                        worksheet: worksheet,
+                                        autoFilterEnabled: true
+                                    }).then(function() {
+                                        workbook.xlsx.writeBuffer().then(function(buffer) {
+                                            saveAs(new Blob([buffer], { type: "application/octet-stream" }), "LichSuLuong.xlsx");
+                                        });
+                                    });
+                                } else {
+                                    DevExpress.ui.notify("ExcelJS library not found to export excel!", "error", 2000);
+                                }
+                            }
+                        }
+                    });
+
+                    // 4. Button: Lấy file mẫu nhập thông tin lương
+                    toolbarItems.splice(buttonInsertIndex + 1, 0, {
+                        location: "after",
+                        widget: "dxButton",
+                        options: {
+                            icon: "download",
+                            hint: "Download Import Template",
+                            onClick: async function() {
+                                await gridInstance.saveEditData();
+                                let exportParams = ["@EmployeeID", "-1", "@IsExport", "1", "@ViewAllRecord", dataParams.ViewAllRecord, "@NewEmp", dataParams.NewEmp];
+                      await OnExport("template_salaryhistory_list", exportParams);
+                            }
+                        }
+                    });
+
+                    // 5. Button: Nhập vào
+                    toolbarItems.splice(buttonInsertIndex + 2, 0, {
+                        location: "after",
+                        widget: "dxButton",
+                        options: {
+                            icon: "import",
+                            hint: "Import Salary Data",
+                            onInitialized: function(arg) {
+                                var fileUploader = $("<div>").dxFileUploader({
+                                    visible: false,
+                                    multiple: false,
+                                    dialogTrigger: arg.element,
+                                    uploadMode: "useButtons",
+                                    allowedFileExtensions: [".zip", ".xlsx", ".xls", ".csv", ".txt"],
+                                    inputAttr: {
+                                        accept: ".zip, .xlsx, .xls, .csv, .txt",
+                                    },
+                                    onValueChanged: async function (fuArg) {
+                                        if (fuArg.value.length == 0) return;
+                                        var result = false;
+                                        var myDialog = DevExpress.ui.dialog.custom({
+                                            title: "Confirm Import",
+                                            messageHtml: "<div style=\"min-width: 15vw\">Are you sure you want to import this data file into the system?</div>",
+                                            buttons: [
+                                                {
+                                                    text: "Yes",
+                                                    onClick: function () { return true; }
+                                                },
+                   {
+                                                    text: "No",
+                                                    onClick: function () { return false; }
+    }
+                                            ]
+                });
+                             await myDialog.show().done(function (dialogResult) {
+                                            result = dialogResult;
+                                        });
+
+                                        if (!result) return;
+
+                                        async function UploadMergeFileSplit(src, fileName) {
+                                            var splitImage = src.match(/.{1,5120000}/g);
+                                            var totalIndex = splitImage.length;
+                                            var index = 0;
+                                            var tempName = uuidv4() + ".tmp";
+                                            if (!fileName) fileName = tempName;
+                                            var pathResult = "";
+
+                                            while (index < totalIndex) {
+                                                try {
+                                                    var resData = await AjaxHPAParadiseParadiseAsync({
+                                                        data: {
+                                                            sendEncryption: false,
+                                                            name: "MergeFileSplit",
+                                                            param: [
+                                                                splitImage[index],
+                                                                index,
+                                                                totalIndex,
+                                                                tempName,
+                                                                fileName,
+                                                            ]
+                                                        },
+                                         });
+                                                    index += 1;
+                                                    pathResult = resData;
+                                                } catch (error) {
+                                       if (error.status == 200) index += 1;
+                                                }
+                                 }
+                                            return pathResult;
+                                        }
+
+                                        fuArg.value.forEach(async (file) => {
+                                            if (!file.path) {
+                                                var reader = new FileReader();
+                                                reader.readAsDataURL(file);
+                                                reader.onload = async function () {
+                                                    file.path = reader.result;
+                                                    file.path = file.path.substring(file.path.indexOf(",") + 1);
+
+                                                    showLoadingByClassOrID("#sp_SalaryHistory_List_html", "Loading...");
+
+                                                    var a = await UploadMergeFileSplit(file.path, file.name);
+                                                    a = (typeof a == "string") ? JSON.parse(a) : a;
+                                                    file.path = a.data;
+
+                                                    await AjaxHPAParadiseParadiseAsync({
+                                                        data: { name: "ImportLocationFolder", param: [file.path, file.name, "", ""] },
+                                                        success: function (resultData) {
+                                                            var parsedData = (typeof resultData == "string") ? JSON.parse(resultData) : resultData;
+                    var dataValue = parsedData.data;
+              if (dataValue && dataValue.includes("Error")) {
+                                                 DevExpress.ui.dialog.alert(dataValue, "Error");
+                                                            } else {
+                                                          DevExpress.ui.notify({
+                                                                    message: "Success!",
+                                                                    type: "success",
+                                                                    displayTime: 2500,
+                                                                    position: { my: "right bottom", at: "right bottom", offset: "-20 -20" }
+                                                                });
+                                                            }
+                                                            HideLoadingByClassOrID("#sp_SalaryHistory_List_html");
+                                                            ReloadData();
+                                                        },
+                                                        error: function () {
+                                                            HideLoadingByClassOrID("#sp_SalaryHistory_List_html");
+                                                        }
+                                                    });
+                                                };
+                                            } else {
+                                                showLoadingByClassOrID("#sp_SalaryHistory_List_html", "Loading...");
+                                                var a = await UploadMergeFileSplit(file.path, file.name);
+                                                a = (typeof a == "string") ? JSON.parse(a) : a;
+                                                file.path = a.data;
+
+                                                await AjaxHPAParadiseParadiseAsync({
+                data: { name: "ImportLocationFolder", param: [file.path, file.name, "", ""] },
+                                                    success: function () {
+HideLoadingByClassOrID("#sp_SalaryHistory_List_html");
+                                                        DevExpress.ui.notify({
+                                                            message: "Success!",
+                                                            type: "success",
+                                                            displayTime: 2500,
+                                                            position: { my: "right bottom", at: "right bottom", offset: "-20 -20" }
+                                                        });
+                                                        ReloadData();
+                                                    },
+                                                    error: function () {
+                                                        HideLoadingByClassOrID("#sp_SalaryHistory_List_html");
+                                                    }
+                                                });
+                                            }
+                                        });
+                                    }
+                                });
+                                arg.element.parent().append(fileUploader);
+                            }
+                        }
+                    });
+                });
+
+                gridInstance.endUpdate();
+                gridInstance.repaint();
+
+                // ============================================================
+
+                // 3. HÀM RELOAD DATA TỐI GIẢN
+                // ============================================================
+                function ReloadData(pageNumber, pageSize, keyword = null) {
+                    if (keyword !== null) _currentKeyword = keyword.trim();
+                    _pageCache = {};
+                    _summaryCache = {};
+                    gridInstance.refresh();
+                }
+
+                async function OnExport(exportName, param = []) {
+                    if (window.sp_SalaryHistory_List && typeof window.sp_SalaryHistory_List.OnExport === "function") {
+                        await window.sp_SalaryHistory_List.OnExport(exportName, param);
+                return;
+                    }
+                    let fileName, filePath, exportLocationResult, exportExists = true;
+                    await AjaxHPAParadiseAsync({
+                        data: {
+                            name: "sp_getTaskExport",
+                            param: ["@ExportName", exportName]
+                        },
+                        success: async function (resultData) {
+                            let jsonData = typeof resultData === "string" ? JSON.parse(resultData) : resultData;
+                            if(jsonData.data[0] && jsonData.data[0][0]) {
+                                fileName = jsonData.data[0][0].TemplateFileName;
+                                exportName = jsonData.data[0][0].ExportName;
+                            } else {
+                                exportExists = false;
+                            }
+                        }
+                    });
+                    if(!exportExists) {
+                        console.error("Cannot find export:", exportName);
+                        return;
+                    }
+                    await AjaxHPAParadiseParadiseAsync({
+                        data: {
+                            name: "ExportLocationFolder",
+                            param: ["", exportName, fileName, ...param]
+                        },
+                        success: function (resultData) {
+                            let jsonData = typeof resultData === "string" ? JSON.parse(resultData) : resultData;
+                            if(jsonData) {
+                                exportLocationResult = jsonData;
+                            }
+                        }
+                    });
+                    if(window.ParadiseOption && window.ParadiseOption.AppInfoPackageName == "com.vietinsoft.onshiftparadisehr") {
+             await AjaxHPAParadiseParadiseAsync({
+                            data: {
+                                name: "MobileOpenFileAsync",
+                                param: [exportLocationResult.FilePath, exportLocationResult.FileName]
+            }
+                        });
+                    } else {
+                        exportLocationResult = typeof exportLocationResult.data === "string" ? JSON.parse(exportLocationResult.data) : exportLocationResult.data;
+                        await AjaxHPAParadiseParadiseAsync({
+                            data: {
+                                name: "ReadPathFileToByte",
+                                param: [exportLocationResult.FilePath]
+                            },
+                            success: function (result) {
+                                let resultData = typeof result === "string" ? JSON.parse(result) : result;
+                                saveAsFile(exportLocationResult.FileName, resultData.data);
+                            }
+                        });
+                    }
+                }
+
+                
+                setTimeout(updateGridHeight, 100);
+                setTimeout(updateGridHeight, 500);
+
+                const _resizeHandler = function() { updateGridHeight(); };
+                $(window).on("resize.gridSalaryHistory", _resizeHandler);
+
+                const _gridWrap = document.getElementById("sp_SalaryHistory_List_html");
+                if (_gridWrap && typeof ResizeObserver !== "undefined") {
+                    const _ro = new ResizeObserver(function() {
+                        updateGridHeight();
+                    });
+                    _ro.observe(_gridWrap);
+                }
+
+                ReloadData()
+            })();
+        </script>

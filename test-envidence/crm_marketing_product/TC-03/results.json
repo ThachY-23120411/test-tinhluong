@@ -1,0 +1,28 @@
+{
+  "tcId": "TC-03",
+  "pageName": "crm_marketing_product",
+  "title": "Kiểm tra Vòng Đời 3 Pha Bộ Lọc Tìm Kiếm Nhanh (Full 3-Phase Search Filter Lifecycle)",
+  "testStatus": "SKIPPED",
+  "businessStatus": "FAILED",
+  "businessNotes": "Lỗi thực thi trong quá trình test",
+  "defectEvidence": {
+    "issue": "Lỗi thực thi trong quá trình test",
+    "expected": "Theo đặc tả chuẩn của hệ thống",
+    "actual": "Thực tế phát sinh lỗi hoặc không đạt điều kiện kiểm tra"
+  },
+  "failureAnalysis": {
+    "issue": "Lỗi thực thi trong quá trình test",
+    "expected": "Theo đặc tả chuẩn của hệ thống",
+    "actual": "Thực tế phát sinh lỗi hoặc không đạt điều kiện kiểm tra"
+  },
+  "status": "FAILED",
+  "duration": "0.00s",
+  "errors": "",
+  "stepScreenshots": [],
+  "attachments": {
+    "screenshots": [],
+    "videos": [],
+    "traces": []
+  },
+  "timestamp": "2026-10-28T07:59:06.921Z"
+}

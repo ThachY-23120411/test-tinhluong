@@ -1,0 +1,73 @@
+{
+  "tcId": "TC-02",
+  "pageName": "crm_sales_revenue",
+  "title": "Vòng đời 3 Pha Cụm Nút Lọc Kỳ Doanh số (.ttv-pill: Tuần, Tháng, Quý, Năm)",
+  "testStatus": "PASSED",
+  "businessStatus": "FAILED",
+  "businessNotes": "FAIL - Sai lệch kỳ lọc: Năm nhận 9 (kỳ vọng 9), Khôi phục nhận 7 (kỳ vọng 9)",
+  "defectEvidence": {
+    "issue": "Vòng đời bộ lọc kỳ không đồng bộ dữ liệu đúng kỳ vọng",
+    "yearExpected": 9,
+    "yearActual": 9,
+    "restoredExpected": 9,
+    "restoredActual": 7
+  },
+  "failureAnalysis": {
+    "issue": "Vòng đời bộ lọc kỳ không đồng bộ dữ liệu đúng kỳ vọng",
+    "yearExpected": 9,
+    "yearActual": 9,
+    "restoredExpected": 9,
+    "restoredActual": 7
+  },
+  "status": "FAILED",
+  "duration": "28.73s",
+  "errors": "",
+  "stepScreenshots": [
+    {
+      "step": 1,
+      "title": "Pha 1 - Baseline: Ghi nhận số lượng nhân sự ở kỳ Tháng là N0 = 9",
+      "fileName": "TC-02-step01-pha-1-baseline-ghi-nhan-so-luong-nhan-su-o-ky-thang-la-n0-9.png",
+      "relPath": "crm_sales_revenue/TC-02/screenshots/TC-02-step01-pha-1-baseline-ghi-nhan-so-luong-nhan-su-o-ky-thang-la-n0-9.png"
+    },
+    {
+      "step": 2,
+      "title": "Pha 2 - Filter Action: Chuyển sang kỳ Năm, ghi nhận N_year = 9 nhân sự",
+      "fileName": "TC-02-step02-pha-2-filter-action-chuyen-sang-ky-nam-ghi-nhan-n-year-9-nhan-su.png",
+      "relPath": "crm_sales_revenue/TC-02/screenshots/TC-02-step02-pha-2-filter-action-chuyen-sang-ky-nam-ghi-nhan-n-year-9-nhan-su.png"
+    },
+    {
+      "step": 3,
+      "title": "Con trỏ Neon chọn xem doanh số theo kỳ Quý và kích hoạt dropdown Quý",
+      "fileName": "TC-02-step03-con-tro-neon-chon-xem-doanh-so-theo-ky-quy-va-kich-hoat-dropdown-quy.png",
+      "relPath": "crm_sales_revenue/TC-02/screenshots/TC-02-step03-con-tro-neon-chon-xem-doanh-so-theo-ky-quy-va-kich-hoat-dropdown-quy.png"
+    },
+    {
+      "step": 4,
+      "title": "Pha 3 - Reset: Khôi phục lại kỳ Tháng, số lượng bản ghi N_restored = 7",
+      "fileName": "TC-02-step04-pha-3-reset-khoi-phuc-lai-ky-thang-so-luong-ban-ghi-n-restored-7.png",
+      "relPath": "crm_sales_revenue/TC-02/screenshots/TC-02-step04-pha-3-reset-khoi-phuc-lai-ky-thang-so-luong-ban-ghi-n-restored-7.png"
+    },
+    {
+      "step": 5,
+      "title": "Đánh giá logic FAIL: Sai lệch số lượng bản ghi khi chuyển kỳ",
+      "fileName": "TC-02-step05-danh-gia-logic-fail-sai-lech-so-luong-ban-ghi-khi-chuyen-ky.png",
+      "relPath": "crm_sales_revenue/TC-02/screenshots/TC-02-step05-danh-gia-logic-fail-sai-lech-so-luong-ban-ghi-khi-chuyen-ky.png"
+    }
+  ],
+  "attachments": {
+    "screenshots": [
+      "crm_sales_revenue/TC-02/screenshots/TC-02-step01-pha-1-baseline-ghi-nhan-so-luong-nhan-su-o-ky-thang-la-n0-9.png",
+      "crm_sales_revenue/TC-02/screenshots/TC-02-step02-pha-2-filter-action-chuyen-sang-ky-nam-ghi-nhan-n-year-9-nhan-su.png",
+      "crm_sales_revenue/TC-02/screenshots/TC-02-step03-con-tro-neon-chon-xem-doanh-so-theo-ky-quy-va-kich-hoat-dropdown-quy.png",
+      "crm_sales_revenue/TC-02/screenshots/TC-02-step04-pha-3-reset-khoi-phuc-lai-ky-thang-so-luong-ban-ghi-n-restored-7.png",
+      "crm_sales_revenue/TC-02/screenshots/TC-02-step05-danh-gia-logic-fail-sai-lech-so-luong-ban-ghi-khi-chuyen-ky.png"
+    ],
+    "videos": [
+      "crm_sales_revenue/TC-02/videos/video.webm"
+    ],
+    "traces": [
+      "crm_sales_revenue/TC-02/traces/trace.zip"
+    ]
+  },
+  "timestamp": "2026-10-28T01:44:44.903Z"
+}

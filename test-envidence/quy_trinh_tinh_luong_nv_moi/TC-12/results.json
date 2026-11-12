@@ -1,0 +1,66 @@
+{
+  "tcId": "TC-12",
+  "pageName": "quy_trinh_tinh_luong_nv_moi",
+  "title": "fix-6 | TC-12: Quản lý Trường Long duyệt Cấp 2 (Nghỉ phép 24/10, Bù công 15/10 & 16/10, Xin hủy 14/10), xem Lịch sử và Đăng xuất (Role: LongKa)",
+  "testStatus": "PASSED",
+  "businessStatus": "PASSED",
+  "businessNotes": "Đạt yêu cầu logic nghiệp vụ mong đợi",
+  "defectEvidence": null,
+  "failureAnalysis": {},
+  "status": "PASSED",
+  "duration": "138.76s",
+  "errors": "",
+  "stepScreenshots": [
+    {
+      "step": 1,
+      "title": "LongKa mo MnuWPT037 duyet Cap 2",
+      "fileName": "TC-12-step01-longka-mo-mnuwpt037-duyet-cap-2.png",
+      "relPath": "quy_trinh_tinh_luong_nv_moi/TC-12/screenshots/TC-12-step01-longka-mo-mnuwpt037-duyet-cap-2.png"
+    },
+    {
+      "step": 2,
+      "title": "Duyet Cap 2 va kiem tra tab Nghỉ phép 24/10",
+      "fileName": "TC-12-step02-duyet-cap-2-va-kiem-tra-tab-nghi-phep-24-10.png",
+      "relPath": "quy_trinh_tinh_luong_nv_moi/TC-12/screenshots/TC-12-step02-duyet-cap-2-va-kiem-tra-tab-nghi-phep-24-10.png"
+    },
+    {
+      "step": 3,
+      "title": "Duyet Cap 2 va kiem tra tab Bù công 15/10",
+      "fileName": "TC-12-step03-duyet-cap-2-va-kiem-tra-tab-bu-cong-15-10.png",
+      "relPath": "quy_trinh_tinh_luong_nv_moi/TC-12/screenshots/TC-12-step03-duyet-cap-2-va-kiem-tra-tab-bu-cong-15-10.png"
+    },
+    {
+      "step": 4,
+      "title": "Duyet Cap 2 va kiem tra tab Bù công 16/10",
+      "fileName": "TC-12-step04-duyet-cap-2-va-kiem-tra-tab-bu-cong-16-10.png",
+      "relPath": "quy_trinh_tinh_luong_nv_moi/TC-12/screenshots/TC-12-step04-duyet-cap-2-va-kiem-tra-tab-bu-cong-16-10.png"
+    },
+    {
+      "step": 5,
+      "title": "Duyet Cap 2 va kiem tra tab Xin hủy Bù công 14/10",
+      "fileName": "TC-12-step05-duyet-cap-2-va-kiem-tra-tab-xin-huy-bu-cong-14-10.png",
+      "relPath": "quy_trinh_tinh_luong_nv_moi/TC-12/screenshots/TC-12-step05-duyet-cap-2-va-kiem-tra-tab-xin-huy-bu-cong-14-10.png"
+    },
+    {
+      "step": 6,
+      "title": "Dang xuat LongKa thanh cong",
+      "fileName": "TC-12-step06-dang-xuat-longka-thanh-cong.png",
+      "relPath": "quy_trinh_tinh_luong_nv_moi/TC-12/screenshots/TC-12-step06-dang-xuat-longka-thanh-cong.png"
+    }
+  ],
+  "attachments": {
+    "screenshots": [
+      "quy_trinh_tinh_luong_nv_moi/TC-12/screenshots/TC-12-step01-longka-mo-mnuwpt037-duyet-cap-2.png",
+      "quy_trinh_tinh_luong_nv_moi/TC-12/screenshots/TC-12-step02-duyet-cap-2-va-kiem-tra-tab-nghi-phep-24-10.png",
+      "quy_trinh_tinh_luong_nv_moi/TC-12/screenshots/TC-12-step03-duyet-cap-2-va-kiem-tra-tab-bu-cong-15-10.png",
+      "quy_trinh_tinh_luong_nv_moi/TC-12/screenshots/TC-12-step04-duyet-cap-2-va-kiem-tra-tab-bu-cong-16-10.png",
+      "quy_trinh_tinh_luong_nv_moi/TC-12/screenshots/TC-12-step05-duyet-cap-2-va-kiem-tra-tab-xin-huy-bu-cong-14-10.png",
+      "quy_trinh_tinh_luong_nv_moi/TC-12/screenshots/TC-12-step06-dang-xuat-longka-thanh-cong.png"
+    ],
+    "videos": [
+      "quy_trinh_tinh_luong_nv_moi/TC-12/videos/video.webm"
+    ],
+    "traces": []
+  },
+  "timestamp": "2026-11-12T08:13:29.363Z"
+}

@@ -1,0 +1,31 @@
+{
+  "tcId": "TC-15",
+  "pageName": "cham_cong_tinh_luong_crud_lien_hoan",
+  "title": "Nhân viên tai.dang kiểm tra Tab Lịch sử phiếu lương psHistory (Role: tai.dang)",
+  "testStatus": "PASSED",
+  "businessStatus": "PASSED",
+  "businessNotes": "Đạt yêu cầu logic nghiệp vụ mong đợi",
+  "defectEvidence": null,
+  "failureAnalysis": {},
+  "status": "PASSED",
+  "duration": "18.69s",
+  "errors": "",
+  "stepScreenshots": [
+    {
+      "step": 1,
+      "title": "Nhan vien mo tab lich su phieu luong pshistory",
+      "fileName": "TC-15-step01-nhan-vien-mo-tab-lich-su-phieu-luong-pshistory.png",
+      "relPath": "cham_cong_tinh_luong_crud_lien_hoan/TC-15/screenshots/TC-15-step01-nhan-vien-mo-tab-lich-su-phieu-luong-pshistory.png"
+    }
+  ],
+  "attachments": {
+    "screenshots": [
+      "cham_cong_tinh_luong_crud_lien_hoan/TC-15/screenshots/TC-15-step01-nhan-vien-mo-tab-lich-su-phieu-luong-pshistory.png"
+    ],
+    "videos": [
+      "cham_cong_tinh_luong_crud_lien_hoan/TC-15/videos/video.webm"
+    ],
+    "traces": []
+  },
+  "timestamp": "2026-11-05T17:13:25.108Z"
+}

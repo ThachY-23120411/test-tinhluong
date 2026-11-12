@@ -1,0 +1,61 @@
+{
+  "tcId": "TC-09",
+  "pageName": "crm_customer_data",
+  "title": "Thẩm định Nút \"Chọn Cột Hiển Thị\" (Column Chooser Panel)",
+  "testStatus": "PASSED",
+  "businessStatus": "PASSED",
+  "businessNotes": "PASS - Column Chooser cho phép tùy biến hiển thị cột linh hoạt, đóng mở an toàn",
+  "defectEvidence": null,
+  "failureAnalysis": {},
+  "status": "PASSED",
+  "duration": "27.81s",
+  "errors": "",
+  "stepScreenshots": [
+    {
+      "step": 1,
+      "title": "Xác định icon Chọn cột hiển thị trên thanh công cụ",
+      "fileName": "TC-09-step01-xac-dinh-icon-chon-cot-hien-thi-tren-thanh-cong-cu.png",
+      "relPath": "crm_customer_data/TC-09/screenshots/TC-09-step01-xac-dinh-icon-chon-cot-hien-thi-tren-thanh-cong-cu.png"
+    },
+    {
+      "step": 2,
+      "title": "Panel Chọn cột hiển thị mở ra trực quan",
+      "fileName": "TC-09-step02-panel-chon-cot-hien-thi-mo-ra-truc-quan.png",
+      "relPath": "crm_customer_data/TC-09/screenshots/TC-09-step02-panel-chon-cot-hien-thi-mo-ra-truc-quan.png"
+    },
+    {
+      "step": 3,
+      "title": "Danh sách hiển thị đầy đủ các cột tùy chọn cấu hình (10 cột)",
+      "fileName": "TC-09-step03-danh-sach-hien-thi-day-du-cac-cot-tuy-chon-cau-hinh-10-cot.png",
+      "relPath": "crm_customer_data/TC-09/screenshots/TC-09-step03-danh-sach-hien-thi-day-du-cac-cot-tuy-chon-cau-hinh-10-cot.png"
+    },
+    {
+      "step": 4,
+      "title": "Con trỏ Neon bấm đóng panel Column Chooser an toàn",
+      "fileName": "TC-09-step04-con-tro-neon-bam-dong-panel-column-chooser-an-toan.png",
+      "relPath": "crm_customer_data/TC-09/screenshots/TC-09-step04-con-tro-neon-bam-dong-panel-column-chooser-an-toan.png"
+    },
+    {
+      "step": 5,
+      "title": "Tính năng Chọn cột hiển thị hoạt động trơn tru không gây lỗi giao diện",
+      "fileName": "TC-09-step05-tinh-nang-chon-cot-hien-thi-hoat-dong-tron-tru-khong-gay-loi-giao-dien.png",
+      "relPath": "crm_customer_data/TC-09/screenshots/TC-09-step05-tinh-nang-chon-cot-hien-thi-hoat-dong-tron-tru-khong-gay-loi-giao-dien.png"
+    }
+  ],
+  "attachments": {
+    "screenshots": [
+      "crm_customer_data/TC-09/screenshots/TC-09-step01-xac-dinh-icon-chon-cot-hien-thi-tren-thanh-cong-cu.png",
+      "crm_customer_data/TC-09/screenshots/TC-09-step02-panel-chon-cot-hien-thi-mo-ra-truc-quan.png",
+      "crm_customer_data/TC-09/screenshots/TC-09-step03-danh-sach-hien-thi-day-du-cac-cot-tuy-chon-cau-hinh-10-cot.png",
+      "crm_customer_data/TC-09/screenshots/TC-09-step04-con-tro-neon-bam-dong-panel-column-chooser-an-toan.png",
+      "crm_customer_data/TC-09/screenshots/TC-09-step05-tinh-nang-chon-cot-hien-thi-hoat-dong-tron-tru-khong-gay-loi-giao-dien.png"
+    ],
+    "videos": [
+      "crm_customer_data/TC-09/videos/video.webm"
+    ],
+    "traces": [
+      "crm_customer_data/TC-09/traces/trace.zip"
+    ]
+  },
+  "timestamp": "2026-10-28T05:23:55.237Z"
+}

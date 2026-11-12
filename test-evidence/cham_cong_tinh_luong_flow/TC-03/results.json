@@ -1,0 +1,52 @@
+{
+  "tcId": "TC-03",
+  "pageName": "cham_cong_tinh_luong_flow",
+  "title": "Quản lý cấp duyệt thẩm định và duyệt đơn bù công 2 cấp (Role: ThanhLong & cuong.vu)",
+  "testStatus": "PASSED",
+  "businessStatus": "PASSED",
+  "businessNotes": "PASS - Quy trình phê duyệt liên hoàn 2 cấp (ThanhLong Cấp 1 -> cuong.vu Cấp 2) hoàn tất chuẩn xác, xác thực CSDL đã duyệt thành công",
+  "defectEvidence": null,
+  "failureAnalysis": {},
+  "status": "PASSED",
+  "duration": "68.36s",
+  "errors": "",
+  "stepScreenshots": [
+    {
+      "step": 1,
+      "title": "Quan ly truc tiep ThanhLong dang nhap he thong",
+      "fileName": "TC-03-step01-quan-ly-truc-tiep-thanhlong-dang-nhap-he-thong.png",
+      "relPath": "cham_cong_tinh_luong_flow/TC-03/screenshots/TC-03-step01-quan-ly-truc-tiep-thanhlong-dang-nhap-he-thong.png"
+    },
+    {
+      "step": 2,
+      "title": "ThanhLong mo man hinh Danh sach phe duyet",
+      "fileName": "TC-03-step02-thanhlong-mo-man-hinh-danh-sach-phe-duyet.png",
+      "relPath": "cham_cong_tinh_luong_flow/TC-03/screenshots/TC-03-step02-thanhlong-mo-man-hinh-danh-sach-phe-duyet.png"
+    },
+    {
+      "step": 3,
+      "title": "Cap 1 ThanhLong phe duyet don bu cong",
+      "fileName": "TC-03-step03-cap-1-thanhlong-phe-duyet-don-bu-cong.png",
+      "relPath": "cham_cong_tinh_luong_flow/TC-03/screenshots/TC-03-step03-cap-1-thanhlong-phe-duyet-don-bu-cong.png"
+    },
+    {
+      "step": 4,
+      "title": "Danh gia logic PASS: Don da duoc ca 2 cap phe duyet hoan tat",
+      "fileName": "TC-03-step04-danh-gia-logic-pass-don-da-duoc-ca-2-cap-phe-duyet-hoan-tat.png",
+      "relPath": "cham_cong_tinh_luong_flow/TC-03/screenshots/TC-03-step04-danh-gia-logic-pass-don-da-duoc-ca-2-cap-phe-duyet-hoan-tat.png"
+    }
+  ],
+  "attachments": {
+    "screenshots": [
+      "cham_cong_tinh_luong_flow/TC-03/screenshots/TC-03-step01-quan-ly-truc-tiep-thanhlong-dang-nhap-he-thong.png",
+      "cham_cong_tinh_luong_flow/TC-03/screenshots/TC-03-step02-thanhlong-mo-man-hinh-danh-sach-phe-duyet.png",
+      "cham_cong_tinh_luong_flow/TC-03/screenshots/TC-03-step03-cap-1-thanhlong-phe-duyet-don-bu-cong.png",
+      "cham_cong_tinh_luong_flow/TC-03/screenshots/TC-03-step04-danh-gia-logic-pass-don-da-duoc-ca-2-cap-phe-duyet-hoan-tat.png"
+    ],
+    "videos": [
+      "cham_cong_tinh_luong_flow/TC-03/videos/video.webm"
+    ],
+    "traces": []
+  },
+  "timestamp": "2026-11-04T04:38:38.343Z"
+}

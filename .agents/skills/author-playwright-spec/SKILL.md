@@ -25,32 +25,35 @@ description: Chuyên gia nhào nặn kịch bản kiểm thử Playwright (.spec
   1. Khi nhập liệu: Tạo ra **Dấu ấn định danh duy nhất (Unique Fingerprint)**:
      - Ngày kiểm thử cụ thể (ví dụ: ngày hôm nay `02/11/2026`).
      - Giờ cụ thể (`08:00`).
-     - Lý do kèm mốc thời gian: ``Quên quẹt thẻ ngày ${todayStr} do đi công tác [${Date.now()}]``.
-  2. Khi kiểm tra Tab Lịch sử / Danh sách bảng:
-     - **Bắt buộc soi chi tiết Thẻ đầu tiên (Top 1)**: `const topCardText = await cards.first().innerText();`
-     - So khớp chặt chẽ: Thẻ Top 1 phải chứa đúng Ngày vừa tạo, đúng Giờ vừa tạo (`08:00`), đúng Lý do vừa nhập.
-     - **Nếu thẻ Top 1 KHÔNG KHỚP $\longrightarrow$ BẮT BUỘC ĐÁNH FAIL NGAY LẬP TỨC!**
+     - Lý do kèm dấu vân tay phiên chạy: ``[TEST_LUONG] Quên quẹt thẻ ngày ${todayStr} do đi công tác [ID:${runToken}]``.
+  2. Khi kiểm tra Tab Lịch sử / Danh sách bảng (Đồng bộ Luật 17 — Cấm bám `.first()` mù quáng):
+     - **Bắt buộc định vị động đúng thẻ/dòng chứa đồng thời Ngày + Giờ + Dấu vân tay `[ID:${runToken}]` / `[TEST_LUONG]`** (kết hợp cuộn `mouse.wheel` từng nấc nếu danh sách có nhiều bản ghi tạo tay chèn lên đầu).
+     - **Nếu toàn bộ danh sách KHÔNG có thẻ nào khớp đủ các điều kiện định danh $\longrightarrow$ BẮT BUỘC ĐÁNH FAIL NGAY LẬP TỨC!**
      ```javascript
-     const hasTargetDate = topCardText.includes(todayStr);
-     const hasTargetTime = topCardText.includes('08:00');
-     const isPassed = hasTargetDate && hasTargetTime;
+     const matchedCards = cards
+       .filter({ hasText: todayStr })
+       .filter({ hasText: '08:00' })
+       .filter({ hasText: `[ID:${runToken}]` });
+     const matchedCount = await matchedCards.count();
 
-     if (isPassed) {
+     if (matchedCount > 0 && await matchedCards.first().isVisible().catch(() => false)) {
+       const matchedText = await matchedCards.first().innerText();
        testInfo.annotations.push({
          type: 'business_status',
-         description: `PASS - Thẻ Top 1 hiển thị chính xác đơn vừa tạo ngày ${todayStr} lúc 08:00`
+         description: `PASS - Định vị động khớp chính xác đơn vừa tạo ngày ${todayStr} lúc 08:00 (${matchedText.substring(0, 120)})`
        });
      } else {
+       const sampleTopCard = (await cards.count()) > 0 ? await cards.first().innerText().catch(() => '') : '(Danh sách trống)';
        testInfo.annotations.push({
          type: 'business_status',
-         description: `FAIL - Không tìm thấy đơn vừa tạo tại Top 1! Đơn có thể chưa được lưu vào CSDL hoặc bị lỗi gửi.`
+         description: `FAIL - Không tìm thấy đơn chứa đủ [Ngày=${todayStr}, Giờ=08:00, Token=${runToken}] trong danh sách!`
        });
        testInfo.annotations.push({
          type: 'defect_evidence',
          description: JSON.stringify({
-           issue: 'Đơn mới tạo không xuất hiện tại vị trí Top 1 trong Lịch sử',
-           expected: { date: todayStr, time: '08:00' },
-           actualTopCard: topCardText.substring(0, 200)
+           issue: 'Không tìm thấy đơn có dấu vân tay vừa tạo trong Lịch sử',
+           expected: { date: todayStr, time: '08:00', token: runToken },
+           actualSampleCard: sampleTopCard.substring(0, 200)
          })
        });
      }
@@ -309,7 +312,7 @@ Trong các hệ thống Enterprise, sau khi thực hiện 1 thao tác, giao di�
    - Endpoint API (POST/PUT `.ashx` hoặc `/hpa/...`) và cấu trúc JSON trả về (`result`, `data`, `status`).
 2. Xác định rõ ràng:
    - **Thao tác (Action)**: Click nút nào, gõ trường gì, chọn dropdown nào, xử lý popup xác nhận nào.
-   - **Kỳ vọng (Expected Output)**: Thẻ Top 1 khớp chính xác ngày giờ nào, DataGrid có bao nhiêu dòng.
+   - **Kỳ vọng (Expected Output)**: Thẻ/dòng khớp chính xác bộ điều kiện định danh (Ngày, Giờ, Dấu vân tay `[TEST_LUONG]` / `[ID:...]`) qua tìm kiếm động + cuộn bảng.
 
 ### Bước 2: Tạo mới hoặc Bổ sung Test Case vào `tests/<page>.spec.js`
 * Tạo mới hoặc cập nhật file `tests/<page_name>.spec.js` theo **Bộ Khung Mẫu Chuẩn** (Mục 3).
@@ -354,22 +357,35 @@ const ACCOUNTS = {
   HR:      { username: 'cuong.vu',  password: '123', empId: '014', name: 'Vũ Đình Cường' }    // Cấp 2
 };
 
-// Helper 1: Di chuyển chuột Neon mượt mà và click có bảo vệ phòng thủ
+// Helper 1: Di chuyển chuột Neon mượt mà theo tọa độ thực tế và click (Cấm force:true / fallback JS)
 async function moveAndClick(page, locator, options = {}) {
-  const timeout = options.timeout || 8000;
-  await locator.waitFor({ state: 'visible', timeout }).catch(() => {});
-  await locator.scrollIntoViewIfNeeded({ timeout: 4000 }).catch(() => {});
-  const box = await locator.boundingBox().catch(() => null);
-  if (box) {
-    const x = box.x + box.width / 2;
-    const y = box.y + box.height / 2;
-    await page.mouse.move(x, y, { steps: options.steps || 8 });
-    if (options.pause) await page.waitForTimeout(options.pause);
+  const target = locator.first();
+  const timeout = options.timeout || 10000;
+  await target.waitFor({ state: 'visible', timeout });
+  await target.scrollIntoViewIfNeeded({ timeout: 4000 }).catch(() => {});
+  const box = await target.boundingBox().catch(() => null);
+  if (!box) {
+    throw new Error('❌ [moveAndClick]: Không lấy được boundingBox của phần tử — từ chối click mù!');
   }
-  // Click phòng vệ: force = true và fallback evaluate click
-  await locator.click({ force: true, timeout: 5000 }).catch(async () => {
-    await locator.evaluate((el) => el.click()).catch(() => {});
-  });
+  const x = box.x + box.width * (0.35 + Math.random() * 0.3);
+  const y = box.y + box.height * (0.35 + Math.random() * 0.3);
+  await page.mouse.move(x, y, { steps: options.steps || 12 });
+  await page.waitForTimeout(options.pause || 220);
+  await page.mouse.down();
+  await page.waitForTimeout(80);
+  await page.mouse.up();
+}
+
+// Helper 1b: Định vị động dòng trên bảng theo nhiều điều kiện cột (Đồng bộ Luật 17)
+function findRowByColumns(page, columnValues = {}, gridSelector = '.dx-datagrid, table') {
+  let rowLocator = page.locator(`${gridSelector} tr.dx-data-row:visible, ${gridSelector} tbody tr:visible`);
+  const values = Array.isArray(columnValues) ? columnValues : Object.values(columnValues);
+  for (const val of values) {
+    if (val !== undefined && val !== null && String(val).trim() !== '') {
+      rowLocator = rowLocator.filter({ hasText: String(val).trim() });
+    }
+  }
+  return rowLocator;
 }
 
 // Helper 2: Chụp ảnh từng bước tuần tự có dấu (Tích hợp Bộ Lọc MD5 Runtime chống trùng ảnh)
@@ -462,37 +478,40 @@ test.describe('Kiểm thử Trang: <Tên Trang Tiếng Việt>', () => {
   });
 
   // --------------------------------------------------------------------------
-  // TC-02: MẪU ĐỐI SOÁT TAB LỊCH SỬ CHỐNG FAKE PASS (TUÂN THỦ LUẬT THÉP 1)
+  // TC-02: MẪU ĐỐI SOÁT TAB LỊCH SỬ CHỐNG FAKE PASS (TUÂN THỦ LUẬT THÉP 1 & LUẬT 17)
   // --------------------------------------------------------------------------
-  test('TC-02: Đối soát thẻ đơn mới tạo tại vị trí Top 1 trong Lịch sử', async ({ page }, testInfo) => {
+  test('TC-02: Định vị động đối soát thẻ đơn mới tạo trong Lịch sử', async ({ page }, testInfo) => {
     await loginDirectly(page, ACCOUNTS.STAFF);
     // Mở Tab Lịch sử ...
+    const todayStr = new Date().toISOString().split('T')[0];
     const cards = page.locator('.grid-item, .card, .history-item');
     await cards.first().waitFor({ state: 'visible', timeout: 8000 });
-    const topCardText = await cards.first().innerText();
 
-    // So khớp chính xác ngày và giờ vừa tạo
-    const todayStr = new Date().toISOString().split('T')[0];
-    const hasToday = topCardText.includes(todayStr) || topCardText.includes('08:00');
-    const isPending = topCardText.includes('Đang chờ duyệt') || topCardText.includes('Chờ duyệt');
-    const isPassed = hasToday && isPending;
+    // Định vị động đúng thẻ chứa đồng thời Ngày + Giờ + Dấu vân tay (không bám .first() mù quáng)
+    const matchedCards = cards
+      .filter({ hasText: todayStr })
+      .filter({ hasText: '08:00' })
+      .filter({ hasText: /Chờ duyệt|Đang chờ duyệt/i });
+    const matchCount = await matchedCards.count();
 
-    if (isPassed) {
+    if (matchCount > 0 && await matchedCards.first().isVisible().catch(() => false)) {
+      const matchedText = await matchedCards.first().innerText();
       testInfo.annotations.push({
         type: 'business_status',
-        description: `PASS - Thẻ Top 1 khớp chính xác đơn vừa tạo ngày ${todayStr} với trạng thái Đang chờ duyệt`
+        description: `PASS - Định vị động khớp chính xác đơn ngày ${todayStr} lúc 08:00 (${matchedText.substring(0, 100)})`
       });
-      await captureStep(page, testInfo, { tcId: 'TC-02', step: 5, desc: 'Danh gia logic PASS: The Top 1 khop chinh xac' });
+      await captureStep(page, testInfo, { tcId: 'TC-02', step: 5, desc: 'Danh gia logic PASS: Dinh vi dong the don khop chinh xac' });
     } else {
+      const sampleText = await cards.first().innerText().catch(() => '');
       testInfo.annotations.push({
         type: 'business_status',
-        description: `FAIL - The Top 1 khong phai don vua tao! Noi dung: ${topCardText.substring(0, 100)}`
+        description: `FAIL - Không tìm thấy đơn ngày ${todayStr} lúc 08:00 trong Lịch sử! Mẫu thẻ đầu: ${sampleText.substring(0, 100)}`
       });
       testInfo.annotations.push({
         type: 'defect_evidence',
-        description: JSON.stringify({ issue: 'The Top 1 khong khop don vua tao', actual: topCardText })
+        description: JSON.stringify({ issue: 'Không tìm thấy đơn khớp dấu vân tay trong Lịch sử', sampleActual: sampleText })
       });
-      await captureStep(page, testInfo, { tcId: 'TC-02', step: 5, desc: 'Danh gia logic FAIL: The Top 1 khong khop' });
+      await captureStep(page, testInfo, { tcId: 'TC-02', step: 5, desc: 'Danh gia logic FAIL: Khong tim thay the don khop' });
     }
   });
 });

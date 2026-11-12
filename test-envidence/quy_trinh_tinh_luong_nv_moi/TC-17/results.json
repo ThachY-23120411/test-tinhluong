@@ -1,0 +1,52 @@
+{
+  "tcId": "TC-17",
+  "pageName": "quy_trinh_tinh_luong_nv_moi",
+  "title": "fix-7 | TC-17: Mô phỏng thao tác Khóa chấm công (MnuTAD125), Khóa lương (MnuPRL080) & Đăng xuất",
+  "testStatus": "PASSED",
+  "businessStatus": "PASSED",
+  "businessNotes": "Đạt yêu cầu logic nghiệp vụ mong đợi",
+  "defectEvidence": null,
+  "failureAnalysis": {},
+  "status": "PASSED",
+  "duration": "85.19s",
+  "errors": "",
+  "stepScreenshots": [
+    {
+      "step": 1,
+      "title": "Dang nhap Chien nguyen",
+      "fileName": "TC-17-step01-dang-nhap-chien-nguyen.png",
+      "relPath": "quy_trinh_tinh_luong_nv_moi/TC-17/screenshots/TC-17-step01-dang-nhap-chien-nguyen.png"
+    },
+    {
+      "step": 2,
+      "title": "Khoa cham cong NV 099 tren MnuTAD125",
+      "fileName": "TC-17-step02-khoa-cham-cong-nv-099-tren-mnutad125.png",
+      "relPath": "quy_trinh_tinh_luong_nv_moi/TC-17/screenshots/TC-17-step02-khoa-cham-cong-nv-099-tren-mnutad125.png"
+    },
+    {
+      "step": 3,
+      "title": "Khoa so ky luong NV 099 tren MnuPRL080",
+      "fileName": "TC-17-step03-khoa-so-ky-luong-nv-099-tren-mnuprl080.png",
+      "relPath": "quy_trinh_tinh_luong_nv_moi/TC-17/screenshots/TC-17-step03-khoa-so-ky-luong-nv-099-tren-mnuprl080.png"
+    },
+    {
+      "step": 4,
+      "title": "Dang xuat ve man hinh Login",
+      "fileName": "TC-17-step04-dang-xuat-ve-man-hinh-login.png",
+      "relPath": "quy_trinh_tinh_luong_nv_moi/TC-17/screenshots/TC-17-step04-dang-xuat-ve-man-hinh-login.png"
+    }
+  ],
+  "attachments": {
+    "screenshots": [
+      "quy_trinh_tinh_luong_nv_moi/TC-17/screenshots/TC-17-step01-dang-nhap-chien-nguyen.png",
+      "quy_trinh_tinh_luong_nv_moi/TC-17/screenshots/TC-17-step02-khoa-cham-cong-nv-099-tren-mnutad125.png",
+      "quy_trinh_tinh_luong_nv_moi/TC-17/screenshots/TC-17-step03-khoa-so-ky-luong-nv-099-tren-mnuprl080.png",
+      "quy_trinh_tinh_luong_nv_moi/TC-17/screenshots/TC-17-step04-dang-xuat-ve-man-hinh-login.png"
+    ],
+    "videos": [
+      "quy_trinh_tinh_luong_nv_moi/TC-17/videos/video.webm"
+    ],
+    "traces": []
+  },
+  "timestamp": "2026-11-12T12:46:38.850Z"
+}

@@ -1,0 +1,4450 @@
+{
+  "dockButtons": [
+    {
+      "text": "",
+      "className": "icon MnuHRS238 open-lunchpad",
+      "id": "",
+      "onclick": ""
+    },
+    {
+      "text": "",
+      "className": "icon MnuHRS000 open-MnuHRS000",
+      "id": "",
+      "onclick": ""
+    },
+    {
+      "text": "",
+      "className": "icon MnuTAD000 open-MnuTAD000",
+      "id": "",
+      "onclick": ""
+    },
+    {
+      "text": "",
+      "className": "icon MnuPRL000 open-MnuPRL000",
+      "id": "",
+      "onclick": ""
+    },
+    {
+      "text": "",
+      "className": "icon MnuTN000 open-MnuTN000",
+      "id": "",
+      "onclick": ""
+    },
+    {
+      "text": "",
+      "className": "icon MnuWPT000 open-MnuWPT000",
+      "id": "",
+      "onclick": ""
+    },
+    {
+      "text": "",
+      "className": "icon MnuCSM000 open-MnuCSM000",
+      "id": "",
+      "onclick": ""
+    },
+    {
+      "text": "",
+      "className": "icon MnuKPI000 open-MnuKPI000",
+      "id": "",
+      "onclick": ""
+    },
+    {
+      "text": "",
+      "className": "icon MnuREC001 open-MnuREC001 dock-pinned-app",
+      "id": "",
+      "onclick": ""
+    },
+    {
+      "text": "",
+      "className": "icon MnuWPT315 open-MnuWPT315 dock-pinned-app",
+      "id": "",
+      "onclick": ""
+    },
+    {
+      "text": "",
+      "className": "icon MnuHRS32389 open-MnuHRS32389 dock-pinned-app highLightApp",
+      "id": "",
+      "onclick": ""
+    },
+    {
+      "text": "",
+      "className": "icon MnuAT001 open-MnuAT001 dock-pinned-app",
+      "id": "",
+      "onclick": ""
+    },
+    {
+      "text": "",
+      "className": "icon MnuAT005 open-MnuAT005 dock-pinned-app",
+      "id": "",
+      "onclick": ""
+    },
+    {
+      "text": "",
+      "className": "icon MnuAT007 open-MnuAT007 dock-recent-app",
+      "id": "",
+      "onclick": ""
+    },
+    {
+      "text": "",
+      "className": "icon MnuPRL445 open-MnuPRL445 dock-recent-app",
+      "id": "",
+      "onclick": ""
+    },
+    {
+      "text": "",
+      "className": "icon MnuHRS032 open-MnuHRS032 dock-recent-app",
+      "id": "",
+      "onclick": ""
+    },
+    {
+      "text": "",
+      "className": "icon MnuWPT316 open-MnuWPT316 dock-recent-app",
+      "id": "",
+      "onclick": ""
+    },
+    {
+      "text": "",
+      "className": "icon MnuKPI006 open-MnuKPI006 dock-recent-app",
+      "id": "",
+      "onclick": ""
+    },
+    {
+      "text": "",
+      "className": "icon MnuHRS033 open-MnuHRS033 dock-recent-app",
+      "id": "",
+      "onclick": ""
+    }
+  ],
+  "moduleMenus": {
+    "MnuHRS000": [
+      {
+        "text": "☰",
+        "className": "menu-button main-menu-button",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Quản trị nhân sự",
+        "className": "menu-f",
+        "id": "",
+        "href": "#"
+      },
+      {
+        "text": "Quản trị nhân sự",
+        "className": "active",
+        "id": "MnuHRS002",
+        "href": ""
+      },
+      {
+        "text": "Quản trị nhân sự",
+        "className": "",
+        "id": "",
+        "href": "#"
+      },
+      {
+        "text": "Danh sách nhân viên",
+        "className": "",
+        "id": "MnuHRS501",
+        "href": ""
+      },
+      {
+        "text": "Danh sách nhân viên",
+        "className": "",
+        "id": "",
+        "href": "#"
+      },
+      {
+        "text": "Hồ sơ nhân viên",
+        "className": "",
+        "id": "MnuHRS0102",
+        "href": ""
+      },
+      {
+        "text": "Hồ sơ nhân viên",
+        "className": "",
+        "id": "",
+        "href": "#"
+      },
+      {
+        "text": "Nhắc nhở sinh nhật",
+        "className": "",
+        "id": "MnuHRS030",
+        "href": ""
+      },
+      {
+        "text": "Nhắc nhở sinh nhật",
+        "className": "",
+        "id": "",
+        "href": "#"
+      },
+      {
+        "text": "DS Nhân Viên",
+        "className": "nav-item mb-0 w-50",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "NV Nghỉ Việc",
+        "className": "nav-item mb-0 w-50",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Quản trị nhân sự",
+        "className": "nav-item",
+        "id": "tab-MnuHRS002",
+        "href": ""
+      },
+      {
+        "text": "Tổng quan hỗ trợ",
+        "className": "nav-item",
+        "id": "tab-MnuHRS32389",
+        "href": ""
+      },
+      {
+        "text": "Danh sách công việc",
+        "className": "child-launchpad hover-span MnuAT001 open-MnuAT001",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Chi tiết công việc",
+        "className": "child-launchpad hover-span MnuAT002 open-MnuAT002",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Mẫu công việc",
+        "className": "child-launchpad hover-span MnuAT003 open-MnuAT003",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Nhật ký công việc",
+        "className": "child-launchpad hover-span MnuAT004 open-MnuAT004",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Lịch sử công việc",
+        "className": "child-launchpad hover-span MnuAT005 open-MnuAT005",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Theo dõi dự án",
+        "className": "child-launchpad hover-span MnuAT006 open-MnuAT006",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Đói việc",
+        "className": "child-launchpad hover-span MnuAT007 open-MnuAT007",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Chi tiết dự án",
+        "className": "child-launchpad hover-span MnuAT008 open-MnuAT008",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Đơn khiếu nại",
+        "className": "child-launchpad hover-span MnuAT010 open-MnuAT010",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Xếp hạng nhân viên",
+        "className": "child-launchpad hover-span MnuTM022 open-MnuTM022",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Quản trị nhân sự",
+        "className": "child-launchpad hover-span MnuHRS002 open-MnuHRS002",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Hồ sơ nhân viên",
+        "className": "child-launchpad hover-span MnuHRS0102 open-MnuHRS0102",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Thông tin cơ bản",
+        "className": "child-launchpad hover-span MnuHRS0104 open-MnuHRS0104",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Thông tin ngân hàng",
+        "className": "child-launchpad hover-span MnuHRS0107 open-MnuHRS0107",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Thông tin cá nhân",
+        "className": "child-launchpad hover-span MnuHRS0108 open-MnuHRS0108",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Thông tin thường trú",
+        "className": "child-launchpad hover-span MnuHRS0109 open-MnuHRS0109",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Thông tin tạm trú",
+        "className": "child-launchpad hover-span MnuHRS0110 open-MnuHRS0110",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Nhắc nhở sinh nhật",
+        "className": "child-launchpad hover-span MnuHRS030 open-MnuHRS030",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "HĐ lao động hiện tại",
+        "className": "child-launchpad hover-span MnuHRS143 open-MnuHRS143",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Lịch sử ký phụ lụ...",
+        "className": "child-launchpad hover-span MnuHRS152 open-MnuHRS152",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Khen thưởng làm v...",
+        "className": "child-launchpad hover-span MnuHRS197 open-MnuHRS197",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Khen thưởng làm v...",
+        "className": "child-launchpad hover-span MnuHRS197 open-MnuHRS197",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Thống kê số ngày ...",
+        "className": "child-launchpad hover-span MnuHRS203 open-MnuHRS203",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Đánh giá nhân viên",
+        "className": "child-launchpad hover-span MnuHRS214 open-MnuHRS214",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Chi tiết đánh giá...",
+        "className": "child-launchpad hover-span MnuHRS215 open-MnuHRS215",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Kỷ luật",
+        "className": "child-launchpad hover-span MnuHRS011 open-MnuHRS011",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Danh sách nhân vi...",
+        "className": "child-launchpad hover-span MnuHRS218 open-MnuHRS218",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Danh sách email t...",
+        "className": "child-launchpad hover-span MnuHRS223 open-MnuHRS223",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Tổng quan CRM",
+        "className": "child-launchpad hover-span MnuKPI001 open-MnuKPI001",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Theo dõi dịch vụ",
+        "className": "child-launchpad hover-span MnuKPI012 open-MnuKPI012",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Dữ liệu khách hàng",
+        "className": "child-launchpad hover-span MnuKPI003 open-MnuKPI003",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Sales Pipeline",
+        "className": "child-launchpad hover-span MnuKPI007 open-MnuKPI007",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Doanh số",
+        "className": "child-launchpad hover-span MnuKPI447 open-MnuKPI447",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Nhiệm vụ",
+        "className": "child-launchpad hover-span MnuKPI028 open-MnuKPI028",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Dữ liệu GoogleMaps",
+        "className": "child-launchpad hover-span MnuKPI039 open-MnuKPI039",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Báo giá",
+        "className": "child-launchpad hover-span MnuKPI066 open-MnuKPI066",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Kho",
+        "className": "child-launchpad hover-span MnuKPI034 open-MnuKPI034",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Hỗ trợ",
+        "className": "child-launchpad hover-span MnuKPI031 open-MnuKPI031",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Thiết lập",
+        "className": "child-launchpad hover-span MnuKPI030 open-MnuKPI030",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Chi tiết thông ti...",
+        "className": "child-launchpad hover-span MnuKPI018 open-MnuKPI018",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Chi tiết lệnh nhậ...",
+        "className": "child-launchpad hover-span MnuKPI020 open-MnuKPI020",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Chi tiết lệnh xuấ...",
+        "className": "child-launchpad hover-span MnuKPI023 open-MnuKPI023",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Chi tiết thông ti...",
+        "className": "child-launchpad hover-span MnuKPI024 open-MnuKPI024",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Chi tiết chăm sóc...",
+        "className": "child-launchpad hover-span MnuKPI011 open-MnuKPI011",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Phê duyệt doanh số",
+        "className": "child-launchpad hover-span MnuKPI068 open-MnuKPI068",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Theo dõi lead Mar...",
+        "className": "child-launchpad hover-span MnuKPI448 open-MnuKPI448",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Email gửi thủ công",
+        "className": "child-launchpad hover-span MnuKPI002 open-MnuKPI002",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Gửi tin nhắn zalo...",
+        "className": "child-launchpad hover-span MnuKPI045 open-MnuKPI045",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Khung chat Zalo",
+        "className": "child-launchpad hover-span MnuKPI046 open-MnuKPI046",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Chỉnh sửa zalo sa...",
+        "className": "child-launchpad hover-span MnuKPI047 open-MnuKPI047",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Sản phẩm marketing",
+        "className": "child-launchpad hover-span MnuKPI048 open-MnuKPI048",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Lịch sử tin AI tạ...",
+        "className": "child-launchpad hover-span MnuKPI049 open-MnuKPI049",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Nội dung đăng tải",
+        "className": "child-launchpad hover-span MnuKPI005 open-MnuKPI005",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Các cuộc họp",
+        "className": "child-launchpad hover-span MnuKPI006 open-MnuKPI006",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Import bất thường",
+        "className": "child-launchpad hover-span MnuKPI015 open-MnuKPI015",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Tạo LEAD",
+        "className": "child-launchpad hover-span MnuKPI026 open-MnuKPI026",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Thêm khách hàng",
+        "className": "child-launchpad hover-span MnuKPI027 open-MnuKPI027",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Danh sách công ty...",
+        "className": "child-launchpad hover-span MnuKPI449 open-MnuKPI449",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Zalo",
+        "className": "child-launchpad hover-span MnuTM037 open-MnuTM037",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Thêm/Sửa liên hệ ...",
+        "className": "child-launchpad hover-span MnuKPI041 open-MnuKPI041",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Gửi lời mời",
+        "className": "child-launchpad hover-span MnuHRS3239 open-MnuHRS3239",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Các loại dịch vụ ...",
+        "className": "child-launchpad hover-span MnuHRS3240 open-MnuHRS3240",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Các email theo dõ...",
+        "className": "child-launchpad hover-span MnuKPI010 open-MnuKPI010",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Thiết lập KPI nhâ...",
+        "className": "child-launchpad hover-span MnuKPI016 open-MnuKPI016",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Loại chi tiết hợp...",
+        "className": "child-launchpad hover-span MnuKPI035 open-MnuKPI035",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Thêm/Sửa chi tiết...",
+        "className": "child-launchpad hover-span MnuKPI036 open-MnuKPI036",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Loại sản phẩm",
+        "className": "child-launchpad hover-span MnuKPI037 open-MnuKPI037",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Thêm/Sửa loại sản...",
+        "className": "child-launchpad hover-span MnuKPI038 open-MnuKPI038",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Danh sách nhân vi...",
+        "className": "child-launchpad hover-span MnuKPI040 open-MnuKPI040",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Tổng quan hỗ trợ",
+        "className": "child-launchpad hover-span MnuHRS32389 open-MnuHRS32389",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Hướng dẫn sử dụng",
+        "className": "child-launchpad hover-span MnuHRS3250 open-MnuHRS3250",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Danh sách hỗ trợ",
+        "className": "child-launchpad hover-span MnuHRS3237 open-MnuHRS3237",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Thư ký cuộc họp",
+        "className": "child-launchpad hover-span MnuTM036 open-MnuTM036",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Danh mục sản phẩm",
+        "className": "child-launchpad hover-span MnuKPI017 open-MnuKPI017",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Lịch sử nhập kho",
+        "className": "child-launchpad hover-span MnuKPI019 open-MnuKPI019",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Lịch sử xuất kho",
+        "className": "child-launchpad hover-span MnuKPI021 open-MnuKPI021",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Thu thập dữ liệu",
+        "className": "child-launchpad hover-span MnuHRS036 open-MnuHRS036",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Lọc dữ liệu",
+        "className": "child-launchpad hover-span MnuHRS064 open-MnuHRS064",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Báo giá phần mềm",
+        "className": "child-launchpad hover-span MnuCSM004 open-MnuCSM004",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Thêm/Sửa báo giá",
+        "className": "child-launchpad hover-span MnuCSM005 open-MnuCSM005",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Thêm/Sửa phân hệ",
+        "className": "child-launchpad hover-span MnuKPI446 open-MnuKPI446",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Nội dung đánh giá",
+        "className": "child-launchpad hover-span MnuHRS226 open-MnuHRS226",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Hướng dẫn",
+        "className": "child-launchpad hover-span MnuMDT10034 open-MnuMDT10034",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Thiết lập vòng th...",
+        "className": "child-launchpad hover-span MnuMDT292 open-MnuMDT292",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Xin chi phí",
+        "className": "child-launchpad hover-span MnuHRS032 open-MnuHRS032",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Tổng quan tuyển dụng",
+        "className": "child-launchpad hover-span MnuREC002 open-MnuREC002",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Thêm mới tin tuyể...",
+        "className": "child-launchpad hover-span MnuREC003 open-MnuREC003",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Ứng viên",
+        "className": "child-launchpad hover-span MnuREC004 open-MnuREC004",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Thông tin ứng viên",
+        "className": "child-launchpad hover-span MnuREC005 open-MnuREC005",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Lịch tuyển dụng",
+        "className": "child-launchpad hover-span MnuREC006 open-MnuREC006",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Thêm mới lịch tuy...",
+        "className": "child-launchpad hover-span MnuREC007 open-MnuREC007",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Gửi Email",
+        "className": "child-launchpad hover-span MnuREC014 open-MnuREC014",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Các tin tuyển dụng",
+        "className": "child-launchpad hover-span MnuREC015 open-MnuREC015",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Chi tiết tin tuyể...",
+        "className": "child-launchpad hover-span MnuREC016 open-MnuREC016",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Lịch sử chấm công...",
+        "className": "child-launchpad hover-span MnuHRS1932 open-MnuHRS1932",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Chấm công cá nhân",
+        "className": "child-launchpad hover-span MnuWPT010 open-MnuWPT010",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Thêm / Sửa môn học",
+        "className": "child-launchpad hover-span MnuHRS042 open-MnuHRS042",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Thêm / Sửa đáp án",
+        "className": "child-launchpad hover-span MnuHRS043 open-MnuHRS043",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Tiến độ nhóm kiến...",
+        "className": "child-launchpad hover-span MnuTM042 open-MnuTM042",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Bài học của tôi",
+        "className": "child-launchpad hover-span MnuTN004 open-MnuTN004",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Làm bài kiểm tra",
+        "className": "child-launchpad hover-span MnuTN012 open-MnuTN012",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Kết quả bài kiểm tra",
+        "className": "child-launchpad hover-span MnuTN013 open-MnuTN013",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Cấu hình nhóm kiế...",
+        "className": "child-launchpad hover-span MnuTN019 open-MnuTN019",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Thông tin nhóm ki...",
+        "className": "child-launchpad hover-span MnuTN020 open-MnuTN020",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Quản lý môn học",
+        "className": "child-launchpad hover-span MnuHRS041 open-MnuHRS041",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Bản mẫu chứng chỉ",
+        "className": "child-launchpad hover-span MnuTM023 open-MnuTM023",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Thiết kế bản mẫu ...",
+        "className": "child-launchpad hover-span MnuTM024 open-MnuTM024",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Xin nghỉ phép",
+        "className": "child-launchpad hover-span MnuWPT315 open-MnuWPT315",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Xin tăng ca",
+        "className": "child-launchpad hover-span MnuWPT316 open-MnuWPT316",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Xin bù công",
+        "className": "child-launchpad hover-span MnuHRS033 open-MnuHRS033",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Phiếu lương",
+        "className": "child-launchpad hover-span MnuPRL445 open-MnuPRL445",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Danh sách thông báo",
+        "className": "child-launchpad hover-span MnuWPT045 open-MnuWPT045",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Chi tiết thông báo",
+        "className": "child-launchpad hover-span MnuWPT049 open-MnuWPT049",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Thanh toán công nợ",
+        "className": "child-launchpad hover-span MnuPRL409 open-MnuPRL409",
+        "id": "",
+        "href": ""
+      }
+    ],
+    "MnuTAD000": [
+      {
+        "text": "☰",
+        "className": "menu-button main-menu-button",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Quản lý chấm công Lịch sử chấm công GPS Chấm công cá nhân",
+        "className": "",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Quản lý chấm công",
+        "className": "menu-f",
+        "id": "",
+        "href": "#"
+      },
+      {
+        "text": "Lịch sử chấm công GPS",
+        "className": "active",
+        "id": "MnuHRS1932",
+        "href": ""
+      },
+      {
+        "text": "Lịch sử chấm công GPS",
+        "className": "",
+        "id": "",
+        "href": "#"
+      },
+      {
+        "text": "Chấm công cá nhân",
+        "className": "",
+        "id": "MnuWPT010",
+        "href": ""
+      },
+      {
+        "text": "Chấm công cá nhân",
+        "className": "",
+        "id": "",
+        "href": "#"
+      },
+      {
+        "text": "DS Nhân Viên",
+        "className": "nav-item mb-0 w-50",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "NV Nghỉ Việc",
+        "className": "nav-item mb-0 w-50",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Lịch sử chấm công GPS",
+        "className": "nav-item",
+        "id": "tab-MnuHRS1932",
+        "href": ""
+      },
+      {
+        "text": "Quản trị nhân sự",
+        "className": "nav-item",
+        "id": "tab-MnuHRS002",
+        "href": ""
+      },
+      {
+        "text": "Tổng quan hỗ trợ",
+        "className": "nav-item",
+        "id": "tab-MnuHRS32389",
+        "href": ""
+      },
+      {
+        "text": "Danh sách công việc",
+        "className": "child-launchpad hover-span MnuAT001 open-MnuAT001",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Chi tiết công việc",
+        "className": "child-launchpad hover-span MnuAT002 open-MnuAT002",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Mẫu công việc",
+        "className": "child-launchpad hover-span MnuAT003 open-MnuAT003",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Nhật ký công việc",
+        "className": "child-launchpad hover-span MnuAT004 open-MnuAT004",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Lịch sử công việc",
+        "className": "child-launchpad hover-span MnuAT005 open-MnuAT005",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Theo dõi dự án",
+        "className": "child-launchpad hover-span MnuAT006 open-MnuAT006",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Đói việc",
+        "className": "child-launchpad hover-span MnuAT007 open-MnuAT007",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Chi tiết dự án",
+        "className": "child-launchpad hover-span MnuAT008 open-MnuAT008",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Đơn khiếu nại",
+        "className": "child-launchpad hover-span MnuAT010 open-MnuAT010",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Xếp hạng nhân viên",
+        "className": "child-launchpad hover-span MnuTM022 open-MnuTM022",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Quản trị nhân sự",
+        "className": "child-launchpad hover-span MnuHRS002 open-MnuHRS002",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Hồ sơ nhân viên",
+        "className": "child-launchpad hover-span MnuHRS0102 open-MnuHRS0102",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Thông tin cơ bản",
+        "className": "child-launchpad hover-span MnuHRS0104 open-MnuHRS0104",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Thông tin ngân hàng",
+        "className": "child-launchpad hover-span MnuHRS0107 open-MnuHRS0107",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Thông tin cá nhân",
+        "className": "child-launchpad hover-span MnuHRS0108 open-MnuHRS0108",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Thông tin thường trú",
+        "className": "child-launchpad hover-span MnuHRS0109 open-MnuHRS0109",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Thông tin tạm trú",
+        "className": "child-launchpad hover-span MnuHRS0110 open-MnuHRS0110",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Nhắc nhở sinh nhật",
+        "className": "child-launchpad hover-span MnuHRS030 open-MnuHRS030",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "HĐ lao động hiện tại",
+        "className": "child-launchpad hover-span MnuHRS143 open-MnuHRS143",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Lịch sử ký phụ lụ...",
+        "className": "child-launchpad hover-span MnuHRS152 open-MnuHRS152",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Khen thưởng làm v...",
+        "className": "child-launchpad hover-span MnuHRS197 open-MnuHRS197",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Khen thưởng làm v...",
+        "className": "child-launchpad hover-span MnuHRS197 open-MnuHRS197",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Thống kê số ngày ...",
+        "className": "child-launchpad hover-span MnuHRS203 open-MnuHRS203",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Đánh giá nhân viên",
+        "className": "child-launchpad hover-span MnuHRS214 open-MnuHRS214",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Chi tiết đánh giá...",
+        "className": "child-launchpad hover-span MnuHRS215 open-MnuHRS215",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Kỷ luật",
+        "className": "child-launchpad hover-span MnuHRS011 open-MnuHRS011",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Danh sách nhân vi...",
+        "className": "child-launchpad hover-span MnuHRS218 open-MnuHRS218",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Danh sách email t...",
+        "className": "child-launchpad hover-span MnuHRS223 open-MnuHRS223",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Tổng quan CRM",
+        "className": "child-launchpad hover-span MnuKPI001 open-MnuKPI001",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Theo dõi dịch vụ",
+        "className": "child-launchpad hover-span MnuKPI012 open-MnuKPI012",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Dữ liệu khách hàng",
+        "className": "child-launchpad hover-span MnuKPI003 open-MnuKPI003",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Sales Pipeline",
+        "className": "child-launchpad hover-span MnuKPI007 open-MnuKPI007",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Doanh số",
+        "className": "child-launchpad hover-span MnuKPI447 open-MnuKPI447",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Nhiệm vụ",
+        "className": "child-launchpad hover-span MnuKPI028 open-MnuKPI028",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Dữ liệu GoogleMaps",
+        "className": "child-launchpad hover-span MnuKPI039 open-MnuKPI039",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Báo giá",
+        "className": "child-launchpad hover-span MnuKPI066 open-MnuKPI066",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Kho",
+        "className": "child-launchpad hover-span MnuKPI034 open-MnuKPI034",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Hỗ trợ",
+        "className": "child-launchpad hover-span MnuKPI031 open-MnuKPI031",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Thiết lập",
+        "className": "child-launchpad hover-span MnuKPI030 open-MnuKPI030",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Chi tiết thông ti...",
+        "className": "child-launchpad hover-span MnuKPI018 open-MnuKPI018",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Chi tiết lệnh nhậ...",
+        "className": "child-launchpad hover-span MnuKPI020 open-MnuKPI020",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Chi tiết lệnh xuấ...",
+        "className": "child-launchpad hover-span MnuKPI023 open-MnuKPI023",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Chi tiết thông ti...",
+        "className": "child-launchpad hover-span MnuKPI024 open-MnuKPI024",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Chi tiết chăm sóc...",
+        "className": "child-launchpad hover-span MnuKPI011 open-MnuKPI011",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Phê duyệt doanh số",
+        "className": "child-launchpad hover-span MnuKPI068 open-MnuKPI068",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Theo dõi lead Mar...",
+        "className": "child-launchpad hover-span MnuKPI448 open-MnuKPI448",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Email gửi thủ công",
+        "className": "child-launchpad hover-span MnuKPI002 open-MnuKPI002",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Gửi tin nhắn zalo...",
+        "className": "child-launchpad hover-span MnuKPI045 open-MnuKPI045",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Khung chat Zalo",
+        "className": "child-launchpad hover-span MnuKPI046 open-MnuKPI046",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Chỉnh sửa zalo sa...",
+        "className": "child-launchpad hover-span MnuKPI047 open-MnuKPI047",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Sản phẩm marketing",
+        "className": "child-launchpad hover-span MnuKPI048 open-MnuKPI048",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Lịch sử tin AI tạ...",
+        "className": "child-launchpad hover-span MnuKPI049 open-MnuKPI049",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Nội dung đăng tải",
+        "className": "child-launchpad hover-span MnuKPI005 open-MnuKPI005",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Các cuộc họp",
+        "className": "child-launchpad hover-span MnuKPI006 open-MnuKPI006",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Import bất thường",
+        "className": "child-launchpad hover-span MnuKPI015 open-MnuKPI015",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Tạo LEAD",
+        "className": "child-launchpad hover-span MnuKPI026 open-MnuKPI026",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Thêm khách hàng",
+        "className": "child-launchpad hover-span MnuKPI027 open-MnuKPI027",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Danh sách công ty...",
+        "className": "child-launchpad hover-span MnuKPI449 open-MnuKPI449",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Zalo",
+        "className": "child-launchpad hover-span MnuTM037 open-MnuTM037",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Thêm/Sửa liên hệ ...",
+        "className": "child-launchpad hover-span MnuKPI041 open-MnuKPI041",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Gửi lời mời",
+        "className": "child-launchpad hover-span MnuHRS3239 open-MnuHRS3239",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Các loại dịch vụ ...",
+        "className": "child-launchpad hover-span MnuHRS3240 open-MnuHRS3240",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Các email theo dõ...",
+        "className": "child-launchpad hover-span MnuKPI010 open-MnuKPI010",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Thiết lập KPI nhâ...",
+        "className": "child-launchpad hover-span MnuKPI016 open-MnuKPI016",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Loại chi tiết hợp...",
+        "className": "child-launchpad hover-span MnuKPI035 open-MnuKPI035",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Thêm/Sửa chi tiết...",
+        "className": "child-launchpad hover-span MnuKPI036 open-MnuKPI036",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Loại sản phẩm",
+        "className": "child-launchpad hover-span MnuKPI037 open-MnuKPI037",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Thêm/Sửa loại sản...",
+        "className": "child-launchpad hover-span MnuKPI038 open-MnuKPI038",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Danh sách nhân vi...",
+        "className": "child-launchpad hover-span MnuKPI040 open-MnuKPI040",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Tổng quan hỗ trợ",
+        "className": "child-launchpad hover-span MnuHRS32389 open-MnuHRS32389",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Hướng dẫn sử dụng",
+        "className": "child-launchpad hover-span MnuHRS3250 open-MnuHRS3250",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Danh sách hỗ trợ",
+        "className": "child-launchpad hover-span MnuHRS3237 open-MnuHRS3237",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Thư ký cuộc họp",
+        "className": "child-launchpad hover-span MnuTM036 open-MnuTM036",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Danh mục sản phẩm",
+        "className": "child-launchpad hover-span MnuKPI017 open-MnuKPI017",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Lịch sử nhập kho",
+        "className": "child-launchpad hover-span MnuKPI019 open-MnuKPI019",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Lịch sử xuất kho",
+        "className": "child-launchpad hover-span MnuKPI021 open-MnuKPI021",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Thu thập dữ liệu",
+        "className": "child-launchpad hover-span MnuHRS036 open-MnuHRS036",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Lọc dữ liệu",
+        "className": "child-launchpad hover-span MnuHRS064 open-MnuHRS064",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Báo giá phần mềm",
+        "className": "child-launchpad hover-span MnuCSM004 open-MnuCSM004",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Thêm/Sửa báo giá",
+        "className": "child-launchpad hover-span MnuCSM005 open-MnuCSM005",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Thêm/Sửa phân hệ",
+        "className": "child-launchpad hover-span MnuKPI446 open-MnuKPI446",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Nội dung đánh giá",
+        "className": "child-launchpad hover-span MnuHRS226 open-MnuHRS226",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Hướng dẫn",
+        "className": "child-launchpad hover-span MnuMDT10034 open-MnuMDT10034",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Thiết lập vòng th...",
+        "className": "child-launchpad hover-span MnuMDT292 open-MnuMDT292",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Xin chi phí",
+        "className": "child-launchpad hover-span MnuHRS032 open-MnuHRS032",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Tổng quan tuyển dụng",
+        "className": "child-launchpad hover-span MnuREC002 open-MnuREC002",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Thêm mới tin tuyể...",
+        "className": "child-launchpad hover-span MnuREC003 open-MnuREC003",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Ứng viên",
+        "className": "child-launchpad hover-span MnuREC004 open-MnuREC004",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Thông tin ứng viên",
+        "className": "child-launchpad hover-span MnuREC005 open-MnuREC005",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Lịch tuyển dụng",
+        "className": "child-launchpad hover-span MnuREC006 open-MnuREC006",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Thêm mới lịch tuy...",
+        "className": "child-launchpad hover-span MnuREC007 open-MnuREC007",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Gửi Email",
+        "className": "child-launchpad hover-span MnuREC014 open-MnuREC014",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Các tin tuyển dụng",
+        "className": "child-launchpad hover-span MnuREC015 open-MnuREC015",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Chi tiết tin tuyể...",
+        "className": "child-launchpad hover-span MnuREC016 open-MnuREC016",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Lịch sử chấm công...",
+        "className": "child-launchpad hover-span MnuHRS1932 open-MnuHRS1932",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Chấm công cá nhân",
+        "className": "child-launchpad hover-span MnuWPT010 open-MnuWPT010",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Thêm / Sửa môn học",
+        "className": "child-launchpad hover-span MnuHRS042 open-MnuHRS042",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Thêm / Sửa đáp án",
+        "className": "child-launchpad hover-span MnuHRS043 open-MnuHRS043",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Tiến độ nhóm kiến...",
+        "className": "child-launchpad hover-span MnuTM042 open-MnuTM042",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Bài học của tôi",
+        "className": "child-launchpad hover-span MnuTN004 open-MnuTN004",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Làm bài kiểm tra",
+        "className": "child-launchpad hover-span MnuTN012 open-MnuTN012",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Kết quả bài kiểm tra",
+        "className": "child-launchpad hover-span MnuTN013 open-MnuTN013",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Cấu hình nhóm kiế...",
+        "className": "child-launchpad hover-span MnuTN019 open-MnuTN019",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Thông tin nhóm ki...",
+        "className": "child-launchpad hover-span MnuTN020 open-MnuTN020",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Quản lý môn học",
+        "className": "child-launchpad hover-span MnuHRS041 open-MnuHRS041",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Bản mẫu chứng chỉ",
+        "className": "child-launchpad hover-span MnuTM023 open-MnuTM023",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Thiết kế bản mẫu ...",
+        "className": "child-launchpad hover-span MnuTM024 open-MnuTM024",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Xin nghỉ phép",
+        "className": "child-launchpad hover-span MnuWPT315 open-MnuWPT315",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Xin tăng ca",
+        "className": "child-launchpad hover-span MnuWPT316 open-MnuWPT316",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Xin bù công",
+        "className": "child-launchpad hover-span MnuHRS033 open-MnuHRS033",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Phiếu lương",
+        "className": "child-launchpad hover-span MnuPRL445 open-MnuPRL445",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Danh sách thông báo",
+        "className": "child-launchpad hover-span MnuWPT045 open-MnuWPT045",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Chi tiết thông báo",
+        "className": "child-launchpad hover-span MnuWPT049 open-MnuWPT049",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Thanh toán công nợ",
+        "className": "child-launchpad hover-span MnuPRL409 open-MnuPRL409",
+        "id": "",
+        "href": ""
+      }
+    ],
+    "MnuPRL000": [
+      {
+        "text": "☰",
+        "className": "menu-button main-menu-button",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Tính lương Xin chi phí",
+        "className": "",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Tính lương",
+        "className": "menu-f",
+        "id": "",
+        "href": "#"
+      },
+      {
+        "text": "Xin chi phí",
+        "className": "active",
+        "id": "MnuHRS032",
+        "href": ""
+      },
+      {
+        "text": "Xin chi phí",
+        "className": "",
+        "id": "",
+        "href": "#"
+      },
+      {
+        "text": "DS Nhân Viên",
+        "className": "nav-item mb-0 w-50",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "NV Nghỉ Việc",
+        "className": "nav-item mb-0 w-50",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Xin chi phí",
+        "className": "nav-item",
+        "id": "tab-MnuHRS032",
+        "href": ""
+      },
+      {
+        "text": "Lịch sử chấm công GPS",
+        "className": "nav-item",
+        "id": "tab-MnuHRS1932",
+        "href": ""
+      },
+      {
+        "text": "Quản trị nhân sự",
+        "className": "nav-item",
+        "id": "tab-MnuHRS002",
+        "href": ""
+      },
+      {
+        "text": "Tổng quan hỗ trợ",
+        "className": "nav-item",
+        "id": "tab-MnuHRS32389",
+        "href": ""
+      },
+      {
+        "text": "Danh sách công việc",
+        "className": "child-launchpad hover-span MnuAT001 open-MnuAT001",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Chi tiết công việc",
+        "className": "child-launchpad hover-span MnuAT002 open-MnuAT002",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Mẫu công việc",
+        "className": "child-launchpad hover-span MnuAT003 open-MnuAT003",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Nhật ký công việc",
+        "className": "child-launchpad hover-span MnuAT004 open-MnuAT004",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Lịch sử công việc",
+        "className": "child-launchpad hover-span MnuAT005 open-MnuAT005",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Theo dõi dự án",
+        "className": "child-launchpad hover-span MnuAT006 open-MnuAT006",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Đói việc",
+        "className": "child-launchpad hover-span MnuAT007 open-MnuAT007",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Chi tiết dự án",
+        "className": "child-launchpad hover-span MnuAT008 open-MnuAT008",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Đơn khiếu nại",
+        "className": "child-launchpad hover-span MnuAT010 open-MnuAT010",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Xếp hạng nhân viên",
+        "className": "child-launchpad hover-span MnuTM022 open-MnuTM022",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Quản trị nhân sự",
+        "className": "child-launchpad hover-span MnuHRS002 open-MnuHRS002",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Hồ sơ nhân viên",
+        "className": "child-launchpad hover-span MnuHRS0102 open-MnuHRS0102",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Thông tin cơ bản",
+        "className": "child-launchpad hover-span MnuHRS0104 open-MnuHRS0104",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Thông tin ngân hàng",
+        "className": "child-launchpad hover-span MnuHRS0107 open-MnuHRS0107",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Thông tin cá nhân",
+        "className": "child-launchpad hover-span MnuHRS0108 open-MnuHRS0108",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Thông tin thường trú",
+        "className": "child-launchpad hover-span MnuHRS0109 open-MnuHRS0109",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Thông tin tạm trú",
+        "className": "child-launchpad hover-span MnuHRS0110 open-MnuHRS0110",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Nhắc nhở sinh nhật",
+        "className": "child-launchpad hover-span MnuHRS030 open-MnuHRS030",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "HĐ lao động hiện tại",
+        "className": "child-launchpad hover-span MnuHRS143 open-MnuHRS143",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Lịch sử ký phụ lụ...",
+        "className": "child-launchpad hover-span MnuHRS152 open-MnuHRS152",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Khen thưởng làm v...",
+        "className": "child-launchpad hover-span MnuHRS197 open-MnuHRS197",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Khen thưởng làm v...",
+        "className": "child-launchpad hover-span MnuHRS197 open-MnuHRS197",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Thống kê số ngày ...",
+        "className": "child-launchpad hover-span MnuHRS203 open-MnuHRS203",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Đánh giá nhân viên",
+        "className": "child-launchpad hover-span MnuHRS214 open-MnuHRS214",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Chi tiết đánh giá...",
+        "className": "child-launchpad hover-span MnuHRS215 open-MnuHRS215",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Kỷ luật",
+        "className": "child-launchpad hover-span MnuHRS011 open-MnuHRS011",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Danh sách nhân vi...",
+        "className": "child-launchpad hover-span MnuHRS218 open-MnuHRS218",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Danh sách email t...",
+        "className": "child-launchpad hover-span MnuHRS223 open-MnuHRS223",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Tổng quan CRM",
+        "className": "child-launchpad hover-span MnuKPI001 open-MnuKPI001",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Theo dõi dịch vụ",
+        "className": "child-launchpad hover-span MnuKPI012 open-MnuKPI012",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Dữ liệu khách hàng",
+        "className": "child-launchpad hover-span MnuKPI003 open-MnuKPI003",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Sales Pipeline",
+        "className": "child-launchpad hover-span MnuKPI007 open-MnuKPI007",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Doanh số",
+        "className": "child-launchpad hover-span MnuKPI447 open-MnuKPI447",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Nhiệm vụ",
+        "className": "child-launchpad hover-span MnuKPI028 open-MnuKPI028",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Dữ liệu GoogleMaps",
+        "className": "child-launchpad hover-span MnuKPI039 open-MnuKPI039",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Báo giá",
+        "className": "child-launchpad hover-span MnuKPI066 open-MnuKPI066",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Kho",
+        "className": "child-launchpad hover-span MnuKPI034 open-MnuKPI034",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Hỗ trợ",
+        "className": "child-launchpad hover-span MnuKPI031 open-MnuKPI031",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Thiết lập",
+        "className": "child-launchpad hover-span MnuKPI030 open-MnuKPI030",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Chi tiết thông ti...",
+        "className": "child-launchpad hover-span MnuKPI018 open-MnuKPI018",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Chi tiết lệnh nhậ...",
+        "className": "child-launchpad hover-span MnuKPI020 open-MnuKPI020",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Chi tiết lệnh xuấ...",
+        "className": "child-launchpad hover-span MnuKPI023 open-MnuKPI023",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Chi tiết thông ti...",
+        "className": "child-launchpad hover-span MnuKPI024 open-MnuKPI024",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Chi tiết chăm sóc...",
+        "className": "child-launchpad hover-span MnuKPI011 open-MnuKPI011",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Phê duyệt doanh số",
+        "className": "child-launchpad hover-span MnuKPI068 open-MnuKPI068",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Theo dõi lead Mar...",
+        "className": "child-launchpad hover-span MnuKPI448 open-MnuKPI448",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Email gửi thủ công",
+        "className": "child-launchpad hover-span MnuKPI002 open-MnuKPI002",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Gửi tin nhắn zalo...",
+        "className": "child-launchpad hover-span MnuKPI045 open-MnuKPI045",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Khung chat Zalo",
+        "className": "child-launchpad hover-span MnuKPI046 open-MnuKPI046",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Chỉnh sửa zalo sa...",
+        "className": "child-launchpad hover-span MnuKPI047 open-MnuKPI047",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Sản phẩm marketing",
+        "className": "child-launchpad hover-span MnuKPI048 open-MnuKPI048",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Lịch sử tin AI tạ...",
+        "className": "child-launchpad hover-span MnuKPI049 open-MnuKPI049",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Nội dung đăng tải",
+        "className": "child-launchpad hover-span MnuKPI005 open-MnuKPI005",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Các cuộc họp",
+        "className": "child-launchpad hover-span MnuKPI006 open-MnuKPI006",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Import bất thường",
+        "className": "child-launchpad hover-span MnuKPI015 open-MnuKPI015",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Tạo LEAD",
+        "className": "child-launchpad hover-span MnuKPI026 open-MnuKPI026",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Thêm khách hàng",
+        "className": "child-launchpad hover-span MnuKPI027 open-MnuKPI027",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Danh sách công ty...",
+        "className": "child-launchpad hover-span MnuKPI449 open-MnuKPI449",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Zalo",
+        "className": "child-launchpad hover-span MnuTM037 open-MnuTM037",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Thêm/Sửa liên hệ ...",
+        "className": "child-launchpad hover-span MnuKPI041 open-MnuKPI041",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Gửi lời mời",
+        "className": "child-launchpad hover-span MnuHRS3239 open-MnuHRS3239",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Các loại dịch vụ ...",
+        "className": "child-launchpad hover-span MnuHRS3240 open-MnuHRS3240",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Các email theo dõ...",
+        "className": "child-launchpad hover-span MnuKPI010 open-MnuKPI010",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Thiết lập KPI nhâ...",
+        "className": "child-launchpad hover-span MnuKPI016 open-MnuKPI016",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Loại chi tiết hợp...",
+        "className": "child-launchpad hover-span MnuKPI035 open-MnuKPI035",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Thêm/Sửa chi tiết...",
+        "className": "child-launchpad hover-span MnuKPI036 open-MnuKPI036",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Loại sản phẩm",
+        "className": "child-launchpad hover-span MnuKPI037 open-MnuKPI037",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Thêm/Sửa loại sản...",
+        "className": "child-launchpad hover-span MnuKPI038 open-MnuKPI038",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Danh sách nhân vi...",
+        "className": "child-launchpad hover-span MnuKPI040 open-MnuKPI040",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Tổng quan hỗ trợ",
+        "className": "child-launchpad hover-span MnuHRS32389 open-MnuHRS32389",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Hướng dẫn sử dụng",
+        "className": "child-launchpad hover-span MnuHRS3250 open-MnuHRS3250",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Danh sách hỗ trợ",
+        "className": "child-launchpad hover-span MnuHRS3237 open-MnuHRS3237",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Thư ký cuộc họp",
+        "className": "child-launchpad hover-span MnuTM036 open-MnuTM036",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Danh mục sản phẩm",
+        "className": "child-launchpad hover-span MnuKPI017 open-MnuKPI017",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Lịch sử nhập kho",
+        "className": "child-launchpad hover-span MnuKPI019 open-MnuKPI019",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Lịch sử xuất kho",
+        "className": "child-launchpad hover-span MnuKPI021 open-MnuKPI021",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Thu thập dữ liệu",
+        "className": "child-launchpad hover-span MnuHRS036 open-MnuHRS036",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Lọc dữ liệu",
+        "className": "child-launchpad hover-span MnuHRS064 open-MnuHRS064",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Báo giá phần mềm",
+        "className": "child-launchpad hover-span MnuCSM004 open-MnuCSM004",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Thêm/Sửa báo giá",
+        "className": "child-launchpad hover-span MnuCSM005 open-MnuCSM005",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Thêm/Sửa phân hệ",
+        "className": "child-launchpad hover-span MnuKPI446 open-MnuKPI446",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Nội dung đánh giá",
+        "className": "child-launchpad hover-span MnuHRS226 open-MnuHRS226",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Hướng dẫn",
+        "className": "child-launchpad hover-span MnuMDT10034 open-MnuMDT10034",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Thiết lập vòng th...",
+        "className": "child-launchpad hover-span MnuMDT292 open-MnuMDT292",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Xin chi phí",
+        "className": "child-launchpad hover-span MnuHRS032 open-MnuHRS032",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Tổng quan tuyển dụng",
+        "className": "child-launchpad hover-span MnuREC002 open-MnuREC002",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Thêm mới tin tuyể...",
+        "className": "child-launchpad hover-span MnuREC003 open-MnuREC003",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Ứng viên",
+        "className": "child-launchpad hover-span MnuREC004 open-MnuREC004",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Thông tin ứng viên",
+        "className": "child-launchpad hover-span MnuREC005 open-MnuREC005",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Lịch tuyển dụng",
+        "className": "child-launchpad hover-span MnuREC006 open-MnuREC006",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Thêm mới lịch tuy...",
+        "className": "child-launchpad hover-span MnuREC007 open-MnuREC007",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Gửi Email",
+        "className": "child-launchpad hover-span MnuREC014 open-MnuREC014",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Các tin tuyển dụng",
+        "className": "child-launchpad hover-span MnuREC015 open-MnuREC015",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Chi tiết tin tuyể...",
+        "className": "child-launchpad hover-span MnuREC016 open-MnuREC016",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Lịch sử chấm công...",
+        "className": "child-launchpad hover-span MnuHRS1932 open-MnuHRS1932",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Chấm công cá nhân",
+        "className": "child-launchpad hover-span MnuWPT010 open-MnuWPT010",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Thêm / Sửa môn học",
+        "className": "child-launchpad hover-span MnuHRS042 open-MnuHRS042",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Thêm / Sửa đáp án",
+        "className": "child-launchpad hover-span MnuHRS043 open-MnuHRS043",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Tiến độ nhóm kiến...",
+        "className": "child-launchpad hover-span MnuTM042 open-MnuTM042",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Bài học của tôi",
+        "className": "child-launchpad hover-span MnuTN004 open-MnuTN004",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Làm bài kiểm tra",
+        "className": "child-launchpad hover-span MnuTN012 open-MnuTN012",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Kết quả bài kiểm tra",
+        "className": "child-launchpad hover-span MnuTN013 open-MnuTN013",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Cấu hình nhóm kiế...",
+        "className": "child-launchpad hover-span MnuTN019 open-MnuTN019",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Thông tin nhóm ki...",
+        "className": "child-launchpad hover-span MnuTN020 open-MnuTN020",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Quản lý môn học",
+        "className": "child-launchpad hover-span MnuHRS041 open-MnuHRS041",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Bản mẫu chứng chỉ",
+        "className": "child-launchpad hover-span MnuTM023 open-MnuTM023",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Thiết kế bản mẫu ...",
+        "className": "child-launchpad hover-span MnuTM024 open-MnuTM024",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Xin nghỉ phép",
+        "className": "child-launchpad hover-span MnuWPT315 open-MnuWPT315",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Xin tăng ca",
+        "className": "child-launchpad hover-span MnuWPT316 open-MnuWPT316",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Xin bù công",
+        "className": "child-launchpad hover-span MnuHRS033 open-MnuHRS033",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Phiếu lương",
+        "className": "child-launchpad hover-span MnuPRL445 open-MnuPRL445",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Danh sách thông báo",
+        "className": "child-launchpad hover-span MnuWPT045 open-MnuWPT045",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Chi tiết thông báo",
+        "className": "child-launchpad hover-span MnuWPT049 open-MnuWPT049",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Thanh toán công nợ",
+        "className": "child-launchpad hover-span MnuPRL409 open-MnuPRL409",
+        "id": "",
+        "href": ""
+      }
+    ],
+    "MnuWPT000": [
+      {
+        "text": "☰",
+        "className": "menu-button main-menu-button",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Cổng thông tin nhân sự",
+        "className": "menu-f",
+        "id": "",
+        "href": "#"
+      },
+      {
+        "text": "Xin nghỉ phép",
+        "className": "active",
+        "id": "MnuWPT315",
+        "href": ""
+      },
+      {
+        "text": "Xin nghỉ phép",
+        "className": "",
+        "id": "",
+        "href": "#"
+      },
+      {
+        "text": "Xin tăng ca",
+        "className": "",
+        "id": "MnuWPT316",
+        "href": ""
+      },
+      {
+        "text": "Xin tăng ca",
+        "className": "",
+        "id": "",
+        "href": "#"
+      },
+      {
+        "text": "Xin bù công",
+        "className": "",
+        "id": "MnuHRS033",
+        "href": ""
+      },
+      {
+        "text": "Xin bù công",
+        "className": "",
+        "id": "",
+        "href": "#"
+      },
+      {
+        "text": "Phiếu lương",
+        "className": "",
+        "id": "MnuPRL445",
+        "href": ""
+      },
+      {
+        "text": "Phiếu lương",
+        "className": "",
+        "id": "",
+        "href": "#"
+      },
+      {
+        "text": "Danh sách thông báo",
+        "className": "",
+        "id": "MnuWPT045",
+        "href": ""
+      },
+      {
+        "text": "Danh sách thông báo",
+        "className": "",
+        "id": "",
+        "href": "#"
+      },
+      {
+        "text": "Thanh toán công nợ",
+        "className": "",
+        "id": "MnuPRL409",
+        "href": ""
+      },
+      {
+        "text": "Thanh toán công nợ",
+        "className": "",
+        "id": "",
+        "href": "#"
+      },
+      {
+        "text": "DS Nhân Viên",
+        "className": "nav-item mb-0 w-50",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "NV Nghỉ Việc",
+        "className": "nav-item mb-0 w-50",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Xin nghỉ phép",
+        "className": "nav-item",
+        "id": "tab-MnuWPT315",
+        "href": ""
+      },
+      {
+        "text": "Xin chi phí",
+        "className": "nav-item",
+        "id": "tab-MnuHRS032",
+        "href": ""
+      },
+      {
+        "text": "Lịch sử chấm công GPS",
+        "className": "nav-item",
+        "id": "tab-MnuHRS1932",
+        "href": ""
+      },
+      {
+        "text": "Quản trị nhân sự",
+        "className": "nav-item",
+        "id": "tab-MnuHRS002",
+        "href": ""
+      },
+      {
+        "text": "Tổng quan hỗ trợ",
+        "className": "nav-item",
+        "id": "tab-MnuHRS32389",
+        "href": ""
+      },
+      {
+        "text": "Danh sách công việc",
+        "className": "child-launchpad hover-span MnuAT001 open-MnuAT001",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Chi tiết công việc",
+        "className": "child-launchpad hover-span MnuAT002 open-MnuAT002",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Mẫu công việc",
+        "className": "child-launchpad hover-span MnuAT003 open-MnuAT003",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Nhật ký công việc",
+        "className": "child-launchpad hover-span MnuAT004 open-MnuAT004",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Lịch sử công việc",
+        "className": "child-launchpad hover-span MnuAT005 open-MnuAT005",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Theo dõi dự án",
+        "className": "child-launchpad hover-span MnuAT006 open-MnuAT006",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Đói việc",
+        "className": "child-launchpad hover-span MnuAT007 open-MnuAT007",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Chi tiết dự án",
+        "className": "child-launchpad hover-span MnuAT008 open-MnuAT008",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Đơn khiếu nại",
+        "className": "child-launchpad hover-span MnuAT010 open-MnuAT010",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Xếp hạng nhân viên",
+        "className": "child-launchpad hover-span MnuTM022 open-MnuTM022",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Quản trị nhân sự",
+        "className": "child-launchpad hover-span MnuHRS002 open-MnuHRS002",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Hồ sơ nhân viên",
+        "className": "child-launchpad hover-span MnuHRS0102 open-MnuHRS0102",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Thông tin cơ bản",
+        "className": "child-launchpad hover-span MnuHRS0104 open-MnuHRS0104",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Thông tin ngân hàng",
+        "className": "child-launchpad hover-span MnuHRS0107 open-MnuHRS0107",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Thông tin cá nhân",
+        "className": "child-launchpad hover-span MnuHRS0108 open-MnuHRS0108",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Thông tin thường trú",
+        "className": "child-launchpad hover-span MnuHRS0109 open-MnuHRS0109",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Thông tin tạm trú",
+        "className": "child-launchpad hover-span MnuHRS0110 open-MnuHRS0110",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Nhắc nhở sinh nhật",
+        "className": "child-launchpad hover-span MnuHRS030 open-MnuHRS030",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "HĐ lao động hiện tại",
+        "className": "child-launchpad hover-span MnuHRS143 open-MnuHRS143",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Lịch sử ký phụ lụ...",
+        "className": "child-launchpad hover-span MnuHRS152 open-MnuHRS152",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Khen thưởng làm v...",
+        "className": "child-launchpad hover-span MnuHRS197 open-MnuHRS197",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Khen thưởng làm v...",
+        "className": "child-launchpad hover-span MnuHRS197 open-MnuHRS197",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Thống kê số ngày ...",
+        "className": "child-launchpad hover-span MnuHRS203 open-MnuHRS203",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Đánh giá nhân viên",
+        "className": "child-launchpad hover-span MnuHRS214 open-MnuHRS214",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Chi tiết đánh giá...",
+        "className": "child-launchpad hover-span MnuHRS215 open-MnuHRS215",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Kỷ luật",
+        "className": "child-launchpad hover-span MnuHRS011 open-MnuHRS011",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Danh sách nhân vi...",
+        "className": "child-launchpad hover-span MnuHRS218 open-MnuHRS218",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Danh sách email t...",
+        "className": "child-launchpad hover-span MnuHRS223 open-MnuHRS223",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Tổng quan CRM",
+        "className": "child-launchpad hover-span MnuKPI001 open-MnuKPI001",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Theo dõi dịch vụ",
+        "className": "child-launchpad hover-span MnuKPI012 open-MnuKPI012",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Dữ liệu khách hàng",
+        "className": "child-launchpad hover-span MnuKPI003 open-MnuKPI003",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Sales Pipeline",
+        "className": "child-launchpad hover-span MnuKPI007 open-MnuKPI007",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Doanh số",
+        "className": "child-launchpad hover-span MnuKPI447 open-MnuKPI447",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Nhiệm vụ",
+        "className": "child-launchpad hover-span MnuKPI028 open-MnuKPI028",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Dữ liệu GoogleMaps",
+        "className": "child-launchpad hover-span MnuKPI039 open-MnuKPI039",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Báo giá",
+        "className": "child-launchpad hover-span MnuKPI066 open-MnuKPI066",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Kho",
+        "className": "child-launchpad hover-span MnuKPI034 open-MnuKPI034",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Hỗ trợ",
+        "className": "child-launchpad hover-span MnuKPI031 open-MnuKPI031",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Thiết lập",
+        "className": "child-launchpad hover-span MnuKPI030 open-MnuKPI030",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Chi tiết thông ti...",
+        "className": "child-launchpad hover-span MnuKPI018 open-MnuKPI018",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Chi tiết lệnh nhậ...",
+        "className": "child-launchpad hover-span MnuKPI020 open-MnuKPI020",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Chi tiết lệnh xuấ...",
+        "className": "child-launchpad hover-span MnuKPI023 open-MnuKPI023",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Chi tiết thông ti...",
+        "className": "child-launchpad hover-span MnuKPI024 open-MnuKPI024",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Chi tiết chăm sóc...",
+        "className": "child-launchpad hover-span MnuKPI011 open-MnuKPI011",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Phê duyệt doanh số",
+        "className": "child-launchpad hover-span MnuKPI068 open-MnuKPI068",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Theo dõi lead Mar...",
+        "className": "child-launchpad hover-span MnuKPI448 open-MnuKPI448",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Email gửi thủ công",
+        "className": "child-launchpad hover-span MnuKPI002 open-MnuKPI002",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Gửi tin nhắn zalo...",
+        "className": "child-launchpad hover-span MnuKPI045 open-MnuKPI045",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Khung chat Zalo",
+        "className": "child-launchpad hover-span MnuKPI046 open-MnuKPI046",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Chỉnh sửa zalo sa...",
+        "className": "child-launchpad hover-span MnuKPI047 open-MnuKPI047",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Sản phẩm marketing",
+        "className": "child-launchpad hover-span MnuKPI048 open-MnuKPI048",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Lịch sử tin AI tạ...",
+        "className": "child-launchpad hover-span MnuKPI049 open-MnuKPI049",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Nội dung đăng tải",
+        "className": "child-launchpad hover-span MnuKPI005 open-MnuKPI005",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Các cuộc họp",
+        "className": "child-launchpad hover-span MnuKPI006 open-MnuKPI006",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Import bất thường",
+        "className": "child-launchpad hover-span MnuKPI015 open-MnuKPI015",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Tạo LEAD",
+        "className": "child-launchpad hover-span MnuKPI026 open-MnuKPI026",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Thêm khách hàng",
+        "className": "child-launchpad hover-span MnuKPI027 open-MnuKPI027",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Danh sách công ty...",
+        "className": "child-launchpad hover-span MnuKPI449 open-MnuKPI449",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Zalo",
+        "className": "child-launchpad hover-span MnuTM037 open-MnuTM037",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Thêm/Sửa liên hệ ...",
+        "className": "child-launchpad hover-span MnuKPI041 open-MnuKPI041",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Gửi lời mời",
+        "className": "child-launchpad hover-span MnuHRS3239 open-MnuHRS3239",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Các loại dịch vụ ...",
+        "className": "child-launchpad hover-span MnuHRS3240 open-MnuHRS3240",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Các email theo dõ...",
+        "className": "child-launchpad hover-span MnuKPI010 open-MnuKPI010",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Thiết lập KPI nhâ...",
+        "className": "child-launchpad hover-span MnuKPI016 open-MnuKPI016",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Loại chi tiết hợp...",
+        "className": "child-launchpad hover-span MnuKPI035 open-MnuKPI035",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Thêm/Sửa chi tiết...",
+        "className": "child-launchpad hover-span MnuKPI036 open-MnuKPI036",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Loại sản phẩm",
+        "className": "child-launchpad hover-span MnuKPI037 open-MnuKPI037",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Thêm/Sửa loại sản...",
+        "className": "child-launchpad hover-span MnuKPI038 open-MnuKPI038",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Danh sách nhân vi...",
+        "className": "child-launchpad hover-span MnuKPI040 open-MnuKPI040",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Tổng quan hỗ trợ",
+        "className": "child-launchpad hover-span MnuHRS32389 open-MnuHRS32389",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Hướng dẫn sử dụng",
+        "className": "child-launchpad hover-span MnuHRS3250 open-MnuHRS3250",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Danh sách hỗ trợ",
+        "className": "child-launchpad hover-span MnuHRS3237 open-MnuHRS3237",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Thư ký cuộc họp",
+        "className": "child-launchpad hover-span MnuTM036 open-MnuTM036",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Danh mục sản phẩm",
+        "className": "child-launchpad hover-span MnuKPI017 open-MnuKPI017",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Lịch sử nhập kho",
+        "className": "child-launchpad hover-span MnuKPI019 open-MnuKPI019",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Lịch sử xuất kho",
+        "className": "child-launchpad hover-span MnuKPI021 open-MnuKPI021",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Thu thập dữ liệu",
+        "className": "child-launchpad hover-span MnuHRS036 open-MnuHRS036",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Lọc dữ liệu",
+        "className": "child-launchpad hover-span MnuHRS064 open-MnuHRS064",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Báo giá phần mềm",
+        "className": "child-launchpad hover-span MnuCSM004 open-MnuCSM004",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Thêm/Sửa báo giá",
+        "className": "child-launchpad hover-span MnuCSM005 open-MnuCSM005",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Thêm/Sửa phân hệ",
+        "className": "child-launchpad hover-span MnuKPI446 open-MnuKPI446",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Nội dung đánh giá",
+        "className": "child-launchpad hover-span MnuHRS226 open-MnuHRS226",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Hướng dẫn",
+        "className": "child-launchpad hover-span MnuMDT10034 open-MnuMDT10034",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Thiết lập vòng th...",
+        "className": "child-launchpad hover-span MnuMDT292 open-MnuMDT292",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Xin chi phí",
+        "className": "child-launchpad hover-span MnuHRS032 open-MnuHRS032",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Tổng quan tuyển dụng",
+        "className": "child-launchpad hover-span MnuREC002 open-MnuREC002",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Thêm mới tin tuyể...",
+        "className": "child-launchpad hover-span MnuREC003 open-MnuREC003",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Ứng viên",
+        "className": "child-launchpad hover-span MnuREC004 open-MnuREC004",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Thông tin ứng viên",
+        "className": "child-launchpad hover-span MnuREC005 open-MnuREC005",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Lịch tuyển dụng",
+        "className": "child-launchpad hover-span MnuREC006 open-MnuREC006",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Thêm mới lịch tuy...",
+        "className": "child-launchpad hover-span MnuREC007 open-MnuREC007",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Gửi Email",
+        "className": "child-launchpad hover-span MnuREC014 open-MnuREC014",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Các tin tuyển dụng",
+        "className": "child-launchpad hover-span MnuREC015 open-MnuREC015",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Chi tiết tin tuyể...",
+        "className": "child-launchpad hover-span MnuREC016 open-MnuREC016",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Lịch sử chấm công...",
+        "className": "child-launchpad hover-span MnuHRS1932 open-MnuHRS1932",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Chấm công cá nhân",
+        "className": "child-launchpad hover-span MnuWPT010 open-MnuWPT010",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Thêm / Sửa môn học",
+        "className": "child-launchpad hover-span MnuHRS042 open-MnuHRS042",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Thêm / Sửa đáp án",
+        "className": "child-launchpad hover-span MnuHRS043 open-MnuHRS043",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Tiến độ nhóm kiến...",
+        "className": "child-launchpad hover-span MnuTM042 open-MnuTM042",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Bài học của tôi",
+        "className": "child-launchpad hover-span MnuTN004 open-MnuTN004",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Làm bài kiểm tra",
+        "className": "child-launchpad hover-span MnuTN012 open-MnuTN012",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Kết quả bài kiểm tra",
+        "className": "child-launchpad hover-span MnuTN013 open-MnuTN013",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Cấu hình nhóm kiế...",
+        "className": "child-launchpad hover-span MnuTN019 open-MnuTN019",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Thông tin nhóm ki...",
+        "className": "child-launchpad hover-span MnuTN020 open-MnuTN020",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Quản lý môn học",
+        "className": "child-launchpad hover-span MnuHRS041 open-MnuHRS041",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Bản mẫu chứng chỉ",
+        "className": "child-launchpad hover-span MnuTM023 open-MnuTM023",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Thiết kế bản mẫu ...",
+        "className": "child-launchpad hover-span MnuTM024 open-MnuTM024",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Xin nghỉ phép",
+        "className": "child-launchpad hover-span MnuWPT315 open-MnuWPT315",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Xin tăng ca",
+        "className": "child-launchpad hover-span MnuWPT316 open-MnuWPT316",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Xin bù công",
+        "className": "child-launchpad hover-span MnuHRS033 open-MnuHRS033",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Phiếu lương",
+        "className": "child-launchpad hover-span MnuPRL445 open-MnuPRL445",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Danh sách thông báo",
+        "className": "child-launchpad hover-span MnuWPT045 open-MnuWPT045",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Chi tiết thông báo",
+        "className": "child-launchpad hover-span MnuWPT049 open-MnuWPT049",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Thanh toán công nợ",
+        "className": "child-launchpad hover-span MnuPRL409 open-MnuPRL409",
+        "id": "",
+        "href": ""
+      }
+    ],
+    "MnuKPI000": [
+      {
+        "text": "☰",
+        "className": "menu-button main-menu-button",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Trang chủ CRM",
+        "className": "menu-f",
+        "id": "",
+        "href": "#"
+      },
+      {
+        "text": "Tổng quan CRM",
+        "className": "active",
+        "id": "MnuKPI001",
+        "href": ""
+      },
+      {
+        "text": "Tổng quan CRM",
+        "className": "",
+        "id": "",
+        "href": "#"
+      },
+      {
+        "text": "Theo dõi dịch vụ",
+        "className": "",
+        "id": "MnuKPI012",
+        "href": ""
+      },
+      {
+        "text": "Theo dõi dịch vụ",
+        "className": "",
+        "id": "",
+        "href": "#"
+      },
+      {
+        "text": "Dữ liệu khách hàng",
+        "className": "",
+        "id": "MnuKPI003",
+        "href": ""
+      },
+      {
+        "text": "Dữ liệu khách hàng",
+        "className": "",
+        "id": "",
+        "href": "#"
+      },
+      {
+        "text": "Sales Pipeline",
+        "className": "",
+        "id": "MnuKPI007",
+        "href": ""
+      },
+      {
+        "text": "Sales Pipeline",
+        "className": "",
+        "id": "",
+        "href": "#"
+      },
+      {
+        "text": "Doanh số",
+        "className": "",
+        "id": "MnuKPI447",
+        "href": ""
+      },
+      {
+        "text": "Doanh số",
+        "className": "",
+        "id": "",
+        "href": "#"
+      },
+      {
+        "text": "Nhiệm vụ",
+        "className": "",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Nhiệm vụ",
+        "className": "",
+        "id": "",
+        "href": "#"
+      },
+      {
+        "text": "Email gửi thủ công",
+        "className": "",
+        "id": "MnuKPI002",
+        "href": ""
+      },
+      {
+        "text": "Email gửi thủ công",
+        "className": "",
+        "id": "",
+        "href": "#"
+      },
+      {
+        "text": "Gửi tin nhắn zalo tự động",
+        "className": "",
+        "id": "MnuKPI045",
+        "href": ""
+      },
+      {
+        "text": "Gửi tin nhắn zalo tự động",
+        "className": "",
+        "id": "",
+        "href": "#"
+      },
+      {
+        "text": "Sản phẩm marketing",
+        "className": "",
+        "id": "MnuKPI048",
+        "href": ""
+      },
+      {
+        "text": "Sản phẩm marketing",
+        "className": "",
+        "id": "",
+        "href": "#"
+      },
+      {
+        "text": "Lịch sử tin AI tạo tin nhắn",
+        "className": "",
+        "id": "MnuKPI049",
+        "href": ""
+      },
+      {
+        "text": "Lịch sử tin AI tạo tin nhắn",
+        "className": "",
+        "id": "",
+        "href": "#"
+      },
+      {
+        "text": "Nội dung đăng tải",
+        "className": "",
+        "id": "MnuKPI005",
+        "href": ""
+      },
+      {
+        "text": "Nội dung đăng tải",
+        "className": "",
+        "id": "",
+        "href": "#"
+      },
+      {
+        "text": "Các cuộc họp",
+        "className": "",
+        "id": "MnuKPI006",
+        "href": ""
+      },
+      {
+        "text": "Các cuộc họp",
+        "className": "",
+        "id": "",
+        "href": "#"
+      },
+      {
+        "text": "Import bất thường",
+        "className": "",
+        "id": "MnuKPI015",
+        "href": ""
+      },
+      {
+        "text": "Import bất thường",
+        "className": "",
+        "id": "",
+        "href": "#"
+      },
+      {
+        "text": "Dữ liệu GoogleMaps",
+        "className": "",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Dữ liệu GoogleMaps",
+        "className": "",
+        "id": "",
+        "href": "#"
+      },
+      {
+        "text": "Thu thập dữ liệu",
+        "className": "",
+        "id": "MnuHRS036",
+        "href": ""
+      },
+      {
+        "text": "Thu thập dữ liệu",
+        "className": "",
+        "id": "",
+        "href": "#"
+      },
+      {
+        "text": "Lọc dữ liệu",
+        "className": "",
+        "id": "MnuHRS064",
+        "href": ""
+      },
+      {
+        "text": "Lọc dữ liệu",
+        "className": "",
+        "id": "",
+        "href": "#"
+      },
+      {
+        "text": "Báo giá",
+        "className": "",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Báo giá",
+        "className": "",
+        "id": "",
+        "href": "#"
+      },
+      {
+        "text": "Báo giá phần mềm",
+        "className": "",
+        "id": "MnuCSM004",
+        "href": ""
+      },
+      {
+        "text": "Báo giá phần mềm",
+        "className": "",
+        "id": "",
+        "href": "#"
+      },
+      {
+        "text": "Thêm/Sửa báo giá",
+        "className": "",
+        "id": "MnuCSM005",
+        "href": ""
+      },
+      {
+        "text": "Thêm/Sửa báo giá",
+        "className": "",
+        "id": "",
+        "href": "#"
+      },
+      {
+        "text": "Thêm/Sửa phân hệ",
+        "className": "",
+        "id": "MnuKPI446",
+        "href": ""
+      },
+      {
+        "text": "Thêm/Sửa phân hệ",
+        "className": "",
+        "id": "",
+        "href": "#"
+      },
+      {
+        "text": "Kho",
+        "className": "",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Kho",
+        "className": "",
+        "id": "",
+        "href": "#"
+      },
+      {
+        "text": "Danh mục sản phẩm",
+        "className": "",
+        "id": "MnuKPI017",
+        "href": ""
+      },
+      {
+        "text": "Danh mục sản phẩm",
+        "className": "",
+        "id": "",
+        "href": "#"
+      },
+      {
+        "text": "Lịch sử nhập kho",
+        "className": "",
+        "id": "MnuKPI019",
+        "href": ""
+      },
+      {
+        "text": "Lịch sử nhập kho",
+        "className": "",
+        "id": "",
+        "href": "#"
+      },
+      {
+        "text": "Lịch sử xuất kho",
+        "className": "",
+        "id": "MnuKPI021",
+        "href": ""
+      },
+      {
+        "text": "Lịch sử xuất kho",
+        "className": "",
+        "id": "",
+        "href": "#"
+      },
+      {
+        "text": "Hỗ trợ",
+        "className": "",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Hỗ trợ",
+        "className": "",
+        "id": "",
+        "href": "#"
+      },
+      {
+        "text": "Tổng quan hỗ trợ",
+        "className": "",
+        "id": "MnuHRS32389",
+        "href": ""
+      },
+      {
+        "text": "Tổng quan hỗ trợ",
+        "className": "",
+        "id": "",
+        "href": "#"
+      },
+      {
+        "text": "Hướng dẫn sử dụng",
+        "className": "",
+        "id": "MnuHRS3250",
+        "href": ""
+      },
+      {
+        "text": "Hướng dẫn sử dụng",
+        "className": "",
+        "id": "",
+        "href": "#"
+      },
+      {
+        "text": "Danh sách hỗ trợ",
+        "className": "",
+        "id": "MnuHRS3237",
+        "href": ""
+      },
+      {
+        "text": "Danh sách hỗ trợ",
+        "className": "",
+        "id": "",
+        "href": "#"
+      },
+      {
+        "text": "Thư ký cuộc họp",
+        "className": "",
+        "id": "MnuTM036",
+        "href": ""
+      },
+      {
+        "text": "Thư ký cuộc họp",
+        "className": "",
+        "id": "",
+        "href": "#"
+      },
+      {
+        "text": "Thiết lập",
+        "className": "",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Thiết lập",
+        "className": "",
+        "id": "",
+        "href": "#"
+      },
+      {
+        "text": "Danh sách công ty CRM",
+        "className": "",
+        "id": "MnuKPI449",
+        "href": ""
+      },
+      {
+        "text": "Danh sách công ty CRM",
+        "className": "",
+        "id": "",
+        "href": "#"
+      },
+      {
+        "text": "Zalo",
+        "className": "",
+        "id": "MnuTM037",
+        "href": ""
+      },
+      {
+        "text": "Zalo",
+        "className": "",
+        "id": "",
+        "href": "#"
+      },
+      {
+        "text": "Thêm/Sửa liên hệ nhân viên",
+        "className": "",
+        "id": "MnuKPI041",
+        "href": ""
+      },
+      {
+        "text": "Thêm/Sửa liên hệ nhân viên",
+        "className": "",
+        "id": "",
+        "href": "#"
+      },
+      {
+        "text": "Gửi lời mời",
+        "className": "",
+        "id": "MnuHRS3239",
+        "href": ""
+      },
+      {
+        "text": "Gửi lời mời",
+        "className": "",
+        "id": "",
+        "href": "#"
+      },
+      {
+        "text": "Các loại dịch vụ bán hàng",
+        "className": "",
+        "id": "MnuHRS3240",
+        "href": ""
+      },
+      {
+        "text": "Các loại dịch vụ bán hàng",
+        "className": "",
+        "id": "",
+        "href": "#"
+      },
+      {
+        "text": "Các email theo dõi KPI",
+        "className": "",
+        "id": "MnuKPI010",
+        "href": ""
+      },
+      {
+        "text": "Các email theo dõi KPI",
+        "className": "",
+        "id": "",
+        "href": "#"
+      },
+      {
+        "text": "Thiết lập KPI nhân viên",
+        "className": "",
+        "id": "MnuKPI016",
+        "href": ""
+      },
+      {
+        "text": "Thiết lập KPI nhân viên",
+        "className": "",
+        "id": "",
+        "href": "#"
+      },
+      {
+        "text": "Loại chi tiết hợp đồng",
+        "className": "",
+        "id": "MnuKPI035",
+        "href": ""
+      },
+      {
+        "text": "Loại chi tiết hợp đồng",
+        "className": "",
+        "id": "",
+        "href": "#"
+      },
+      {
+        "text": "Loại sản phẩm",
+        "className": "",
+        "id": "MnuKPI037",
+        "href": ""
+      },
+      {
+        "text": "Loại sản phẩm",
+        "className": "",
+        "id": "",
+        "href": "#"
+      },
+      {
+        "text": "Danh sách nhân viên kinh doanh",
+        "className": "",
+        "id": "MnuKPI040",
+        "href": ""
+      },
+      {
+        "text": "Danh sách nhân viên kinh doanh",
+        "className": "",
+        "id": "",
+        "href": "#"
+      },
+      {
+        "text": "Theo dõi lead Marketing",
+        "className": "",
+        "id": "MnuKPI448",
+        "href": ""
+      },
+      {
+        "text": "Theo dõi lead Marketing",
+        "className": "",
+        "id": "",
+        "href": "#"
+      },
+      {
+        "text": "DS Nhân Viên",
+        "className": "nav-item mb-0 w-50",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "NV Nghỉ Việc",
+        "className": "nav-item mb-0 w-50",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Tổng quan CRM",
+        "className": "nav-item",
+        "id": "tab-MnuKPI001",
+        "href": ""
+      },
+      {
+        "text": "Xin nghỉ phép",
+        "className": "nav-item",
+        "id": "tab-MnuWPT315",
+        "href": ""
+      },
+      {
+        "text": "Xin chi phí",
+        "className": "nav-item",
+        "id": "tab-MnuHRS032",
+        "href": ""
+      },
+      {
+        "text": "Lịch sử chấm công GPS",
+        "className": "nav-item",
+        "id": "tab-MnuHRS1932",
+        "href": ""
+      },
+      {
+        "text": "Quản trị nhân sự",
+        "className": "nav-item",
+        "id": "tab-MnuHRS002",
+        "href": ""
+      },
+      {
+        "text": "Tổng quan hỗ trợ",
+        "className": "nav-item",
+        "id": "tab-MnuHRS32389",
+        "href": ""
+      },
+      {
+        "text": "Danh sách công việc",
+        "className": "child-launchpad hover-span MnuAT001 open-MnuAT001",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Chi tiết công việc",
+        "className": "child-launchpad hover-span MnuAT002 open-MnuAT002",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Mẫu công việc",
+        "className": "child-launchpad hover-span MnuAT003 open-MnuAT003",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Nhật ký công việc",
+        "className": "child-launchpad hover-span MnuAT004 open-MnuAT004",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Lịch sử công việc",
+        "className": "child-launchpad hover-span MnuAT005 open-MnuAT005",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Theo dõi dự án",
+        "className": "child-launchpad hover-span MnuAT006 open-MnuAT006",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Đói việc",
+        "className": "child-launchpad hover-span MnuAT007 open-MnuAT007",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Chi tiết dự án",
+        "className": "child-launchpad hover-span MnuAT008 open-MnuAT008",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Đơn khiếu nại",
+        "className": "child-launchpad hover-span MnuAT010 open-MnuAT010",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Xếp hạng nhân viên",
+        "className": "child-launchpad hover-span MnuTM022 open-MnuTM022",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Quản trị nhân sự",
+        "className": "child-launchpad hover-span MnuHRS002 open-MnuHRS002",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Hồ sơ nhân viên",
+        "className": "child-launchpad hover-span MnuHRS0102 open-MnuHRS0102",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Thông tin cơ bản",
+        "className": "child-launchpad hover-span MnuHRS0104 open-MnuHRS0104",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Thông tin ngân hàng",
+        "className": "child-launchpad hover-span MnuHRS0107 open-MnuHRS0107",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Thông tin cá nhân",
+        "className": "child-launchpad hover-span MnuHRS0108 open-MnuHRS0108",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Thông tin thường trú",
+        "className": "child-launchpad hover-span MnuHRS0109 open-MnuHRS0109",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Thông tin tạm trú",
+        "className": "child-launchpad hover-span MnuHRS0110 open-MnuHRS0110",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Nhắc nhở sinh nhật",
+        "className": "child-launchpad hover-span MnuHRS030 open-MnuHRS030",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "HĐ lao động hiện tại",
+        "className": "child-launchpad hover-span MnuHRS143 open-MnuHRS143",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Lịch sử ký phụ lụ...",
+        "className": "child-launchpad hover-span MnuHRS152 open-MnuHRS152",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Khen thưởng làm v...",
+        "className": "child-launchpad hover-span MnuHRS197 open-MnuHRS197",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Khen thưởng làm v...",
+        "className": "child-launchpad hover-span MnuHRS197 open-MnuHRS197",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Thống kê số ngày ...",
+        "className": "child-launchpad hover-span MnuHRS203 open-MnuHRS203",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Đánh giá nhân viên",
+        "className": "child-launchpad hover-span MnuHRS214 open-MnuHRS214",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Chi tiết đánh giá...",
+        "className": "child-launchpad hover-span MnuHRS215 open-MnuHRS215",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Kỷ luật",
+        "className": "child-launchpad hover-span MnuHRS011 open-MnuHRS011",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Danh sách nhân vi...",
+        "className": "child-launchpad hover-span MnuHRS218 open-MnuHRS218",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Danh sách email t...",
+        "className": "child-launchpad hover-span MnuHRS223 open-MnuHRS223",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Tổng quan CRM",
+        "className": "child-launchpad hover-span MnuKPI001 open-MnuKPI001",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Theo dõi dịch vụ",
+        "className": "child-launchpad hover-span MnuKPI012 open-MnuKPI012",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Dữ liệu khách hàng",
+        "className": "child-launchpad hover-span MnuKPI003 open-MnuKPI003",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Sales Pipeline",
+        "className": "child-launchpad hover-span MnuKPI007 open-MnuKPI007",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Doanh số",
+        "className": "child-launchpad hover-span MnuKPI447 open-MnuKPI447",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Nhiệm vụ",
+        "className": "child-launchpad hover-span MnuKPI028 open-MnuKPI028",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Dữ liệu GoogleMaps",
+        "className": "child-launchpad hover-span MnuKPI039 open-MnuKPI039",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Báo giá",
+        "className": "child-launchpad hover-span MnuKPI066 open-MnuKPI066",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Kho",
+        "className": "child-launchpad hover-span MnuKPI034 open-MnuKPI034",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Hỗ trợ",
+        "className": "child-launchpad hover-span MnuKPI031 open-MnuKPI031",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Thiết lập",
+        "className": "child-launchpad hover-span MnuKPI030 open-MnuKPI030",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Chi tiết thông ti...",
+        "className": "child-launchpad hover-span MnuKPI018 open-MnuKPI018",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Chi tiết lệnh nhậ...",
+        "className": "child-launchpad hover-span MnuKPI020 open-MnuKPI020",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Chi tiết lệnh xuấ...",
+        "className": "child-launchpad hover-span MnuKPI023 open-MnuKPI023",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Chi tiết thông ti...",
+        "className": "child-launchpad hover-span MnuKPI024 open-MnuKPI024",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Chi tiết chăm sóc...",
+        "className": "child-launchpad hover-span MnuKPI011 open-MnuKPI011",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Phê duyệt doanh số",
+        "className": "child-launchpad hover-span MnuKPI068 open-MnuKPI068",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Theo dõi lead Mar...",
+        "className": "child-launchpad hover-span MnuKPI448 open-MnuKPI448",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Email gửi thủ công",
+        "className": "child-launchpad hover-span MnuKPI002 open-MnuKPI002",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Gửi tin nhắn zalo...",
+        "className": "child-launchpad hover-span MnuKPI045 open-MnuKPI045",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Khung chat Zalo",
+        "className": "child-launchpad hover-span MnuKPI046 open-MnuKPI046",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Chỉnh sửa zalo sa...",
+        "className": "child-launchpad hover-span MnuKPI047 open-MnuKPI047",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Sản phẩm marketing",
+        "className": "child-launchpad hover-span MnuKPI048 open-MnuKPI048",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Lịch sử tin AI tạ...",
+        "className": "child-launchpad hover-span MnuKPI049 open-MnuKPI049",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Nội dung đăng tải",
+        "className": "child-launchpad hover-span MnuKPI005 open-MnuKPI005",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Các cuộc họp",
+        "className": "child-launchpad hover-span MnuKPI006 open-MnuKPI006",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Import bất thường",
+        "className": "child-launchpad hover-span MnuKPI015 open-MnuKPI015",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Tạo LEAD",
+        "className": "child-launchpad hover-span MnuKPI026 open-MnuKPI026",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Thêm khách hàng",
+        "className": "child-launchpad hover-span MnuKPI027 open-MnuKPI027",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Danh sách công ty...",
+        "className": "child-launchpad hover-span MnuKPI449 open-MnuKPI449",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Zalo",
+        "className": "child-launchpad hover-span MnuTM037 open-MnuTM037",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Thêm/Sửa liên hệ ...",
+        "className": "child-launchpad hover-span MnuKPI041 open-MnuKPI041",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Gửi lời mời",
+        "className": "child-launchpad hover-span MnuHRS3239 open-MnuHRS3239",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Các loại dịch vụ ...",
+        "className": "child-launchpad hover-span MnuHRS3240 open-MnuHRS3240",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Các email theo dõ...",
+        "className": "child-launchpad hover-span MnuKPI010 open-MnuKPI010",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Thiết lập KPI nhâ...",
+        "className": "child-launchpad hover-span MnuKPI016 open-MnuKPI016",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Loại chi tiết hợp...",
+        "className": "child-launchpad hover-span MnuKPI035 open-MnuKPI035",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Thêm/Sửa chi tiết...",
+        "className": "child-launchpad hover-span MnuKPI036 open-MnuKPI036",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Loại sản phẩm",
+        "className": "child-launchpad hover-span MnuKPI037 open-MnuKPI037",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Thêm/Sửa loại sản...",
+        "className": "child-launchpad hover-span MnuKPI038 open-MnuKPI038",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Danh sách nhân vi...",
+        "className": "child-launchpad hover-span MnuKPI040 open-MnuKPI040",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Tổng quan hỗ trợ",
+        "className": "child-launchpad hover-span MnuHRS32389 open-MnuHRS32389",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Hướng dẫn sử dụng",
+        "className": "child-launchpad hover-span MnuHRS3250 open-MnuHRS3250",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Danh sách hỗ trợ",
+        "className": "child-launchpad hover-span MnuHRS3237 open-MnuHRS3237",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Thư ký cuộc họp",
+        "className": "child-launchpad hover-span MnuTM036 open-MnuTM036",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Danh mục sản phẩm",
+        "className": "child-launchpad hover-span MnuKPI017 open-MnuKPI017",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Lịch sử nhập kho",
+        "className": "child-launchpad hover-span MnuKPI019 open-MnuKPI019",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Lịch sử xuất kho",
+        "className": "child-launchpad hover-span MnuKPI021 open-MnuKPI021",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Thu thập dữ liệu",
+        "className": "child-launchpad hover-span MnuHRS036 open-MnuHRS036",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Lọc dữ liệu",
+        "className": "child-launchpad hover-span MnuHRS064 open-MnuHRS064",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Báo giá phần mềm",
+        "className": "child-launchpad hover-span MnuCSM004 open-MnuCSM004",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Thêm/Sửa báo giá",
+        "className": "child-launchpad hover-span MnuCSM005 open-MnuCSM005",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Thêm/Sửa phân hệ",
+        "className": "child-launchpad hover-span MnuKPI446 open-MnuKPI446",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Nội dung đánh giá",
+        "className": "child-launchpad hover-span MnuHRS226 open-MnuHRS226",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Hướng dẫn",
+        "className": "child-launchpad hover-span MnuMDT10034 open-MnuMDT10034",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Thiết lập vòng th...",
+        "className": "child-launchpad hover-span MnuMDT292 open-MnuMDT292",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Xin chi phí",
+        "className": "child-launchpad hover-span MnuHRS032 open-MnuHRS032",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Tổng quan tuyển dụng",
+        "className": "child-launchpad hover-span MnuREC002 open-MnuREC002",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Thêm mới tin tuyể...",
+        "className": "child-launchpad hover-span MnuREC003 open-MnuREC003",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Ứng viên",
+        "className": "child-launchpad hover-span MnuREC004 open-MnuREC004",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Thông tin ứng viên",
+        "className": "child-launchpad hover-span MnuREC005 open-MnuREC005",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Lịch tuyển dụng",
+        "className": "child-launchpad hover-span MnuREC006 open-MnuREC006",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Thêm mới lịch tuy...",
+        "className": "child-launchpad hover-span MnuREC007 open-MnuREC007",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Gửi Email",
+        "className": "child-launchpad hover-span MnuREC014 open-MnuREC014",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Các tin tuyển dụng",
+        "className": "child-launchpad hover-span MnuREC015 open-MnuREC015",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Chi tiết tin tuyể...",
+        "className": "child-launchpad hover-span MnuREC016 open-MnuREC016",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Lịch sử chấm công...",
+        "className": "child-launchpad hover-span MnuHRS1932 open-MnuHRS1932",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Chấm công cá nhân",
+        "className": "child-launchpad hover-span MnuWPT010 open-MnuWPT010",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Thêm / Sửa môn học",
+        "className": "child-launchpad hover-span MnuHRS042 open-MnuHRS042",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Thêm / Sửa đáp án",
+        "className": "child-launchpad hover-span MnuHRS043 open-MnuHRS043",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Tiến độ nhóm kiến...",
+        "className": "child-launchpad hover-span MnuTM042 open-MnuTM042",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Bài học của tôi",
+        "className": "child-launchpad hover-span MnuTN004 open-MnuTN004",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Làm bài kiểm tra",
+        "className": "child-launchpad hover-span MnuTN012 open-MnuTN012",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Kết quả bài kiểm tra",
+        "className": "child-launchpad hover-span MnuTN013 open-MnuTN013",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Cấu hình nhóm kiế...",
+        "className": "child-launchpad hover-span MnuTN019 open-MnuTN019",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Thông tin nhóm ki...",
+        "className": "child-launchpad hover-span MnuTN020 open-MnuTN020",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Quản lý môn học",
+        "className": "child-launchpad hover-span MnuHRS041 open-MnuHRS041",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Bản mẫu chứng chỉ",
+        "className": "child-launchpad hover-span MnuTM023 open-MnuTM023",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Thiết kế bản mẫu ...",
+        "className": "child-launchpad hover-span MnuTM024 open-MnuTM024",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Xin nghỉ phép",
+        "className": "child-launchpad hover-span MnuWPT315 open-MnuWPT315",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Xin tăng ca",
+        "className": "child-launchpad hover-span MnuWPT316 open-MnuWPT316",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Xin bù công",
+        "className": "child-launchpad hover-span MnuHRS033 open-MnuHRS033",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Phiếu lương",
+        "className": "child-launchpad hover-span MnuPRL445 open-MnuPRL445",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Danh sách thông báo",
+        "className": "child-launchpad hover-span MnuWPT045 open-MnuWPT045",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Chi tiết thông báo",
+        "className": "child-launchpad hover-span MnuWPT049 open-MnuWPT049",
+        "id": "",
+        "href": ""
+      },
+      {
+        "text": "Thanh toán công nợ",
+        "className": "child-launchpad hover-span MnuPRL409 open-MnuPRL409",
+        "id": "",
+        "href": ""
+      }
+    ]
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "tcId": "TC-02",
+  "pageName": "login",
+  "title": "TC-02: Đăng nhập thất bại khi nhập sai mật khẩu",
+  "status": "FAILED",
+  "duration": "12.80s",
+  "errors": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('#username')\nExpected: visible\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" locator('#username') with timeout 15000ms\u001b[22m\n\u001b[2m  - waiting for locator('#username')\u001b[22m\n\u001b[2m  - Target page, context or browser has been closed\u001b[22m\n",
+  "attachments": {
+    "screenshots": [],
+    "videos": [
+      "login/TC-02/videos/video.webm"
+    ],
+    "traces": [
+      "login/TC-02/traces/trace.zip"
+    ]
+  },
+  "timestamp": "2026-10-15T08:05:37.239Z"
+}

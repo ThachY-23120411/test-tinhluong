@@ -1,0 +1,61 @@
+{
+  "tcId": "TC-06",
+  "pageName": "crm_sales_pipeline",
+  "title": "Kiểm tra Cấu Trúc Các Cột Giai Đoạn Bán Hàng & Badge Đếm Thẻ (TC-CTL-06)",
+  "testStatus": "PASSED",
+  "businessStatus": "PASSED",
+  "businessNotes": "PASS - Không gian Kanban phân cấp đầy đủ 16 cột giai đoạn và 8 badge số lượng chuẩn mực",
+  "defectEvidence": null,
+  "failureAnalysis": {},
+  "status": "PASSED",
+  "duration": "22.37s",
+  "errors": "",
+  "stepScreenshots": [
+    {
+      "step": 1,
+      "title": "Quét toàn bộ danh mục các cột giai đoạn bán hàng trên bảng Kanban",
+      "fileName": "TC-06-step01-quet-toan-bo-danh-muc-cac-cot-giai-doan-ban-hang-tren-bang-kanban.png",
+      "relPath": "crm_sales_pipeline/TC-06/screenshots/TC-06-step01-quet-toan-bo-danh-muc-cac-cot-giai-doan-ban-hang-tren-bang-kanban.png"
+    },
+    {
+      "step": 2,
+      "title": "Các badge đếm số lượng hiển thị rõ ràng trên từng cột giai đoạn",
+      "fileName": "TC-06-step02-cac-badge-dem-so-luong-hien-thi-ro-rang-tren-tung-cot-giai-doan.png",
+      "relPath": "crm_sales_pipeline/TC-06/screenshots/TC-06-step02-cac-badge-dem-so-luong-hien-thi-ro-rang-tren-tung-cot-giai-doan.png"
+    },
+    {
+      "step": 3,
+      "title": "Con trỏ Neon rà soát tiêu đề cột giai đoạn đầu tiên",
+      "fileName": "TC-06-step03-con-tro-neon-ra-soat-tieu-de-cot-giai-doan-dau-tien.png",
+      "relPath": "crm_sales_pipeline/TC-06/screenshots/TC-06-step03-con-tro-neon-ra-soat-tieu-de-cot-giai-doan-dau-tien.png"
+    },
+    {
+      "step": 4,
+      "title": "Con trỏ Neon rà soát các cột giai đoạn tiếp theo của chu trình bán hàng",
+      "fileName": "TC-06-step04-con-tro-neon-ra-soat-cac-cot-giai-doan-tiep-theo-cua-chu-trinh-ban-hang.png",
+      "relPath": "crm_sales_pipeline/TC-06/screenshots/TC-06-step04-con-tro-neon-ra-soat-cac-cot-giai-doan-tiep-theo-cua-chu-trinh-ban-hang.png"
+    },
+    {
+      "step": 5,
+      "title": "Đánh giá logic PASS: Cấu trúc 7 giai đoạn Kanban và badge số lượng đồng bộ hoàn hảo",
+      "fileName": "TC-06-step05-danh-gia-logic-pass-cau-truc-7-giai-doan-kanban-va-badge-so-luong-dong-bo-hoan-hao.png",
+      "relPath": "crm_sales_pipeline/TC-06/screenshots/TC-06-step05-danh-gia-logic-pass-cau-truc-7-giai-doan-kanban-va-badge-so-luong-dong-bo-hoan-hao.png"
+    }
+  ],
+  "attachments": {
+    "screenshots": [
+      "crm_sales_pipeline/TC-06/screenshots/TC-06-step01-quet-toan-bo-danh-muc-cac-cot-giai-doan-ban-hang-tren-bang-kanban.png",
+      "crm_sales_pipeline/TC-06/screenshots/TC-06-step02-cac-badge-dem-so-luong-hien-thi-ro-rang-tren-tung-cot-giai-doan.png",
+      "crm_sales_pipeline/TC-06/screenshots/TC-06-step03-con-tro-neon-ra-soat-tieu-de-cot-giai-doan-dau-tien.png",
+      "crm_sales_pipeline/TC-06/screenshots/TC-06-step04-con-tro-neon-ra-soat-cac-cot-giai-doan-tiep-theo-cua-chu-trinh-ban-hang.png",
+      "crm_sales_pipeline/TC-06/screenshots/TC-06-step05-danh-gia-logic-pass-cau-truc-7-giai-doan-kanban-va-badge-so-luong-dong-bo-hoan-hao.png"
+    ],
+    "videos": [
+      "crm_sales_pipeline/TC-06/videos/video.webm"
+    ],
+    "traces": [
+      "crm_sales_pipeline/TC-06/traces/trace.zip"
+    ]
+  },
+  "timestamp": "2026-10-21T03:10:41.793Z"
+}

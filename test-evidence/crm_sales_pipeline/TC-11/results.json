@@ -1,0 +1,61 @@
+{
+  "tcId": "TC-11",
+  "pageName": "crm_sales_pipeline",
+  "title": "Nghiệp vụ Kéo Thả Thẻ (Drag & Drop) Chuyển Giai Đoạn Bán Hàng Trên Kanban (TC-BIZ-04)",
+  "testStatus": "PASSED",
+  "businessStatus": "PASSED",
+  "businessNotes": "PASS - Thao tác Kéo thả thẻ (Drag & Drop) hoạt động mượt mà, hỗ trợ chuyển giai đoạn bán hàng trực quan trên Kanban",
+  "defectEvidence": null,
+  "failureAnalysis": {},
+  "status": "PASSED",
+  "duration": "31.59s",
+  "errors": "",
+  "stepScreenshots": [
+    {
+      "step": 1,
+      "title": "Xác định thẻ nguồn \"Nguyễn Văn Sync 4739\" trên cột giai đoạn hiện tại",
+      "fileName": "TC-11-step01-xac-dinh-the-nguon-nguyen-van-sync-4739-tren-cot-giai-doan-hien-tai.png",
+      "relPath": "crm_sales_pipeline/TC-11/screenshots/TC-11-step01-xac-dinh-the-nguon-nguyen-van-sync-4739-tren-cot-giai-doan-hien-tai.png"
+    },
+    {
+      "step": 2,
+      "title": "Xác định cột đích \"Giai đoạn kế tiếp\" sẵn sàng tiếp nhận thẻ",
+      "fileName": "TC-11-step02-xac-dinh-cot-dich-giai-doan-ke-tiep-san-sang-tiep-nhan-the.png",
+      "relPath": "crm_sales_pipeline/TC-11/screenshots/TC-11-step02-xac-dinh-cot-dich-giai-doan-ke-tiep-san-sang-tiep-nhan-the.png"
+    },
+    {
+      "step": 3,
+      "title": "Con trỏ Neon bám giữ thẻ nguồn và chuẩn bị kéo chuyển giai đoạn",
+      "fileName": "TC-11-step03-con-tro-neon-bam-giu-the-nguon-va-chuan-bi-keo-chuyen-giai-doan.png",
+      "relPath": "crm_sales_pipeline/TC-11/screenshots/TC-11-step03-con-tro-neon-bam-giu-the-nguon-va-chuan-bi-keo-chuyen-giai-doan.png"
+    },
+    {
+      "step": 4,
+      "title": "Hoàn tất thao tác thả thẻ tại cột đích \"Giai đoạn kế tiếp\"",
+      "fileName": "TC-11-step04-hoan-tat-thao-tac-tha-the-tai-cot-dich-giai-doan-ke-tiep.png",
+      "relPath": "crm_sales_pipeline/TC-11/screenshots/TC-11-step04-hoan-tat-thao-tac-tha-the-tai-cot-dich-giai-doan-ke-tiep.png"
+    },
+    {
+      "step": 5,
+      "title": "Đánh giá logic PASS: Cơ chế tương tác kéo thả thẻ Kanban đạt chuẩn, giao diện ổn định",
+      "fileName": "TC-11-step05-danh-gia-logic-pass-co-che-tuong-tac-keo-tha-the-kanban-dat-chuan-giao-dien-on-dinh.png",
+      "relPath": "crm_sales_pipeline/TC-11/screenshots/TC-11-step05-danh-gia-logic-pass-co-che-tuong-tac-keo-tha-the-kanban-dat-chuan-giao-dien-on-dinh.png"
+    }
+  ],
+  "attachments": {
+    "screenshots": [
+      "crm_sales_pipeline/TC-11/screenshots/TC-11-step01-xac-dinh-the-nguon-nguyen-van-sync-4739-tren-cot-giai-doan-hien-tai.png",
+      "crm_sales_pipeline/TC-11/screenshots/TC-11-step02-xac-dinh-cot-dich-giai-doan-ke-tiep-san-sang-tiep-nhan-the.png",
+      "crm_sales_pipeline/TC-11/screenshots/TC-11-step03-con-tro-neon-bam-giu-the-nguon-va-chuan-bi-keo-chuyen-giai-doan.png",
+      "crm_sales_pipeline/TC-11/screenshots/TC-11-step04-hoan-tat-thao-tac-tha-the-tai-cot-dich-giai-doan-ke-tiep.png",
+      "crm_sales_pipeline/TC-11/screenshots/TC-11-step05-danh-gia-logic-pass-co-che-tuong-tac-keo-tha-the-kanban-dat-chuan-giao-dien-on-dinh.png"
+    ],
+    "videos": [
+      "crm_sales_pipeline/TC-11/videos/video.webm"
+    ],
+    "traces": [
+      "crm_sales_pipeline/TC-11/traces/trace.zip"
+    ]
+  },
+  "timestamp": "2026-10-21T03:13:28.261Z"
+}

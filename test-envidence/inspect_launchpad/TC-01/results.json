@@ -1,0 +1,22 @@
+{
+  "tcId": "TC-01",
+  "pageName": "inspect_launchpad",
+  "title": "inspect launchpad",
+  "testStatus": "PASSED",
+  "businessStatus": "PASSED",
+  "businessNotes": "Đạt yêu cầu logic nghiệp vụ mong đợi",
+  "defectEvidence": null,
+  "failureAnalysis": {},
+  "status": "PASSED",
+  "duration": "15.00s",
+  "errors": "",
+  "stepScreenshots": [],
+  "attachments": {
+    "screenshots": [],
+    "videos": [
+      "inspect_launchpad/TC-01/videos/video.webm"
+    ],
+    "traces": []
+  },
+  "timestamp": "2026-11-11T07:42:14.893Z"
+}

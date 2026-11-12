@@ -5,15 +5,10 @@
   "testStatus": "PASSED",
   "businessStatus": "PASSED",
   "businessNotes": "PASS - Yêu cầu cập nhật thông tin ngân hàng đã được gửi thành công lên hệ thống phê duyệt",
-  "failureAnalysis": {
-    "issue": "",
-    "expected": "",
-    "actual": "",
-    "rootCause": "",
-    "recommendation": ""
-  },
+  "defectEvidence": null,
+  "failureAnalysis": {},
   "status": "PASSED",
-  "duration": "36.68s",
+  "duration": "46.30s",
   "errors": "",
   "stepScreenshots": [
     {
@@ -62,5 +57,5 @@
       "employee_bank_approval/TC-01/traces/trace.zip"
     ]
   },
-  "timestamp": "2026-10-16T03:47:55.339Z"
+  "timestamp": "2026-10-28T07:19:11.656Z"
 }

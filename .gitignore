@@ -25,3 +25,7 @@ Thumbs.db
 .vscode/
 .idea/
 *.log
+
+# DevTools traces & typo trace folder
+Trace-*.json
+test-envidence/**/traces/

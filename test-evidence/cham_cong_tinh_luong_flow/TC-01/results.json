@@ -1,0 +1,59 @@
+{
+  "tcId": "TC-01",
+  "pageName": "cham_cong_tinh_luong_flow",
+  "title": "Kiểm tra kiểm soát ràng buộc và tạo đơn Xin bù công (Role: tai.dang)",
+  "testStatus": "PASSED",
+  "businessStatus": "PASSED",
+  "businessNotes": "PASS - Tạo và gửi đơn xin bù công thành công, xác thực CSDL đã lưu bản ghi IdentityID: 01A1A4D8-72BB-71AB-B470-6D7CB3438475 (Token: 000781)",
+  "defectEvidence": null,
+  "failureAnalysis": {},
+  "status": "PASSED",
+  "duration": "47.04s",
+  "errors": "",
+  "stepScreenshots": [
+    {
+      "step": 1,
+      "title": "Nhan vien tai dang dang nhap he thong",
+      "fileName": "TC-01-step01-nhan-vien-tai-dang-dang-nhap-he-thong.png",
+      "relPath": "cham_cong_tinh_luong_flow/TC-01/screenshots/TC-01-step01-nhan-vien-tai-dang-dang-nhap-he-thong.png"
+    },
+    {
+      "step": 2,
+      "title": "Mo menu Xin bu cong",
+      "fileName": "TC-01-step02-mo-menu-xin-bu-cong.png",
+      "relPath": "cham_cong_tinh_luong_flow/TC-01/screenshots/TC-01-step02-mo-menu-xin-bu-cong.png"
+    },
+    {
+      "step": 3,
+      "title": "Dien thong tin ngay lam viec gio vao va ly do giai trinh",
+      "fileName": "TC-01-step03-dien-thong-tin-ngay-lam-viec-gio-vao-va-ly-do-giai-trinh.png",
+      "relPath": "cham_cong_tinh_luong_flow/TC-01/screenshots/TC-01-step03-dien-thong-tin-ngay-lam-viec-gio-vao-va-ly-do-giai-trinh.png"
+    },
+    {
+      "step": 4,
+      "title": "Popup Xac nhan dang ky hien thi yeu cau xac thuc",
+      "fileName": "TC-01-step04-popup-xac-nhan-dang-ky-hien-thi-yeu-cau-xac-thuc.png",
+      "relPath": "cham_cong_tinh_luong_flow/TC-01/screenshots/TC-01-step04-popup-xac-nhan-dang-ky-hien-thi-yeu-cau-xac-thuc.png"
+    },
+    {
+      "step": 5,
+      "title": "Danh gia logic PASS: Don bu cong duoc luu vao CSDL thanh cong",
+      "fileName": "TC-01-step05-danh-gia-logic-pass-don-bu-cong-duoc-luu-vao-csdl-thanh-cong.png",
+      "relPath": "cham_cong_tinh_luong_flow/TC-01/screenshots/TC-01-step05-danh-gia-logic-pass-don-bu-cong-duoc-luu-vao-csdl-thanh-cong.png"
+    }
+  ],
+  "attachments": {
+    "screenshots": [
+      "cham_cong_tinh_luong_flow/TC-01/screenshots/TC-01-step01-nhan-vien-tai-dang-dang-nhap-he-thong.png",
+      "cham_cong_tinh_luong_flow/TC-01/screenshots/TC-01-step02-mo-menu-xin-bu-cong.png",
+      "cham_cong_tinh_luong_flow/TC-01/screenshots/TC-01-step03-dien-thong-tin-ngay-lam-viec-gio-vao-va-ly-do-giai-trinh.png",
+      "cham_cong_tinh_luong_flow/TC-01/screenshots/TC-01-step04-popup-xac-nhan-dang-ky-hien-thi-yeu-cau-xac-thuc.png",
+      "cham_cong_tinh_luong_flow/TC-01/screenshots/TC-01-step05-danh-gia-logic-pass-don-bu-cong-duoc-luu-vao-csdl-thanh-cong.png"
+    ],
+    "videos": [
+      "cham_cong_tinh_luong_flow/TC-01/videos/video.webm"
+    ],
+    "traces": []
+  },
+  "timestamp": "2026-11-04T04:37:01.785Z"
+}

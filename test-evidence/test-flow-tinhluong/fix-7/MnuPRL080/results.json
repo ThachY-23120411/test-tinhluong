@@ -1,0 +1,45 @@
+{
+  "tcId": "TC-17",
+  "pageName": "quy_trinh_tinh_luong_nv_moi",
+  "title": "fix-7 | TC-17: Kế toán thực hiện Khóa sổ kỳ lương Tháng 10/2026 (Role: chien.nguyen)",
+  "testStatus": "PASSED",
+  "businessStatus": "PASSED",
+  "businessNotes": "PASS - Kỳ lương Tháng 10/2026 đã được niêm phong thành công trong tblSal_Lock (LockCount >= 1). Hoàn tất bàn giao cho fix-8 nghiệm thu Phiếu lương!",
+  "defectEvidence": null,
+  "failureAnalysis": {},
+  "status": "PASSED",
+  "duration": "44.10s",
+  "errors": "",
+  "stepScreenshots": [
+    {
+      "step": 1,
+      "title": "Dang nhap tai khoan Ke toan truong chien nguyen",
+      "fileName": "TC-17-step01-dang-nhap-tai-khoan-ke-toan-truong-chien-nguyen.png",
+      "relPath": "quy_trinh_tinh_luong_nv_moi/TC-17/screenshots/TC-17-step01-dang-nhap-tai-khoan-ke-toan-truong-chien-nguyen.png"
+    },
+    {
+      "step": 2,
+      "title": "Mo man hinh Mo Khoa luong MnuPRL080",
+      "fileName": "TC-17-step02-mo-man-hinh-mo-khoa-luong-mnuprl080.png",
+      "relPath": "quy_trinh_tinh_luong_nv_moi/TC-17/screenshots/TC-17-step02-mo-man-hinh-mo-khoa-luong-mnuprl080.png"
+    },
+    {
+      "step": 3,
+      "title": "Khoanh vung niem phong Khoa luong Thang 10-2026 MnuPRL080",
+      "fileName": "TC-17-step03-khoanh-vung-niem-phong-khoa-luong-thang-10-2026-mnuprl080.png",
+      "relPath": "quy_trinh_tinh_luong_nv_moi/TC-17/screenshots/TC-17-step03-khoanh-vung-niem-phong-khoa-luong-thang-10-2026-mnuprl080.png"
+    }
+  ],
+  "attachments": {
+    "screenshots": [
+      "quy_trinh_tinh_luong_nv_moi/TC-17/screenshots/TC-17-step01-dang-nhap-tai-khoan-ke-toan-truong-chien-nguyen.png",
+      "quy_trinh_tinh_luong_nv_moi/TC-17/screenshots/TC-17-step02-mo-man-hinh-mo-khoa-luong-mnuprl080.png",
+      "quy_trinh_tinh_luong_nv_moi/TC-17/screenshots/TC-17-step03-khoanh-vung-niem-phong-khoa-luong-thang-10-2026-mnuprl080.png"
+    ],
+    "videos": [
+      "quy_trinh_tinh_luong_nv_moi/TC-17/videos/video.webm"
+    ],
+    "traces": []
+  },
+  "timestamp": "2026-11-11T02:38:37.990Z"
+}

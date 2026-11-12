@@ -1,0 +1,61 @@
+{
+  "tcId": "TC-03",
+  "pageName": "crm_sales_revenue",
+  "title": "Thẩm định Dropdown Chọn Năm (#filter-year) & Tháng (#filter-month) Kết Hợp Nút Tải Lại",
+  "testStatus": "PASSED",
+  "businessStatus": "PASSED",
+  "businessNotes": "PASS - Dropdown Năm/Tháng và Nút Tải lại phản hồi mượt mà, đồng bộ số liệu chính xác từ CSDL",
+  "defectEvidence": null,
+  "failureAnalysis": {},
+  "status": "PASSED",
+  "duration": "29.97s",
+  "errors": "",
+  "stepScreenshots": [
+    {
+      "step": 1,
+      "title": "Xác định bộ chọn thời gian hiện tại: Năm 2026, Tháng 10",
+      "fileName": "TC-03-step01-xac-dinh-bo-chon-thoi-gian-hien-tai-nam-2026-thang-10.png",
+      "relPath": "crm_sales_revenue/TC-03/screenshots/TC-03-step01-xac-dinh-bo-chon-thoi-gian-hien-tai-nam-2026-thang-10.png"
+    },
+    {
+      "step": 2,
+      "title": "Con trỏ Neon chọn mốc lịch sử: Năm 2025, Tháng 12",
+      "fileName": "TC-03-step02-con-tro-neon-chon-moc-lich-su-nam-2025-thang-12.png",
+      "relPath": "crm_sales_revenue/TC-03/screenshots/TC-03-step02-con-tro-neon-chon-moc-lich-su-nam-2025-thang-12.png"
+    },
+    {
+      "step": 3,
+      "title": "Bấm nút Tải lại dữ liệu và đồng bộ số liệu lịch sử từ máy chủ",
+      "fileName": "TC-03-step03-bam-nut-tai-lai-du-lieu-va-dong-bo-so-lieu-lich-su-tu-may-chu.png",
+      "relPath": "crm_sales_revenue/TC-03/screenshots/TC-03-step03-bam-nut-tai-lai-du-lieu-va-dong-bo-so-lieu-lich-su-tu-may-chu.png"
+    },
+    {
+      "step": 4,
+      "title": "Khôi phục mốc báo cáo ban đầu: Năm 2026, Tháng 10",
+      "fileName": "TC-03-step04-khoi-phuc-moc-bao-cao-ban-dau-nam-2026-thang-10.png",
+      "relPath": "crm_sales_revenue/TC-03/screenshots/TC-03-step04-khoi-phuc-moc-bao-cao-ban-dau-nam-2026-thang-10.png"
+    },
+    {
+      "step": 5,
+      "title": "Đánh giá logic PASS: Bộ chọn Năm và Tháng kết hợp nút Tải lại đạt chuẩn nghiệp vụ",
+      "fileName": "TC-03-step05-danh-gia-logic-pass-bo-chon-nam-va-thang-ket-hop-nut-tai-lai-dat-chuan-nghiep-vu.png",
+      "relPath": "crm_sales_revenue/TC-03/screenshots/TC-03-step05-danh-gia-logic-pass-bo-chon-nam-va-thang-ket-hop-nut-tai-lai-dat-chuan-nghiep-vu.png"
+    }
+  ],
+  "attachments": {
+    "screenshots": [
+      "crm_sales_revenue/TC-03/screenshots/TC-03-step01-xac-dinh-bo-chon-thoi-gian-hien-tai-nam-2026-thang-10.png",
+      "crm_sales_revenue/TC-03/screenshots/TC-03-step02-con-tro-neon-chon-moc-lich-su-nam-2025-thang-12.png",
+      "crm_sales_revenue/TC-03/screenshots/TC-03-step03-bam-nut-tai-lai-du-lieu-va-dong-bo-so-lieu-lich-su-tu-may-chu.png",
+      "crm_sales_revenue/TC-03/screenshots/TC-03-step04-khoi-phuc-moc-bao-cao-ban-dau-nam-2026-thang-10.png",
+      "crm_sales_revenue/TC-03/screenshots/TC-03-step05-danh-gia-logic-pass-bo-chon-nam-va-thang-ket-hop-nut-tai-lai-dat-chuan-nghiep-vu.png"
+    ],
+    "videos": [
+      "crm_sales_revenue/TC-03/videos/video.webm"
+    ],
+    "traces": [
+      "crm_sales_revenue/TC-03/traces/trace.zip"
+    ]
+  },
+  "timestamp": "2026-10-28T01:45:16.898Z"
+}

@@ -1,53 +1,186 @@
 {
-  "timestamp": "12:52:08 16/10/2026",
-  "totalTests": 17,
-  "totalPass": 15,
-  "totalFail": 2,
-  "pages": [
-    {
-      "name": "crm_overview",
-      "title": "Tổng quan CRM (Dashboard & KPI)",
-      "spec": "tests/crm_overview.spec.js",
-      "count": 4,
-      "passCount": 4,
-      "failCount": 0,
-      "statusText": "✅ 100% LOGIC PASS"
-    },
-    {
-      "name": "crm_customer_data",
-      "title": "Dữ liệu khách hàng (Customer Management)",
-      "spec": "tests/crm_customer_data.spec.js",
-      "count": 5,
-      "passCount": 4,
-      "failCount": 1,
-      "statusText": "❌ 1 LOGIC FAIL"
-    },
-    {
-      "name": "crm_service_tracking",
-      "title": "Theo dõi dịch vụ (Service & Contract Tracking)",
-      "spec": "tests/crm_service_tracking.spec.js",
-      "count": 4,
-      "passCount": 3,
-      "failCount": 1,
-      "statusText": "❌ 1 LOGIC FAIL"
-    },
-    {
-      "name": "crm_sales_pipeline",
-      "title": "Sales Pipeline (Kanban Opportunities)",
-      "spec": "tests/crm_sales_pipeline.spec.js",
-      "count": 3,
-      "passCount": 3,
-      "failCount": 0,
-      "statusText": "✅ 100% LOGIC PASS"
-    },
-    {
-      "name": "crm_business_flow",
-      "title": "Luồng nghiệp vụ liên màn hình CRM (Cross-Menu Business Flow)",
-      "spec": "tests/crm_business_flow.spec.js",
-      "count": 1,
-      "passCount": 1,
-      "failCount": 0,
-      "statusText": "✅ 100% LOGIC PASS"
-    }
-  ]
+  "status": "passed",
+  "timestamp": "19:53:07 12/11/2026",
+  "totalTests": 3,
+  "pages": {
+    "quy_trinh_tinh_luong_nv_moi": [
+      {
+        "tcId": "TC-18",
+        "pageName": "quy_trinh_tinh_luong_nv_moi",
+        "title": "fix-8 | TC-18: Replay Kế toán mở Danh sách trả lương, xem Bảng lương tổng hợp, nhảy Phiếu lương & Đăng xuất (Role: Chien.nguyen)",
+        "testStatus": "PASSED",
+        "businessStatus": "PASSED",
+        "businessNotes": "Đạt yêu cầu logic nghiệp vụ mong đợi",
+        "defectEvidence": null,
+        "failureAnalysis": {},
+        "status": "PASSED",
+        "duration": "80.48s",
+        "errors": "",
+        "stepScreenshots": [
+          {
+            "step": 1,
+            "title": "Dang nhap tai khoan Chien nguyen",
+            "fileName": "TC-18-step01-dang-nhap-tai-khoan-chien-nguyen.png",
+            "relPath": "quy_trinh_tinh_luong_nv_moi/TC-18/screenshots/TC-18-step01-dang-nhap-tai-khoan-chien-nguyen.png"
+          },
+          {
+            "step": 2,
+            "title": "Mo man hinh Danh sach tra luong MnuPRL092 qua Launchpad",
+            "fileName": "TC-18-step02-mo-man-hinh-danh-sach-tra-luong-mnuprl092-qua-launchpad.png",
+            "relPath": "quy_trinh_tinh_luong_nv_moi/TC-18/screenshots/TC-18-step02-mo-man-hinh-danh-sach-tra-luong-mnuprl092-qua-launchpad.png"
+          },
+          {
+            "step": 3,
+            "title": "Chon ky luong Thang 10",
+            "fileName": "TC-18-step03-chon-ky-luong-thang-10.png",
+            "relPath": "quy_trinh_tinh_luong_nv_moi/TC-18/screenshots/TC-18-step03-chon-ky-luong-thang-10.png"
+          },
+          {
+            "step": 4,
+            "title": "Xem Bang luong tong hop va cuon toi dong nhan vien 099",
+            "fileName": "TC-18-step04-xem-bang-luong-tong-hop-va-cuon-toi-dong-nhan-vien-099.png",
+            "relPath": "quy_trinh_tinh_luong_nv_moi/TC-18/screenshots/TC-18-step04-xem-bang-luong-tong-hop-va-cuon-toi-dong-nhan-vien-099.png"
+          },
+          {
+            "step": 5,
+            "title": "Xem phieu luong va chuyen toi trang cuoi (trang 82)",
+            "fileName": "TC-18-step05-xem-phieu-luong-va-chuyen-toi-trang-cuoi-trang-82.png",
+            "relPath": "quy_trinh_tinh_luong_nv_moi/TC-18/screenshots/TC-18-step05-xem-phieu-luong-va-chuyen-toi-trang-cuoi-trang-82.png"
+          },
+          {
+            "step": 6,
+            "title": "Dang xuat khoi tai khoan Chien nguyen thanh cong",
+            "fileName": "TC-18-step06-dang-xuat-khoi-tai-khoan-chien-nguyen-thanh-cong.png",
+            "relPath": "quy_trinh_tinh_luong_nv_moi/TC-18/screenshots/TC-18-step06-dang-xuat-khoi-tai-khoan-chien-nguyen-thanh-cong.png"
+          }
+        ],
+        "attachments": {
+          "screenshots": [
+            "quy_trinh_tinh_luong_nv_moi/TC-18/screenshots/TC-18-step01-dang-nhap-tai-khoan-chien-nguyen.png",
+            "quy_trinh_tinh_luong_nv_moi/TC-18/screenshots/TC-18-step02-mo-man-hinh-danh-sach-tra-luong-mnuprl092-qua-launchpad.png",
+            "quy_trinh_tinh_luong_nv_moi/TC-18/screenshots/TC-18-step03-chon-ky-luong-thang-10.png",
+            "quy_trinh_tinh_luong_nv_moi/TC-18/screenshots/TC-18-step04-xem-bang-luong-tong-hop-va-cuon-toi-dong-nhan-vien-099.png",
+            "quy_trinh_tinh_luong_nv_moi/TC-18/screenshots/TC-18-step05-xem-phieu-luong-va-chuyen-toi-trang-cuoi-trang-82.png",
+            "quy_trinh_tinh_luong_nv_moi/TC-18/screenshots/TC-18-step06-dang-xuat-khoi-tai-khoan-chien-nguyen-thanh-cong.png"
+          ],
+          "videos": [
+            "quy_trinh_tinh_luong_nv_moi/TC-18/videos/video.webm"
+          ],
+          "traces": []
+        },
+        "timestamp": "2026-11-12T12:51:45.171Z"
+      },
+      {
+        "tcId": "TC-19",
+        "pageName": "quy_trinh_tinh_luong_nv_moi",
+        "title": "fix-8 | TC-19: Replay Nhân viên test.nv đăng nhập, mở Phiếu lương qua Launchpad & cuộn quan sát (Role: test.nv)",
+        "testStatus": "PASSED",
+        "businessStatus": "PASSED",
+        "businessNotes": "Đạt yêu cầu logic nghiệp vụ mong đợi",
+        "defectEvidence": null,
+        "failureAnalysis": {},
+        "status": "PASSED",
+        "duration": "31.00s",
+        "errors": "",
+        "stepScreenshots": [
+          {
+            "step": 1,
+            "title": "Dang nhap tai khoan nhan vien test nv",
+            "fileName": "TC-19-step01-dang-nhap-tai-khoan-nhan-vien-test-nv.png",
+            "relPath": "quy_trinh_tinh_luong_nv_moi/TC-19/screenshots/TC-19-step01-dang-nhap-tai-khoan-nhan-vien-test-nv.png"
+          },
+          {
+            "step": 2,
+            "title": "Mo man hinh Phieu luong MnuPRL445 qua Launchpad",
+            "fileName": "TC-19-step02-mo-man-hinh-phieu-luong-mnuprl445-qua-launchpad.png",
+            "relPath": "quy_trinh_tinh_luong_nv_moi/TC-19/screenshots/TC-19-step02-mo-man-hinh-phieu-luong-mnuprl445-qua-launchpad.png"
+          },
+          {
+            "step": 3,
+            "title": "Cuon muot quan sat phan Luong thuc lanh tren Phieu luong",
+            "fileName": "TC-19-step03-cuon-muot-quan-sat-phan-luong-thuc-lanh-tren-phieu-luong.png",
+            "relPath": "quy_trinh_tinh_luong_nv_moi/TC-19/screenshots/TC-19-step03-cuon-muot-quan-sat-phan-luong-thuc-lanh-tren-phieu-luong.png"
+          }
+        ],
+        "attachments": {
+          "screenshots": [
+            "quy_trinh_tinh_luong_nv_moi/TC-19/screenshots/TC-19-step01-dang-nhap-tai-khoan-nhan-vien-test-nv.png",
+            "quy_trinh_tinh_luong_nv_moi/TC-19/screenshots/TC-19-step02-mo-man-hinh-phieu-luong-mnuprl445-qua-launchpad.png",
+            "quy_trinh_tinh_luong_nv_moi/TC-19/screenshots/TC-19-step03-cuon-muot-quan-sat-phan-luong-thuc-lanh-tren-phieu-luong.png"
+          ],
+          "videos": [
+            "quy_trinh_tinh_luong_nv_moi/TC-19/videos/video.webm"
+          ],
+          "traces": []
+        },
+        "timestamp": "2026-11-12T12:52:16.171Z"
+      },
+      {
+        "tcId": "TC-20",
+        "pageName": "quy_trinh_tinh_luong_nv_moi",
+        "title": "fix-8 | TC-20: Replay Nhân viên test.nv mở Tab Lịch sử, bấm Xem & mở/đóng 3 Modal chi tiết (Role: test.nv)",
+        "testStatus": "PASSED",
+        "businessStatus": "PASSED",
+        "businessNotes": "Đạt yêu cầu logic nghiệp vụ mong đợi",
+        "defectEvidence": null,
+        "failureAnalysis": {},
+        "status": "PASSED",
+        "duration": "51.00s",
+        "errors": "",
+        "stepScreenshots": [
+          {
+            "step": 1,
+            "title": "Dang nhap test nv va mo man hinh Phieu luong",
+            "fileName": "TC-20-step01-dang-nhap-test-nv-va-mo-man-hinh-phieu-luong.png",
+            "relPath": "quy_trinh_tinh_luong_nv_moi/TC-20/screenshots/TC-20-step01-dang-nhap-test-nv-va-mo-man-hinh-phieu-luong.png"
+          },
+          {
+            "step": 2,
+            "title": "Chuyen sang Tab Lich Su ky luong",
+            "fileName": "TC-20-step02-chuyen-sang-tab-lich-su-ky-luong.png",
+            "relPath": "quy_trinh_tinh_luong_nv_moi/TC-20/screenshots/TC-20-step02-chuyen-sang-tab-lich-su-ky-luong.png"
+          },
+          {
+            "step": 3,
+            "title": "Bam nut Xem tu Lich Su quay ve Phieu luong",
+            "fileName": "TC-20-step03-bam-nut-xem-tu-lich-su-quay-ve-phieu-luong.png",
+            "relPath": "quy_trinh_tinh_luong_nv_moi/TC-20/screenshots/TC-20-step03-bam-nut-xem-tu-lich-su-quay-ve-phieu-luong.png"
+          },
+          {
+            "step": 4,
+            "title": "Mo Modal chi tiet Tang ca psModalOvertime",
+            "fileName": "TC-20-step04-mo-modal-chi-tiet-tang-ca-psmodalovertime.png",
+            "relPath": "quy_trinh_tinh_luong_nv_moi/TC-20/screenshots/TC-20-step04-mo-modal-chi-tiet-tang-ca-psmodalovertime.png"
+          },
+          {
+            "step": 5,
+            "title": "Mo Modal chi tiet Di tre Ve som psModalLateearly",
+            "fileName": "TC-20-step05-mo-modal-chi-tiet-di-tre-ve-som-psmodallateearly.png",
+            "relPath": "quy_trinh_tinh_luong_nv_moi/TC-20/screenshots/TC-20-step05-mo-modal-chi-tiet-di-tre-ve-som-psmodallateearly.png"
+          },
+          {
+            "step": 6,
+            "title": "Mo Modal chi tiet Ngay nghi psModalDaysoff",
+            "fileName": "TC-20-step06-mo-modal-chi-tiet-ngay-nghi-psmodaldaysoff.png",
+            "relPath": "quy_trinh_tinh_luong_nv_moi/TC-20/screenshots/TC-20-step06-mo-modal-chi-tiet-ngay-nghi-psmodaldaysoff.png"
+          }
+        ],
+        "attachments": {
+          "screenshots": [
+            "quy_trinh_tinh_luong_nv_moi/TC-20/screenshots/TC-20-step01-dang-nhap-test-nv-va-mo-man-hinh-phieu-luong.png",
+            "quy_trinh_tinh_luong_nv_moi/TC-20/screenshots/TC-20-step02-chuyen-sang-tab-lich-su-ky-luong.png",
+            "quy_trinh_tinh_luong_nv_moi/TC-20/screenshots/TC-20-step03-bam-nut-xem-tu-lich-su-quay-ve-phieu-luong.png",
+            "quy_trinh_tinh_luong_nv_moi/TC-20/screenshots/TC-20-step04-mo-modal-chi-tiet-tang-ca-psmodalovertime.png",
+            "quy_trinh_tinh_luong_nv_moi/TC-20/screenshots/TC-20-step05-mo-modal-chi-tiet-di-tre-ve-som-psmodallateearly.png",
+            "quy_trinh_tinh_luong_nv_moi/TC-20/screenshots/TC-20-step06-mo-modal-chi-tiet-ngay-nghi-psmodaldaysoff.png"
+          ],
+          "videos": [
+            "quy_trinh_tinh_luong_nv_moi/TC-20/videos/video.webm"
+          ],
+          "traces": []
+        },
+        "timestamp": "2026-11-12T12:53:07.199Z"
+      }
+    ]
+  }
 }

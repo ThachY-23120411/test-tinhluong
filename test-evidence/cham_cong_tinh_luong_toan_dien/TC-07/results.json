@@ -1,0 +1,38 @@
+{
+  "tcId": "TC-07",
+  "pageName": "cham_cong_tinh_luong_toan_dien",
+  "title": "Nhân viên đối soát định lượng từng trường trên Phiếu lương cá nhân (Role: tai.dang)",
+  "testStatus": "PASSED",
+  "businessStatus": "PASSED",
+  "businessNotes": "PASS - Đối soát định lượng khớp 100% từng trường trên Phiếu lương (11/11 chỉ tiêu khớp CSDL). Kỳ lương: 08/2026, Giảm trừ gia cảnh: 0 VNĐ, Thực lĩnh: 0 VNĐ.\n\n| STT | Trường chỉ tiêu trên Phiếu lương | Giá trị trên UI | Giá trị đối ứng trong CSDL | Trạng thái so khớp |\n| :---: | :--- | :--- | :--- | :---: |\n| 1 | Mã nhân viên (psEmpID) | 046 | 046 | ✅ KHỚP 100% |\n| 2 | Họ và tên (psFullName) | Đặng Minh Tài | Đặng Minh Tài | ✅ KHỚP 100% |\n| 3 | Ngày vào làm (psHireDate) | 15/07/2025 | 15/07/2025 | ✅ KHỚP 100% |\n| 4 | Kỳ lương Tháng/Năm (psMonthYear) | Tháng/Năm: 08/2026 | 08/2026 | ✅ KHỚP 100% |\n| 5 | Công chuẩn (psStdDays) | 23 ngày | 23 ngày | ✅ KHỚP 100% |\n| 6 | Công thực tế (psActDays) | 23 ngày | 23 ngày | ✅ KHỚP 100% |\n| 7 | Lương cơ bản (psBasicSalary) | 0 | 0 | ✅ KHỚP 100% |\n| 8 | Người phụ thuộc (psDependents) | *(Trống)* | *(Trống)* | ✅ KHỚP 100% |\n| 9 | Giảm trừ gia cảnh (psDepTax) | 0 | 0 | ✅ KHỚP 100% |\n| 10 | Tổng thu nhập (psTotalIncome) | 0 | 0 | ✅ KHỚP 100% |\n| 11 | Thực lĩnh / Lương thực nhận (psNetSalary) | 0 | 0 | ✅ KHỚP 100% |",
+  "defectEvidence": null,
+  "failureAnalysis": {},
+  "status": "PASSED",
+  "duration": "30.27s",
+  "errors": "",
+  "stepScreenshots": [
+    {
+      "step": 1,
+      "title": "Nhan vien tai dang dang nhap he thong",
+      "fileName": "TC-07-step01-nhan-vien-tai-dang-dang-nhap-he-thong.png",
+      "relPath": "cham_cong_tinh_luong_toan_dien/TC-07/screenshots/TC-07-step01-nhan-vien-tai-dang-dang-nhap-he-thong.png"
+    },
+    {
+      "step": 2,
+      "title": "Giao dien phieu luong ca nhan day du cac truong chi tieu",
+      "fileName": "TC-07-step02-giao-dien-phieu-luong-ca-nhan-day-du-cac-truong-chi-tieu.png",
+      "relPath": "cham_cong_tinh_luong_toan_dien/TC-07/screenshots/TC-07-step02-giao-dien-phieu-luong-ca-nhan-day-du-cac-truong-chi-tieu.png"
+    }
+  ],
+  "attachments": {
+    "screenshots": [
+      "cham_cong_tinh_luong_toan_dien/TC-07/screenshots/TC-07-step01-nhan-vien-tai-dang-dang-nhap-he-thong.png",
+      "cham_cong_tinh_luong_toan_dien/TC-07/screenshots/TC-07-step02-giao-dien-phieu-luong-ca-nhan-day-du-cac-truong-chi-tieu.png"
+    ],
+    "videos": [
+      "cham_cong_tinh_luong_toan_dien/TC-07/videos/video.webm"
+    ],
+    "traces": []
+  },
+  "timestamp": "2026-11-04T04:49:21.037Z"
+}

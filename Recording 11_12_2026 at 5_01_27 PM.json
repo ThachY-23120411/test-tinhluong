@@ -1,0 +1,1043 @@
+{
+    "title": "Recording 11/12/2026 at 5:01:27 PM",
+    "steps": [
+        {
+            "type": "setViewport",
+            "width": 1194,
+            "height": 911,
+            "deviceScaleFactor": 1,
+            "isMobile": false,
+            "hasTouch": false,
+            "isLandscape": false
+        },
+        {
+            "type": "navigate",
+            "url": "https://paradisehrm.com/Tai3/",
+            "assertedEvents": [
+                {
+                    "type": "navigation",
+                    "url": "https://paradisehrm.com/Tai3/",
+                    "title": "Paradise HR"
+                }
+            ]
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "#username"
+                ],
+                [
+                    "text/Chien.nguyen"
+                ]
+            ],
+            "offsetY": 34.640625,
+            "offsetX": 235.328125
+        },
+        {
+            "type": "keyDown",
+            "target": "main",
+            "key": "Control"
+        },
+        {
+            "type": "keyDown",
+            "target": "main",
+            "key": "a"
+        },
+        {
+            "type": "keyUp",
+            "key": "a",
+            "target": "main"
+        },
+        {
+            "type": "keyUp",
+            "key": "Control",
+            "target": "main"
+        },
+        {
+            "type": "keyDown",
+            "target": "main",
+            "key": "CapsLock"
+        },
+        {
+            "type": "keyUp",
+            "key": "CapsLock",
+            "target": "main"
+        },
+        {
+            "type": "change",
+            "value": "C",
+            "selectors": [
+                [
+                    "#username"
+                ],
+                [
+                    "text/Chien.nguyen"
+                ]
+            ],
+            "target": "main"
+        },
+        {
+            "type": "keyDown",
+            "target": "main",
+            "key": "CapsLock"
+        },
+        {
+            "type": "keyUp",
+            "key": "c",
+            "target": "main"
+        },
+        {
+            "type": "keyUp",
+            "key": "CapsLock",
+            "target": "main"
+        },
+        {
+            "type": "change",
+            "value": "Chien.nguyen",
+            "selectors": [
+                [
+                    "#username"
+                ],
+                [
+                    "text/Chien.nguyen"
+                ]
+            ],
+            "target": "main"
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "#\\37 443E420BD464740AD70F460ADCC6E29"
+                ]
+            ],
+            "offsetY": 17.046875,
+            "offsetX": 43.328125
+        },
+        {
+            "type": "keyDown",
+            "target": "main",
+            "key": "Control"
+        },
+        {
+            "type": "keyDown",
+            "target": "main",
+            "key": "a"
+        },
+        {
+            "type": "keyUp",
+            "key": "Control",
+            "target": "main"
+        },
+        {
+            "type": "keyUp",
+            "key": "a",
+            "target": "main"
+        },
+        {
+            "type": "change",
+            "value": "123",
+            "selectors": [
+                [
+                    "#\\37 443E420BD464740AD70F460ADCC6E29"
+                ]
+            ],
+            "target": "main"
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "#submitLogin"
+                ]
+            ],
+            "offsetY": 0.453125,
+            "offsetX": 129.328125
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "button.MnuHRS238 > i"
+                ]
+            ],
+            "offsetY": 12.3125,
+            "offsetX": 14.75
+        },
+        {
+            "type": "keyDown",
+            "target": "main",
+            "key": "Alt"
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "#launchpad input"
+                ]
+            ],
+            "offsetY": 19.1875,
+            "offsetX": 63.34375
+        },
+        {
+            "type": "change",
+            "value": "D",
+            "selectors": [
+                [
+                    "#launchpad input"
+                ]
+            ],
+            "target": "main"
+        },
+        {
+            "type": "keyDown",
+            "target": "main",
+            "key": "CapsLock"
+        },
+        {
+            "type": "keyUp",
+            "key": "d",
+            "target": "main"
+        },
+        {
+            "type": "keyUp",
+            "key": "CapsLock",
+            "target": "main"
+        },
+        {
+            "type": "change",
+            "value": "Danh sac·",
+            "selectors": [
+                [
+                    "#launchpad input"
+                ]
+            ],
+            "target": "main"
+        },
+        {
+            "type": "keyUp",
+            "key": "Unidentified",
+            "target": "main"
+        },
+        {
+            "type": "change",
+            "value": "Danh sá",
+            "selectors": [
+                [
+                    "#launchpad input"
+                ]
+            ],
+            "target": "main"
+        },
+        {
+            "type": "keyUp",
+            "key": "Unidentified",
+            "target": "main"
+        },
+        {
+            "type": "change",
+            "value": "Danh sác",
+            "selectors": [
+                [
+                    "#launchpad input"
+                ]
+            ],
+            "target": "main"
+        },
+        {
+            "type": "keyUp",
+            "key": "Unidentified",
+            "target": "main"
+        },
+        {
+            "type": "change",
+            "value": "Danh sách",
+            "selectors": [
+                [
+                    "#launchpad input"
+                ]
+            ],
+            "target": "main"
+        },
+        {
+            "type": "keyUp",
+            "key": "s",
+            "target": "main"
+        },
+        {
+            "type": "change",
+            "value": "Danh sách tra·",
+            "selectors": [
+                [
+                    "#launchpad input"
+                ]
+            ],
+            "target": "main"
+        },
+        {
+            "type": "keyUp",
+            "key": "Unidentified",
+            "target": "main"
+        },
+        {
+            "type": "change",
+            "value": "Danh sách trả",
+            "selectors": [
+                [
+                    "#launchpad input"
+                ]
+            ],
+            "target": "main"
+        },
+        {
+            "type": "keyUp",
+            "key": "Unidentified",
+            "target": "main"
+        },
+        {
+            "type": "keyUp",
+            "key": "r",
+            "target": "main"
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "div.wrapper-launchpad > div > div"
+                ]
+            ],
+            "offsetY": 51.1875,
+            "offsetX": 63.296875
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "div.wrapper-launchpad > div > div i"
+                ]
+            ],
+            "offsetY": 32.96875,
+            "offsetX": 25.734375
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "#P682FA188ED5B4BD38C89E22CD6E72646 > div > div div.dx-widget > div > div"
+                ]
+            ],
+            "offsetY": 12.34375,
+            "offsetX": 13.25
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "div.dx-list-item-selected > div > div > div > div"
+                ]
+            ],
+            "offsetY": 6.5,
+            "offsetX": 68
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "div.dx-overlay-wrapper div.dx-list-item-selected > div > div > div > div"
+                ]
+            ],
+            "offsetY": 2.5,
+            "offsetX": 59
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "#btnPrint span"
+                ],
+                [
+                    "text/Bảng lương tổng"
+                ]
+            ],
+            "offsetY": 4.285919189453125,
+            "offsetX": 57.197021484375
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "tr:nth-of-type(12)"
+                ]
+            ],
+            "offsetY": 15,
+            "offsetX": 4442.5,
+            "frame": [
+                0
+            ],
+            "duration": 17487.5
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "tr:nth-of-type(12) > td:nth-of-type(5)"
+                ]
+            ],
+            "offsetY": 17,
+            "offsetX": 8,
+            "frame": [
+                0
+            ]
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "#btnView span"
+                ],
+                [
+                    "text/Xem phiếu lương"
+                ]
+            ],
+            "offsetY": 4.2845001220703125,
+            "offsetX": 48.822265625
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "#preview-container input"
+                ]
+            ],
+            "offsetY": 11.140625,
+            "offsetX": 29.703125
+        },
+        {
+            "type": "change",
+            "value": "82",
+            "selectors": [
+                [
+                    "#preview-container input"
+                ]
+            ],
+            "target": "main"
+        },
+        {
+            "type": "keyDown",
+            "target": "main",
+            "key": "Enter"
+        },
+        {
+            "type": "keyUp",
+            "key": "Enter",
+            "target": "main"
+        },
+        {
+            "type": "keyDown",
+            "target": "main",
+            "key": "Alt"
+        },
+        {
+            "type": "keyUp",
+            "key": "Tab",
+            "target": "main"
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "#randomAvatar"
+                ]
+            ],
+            "offsetY": 18.212501525878906,
+            "offsetX": 33.4000244140625
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "#txtLogoutOpt"
+                ]
+            ],
+            "offsetY": 5.828125,
+            "offsetX": 126
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "#successModalButtonAddNew"
+                ],
+                [
+                    "text/Đăng xuất"
+                ]
+            ],
+            "offsetY": 16.40625,
+            "offsetX": 20.171875,
+            "assertedEvents": [
+                {
+                    "type": "navigation",
+                    "url": "https://paradisehrm.com/Tai3/",
+                    "title": "Paradise HR"
+                }
+            ]
+        },
+        {
+            "type": "change",
+            "value": "Chien.nguyen",
+            "selectors": [
+                [
+                    "#username"
+                ]
+            ],
+            "target": "main"
+        },
+        {
+            "type": "change",
+            "value": "123",
+            "selectors": [
+                [
+                    "#\\37 443E420BD464740AD70F460ADCC6E29"
+                ]
+            ],
+            "target": "main"
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "#username"
+                ],
+                [
+                    "text/Chien.nguyen"
+                ]
+            ],
+            "offsetY": 27.640625,
+            "offsetX": 129.328125
+        },
+        {
+            "type": "keyDown",
+            "target": "main",
+            "key": "Control"
+        },
+        {
+            "type": "keyDown",
+            "target": "main",
+            "key": "a"
+        },
+        {
+            "type": "keyUp",
+            "key": "Control",
+            "target": "main"
+        },
+        {
+            "type": "keyUp",
+            "key": "a",
+            "target": "main"
+        },
+        {
+            "type": "change",
+            "value": "te·",
+            "selectors": [
+                [
+                    "#username"
+                ],
+                [
+                    "text/Chien.nguyen"
+                ]
+            ],
+            "target": "main"
+        },
+        {
+            "type": "keyUp",
+            "key": "Unidentified",
+            "target": "main"
+        },
+        {
+            "type": "change",
+            "value": "té",
+            "selectors": [
+                [
+                    "#username"
+                ],
+                [
+                    "text/Chien.nguyen"
+                ]
+            ],
+            "target": "main"
+        },
+        {
+            "type": "keyUp",
+            "key": "Unidentified",
+            "target": "main"
+        },
+        {
+            "type": "keyUp",
+            "key": "s",
+            "target": "main"
+        },
+        {
+            "type": "change",
+            "value": "té·",
+            "selectors": [
+                [
+                    "#username"
+                ],
+                [
+                    "text/Chien.nguyen"
+                ]
+            ],
+            "target": "main"
+        },
+        {
+            "type": "keyUp",
+            "key": "Unidentified",
+            "target": "main"
+        },
+        {
+            "type": "change",
+            "value": "te",
+            "selectors": [
+                [
+                    "#username"
+                ],
+                [
+                    "text/Chien.nguyen"
+                ]
+            ],
+            "target": "main"
+        },
+        {
+            "type": "keyUp",
+            "key": "Unidentified",
+            "target": "main"
+        },
+        {
+            "type": "change",
+            "value": "tes",
+            "selectors": [
+                [
+                    "#username"
+                ],
+                [
+                    "text/Chien.nguyen"
+                ]
+            ],
+            "target": "main"
+        },
+        {
+            "type": "keyUp",
+            "key": "Unidentified",
+            "target": "main"
+        },
+        {
+            "type": "change",
+            "value": "test.nv",
+            "selectors": [
+                [
+                    "#username"
+                ],
+                [
+                    "text/Chien.nguyen"
+                ]
+            ],
+            "target": "main"
+        },
+        {
+            "type": "doubleClick",
+            "target": "main",
+            "selectors": [
+                [
+                    "#\\37 443E420BD464740AD70F460ADCC6E29"
+                ]
+            ],
+            "offsetY": 30.046875,
+            "offsetX": 133.328125
+        },
+        {
+            "type": "keyDown",
+            "target": "main",
+            "key": "Control"
+        },
+        {
+            "type": "keyUp",
+            "key": "Control",
+            "target": "main"
+        },
+        {
+            "type": "change",
+            "value": "123",
+            "selectors": [
+                [
+                    "#\\37 443E420BD464740AD70F460ADCC6E29"
+                ]
+            ],
+            "target": "main"
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "#submitLogin"
+                ]
+            ],
+            "offsetY": 14.453125,
+            "offsetX": 194.328125
+        },
+        {
+            "type": "keyDown",
+            "target": "main",
+            "key": "Alt"
+        },
+        {
+            "type": "keyUp",
+            "key": "Tab",
+            "target": "main"
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "button.MnuHRS238 > i"
+                ]
+            ],
+            "offsetY": 12.3125,
+            "offsetX": 6.15625
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "#launchpad input"
+                ]
+            ],
+            "offsetY": 21.1875,
+            "offsetX": 41.34375
+        },
+        {
+            "type": "change",
+            "value": "phie·",
+            "selectors": [
+                [
+                    "#launchpad input"
+                ]
+            ],
+            "target": "main"
+        },
+        {
+            "type": "keyUp",
+            "key": "Unidentified",
+            "target": "main"
+        },
+        {
+            "type": "change",
+            "value": "phiê",
+            "selectors": [
+                [
+                    "#launchpad input"
+                ]
+            ],
+            "target": "main"
+        },
+        {
+            "type": "keyUp",
+            "key": "Unidentified",
+            "target": "main"
+        },
+        {
+            "type": "change",
+            "value": "phiêu",
+            "selectors": [
+                [
+                    "#launchpad input"
+                ]
+            ],
+            "target": "main"
+        },
+        {
+            "type": "keyUp",
+            "key": "e",
+            "target": "main"
+        },
+        {
+            "type": "change",
+            "value": "phiêu·",
+            "selectors": [
+                [
+                    "#launchpad input"
+                ]
+            ],
+            "target": "main"
+        },
+        {
+            "type": "keyUp",
+            "key": "Unidentified",
+            "target": "main"
+        },
+        {
+            "type": "change",
+            "value": "phiế",
+            "selectors": [
+                [
+                    "#launchpad input"
+                ]
+            ],
+            "target": "main"
+        },
+        {
+            "type": "keyUp",
+            "key": "Unidentified",
+            "target": "main"
+        },
+        {
+            "type": "change",
+            "value": "phiếu",
+            "selectors": [
+                [
+                    "#launchpad input"
+                ]
+            ],
+            "target": "main"
+        },
+        {
+            "type": "keyUp",
+            "key": "Unidentified",
+            "target": "main"
+        },
+        {
+            "type": "keyUp",
+            "key": "s",
+            "target": "main"
+        },
+        {
+            "type": "change",
+            "value": "phiếu luon·",
+            "selectors": [
+                [
+                    "#launchpad input"
+                ]
+            ],
+            "target": "main"
+        },
+        {
+            "type": "keyUp",
+            "key": "Unidentified",
+            "target": "main"
+        },
+        {
+            "type": "change",
+            "value": "phiếu lư",
+            "selectors": [
+                [
+                    "#launchpad input"
+                ]
+            ],
+            "target": "main"
+        },
+        {
+            "type": "keyUp",
+            "key": "Unidentified",
+            "target": "main"
+        },
+        {
+            "type": "change",
+            "value": "phiếu lươ",
+            "selectors": [
+                [
+                    "#launchpad input"
+                ]
+            ],
+            "target": "main"
+        },
+        {
+            "type": "keyUp",
+            "key": "Unidentified",
+            "target": "main"
+        },
+        {
+            "type": "change",
+            "value": "phiếu lươn",
+            "selectors": [
+                [
+                    "#launchpad input"
+                ]
+            ],
+            "target": "main"
+        },
+        {
+            "type": "keyUp",
+            "key": "Unidentified",
+            "target": "main"
+        },
+        {
+            "type": "change",
+            "value": "phiếu lương",
+            "selectors": [
+                [
+                    "#launchpad input"
+                ]
+            ],
+            "target": "main"
+        },
+        {
+            "type": "keyUp",
+            "key": "w",
+            "target": "main"
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "div.wrapper-launchpad > div > div i"
+                ]
+            ],
+            "offsetY": 23.96875,
+            "offsetX": 34.734375
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "#dynamic-pane-MnuPRL445 button:nth-of-type(2)"
+                ],
+                [
+                    "text/Lịch Sử"
+                ]
+            ],
+            "offsetY": 12.34375,
+            "offsetX": 34.765625
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "#psHistory button"
+                ]
+            ],
+            "offsetY": 15.75,
+            "offsetX": 76.9375
+        },
+        {
+            "type": "keyDown",
+            "target": "main",
+            "key": "Alt"
+        },
+        {
+            "type": "keyUp",
+            "key": "Tab",
+            "target": "main"
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "div.ps-info-grid > div:nth-of-type(3) i"
+                ]
+            ],
+            "offsetY": 7.421875,
+            "offsetX": 5.4375
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "#psModalOvertime button"
+                ]
+            ],
+            "offsetY": 10.609375,
+            "offsetX": 3.890625
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "#master-tabs div:nth-of-type(5) i"
+                ]
+            ],
+            "offsetY": 1.828125,
+            "offsetX": 6.4375
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "#psModalLateearly button"
+                ]
+            ],
+            "offsetY": 7.609375,
+            "offsetX": 9.890625
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "#master-tabs div:nth-of-type(4) i"
+                ]
+            ],
+            "offsetY": 1.421875,
+            "offsetX": 3.4375
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "#psModalDaysoff button"
+                ]
+            ],
+            "offsetY": 10.609375,
+            "offsetX": 6.890625
+        },
+        {
+            "type": "keyDown",
+            "target": "main",
+            "key": "Alt"
+        },
+        {
+            "type": "keyUp",
+            "key": "Tab",
+            "target": "main"
+        },
+        {
+            "type": "keyDown",
+            "target": "main",
+            "key": "Alt"
+        },
+        {
+            "type": "keyUp",
+            "key": "Tab",
+            "target": "main"
+        }
+    ]
+}

@@ -1,7 +1,7 @@
 # BÁO CÁO KIỂM THỬ TRANG: QUY_TRINH_TINH_LUONG_NV_MOI
 
-> Thời gian kiểm thử: **08:16:07 11/11/2026**
-> Tổng số kịch bản: **17** | ✅ LOGIC PASS: **15** | ❌ LOGIC FAIL: **2**
+> Thời gian kiểm thử: **19:53:07 12/11/2026**
+> Tổng số kịch bản: **20** | ✅ LOGIC PASS: **19** | ❌ LOGIC FAIL: **1**
 
 ## BẢNG ĐỐI CHIẾU TRẠNG THÁI TEST & LOGIC NGHIỆP VỤ
 
@@ -12,31 +12,21 @@
 | **TC-03** | fix-4 | TC-03: Thiết lập HĐLĐ và Mức lương 10,000,000 VNĐ (Role: cuong.vu) | ✅ PASS | ✅ PASS | Đạt yêu cầu logic nghiệp vụ mong đợi |
 | **TC-04** | fix-4 | TC-04: Đăng ký 1 Người phụ thuộc giảm trừ gia cảnh (Role: cuong.vu) | ✅ PASS | ✅ PASS | Đạt yêu cầu logic nghiệp vụ mong đợi |
 | **TC-05** | fix-4 | TC-05: Phân ca làm việc hành chính chuẩn cho NV 099 (Role: cuong.vu) | ✅ PASS | ✅ PASS | Đạt yêu cầu logic nghiệp vụ mong đợi |
-| **TC-06** | fix-5 | TC-06: Khảo sát hiện trạng Before ngày 15/10 và tổng công tháng 10 (Role: test.nv) | ✅ PASS | ✅ PASS | PASS - Khảo sát Baseline Before ngày 15/10 (0.0h) và tổng công Tháng 10 (21.0 công) hoàn tất thành công. |
-| **TC-07** | fix-5 | TC-07: Nộp đơn Xin bù công ngày 15/10/2026 giờ vào 08:00 (Role: test.nv) | ✅ PASS | ✅ PASS | PASS - Đơn Xin bù công ngày 15/10/2026 (vào 08:00) đã được nộp thành công và ghi nhận vào CSDL. |
-| **TC-08** | fix-5 | TC-08: Nộp đơn Xin nghỉ phép năm AL hưởng nguyên lương ngày 24/10 (Role: test.nv) | ❌ FAIL | ❌ FAIL | Error: 🚨 [PHÁT HIỆN KHOANH NHẦM DÒNG]: Vùng định khoanh "FORM XIN NGHỈ PHÉP NĂM AL NGÀY 24/10/2026 (1 NGÀY = 8H)" KHÔNG chứa từ khóa bắt buộc "Phép năm".
-👉 Nội dung thực tế đang định khoanh bừa là: "Xin nghỉ phép
-Lịch sử
-Nguyễn Văn Test
-
-099
-
- Loại Nghỉ (*)
-Số ngày nghỉ còn lại:
-2
-?
- Từ ngày (*)
- Đến ngày (*)
- Lý do (..." |
-| **TC-09** | fix-5 | TC-09: Nộp đơn Xin tăng ca OT 2.0h ngày 20/10/2026 (Role: test.nv) | ❌ FAIL | ❌ FAIL | Error: 🚨 [PHÁT HIỆN LỖI GÕ PHÍM]: Đã thực hiện gõ vào "Lý do tăng ca" nhưng ô input trên giao diện vẫn trống rỗng! Dừng kịch bản, cấm bấm Submit! |
-| **TC-10** | fix-6 | TC-10: Quản lý ThanhLong phê duyệt Cấp 1 đơn Nghỉ phép AL 24/10 (Role: ThanhLong) | ✅ PASS | ✅ PASS | PASS - Quản lý ThanhLong đã thẩm định & duyệt Cấp 1 đơn Nghỉ phép AL ngày 24/10 của NV 099 |
-| **TC-11** | fix-6 | TC-11: Quản lý LongKa phê duyệt Cấp 1 đơn Tăng ca OT 20/10 (Role: LongKa) | ✅ PASS | ✅ PASS | PASS - Quản lý LongKa đã thẩm định & duyệt Cấp 1 đơn Tăng ca OT ngày 20/10 của NV 099 |
-| **TC-12** | fix-6 | TC-12: Giám đốc cuong.vu phê duyệt chặng cuối CẢ 2 ĐƠN + Đơn bù công 15/10 (Role: cuong.vu) | ✅ PASS | ✅ PASS | PASS - Giám đốc cuong.vu đã phê duyệt chặng cuối hoàn tất CẢ 3 ĐƠN (Phép AL, Tăng ca OT, Bù công) cho NV 099 |
-| **TC-13** | fix-6 | TC-13: Đối soát chốt chặn Delta After công ngày 15/10 và tổng công tháng (Role: cuong.vu) | ✅ PASS | ✅ PASS | Đạt yêu cầu logic nghiệp vụ mong đợi |
-| **TC-14** | fix-7 | TC-14: Kế toán chien.nguyen nạp Thưởng KPI 1,000,000 VNĐ Tháng 10/2026 (Role: chien.nguyen) | ✅ PASS | ✅ PASS | PASS - Kế toán trưởng chien.nguyen đã nạp Thưởng KPI 1.000.000 VNĐ cho nhân viên 099 trong kỳ Tháng 10/2026 trên MnuPRL036 (tblSal_Adjustment). |
-| **TC-15** | fix-7 | TC-15: Kế toán chien.nguyen nạp Tạm ứng lương 2,000,000 VNĐ và Khóa phiếu (Role: chien.nguyen) | ✅ PASS | ✅ PASS | PASS - Kế toán trưởng chien.nguyen đã nạp Tạm ứng 2.000.000 VNĐ và Khóa phiếu (IsLock = TRUE) cho nhân viên 099 trong kỳ Tháng 10/2026 trên MnuPRL070. |
-| **TC-16** | fix-7 | TC-16: Kế toán kích hoạt Tính tiền lương tự động toàn công ty (Role: chien.nguyen) | ✅ PASS | ✅ PASS | PASS - Thủ tục tính lương tự động SALCAL_MAIN Tháng 10/2026 đã được kích hoạt thành công trên MnuPRL040. CSDL tblSal_Sal đã ghi nhận Lương cơ bản = 10.000.000 VNĐ cho nhân viên 099. |
-| **TC-17** | fix-7 | TC-17: Kế toán thực hiện Khóa sổ kỳ lương Tháng 10/2026 (Role: chien.nguyen) | ✅ PASS | ✅ PASS | PASS - Kỳ lương Tháng 10/2026 đã được niêm phong thành công trong tblSal_Lock (LockCount >= 1). Hoàn tất bàn giao cho fix-8 nghiệm thu Phiếu lương! |
+| **TC-06** | fix-5 | TC-06: Khảo sát hiện trạng 5 ngày công trên Bảng công chi tiết (Role: test.nv) | ✅ PASS | ✅ PASS | PASS - Khảo sát Baseline Before 5 ngày công Tháng 10/2026 của NV 099 trên Bảng công cá nhân (5 ngày công trong CSDL). |
+| **TC-07** | fix-5 | TC-07: Nộp và Hủy đơn ngày 14/10; Nộp 2 đơn bù công ngày 15/10 và 16/10/2026 (Role: test.nv) | ❌ FAIL | ❌ FAIL | Error: page.waitForTimeout: Target page, context or browser has been closed |
+| **TC-08** | fix-5 | TC-08: Nộp đơn Xin nghỉ phép năm AL hưởng nguyên lương ngày 24/10 (Role: test.nv) | ✅ PASS | ✅ PASS | PASS - Đơn Xin nghỉ phép năm AL ngày 24/10/2026 đã được nộp thành công và ghi nhận vào CSDL. |
+| **TC-09** | fix-5 | TC-09: Nộp đơn Xin tăng ca OT 2.0h ngày 20/10/2026 & Đăng xuất (Role: test.nv) | ✅ PASS | ✅ PASS | PASS - Đơn Xin tăng ca OT 2.0h ngày 20/10/2026 đã được nộp thành công và đăng xuất an toàn. Hoàn tất bàn giao cho fix-6! |
+| **TC-10** | fix-6 | TC-10: Quản lý Trí Nguyễn duyệt Cấp 1 (Nghỉ phép 24/10, Bù công 15/10 & 16/10, Xin hủy 14/10) và Đăng xuất (Role: tri.nguyen) | ✅ PASS | ✅ PASS | Đạt yêu cầu logic nghiệp vụ mong đợi |
+| **TC-11** | fix-6 | TC-11: Quản lý Trường Long duyệt Cấp 1 đơn Tăng ca OT 20/10 & kiểm tra tab Lịch sử (Role: LongKa) | ✅ PASS | ✅ PASS | Đạt yêu cầu logic nghiệp vụ mong đợi |
+| **TC-12** | fix-6 | TC-12: Quản lý Trường Long duyệt Cấp 2 (Nghỉ phép 24/10, Bù công 15/10 & 16/10, Xin hủy 14/10), xem Lịch sử và Đăng xuất (Role: LongKa) | ✅ PASS | ✅ PASS | Đạt yêu cầu logic nghiệp vụ mong đợi |
+| **TC-13** | fix-6 | TC-13: Nhân viên Nguyễn Văn Test mở Bảng công cá nhân (MnuWPT010) chọn Tháng 10 xem kết quả (Role: test.nv) | ✅ PASS | ✅ PASS | Đạt yêu cầu logic nghiệp vụ mong đợi |
+| **TC-14** | fix-7 | TC-14: Mô phỏng thao tác nạp Thưởng KPI 1,000,000 VNĐ trên Thu nhập không cố định (MnuPRL036) | ✅ PASS | ✅ PASS | Đạt yêu cầu logic nghiệp vụ mong đợi |
+| **TC-15** | fix-7 | TC-15: Mô phỏng thao tác nạp Tạm ứng lương 2,000,000 VNĐ & Khóa phiếu (MnuPRL070) | ✅ PASS | ✅ PASS | Đạt yêu cầu logic nghiệp vụ mong đợi |
+| **TC-16** | fix-7 | TC-16: Mô phỏng thao tác chạy Tính tiền lương Tháng 10/2026 (MnuPRL040) | ✅ PASS | ✅ PASS | Đạt yêu cầu logic nghiệp vụ mong đợi |
+| **TC-17** | fix-7 | TC-17: Mô phỏng thao tác Khóa chấm công (MnuTAD125), Khóa lương (MnuPRL080) & Đăng xuất | ✅ PASS | ✅ PASS | Đạt yêu cầu logic nghiệp vụ mong đợi |
+| **TC-18** | fix-8 | TC-18: Replay Kế toán mở Danh sách trả lương, xem Bảng lương tổng hợp, nhảy Phiếu lương & Đăng xuất (Role: Chien.nguyen) | ✅ PASS | ✅ PASS | Đạt yêu cầu logic nghiệp vụ mong đợi |
+| **TC-19** | fix-8 | TC-19: Replay Nhân viên test.nv đăng nhập, mở Phiếu lương qua Launchpad & cuộn quan sát (Role: test.nv) | ✅ PASS | ✅ PASS | Đạt yêu cầu logic nghiệp vụ mong đợi |
+| **TC-20** | fix-8 | TC-20: Replay Nhân viên test.nv mở Tab Lịch sử, bấm Xem & mở/đóng 3 Modal chi tiết (Role: test.nv) | ✅ PASS | ✅ PASS | Đạt yêu cầu logic nghiệp vụ mong đợi |
 
 ---
 
@@ -74,7 +64,7 @@ Số ngày nghỉ còn lại:
 
 ### TC-03: fix-4 | TC-03: Thiết lập HĐLĐ và Mức lương 10,000,000 VNĐ (Role: cuong.vu)
 
-* **Trạng thái thực thi Test (Kỹ thuật)**: ✅ PASS (Thời gian thực thi: `64.25s`)
+* **Trạng thái thực thi Test (Kỹ thuật)**: ✅ PASS (Thời gian thực thi: `39.38s`)
 * **Trạng thái Logic Nghiệp vụ (Business Output)**: ✅ PASS
 * **Đánh giá tổng quát**: Đạt yêu cầu logic nghiệp vụ mong đợi
 * **Thư mục lưu trữ**: `test-evidence/quy_trinh_tinh_luong_nv_moi/TC-03/`
@@ -90,7 +80,7 @@ Số ngày nghỉ còn lại:
 
 ### TC-04: fix-4 | TC-04: Đăng ký 1 Người phụ thuộc giảm trừ gia cảnh (Role: cuong.vu)
 
-* **Trạng thái thực thi Test (Kỹ thuật)**: ✅ PASS (Thời gian thực thi: `66.23s`)
+* **Trạng thái thực thi Test (Kỹ thuật)**: ✅ PASS (Thời gian thực thi: `70.18s`)
 * **Trạng thái Logic Nghiệp vụ (Business Output)**: ✅ PASS
 * **Đánh giá tổng quát**: Đạt yêu cầu logic nghiệp vụ mong đợi
 * **Thư mục lưu trữ**: `test-evidence/quy_trinh_tinh_luong_nv_moi/TC-04/`
@@ -106,7 +96,7 @@ Số ngày nghỉ còn lại:
 
 ### TC-05: fix-4 | TC-05: Phân ca làm việc hành chính chuẩn cho NV 099 (Role: cuong.vu)
 
-* **Trạng thái thực thi Test (Kỹ thuật)**: ✅ PASS (Thời gian thực thi: `28.70s`)
+* **Trạng thái thực thi Test (Kỹ thuật)**: ✅ PASS (Thời gian thực thi: `30.98s`)
 * **Trạng thái Logic Nghiệp vụ (Business Output)**: ✅ PASS
 * **Đánh giá tổng quát**: Đạt yêu cầu logic nghiệp vụ mong đợi
 * **Thư mục lưu trữ**: `test-evidence/quy_trinh_tinh_luong_nv_moi/TC-05/`
@@ -120,11 +110,11 @@ Số ngày nghỉ còn lại:
 
 ---
 
-### TC-06: fix-5 | TC-06: Khảo sát hiện trạng Before ngày 15/10 và tổng công tháng 10 (Role: test.nv)
+### TC-06: fix-5 | TC-06: Khảo sát hiện trạng 5 ngày công trên Bảng công chi tiết (Role: test.nv)
 
-* **Trạng thái thực thi Test (Kỹ thuật)**: ✅ PASS (Thời gian thực thi: `30.80s`)
+* **Trạng thái thực thi Test (Kỹ thuật)**: ✅ PASS (Thời gian thực thi: `28.93s`)
 * **Trạng thái Logic Nghiệp vụ (Business Output)**: ✅ PASS
-* **Đánh giá tổng quát**: PASS - Khảo sát Baseline Before ngày 15/10 (0.0h) và tổng công Tháng 10 (21.0 công) hoàn tất thành công.
+* **Đánh giá tổng quát**: PASS - Khảo sát Baseline Before 5 ngày công Tháng 10/2026 của NV 099 trên Bảng công cá nhân (5 ngày công trong CSDL).
 * **Thư mục lưu trữ**: `test-evidence/quy_trinh_tinh_luong_nv_moi/TC-06/`
 
 #### 📸 Bằng chứng trực quan từng bước (Step-by-Step Evidence):
@@ -132,40 +122,40 @@ Số ngày nghỉ còn lại:
 ##### 🔹 Bước 1: Dang nhap tai khoan nhan vien moi test nv
 ![Bước 1: Dang nhap tai khoan nhan vien moi test nv](TC-06/screenshots/TC-06-step01-dang-nhap-tai-khoan-nhan-vien-moi-test-nv.png)
 
-##### 🔹 Bước 2: Khao sat Before ngay 15-10 tren MnuHRS225
-![Bước 2: Khao sat Before ngay 15-10 tren MnuHRS225](TC-06/screenshots/TC-06-step02-khao-sat-before-ngay-15-10-tren-mnuhrs225.png)
+##### 🔹 Bước 2: Mo man hinh Cham cong ca nhan MnuWPT010
+![Bước 2: Mo man hinh Cham cong ca nhan MnuWPT010](TC-06/screenshots/TC-06-step02-mo-man-hinh-cham-cong-ca-nhan-mnuwpt010.png)
 
-##### 🔹 Bước 3: Khao sat Before tong cong thang 10 tren MnuTAD1000
-![Bước 3: Khao sat Before tong cong thang 10 tren MnuTAD1000](TC-06/screenshots/TC-06-step03-khao-sat-before-tong-cong-thang-10-tren-mnutad1000.png)
-
-##### 🔹 Bước 4: Doi soat CSDL baseline before thanh cong
-![Bước 4: Doi soat CSDL baseline before thanh cong](TC-06/screenshots/TC-06-step04-doi-soat-csdl-baseline-before-thanh-cong.png)
+##### 🔹 Bước 3: Khao sat truc quan 5 ngay cong mau thang 10-2026
+![Bước 3: Khao sat truc quan 5 ngay cong mau thang 10-2026](TC-06/screenshots/TC-06-step03-khao-sat-truc-quan-5-ngay-cong-mau-thang-10-2026.png)
 
 #### 🎥 Video & Dấu vết kiểm thử (Video & Trace):
 - **Video phiên chạy thực tế**: [video.webm](TC-06/videos/video.webm)
 
 ---
 
-### TC-07: fix-5 | TC-07: Nộp đơn Xin bù công ngày 15/10/2026 giờ vào 08:00 (Role: test.nv)
+### TC-07: fix-5 | TC-07: Nộp và Hủy đơn ngày 14/10; Nộp 2 đơn bù công ngày 15/10 và 16/10/2026 (Role: test.nv)
 
-* **Trạng thái thực thi Test (Kỹ thuật)**: ✅ PASS (Thời gian thực thi: `62.18s`)
-* **Trạng thái Logic Nghiệp vụ (Business Output)**: ✅ PASS
-* **Đánh giá tổng quát**: PASS - Đơn Xin bù công ngày 15/10/2026 (vào 08:00) đã được nộp thành công và ghi nhận vào CSDL.
+* **Trạng thái thực thi Test (Kỹ thuật)**: ❌ FAIL (Thời gian thực thi: `3.87s`)
+* **Trạng thái Logic Nghiệp vụ (Business Output)**: ❌ FAIL
+* **Đánh giá tổng quát**: Error: page.waitForTimeout: Target page, context or browser has been closed
 * **Thư mục lưu trữ**: `test-evidence/quy_trinh_tinh_luong_nv_moi/TC-07/`
+
+> [!CAUTION] 🚨 THÔNG TIN LỖI PHÁT HIỆN TỪ THỰC THI (DEFECT EVIDENCE - FACTS ONLY)
+>
+> * **Vấn đề ghi nhận**: Error: page.waitForTimeout: Target page, context or browser has been closed
+> * **Kỳ vọng nghiệp vụ (Expected Output)**: Theo đặc tả chuẩn của hệ thống
+> * **Thực tế hệ thống (Actual Output)**: Thực tế phát sinh lỗi hoặc không đạt điều kiện kiểm tra
+>
+> 📌 **Lưu ý**: Kịch bản Test chỉ ghi nhận dữ liệu thực tế và sai khác. Phân tích nguyên nhân gốc (Root Cause) và giải pháp khắc phục sẽ do AI Agent điều tra và brainstorm trực tiếp từ Database & Source Code khi người dùng yêu cầu.
+
+> [!WARNING] Lỗi Kỹ Thuật (System/Playwright Error):
+```
+Error: page.waitForTimeout: Target page, context or browser has been closed
+```
 
 #### 📸 Bằng chứng trực quan từng bước (Step-by-Step Evidence):
 
-##### 🔹 Bước 1: Mo man hinh Xin bu cong MnuHRS033
-![Bước 1: Mo man hinh Xin bu cong MnuHRS033](TC-07/screenshots/TC-07-step01-mo-man-hinh-xin-bu-cong-mnuhrs033.png)
-
-##### 🔹 Bước 2: Dien form Xin bu cong ngay 15-10
-![Bước 2: Dien form Xin bu cong ngay 15-10](TC-07/screenshots/TC-07-step02-dien-form-xin-bu-cong-ngay-15-10.png)
-
-##### 🔹 Bước 3: Bam nut Dang ky va xac nhan popup
-![Bước 3: Bam nut Dang ky va xac nhan popup](TC-07/screenshots/TC-07-step03-bam-nut-dang-ky-va-xac-nhan-popup.png)
-
-##### 🔹 Bước 4: Tab Lich su don Bu cong 15-10 trang thai Cho duyet
-![Bước 4: Tab Lich su don Bu cong 15-10 trang thai Cho duyet](TC-07/screenshots/TC-07-step04-tab-lich-su-don-bu-cong-15-10-trang-thai-cho-duyet.png)
+*(Không có ảnh chụp màn hình)*
 
 #### 🎥 Video & Dấu vết kiểm thử (Video & Trace):
 - **Video phiên chạy thực tế**: [video.webm](TC-07/videos/video.webm)
@@ -174,298 +164,357 @@ Số ngày nghỉ còn lại:
 
 ### TC-08: fix-5 | TC-08: Nộp đơn Xin nghỉ phép năm AL hưởng nguyên lương ngày 24/10 (Role: test.nv)
 
-* **Trạng thái thực thi Test (Kỹ thuật)**: ❌ FAIL (Thời gian thực thi: `33.55s`)
-* **Trạng thái Logic Nghiệp vụ (Business Output)**: ❌ FAIL
-* **Đánh giá tổng quát**: Error: 🚨 [PHÁT HIỆN KHOANH NHẦM DÒNG]: Vùng định khoanh "FORM XIN NGHỈ PHÉP NĂM AL NGÀY 24/10/2026 (1 NGÀY = 8H)" KHÔNG chứa từ khóa bắt buộc "Phép năm".
-👉 Nội dung thực tế đang định khoanh bừa là: "Xin nghỉ phép
-Lịch sử
-Nguyễn Văn Test
-
-099
-
- Loại Nghỉ (*)
-Số ngày nghỉ còn lại:
-2
-?
- Từ ngày (*)
- Đến ngày (*)
- Lý do (..."
+* **Trạng thái thực thi Test (Kỹ thuật)**: ✅ PASS (Thời gian thực thi: `67.91s`)
+* **Trạng thái Logic Nghiệp vụ (Business Output)**: ✅ PASS
+* **Đánh giá tổng quát**: PASS - Đơn Xin nghỉ phép năm AL ngày 24/10/2026 đã được nộp thành công và ghi nhận vào CSDL.
 * **Thư mục lưu trữ**: `test-evidence/quy_trinh_tinh_luong_nv_moi/TC-08/`
-
-> [!CAUTION] 🚨 THÔNG TIN LỖI PHÁT HIỆN TỪ THỰC THI (DEFECT EVIDENCE - FACTS ONLY)
->
-> * **Vấn đề ghi nhận**: Error: 🚨 [PHÁT HIỆN KHOANH NHẦM DÒNG]: Vùng định khoanh "FORM XIN NGHỈ PHÉP NĂM AL NGÀY 24/10/2026 (1 NGÀY = 8H)" KHÔNG chứa từ khóa bắt buộc "Phép năm".
-👉 Nội dung thực tế đang định khoanh bừa là: "Xin nghỉ phép
-Lịch sử
-Nguyễn Văn Test
-
-099
-
- Loại Nghỉ (*)
-Số ngày nghỉ còn lại:
-2
-?
- Từ ngày (*)
- Đến ngày (*)
- Lý do (..."
-> * **Kỳ vọng nghiệp vụ (Expected Output)**: Theo đặc tả chuẩn của hệ thống
-> * **Thực tế hệ thống (Actual Output)**: đang định khoanh bừa là: "Xin nghỉ phép
-Lịch sử
-Nguyễn Văn Test
-
-099
-
- Loại Nghỉ (*
->
-> 📌 **Lưu ý**: Kịch bản Test chỉ ghi nhận dữ liệu thực tế và sai khác. Phân tích nguyên nhân gốc (Root Cause) và giải pháp khắc phục sẽ do AI Agent điều tra và brainstorm trực tiếp từ Database & Source Code khi người dùng yêu cầu.
-
-> [!WARNING] Lỗi Kỹ Thuật (System/Playwright Error):
-```
-Error: 🚨 [PHÁT HIỆN KHOANH NHẦM DÒNG]: Vùng định khoanh "FORM XIN NGHỈ PHÉP NĂM AL NGÀY 24/10/2026 (1 NGÀY = 8H)" KHÔNG chứa từ khóa bắt buộc "Phép năm".
-👉 Nội dung thực tế đang định khoanh bừa là: "Xin nghỉ phép
-Lịch sử
-Nguyễn Văn Test
-
-099
-
- Loại Nghỉ (*)
-Số ngày nghỉ còn lại:
-2
-?
- Từ ngày (*)
- Đến ngày (*)
- Lý do (..."
-```
 
 #### 📸 Bằng chứng trực quan từng bước (Step-by-Step Evidence):
 
 ##### 🔹 Bước 1: Mo man hinh Xin nghi phep MnuWPT315
 ![Bước 1: Mo man hinh Xin nghi phep MnuWPT315](TC-08/screenshots/TC-08-step01-mo-man-hinh-xin-nghi-phep-mnuwpt315.png)
 
+##### 🔹 Bước 2: Dien form Xin nghi phep nam AL ngay 24-10
+![Bước 2: Dien form Xin nghi phep nam AL ngay 24-10](TC-08/screenshots/TC-08-step02-dien-form-xin-nghi-phep-nam-al-ngay-24-10.png)
+
+##### 🔹 Bước 3: Bam nut Gui don va xac nhan popup
+![Bước 3: Bam nut Gui don va xac nhan popup](TC-08/screenshots/TC-08-step03-bam-nut-gui-don-va-xac-nhan-popup.png)
+
+##### 🔹 Bước 4: Tab Lich su don Nghi phep ngay 24-10
+![Bước 4: Tab Lich su don Nghi phep ngay 24-10](TC-08/screenshots/TC-08-step04-tab-lich-su-don-nghi-phep-ngay-24-10.png)
+
 #### 🎥 Video & Dấu vết kiểm thử (Video & Trace):
 - **Video phiên chạy thực tế**: [video.webm](TC-08/videos/video.webm)
 
 ---
 
-### TC-09: fix-5 | TC-09: Nộp đơn Xin tăng ca OT 2.0h ngày 20/10/2026 (Role: test.nv)
+### TC-09: fix-5 | TC-09: Nộp đơn Xin tăng ca OT 2.0h ngày 20/10/2026 & Đăng xuất (Role: test.nv)
 
-* **Trạng thái thực thi Test (Kỹ thuật)**: ❌ FAIL (Thời gian thực thi: `46.73s`)
-* **Trạng thái Logic Nghiệp vụ (Business Output)**: ❌ FAIL
-* **Đánh giá tổng quát**: Error: 🚨 [PHÁT HIỆN LỖI GÕ PHÍM]: Đã thực hiện gõ vào "Lý do tăng ca" nhưng ô input trên giao diện vẫn trống rỗng! Dừng kịch bản, cấm bấm Submit!
+* **Trạng thái thực thi Test (Kỹ thuật)**: ✅ PASS (Thời gian thực thi: `65.23s`)
+* **Trạng thái Logic Nghiệp vụ (Business Output)**: ✅ PASS
+* **Đánh giá tổng quát**: PASS - Đơn Xin tăng ca OT 2.0h ngày 20/10/2026 đã được nộp thành công và đăng xuất an toàn. Hoàn tất bàn giao cho fix-6!
 * **Thư mục lưu trữ**: `test-evidence/quy_trinh_tinh_luong_nv_moi/TC-09/`
-
-> [!CAUTION] 🚨 THÔNG TIN LỖI PHÁT HIỆN TỪ THỰC THI (DEFECT EVIDENCE - FACTS ONLY)
->
-> * **Vấn đề ghi nhận**: Error: 🚨 [PHÁT HIỆN LỖI GÕ PHÍM]: Đã thực hiện gõ vào "Lý do tăng ca" nhưng ô input trên giao diện vẫn trống rỗng! Dừng kịch bản, cấm bấm Submit!
-> * **Kỳ vọng nghiệp vụ (Expected Output)**: Theo đặc tả chuẩn của hệ thống
-> * **Thực tế hệ thống (Actual Output)**: Thực tế phát sinh lỗi hoặc không đạt điều kiện kiểm tra
->
-> 📌 **Lưu ý**: Kịch bản Test chỉ ghi nhận dữ liệu thực tế và sai khác. Phân tích nguyên nhân gốc (Root Cause) và giải pháp khắc phục sẽ do AI Agent điều tra và brainstorm trực tiếp từ Database & Source Code khi người dùng yêu cầu.
-
-> [!WARNING] Lỗi Kỹ Thuật (System/Playwright Error):
-```
-Error: 🚨 [PHÁT HIỆN LỖI GÕ PHÍM]: Đã thực hiện gõ vào "Lý do tăng ca" nhưng ô input trên giao diện vẫn trống rỗng! Dừng kịch bản, cấm bấm Submit!
-```
 
 #### 📸 Bằng chứng trực quan từng bước (Step-by-Step Evidence):
 
 ##### 🔹 Bước 1: Mo man hinh Xin tang ca MnuWPT316
 ![Bước 1: Mo man hinh Xin tang ca MnuWPT316](TC-09/screenshots/TC-09-step01-mo-man-hinh-xin-tang-ca-mnuwpt316.png)
 
+##### 🔹 Bước 2: Dien form Xin tang ca OT 2h ngay 20-10
+![Bước 2: Dien form Xin tang ca OT 2h ngay 20-10](TC-09/screenshots/TC-09-step02-dien-form-xin-tang-ca-ot-2h-ngay-20-10.png)
+
+##### 🔹 Bước 3: Bam nut Gui don tang ca va xac nhan popup
+![Bước 3: Bam nut Gui don tang ca va xac nhan popup](TC-09/screenshots/TC-09-step03-bam-nut-gui-don-tang-ca-va-xac-nhan-popup.png)
+
+##### 🔹 Bước 4: Tab Lich su don Tang ca OT ngay 20-10
+![Bước 4: Tab Lich su don Tang ca OT ngay 20-10](TC-09/screenshots/TC-09-step04-tab-lich-su-don-tang-ca-ot-ngay-20-10.png)
+
+##### 🔹 Bước 5: Dang xuat hoan tat chu trinh nop don ESS
+![Bước 5: Dang xuat hoan tat chu trinh nop don ESS](TC-09/screenshots/TC-09-step05-dang-xuat-hoan-tat-chu-trinh-nop-don-ess.png)
+
 #### 🎥 Video & Dấu vết kiểm thử (Video & Trace):
 - **Video phiên chạy thực tế**: [video.webm](TC-09/videos/video.webm)
 
 ---
 
-### TC-10: fix-6 | TC-10: Quản lý ThanhLong phê duyệt Cấp 1 đơn Nghỉ phép AL 24/10 (Role: ThanhLong)
+### TC-10: fix-6 | TC-10: Quản lý Trí Nguyễn duyệt Cấp 1 (Nghỉ phép 24/10, Bù công 15/10 & 16/10, Xin hủy 14/10) và Đăng xuất (Role: tri.nguyen)
 
-* **Trạng thái thực thi Test (Kỹ thuật)**: ✅ PASS (Thời gian thực thi: `42.77s`)
+* **Trạng thái thực thi Test (Kỹ thuật)**: ✅ PASS (Thời gian thực thi: `122.39s`)
 * **Trạng thái Logic Nghiệp vụ (Business Output)**: ✅ PASS
-* **Đánh giá tổng quát**: PASS - Quản lý ThanhLong đã thẩm định & duyệt Cấp 1 đơn Nghỉ phép AL ngày 24/10 của NV 099
+* **Đánh giá tổng quát**: Đạt yêu cầu logic nghiệp vụ mong đợi
 * **Thư mục lưu trữ**: `test-evidence/quy_trinh_tinh_luong_nv_moi/TC-10/`
 
 #### 📸 Bằng chứng trực quan từng bước (Step-by-Step Evidence):
 
-##### 🔹 Bước 1: Dang nhap tai khoan Quan ly ThanhLong
-![Bước 1: Dang nhap tai khoan Quan ly ThanhLong](TC-10/screenshots/TC-10-step01-dang-nhap-tai-khoan-quan-ly-thanhlong.png)
+##### 🔹 Bước 1: Dang nhap tri.nguyen
+![Bước 1: Dang nhap tri.nguyen](TC-10/screenshots/TC-10-step01-dang-nhap-tri-nguyen.png)
 
-##### 🔹 Bước 2: Mo man hinh Danh sach phe duyet MnuWPT037
-![Bước 2: Mo man hinh Danh sach phe duyet MnuWPT037](TC-10/screenshots/TC-10-step02-mo-man-hinh-danh-sach-phe-duyet-mnuwpt037.png)
+##### 🔹 Bước 2: Mo MnuWPT037 qua Launchpad
+![Bước 2: Mo MnuWPT037 qua Launchpad](TC-10/screenshots/TC-10-step02-mo-mnuwpt037-qua-launchpad.png)
 
-##### 🔹 Bước 3: Chua co the don tren giao dien standalone
-> *(Giao diện giữ nguyên, không phát sinh thay đổi so với Bước 2)*
+##### 🔹 Bước 3: Duyet Cap 1 Đơn Nghỉ phép 24/10
+![Bước 3: Duyet Cap 1 Đơn Nghỉ phép 24/10](TC-10/screenshots/TC-10-step03-duyet-cap-1-don-nghi-phep-24-10.png)
 
-##### 🔹 Bước 4: Bo qua thao tac click duyet o pha standalone
-> *(Giao diện giữ nguyên, không phát sinh thay đổi so với Bước 2)*
+##### 🔹 Bước 4: Duyet Cap 1 Đơn Bù công 15/10
+![Bước 4: Duyet Cap 1 Đơn Bù công 15/10](TC-10/screenshots/TC-10-step04-duyet-cap-1-don-bu-cong-15-10.png)
 
-##### 🔹 Bước 5: Doi soat CSDL trang thai duyet Cap 1
-> *(Giao diện giữ nguyên, không phát sinh thay đổi so với Bước 2)*
+##### 🔹 Bước 5: Duyet Cap 1 Đơn Bù công 16/10
+![Bước 5: Duyet Cap 1 Đơn Bù công 16/10](TC-10/screenshots/TC-10-step05-duyet-cap-1-don-bu-cong-16-10.png)
+
+##### 🔹 Bước 6: Duyet Cap 1 Đơn Xin hủy Bù công 14/10
+![Bước 6: Duyet Cap 1 Đơn Xin hủy Bù công 14/10](TC-10/screenshots/TC-10-step06-duyet-cap-1-don-xin-huy-bu-cong-14-10.png)
+
+##### 🔹 Bước 7: Dang xuat tri.nguyen thanh cong
+![Bước 7: Dang xuat tri.nguyen thanh cong](TC-10/screenshots/TC-10-step07-dang-xuat-tri-nguyen-thanh-cong.png)
 
 #### 🎥 Video & Dấu vết kiểm thử (Video & Trace):
 - **Video phiên chạy thực tế**: [video.webm](TC-10/videos/video.webm)
 
 ---
 
-### TC-11: fix-6 | TC-11: Quản lý LongKa phê duyệt Cấp 1 đơn Tăng ca OT 20/10 (Role: LongKa)
+### TC-11: fix-6 | TC-11: Quản lý Trường Long duyệt Cấp 1 đơn Tăng ca OT 20/10 & kiểm tra tab Lịch sử (Role: LongKa)
 
-* **Trạng thái thực thi Test (Kỹ thuật)**: ✅ PASS (Thời gian thực thi: `58.34s`)
+* **Trạng thái thực thi Test (Kỹ thuật)**: ✅ PASS (Thời gian thực thi: `57.67s`)
 * **Trạng thái Logic Nghiệp vụ (Business Output)**: ✅ PASS
-* **Đánh giá tổng quát**: PASS - Quản lý LongKa đã thẩm định & duyệt Cấp 1 đơn Tăng ca OT ngày 20/10 của NV 099
+* **Đánh giá tổng quát**: Đạt yêu cầu logic nghiệp vụ mong đợi
 * **Thư mục lưu trữ**: `test-evidence/quy_trinh_tinh_luong_nv_moi/TC-11/`
 
 #### 📸 Bằng chứng trực quan từng bước (Step-by-Step Evidence):
 
-##### 🔹 Bước 1: Dang nhap tai khoan Quan ly tang ca LongKa
-![Bước 1: Dang nhap tai khoan Quan ly tang ca LongKa](TC-11/screenshots/TC-11-step01-dang-nhap-tai-khoan-quan-ly-tang-ca-longka.png)
+##### 🔹 Bước 1: Dang nhap LongKa
+![Bước 1: Dang nhap LongKa](TC-11/screenshots/TC-11-step01-dang-nhap-longka.png)
 
-##### 🔹 Bước 2: Mo man hinh Danh sach phe duyet MnuWPT037
-![Bước 2: Mo man hinh Danh sach phe duyet MnuWPT037](TC-11/screenshots/TC-11-step02-mo-man-hinh-danh-sach-phe-duyet-mnuwpt037.png)
+##### 🔹 Bước 2: Mo MnuWPT037 tu Launchpad
+![Bước 2: Mo MnuWPT037 tu Launchpad](TC-11/screenshots/TC-11-step02-mo-mnuwpt037-tu-launchpad.png)
 
-##### 🔹 Bước 3: Khoanh vung the don tang ca OT 20-10 can duyet
-![Bước 3: Khoanh vung the don tang ca OT 20-10 can duyet](TC-11/screenshots/TC-11-step03-khoanh-vung-the-don-tang-ca-ot-20-10-can-duyet.png)
+##### 🔹 Bước 3: Chon the don Tang ca OT 099
+![Bước 3: Chon the don Tang ca OT 099](TC-11/screenshots/TC-11-step03-chon-the-don-tang-ca-ot-099.png)
 
-##### 🔹 Bước 4: Di chuot bam nut Duyet Cap 1 OT va xac nhan
-![Bước 4: Di chuot bam nut Duyet Cap 1 OT va xac nhan](TC-11/screenshots/TC-11-step04-di-chuot-bam-nut-duyet-cap-1-ot-va-xac-nhan.png)
+##### 🔹 Bước 4: Duyet OT va xem tab Lich su
+![Bước 4: Duyet OT va xem tab Lich su](TC-11/screenshots/TC-11-step04-duyet-ot-va-xem-tab-lich-su.png)
 
-##### 🔹 Bước 5: Doi soat CSDL trang thai duyet Cap 1 OT
-> *(Giao diện giữ nguyên, không phát sinh thay đổi so với Bước 4)*
+##### 🔹 Bước 5: Quay lai MnuWPT037 va reloadData
+![Bước 5: Quay lai MnuWPT037 va reloadData](TC-11/screenshots/TC-11-step05-quay-lai-mnuwpt037-va-reloaddata.png)
 
 #### 🎥 Video & Dấu vết kiểm thử (Video & Trace):
 - **Video phiên chạy thực tế**: [video.webm](TC-11/videos/video.webm)
 
 ---
 
-### TC-12: fix-6 | TC-12: Giám đốc cuong.vu phê duyệt chặng cuối CẢ 2 ĐƠN + Đơn bù công 15/10 (Role: cuong.vu)
+### TC-12: fix-6 | TC-12: Quản lý Trường Long duyệt Cấp 2 (Nghỉ phép 24/10, Bù công 15/10 & 16/10, Xin hủy 14/10), xem Lịch sử và Đăng xuất (Role: LongKa)
 
-* **Trạng thái thực thi Test (Kỹ thuật)**: ✅ PASS (Thời gian thực thi: `44.61s`)
+* **Trạng thái thực thi Test (Kỹ thuật)**: ✅ PASS (Thời gian thực thi: `138.76s`)
 * **Trạng thái Logic Nghiệp vụ (Business Output)**: ✅ PASS
-* **Đánh giá tổng quát**: PASS - Giám đốc cuong.vu đã phê duyệt chặng cuối hoàn tất CẢ 3 ĐƠN (Phép AL, Tăng ca OT, Bù công) cho NV 099
+* **Đánh giá tổng quát**: Đạt yêu cầu logic nghiệp vụ mong đợi
 * **Thư mục lưu trữ**: `test-evidence/quy_trinh_tinh_luong_nv_moi/TC-12/`
 
 #### 📸 Bằng chứng trực quan từng bước (Step-by-Step Evidence):
 
-##### 🔹 Bước 1: Dang nhap tai khoan Giam doc cuong vu
-![Bước 1: Dang nhap tai khoan Giam doc cuong vu](TC-12/screenshots/TC-12-step01-dang-nhap-tai-khoan-giam-doc-cuong-vu.png)
+##### 🔹 Bước 1: LongKa mo MnuWPT037 duyet Cap 2
+![Bước 1: LongKa mo MnuWPT037 duyet Cap 2](TC-12/screenshots/TC-12-step01-longka-mo-mnuwpt037-duyet-cap-2.png)
 
-##### 🔹 Bước 2: Mo man hinh Danh sach phe duyet MnuWPT037
-![Bước 2: Mo man hinh Danh sach phe duyet MnuWPT037](TC-12/screenshots/TC-12-step02-mo-man-hinh-danh-sach-phe-duyet-mnuwpt037.png)
+##### 🔹 Bước 2: Duyet Cap 2 va kiem tra tab Nghỉ phép 24/10
+![Bước 2: Duyet Cap 2 va kiem tra tab Nghỉ phép 24/10](TC-12/screenshots/TC-12-step02-duyet-cap-2-va-kiem-tra-tab-nghi-phep-24-10.png)
 
-##### 🔹 Bước 3: Khoanh vung the don cho duyet chang cuoi
-![Bước 3: Khoanh vung the don cho duyet chang cuoi](TC-12/screenshots/TC-12-step03-khoanh-vung-the-don-cho-duyet-chang-cuoi.png)
+##### 🔹 Bước 3: Duyet Cap 2 va kiem tra tab Bù công 15/10
+![Bước 3: Duyet Cap 2 va kiem tra tab Bù công 15/10](TC-12/screenshots/TC-12-step03-duyet-cap-2-va-kiem-tra-tab-bu-cong-15-10.png)
 
-##### 🔹 Bước 4: Di chuot phe duyet hoan tat cac don
-![Bước 4: Di chuot phe duyet hoan tat cac don](TC-12/screenshots/TC-12-step04-di-chuot-phe-duyet-hoan-tat-cac-don.png)
+##### 🔹 Bước 4: Duyet Cap 2 va kiem tra tab Bù công 16/10
+![Bước 4: Duyet Cap 2 va kiem tra tab Bù công 16/10](TC-12/screenshots/TC-12-step04-duyet-cap-2-va-kiem-tra-tab-bu-cong-16-10.png)
 
-##### 🔹 Bước 5: Doi soat CSDL trang thai duyet chang cuoi
-> *(Giao diện giữ nguyên, không phát sinh thay đổi so với Bước 4)*
+##### 🔹 Bước 5: Duyet Cap 2 va kiem tra tab Xin hủy Bù công 14/10
+![Bước 5: Duyet Cap 2 va kiem tra tab Xin hủy Bù công 14/10](TC-12/screenshots/TC-12-step05-duyet-cap-2-va-kiem-tra-tab-xin-huy-bu-cong-14-10.png)
+
+##### 🔹 Bước 6: Dang xuat LongKa thanh cong
+![Bước 6: Dang xuat LongKa thanh cong](TC-12/screenshots/TC-12-step06-dang-xuat-longka-thanh-cong.png)
 
 #### 🎥 Video & Dấu vết kiểm thử (Video & Trace):
 - **Video phiên chạy thực tế**: [video.webm](TC-12/videos/video.webm)
 
 ---
 
-### TC-13: fix-6 | TC-13: Đối soát chốt chặn Delta After công ngày 15/10 và tổng công tháng (Role: cuong.vu)
+### TC-13: fix-6 | TC-13: Nhân viên Nguyễn Văn Test mở Bảng công cá nhân (MnuWPT010) chọn Tháng 10 xem kết quả (Role: test.nv)
 
-* **Trạng thái thực thi Test (Kỹ thuật)**: ✅ PASS (Thời gian thực thi: `39.16s`)
+* **Trạng thái thực thi Test (Kỹ thuật)**: ✅ PASS (Thời gian thực thi: `28.05s`)
 * **Trạng thái Logic Nghiệp vụ (Business Output)**: ✅ PASS
 * **Đánh giá tổng quát**: Đạt yêu cầu logic nghiệp vụ mong đợi
 * **Thư mục lưu trữ**: `test-evidence/quy_trinh_tinh_luong_nv_moi/TC-13/`
 
 #### 📸 Bằng chứng trực quan từng bước (Step-by-Step Evidence):
 
-##### 🔹 Bước 1: Dang nhap tai khoan Giam doc cuong vu
-![Bước 1: Dang nhap tai khoan Giam doc cuong vu](TC-13/screenshots/TC-13-step01-dang-nhap-tai-khoan-giam-doc-cuong-vu.png)
+##### 🔹 Bước 1: Dang nhap test.nv
+![Bước 1: Dang nhap test.nv](TC-13/screenshots/TC-13-step01-dang-nhap-test-nv.png)
 
-##### 🔹 Bước 2: Doi soat Delta After ngay 15-10 tren MnuHRS225
-![Bước 2: Doi soat Delta After ngay 15-10 tren MnuHRS225](TC-13/screenshots/TC-13-step02-doi-soat-delta-after-ngay-15-10-tren-mnuhrs225.png)
+##### 🔹 Bước 2: Mo Bang cong ca nhan MnuWPT010
+![Bước 2: Mo Bang cong ca nhan MnuWPT010](TC-13/screenshots/TC-13-step02-mo-bang-cong-ca-nhan-mnuwpt010.png)
 
-##### 🔹 Bước 3: Khoanh vung tong cong Delta After 23-0 ngay tren MnuTAD1000
-![Bước 3: Khoanh vung tong cong Delta After 23-0 ngay tren MnuTAD1000](TC-13/screenshots/TC-13-step03-khoanh-vung-tong-cong-delta-after-23-0-ngay-tren-mnutad1000.png)
-
-##### 🔹 Bước 4: Doi soat CSDL kep tren tblHasTA ngay 15-10
-![Bước 4: Doi soat CSDL kep tren tblHasTA ngay 15-10](TC-13/screenshots/TC-13-step04-doi-soat-csdl-kep-tren-tblhasta-ngay-15-10.png)
-
-##### 🔹 Bước 5: Hoan tat doi soat Delta After 23-23 ngay cong
-> *(Giao diện giữ nguyên, không phát sinh thay đổi so với Bước 4)*
+##### 🔹 Bước 3: Chon Thang 10 xem Bang cong ca nhan NV 099
+![Bước 3: Chon Thang 10 xem Bang cong ca nhan NV 099](TC-13/screenshots/TC-13-step03-chon-thang-10-xem-bang-cong-ca-nhan-nv-099.png)
 
 #### 🎥 Video & Dấu vết kiểm thử (Video & Trace):
 - **Video phiên chạy thực tế**: [video.webm](TC-13/videos/video.webm)
 
 ---
 
-### TC-14: fix-7 | TC-14: Kế toán chien.nguyen nạp Thưởng KPI 1,000,000 VNĐ Tháng 10/2026 (Role: chien.nguyen)
+### TC-14: fix-7 | TC-14: Mô phỏng thao tác nạp Thưởng KPI 1,000,000 VNĐ trên Thu nhập không cố định (MnuPRL036)
 
-* **Trạng thái thực thi Test (Kỹ thuật)**: ✅ PASS (Thời gian thực thi: `30.90s`)
+* **Trạng thái thực thi Test (Kỹ thuật)**: ✅ PASS (Thời gian thực thi: `72.31s`)
 * **Trạng thái Logic Nghiệp vụ (Business Output)**: ✅ PASS
-* **Đánh giá tổng quát**: PASS - Kế toán trưởng chien.nguyen đã nạp Thưởng KPI 1.000.000 VNĐ cho nhân viên 099 trong kỳ Tháng 10/2026 trên MnuPRL036 (tblSal_Adjustment).
+* **Đánh giá tổng quát**: Đạt yêu cầu logic nghiệp vụ mong đợi
 * **Thư mục lưu trữ**: `test-evidence/quy_trinh_tinh_luong_nv_moi/TC-14/`
 
 #### 📸 Bằng chứng trực quan từng bước (Step-by-Step Evidence):
 
-##### 🔹 Bước 1: Dang nhap tai khoan ke toan truong chien nguyen
-![Bước 1: Dang nhap tai khoan ke toan truong chien nguyen](TC-14/screenshots/TC-14-step01-dang-nhap-tai-khoan-ke-toan-truong-chien-nguyen.png)
+##### 🔹 Bước 1: Dang nhap Chien nguyen
+![Bước 1: Dang nhap Chien nguyen](TC-14/screenshots/TC-14-step01-dang-nhap-chien-nguyen.png)
 
-##### 🔹 Bước 2: Man hinh thu nhap khong co dinh mnuprl036 thang 10 2026
-![Bước 2: Man hinh thu nhap khong co dinh mnuprl036 thang 10 2026](TC-14/screenshots/TC-14-step02-man-hinh-thu-nhap-khong-co-dinh-mnuprl036-thang-10-2026.png)
+##### 🔹 Bước 2: Mo menu Thu nhap khong co dinh MnuPRL036
+![Bước 2: Mo menu Thu nhap khong co dinh MnuPRL036](TC-14/screenshots/TC-14-step02-mo-menu-thu-nhap-khong-co-dinh-mnuprl036.png)
+
+##### 🔹 Bước 3: Luu Thuong KPI 1M thanh cong tren MnuPRL036
+![Bước 3: Luu Thuong KPI 1M thanh cong tren MnuPRL036](TC-14/screenshots/TC-14-step03-luu-thuong-kpi-1m-thanh-cong-tren-mnuprl036.png)
 
 #### 🎥 Video & Dấu vết kiểm thử (Video & Trace):
 - **Video phiên chạy thực tế**: [video.webm](TC-14/videos/video.webm)
 
 ---
 
-### TC-15: fix-7 | TC-15: Kế toán chien.nguyen nạp Tạm ứng lương 2,000,000 VNĐ và Khóa phiếu (Role: chien.nguyen)
+### TC-15: fix-7 | TC-15: Mô phỏng thao tác nạp Tạm ứng lương 2,000,000 VNĐ & Khóa phiếu (MnuPRL070)
 
-* **Trạng thái thực thi Test (Kỹ thuật)**: ✅ PASS (Thời gian thực thi: `29.08s`)
+* **Trạng thái thực thi Test (Kỹ thuật)**: ✅ PASS (Thời gian thực thi: `59.90s`)
 * **Trạng thái Logic Nghiệp vụ (Business Output)**: ✅ PASS
-* **Đánh giá tổng quát**: PASS - Kế toán trưởng chien.nguyen đã nạp Tạm ứng 2.000.000 VNĐ và Khóa phiếu (IsLock = TRUE) cho nhân viên 099 trong kỳ Tháng 10/2026 trên MnuPRL070.
+* **Đánh giá tổng quát**: Đạt yêu cầu logic nghiệp vụ mong đợi
 * **Thư mục lưu trữ**: `test-evidence/quy_trinh_tinh_luong_nv_moi/TC-15/`
 
 #### 📸 Bằng chứng trực quan từng bước (Step-by-Step Evidence):
 
-##### 🔹 Bước 1: Man hinh tam ung luong mnuprl070 thang 10 2026
-![Bước 1: Man hinh tam ung luong mnuprl070 thang 10 2026](TC-15/screenshots/TC-15-step01-man-hinh-tam-ung-luong-mnuprl070-thang-10-2026.png)
+##### 🔹 Bước 1: Dang nhap Chien nguyen
+![Bước 1: Dang nhap Chien nguyen](TC-15/screenshots/TC-15-step01-dang-nhap-chien-nguyen.png)
+
+##### 🔹 Bước 2: Mo menu Tam ung luong MnuPRL070
+![Bước 2: Mo menu Tam ung luong MnuPRL070](TC-15/screenshots/TC-15-step02-mo-menu-tam-ung-luong-mnuprl070.png)
+
+##### 🔹 Bước 3: Luu va khoa Tam ung 2M tren MnuPRL070
+![Bước 3: Luu va khoa Tam ung 2M tren MnuPRL070](TC-15/screenshots/TC-15-step03-luu-va-khoa-tam-ung-2m-tren-mnuprl070.png)
 
 #### 🎥 Video & Dấu vết kiểm thử (Video & Trace):
 - **Video phiên chạy thực tế**: [video.webm](TC-15/videos/video.webm)
 
 ---
 
-### TC-16: fix-7 | TC-16: Kế toán kích hoạt Tính tiền lương tự động toàn công ty (Role: chien.nguyen)
+### TC-16: fix-7 | TC-16: Mô phỏng thao tác chạy Tính tiền lương Tháng 10/2026 (MnuPRL040)
 
-* **Trạng thái thực thi Test (Kỹ thuật)**: ✅ PASS (Thời gian thực thi: `28.11s`)
+* **Trạng thái thực thi Test (Kỹ thuật)**: ✅ PASS (Thời gian thực thi: `69.77s`)
 * **Trạng thái Logic Nghiệp vụ (Business Output)**: ✅ PASS
-* **Đánh giá tổng quát**: PASS - Thủ tục tính lương tự động SALCAL_MAIN Tháng 10/2026 đã được kích hoạt thành công trên MnuPRL040. CSDL tblSal_Sal đã ghi nhận Lương cơ bản = 10.000.000 VNĐ cho nhân viên 099.
+* **Đánh giá tổng quát**: Đạt yêu cầu logic nghiệp vụ mong đợi
 * **Thư mục lưu trữ**: `test-evidence/quy_trinh_tinh_luong_nv_moi/TC-16/`
 
 #### 📸 Bằng chứng trực quan từng bước (Step-by-Step Evidence):
 
-##### 🔹 Bước 1: Truoc khi nhap tinh tien luong mnuprl040
-![Bước 1: Truoc khi nhap tinh tien luong mnuprl040](TC-16/screenshots/TC-16-step01-truoc-khi-nhap-tinh-tien-luong-mnuprl040.png)
+##### 🔹 Bước 1: Dang nhap Chien nguyen
+![Bước 1: Dang nhap Chien nguyen](TC-16/screenshots/TC-16-step01-dang-nhap-chien-nguyen.png)
 
-##### 🔹 Bước 2: Hoan tat tinh tien luong mnuprl040
-> *(Giao diện giữ nguyên, không phát sinh thay đổi so với Bước 1)*
+##### 🔹 Bước 2: Mo menu Tinh tien luong MnuPRL040
+![Bước 2: Mo menu Tinh tien luong MnuPRL040](TC-16/screenshots/TC-16-step02-mo-menu-tinh-tien-luong-mnuprl040.png)
+
+##### 🔹 Bước 3: Chay xong Tinh tien luong MnuPRL040
+![Bước 3: Chay xong Tinh tien luong MnuPRL040](TC-16/screenshots/TC-16-step03-chay-xong-tinh-tien-luong-mnuprl040.png)
 
 #### 🎥 Video & Dấu vết kiểm thử (Video & Trace):
 - **Video phiên chạy thực tế**: [video.webm](TC-16/videos/video.webm)
 
 ---
 
-### TC-17: fix-7 | TC-17: Kế toán thực hiện Khóa sổ kỳ lương Tháng 10/2026 (Role: chien.nguyen)
+### TC-17: fix-7 | TC-17: Mô phỏng thao tác Khóa chấm công (MnuTAD125), Khóa lương (MnuPRL080) & Đăng xuất
 
-* **Trạng thái thực thi Test (Kỹ thuật)**: ✅ PASS (Thời gian thực thi: `28.78s`)
+* **Trạng thái thực thi Test (Kỹ thuật)**: ✅ PASS (Thời gian thực thi: `85.19s`)
 * **Trạng thái Logic Nghiệp vụ (Business Output)**: ✅ PASS
-* **Đánh giá tổng quát**: PASS - Kỳ lương Tháng 10/2026 đã được niêm phong thành công trong tblSal_Lock (LockCount >= 1). Hoàn tất bàn giao cho fix-8 nghiệm thu Phiếu lương!
+* **Đánh giá tổng quát**: Đạt yêu cầu logic nghiệp vụ mong đợi
 * **Thư mục lưu trữ**: `test-evidence/quy_trinh_tinh_luong_nv_moi/TC-17/`
 
 #### 📸 Bằng chứng trực quan từng bước (Step-by-Step Evidence):
 
-##### 🔹 Bước 1: Truoc khi khoa luong thang 10 2026 tai mnuprl080
-![Bước 1: Truoc khi khoa luong thang 10 2026 tai mnuprl080](TC-17/screenshots/TC-17-step01-truoc-khi-khoa-luong-thang-10-2026-tai-mnuprl080.png)
+##### 🔹 Bước 1: Dang nhap Chien nguyen
+![Bước 1: Dang nhap Chien nguyen](TC-17/screenshots/TC-17-step01-dang-nhap-chien-nguyen.png)
 
-##### 🔹 Bước 2: Sau khi khoa luong thang 10 2026 tai mnuprl080
-> *(Giao diện giữ nguyên, không phát sinh thay đổi so với Bước 1)*
+##### 🔹 Bước 2: Khoa cham cong NV 099 tren MnuTAD125
+![Bước 2: Khoa cham cong NV 099 tren MnuTAD125](TC-17/screenshots/TC-17-step02-khoa-cham-cong-nv-099-tren-mnutad125.png)
+
+##### 🔹 Bước 3: Khoa so ky luong NV 099 tren MnuPRL080
+![Bước 3: Khoa so ky luong NV 099 tren MnuPRL080](TC-17/screenshots/TC-17-step03-khoa-so-ky-luong-nv-099-tren-mnuprl080.png)
+
+##### 🔹 Bước 4: Dang xuat ve man hinh Login
+![Bước 4: Dang xuat ve man hinh Login](TC-17/screenshots/TC-17-step04-dang-xuat-ve-man-hinh-login.png)
 
 #### 🎥 Video & Dấu vết kiểm thử (Video & Trace):
+- **Video phiên chạy thực tế**: [video.webm](TC-17/videos/video.webm)
+
+---
+
+### TC-18: fix-8 | TC-18: Replay Kế toán mở Danh sách trả lương, xem Bảng lương tổng hợp, nhảy Phiếu lương & Đăng xuất (Role: Chien.nguyen)
+
+* **Trạng thái thực thi Test (Kỹ thuật)**: ✅ PASS (Thời gian thực thi: `80.48s`)
+* **Trạng thái Logic Nghiệp vụ (Business Output)**: ✅ PASS
+* **Đánh giá tổng quát**: Đạt yêu cầu logic nghiệp vụ mong đợi
+* **Thư mục lưu trữ**: `test-evidence/quy_trinh_tinh_luong_nv_moi/TC-18/`
+
+#### 📸 Bằng chứng trực quan từng bước (Step-by-Step Evidence):
+
+##### 🔹 Bước 1: Dang nhap tai khoan Chien nguyen
+![Bước 1: Dang nhap tai khoan Chien nguyen](TC-18/screenshots/TC-18-step01-dang-nhap-tai-khoan-chien-nguyen.png)
+
+##### 🔹 Bước 2: Mo man hinh Danh sach tra luong MnuPRL092 qua Launchpad
+![Bước 2: Mo man hinh Danh sach tra luong MnuPRL092 qua Launchpad](TC-18/screenshots/TC-18-step02-mo-man-hinh-danh-sach-tra-luong-mnuprl092-qua-launchpad.png)
+
+##### 🔹 Bước 3: Chon ky luong Thang 10
+![Bước 3: Chon ky luong Thang 10](TC-18/screenshots/TC-18-step03-chon-ky-luong-thang-10.png)
+
+##### 🔹 Bước 4: Xem Bang luong tong hop va cuon toi dong nhan vien 099
+![Bước 4: Xem Bang luong tong hop va cuon toi dong nhan vien 099](TC-18/screenshots/TC-18-step04-xem-bang-luong-tong-hop-va-cuon-toi-dong-nhan-vien-099.png)
+
+##### 🔹 Bước 5: Xem phieu luong va chuyen toi trang cuoi (trang 82)
+![Bước 5: Xem phieu luong va chuyen toi trang cuoi (trang 82)](TC-18/screenshots/TC-18-step05-xem-phieu-luong-va-chuyen-toi-trang-cuoi-trang-82.png)
+
+##### 🔹 Bước 6: Dang xuat khoi tai khoan Chien nguyen thanh cong
+![Bước 6: Dang xuat khoi tai khoan Chien nguyen thanh cong](TC-18/screenshots/TC-18-step06-dang-xuat-khoi-tai-khoan-chien-nguyen-thanh-cong.png)
+
+#### 🎥 Video & Dấu vết kiểm thử (Video & Trace):
+- **Video phiên chạy thực tế**: [video.webm](TC-18/videos/video.webm)
+
+---
+
+### TC-19: fix-8 | TC-19: Replay Nhân viên test.nv đăng nhập, mở Phiếu lương qua Launchpad & cuộn quan sát (Role: test.nv)
+
+* **Trạng thái thực thi Test (Kỹ thuật)**: ✅ PASS (Thời gian thực thi: `31.00s`)
+* **Trạng thái Logic Nghiệp vụ (Business Output)**: ✅ PASS
+* **Đánh giá tổng quát**: Đạt yêu cầu logic nghiệp vụ mong đợi
+* **Thư mục lưu trữ**: `test-evidence/quy_trinh_tinh_luong_nv_moi/TC-19/`
+
+#### 📸 Bằng chứng trực quan từng bước (Step-by-Step Evidence):
+
+##### 🔹 Bước 1: Dang nhap tai khoan nhan vien test nv
+![Bước 1: Dang nhap tai khoan nhan vien test nv](TC-19/screenshots/TC-19-step01-dang-nhap-tai-khoan-nhan-vien-test-nv.png)
+
+##### 🔹 Bước 2: Mo man hinh Phieu luong MnuPRL445 qua Launchpad
+![Bước 2: Mo man hinh Phieu luong MnuPRL445 qua Launchpad](TC-19/screenshots/TC-19-step02-mo-man-hinh-phieu-luong-mnuprl445-qua-launchpad.png)
+
+##### 🔹 Bước 3: Cuon muot quan sat phan Luong thuc lanh tren Phieu luong
+![Bước 3: Cuon muot quan sat phan Luong thuc lanh tren Phieu luong](TC-19/screenshots/TC-19-step03-cuon-muot-quan-sat-phan-luong-thuc-lanh-tren-phieu-luong.png)
+
+#### 🎥 Video & Dấu vết kiểm thử (Video & Trace):
+- **Video phiên chạy thực tế**: [video.webm](TC-19/videos/video.webm)
+
+---
+
+### TC-20: fix-8 | TC-20: Replay Nhân viên test.nv mở Tab Lịch sử, bấm Xem & mở/đóng 3 Modal chi tiết (Role: test.nv)
+
+* **Trạng thái thực thi Test (Kỹ thuật)**: ✅ PASS (Thời gian thực thi: `51.00s`)
+* **Trạng thái Logic Nghiệp vụ (Business Output)**: ✅ PASS
+* **Đánh giá tổng quát**: Đạt yêu cầu logic nghiệp vụ mong đợi
+* **Thư mục lưu trữ**: `test-evidence/quy_trinh_tinh_luong_nv_moi/TC-20/`
+
+#### 📸 Bằng chứng trực quan từng bước (Step-by-Step Evidence):
+
+##### 🔹 Bước 1: Dang nhap test nv va mo man hinh Phieu luong
+![Bước 1: Dang nhap test nv va mo man hinh Phieu luong](TC-20/screenshots/TC-20-step01-dang-nhap-test-nv-va-mo-man-hinh-phieu-luong.png)
+
+##### 🔹 Bước 2: Chuyen sang Tab Lich Su ky luong
+![Bước 2: Chuyen sang Tab Lich Su ky luong](TC-20/screenshots/TC-20-step02-chuyen-sang-tab-lich-su-ky-luong.png)
+
+##### 🔹 Bước 3: Bam nut Xem tu Lich Su quay ve Phieu luong
+![Bước 3: Bam nut Xem tu Lich Su quay ve Phieu luong](TC-20/screenshots/TC-20-step03-bam-nut-xem-tu-lich-su-quay-ve-phieu-luong.png)
+
+##### 🔹 Bước 4: Mo Modal chi tiet Tang ca psModalOvertime
+![Bước 4: Mo Modal chi tiet Tang ca psModalOvertime](TC-20/screenshots/TC-20-step04-mo-modal-chi-tiet-tang-ca-psmodalovertime.png)
+
+##### 🔹 Bước 5: Mo Modal chi tiet Di tre Ve som psModalLateearly
+![Bước 5: Mo Modal chi tiet Di tre Ve som psModalLateearly](TC-20/screenshots/TC-20-step05-mo-modal-chi-tiet-di-tre-ve-som-psmodallateearly.png)
+
+##### 🔹 Bước 6: Mo Modal chi tiet Ngay nghi psModalDaysoff
+![Bước 6: Mo Modal chi tiet Ngay nghi psModalDaysoff](TC-20/screenshots/TC-20-step06-mo-modal-chi-tiet-ngay-nghi-psmodaldaysoff.png)
+
+#### 🎥 Video & Dấu vết kiểm thử (Video & Trace):
+- **Video phiên chạy thực tế**: [video.webm](TC-20/videos/video.webm)
 
 ---
 

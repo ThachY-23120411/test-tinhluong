@@ -1,0 +1,61 @@
+{
+  "tcId": "TC-05",
+  "pageName": "crm_sales_revenue",
+  "title": "Nghiệp vụ Xuất Báo cáo Doanh số PDF (#btn-export-pdf) & Kiểm tra Trạng thái Tiến trình",
+  "testStatus": "PASSED",
+  "businessStatus": "PASSED",
+  "businessNotes": "PASS - Nút Xuất PDF phản hồi tức thì, layout không bị vỡ và giao diện duy trì trạng thái ổn định",
+  "defectEvidence": null,
+  "failureAnalysis": {},
+  "status": "PASSED",
+  "duration": "34.88s",
+  "errors": "",
+  "stepScreenshots": [
+    {
+      "step": 1,
+      "title": "Mở Dashboard chi tiết để thẩm định tính năng xuất báo cáo",
+      "fileName": "TC-05-step01-mo-dashboard-chi-tiet-de-tham-dinh-tinh-nang-xuat-bao-cao.png",
+      "relPath": "crm_sales_revenue/TC-05/screenshots/TC-05-step01-mo-dashboard-chi-tiet-de-tham-dinh-tinh-nang-xuat-bao-cao.png"
+    },
+    {
+      "step": 2,
+      "title": "Xác định vị trí nút Xuất PDF trên thanh điều khiển chi tiết",
+      "fileName": "TC-05-step02-xac-dinh-vi-tri-nut-xuat-pdf-tren-thanh-dieu-khien-chi-tiet.png",
+      "relPath": "crm_sales_revenue/TC-05/screenshots/TC-05-step02-xac-dinh-vi-tri-nut-xuat-pdf-tren-thanh-dieu-khien-chi-tiet.png"
+    },
+    {
+      "step": 3,
+      "title": "Con trỏ Neon bấm nút Xuất PDF và kích hoạt tiến trình tạo tài liệu",
+      "fileName": "TC-05-step03-con-tro-neon-bam-nut-xuat-pdf-va-kich-hoat-tien-trinh-tao-tai-lieu.png",
+      "relPath": "crm_sales_revenue/TC-05/screenshots/TC-05-step03-con-tro-neon-bam-nut-xuat-pdf-va-kich-hoat-tien-trinh-tao-tai-lieu.png"
+    },
+    {
+      "step": 4,
+      "title": "Hệ thống xử lý tiến trình tạo tài liệu PDF an toàn không phát sinh lỗi",
+      "fileName": "TC-05-step04-he-thong-xu-ly-tien-trinh-tao-tai-lieu-pdf-an-toan-khong-phat-sinh-loi.png",
+      "relPath": "crm_sales_revenue/TC-05/screenshots/TC-05-step04-he-thong-xu-ly-tien-trinh-tao-tai-lieu-pdf-an-toan-khong-phat-sinh-loi.png"
+    },
+    {
+      "step": 5,
+      "title": "Đánh giá logic PASS: Tính năng xuất báo cáo PDF hoạt động ổn định và sẵn sàng",
+      "fileName": "TC-05-step05-danh-gia-logic-pass-tinh-nang-xuat-bao-cao-pdf-hoat-dong-on-dinh-va-san-sang.png",
+      "relPath": "crm_sales_revenue/TC-05/screenshots/TC-05-step05-danh-gia-logic-pass-tinh-nang-xuat-bao-cao-pdf-hoat-dong-on-dinh-va-san-sang.png"
+    }
+  ],
+  "attachments": {
+    "screenshots": [
+      "crm_sales_revenue/TC-05/screenshots/TC-05-step01-mo-dashboard-chi-tiet-de-tham-dinh-tinh-nang-xuat-bao-cao.png",
+      "crm_sales_revenue/TC-05/screenshots/TC-05-step02-xac-dinh-vi-tri-nut-xuat-pdf-tren-thanh-dieu-khien-chi-tiet.png",
+      "crm_sales_revenue/TC-05/screenshots/TC-05-step03-con-tro-neon-bam-nut-xuat-pdf-va-kich-hoat-tien-trinh-tao-tai-lieu.png",
+      "crm_sales_revenue/TC-05/screenshots/TC-05-step04-he-thong-xu-ly-tien-trinh-tao-tai-lieu-pdf-an-toan-khong-phat-sinh-loi.png",
+      "crm_sales_revenue/TC-05/screenshots/TC-05-step05-danh-gia-logic-pass-tinh-nang-xuat-bao-cao-pdf-hoat-dong-on-dinh-va-san-sang.png"
+    ],
+    "videos": [
+      "crm_sales_revenue/TC-05/videos/video.webm"
+    ],
+    "traces": [
+      "crm_sales_revenue/TC-05/traces/trace.zip"
+    ]
+  },
+  "timestamp": "2026-10-28T01:46:22.521Z"
+}

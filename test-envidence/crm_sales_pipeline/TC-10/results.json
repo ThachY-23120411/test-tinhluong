@@ -1,0 +1,61 @@
+{
+  "tcId": "TC-10",
+  "pageName": "crm_sales_pipeline",
+  "title": "Nghiệp vụ Mở & Đóng An Toàn Hộp Thoại '+ Thêm Mới' Cơ Hội Bán Hàng (TC-BIZ-03)",
+  "testStatus": "PASSED",
+  "businessStatus": "PASSED",
+  "businessNotes": "PASS - Tiện ích Thêm mới cơ hội bán hàng trên Toolbar kích hoạt mượt mà, hỗ trợ đóng an toàn và duy trì nguyên vẹn bảng Kanban",
+  "defectEvidence": null,
+  "failureAnalysis": {},
+  "status": "PASSED",
+  "duration": "31.98s",
+  "errors": "",
+  "stepScreenshots": [
+    {
+      "step": 1,
+      "title": "Xác định vị trí nút \"+ Thêm mới\" trên thanh Toolbar Sales Pipeline",
+      "fileName": "TC-10-step01-xac-dinh-vi-tri-nut-them-moi-tren-thanh-toolbar-sales-pipeline.png",
+      "relPath": "crm_sales_pipeline/TC-10/screenshots/TC-10-step01-xac-dinh-vi-tri-nut-them-moi-tren-thanh-toolbar-sales-pipeline.png"
+    },
+    {
+      "step": 2,
+      "title": "Con trỏ Neon bấm nút \"+ Thêm mới\" và ghi nhận phản hồi giao diện",
+      "fileName": "TC-10-step02-con-tro-neon-bam-nut-them-moi-va-ghi-nhan-phan-hoi-giao-dien.png",
+      "relPath": "crm_sales_pipeline/TC-10/screenshots/TC-10-step02-con-tro-neon-bam-nut-them-moi-va-ghi-nhan-phan-hoi-giao-dien.png"
+    },
+    {
+      "step": 3,
+      "title": "Kiểm tra hộp thoại / form tạo mới cơ hội bán hàng",
+      "fileName": "TC-10-step03-kiem-tra-hop-thoai-form-tao-moi-co-hoi-ban-hang.png",
+      "relPath": "crm_sales_pipeline/TC-10/screenshots/TC-10-step03-kiem-tra-hop-thoai-form-tao-moi-co-hoi-ban-hang.png"
+    },
+    {
+      "step": 4,
+      "title": "Đóng an toàn hộp thoại Thêm mới và bảo toàn không gian làm việc Kanban",
+      "fileName": "TC-10-step04-dong-an-toan-hop-thoai-them-moi-va-bao-toan-khong-gian-lam-viec-kanban.png",
+      "relPath": "crm_sales_pipeline/TC-10/screenshots/TC-10-step04-dong-an-toan-hop-thoai-them-moi-va-bao-toan-khong-gian-lam-viec-kanban.png"
+    },
+    {
+      "step": 5,
+      "title": "Đánh giá logic PASS: Nút Thêm mới phản hồi an toàn, đóng mở linh hoạt đạt chuẩn",
+      "fileName": "TC-10-step05-danh-gia-logic-pass-nut-them-moi-phan-hoi-an-toan-dong-mo-linh-hoat-dat-chuan.png",
+      "relPath": "crm_sales_pipeline/TC-10/screenshots/TC-10-step05-danh-gia-logic-pass-nut-them-moi-phan-hoi-an-toan-dong-mo-linh-hoat-dat-chuan.png"
+    }
+  ],
+  "attachments": {
+    "screenshots": [
+      "crm_sales_pipeline/TC-10/screenshots/TC-10-step01-xac-dinh-vi-tri-nut-them-moi-tren-thanh-toolbar-sales-pipeline.png",
+      "crm_sales_pipeline/TC-10/screenshots/TC-10-step02-con-tro-neon-bam-nut-them-moi-va-ghi-nhan-phan-hoi-giao-dien.png",
+      "crm_sales_pipeline/TC-10/screenshots/TC-10-step03-kiem-tra-hop-thoai-form-tao-moi-co-hoi-ban-hang.png",
+      "crm_sales_pipeline/TC-10/screenshots/TC-10-step04-dong-an-toan-hop-thoai-them-moi-va-bao-toan-khong-gian-lam-viec-kanban.png",
+      "crm_sales_pipeline/TC-10/screenshots/TC-10-step05-danh-gia-logic-pass-nut-them-moi-phan-hoi-an-toan-dong-mo-linh-hoat-dat-chuan.png"
+    ],
+    "videos": [
+      "crm_sales_pipeline/TC-10/videos/video.webm"
+    ],
+    "traces": [
+      "crm_sales_pipeline/TC-10/traces/trace.zip"
+    ]
+  },
+  "timestamp": "2026-10-21T03:12:54.448Z"
+}

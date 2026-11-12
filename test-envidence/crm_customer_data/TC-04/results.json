@@ -1,0 +1,61 @@
+{
+  "tcId": "TC-04",
+  "pageName": "crm_customer_data",
+  "title": "Kiểm tra Chức năng Nghiệp vụ: XEM CHI TIẾT KHÁCH HÀNG (View Customer Detail End-to-End)",
+  "testStatus": "PASSED",
+  "businessStatus": "PASSED",
+  "businessNotes": "PASS - Chức năng Xem chi tiết khách hàng hoạt động chính xác: API sp_CRM_CompanyDetail phản hồi HTTP 200, nạp đầy đủ thông tin chi tiết và điều hướng tab mượt mà",
+  "defectEvidence": null,
+  "failureAnalysis": {},
+  "status": "PASSED",
+  "duration": "29.81s",
+  "errors": "",
+  "stepScreenshots": [
+    {
+      "step": 1,
+      "title": "Xác định dòng dữ liệu khách hàng cần xem chi tiết trên DataGrid",
+      "fileName": "TC-04-step01-xac-dinh-dong-du-lieu-khach-hang-can-xem-chi-tiet-tren-datagrid.png",
+      "relPath": "crm_customer_data/TC-04/screenshots/TC-04-step01-xac-dinh-dong-du-lieu-khach-hang-can-xem-chi-tiet-tren-datagrid.png"
+    },
+    {
+      "step": 2,
+      "title": "Con trỏ chuột Neon di chuyển vào dòng khách hàng để thực hiện mở chi tiết",
+      "fileName": "TC-04-step02-con-tro-chuot-neon-di-chuyen-vao-dong-khach-hang-de-thuc-hien-mo-chi-tiet.png",
+      "relPath": "crm_customer_data/TC-04/screenshots/TC-04-step02-con-tro-chuot-neon-di-chuyen-vao-dong-khach-hang-de-thuc-hien-mo-chi-tiet.png"
+    },
+    {
+      "step": 3,
+      "title": "Màn hình Chi tiết thông tin công ty hiển thị đầy đủ thông tin doanh nghiệp và người đại diện",
+      "fileName": "TC-04-step03-man-hinh-chi-tiet-thong-tin-cong-ty-hien-thi-day-du-thong-tin-doanh-nghiep-va-nguoi-dai-dien.png",
+      "relPath": "crm_customer_data/TC-04/screenshots/TC-04-step03-man-hinh-chi-tiet-thong-tin-cong-ty-hien-thi-day-du-thong-tin-doanh-nghiep-va-nguoi-dai-dien.png"
+    },
+    {
+      "step": 4,
+      "title": "Con trỏ chuột Neon di chuyển lên tab Dữ liệu khách hàng để quay lại danh sách",
+      "fileName": "TC-04-step04-con-tro-chuot-neon-di-chuyen-len-tab-du-lieu-khach-hang-de-quay-lai-danh-sach.png",
+      "relPath": "crm_customer_data/TC-04/screenshots/TC-04-step04-con-tro-chuot-neon-di-chuyen-len-tab-du-lieu-khach-hang-de-quay-lai-danh-sach.png"
+    },
+    {
+      "step": 5,
+      "title": "Quay trở lại giao diện danh sách khách hàng an toàn và duy trì trạng thái dữ liệu",
+      "fileName": "TC-04-step05-quay-tro-lai-giao-dien-danh-sach-khach-hang-an-toan-va-duy-tri-trang-thai-du-lieu.png",
+      "relPath": "crm_customer_data/TC-04/screenshots/TC-04-step05-quay-tro-lai-giao-dien-danh-sach-khach-hang-an-toan-va-duy-tri-trang-thai-du-lieu.png"
+    }
+  ],
+  "attachments": {
+    "screenshots": [
+      "crm_customer_data/TC-04/screenshots/TC-04-step01-xac-dinh-dong-du-lieu-khach-hang-can-xem-chi-tiet-tren-datagrid.png",
+      "crm_customer_data/TC-04/screenshots/TC-04-step02-con-tro-chuot-neon-di-chuyen-vao-dong-khach-hang-de-thuc-hien-mo-chi-tiet.png",
+      "crm_customer_data/TC-04/screenshots/TC-04-step03-man-hinh-chi-tiet-thong-tin-cong-ty-hien-thi-day-du-thong-tin-doanh-nghiep-va-nguoi-dai-dien.png",
+      "crm_customer_data/TC-04/screenshots/TC-04-step04-con-tro-chuot-neon-di-chuyen-len-tab-du-lieu-khach-hang-de-quay-lai-danh-sach.png",
+      "crm_customer_data/TC-04/screenshots/TC-04-step05-quay-tro-lai-giao-dien-danh-sach-khach-hang-an-toan-va-duy-tri-trang-thai-du-lieu.png"
+    ],
+    "videos": [
+      "crm_customer_data/TC-04/videos/video.webm"
+    ],
+    "traces": [
+      "crm_customer_data/TC-04/traces/trace.zip"
+    ]
+  },
+  "timestamp": "2026-10-28T05:21:12.033Z"
+}

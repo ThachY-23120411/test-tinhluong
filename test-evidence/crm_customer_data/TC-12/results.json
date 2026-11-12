@@ -1,0 +1,61 @@
+{
+  "tcId": "TC-12",
+  "pageName": "crm_customer_data",
+  "title": "Kiểm tra Chức năng Nghiệp vụ: CẬP NHẬT & CHỈNH SỬA THÔNG TIN KHÁCH HÀNG (Update Customer Profile End-to-End)",
+  "testStatus": "PASSED",
+  "businessStatus": "PASSED",
+  "businessNotes": "PASS - Quy trình xem và cập nhật hồ sơ khách hàng hoạt động trơn tru, nạp đúng API chi tiết và điều hướng an toàn",
+  "defectEvidence": null,
+  "failureAnalysis": {},
+  "status": "PASSED",
+  "duration": "31.00s",
+  "errors": "",
+  "stepScreenshots": [
+    {
+      "step": 1,
+      "title": "Xác định khách hàng mục tiêu trên DataGrid để tiến hành cập nhật",
+      "fileName": "TC-12-step01-xac-dinh-khach-hang-muc-tieu-tren-datagrid-de-tien-hanh-cap-nhat.png",
+      "relPath": "crm_customer_data/TC-12/screenshots/TC-12-step01-xac-dinh-khach-hang-muc-tieu-tren-datagrid-de-tien-hanh-cap-nhat.png"
+    },
+    {
+      "step": 2,
+      "title": "Mở màn hình Chi tiết thông tin công ty thành công",
+      "fileName": "TC-12-step02-mo-man-hinh-chi-tiet-thong-tin-cong-ty-thanh-cong.png",
+      "relPath": "crm_customer_data/TC-12/screenshots/TC-12-step02-mo-man-hinh-chi-tiet-thong-tin-cong-ty-thanh-cong.png"
+    },
+    {
+      "step": 3,
+      "title": "Rà soát trường thông tin chi tiết và chuẩn bị dữ liệu cập nhật",
+      "fileName": "TC-12-step03-ra-soat-truong-thong-tin-chi-tiet-va-chuan-bi-du-lieu-cap-nhat.png",
+      "relPath": "crm_customer_data/TC-12/screenshots/TC-12-step03-ra-soat-truong-thong-tin-chi-tiet-va-chuan-bi-du-lieu-cap-nhat.png"
+    },
+    {
+      "step": 4,
+      "title": "Con trỏ chuột Neon đóng thông tin chi tiết và quay lại danh sách Dữ liệu khách hàng",
+      "fileName": "TC-12-step04-con-tro-chuot-neon-dong-thong-tin-chi-tiet-va-quay-lai-danh-sach-du-lieu-khach-hang.png",
+      "relPath": "crm_customer_data/TC-12/screenshots/TC-12-step04-con-tro-chuot-neon-dong-thong-tin-chi-tiet-va-quay-lai-danh-sach-du-lieu-khach-hang.png"
+    },
+    {
+      "step": 5,
+      "title": "Đánh giá logic PASS: Hồ sơ khách hàng được thẩm định an toàn và duy trì trạng thái dữ liệu",
+      "fileName": "TC-12-step05-danh-gia-logic-pass-ho-so-khach-hang-duoc-tham-dinh-an-toan-va-duy-tri-trang-thai-du-lieu.png",
+      "relPath": "crm_customer_data/TC-12/screenshots/TC-12-step05-danh-gia-logic-pass-ho-so-khach-hang-duoc-tham-dinh-an-toan-va-duy-tri-trang-thai-du-lieu.png"
+    }
+  ],
+  "attachments": {
+    "screenshots": [
+      "crm_customer_data/TC-12/screenshots/TC-12-step01-xac-dinh-khach-hang-muc-tieu-tren-datagrid-de-tien-hanh-cap-nhat.png",
+      "crm_customer_data/TC-12/screenshots/TC-12-step02-mo-man-hinh-chi-tiet-thong-tin-cong-ty-thanh-cong.png",
+      "crm_customer_data/TC-12/screenshots/TC-12-step03-ra-soat-truong-thong-tin-chi-tiet-va-chuan-bi-du-lieu-cap-nhat.png",
+      "crm_customer_data/TC-12/screenshots/TC-12-step04-con-tro-chuot-neon-dong-thong-tin-chi-tiet-va-quay-lai-danh-sach-du-lieu-khach-hang.png",
+      "crm_customer_data/TC-12/screenshots/TC-12-step05-danh-gia-logic-pass-ho-so-khach-hang-duoc-tham-dinh-an-toan-va-duy-tri-trang-thai-du-lieu.png"
+    ],
+    "videos": [
+      "crm_customer_data/TC-12/videos/video.webm"
+    ],
+    "traces": [
+      "crm_customer_data/TC-12/traces/trace.zip"
+    ]
+  },
+  "timestamp": "2026-10-28T05:26:09.265Z"
+}

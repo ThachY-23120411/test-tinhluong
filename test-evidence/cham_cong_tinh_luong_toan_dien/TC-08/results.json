@@ -1,0 +1,59 @@
+{
+  "tcId": "TC-08",
+  "pageName": "cham_cong_tinh_luong_toan_dien",
+  "title": "Đối soát Tab Lịch sử phiếu lương và 3 Modal chi tiết Tăng ca, Ngày nghỉ, Đi trễ (Role: tai.dang)",
+  "testStatus": "PASSED",
+  "businessStatus": "PASSED",
+  "businessNotes": "PASS - Tab Lịch sử phiếu lương nạp danh sách kỳ lương đã khóa chuẩn xác. Ba Modal popup tương tác chi tiết (👁️ Tăng ca, 👁️ Ngày nghỉ, 👁️ Đi trễ về sớm) render bảng số liệu chi tiết và đóng mở an toàn 100% không vỡ DOM.",
+  "defectEvidence": null,
+  "failureAnalysis": {},
+  "status": "PASSED",
+  "duration": "32.87s",
+  "errors": "",
+  "stepScreenshots": [
+    {
+      "step": 1,
+      "title": "Nhan vien mo giao dien Phieu luong ca nhan",
+      "fileName": "TC-08-step01-nhan-vien-mo-giao-dien-phieu-luong-ca-nhan.png",
+      "relPath": "cham_cong_tinh_luong_toan_dien/TC-08/screenshots/TC-08-step01-nhan-vien-mo-giao-dien-phieu-luong-ca-nhan.png"
+    },
+    {
+      "step": 2,
+      "title": "Chuyen sang Tab Lich su kiem tra danh sach ky luong da khoa",
+      "fileName": "TC-08-step02-chuyen-sang-tab-lich-su-kiem-tra-danh-sach-ky-luong-da-khoa.png",
+      "relPath": "cham_cong_tinh_luong_toan_dien/TC-08/screenshots/TC-08-step02-chuyen-sang-tab-lich-su-kiem-tra-danh-sach-ky-luong-da-khoa.png"
+    },
+    {
+      "step": 3,
+      "title": "Modal Chi tiet Tang ca hien thi bang gio lam them",
+      "fileName": "TC-08-step03-modal-chi-tiet-tang-ca-hien-thi-bang-gio-lam-them.png",
+      "relPath": "cham_cong_tinh_luong_toan_dien/TC-08/screenshots/TC-08-step03-modal-chi-tiet-tang-ca-hien-thi-bang-gio-lam-them.png"
+    },
+    {
+      "step": 4,
+      "title": "Modal Chi tiet Ngay nghi hien thi loai phep va gio nghi",
+      "fileName": "TC-08-step04-modal-chi-tiet-ngay-nghi-hien-thi-loai-phep-va-gio-nghi.png",
+      "relPath": "cham_cong_tinh_luong_toan_dien/TC-08/screenshots/TC-08-step04-modal-chi-tiet-ngay-nghi-hien-thi-loai-phep-va-gio-nghi.png"
+    },
+    {
+      "step": 5,
+      "title": "Modal Chi tiet Di tre ve som hien thi gio quet the va phut tru",
+      "fileName": "TC-08-step05-modal-chi-tiet-di-tre-ve-som-hien-thi-gio-quet-the-va-phut-tru.png",
+      "relPath": "cham_cong_tinh_luong_toan_dien/TC-08/screenshots/TC-08-step05-modal-chi-tiet-di-tre-ve-som-hien-thi-gio-quet-the-va-phut-tru.png"
+    }
+  ],
+  "attachments": {
+    "screenshots": [
+      "cham_cong_tinh_luong_toan_dien/TC-08/screenshots/TC-08-step01-nhan-vien-mo-giao-dien-phieu-luong-ca-nhan.png",
+      "cham_cong_tinh_luong_toan_dien/TC-08/screenshots/TC-08-step02-chuyen-sang-tab-lich-su-kiem-tra-danh-sach-ky-luong-da-khoa.png",
+      "cham_cong_tinh_luong_toan_dien/TC-08/screenshots/TC-08-step03-modal-chi-tiet-tang-ca-hien-thi-bang-gio-lam-them.png",
+      "cham_cong_tinh_luong_toan_dien/TC-08/screenshots/TC-08-step04-modal-chi-tiet-ngay-nghi-hien-thi-loai-phep-va-gio-nghi.png",
+      "cham_cong_tinh_luong_toan_dien/TC-08/screenshots/TC-08-step05-modal-chi-tiet-di-tre-ve-som-hien-thi-gio-quet-the-va-phut-tru.png"
+    ],
+    "videos": [
+      "cham_cong_tinh_luong_toan_dien/TC-08/videos/video.webm"
+    ],
+    "traces": []
+  },
+  "timestamp": "2026-11-04T04:49:53.933Z"
+}

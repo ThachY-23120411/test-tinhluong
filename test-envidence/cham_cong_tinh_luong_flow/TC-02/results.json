@@ -1,0 +1,38 @@
+{
+  "tcId": "TC-02",
+  "pageName": "cham_cong_tinh_luong_flow",
+  "title": "Nhân viên đối soát tab Lịch sử đơn bù công (Role: tai.dang)",
+  "testStatus": "PASSED",
+  "businessStatus": "PASSED",
+  "businessNotes": "PASS - Đơn bù công hiển thị chuẩn xác trong Tab Lịch sử với trạng thái \"Đang chờ duyệt\" (Khớp CSDL Approve_Status: 1)",
+  "defectEvidence": null,
+  "failureAnalysis": {},
+  "status": "PASSED",
+  "duration": "28.10s",
+  "errors": "",
+  "stepScreenshots": [
+    {
+      "step": 1,
+      "title": "Nhan vien mo giao dien Xin bu cong",
+      "fileName": "TC-02-step01-nhan-vien-mo-giao-dien-xin-bu-cong.png",
+      "relPath": "cham_cong_tinh_luong_flow/TC-02/screenshots/TC-02-step01-nhan-vien-mo-giao-dien-xin-bu-cong.png"
+    },
+    {
+      "step": 2,
+      "title": "Di chuot Neon nhap tab Lich su",
+      "fileName": "TC-02-step02-di-chuot-neon-nhap-tab-lich-su.png",
+      "relPath": "cham_cong_tinh_luong_flow/TC-02/screenshots/TC-02-step02-di-chuot-neon-nhap-tab-lich-su.png"
+    }
+  ],
+  "attachments": {
+    "screenshots": [
+      "cham_cong_tinh_luong_flow/TC-02/screenshots/TC-02-step01-nhan-vien-mo-giao-dien-xin-bu-cong.png",
+      "cham_cong_tinh_luong_flow/TC-02/screenshots/TC-02-step02-di-chuot-neon-nhap-tab-lich-su.png"
+    ],
+    "videos": [
+      "cham_cong_tinh_luong_flow/TC-02/videos/video.webm"
+    ],
+    "traces": []
+  },
+  "timestamp": "2026-11-04T04:37:29.876Z"
+}

@@ -49,16 +49,17 @@ BEGIN
 END
 
 -- 2b. Khởi tạo Trạng thái làm việc bình thường cho NV 099 (tblEmployeeStatusHistory)
+-- LƯU Ý: StatusEndDate phải để NULL (chuẩn hệ thống), TUYỆT ĐỐI không gán '9999-12-31' vì fn_EmployeeStatusRange có dateadd(day, 1, StatusEndDate) sẽ gây tràn datetime và làm sập LoadEmployeeTree!
 IF NOT EXISTS (SELECT 1 FROM tblEmployeeStatusHistory WHERE EmployeeID = '099')
 BEGIN
     INSERT INTO tblEmployeeStatusHistory (EmployeeID, EmployeeStatusID, ChangedDate, StatusEndDate, Remark)
-    VALUES ('099', 0, '2026-10-01', '9999-12-31', N'Làm việc bình thường');
+    VALUES ('099', 0, '2026-10-01', NULL, N'Làm việc bình thường');
     PRINT N'✅ 2b. Đã tạo trạng thái làm việc bình thường cho NV 099 (tblEmployeeStatusHistory)';
 END
 ELSE
 BEGIN
     UPDATE tblEmployeeStatusHistory 
-    SET EmployeeStatusID = 0, ChangedDate = '2026-10-01', StatusEndDate = '9999-12-31'
+    SET EmployeeStatusID = 0, ChangedDate = '2026-10-01', StatusEndDate = NULL
     WHERE EmployeeID = '099';
     PRINT N'✅ 2b. Đã chuẩn hóa trạng thái làm việc cho NV 099 (tblEmployeeStatusHistory)';
 END
@@ -122,6 +123,43 @@ SELECT 70, LoginID, 32
 FROM tblSC_Login 
 WHERE LoginName = 'test.nv';
 PRINT N'✅ 6. Đã cấp quyền menu ESS Portal cho test.nv (tblSC_Right_Stored)';
+
+-- 6b. Thiết lập tuyến người duyệt (tblApprovalLineByEmployee) cho NV 099
+DELETE FROM tblApprovalLineByEmployee WHERE EmployeeID = '099';
+INSERT INTO tblApprovalLineByEmployee (
+    EmployeeID, Approvalgrouplist, Approver_1, Delegacy_1, Approver_2, Delegacy_2, Approver_3, Delegacy_3, Approver_4, Delegacy_4, IsDelegacyView
+)
+SELECT '099', Approvalgrouplist, Approver_1, Delegacy_1, Approver_2, Delegacy_2, Approver_3, Delegacy_3, Approver_4, Delegacy_4, IsDelegacyView
+FROM tblApprovalLineByEmployee
+WHERE EmployeeID = '001';
+
+IF NOT EXISTS (SELECT 1 FROM tblApprovalLineByEmployee WHERE EmployeeID = '099' AND Approvalgrouplist = 6)
+BEGIN
+    INSERT INTO tblApprovalLineByEmployee (EmployeeID, Approvalgrouplist, Approver_1, Approver_2)
+    VALUES 
+        ('099', 6, '012', '014'),
+        ('099', 1, '004', '014'),
+        ('099', 5, '004', '014');
+END
+PRINT N'✅ 6b. Đã thiết lập tuyến duyệt đơn (Bù công, Nghỉ phép, Tăng ca) cho NV 099 (tblApprovalLineByEmployee)';
+
+-- 6c. Khởi tạo ngân sách phép năm (tblEmployeeAnnual) cho NV 099 (đảm bảo đủ ngày phép Remain để nộp đơn)
+DELETE FROM tblLvHistory WHERE EmployeeID = '099';
+DELETE FROM tblLeaveRegistered_Detail WHERE EmployeeID = '099';
+DELETE FROM tblLeaveRegistered WHERE EmployeeID = '099';
+
+IF EXISTS (SELECT 1 FROM tblEmployeeAnnual WHERE EmployeeID = '099' AND LeaveCode = 'AL' AND CYear = 2026)
+BEGIN
+    UPDATE tblEmployeeAnnual
+    SET ThisYear = 2, Taken = 0, Remain = 2, ALThisYear = 2, ALPaidDays = 0
+    WHERE EmployeeID = '099' AND LeaveCode = 'AL' AND CYear = 2026;
+END
+ELSE
+BEGIN
+    INSERT INTO tblEmployeeAnnual (EmployeeID, CYear, LeaveCode, ThisYear, Taken, Remain, ALThisYear, FirstALMonth)
+    VALUES ('099', 2026, 'AL', 2, 0, 2, 2, 10);
+END
+PRINT N'✅ 6c. Đã khởi tạo ngân sách phép năm AL = 2 ngày cho NV 099 (tblEmployeeAnnual)';
 
 PRINT N'-------------------------------------------------------------------------';
 PRINT N'🎉 HOÀN TẤT! HỒ SƠ NV 099 & TÀI KHOẢN test.nv ĐÃ SẴN SÀNG ĐỂ CHẠY LUỒNG TEST UI!';

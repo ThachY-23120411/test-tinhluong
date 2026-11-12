@@ -1,0 +1,31 @@
+{
+  "tcId": "TC-06",
+  "pageName": "cham_cong_tinh_luong_crud_lien_hoan",
+  "title": "Quản lý Cấp 1 LongKa phê duyệt Đơn xin làm thêm giờ OT (Role: LongKa)",
+  "testStatus": "PASSED",
+  "businessStatus": "PASSED",
+  "businessNotes": "Đạt yêu cầu logic nghiệp vụ mong đợi",
+  "defectEvidence": null,
+  "failureAnalysis": {},
+  "status": "PASSED",
+  "duration": "25.83s",
+  "errors": "",
+  "stepScreenshots": [
+    {
+      "step": 1,
+      "title": "Quan ly longka duyet don tang ca cap 1 mnuwpt037",
+      "fileName": "TC-06-step01-quan-ly-longka-duyet-don-tang-ca-cap-1-mnuwpt037.png",
+      "relPath": "cham_cong_tinh_luong_crud_lien_hoan/TC-06/screenshots/TC-06-step01-quan-ly-longka-duyet-don-tang-ca-cap-1-mnuwpt037.png"
+    }
+  ],
+  "attachments": {
+    "screenshots": [
+      "cham_cong_tinh_luong_crud_lien_hoan/TC-06/screenshots/TC-06-step01-quan-ly-longka-duyet-don-tang-ca-cap-1-mnuwpt037.png"
+    ],
+    "videos": [
+      "cham_cong_tinh_luong_crud_lien_hoan/TC-06/videos/video.webm"
+    ],
+    "traces": []
+  },
+  "timestamp": "2026-11-05T16:32:26.185Z"
+}

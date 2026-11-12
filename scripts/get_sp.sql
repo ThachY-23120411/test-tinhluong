@@ -1,0 +1,2 @@
+SELECT OBJECT_DEFINITION(OBJECT_ID('sp_MakeupHours_html'));
+GO

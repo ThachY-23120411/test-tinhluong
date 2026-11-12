@@ -1,0 +1,22 @@
+{
+  "tcId": "TC-01",
+  "pageName": "quy_trinh_tinh_luong_nv_moi",
+  "title": "fix-4 | TC-01: Tạo mới hồ sơ nhân viên Nguyễn Văn Test (Role: cuong.vu)",
+  "testStatus": "PASSED",
+  "businessStatus": "PASSED",
+  "businessNotes": "Đạt yêu cầu logic nghiệp vụ mong đợi",
+  "defectEvidence": null,
+  "failureAnalysis": {},
+  "status": "PASSED",
+  "duration": "25.42s",
+  "errors": "",
+  "stepScreenshots": [],
+  "attachments": {
+    "screenshots": [],
+    "videos": [
+      "quy_trinh_tinh_luong_nv_moi/TC-01/videos/video.webm"
+    ],
+    "traces": []
+  },
+  "timestamp": "2026-11-09T08:11:45.142Z"
+}

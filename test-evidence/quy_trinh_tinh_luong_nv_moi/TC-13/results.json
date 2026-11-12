@@ -1,61 +1,45 @@
 {
   "tcId": "TC-13",
   "pageName": "quy_trinh_tinh_luong_nv_moi",
-  "title": "fix-6 | TC-13: Đối soát chốt chặn Delta After công ngày 15/10 và tổng công tháng (Role: cuong.vu)",
+  "title": "fix-6 | TC-13: Nhân viên Nguyễn Văn Test mở Bảng công cá nhân (MnuWPT010) chọn Tháng 10 xem kết quả (Role: test.nv)",
   "testStatus": "PASSED",
   "businessStatus": "PASSED",
   "businessNotes": "Đạt yêu cầu logic nghiệp vụ mong đợi",
   "defectEvidence": null,
   "failureAnalysis": {},
   "status": "PASSED",
-  "duration": "39.16s",
+  "duration": "28.05s",
   "errors": "",
   "stepScreenshots": [
     {
       "step": 1,
-      "title": "Dang nhap tai khoan Giam doc cuong vu",
-      "fileName": "TC-13-step01-dang-nhap-tai-khoan-giam-doc-cuong-vu.png",
-      "relPath": "quy_trinh_tinh_luong_nv_moi/TC-13/screenshots/TC-13-step01-dang-nhap-tai-khoan-giam-doc-cuong-vu.png"
+      "title": "Dang nhap test.nv",
+      "fileName": "TC-13-step01-dang-nhap-test-nv.png",
+      "relPath": "quy_trinh_tinh_luong_nv_moi/TC-13/screenshots/TC-13-step01-dang-nhap-test-nv.png"
     },
     {
       "step": 2,
-      "title": "Doi soat Delta After ngay 15-10 tren MnuHRS225",
-      "fileName": "TC-13-step02-doi-soat-delta-after-ngay-15-10-tren-mnuhrs225.png",
-      "relPath": "quy_trinh_tinh_luong_nv_moi/TC-13/screenshots/TC-13-step02-doi-soat-delta-after-ngay-15-10-tren-mnuhrs225.png"
+      "title": "Mo Bang cong ca nhan MnuWPT010",
+      "fileName": "TC-13-step02-mo-bang-cong-ca-nhan-mnuwpt010.png",
+      "relPath": "quy_trinh_tinh_luong_nv_moi/TC-13/screenshots/TC-13-step02-mo-bang-cong-ca-nhan-mnuwpt010.png"
     },
     {
       "step": 3,
-      "title": "Khoanh vung tong cong Delta After 23-0 ngay tren MnuTAD1000",
-      "fileName": "TC-13-step03-khoanh-vung-tong-cong-delta-after-23-0-ngay-tren-mnutad1000.png",
-      "relPath": "quy_trinh_tinh_luong_nv_moi/TC-13/screenshots/TC-13-step03-khoanh-vung-tong-cong-delta-after-23-0-ngay-tren-mnutad1000.png"
-    },
-    {
-      "step": 4,
-      "title": "Doi soat CSDL kep tren tblHasTA ngay 15-10",
-      "fileName": "TC-13-step04-doi-soat-csdl-kep-tren-tblhasta-ngay-15-10.png",
-      "relPath": "quy_trinh_tinh_luong_nv_moi/TC-13/screenshots/TC-13-step04-doi-soat-csdl-kep-tren-tblhasta-ngay-15-10.png"
-    },
-    {
-      "step": 5,
-      "title": "Hoan tat doi soat Delta After 23-23 ngay cong",
-      "fileName": "TC-13-step05-hoan-tat-doi-soat-delta-after-23-23-ngay-cong.png",
-      "relPath": "quy_trinh_tinh_luong_nv_moi/TC-13/screenshots/TC-13-step05-hoan-tat-doi-soat-delta-after-23-23-ngay-cong.png",
-      "isDuplicate": true,
-      "duplicateOfStep": 4
+      "title": "Chon Thang 10 xem Bang cong ca nhan NV 099",
+      "fileName": "TC-13-step03-chon-thang-10-xem-bang-cong-ca-nhan-nv-099.png",
+      "relPath": "quy_trinh_tinh_luong_nv_moi/TC-13/screenshots/TC-13-step03-chon-thang-10-xem-bang-cong-ca-nhan-nv-099.png"
     }
   ],
   "attachments": {
     "screenshots": [
-      "quy_trinh_tinh_luong_nv_moi/TC-13/screenshots/TC-13-step01-dang-nhap-tai-khoan-giam-doc-cuong-vu.png",
-      "quy_trinh_tinh_luong_nv_moi/TC-13/screenshots/TC-13-step02-doi-soat-delta-after-ngay-15-10-tren-mnuhrs225.png",
-      "quy_trinh_tinh_luong_nv_moi/TC-13/screenshots/TC-13-step03-khoanh-vung-tong-cong-delta-after-23-0-ngay-tren-mnutad1000.png",
-      "quy_trinh_tinh_luong_nv_moi/TC-13/screenshots/TC-13-step04-doi-soat-csdl-kep-tren-tblhasta-ngay-15-10.png",
-      "quy_trinh_tinh_luong_nv_moi/TC-13/screenshots/TC-13-step05-hoan-tat-doi-soat-delta-after-23-23-ngay-cong.png"
+      "quy_trinh_tinh_luong_nv_moi/TC-13/screenshots/TC-13-step01-dang-nhap-test-nv.png",
+      "quy_trinh_tinh_luong_nv_moi/TC-13/screenshots/TC-13-step02-mo-bang-cong-ca-nhan-mnuwpt010.png",
+      "quy_trinh_tinh_luong_nv_moi/TC-13/screenshots/TC-13-step03-chon-thang-10-xem-bang-cong-ca-nhan-nv-099.png"
     ],
     "videos": [
       "quy_trinh_tinh_luong_nv_moi/TC-13/videos/video.webm"
     ],
     "traces": []
   },
-  "timestamp": "2026-11-10T02:17:06.172Z"
+  "timestamp": "2026-11-12T08:13:57.399Z"
 }

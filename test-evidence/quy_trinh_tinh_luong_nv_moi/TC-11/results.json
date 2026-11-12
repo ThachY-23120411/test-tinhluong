@@ -1,61 +1,59 @@
 {
   "tcId": "TC-11",
   "pageName": "quy_trinh_tinh_luong_nv_moi",
-  "title": "fix-6 | TC-11: Quản lý LongKa phê duyệt Cấp 1 đơn Tăng ca OT 20/10 (Role: LongKa)",
+  "title": "fix-6 | TC-11: Quản lý Trường Long duyệt Cấp 1 đơn Tăng ca OT 20/10 & kiểm tra tab Lịch sử (Role: LongKa)",
   "testStatus": "PASSED",
   "businessStatus": "PASSED",
-  "businessNotes": "PASS - Quản lý LongKa đã thẩm định & duyệt Cấp 1 đơn Tăng ca OT ngày 20/10 của NV 099",
+  "businessNotes": "Đạt yêu cầu logic nghiệp vụ mong đợi",
   "defectEvidence": null,
   "failureAnalysis": {},
   "status": "PASSED",
-  "duration": "58.34s",
+  "duration": "57.67s",
   "errors": "",
   "stepScreenshots": [
     {
       "step": 1,
-      "title": "Dang nhap tai khoan Quan ly tang ca LongKa",
-      "fileName": "TC-11-step01-dang-nhap-tai-khoan-quan-ly-tang-ca-longka.png",
-      "relPath": "quy_trinh_tinh_luong_nv_moi/TC-11/screenshots/TC-11-step01-dang-nhap-tai-khoan-quan-ly-tang-ca-longka.png"
+      "title": "Dang nhap LongKa",
+      "fileName": "TC-11-step01-dang-nhap-longka.png",
+      "relPath": "quy_trinh_tinh_luong_nv_moi/TC-11/screenshots/TC-11-step01-dang-nhap-longka.png"
     },
     {
       "step": 2,
-      "title": "Mo man hinh Danh sach phe duyet MnuWPT037",
-      "fileName": "TC-11-step02-mo-man-hinh-danh-sach-phe-duyet-mnuwpt037.png",
-      "relPath": "quy_trinh_tinh_luong_nv_moi/TC-11/screenshots/TC-11-step02-mo-man-hinh-danh-sach-phe-duyet-mnuwpt037.png"
+      "title": "Mo MnuWPT037 tu Launchpad",
+      "fileName": "TC-11-step02-mo-mnuwpt037-tu-launchpad.png",
+      "relPath": "quy_trinh_tinh_luong_nv_moi/TC-11/screenshots/TC-11-step02-mo-mnuwpt037-tu-launchpad.png"
     },
     {
       "step": 3,
-      "title": "Khoanh vung the don tang ca OT 20-10 can duyet",
-      "fileName": "TC-11-step03-khoanh-vung-the-don-tang-ca-ot-20-10-can-duyet.png",
-      "relPath": "quy_trinh_tinh_luong_nv_moi/TC-11/screenshots/TC-11-step03-khoanh-vung-the-don-tang-ca-ot-20-10-can-duyet.png"
+      "title": "Chon the don Tang ca OT 099",
+      "fileName": "TC-11-step03-chon-the-don-tang-ca-ot-099.png",
+      "relPath": "quy_trinh_tinh_luong_nv_moi/TC-11/screenshots/TC-11-step03-chon-the-don-tang-ca-ot-099.png"
     },
     {
       "step": 4,
-      "title": "Di chuot bam nut Duyet Cap 1 OT va xac nhan",
-      "fileName": "TC-11-step04-di-chuot-bam-nut-duyet-cap-1-ot-va-xac-nhan.png",
-      "relPath": "quy_trinh_tinh_luong_nv_moi/TC-11/screenshots/TC-11-step04-di-chuot-bam-nut-duyet-cap-1-ot-va-xac-nhan.png"
+      "title": "Duyet OT va xem tab Lich su",
+      "fileName": "TC-11-step04-duyet-ot-va-xem-tab-lich-su.png",
+      "relPath": "quy_trinh_tinh_luong_nv_moi/TC-11/screenshots/TC-11-step04-duyet-ot-va-xem-tab-lich-su.png"
     },
     {
       "step": 5,
-      "title": "Doi soat CSDL trang thai duyet Cap 1 OT",
-      "fileName": "TC-11-step05-doi-soat-csdl-trang-thai-duyet-cap-1-ot.png",
-      "relPath": "quy_trinh_tinh_luong_nv_moi/TC-11/screenshots/TC-11-step05-doi-soat-csdl-trang-thai-duyet-cap-1-ot.png",
-      "isDuplicate": true,
-      "duplicateOfStep": 4
+      "title": "Quay lai MnuWPT037 va reloadData",
+      "fileName": "TC-11-step05-quay-lai-mnuwpt037-va-reloaddata.png",
+      "relPath": "quy_trinh_tinh_luong_nv_moi/TC-11/screenshots/TC-11-step05-quay-lai-mnuwpt037-va-reloaddata.png"
     }
   ],
   "attachments": {
     "screenshots": [
-      "quy_trinh_tinh_luong_nv_moi/TC-11/screenshots/TC-11-step01-dang-nhap-tai-khoan-quan-ly-tang-ca-longka.png",
-      "quy_trinh_tinh_luong_nv_moi/TC-11/screenshots/TC-11-step02-mo-man-hinh-danh-sach-phe-duyet-mnuwpt037.png",
-      "quy_trinh_tinh_luong_nv_moi/TC-11/screenshots/TC-11-step03-khoanh-vung-the-don-tang-ca-ot-20-10-can-duyet.png",
-      "quy_trinh_tinh_luong_nv_moi/TC-11/screenshots/TC-11-step04-di-chuot-bam-nut-duyet-cap-1-ot-va-xac-nhan.png",
-      "quy_trinh_tinh_luong_nv_moi/TC-11/screenshots/TC-11-step05-doi-soat-csdl-trang-thai-duyet-cap-1-ot.png"
+      "quy_trinh_tinh_luong_nv_moi/TC-11/screenshots/TC-11-step01-dang-nhap-longka.png",
+      "quy_trinh_tinh_luong_nv_moi/TC-11/screenshots/TC-11-step02-mo-mnuwpt037-tu-launchpad.png",
+      "quy_trinh_tinh_luong_nv_moi/TC-11/screenshots/TC-11-step03-chon-the-don-tang-ca-ot-099.png",
+      "quy_trinh_tinh_luong_nv_moi/TC-11/screenshots/TC-11-step04-duyet-ot-va-xem-tab-lich-su.png",
+      "quy_trinh_tinh_luong_nv_moi/TC-11/screenshots/TC-11-step05-quay-lai-mnuwpt037-va-reloaddata.png"
     ],
     "videos": [
       "quy_trinh_tinh_luong_nv_moi/TC-11/videos/video.webm"
     ],
     "traces": []
   },
-  "timestamp": "2026-11-10T02:15:42.322Z"
+  "timestamp": "2026-11-12T08:11:10.548Z"
 }

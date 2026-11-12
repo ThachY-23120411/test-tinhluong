@@ -1,0 +1,61 @@
+{
+  "tcId": "TC-12",
+  "pageName": "crm_sales_pipeline",
+  "title": "Quy trình Nghiệp vụ Liên Màn hình: TẠO MỚI TẠI DỮ LIỆU KHÁCH HÀNG & ĐỐI SOÁT TỨC THÌ TRÊN SALES PIPELINE (Cross-Screen E2E Sync) (TC-FLOW-01)",
+  "testStatus": "PASSED",
+  "businessStatus": "PASSED",
+  "businessNotes": "PASS - Quy trình nghiệp vụ liên màn hình hoạt động hoàn hảo: Khách hàng \"Công ty TNHH Pipeline Sync 7978\" vừa tạo lập tức xuất hiện đồng bộ trên bảng Kanban Sales Pipeline",
+  "defectEvidence": null,
+  "failureAnalysis": {},
+  "status": "PASSED",
+  "duration": "53.56s",
+  "errors": "",
+  "stepScreenshots": [
+    {
+      "step": 1,
+      "title": "Mở menu Dữ liệu khách hàng để tiến hành tạo mới thực thể nguồn",
+      "fileName": "TC-12-step01-mo-menu-du-lieu-khach-hang-de-tien-hanh-tao-moi-thuc-the-nguon.png",
+      "relPath": "crm_sales_pipeline/TC-12/screenshots/TC-12-step01-mo-menu-du-lieu-khach-hang-de-tien-hanh-tao-moi-thuc-the-nguon.png"
+    },
+    {
+      "step": 2,
+      "title": "Nhập đầy đủ thông tin khách hàng \"Công ty TNHH Pipeline Sync 7978\" tại màn hình nguồn",
+      "fileName": "TC-12-step02-nhap-day-du-thong-tin-khach-hang-cong-ty-tnhh-pipeline-sync-7978-tai-man-hinh-nguon.png",
+      "relPath": "crm_sales_pipeline/TC-12/screenshots/TC-12-step02-nhap-day-du-thong-tin-khach-hang-cong-ty-tnhh-pipeline-sync-7978-tai-man-hinh-nguon.png"
+    },
+    {
+      "step": 3,
+      "title": "Lưu khách hàng thành công và nhận phản hồi HTTP 200 từ máy chủ",
+      "fileName": "TC-12-step03-luu-khach-hang-thanh-cong-va-nhan-phan-hoi-http-200-tu-may-chu.png",
+      "relPath": "crm_sales_pipeline/TC-12/screenshots/TC-12-step03-luu-khach-hang-thanh-cong-va-nhan-phan-hoi-http-200-tu-may-chu.png"
+    },
+    {
+      "step": 4,
+      "title": "Tìm kiếm khách hàng \"Công ty TNHH Pipeline Sync 7978\" trên bảng Kanban Sales Pipeline",
+      "fileName": "TC-12-step04-tim-kiem-khach-hang-cong-ty-tnhh-pipeline-sync-7978-tren-bang-kanban-sales-pipeline.png",
+      "relPath": "crm_sales_pipeline/TC-12/screenshots/TC-12-step04-tim-kiem-khach-hang-cong-ty-tnhh-pipeline-sync-7978-tren-bang-kanban-sales-pipeline.png"
+    },
+    {
+      "step": 5,
+      "title": "Đánh giá logic PASS: Đồng bộ dữ liệu liên màn hình hoàn hảo 100%",
+      "fileName": "TC-12-step05-danh-gia-logic-pass-dong-bo-du-lieu-lien-man-hinh-hoan-hao-100.png",
+      "relPath": "crm_sales_pipeline/TC-12/screenshots/TC-12-step05-danh-gia-logic-pass-dong-bo-du-lieu-lien-man-hinh-hoan-hao-100.png"
+    }
+  ],
+  "attachments": {
+    "screenshots": [
+      "crm_sales_pipeline/TC-12/screenshots/TC-12-step01-mo-menu-du-lieu-khach-hang-de-tien-hanh-tao-moi-thuc-the-nguon.png",
+      "crm_sales_pipeline/TC-12/screenshots/TC-12-step02-nhap-day-du-thong-tin-khach-hang-cong-ty-tnhh-pipeline-sync-7978-tai-man-hinh-nguon.png",
+      "crm_sales_pipeline/TC-12/screenshots/TC-12-step03-luu-khach-hang-thanh-cong-va-nhan-phan-hoi-http-200-tu-may-chu.png",
+      "crm_sales_pipeline/TC-12/screenshots/TC-12-step04-tim-kiem-khach-hang-cong-ty-tnhh-pipeline-sync-7978-tren-bang-kanban-sales-pipeline.png",
+      "crm_sales_pipeline/TC-12/screenshots/TC-12-step05-danh-gia-logic-pass-dong-bo-du-lieu-lien-man-hinh-hoan-hao-100.png"
+    ],
+    "videos": [
+      "crm_sales_pipeline/TC-12/videos/video.webm"
+    ],
+    "traces": [
+      "crm_sales_pipeline/TC-12/traces/trace.zip"
+    ]
+  },
+  "timestamp": "2026-10-21T03:14:25.246Z"
+}

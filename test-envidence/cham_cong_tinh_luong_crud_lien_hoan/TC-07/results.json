@@ -1,0 +1,31 @@
+{
+  "tcId": "TC-07",
+  "pageName": "cham_cong_tinh_luong_crud_lien_hoan",
+  "title": "Quản lý Cấp 2 cuong.vu phê duyệt hoàn tất chặng cuối CẢ 2 ĐƠN và Đơn bù công (Role: cuong.vu)",
+  "testStatus": "PASSED",
+  "businessStatus": "PASSED",
+  "businessNotes": "Đạt yêu cầu logic nghiệp vụ mong đợi",
+  "defectEvidence": null,
+  "failureAnalysis": {},
+  "status": "PASSED",
+  "duration": "27.40s",
+  "errors": "",
+  "stepScreenshots": [
+    {
+      "step": 1,
+      "title": "Giam doc cuong vu phe duyet chang cuoi toan bo don tu mnuwpt037",
+      "fileName": "TC-07-step01-giam-doc-cuong-vu-phe-duyet-chang-cuoi-toan-bo-don-tu-mnuwpt037.png",
+      "relPath": "cham_cong_tinh_luong_crud_lien_hoan/TC-07/screenshots/TC-07-step01-giam-doc-cuong-vu-phe-duyet-chang-cuoi-toan-bo-don-tu-mnuwpt037.png"
+    }
+  ],
+  "attachments": {
+    "screenshots": [
+      "cham_cong_tinh_luong_crud_lien_hoan/TC-07/screenshots/TC-07-step01-giam-doc-cuong-vu-phe-duyet-chang-cuoi-toan-bo-don-tu-mnuwpt037.png"
+    ],
+    "videos": [
+      "cham_cong_tinh_luong_crud_lien_hoan/TC-07/videos/video.webm"
+    ],
+    "traces": []
+  },
+  "timestamp": "2026-11-05T16:33:04.633Z"
+}

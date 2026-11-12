@@ -1,61 +1,66 @@
 {
   "tcId": "TC-12",
   "pageName": "quy_trinh_tinh_luong_nv_moi",
-  "title": "fix-6 | TC-12: Giám đốc cuong.vu phê duyệt chặng cuối CẢ 2 ĐƠN + Đơn bù công 15/10 (Role: cuong.vu)",
+  "title": "fix-6 | TC-12: Quản lý Trường Long duyệt Cấp 2 (Nghỉ phép 24/10, Bù công 15/10 & 16/10, Xin hủy 14/10), xem Lịch sử và Đăng xuất (Role: LongKa)",
   "testStatus": "PASSED",
   "businessStatus": "PASSED",
-  "businessNotes": "PASS - Giám đốc cuong.vu đã phê duyệt chặng cuối hoàn tất CẢ 3 ĐƠN (Phép AL, Tăng ca OT, Bù công) cho NV 099",
+  "businessNotes": "Đạt yêu cầu logic nghiệp vụ mong đợi",
   "defectEvidence": null,
   "failureAnalysis": {},
   "status": "PASSED",
-  "duration": "44.61s",
+  "duration": "138.76s",
   "errors": "",
   "stepScreenshots": [
     {
       "step": 1,
-      "title": "Dang nhap tai khoan Giam doc cuong vu",
-      "fileName": "TC-12-step01-dang-nhap-tai-khoan-giam-doc-cuong-vu.png",
-      "relPath": "quy_trinh_tinh_luong_nv_moi/TC-12/screenshots/TC-12-step01-dang-nhap-tai-khoan-giam-doc-cuong-vu.png"
+      "title": "LongKa mo MnuWPT037 duyet Cap 2",
+      "fileName": "TC-12-step01-longka-mo-mnuwpt037-duyet-cap-2.png",
+      "relPath": "quy_trinh_tinh_luong_nv_moi/TC-12/screenshots/TC-12-step01-longka-mo-mnuwpt037-duyet-cap-2.png"
     },
     {
       "step": 2,
-      "title": "Mo man hinh Danh sach phe duyet MnuWPT037",
-      "fileName": "TC-12-step02-mo-man-hinh-danh-sach-phe-duyet-mnuwpt037.png",
-      "relPath": "quy_trinh_tinh_luong_nv_moi/TC-12/screenshots/TC-12-step02-mo-man-hinh-danh-sach-phe-duyet-mnuwpt037.png"
+      "title": "Duyet Cap 2 va kiem tra tab Nghỉ phép 24/10",
+      "fileName": "TC-12-step02-duyet-cap-2-va-kiem-tra-tab-nghi-phep-24-10.png",
+      "relPath": "quy_trinh_tinh_luong_nv_moi/TC-12/screenshots/TC-12-step02-duyet-cap-2-va-kiem-tra-tab-nghi-phep-24-10.png"
     },
     {
       "step": 3,
-      "title": "Khoanh vung the don cho duyet chang cuoi",
-      "fileName": "TC-12-step03-khoanh-vung-the-don-cho-duyet-chang-cuoi.png",
-      "relPath": "quy_trinh_tinh_luong_nv_moi/TC-12/screenshots/TC-12-step03-khoanh-vung-the-don-cho-duyet-chang-cuoi.png"
+      "title": "Duyet Cap 2 va kiem tra tab Bù công 15/10",
+      "fileName": "TC-12-step03-duyet-cap-2-va-kiem-tra-tab-bu-cong-15-10.png",
+      "relPath": "quy_trinh_tinh_luong_nv_moi/TC-12/screenshots/TC-12-step03-duyet-cap-2-va-kiem-tra-tab-bu-cong-15-10.png"
     },
     {
       "step": 4,
-      "title": "Di chuot phe duyet hoan tat cac don",
-      "fileName": "TC-12-step04-di-chuot-phe-duyet-hoan-tat-cac-don.png",
-      "relPath": "quy_trinh_tinh_luong_nv_moi/TC-12/screenshots/TC-12-step04-di-chuot-phe-duyet-hoan-tat-cac-don.png"
+      "title": "Duyet Cap 2 va kiem tra tab Bù công 16/10",
+      "fileName": "TC-12-step04-duyet-cap-2-va-kiem-tra-tab-bu-cong-16-10.png",
+      "relPath": "quy_trinh_tinh_luong_nv_moi/TC-12/screenshots/TC-12-step04-duyet-cap-2-va-kiem-tra-tab-bu-cong-16-10.png"
     },
     {
       "step": 5,
-      "title": "Doi soat CSDL trang thai duyet chang cuoi",
-      "fileName": "TC-12-step05-doi-soat-csdl-trang-thai-duyet-chang-cuoi.png",
-      "relPath": "quy_trinh_tinh_luong_nv_moi/TC-12/screenshots/TC-12-step05-doi-soat-csdl-trang-thai-duyet-chang-cuoi.png",
-      "isDuplicate": true,
-      "duplicateOfStep": 4
+      "title": "Duyet Cap 2 va kiem tra tab Xin hủy Bù công 14/10",
+      "fileName": "TC-12-step05-duyet-cap-2-va-kiem-tra-tab-xin-huy-bu-cong-14-10.png",
+      "relPath": "quy_trinh_tinh_luong_nv_moi/TC-12/screenshots/TC-12-step05-duyet-cap-2-va-kiem-tra-tab-xin-huy-bu-cong-14-10.png"
+    },
+    {
+      "step": 6,
+      "title": "Dang xuat LongKa thanh cong",
+      "fileName": "TC-12-step06-dang-xuat-longka-thanh-cong.png",
+      "relPath": "quy_trinh_tinh_luong_nv_moi/TC-12/screenshots/TC-12-step06-dang-xuat-longka-thanh-cong.png"
     }
   ],
   "attachments": {
     "screenshots": [
-      "quy_trinh_tinh_luong_nv_moi/TC-12/screenshots/TC-12-step01-dang-nhap-tai-khoan-giam-doc-cuong-vu.png",
-      "quy_trinh_tinh_luong_nv_moi/TC-12/screenshots/TC-12-step02-mo-man-hinh-danh-sach-phe-duyet-mnuwpt037.png",
-      "quy_trinh_tinh_luong_nv_moi/TC-12/screenshots/TC-12-step03-khoanh-vung-the-don-cho-duyet-chang-cuoi.png",
-      "quy_trinh_tinh_luong_nv_moi/TC-12/screenshots/TC-12-step04-di-chuot-phe-duyet-hoan-tat-cac-don.png",
-      "quy_trinh_tinh_luong_nv_moi/TC-12/screenshots/TC-12-step05-doi-soat-csdl-trang-thai-duyet-chang-cuoi.png"
+      "quy_trinh_tinh_luong_nv_moi/TC-12/screenshots/TC-12-step01-longka-mo-mnuwpt037-duyet-cap-2.png",
+      "quy_trinh_tinh_luong_nv_moi/TC-12/screenshots/TC-12-step02-duyet-cap-2-va-kiem-tra-tab-nghi-phep-24-10.png",
+      "quy_trinh_tinh_luong_nv_moi/TC-12/screenshots/TC-12-step03-duyet-cap-2-va-kiem-tra-tab-bu-cong-15-10.png",
+      "quy_trinh_tinh_luong_nv_moi/TC-12/screenshots/TC-12-step04-duyet-cap-2-va-kiem-tra-tab-bu-cong-16-10.png",
+      "quy_trinh_tinh_luong_nv_moi/TC-12/screenshots/TC-12-step05-duyet-cap-2-va-kiem-tra-tab-xin-huy-bu-cong-14-10.png",
+      "quy_trinh_tinh_luong_nv_moi/TC-12/screenshots/TC-12-step06-dang-xuat-longka-thanh-cong.png"
     ],
     "videos": [
       "quy_trinh_tinh_luong_nv_moi/TC-12/videos/video.webm"
     ],
     "traces": []
   },
-  "timestamp": "2026-11-10T02:16:26.980Z"
+  "timestamp": "2026-11-12T08:13:29.363Z"
 }

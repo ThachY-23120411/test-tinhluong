@@ -285,11 +285,29 @@ tests/ (Mã nguồn kịch bản)                test-evidence/ (Bằng chứng 
 >     * **Luật 7: CẤM DÙNG PHÍM TAB CHUYỂN Ô LÀM CON TRỎ NHÁY ĐI TRƯỚC CHUỘT NEON (Anti-Tab Focus Desynchronization Rule)**:
 >       - ❌ **Cấm tuyệt đối**: Lệnh `page.keyboard.press('Tab')` sau khi gõ xong một ô input để nhảy sang ô tiếp theo.
 >       - ❌ **Nguyên nhân cấm**: Phím `Tab` của Chromium chuyển focus trong **0ms**, khiến vạch nhấp nháy soạn thảo (`caret |`) xuất hiện ngay lập tức tại ô kế tiếp trước khi chuột Neon kịp di chuyển tới, gây lộ dấu vết bot và phá vỡ tính tự nhiên.
->       - ✅ **Bắt buộc**: Mọi thao tác chuyển trường (Form traversal) phải do **chuột Neon tự động lướt tới ô tiếp theo và click** để mở focus tự nhiên (trình duyệt sẽ tự động kích hoạt `blur` ô cũ $\rightarrow$ `focus` ô mới y hệt người thật).
+>       - **Quy chuẩn bất biến**: Trên mọi Form / Modal / Toolbar, con trỏ nhấp nháy soạn thảo (`caret |`) **CHỈ ĐƯỢC PHÉP** xuất hiện SAU KHI con trỏ chuột Neon đã bay tới đúng vị trí ô input và phát lệnh `click` mở focus thành công.
+>       - ✅ **Bắt buộc**: Mọi thao tác chuyển trường (Form traversal giữa ô input, datepicker, selectbox) phải do **chuột Neon tự động lướt tới ô tiếp theo và click** (`moveAndClick` / `typeHumanLike`) để mở focus tự nhiên (trình duyệt tự kích hoạt `blur` ô cũ $\rightarrow$ `focus` ô mới y hệt người thật).
 >
-> 16. **Luật 15: CẤM DÙNG PHÍM TAB CHUYỂN Ô LÀM CON TRỎ NHÁY ĐI TRƯỚC CHUỘT NEON (Anti-Tab Focus Desynchronization Rule)**:
->     * **Quy chuẩn bất biến**: Trên mọi Form / Modal / Toolbar, con trỏ nhấp nháy soạn thảo (`caret |`) **CHỈ ĐƯỢC PHÉP** xuất hiện SAU KHI con trỏ chuột Neon đã bay tới đúng vị trí ô input và phát lệnh `click` mở focus thành công.
->     * **Triệt tiêu lệnh `press('Tab')` chuyển ô**: Nghiêm cấm hoàn toàn hành vi dùng phím `Tab` để nhảy ô input. Việc chuyển giữa các ô input, datepicker, selectbox bắt buộc phải diễn ra tuần tự qua chuyển động chuột Neon trực quan (`moveAndClick` / `typeHumanLike`).
+> 16. **Luật 16: KHÓA CHẶN ĐỒNG BỘ TAB ACTIVE & CHU TRÌNH PHÊ DUYỆT ĐƠN 3 CHẶNG TRỰC QUAN (Strict Active Tab Confinement & Real Visual Approval Lifecycle Law)**:
+>     * **Chuyển Tab Trực Quan Bắt Buộc (Mandatory Visual Tab Switch)**:
+>       - Khi nhấp vào thẻ/mục để mở form chi tiết ở một tab mới trên Top Tab Bar (`#divTabDynamic` / `.nav-tabs`), con trỏ chuột Neon **BẮT BUỘC PHẢI DI CHUYỂN LÊN THANH TAB ĐỂ CLICK KÍCH HOẠT TAB CHI TIẾT ĐÓ**, đảm bảo giao diện form chuyển sang active và hiển thị trọn vẹn 100% trên màn hình trước khi thao tác tiếp. Tuyệt đối cấm thao tác trên form khi tab chi tiết đang nằm ở chế độ ẩn ngầm (`display: none`).
+>     * **Triệt Tiêu 100% Fallback Trigger Ngầm (`page.evaluate`) — Chống Fake Pass**:
+>       - Tuyệt đối nghiêm cấm việc dùng `page.evaluate(() => ApproveRequest(...))` để gọi hàm backend ngầm khi selector UI chưa tìm thấy. Mọi thao tác duyệt đơn **BẮT BUỘC PHẢI ĐI QUA CON TRỎ CHUỘT NEON CLICK VÀO NÚT THẬT TRÊN FORM VÀ NÚT THẬT TRONG MODAL**. Việc gọi hàm ngầm làm popup "Thành công" hiện lên trong khi trên màn hình người dùng không hề thấy thao tác duyệt nào và tab chi tiết chưa mở là hành vi vi phạm nghiêm trọng (Fake Pass).
+>     * **Chu Trình Phê Duyệt Đơn 3 Chặng Trực Quan Bất Biến**:
+>       - **Chặng 1 (Form Chi Tiết)**: Chuột Neon chuyển sang tab chi tiết $\rightarrow$ Cuộn màn hình xuống nút "Duyệt" màu xanh (`.btnApprove`) $\rightarrow$ Khoanh vùng 2s $\rightarrow$ Bấm nút "Duyệt".
+>       - **Chặng 2 (Modal Xác Nhận)**: Modal popup xác nhận bật lên giữa màn hình $\rightarrow$ Chuột Neon bay vào Modal $\rightarrow$ Khoanh vùng nút xác nhận 2s $\rightarrow$ Bấm nút xác nhận trong Modal $\rightarrow$ Chờ modal đóng và AJAX hoàn tất.
+>       - **Chặng 3 (Đồng Bộ & Đối Soát Giao Diện)**: Chuột Neon quay lại tab Danh sách phê duyệt $\rightarrow$ Bấm nút Làm mới dữ liệu (`#reloadData`) $\rightarrow$ **Khoanh vùng kiểm chứng trực quan thẻ đơn ĐÃ BIẾN MẤT HOÀN TOÀN khỏi danh sách Chờ duyệt**!
+>
+> 17. **Luật 17: ĐỊNH VỊ ĐỘNG 3 CHIỀU THEO GIAO ĐIỂM CỘT, DẤU VÂN TAY & TỰ ĐỘNG CUỘN TÌM DÒNG (3D Dynamic Target & Auto-Scroll Resolution Law)**:
+>     * **3 Cấm Kỵ Tuyệt Đối về Tọa Độ & Vị Trí Cố Định**:
+>       1. ❌ **Cấm gán cứng số Pixel / Offset mù quáng**: Nghiêm cấm viết `page.mouse.move(500, 300)`, `box.x + 80, box.y + 120`, hay ép cố định `box.x + Math.min(box.width * 0.25, 120)` lên cả thẻ dòng `<tr>` dài (khiến chuột chỉ vào khoảng trắng hoặc cột không liên quan).
+>       2. ❌ **Cấm bám `.first()` / `nth(0)` / `tr:first-child` mù quáng**: Khi có dữ liệu tạo tay chèn lên đầu danh sách hoặc dữ liệu cũ tồn đọng, `.first()` sẽ click nhầm sang bản ghi không phải của kịch bản!
+>       3. ❌ **Cấm click/khoanh mù trên bảng có Virtual Scroll / danh sách dài mà không cuộn tìm**: Dòng của kịch bản có thể bị đẩy xuống đáy danh sách hoặc chưa render trong DOM nếu chưa cuộn tới.
+>     * **Quy Chuẩn Định Vị Động 3 Chiều Bất Biến (`Row Fingerprint` $\cap$ `Progressive Auto-Scroll` $\cap$ `Cell/Action Scope`)**:
+>       1. **Chiều 1 — Định danh dòng đa điều kiện & Dấu vân tay (`Row Fingerprint`)**: Ghép liên hoàn `.filter({ hasText: ... })` theo nhiều cột định danh đồng thời (ví dụ: Mã NV `'099'` + Ngày `'15/10'`/`'20/10'`/`'24/10'` + Số tiền/Chỉ tiêu + dấu vân tay `[TEST_LUONG]` / `[ID:${runToken}]` khi UI có hiển thị). Trước khi chọn phần tử phải kiểm tra `.count()`, không bao giờ gọi `.first()` từ bộ lọc lỏng lẻo.
+>       2. **Chiều 2 — Tự động cuộn tìm từng nấc (`Progressive Auto-Scroll` qua `mouse.wheel`)**: Khi dòng mục tiêu chưa xuất hiện trong khung nhìn (`resolveDynamicTarget`), đưa chuột vào vùng cuộn (`.dx-scrollable-container`, `#scrollView`, `#cardregistered`) và lăn `page.mouse.wheel(0, stepPx)` từng nấc cho tới khi tìm thấy đúng dòng — tích hợp **chốt dừng sớm khi chạm đáy (`scrollTop + clientHeight >= scrollHeight - 2`)** và `throw new Error(...)` rõ ràng nếu duyệt hết danh sách vẫn không thấy.
+>       3. **Chiều 3 — Thu hẹp tới đúng Ô (`td:visible`) hoặc Nút (`button:visible`) bên trong dòng rồi mới lấy `boundingBox()`**: Không lấy tọa độ cả `<tr>` để click/trỏ chuột! Phải thu hẹp từ dòng đã khớp vào đúng `td:visible:has-text(...)` hoặc nút/checkbox bên trong dòng đó (`findRowByColumns`, `moveAndClickGridTarget`, `highlightAndClickDynamicTarget`, `selectAndApproveExactScriptCard`), gọi `scrollIntoViewIfNeeded()`, rồi mới tính `boundingBox()` thời gian thực ngay tại thời điểm di chuột Neon!
+
 
 ---
 
@@ -536,18 +554,47 @@ const PAGE_NAME = '<tên_menu>';
 // KHỐI 1: CÁC HELPER BẮT BUỘC (DI CHUỘT TRỰC QUAN & CHỤP ẢNH TỪNG BƯỚC)
 // ============================================================================
 
-// Di chuyển chuột Neon mượt mà, dừng ngắm và click (đồng bộ 100% thời gian thực)
+// Di chuyển chuột Neon mượt mà, dừng ngắm và click theo tọa độ động thời gian thực (Khóa chặn: Chưa tới nơi cấm bấm)
 async function moveAndClick(page, locator, options = {}) {
-  await locator.scrollIntoViewIfNeeded().catch(() => {});
-  const box = await locator.boundingBox();
-  if (box) {
-    const x = box.x + box.width / 2;
-    const y = box.y + box.height / 2;
-    await page.mouse.move(x, y, { steps: options.steps || 10 });
-    if (options.pause) await page.waitForTimeout(options.pause);
-    else await page.waitForTimeout(150);
+  const target = locator.first();
+  await target.waitFor({ state: 'visible', timeout: options.timeout || 10000 });
+  await target.scrollIntoViewIfNeeded().catch(() => {});
+  const box = await target.boundingBox();
+  if (!box) {
+    throw new Error('❌ [moveAndClick]: Không lấy được boundingBox của phần tử để di chuột Neon!');
   }
-  await locator.click();
+  const x = box.x + box.width * (0.35 + Math.random() * 0.3);
+  const y = box.y + box.height * (0.35 + Math.random() * 0.3);
+  await page.mouse.move(x, y, { steps: options.steps || 12 });
+  await page.waitForTimeout(options.pause || 220);
+  await page.mouse.down();
+  await page.waitForTimeout(80);
+  await page.mouse.up();
+}
+
+// Tìm đúng dòng trên bảng theo nhiều điều kiện cột (Cấm .first() mù quáng)
+function findRowByColumns(page, columnValues = {}, gridSelector = '.dx-datagrid, table') {
+  let rowLocator = page.locator(`${gridSelector} tr.dx-data-row:visible, ${gridSelector} tbody tr:visible`);
+  const values = Array.isArray(columnValues) ? columnValues : Object.values(columnValues);
+  for (const val of values) {
+    if (val !== undefined && val !== null && String(val).trim() !== '') {
+      rowLocator = rowLocator.filter({ hasText: String(val).trim() });
+    }
+  }
+  return rowLocator;
+}
+
+// Cuộn tìm động 3 chiều (Dấu vân tay + Cuộn từng nấc + Nhắm đúng ô/nút mục tiêu)
+async function moveAndClickGridTarget(page, { matchColumns, targetSubSelector, gridSelector = '.dx-datagrid, table' }) {
+  const matchedRows = findRowByColumns(page, matchColumns, gridSelector);
+  const count = await matchedRows.count();
+  if (count === 0) throw new Error(`❌ Không tìm thấy dòng khớp điều kiện: ${JSON.stringify(matchColumns)}`);
+  const row = matchedRows.first();
+  const clickTarget = targetSubSelector
+    ? row.locator(targetSubSelector).first()
+    : row.locator('td:visible').first();
+  await moveAndClick(page, clickTarget);
+  return row;
 }
 
 // Chụp ảnh từng bước tuần tự (Step-by-Step Evidence) với tiêu đề tiếng Việt chuẩn

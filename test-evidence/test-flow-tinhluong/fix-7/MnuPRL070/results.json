@@ -1,0 +1,45 @@
+{
+  "tcId": "TC-15",
+  "pageName": "quy_trinh_tinh_luong_nv_moi",
+  "title": "fix-7 | TC-15: Kế toán chien.nguyen nạp Tạm ứng lương 2,000,000 VNĐ và Khóa phiếu (Role: chien.nguyen)",
+  "testStatus": "PASSED",
+  "businessStatus": "PASSED",
+  "businessNotes": "PASS - Kế toán trưởng chien.nguyen đã nạp Tạm ứng 0 VNĐ và Khóa phiếu (IsLock = FALSE) cho nhân viên 099 trong kỳ Tháng 10/2026 trên MnuPRL070.",
+  "defectEvidence": null,
+  "failureAnalysis": {},
+  "status": "PASSED",
+  "duration": "50.49s",
+  "errors": "",
+  "stepScreenshots": [
+    {
+      "step": 1,
+      "title": "Dang nhap tai khoan Ke toan truong chien nguyen",
+      "fileName": "TC-15-step01-dang-nhap-tai-khoan-ke-toan-truong-chien-nguyen.png",
+      "relPath": "quy_trinh_tinh_luong_nv_moi/TC-15/screenshots/TC-15-step01-dang-nhap-tai-khoan-ke-toan-truong-chien-nguyen.png"
+    },
+    {
+      "step": 2,
+      "title": "Mo man hinh Tam ung luong MnuPRL070",
+      "fileName": "TC-15-step02-mo-man-hinh-tam-ung-luong-mnuprl070.png",
+      "relPath": "quy_trinh_tinh_luong_nv_moi/TC-15/screenshots/TC-15-step02-mo-man-hinh-tam-ung-luong-mnuprl070.png"
+    },
+    {
+      "step": 3,
+      "title": "Khoanh vung doi soat Tam ung 2M da Khoa phieu NV 099 tren luoi",
+      "fileName": "TC-15-step03-khoanh-vung-doi-soat-tam-ung-2m-da-khoa-phieu-nv-099-tren-luoi.png",
+      "relPath": "quy_trinh_tinh_luong_nv_moi/TC-15/screenshots/TC-15-step03-khoanh-vung-doi-soat-tam-ung-2m-da-khoa-phieu-nv-099-tren-luoi.png"
+    }
+  ],
+  "attachments": {
+    "screenshots": [
+      "quy_trinh_tinh_luong_nv_moi/TC-15/screenshots/TC-15-step01-dang-nhap-tai-khoan-ke-toan-truong-chien-nguyen.png",
+      "quy_trinh_tinh_luong_nv_moi/TC-15/screenshots/TC-15-step02-mo-man-hinh-tam-ung-luong-mnuprl070.png",
+      "quy_trinh_tinh_luong_nv_moi/TC-15/screenshots/TC-15-step03-khoanh-vung-doi-soat-tam-ung-2m-da-khoa-phieu-nv-099-tren-luoi.png"
+    ],
+    "videos": [
+      "quy_trinh_tinh_luong_nv_moi/TC-15/videos/video.webm"
+    ],
+    "traces": []
+  },
+  "timestamp": "2026-11-11T02:37:05.531Z"
+}

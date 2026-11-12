@@ -1,0 +1,23 @@
+# Exclude temporary, generated, binary, and evidence directories from codebase-memory-mcp graph
+/scratch/
+/test-evidence/
+/test-envidence/
+/test-results/
+/debug_screens/
+/Screenshots_1_bug/
+/.auth/
+
+# Exclude large Chrome DevTools traces & raw Recorder exports
+Trace-*.json
+Recording *.json
+
+# Exclude binary/archive/media artifacts
+*.png
+*.jpg
+*.jpeg
+*.webp
+*.gif
+*.webm
+*.mp4
+*.zip
+*.docx

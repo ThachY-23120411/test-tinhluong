@@ -1,0 +1,52 @@
+{
+  "tcId": "TC-05",
+  "pageName": "cham_cong_tinh_luong_toan_dien",
+  "title": "Kế toán chạy tính toán lương tự động (Role: chien.nguyen)",
+  "testStatus": "PASSED",
+  "businessStatus": "PASSED",
+  "businessNotes": "PASS - Bảng lương công ty tổng hợp đầy đủ chỉ tiêu lương cho nhân viên 046 (Khớp CSDL tblSal_Sal)",
+  "defectEvidence": null,
+  "failureAnalysis": {},
+  "status": "PASSED",
+  "duration": "24.07s",
+  "errors": "",
+  "stepScreenshots": [
+    {
+      "step": 1,
+      "title": "Ban giam doc chien nguyen dang nhap he thong",
+      "fileName": "TC-05-step01-ban-giam-doc-chien-nguyen-dang-nhap-he-thong.png",
+      "relPath": "cham_cong_tinh_luong_toan_dien/TC-05/screenshots/TC-05-step01-ban-giam-doc-chien-nguyen-dang-nhap-he-thong.png"
+    },
+    {
+      "step": 2,
+      "title": "Mo bang tinh luong phan he PRL",
+      "fileName": "TC-05-step02-mo-bang-tinh-luong-phan-he-prl.png",
+      "relPath": "cham_cong_tinh_luong_toan_dien/TC-05/screenshots/TC-05-step02-mo-bang-tinh-luong-phan-he-prl.png"
+    },
+    {
+      "step": 3,
+      "title": "Kiem tra chi tieu luong cua nhan vien 046",
+      "fileName": "TC-05-step03-kiem-tra-chi-tieu-luong-cua-nhan-vien-046.png",
+      "relPath": "cham_cong_tinh_luong_toan_dien/TC-05/screenshots/TC-05-step03-kiem-tra-chi-tieu-luong-cua-nhan-vien-046.png"
+    },
+    {
+      "step": 4,
+      "title": "Danh gia logic PASS: Bang luong co mat nhan vien 046",
+      "fileName": "TC-05-step04-danh-gia-logic-pass-bang-luong-co-mat-nhan-vien-046.png",
+      "relPath": "cham_cong_tinh_luong_toan_dien/TC-05/screenshots/TC-05-step04-danh-gia-logic-pass-bang-luong-co-mat-nhan-vien-046.png"
+    }
+  ],
+  "attachments": {
+    "screenshots": [
+      "cham_cong_tinh_luong_toan_dien/TC-05/screenshots/TC-05-step01-ban-giam-doc-chien-nguyen-dang-nhap-he-thong.png",
+      "cham_cong_tinh_luong_toan_dien/TC-05/screenshots/TC-05-step02-mo-bang-tinh-luong-phan-he-prl.png",
+      "cham_cong_tinh_luong_toan_dien/TC-05/screenshots/TC-05-step03-kiem-tra-chi-tieu-luong-cua-nhan-vien-046.png",
+      "cham_cong_tinh_luong_toan_dien/TC-05/screenshots/TC-05-step04-danh-gia-logic-pass-bang-luong-co-mat-nhan-vien-046.png"
+    ],
+    "videos": [
+      "cham_cong_tinh_luong_toan_dien/TC-05/videos/video.webm"
+    ],
+    "traces": []
+  },
+  "timestamp": "2026-11-04T04:48:07.192Z"
+}

@@ -1,0 +1,45 @@
+{
+  "tcId": "TC-14",
+  "pageName": "cham_cong_tinh_luong_crud_lien_hoan",
+  "title": "Nhân viên tai.dang kiểm tra tương tác 3 Modal con mắt chi tiết (Role: tai.dang)",
+  "testStatus": "PASSED",
+  "businessStatus": "PASSED",
+  "businessNotes": "Đạt yêu cầu logic nghiệp vụ mong đợi",
+  "defectEvidence": null,
+  "failureAnalysis": {},
+  "status": "PASSED",
+  "duration": "26.38s",
+  "errors": "",
+  "stepScreenshots": [
+    {
+      "step": 1,
+      "title": "Mo modal chi tiet tang ca ot psmodalovertime",
+      "fileName": "TC-14-step01-mo-modal-chi-tiet-tang-ca-ot-psmodalovertime.png",
+      "relPath": "cham_cong_tinh_luong_crud_lien_hoan/TC-14/screenshots/TC-14-step01-mo-modal-chi-tiet-tang-ca-ot-psmodalovertime.png"
+    },
+    {
+      "step": 2,
+      "title": "Mo modal chi tiet ngay nghi huong luong psmodaldaysoff",
+      "fileName": "TC-14-step02-mo-modal-chi-tiet-ngay-nghi-huong-luong-psmodaldaysoff.png",
+      "relPath": "cham_cong_tinh_luong_crud_lien_hoan/TC-14/screenshots/TC-14-step02-mo-modal-chi-tiet-ngay-nghi-huong-luong-psmodaldaysoff.png"
+    },
+    {
+      "step": 3,
+      "title": "Mo modal chi tiet di tre ve som psmodallateearly",
+      "fileName": "TC-14-step03-mo-modal-chi-tiet-di-tre-ve-som-psmodallateearly.png",
+      "relPath": "cham_cong_tinh_luong_crud_lien_hoan/TC-14/screenshots/TC-14-step03-mo-modal-chi-tiet-di-tre-ve-som-psmodallateearly.png"
+    }
+  ],
+  "attachments": {
+    "screenshots": [
+      "cham_cong_tinh_luong_crud_lien_hoan/TC-14/screenshots/TC-14-step01-mo-modal-chi-tiet-tang-ca-ot-psmodalovertime.png",
+      "cham_cong_tinh_luong_crud_lien_hoan/TC-14/screenshots/TC-14-step02-mo-modal-chi-tiet-ngay-nghi-huong-luong-psmodaldaysoff.png",
+      "cham_cong_tinh_luong_crud_lien_hoan/TC-14/screenshots/TC-14-step03-mo-modal-chi-tiet-di-tre-ve-som-psmodallateearly.png"
+    ],
+    "videos": [
+      "cham_cong_tinh_luong_crud_lien_hoan/TC-14/videos/video.webm"
+    ],
+    "traces": []
+  },
+  "timestamp": "2026-11-05T17:12:50.298Z"
+}

@@ -1,0 +1,30 @@
+{
+  "tcId": "TC-07",
+  "pageName": "quy_trinh_tinh_luong_nv_moi",
+  "title": "fix-5 | TC-07: Nộp và Hủy đơn ngày 14/10; Nộp 2 đơn bù công ngày 15/10 và 16/10/2026 (Role: test.nv)",
+  "testStatus": "FAILED",
+  "businessStatus": "FAILED",
+  "businessNotes": "Error: page.waitForTimeout: Target page, context or browser has been closed",
+  "defectEvidence": {
+    "issue": "Error: page.waitForTimeout: Target page, context or browser has been closed",
+    "expected": "Theo đặc tả chuẩn của hệ thống",
+    "actual": "Thực tế phát sinh lỗi hoặc không đạt điều kiện kiểm tra"
+  },
+  "failureAnalysis": {
+    "issue": "Error: page.waitForTimeout: Target page, context or browser has been closed",
+    "expected": "Theo đặc tả chuẩn của hệ thống",
+    "actual": "Thực tế phát sinh lỗi hoặc không đạt điều kiện kiểm tra"
+  },
+  "status": "FAILED",
+  "duration": "3.87s",
+  "errors": "Error: page.waitForTimeout: Target page, context or browser has been closed",
+  "stepScreenshots": [],
+  "attachments": {
+    "screenshots": [],
+    "videos": [
+      "quy_trinh_tinh_luong_nv_moi/TC-07/videos/video.webm"
+    ],
+    "traces": []
+  },
+  "timestamp": "2026-11-12T10:00:14.751Z"
+}

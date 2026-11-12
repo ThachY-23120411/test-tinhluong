@@ -1,0 +1,61 @@
+{
+  "tcId": "TC-09",
+  "pageName": "crm_sales_pipeline",
+  "title": "Nghiệp vụ Thẩm định Thông Tin Nhận Diện & Tương Tác Trực Tiếp Thẻ Khách Hàng (TC-BIZ-02)",
+  "testStatus": "PASSED",
+  "businessStatus": "PASSED",
+  "businessNotes": "PASS - Thẻ khách hàng \"Nguyễn Văn Sync 4739\" hiển thị đầy đủ thông tin liên hệ, mã số và nhân sự phụ trách",
+  "defectEvidence": null,
+  "failureAnalysis": {},
+  "status": "PASSED",
+  "duration": "20.86s",
+  "errors": "",
+  "stepScreenshots": [
+    {
+      "step": 1,
+      "title": "Xác định thẻ khách hàng \"Nguyễn Văn Sync 4739\" trên bảng Kanban",
+      "fileName": "TC-09-step01-xac-dinh-the-khach-hang-nguyen-van-sync-4739-tren-bang-kanban.png",
+      "relPath": "crm_sales_pipeline/TC-09/screenshots/TC-09-step01-xac-dinh-the-khach-hang-nguyen-van-sync-4739-tren-bang-kanban.png"
+    },
+    {
+      "step": 2,
+      "title": "Con trỏ chuột Neon nhấp chọn thẻ khách hàng",
+      "fileName": "TC-09-step02-con-tro-chuot-neon-nhap-chon-the-khach-hang.png",
+      "relPath": "crm_sales_pipeline/TC-09/screenshots/TC-09-step02-con-tro-chuot-neon-nhap-chon-the-khach-hang.png"
+    },
+    {
+      "step": 3,
+      "title": "Rà soát thông tin liên hệ và mã doanh nghiệp thể hiện trực quan trên thẻ",
+      "fileName": "TC-09-step03-ra-soat-thong-tin-lien-he-va-ma-doanh-nghiep-the-hien-truc-quan-tren-the.png",
+      "relPath": "crm_sales_pipeline/TC-09/screenshots/TC-09-step03-ra-soat-thong-tin-lien-he-va-ma-doanh-nghiep-the-hien-truc-quan-tren-the.png"
+    },
+    {
+      "step": 4,
+      "title": "Con trỏ Neon di chuyển giải phóng tiêu điểm chọn thẻ",
+      "fileName": "TC-09-step04-con-tro-neon-di-chuyen-giai-phong-tieu-diem-chon-the.png",
+      "relPath": "crm_sales_pipeline/TC-09/screenshots/TC-09-step04-con-tro-neon-di-chuyen-giai-phong-tieu-diem-chon-the.png"
+    },
+    {
+      "step": 5,
+      "title": "Đánh giá logic PASS: Thẻ cơ hội nạp đầy đủ thông tin định danh và tương tác mượt mà",
+      "fileName": "TC-09-step05-danh-gia-logic-pass-the-co-hoi-nap-day-du-thong-tin-dinh-danh-va-tuong-tac-muot-ma.png",
+      "relPath": "crm_sales_pipeline/TC-09/screenshots/TC-09-step05-danh-gia-logic-pass-the-co-hoi-nap-day-du-thong-tin-dinh-danh-va-tuong-tac-muot-ma.png"
+    }
+  ],
+  "attachments": {
+    "screenshots": [
+      "crm_sales_pipeline/TC-09/screenshots/TC-09-step01-xac-dinh-the-khach-hang-nguyen-van-sync-4739-tren-bang-kanban.png",
+      "crm_sales_pipeline/TC-09/screenshots/TC-09-step02-con-tro-chuot-neon-nhap-chon-the-khach-hang.png",
+      "crm_sales_pipeline/TC-09/screenshots/TC-09-step03-ra-soat-thong-tin-lien-he-va-ma-doanh-nghiep-the-hien-truc-quan-tren-the.png",
+      "crm_sales_pipeline/TC-09/screenshots/TC-09-step04-con-tro-neon-di-chuyen-giai-phong-tieu-diem-chon-the.png",
+      "crm_sales_pipeline/TC-09/screenshots/TC-09-step05-danh-gia-logic-pass-the-co-hoi-nap-day-du-thong-tin-dinh-danh-va-tuong-tac-muot-ma.png"
+    ],
+    "videos": [
+      "crm_sales_pipeline/TC-09/videos/video.webm"
+    ],
+    "traces": [
+      "crm_sales_pipeline/TC-09/traces/trace.zip"
+    ]
+  },
+  "timestamp": "2026-10-21T03:12:20.253Z"
+}

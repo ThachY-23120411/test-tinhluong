@@ -1,0 +1,31 @@
+{
+  "tcId": "TC-02",
+  "pageName": "cham_cong_tinh_luong_crud_lien_hoan",
+  "title": "Gửi đơn Xin nghỉ phép năm AL hưởng 100% lương ngày test (Role: tai.dang)",
+  "testStatus": "PASSED",
+  "businessStatus": "PASSED",
+  "businessNotes": "Đạt yêu cầu logic nghiệp vụ mong đợi",
+  "defectEvidence": null,
+  "failureAnalysis": {},
+  "status": "PASSED",
+  "duration": "24.08s",
+  "errors": "",
+  "stepScreenshots": [
+    {
+      "step": 1,
+      "title": "Nhan vien dien form xin nghi phep al huong luong 2026 10 23 mnuwpt315",
+      "fileName": "TC-02-step01-nhan-vien-dien-form-xin-nghi-phep-al-huong-luong-2026-10-23-mnuwpt315.png",
+      "relPath": "cham_cong_tinh_luong_crud_lien_hoan/TC-02/screenshots/TC-02-step01-nhan-vien-dien-form-xin-nghi-phep-al-huong-luong-2026-10-23-mnuwpt315.png"
+    }
+  ],
+  "attachments": {
+    "screenshots": [
+      "cham_cong_tinh_luong_crud_lien_hoan/TC-02/screenshots/TC-02-step01-nhan-vien-dien-form-xin-nghi-phep-al-huong-luong-2026-10-23-mnuwpt315.png"
+    ],
+    "videos": [
+      "cham_cong_tinh_luong_crud_lien_hoan/TC-02/videos/video.webm"
+    ],
+    "traces": []
+  },
+  "timestamp": "2026-11-05T16:13:15.047Z"
+}

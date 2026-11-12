@@ -1,0 +1,37 @@
+{
+  "tcId": "TC-15",
+  "pageName": "crm_customer_data",
+  "title": "Kiểm tra Quy Trình Nghiệp Vụ Liên Màn Hình: THÊM MỚI TẠI DATA COLLECTION & ĐỐI SOÁT TỨC THÌ TRÊN SALES PIPELINE (Cross-Screen Downstream Verification)",
+  "testStatus": "FAILED",
+  "businessStatus": "FAILED",
+  "businessNotes": "Error: worker process exited unexpectedly (code=3221225477, signal=null)",
+  "defectEvidence": {
+    "issue": "Error: worker process exited unexpectedly (code=3221225477, signal=null)",
+    "expected": "Theo đặc tả chuẩn của hệ thống",
+    "actual": "Thực tế phát sinh lỗi hoặc không đạt điều kiện kiểm tra"
+  },
+  "failureAnalysis": {
+    "issue": "Error: worker process exited unexpectedly (code=3221225477, signal=null)",
+    "expected": "Theo đặc tả chuẩn của hệ thống",
+    "actual": "Thực tế phát sinh lỗi hoặc không đạt điều kiện kiểm tra"
+  },
+  "status": "FAILED",
+  "duration": "0.00s",
+  "errors": "Error: worker process exited unexpectedly (code=3221225477, signal=null)",
+  "stepScreenshots": [
+    {
+      "step": 1,
+      "title": "Ghi nhận dữ liệu tại màn hình nguồn Dữ liệu khách hàng (20 bản ghi)",
+      "fileName": "TC-15-step01-ghi-nhan-du-lieu-tai-man-hinh-nguon-du-lieu-khach-hang-20-ban-ghi.png",
+      "relPath": "crm_customer_data/TC-15/screenshots/TC-15-step01-ghi-nhan-du-lieu-tai-man-hinh-nguon-du-lieu-khach-hang-20-ban-ghi.png"
+    }
+  ],
+  "attachments": {
+    "screenshots": [
+      "crm_customer_data/TC-15/screenshots/TC-15-step01-ghi-nhan-du-lieu-tai-man-hinh-nguon-du-lieu-khach-hang-20-ban-ghi.png"
+    ],
+    "videos": [],
+    "traces": []
+  },
+  "timestamp": "2026-10-28T05:27:27.109Z"
+}

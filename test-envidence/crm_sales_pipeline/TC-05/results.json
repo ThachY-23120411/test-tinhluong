@@ -1,0 +1,61 @@
+{
+  "tcId": "TC-05",
+  "pageName": "crm_sales_pipeline",
+  "title": "Kiểm tra Nút Xóa Nhanh Từ Khóa (#btnClearSearch) & Phục Hồi Dữ Liệu (TC-CTL-05)",
+  "testStatus": "PASSED",
+  "businessStatus": "PASSED",
+  "businessNotes": "PASS - Nút xóa nhanh #btnClearSearch dọn sạch từ khóa tức thì và khôi phục đủ 61/61 thẻ cơ hội",
+  "defectEvidence": null,
+  "failureAnalysis": {},
+  "status": "PASSED",
+  "duration": "24.75s",
+  "errors": "",
+  "stepScreenshots": [
+    {
+      "step": 1,
+      "title": "Nhập từ khóa \"Sync\" vào ô tìm kiếm nhanh",
+      "fileName": "TC-05-step01-nhap-tu-khoa-sync-vao-o-tim-kiem-nhanh.png",
+      "relPath": "crm_sales_pipeline/TC-05/screenshots/TC-05-step01-nhap-tu-khoa-sync-vao-o-tim-kiem-nhanh.png"
+    },
+    {
+      "step": 2,
+      "title": "Nút xóa từ khóa tìm kiếm (x) hiển thị trực quan trong ô tìm kiếm",
+      "fileName": "TC-05-step02-nut-xoa-tu-khoa-tim-kiem-x-hien-thi-truc-quan-trong-o-tim-kiem.png",
+      "relPath": "crm_sales_pipeline/TC-05/screenshots/TC-05-step02-nut-xoa-tu-khoa-tim-kiem-x-hien-thi-truc-quan-trong-o-tim-kiem.png"
+    },
+    {
+      "step": 3,
+      "title": "Con trỏ Neon nhấp nút xóa (x) để dọn sạch ô tìm kiếm",
+      "fileName": "TC-05-step03-con-tro-neon-nhap-nut-xoa-x-de-don-sach-o-tim-kiem.png",
+      "relPath": "crm_sales_pipeline/TC-05/screenshots/TC-05-step03-con-tro-neon-nhap-nut-xoa-x-de-don-sach-o-tim-kiem.png"
+    },
+    {
+      "step": 4,
+      "title": "Ô tìm kiếm đã dọn rỗng và DataGrid nạp lại 61 thẻ cơ hội",
+      "fileName": "TC-05-step04-o-tim-kiem-da-don-rong-va-datagrid-nap-lai-61-the-co-hoi.png",
+      "relPath": "crm_sales_pipeline/TC-05/screenshots/TC-05-step04-o-tim-kiem-da-don-rong-va-datagrid-nap-lai-61-the-co-hoi.png"
+    },
+    {
+      "step": 5,
+      "title": "Đánh giá logic PASS: Nút xóa nhanh hoạt động chuẩn xác, khôi phục 100% dữ liệu",
+      "fileName": "TC-05-step05-danh-gia-logic-pass-nut-xoa-nhanh-hoat-dong-chuan-xac-khoi-phuc-100-du-lieu.png",
+      "relPath": "crm_sales_pipeline/TC-05/screenshots/TC-05-step05-danh-gia-logic-pass-nut-xoa-nhanh-hoat-dong-chuan-xac-khoi-phuc-100-du-lieu.png"
+    }
+  ],
+  "attachments": {
+    "screenshots": [
+      "crm_sales_pipeline/TC-05/screenshots/TC-05-step01-nhap-tu-khoa-sync-vao-o-tim-kiem-nhanh.png",
+      "crm_sales_pipeline/TC-05/screenshots/TC-05-step02-nut-xoa-tu-khoa-tim-kiem-x-hien-thi-truc-quan-trong-o-tim-kiem.png",
+      "crm_sales_pipeline/TC-05/screenshots/TC-05-step03-con-tro-neon-nhap-nut-xoa-x-de-don-sach-o-tim-kiem.png",
+      "crm_sales_pipeline/TC-05/screenshots/TC-05-step04-o-tim-kiem-da-don-rong-va-datagrid-nap-lai-61-the-co-hoi.png",
+      "crm_sales_pipeline/TC-05/screenshots/TC-05-step05-danh-gia-logic-pass-nut-xoa-nhanh-hoat-dong-chuan-xac-khoi-phuc-100-du-lieu.png"
+    ],
+    "videos": [
+      "crm_sales_pipeline/TC-05/videos/video.webm"
+    ],
+    "traces": [
+      "crm_sales_pipeline/TC-05/traces/trace.zip"
+    ]
+  },
+  "timestamp": "2026-10-21T03:10:17.443Z"
+}

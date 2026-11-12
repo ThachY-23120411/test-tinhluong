@@ -1,0 +1,2880 @@
+{
+    "title": "Recording 11/12/2026 at 3:22:31 PM",
+    "steps": [
+        {
+            "type": "setViewport",
+            "width": 1402,
+            "height": 911,
+            "deviceScaleFactor": 1,
+            "isMobile": false,
+            "hasTouch": false,
+            "isLandscape": false
+        },
+        {
+            "type": "navigate",
+            "url": "https://paradisehrm.com/Tai3/",
+            "assertedEvents": [
+                {
+                    "type": "navigation",
+                    "url": "https://paradisehrm.com/Tai3/",
+                    "title": "Paradise HR"
+                }
+            ]
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "#username"
+                ],
+                [
+                    "text/Chien.nguyen"
+                ]
+            ],
+            "offsetY": 31.171875,
+            "offsetX": 169.34375
+        },
+        {
+            "type": "keyDown",
+            "target": "main",
+            "key": "Control"
+        },
+        {
+            "type": "keyDown",
+            "target": "main",
+            "key": "a"
+        },
+        {
+            "type": "keyUp",
+            "key": "a",
+            "target": "main"
+        },
+        {
+            "type": "keyUp",
+            "key": "Control",
+            "target": "main"
+        },
+        {
+            "type": "keyDown",
+            "target": "main",
+            "key": "CapsLock"
+        },
+        {
+            "type": "keyUp",
+            "key": "CapsLock",
+            "target": "main"
+        },
+        {
+            "type": "change",
+            "value": "C",
+            "selectors": [
+                [
+                    "#username"
+                ],
+                [
+                    "text/Chien.nguyen"
+                ]
+            ],
+            "target": "main"
+        },
+        {
+            "type": "keyDown",
+            "target": "main",
+            "key": "CapsLock"
+        },
+        {
+            "type": "keyUp",
+            "key": "c",
+            "target": "main"
+        },
+        {
+            "type": "keyUp",
+            "key": "CapsLock",
+            "target": "main"
+        },
+        {
+            "type": "change",
+            "value": "Chien.nguyen",
+            "selectors": [
+                [
+                    "#username"
+                ],
+                [
+                    "text/Chien.nguyen"
+                ]
+            ],
+            "target": "main"
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "#\\37 443E420BD464740AD70F460ADCC6E29"
+                ]
+            ],
+            "offsetY": 12.578125,
+            "offsetX": 37.34375
+        },
+        {
+            "type": "keyDown",
+            "target": "main",
+            "key": "Control"
+        },
+        {
+            "type": "keyDown",
+            "target": "main",
+            "key": "a"
+        },
+        {
+            "type": "keyUp",
+            "key": "Control",
+            "target": "main"
+        },
+        {
+            "type": "keyUp",
+            "key": "a",
+            "target": "main"
+        },
+        {
+            "type": "change",
+            "value": "123",
+            "selectors": [
+                [
+                    "#\\37 443E420BD464740AD70F460ADCC6E29"
+                ]
+            ],
+            "target": "main"
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "#submitLogin"
+                ]
+            ],
+            "offsetY": 11.984375,
+            "offsetX": 153.34375
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "button.MnuHRS238 > i"
+                ]
+            ],
+            "offsetY": 20.3125,
+            "offsetX": 33
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "#launchpad input"
+                ]
+            ],
+            "offsetY": 8.953125,
+            "offsetX": 28.34375
+        },
+        {
+            "type": "change",
+            "value": "thu nha·",
+            "selectors": [
+                [
+                    "#launchpad input"
+                ]
+            ],
+            "target": "main"
+        },
+        {
+            "type": "keyUp",
+            "key": "Unidentified",
+            "target": "main"
+        },
+        {
+            "type": "change",
+            "value": "thu nhâ",
+            "selectors": [
+                [
+                    "#launchpad input"
+                ]
+            ],
+            "target": "main"
+        },
+        {
+            "type": "keyUp",
+            "key": "Unidentified",
+            "target": "main"
+        },
+        {
+            "type": "change",
+            "value": "thu nhâ·",
+            "selectors": [
+                [
+                    "#launchpad input"
+                ]
+            ],
+            "target": "main"
+        },
+        {
+            "type": "keyUp",
+            "key": "Unidentified",
+            "target": "main"
+        },
+        {
+            "type": "change",
+            "value": "thu nhậ",
+            "selectors": [
+                [
+                    "#launchpad input"
+                ]
+            ],
+            "target": "main"
+        },
+        {
+            "type": "keyUp",
+            "key": "Unidentified",
+            "target": "main"
+        },
+        {
+            "type": "keyUp",
+            "key": "a",
+            "target": "main"
+        },
+        {
+            "type": "change",
+            "value": "thu nhập",
+            "selectors": [
+                [
+                    "#launchpad input"
+                ]
+            ],
+            "target": "main"
+        },
+        {
+            "type": "keyUp",
+            "key": "j",
+            "target": "main"
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "div.wrapper-launchpad > div > div i"
+                ]
+            ],
+            "offsetY": 45.734375,
+            "offsetX": 48.015625
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "#P2A128E4FCF8D4E7E938B82EC1C80EF05 > div > div div.dx-widget > div > div"
+                ]
+            ],
+            "offsetY": 18.34375,
+            "offsetX": 16.546875
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "div.dx-list-item-selected > div > div"
+                ]
+            ],
+            "offsetY": 5,
+            "offsetX": 24
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "#P61585A08C403407E9EFEAAFB5F013B6C > div > div div.dx-widget > div > div"
+                ]
+            ],
+            "offsetY": 16.34375,
+            "offsetX": 11.265625
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "div.dx-overlay-wrapper div.dx-list-item-selected > div > div > div > div"
+                ]
+            ],
+            "offsetY": 7.296875,
+            "offsetX": 20
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "div.dx-toolbar-after > div:nth-of-type(3) i"
+                ]
+            ],
+            "offsetY": 7.34375,
+            "offsetX": 9.015625
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "#EmployeeIDP03F80ABC583A40BF8887EB518C00BD09_display > div"
+                ]
+            ],
+            "offsetY": 23.8125,
+            "offsetX": 192
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "div:nth-of-type(19) div.dx-datagrid-header-panel input"
+                ]
+            ],
+            "offsetY": 24,
+            "offsetX": 84
+        },
+        {
+            "type": "change",
+            "value": "te·",
+            "selectors": [
+                [
+                    "div:nth-of-type(19) div.dx-datagrid-header-panel input"
+                ]
+            ],
+            "target": "main"
+        },
+        {
+            "type": "keyUp",
+            "key": "Unidentified",
+            "target": "main"
+        },
+        {
+            "type": "change",
+            "value": "té",
+            "selectors": [
+                [
+                    "div:nth-of-type(19) div.dx-datagrid-header-panel input"
+                ]
+            ],
+            "target": "main"
+        },
+        {
+            "type": "keyUp",
+            "key": "Unidentified",
+            "target": "main"
+        },
+        {
+            "type": "change",
+            "value": "tét",
+            "selectors": [
+                [
+                    "div:nth-of-type(19) div.dx-datagrid-header-panel input"
+                ]
+            ],
+            "target": "main"
+        },
+        {
+            "type": "keyUp",
+            "key": "s",
+            "target": "main"
+        },
+        {
+            "type": "change",
+            "value": "té·",
+            "selectors": [
+                [
+                    "div:nth-of-type(19) div.dx-datagrid-header-panel input"
+                ]
+            ],
+            "target": "main"
+        },
+        {
+            "type": "keyUp",
+            "key": "Unidentified",
+            "target": "main"
+        },
+        {
+            "type": "change",
+            "value": "te",
+            "selectors": [
+                [
+                    "div:nth-of-type(19) div.dx-datagrid-header-panel input"
+                ]
+            ],
+            "target": "main"
+        },
+        {
+            "type": "keyUp",
+            "key": "Unidentified",
+            "target": "main"
+        },
+        {
+            "type": "change",
+            "value": "tes",
+            "selectors": [
+                [
+                    "div:nth-of-type(19) div.dx-datagrid-header-panel input"
+                ]
+            ],
+            "target": "main"
+        },
+        {
+            "type": "keyUp",
+            "key": "Unidentified",
+            "target": "main"
+        },
+        {
+            "type": "change",
+            "value": "test",
+            "selectors": [
+                [
+                    "div:nth-of-type(19) div.dx-datagrid-header-panel input"
+                ]
+            ],
+            "target": "main"
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "tr.dx-data-row > td:nth-of-type(3)"
+                ],
+                [
+                    "text/Nguyễn Văn Test"
+                ]
+            ],
+            "offsetY": 14,
+            "offsetX": 130
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "div.dx-popup-bottom div:nth-of-type(2) > div > div > div"
+                ]
+            ],
+            "offsetY": 2,
+            "offsetX": 13.203125
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "#PB4CC1FFD961745D89F4505DEBDF7BD6E > div > div input"
+                ]
+            ],
+            "offsetY": 15.8125,
+            "offsetX": 56.734375
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "div.dx-state-hover > div > div > div > div"
+                ],
+                [
+                    "text/1 - Tiền thưởng"
+                ]
+            ],
+            "offsetY": 13.5,
+            "offsetX": 70
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "#PC0CC1804B85E4EA783B473A4D54F7DAE > div input"
+                ]
+            ],
+            "offsetY": 21.8125,
+            "offsetX": 309
+        },
+        {
+            "type": "change",
+            "value": "100,0000 ₫",
+            "selectors": [
+                [
+                    "#PC0CC1804B85E4EA783B473A4D54F7DAE > div input"
+                ]
+            ],
+            "target": "main"
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "#editor-P884C6D96907B49109FB1FC661E9145A6"
+                ]
+            ],
+            "offsetY": 47.625,
+            "offsetX": 111
+        },
+        {
+            "type": "keyDown",
+            "target": "main",
+            "key": "CapsLock"
+        },
+        {
+            "type": "keyUp",
+            "key": "CapsLock",
+            "target": "main"
+        },
+        {
+            "type": "change",
+            "value": "T",
+            "selectors": [
+                [
+                    "#editor-P884C6D96907B49109FB1FC661E9145A6"
+                ]
+            ],
+            "target": "main"
+        },
+        {
+            "type": "keyDown",
+            "target": "main",
+            "key": "CapsLock"
+        },
+        {
+            "type": "keyUp",
+            "key": "t",
+            "target": "main"
+        },
+        {
+            "type": "keyUp",
+            "key": "CapsLock",
+            "target": "main"
+        },
+        {
+            "type": "change",
+            "value": "Thu·",
+            "selectors": [
+                [
+                    "#editor-P884C6D96907B49109FB1FC661E9145A6"
+                ]
+            ],
+            "target": "main"
+        },
+        {
+            "type": "keyUp",
+            "key": "Unidentified",
+            "target": "main"
+        },
+        {
+            "type": "change",
+            "value": "Thư",
+            "selectors": [
+                [
+                    "#editor-P884C6D96907B49109FB1FC661E9145A6"
+                ]
+            ],
+            "target": "main"
+        },
+        {
+            "type": "keyUp",
+            "key": "Unidentified",
+            "target": "main"
+        },
+        {
+            "type": "change",
+            "value": "Thưo",
+            "selectors": [
+                [
+                    "#editor-P884C6D96907B49109FB1FC661E9145A6"
+                ]
+            ],
+            "target": "main"
+        },
+        {
+            "type": "keyUp",
+            "key": "w",
+            "target": "main"
+        },
+        {
+            "type": "change",
+            "value": "Thưo·",
+            "selectors": [
+                [
+                    "#editor-P884C6D96907B49109FB1FC661E9145A6"
+                ]
+            ],
+            "target": "main"
+        },
+        {
+            "type": "keyUp",
+            "key": "Unidentified",
+            "target": "main"
+        },
+        {
+            "type": "change",
+            "value": "Thươ",
+            "selectors": [
+                [
+                    "#editor-P884C6D96907B49109FB1FC661E9145A6"
+                ]
+            ],
+            "target": "main"
+        },
+        {
+            "type": "keyUp",
+            "key": "Unidentified",
+            "target": "main"
+        },
+        {
+            "type": "change",
+            "value": "Thươn",
+            "selectors": [
+                [
+                    "#editor-P884C6D96907B49109FB1FC661E9145A6"
+                ]
+            ],
+            "target": "main"
+        },
+        {
+            "type": "keyUp",
+            "key": "Unidentified",
+            "target": "main"
+        },
+        {
+            "type": "change",
+            "value": "Thương·",
+            "selectors": [
+                [
+                    "#editor-P884C6D96907B49109FB1FC661E9145A6"
+                ]
+            ],
+            "target": "main"
+        },
+        {
+            "type": "keyUp",
+            "key": "Unidentified",
+            "target": "main"
+        },
+        {
+            "type": "change",
+            "value": "Thưở",
+            "selectors": [
+                [
+                    "#editor-P884C6D96907B49109FB1FC661E9145A6"
+                ]
+            ],
+            "target": "main"
+        },
+        {
+            "type": "keyUp",
+            "key": "Unidentified",
+            "target": "main"
+        },
+        {
+            "type": "change",
+            "value": "Thưởn",
+            "selectors": [
+                [
+                    "#editor-P884C6D96907B49109FB1FC661E9145A6"
+                ]
+            ],
+            "target": "main"
+        },
+        {
+            "type": "keyUp",
+            "key": "Unidentified",
+            "target": "main"
+        },
+        {
+            "type": "change",
+            "value": "Thưởng",
+            "selectors": [
+                [
+                    "#editor-P884C6D96907B49109FB1FC661E9145A6"
+                ]
+            ],
+            "target": "main"
+        },
+        {
+            "type": "keyUp",
+            "key": "Unidentified",
+            "target": "main"
+        },
+        {
+            "type": "keyUp",
+            "key": "r",
+            "target": "main"
+        },
+        {
+            "type": "change",
+            "value": "Thưởng KPI nha·",
+            "selectors": [
+                [
+                    "#editor-P884C6D96907B49109FB1FC661E9145A6"
+                ]
+            ],
+            "target": "main"
+        },
+        {
+            "type": "keyUp",
+            "key": "Unidentified",
+            "target": "main"
+        },
+        {
+            "type": "change",
+            "value": "Thưởng KPI nhâ",
+            "selectors": [
+                [
+                    "#editor-P884C6D96907B49109FB1FC661E9145A6"
+                ]
+            ],
+            "target": "main"
+        },
+        {
+            "type": "keyUp",
+            "key": "Unidentified",
+            "target": "main"
+        },
+        {
+            "type": "change",
+            "value": "Thưởng KPI nhân",
+            "selectors": [
+                [
+                    "#editor-P884C6D96907B49109FB1FC661E9145A6"
+                ]
+            ],
+            "target": "main"
+        },
+        {
+            "type": "keyUp",
+            "key": "a",
+            "target": "main"
+        },
+        {
+            "type": "change",
+            "value": "Thưởng KPI nhân vien·",
+            "selectors": [
+                [
+                    "#editor-P884C6D96907B49109FB1FC661E9145A6"
+                ]
+            ],
+            "target": "main"
+        },
+        {
+            "type": "keyUp",
+            "key": "Unidentified",
+            "target": "main"
+        },
+        {
+            "type": "change",
+            "value": "Thưởng KPI nhân viê",
+            "selectors": [
+                [
+                    "#editor-P884C6D96907B49109FB1FC661E9145A6"
+                ]
+            ],
+            "target": "main"
+        },
+        {
+            "type": "keyUp",
+            "key": "Unidentified",
+            "target": "main"
+        },
+        {
+            "type": "change",
+            "value": "Thưởng KPI nhân viên",
+            "selectors": [
+                [
+                    "#editor-P884C6D96907B49109FB1FC661E9145A6"
+                ]
+            ],
+            "target": "main"
+        },
+        {
+            "type": "keyUp",
+            "key": "Unidentified",
+            "target": "main"
+        },
+        {
+            "type": "keyUp",
+            "key": "e",
+            "target": "main"
+        },
+        {
+            "type": "change",
+            "value": "Thưởng KPI nhân viên mo·",
+            "selectors": [
+                [
+                    "#editor-P884C6D96907B49109FB1FC661E9145A6"
+                ]
+            ],
+            "target": "main"
+        },
+        {
+            "type": "keyUp",
+            "key": "Unidentified",
+            "target": "main"
+        },
+        {
+            "type": "change",
+            "value": "Thưởng KPI nhân viên mơ",
+            "selectors": [
+                [
+                    "#editor-P884C6D96907B49109FB1FC661E9145A6"
+                ]
+            ],
+            "target": "main"
+        },
+        {
+            "type": "keyUp",
+            "key": "Unidentified",
+            "target": "main"
+        },
+        {
+            "type": "keyUp",
+            "key": "w",
+            "target": "main"
+        },
+        {
+            "type": "change",
+            "value": "Thưởng KPI nhân viên mơi·",
+            "selectors": [
+                [
+                    "#editor-P884C6D96907B49109FB1FC661E9145A6"
+                ]
+            ],
+            "target": "main"
+        },
+        {
+            "type": "keyUp",
+            "key": "Unidentified",
+            "target": "main"
+        },
+        {
+            "type": "change",
+            "value": "Thưởng KPI nhân viên mớ",
+            "selectors": [
+                [
+                    "#editor-P884C6D96907B49109FB1FC661E9145A6"
+                ]
+            ],
+            "target": "main"
+        },
+        {
+            "type": "keyUp",
+            "key": "Unidentified",
+            "target": "main"
+        },
+        {
+            "type": "change",
+            "value": "Thưởng KPI nhân viên mới",
+            "selectors": [
+                [
+                    "#editor-P884C6D96907B49109FB1FC661E9145A6"
+                ]
+            ],
+            "target": "main"
+        },
+        {
+            "type": "keyUp",
+            "key": "Unidentified",
+            "target": "main"
+        },
+        {
+            "type": "keyUp",
+            "key": "s",
+            "target": "main"
+        },
+        {
+            "type": "change",
+            "value": "Thưởng KPI nhân viên mới xua·",
+            "selectors": [
+                [
+                    "#editor-P884C6D96907B49109FB1FC661E9145A6"
+                ]
+            ],
+            "target": "main"
+        },
+        {
+            "type": "keyUp",
+            "key": "Unidentified",
+            "target": "main"
+        },
+        {
+            "type": "change",
+            "value": "Thưởng KPI nhân viên mới xuâ",
+            "selectors": [
+                [
+                    "#editor-P884C6D96907B49109FB1FC661E9145A6"
+                ]
+            ],
+            "target": "main"
+        },
+        {
+            "type": "keyUp",
+            "key": "Unidentified",
+            "target": "main"
+        },
+        {
+            "type": "change",
+            "value": "Thưởng KPI nhân viên mới xuâ·",
+            "selectors": [
+                [
+                    "#editor-P884C6D96907B49109FB1FC661E9145A6"
+                ]
+            ],
+            "target": "main"
+        },
+        {
+            "type": "keyUp",
+            "key": "Unidentified",
+            "target": "main"
+        },
+        {
+            "type": "change",
+            "value": "Thưởng KPI nhân viên mới xuấ",
+            "selectors": [
+                [
+                    "#editor-P884C6D96907B49109FB1FC661E9145A6"
+                ]
+            ],
+            "target": "main"
+        },
+        {
+            "type": "keyUp",
+            "key": "Unidentified",
+            "target": "main"
+        },
+        {
+            "type": "keyUp",
+            "key": "a",
+            "target": "main"
+        },
+        {
+            "type": "change",
+            "value": "Thưởng KPI nhân viên mới xuất",
+            "selectors": [
+                [
+                    "#editor-P884C6D96907B49109FB1FC661E9145A6"
+                ]
+            ],
+            "target": "main"
+        },
+        {
+            "type": "keyUp",
+            "key": "s",
+            "target": "main"
+        },
+        {
+            "type": "change",
+            "value": "Thưởng KPI nhân viên mới xuất sa·",
+            "selectors": [
+                [
+                    "#editor-P884C6D96907B49109FB1FC661E9145A6"
+                ]
+            ],
+            "target": "main"
+        },
+        {
+            "type": "keyUp",
+            "key": "Unidentified",
+            "target": "main"
+        },
+        {
+            "type": "change",
+            "value": "Thưởng KPI nhân viên mới xuất să",
+            "selectors": [
+                [
+                    "#editor-P884C6D96907B49109FB1FC661E9145A6"
+                ]
+            ],
+            "target": "main"
+        },
+        {
+            "type": "keyUp",
+            "key": "Unidentified",
+            "target": "main"
+        },
+        {
+            "type": "keyUp",
+            "key": "w",
+            "target": "main"
+        },
+        {
+            "type": "change",
+            "value": "Thưởng KPI nhân viên mới xuất săc·",
+            "selectors": [
+                [
+                    "#editor-P884C6D96907B49109FB1FC661E9145A6"
+                ]
+            ],
+            "target": "main"
+        },
+        {
+            "type": "keyUp",
+            "key": "Unidentified",
+            "target": "main"
+        },
+        {
+            "type": "change",
+            "value": "Thưởng KPI nhân viên mới xuất sắ",
+            "selectors": [
+                [
+                    "#editor-P884C6D96907B49109FB1FC661E9145A6"
+                ]
+            ],
+            "target": "main"
+        },
+        {
+            "type": "keyUp",
+            "key": "Unidentified",
+            "target": "main"
+        },
+        {
+            "type": "change",
+            "value": "Thưởng KPI nhân viên mới xuất sắc",
+            "selectors": [
+                [
+                    "#editor-P884C6D96907B49109FB1FC661E9145A6"
+                ]
+            ],
+            "target": "main"
+        },
+        {
+            "type": "keyUp",
+            "key": "Unidentified",
+            "target": "main"
+        },
+        {
+            "type": "keyUp",
+            "key": "s",
+            "target": "main"
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "#btnSaveAdjustment"
+                ]
+            ],
+            "offsetY": 17.625,
+            "offsetX": 25.40625
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "button.MnuHRS238 > i"
+                ]
+            ],
+            "offsetY": 12.3125,
+            "offsetX": 29
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "#launchpad input"
+                ],
+                [
+                    "text/thu nhập"
+                ]
+            ],
+            "offsetY": 9.953125,
+            "offsetX": 162.34375
+        },
+        {
+            "type": "change",
+            "value": "tam·",
+            "selectors": [
+                [
+                    "#launchpad input"
+                ],
+                [
+                    "text/thu nhập"
+                ]
+            ],
+            "target": "main"
+        },
+        {
+            "type": "keyUp",
+            "key": "Unidentified",
+            "target": "main"
+        },
+        {
+            "type": "change",
+            "value": "tạ",
+            "selectors": [
+                [
+                    "#launchpad input"
+                ],
+                [
+                    "text/thu nhập"
+                ]
+            ],
+            "target": "main"
+        },
+        {
+            "type": "keyUp",
+            "key": "Unidentified",
+            "target": "main"
+        },
+        {
+            "type": "change",
+            "value": "tạm",
+            "selectors": [
+                [
+                    "#launchpad input"
+                ],
+                [
+                    "text/thu nhập"
+                ]
+            ],
+            "target": "main"
+        },
+        {
+            "type": "keyUp",
+            "key": "Unidentified",
+            "target": "main"
+        },
+        {
+            "type": "keyUp",
+            "key": "j",
+            "target": "main"
+        },
+        {
+            "type": "change",
+            "value": "tạm un·",
+            "selectors": [
+                [
+                    "#launchpad input"
+                ],
+                [
+                    "text/thu nhập"
+                ]
+            ],
+            "target": "main"
+        },
+        {
+            "type": "keyUp",
+            "key": "Unidentified",
+            "target": "main"
+        },
+        {
+            "type": "change",
+            "value": "tạm ư",
+            "selectors": [
+                [
+                    "#launchpad input"
+                ],
+                [
+                    "text/thu nhập"
+                ]
+            ],
+            "target": "main"
+        },
+        {
+            "type": "keyUp",
+            "key": "Unidentified",
+            "target": "main"
+        },
+        {
+            "type": "change",
+            "value": "tạm ưn",
+            "selectors": [
+                [
+                    "#launchpad input"
+                ],
+                [
+                    "text/thu nhập"
+                ]
+            ],
+            "target": "main"
+        },
+        {
+            "type": "keyUp",
+            "key": "Unidentified",
+            "target": "main"
+        },
+        {
+            "type": "keyUp",
+            "key": "w",
+            "target": "main"
+        },
+        {
+            "type": "change",
+            "value": "tạm ưng·",
+            "selectors": [
+                [
+                    "#launchpad input"
+                ],
+                [
+                    "text/thu nhập"
+                ]
+            ],
+            "target": "main"
+        },
+        {
+            "type": "keyUp",
+            "key": "Unidentified",
+            "target": "main"
+        },
+        {
+            "type": "change",
+            "value": "tạm ứ",
+            "selectors": [
+                [
+                    "#launchpad input"
+                ],
+                [
+                    "text/thu nhập"
+                ]
+            ],
+            "target": "main"
+        },
+        {
+            "type": "keyUp",
+            "key": "Unidentified",
+            "target": "main"
+        },
+        {
+            "type": "change",
+            "value": "tạm ứn",
+            "selectors": [
+                [
+                    "#launchpad input"
+                ],
+                [
+                    "text/thu nhập"
+                ]
+            ],
+            "target": "main"
+        },
+        {
+            "type": "keyUp",
+            "key": "Unidentified",
+            "target": "main"
+        },
+        {
+            "type": "change",
+            "value": "tạm ứng",
+            "selectors": [
+                [
+                    "#launchpad input"
+                ],
+                [
+                    "text/thu nhập"
+                ]
+            ],
+            "target": "main"
+        },
+        {
+            "type": "keyUp",
+            "key": "Unidentified",
+            "target": "main"
+        },
+        {
+            "type": "keyUp",
+            "key": "s",
+            "target": "main"
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "div.wrapper-launchpad > div > div"
+                ]
+            ],
+            "offsetY": 52.953125,
+            "offsetX": 252.90625
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "div.MnuPRL070 > i"
+                ]
+            ],
+            "offsetY": 34.734375,
+            "offsetX": 18.21875
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "#P13431133E9D6489CA60B01DD1C17F1F2 > div > div div.dx-widget > div > div"
+                ]
+            ],
+            "offsetY": 19.34375,
+            "offsetX": 14.640625
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "div.dx-overlay-wrapper div.dx-list-item-selected > div > div > div > div"
+                ]
+            ],
+            "offsetY": 3.5,
+            "offsetX": 19
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "#P9F624C1BFF0846AA98AB688E66478E84 > div > div div.dx-widget > div > div"
+                ]
+            ],
+            "offsetY": 4.34375,
+            "offsetX": 8.59375
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "div.dx-overlay-wrapper div.dx-list-item-selected > div > div > div > div"
+                ]
+            ],
+            "offsetY": 12.5,
+            "offsetX": 20
+        },
+        {
+            "type": "change",
+            "value": "te·",
+            "selectors": [
+                [
+                    "#dynamic-pane-MnuPRL070 div.dx-toolbar-after input"
+                ]
+            ],
+            "target": "main"
+        },
+        {
+            "type": "keyUp",
+            "key": "Unidentified",
+            "target": "main"
+        },
+        {
+            "type": "change",
+            "value": "té",
+            "selectors": [
+                [
+                    "#dynamic-pane-MnuPRL070 div.dx-toolbar-after input"
+                ]
+            ],
+            "target": "main"
+        },
+        {
+            "type": "keyUp",
+            "key": "Unidentified",
+            "target": "main"
+        },
+        {
+            "type": "keyUp",
+            "key": "s",
+            "target": "main"
+        },
+        {
+            "type": "change",
+            "value": "té·",
+            "selectors": [
+                [
+                    "#dynamic-pane-MnuPRL070 div.dx-toolbar-after input"
+                ]
+            ],
+            "target": "main"
+        },
+        {
+            "type": "keyUp",
+            "key": "Unidentified",
+            "target": "main"
+        },
+        {
+            "type": "change",
+            "value": "te",
+            "selectors": [
+                [
+                    "#dynamic-pane-MnuPRL070 div.dx-toolbar-after input"
+                ]
+            ],
+            "target": "main"
+        },
+        {
+            "type": "keyUp",
+            "key": "Unidentified",
+            "target": "main"
+        },
+        {
+            "type": "change",
+            "value": "tes",
+            "selectors": [
+                [
+                    "#dynamic-pane-MnuPRL070 div.dx-toolbar-after input"
+                ]
+            ],
+            "target": "main"
+        },
+        {
+            "type": "keyUp",
+            "key": "Unidentified",
+            "target": "main"
+        },
+        {
+            "type": "change",
+            "value": "test",
+            "selectors": [
+                [
+                    "#dynamic-pane-MnuPRL070 div.dx-toolbar-after input"
+                ]
+            ],
+            "target": "main"
+        },
+        {
+            "type": "doubleClick",
+            "target": "main",
+            "selectors": [
+                [
+                    "#dynamic-pane-MnuPRL070 tr.dx-data-row > td:nth-of-type(4)"
+                ]
+            ],
+            "offsetY": 14.34375,
+            "offsetX": 183.734375
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "#P2C632067A29F4E25812C0144D5019625 > div input"
+                ],
+                [
+                    "text/0 ₫"
+                ]
+            ],
+            "offsetY": 6,
+            "offsetX": 102.4375
+        },
+        {
+            "type": "change",
+            "value": "200,0000 ₫",
+            "selectors": [
+                [
+                    "#P2C632067A29F4E25812C0144D5019625 > div input"
+                ],
+                [
+                    "text/0 ₫"
+                ]
+            ],
+            "target": "main"
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "#sp_SAL_Advance_Process_Edit_html > div:nth-of-type(1) span"
+                ]
+            ],
+            "offsetY": 2.5,
+            "offsetX": 0.75
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "div.dx-overlay-wrapper div:nth-of-type(2) > div:nth-of-type(4) input"
+                ]
+            ],
+            "offsetY": 20,
+            "offsetX": 165.75
+        },
+        {
+            "type": "keyDown",
+            "target": "main",
+            "key": "Control"
+        },
+        {
+            "type": "keyDown",
+            "target": "main",
+            "key": "a"
+        },
+        {
+            "type": "keyUp",
+            "key": "Control",
+            "target": "main"
+        },
+        {
+            "type": "keyUp",
+            "key": "a",
+            "target": "main"
+        },
+        {
+            "type": "keyDown",
+            "target": "main",
+            "key": "CapsLock"
+        },
+        {
+            "type": "keyUp",
+            "key": "CapsLock",
+            "target": "main"
+        },
+        {
+            "type": "change",
+            "value": "T",
+            "selectors": [
+                [
+                    "div.dx-overlay-wrapper div:nth-of-type(2) > div:nth-of-type(4) input"
+                ]
+            ],
+            "target": "main"
+        },
+        {
+            "type": "keyDown",
+            "target": "main",
+            "key": "CapsLock"
+        },
+        {
+            "type": "keyUp",
+            "key": "t",
+            "target": "main"
+        },
+        {
+            "type": "keyUp",
+            "key": "CapsLock",
+            "target": "main"
+        },
+        {
+            "type": "change",
+            "value": "Ta·",
+            "selectors": [
+                [
+                    "div.dx-overlay-wrapper div:nth-of-type(2) > div:nth-of-type(4) input"
+                ]
+            ],
+            "target": "main"
+        },
+        {
+            "type": "keyUp",
+            "key": "Unidentified",
+            "target": "main"
+        },
+        {
+            "type": "change",
+            "value": "Tạ",
+            "selectors": [
+                [
+                    "div.dx-overlay-wrapper div:nth-of-type(2) > div:nth-of-type(4) input"
+                ]
+            ],
+            "target": "main"
+        },
+        {
+            "type": "keyUp",
+            "key": "Unidentified",
+            "target": "main"
+        },
+        {
+            "type": "keyUp",
+            "key": "j",
+            "target": "main"
+        },
+        {
+            "type": "change",
+            "value": "Tạm un·",
+            "selectors": [
+                [
+                    "div.dx-overlay-wrapper div:nth-of-type(2) > div:nth-of-type(4) input"
+                ]
+            ],
+            "target": "main"
+        },
+        {
+            "type": "keyUp",
+            "key": "Unidentified",
+            "target": "main"
+        },
+        {
+            "type": "change",
+            "value": "Tạm ư",
+            "selectors": [
+                [
+                    "div.dx-overlay-wrapper div:nth-of-type(2) > div:nth-of-type(4) input"
+                ]
+            ],
+            "target": "main"
+        },
+        {
+            "type": "keyUp",
+            "key": "Unidentified",
+            "target": "main"
+        },
+        {
+            "type": "change",
+            "value": "Tạm ưn",
+            "selectors": [
+                [
+                    "div.dx-overlay-wrapper div:nth-of-type(2) > div:nth-of-type(4) input"
+                ]
+            ],
+            "target": "main"
+        },
+        {
+            "type": "keyUp",
+            "key": "Unidentified",
+            "target": "main"
+        },
+        {
+            "type": "change",
+            "value": "Tạm ưng",
+            "selectors": [
+                [
+                    "div.dx-overlay-wrapper div:nth-of-type(2) > div:nth-of-type(4) input"
+                ]
+            ],
+            "target": "main"
+        },
+        {
+            "type": "keyUp",
+            "key": "w",
+            "target": "main"
+        },
+        {
+            "type": "change",
+            "value": "Tạm ưng·",
+            "selectors": [
+                [
+                    "div.dx-overlay-wrapper div:nth-of-type(2) > div:nth-of-type(4) input"
+                ]
+            ],
+            "target": "main"
+        },
+        {
+            "type": "keyUp",
+            "key": "Unidentified",
+            "target": "main"
+        },
+        {
+            "type": "change",
+            "value": "Tạm ứ",
+            "selectors": [
+                [
+                    "div.dx-overlay-wrapper div:nth-of-type(2) > div:nth-of-type(4) input"
+                ]
+            ],
+            "target": "main"
+        },
+        {
+            "type": "keyUp",
+            "key": "Unidentified",
+            "target": "main"
+        },
+        {
+            "type": "change",
+            "value": "Tạm ứn",
+            "selectors": [
+                [
+                    "div.dx-overlay-wrapper div:nth-of-type(2) > div:nth-of-type(4) input"
+                ]
+            ],
+            "target": "main"
+        },
+        {
+            "type": "keyUp",
+            "key": "Unidentified",
+            "target": "main"
+        },
+        {
+            "type": "change",
+            "value": "Tạm ứng",
+            "selectors": [
+                [
+                    "div.dx-overlay-wrapper div:nth-of-type(2) > div:nth-of-type(4) input"
+                ]
+            ],
+            "target": "main"
+        },
+        {
+            "type": "keyUp",
+            "key": "Unidentified",
+            "target": "main"
+        },
+        {
+            "type": "change",
+            "value": "Tạm ứng ",
+            "selectors": [
+                [
+                    "div.dx-overlay-wrapper div:nth-of-type(2) > div:nth-of-type(4) input"
+                ]
+            ],
+            "target": "main"
+        },
+        {
+            "type": "keyUp",
+            "key": "s",
+            "target": "main"
+        },
+        {
+            "type": "change",
+            "value": "Tạm ứng sinh hoat·",
+            "selectors": [
+                [
+                    "div.dx-overlay-wrapper div:nth-of-type(2) > div:nth-of-type(4) input"
+                ]
+            ],
+            "target": "main"
+        },
+        {
+            "type": "keyUp",
+            "key": "Unidentified",
+            "target": "main"
+        },
+        {
+            "type": "change",
+            "value": "Tạm ứng sinh hoạ",
+            "selectors": [
+                [
+                    "div.dx-overlay-wrapper div:nth-of-type(2) > div:nth-of-type(4) input"
+                ]
+            ],
+            "target": "main"
+        },
+        {
+            "type": "keyUp",
+            "key": "Unidentified",
+            "target": "main"
+        },
+        {
+            "type": "change",
+            "value": "Tạm ứng sinh hoạt",
+            "selectors": [
+                [
+                    "div.dx-overlay-wrapper div:nth-of-type(2) > div:nth-of-type(4) input"
+                ]
+            ],
+            "target": "main"
+        },
+        {
+            "type": "keyUp",
+            "key": "Unidentified",
+            "target": "main"
+        },
+        {
+            "type": "keyUp",
+            "key": "j",
+            "target": "main"
+        },
+        {
+            "type": "change",
+            "value": "Tạm ứng sinh hoạt cac·",
+            "selectors": [
+                [
+                    "div.dx-overlay-wrapper div:nth-of-type(2) > div:nth-of-type(4) input"
+                ]
+            ],
+            "target": "main"
+        },
+        {
+            "type": "keyUp",
+            "key": "Unidentified",
+            "target": "main"
+        },
+        {
+            "type": "change",
+            "value": "Tạm ứng sinh hoạt cá",
+            "selectors": [
+                [
+                    "div.dx-overlay-wrapper div:nth-of-type(2) > div:nth-of-type(4) input"
+                ]
+            ],
+            "target": "main"
+        },
+        {
+            "type": "keyUp",
+            "key": "Unidentified",
+            "target": "main"
+        },
+        {
+            "type": "change",
+            "value": "Tạm ứng sinh hoạt các",
+            "selectors": [
+                [
+                    "div.dx-overlay-wrapper div:nth-of-type(2) > div:nth-of-type(4) input"
+                ]
+            ],
+            "target": "main"
+        },
+        {
+            "type": "keyUp",
+            "key": "Unidentified",
+            "target": "main"
+        },
+        {
+            "type": "keyUp",
+            "key": "s",
+            "target": "main"
+        },
+        {
+            "type": "change",
+            "value": "Tạm ứng sinh hoạt cá nha·",
+            "selectors": [
+                [
+                    "div.dx-overlay-wrapper div:nth-of-type(2) > div:nth-of-type(4) input"
+                ]
+            ],
+            "target": "main"
+        },
+        {
+            "type": "keyUp",
+            "key": "Unidentified",
+            "target": "main"
+        },
+        {
+            "type": "change",
+            "value": "Tạm ứng sinh hoạt cá nhâ",
+            "selectors": [
+                [
+                    "div.dx-overlay-wrapper div:nth-of-type(2) > div:nth-of-type(4) input"
+                ]
+            ],
+            "target": "main"
+        },
+        {
+            "type": "keyUp",
+            "key": "Unidentified",
+            "target": "main"
+        },
+        {
+            "type": "change",
+            "value": "Tạm ứng sinh hoạt cá nhân",
+            "selectors": [
+                [
+                    "div.dx-overlay-wrapper div:nth-of-type(2) > div:nth-of-type(4) input"
+                ]
+            ],
+            "target": "main"
+        },
+        {
+            "type": "keyUp",
+            "key": "a",
+            "target": "main"
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "#f71b9420-adec-4583-ac5c-d953aa69ce68 i"
+                ]
+            ],
+            "offsetY": 10,
+            "offsetX": 18.8125
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "button.MnuHRS238 > i"
+                ]
+            ],
+            "offsetY": 14.3125,
+            "offsetX": 29
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "#launchpad input"
+                ]
+            ],
+            "offsetY": 12.953125,
+            "offsetX": 166.34375
+        },
+        {
+            "type": "change",
+            "value": "",
+            "selectors": [
+                [
+                    "#launchpad input"
+                ]
+            ],
+            "target": "main"
+        },
+        {
+            "type": "keyDown",
+            "target": "main",
+            "key": "Alt"
+        },
+        {
+            "type": "keyUp",
+            "key": "Tab",
+            "target": "main"
+        },
+        {
+            "type": "change",
+            "value": "tinh·",
+            "selectors": [
+                [
+                    "#launchpad input"
+                ]
+            ],
+            "target": "main"
+        },
+        {
+            "type": "keyUp",
+            "key": "Unidentified",
+            "target": "main"
+        },
+        {
+            "type": "change",
+            "value": "tí",
+            "selectors": [
+                [
+                    "#launchpad input"
+                ]
+            ],
+            "target": "main"
+        },
+        {
+            "type": "keyUp",
+            "key": "Unidentified",
+            "target": "main"
+        },
+        {
+            "type": "change",
+            "value": "tín",
+            "selectors": [
+                [
+                    "#launchpad input"
+                ]
+            ],
+            "target": "main"
+        },
+        {
+            "type": "keyUp",
+            "key": "Unidentified",
+            "target": "main"
+        },
+        {
+            "type": "change",
+            "value": "tính",
+            "selectors": [
+                [
+                    "#launchpad input"
+                ]
+            ],
+            "target": "main"
+        },
+        {
+            "type": "keyUp",
+            "key": "Unidentified",
+            "target": "main"
+        },
+        {
+            "type": "keyUp",
+            "key": "s",
+            "target": "main"
+        },
+        {
+            "type": "change",
+            "value": "tính tien·",
+            "selectors": [
+                [
+                    "#launchpad input"
+                ]
+            ],
+            "target": "main"
+        },
+        {
+            "type": "keyUp",
+            "key": "Unidentified",
+            "target": "main"
+        },
+        {
+            "type": "change",
+            "value": "tính tiê",
+            "selectors": [
+                [
+                    "#launchpad input"
+                ]
+            ],
+            "target": "main"
+        },
+        {
+            "type": "keyUp",
+            "key": "Unidentified",
+            "target": "main"
+        },
+        {
+            "type": "change",
+            "value": "tính tiên",
+            "selectors": [
+                [
+                    "#launchpad input"
+                ]
+            ],
+            "target": "main"
+        },
+        {
+            "type": "keyUp",
+            "key": "Unidentified",
+            "target": "main"
+        },
+        {
+            "type": "change",
+            "value": "tính tiên·",
+            "selectors": [
+                [
+                    "#launchpad input"
+                ]
+            ],
+            "target": "main"
+        },
+        {
+            "type": "keyUp",
+            "key": "Unidentified",
+            "target": "main"
+        },
+        {
+            "type": "change",
+            "value": "tính tiề",
+            "selectors": [
+                [
+                    "#launchpad input"
+                ]
+            ],
+            "target": "main"
+        },
+        {
+            "type": "keyUp",
+            "key": "Unidentified",
+            "target": "main"
+        },
+        {
+            "type": "change",
+            "value": "tính tiền",
+            "selectors": [
+                [
+                    "#launchpad input"
+                ]
+            ],
+            "target": "main"
+        },
+        {
+            "type": "keyUp",
+            "key": "Unidentified",
+            "target": "main"
+        },
+        {
+            "type": "keyUp",
+            "key": "e",
+            "target": "main"
+        },
+        {
+            "type": "keyUp",
+            "key": "f",
+            "target": "main"
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "div.wrapper-launchpad > div > div"
+                ]
+            ],
+            "offsetY": 43.953125,
+            "offsetX": 90.90625
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "div.wrapper-launchpad > div > div i"
+                ]
+            ],
+            "offsetY": 25.734375,
+            "offsetX": 36.015625
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "#SALCAL_MAIN > div > div > div > div > div > div > div > div > div > div > div > div > div:nth-of-type(1) > div > div:nth-of-type(1) > div > div > div > div > div > div > div > div > div:nth-of-type(1) > div > div > div > div > div > div div.dx-widget > div > div"
+                ]
+            ],
+            "offsetY": 18.34375,
+            "offsetX": 10.875
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "div.dx-state-hover > div"
+                ]
+            ],
+            "offsetY": 4,
+            "offsetX": 51
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "#SALCAL_MAIN > div > div > div > div > div > div > div > div > div > div > div > div > div:nth-of-type(1) > div > div:nth-of-type(1) > div > div > div > div > div > div > div > div > div:nth-of-type(2) > div > div > div > div > div > div div.dx-widget > div > div"
+                ]
+            ],
+            "offsetY": 18.34375,
+            "offsetX": 8.875
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "div.dx-overlay-wrapper div.dx-list-item-selected > div"
+                ]
+            ],
+            "offsetY": 11,
+            "offsetX": 76
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "div.dx-overlay-wrapper div.dx-list-item-selected > div"
+                ]
+            ],
+            "offsetY": 2,
+            "offsetX": 87
+        },
+        {
+            "type": "doubleClick",
+            "target": "main",
+            "selectors": [
+                [
+                    "div.dx-overlay-wrapper div.dx-list-item-selected > div"
+                ]
+            ],
+            "offsetY": 10,
+            "offsetX": 129
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "#SALCAL_MAIN > div > div > div > div > div > div > div > div > div > div > div > div > div:nth-of-type(2) div.dx-scrollable-content > div"
+                ]
+            ],
+            "offsetY": 22.34375,
+            "offsetX": 20.734375
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "div.flex-none span"
+                ]
+            ],
+            "offsetY": 2.34375,
+            "offsetX": 5.59375
+        },
+        {
+            "type": "keyDown",
+            "target": "main",
+            "key": "Alt"
+        },
+        {
+            "type": "keyUp",
+            "key": "Tab",
+            "target": "main"
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "button.MnuHRS238 > i"
+                ]
+            ],
+            "offsetY": 11.3125,
+            "offsetX": 21
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "#launchpad input"
+                ],
+                [
+                    "text/tính tiền"
+                ]
+            ],
+            "offsetY": 13.953125,
+            "offsetX": 162.34375
+        },
+        {
+            "type": "change",
+            "value": "khoa·",
+            "selectors": [
+                [
+                    "#launchpad input"
+                ],
+                [
+                    "text/tính tiền"
+                ]
+            ],
+            "target": "main"
+        },
+        {
+            "type": "keyUp",
+            "key": "Unidentified",
+            "target": "main"
+        },
+        {
+            "type": "change",
+            "value": "khó",
+            "selectors": [
+                [
+                    "#launchpad input"
+                ],
+                [
+                    "text/tính tiền"
+                ]
+            ],
+            "target": "main"
+        },
+        {
+            "type": "keyUp",
+            "key": "Unidentified",
+            "target": "main"
+        },
+        {
+            "type": "change",
+            "value": "khóa",
+            "selectors": [
+                [
+                    "#launchpad input"
+                ],
+                [
+                    "text/tính tiền"
+                ]
+            ],
+            "target": "main"
+        },
+        {
+            "type": "keyUp",
+            "key": "Unidentified",
+            "target": "main"
+        },
+        {
+            "type": "keyUp",
+            "key": "s",
+            "target": "main"
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "div.wrapper-launchpad > div > div"
+                ]
+            ],
+            "offsetY": 54.953125,
+            "offsetX": 273.90625
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "div.MnuTAD125 > i"
+                ]
+            ],
+            "offsetY": 36.734375,
+            "offsetX": 39.21875
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "#P8C6640AB6B1249658EF8C297541CCE70 > div > div input"
+                ]
+            ],
+            "offsetY": 13.34375,
+            "offsetX": 46.640625
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "div.dx-overlay-wrapper div.dx-list-item-selected > div > div > div > div"
+                ]
+            ],
+            "offsetY": 0.5,
+            "offsetX": 97
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "#P9B1B3B08B65B45D6A6FA3BFC4673B92A > div > div input"
+                ]
+            ],
+            "offsetY": 8.34375,
+            "offsetX": 71.59375
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "div.dx-overlay-wrapper div.dx-list-item-selected > div > div > div > div"
+                ]
+            ],
+            "offsetY": 8.5,
+            "offsetX": 59
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "#dynamic-pane-MnuTAD125 div.dx-toolbar-after input"
+                ]
+            ],
+            "offsetY": 12.34375,
+            "offsetX": 68.015625
+        },
+        {
+            "type": "change",
+            "value": "te·",
+            "selectors": [
+                [
+                    "#dynamic-pane-MnuTAD125 div.dx-toolbar-after input"
+                ]
+            ],
+            "target": "main"
+        },
+        {
+            "type": "keyUp",
+            "key": "Unidentified",
+            "target": "main"
+        },
+        {
+            "type": "change",
+            "value": "té",
+            "selectors": [
+                [
+                    "#dynamic-pane-MnuTAD125 div.dx-toolbar-after input"
+                ]
+            ],
+            "target": "main"
+        },
+        {
+            "type": "keyUp",
+            "key": "Unidentified",
+            "target": "main"
+        },
+        {
+            "type": "keyUp",
+            "key": "s",
+            "target": "main"
+        },
+        {
+            "type": "change",
+            "value": "té·",
+            "selectors": [
+                [
+                    "#dynamic-pane-MnuTAD125 div.dx-toolbar-after input"
+                ]
+            ],
+            "target": "main"
+        },
+        {
+            "type": "keyUp",
+            "key": "Unidentified",
+            "target": "main"
+        },
+        {
+            "type": "change",
+            "value": "te",
+            "selectors": [
+                [
+                    "#dynamic-pane-MnuTAD125 div.dx-toolbar-after input"
+                ]
+            ],
+            "target": "main"
+        },
+        {
+            "type": "keyUp",
+            "key": "Unidentified",
+            "target": "main"
+        },
+        {
+            "type": "change",
+            "value": "tes",
+            "selectors": [
+                [
+                    "#dynamic-pane-MnuTAD125 div.dx-toolbar-after input"
+                ]
+            ],
+            "target": "main"
+        },
+        {
+            "type": "keyUp",
+            "key": "Unidentified",
+            "target": "main"
+        },
+        {
+            "type": "change",
+            "value": "test",
+            "selectors": [
+                [
+                    "#dynamic-pane-MnuTAD125 div.dx-toolbar-after input"
+                ]
+            ],
+            "target": "main"
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "#dynamic-pane-MnuTAD125 div.dx-bordered-bottom-view td:nth-of-type(4) > div"
+                ]
+            ],
+            "offsetY": 2.34375,
+            "offsetX": 23.734375
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "#appapp div.dx-toolbar-after > div:nth-of-type(2) span"
+                ]
+            ],
+            "offsetY": 7.84375,
+            "offsetX": 1.46875
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "#vc-vu-confirm-popup button.VC-Vu-btn-ok"
+                ],
+                [
+                    "text/Đồng ý"
+                ]
+            ],
+            "offsetY": 8.921875,
+            "offsetX": 70
+        },
+        {
+            "type": "keyDown",
+            "target": "main",
+            "key": "Alt"
+        },
+        {
+            "type": "keyUp",
+            "key": "Tab",
+            "target": "main"
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "button.MnuHRS238 > i"
+                ]
+            ],
+            "offsetY": 7.3125,
+            "offsetX": 19
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "#launchpad input"
+                ]
+            ],
+            "offsetY": 9.953125,
+            "offsetX": 165.34375
+        },
+        {
+            "type": "change",
+            "value": "",
+            "selectors": [
+                [
+                    "#launchpad input"
+                ]
+            ],
+            "target": "main"
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "#launchpad input"
+                ]
+            ],
+            "offsetY": 8.953125,
+            "offsetX": 124.34375
+        },
+        {
+            "type": "change",
+            "value": "khoa·",
+            "selectors": [
+                [
+                    "#launchpad input"
+                ]
+            ],
+            "target": "main"
+        },
+        {
+            "type": "keyUp",
+            "key": "Unidentified",
+            "target": "main"
+        },
+        {
+            "type": "change",
+            "value": "khó",
+            "selectors": [
+                [
+                    "#launchpad input"
+                ]
+            ],
+            "target": "main"
+        },
+        {
+            "type": "keyUp",
+            "key": "Unidentified",
+            "target": "main"
+        },
+        {
+            "type": "change",
+            "value": "khóa",
+            "selectors": [
+                [
+                    "#launchpad input"
+                ]
+            ],
+            "target": "main"
+        },
+        {
+            "type": "keyUp",
+            "key": "Unidentified",
+            "target": "main"
+        },
+        {
+            "type": "keyUp",
+            "key": "s",
+            "target": "main"
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "div.wrapper-launchpad > div > div"
+                ]
+            ],
+            "offsetY": 55.953125,
+            "offsetX": 85.90625
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "div.MnuPRL080 > i"
+                ]
+            ],
+            "offsetY": 37.734375,
+            "offsetX": 31.015625
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "#P682FA188ED5B4BD38C89E22CD6E72646 > div > div div.dx-widget > div > div"
+                ]
+            ],
+            "offsetY": 13.34375,
+            "offsetX": 9.640625
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "div.dx-overlay-wrapper div.dx-list-item-selected > div > div"
+                ]
+            ],
+            "offsetY": 5,
+            "offsetX": 66
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "#P911AA562E7AC44CEBC3FC7FAB611E906 > div > div div.dx-widget > div > div"
+                ]
+            ],
+            "offsetY": 13.34375,
+            "offsetX": 15.59375
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "div.dx-overlay-wrapper div.dx-list-item-selected > div > div > div > div"
+                ]
+            ],
+            "offsetY": 5.5,
+            "offsetX": 69
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "#dynamic-pane-MnuPRL080 div.dx-toolbar-after input"
+                ]
+            ],
+            "offsetY": 23.34375,
+            "offsetX": 73.015625
+        },
+        {
+            "type": "change",
+            "value": "te·",
+            "selectors": [
+                [
+                    "#dynamic-pane-MnuPRL080 div.dx-toolbar-after input"
+                ]
+            ],
+            "target": "main"
+        },
+        {
+            "type": "keyUp",
+            "key": "Unidentified",
+            "target": "main"
+        },
+        {
+            "type": "change",
+            "value": "té",
+            "selectors": [
+                [
+                    "#dynamic-pane-MnuPRL080 div.dx-toolbar-after input"
+                ]
+            ],
+            "target": "main"
+        },
+        {
+            "type": "keyUp",
+            "key": "Unidentified",
+            "target": "main"
+        },
+        {
+            "type": "keyUp",
+            "key": "s",
+            "target": "main"
+        },
+        {
+            "type": "change",
+            "value": "té·",
+            "selectors": [
+                [
+                    "#dynamic-pane-MnuPRL080 div.dx-toolbar-after input"
+                ]
+            ],
+            "target": "main"
+        },
+        {
+            "type": "keyUp",
+            "key": "Unidentified",
+            "target": "main"
+        },
+        {
+            "type": "change",
+            "value": "te",
+            "selectors": [
+                [
+                    "#dynamic-pane-MnuPRL080 div.dx-toolbar-after input"
+                ]
+            ],
+            "target": "main"
+        },
+        {
+            "type": "keyUp",
+            "key": "Unidentified",
+            "target": "main"
+        },
+        {
+            "type": "change",
+            "value": "tes",
+            "selectors": [
+                [
+                    "#dynamic-pane-MnuPRL080 div.dx-toolbar-after input"
+                ]
+            ],
+            "target": "main"
+        },
+        {
+            "type": "keyUp",
+            "key": "Unidentified",
+            "target": "main"
+        },
+        {
+            "type": "change",
+            "value": "test",
+            "selectors": [
+                [
+                    "#dynamic-pane-MnuPRL080 div.dx-toolbar-after input"
+                ]
+            ],
+            "target": "main"
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "#dynamic-pane-MnuPRL080 div.dx-bordered-bottom-view td:nth-of-type(4) > div"
+                ]
+            ],
+            "offsetY": 2.34375,
+            "offsetX": 115.734375
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "#btnLockToolbar > div"
+                ]
+            ],
+            "offsetY": 10.34375,
+            "offsetX": 26.34375
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "#vc-vu-confirm-popup button.VC-Vu-btn-ok"
+                ],
+                [
+                    "text/Đồng ý"
+                ]
+            ],
+            "offsetY": 16.921875,
+            "offsetX": 84
+        },
+        {
+            "type": "keyDown",
+            "target": "main",
+            "key": "Alt"
+        },
+        {
+            "type": "keyUp",
+            "key": "Tab",
+            "target": "main"
+        },
+        {
+            "type": "keyDown",
+            "target": "main",
+            "key": "Alt"
+        },
+        {
+            "type": "keyUp",
+            "key": "Tab",
+            "target": "main"
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "#randomAvatar"
+                ]
+            ],
+            "offsetY": 17.212501525878906,
+            "offsetX": 15.4000244140625
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "#txtLogoutOpt"
+                ]
+            ],
+            "offsetY": 13.828125,
+            "offsetX": 102
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "#successModalButtonAddNew"
+                ],
+                [
+                    "text/Đăng xuất"
+                ]
+            ],
+            "offsetY": 13.40625,
+            "offsetX": 32.171875,
+            "assertedEvents": [
+                {
+                    "type": "navigation",
+                    "url": "https://paradisehrm.com/Tai3/",
+                    "title": "Paradise HR"
+                }
+            ]
+        }
+    ]
+}

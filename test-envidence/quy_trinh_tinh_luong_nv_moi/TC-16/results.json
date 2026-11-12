@@ -1,0 +1,45 @@
+{
+  "tcId": "TC-16",
+  "pageName": "quy_trinh_tinh_luong_nv_moi",
+  "title": "fix-7 | TC-16: Mô phỏng thao tác chạy Tính tiền lương Tháng 10/2026 (MnuPRL040)",
+  "testStatus": "PASSED",
+  "businessStatus": "PASSED",
+  "businessNotes": "Đạt yêu cầu logic nghiệp vụ mong đợi",
+  "defectEvidence": null,
+  "failureAnalysis": {},
+  "status": "PASSED",
+  "duration": "69.77s",
+  "errors": "",
+  "stepScreenshots": [
+    {
+      "step": 1,
+      "title": "Dang nhap Chien nguyen",
+      "fileName": "TC-16-step01-dang-nhap-chien-nguyen.png",
+      "relPath": "quy_trinh_tinh_luong_nv_moi/TC-16/screenshots/TC-16-step01-dang-nhap-chien-nguyen.png"
+    },
+    {
+      "step": 2,
+      "title": "Mo menu Tinh tien luong MnuPRL040",
+      "fileName": "TC-16-step02-mo-menu-tinh-tien-luong-mnuprl040.png",
+      "relPath": "quy_trinh_tinh_luong_nv_moi/TC-16/screenshots/TC-16-step02-mo-menu-tinh-tien-luong-mnuprl040.png"
+    },
+    {
+      "step": 3,
+      "title": "Chay xong Tinh tien luong MnuPRL040",
+      "fileName": "TC-16-step03-chay-xong-tinh-tien-luong-mnuprl040.png",
+      "relPath": "quy_trinh_tinh_luong_nv_moi/TC-16/screenshots/TC-16-step03-chay-xong-tinh-tien-luong-mnuprl040.png"
+    }
+  ],
+  "attachments": {
+    "screenshots": [
+      "quy_trinh_tinh_luong_nv_moi/TC-16/screenshots/TC-16-step01-dang-nhap-chien-nguyen.png",
+      "quy_trinh_tinh_luong_nv_moi/TC-16/screenshots/TC-16-step02-mo-menu-tinh-tien-luong-mnuprl040.png",
+      "quy_trinh_tinh_luong_nv_moi/TC-16/screenshots/TC-16-step03-chay-xong-tinh-tien-luong-mnuprl040.png"
+    ],
+    "videos": [
+      "quy_trinh_tinh_luong_nv_moi/TC-16/videos/video.webm"
+    ],
+    "traces": []
+  },
+  "timestamp": "2026-11-12T12:45:13.633Z"
+}

@@ -1,6 +1,6 @@
 # BÁO CÁO KIỂM THỬ TRANG: CRM_SERVICE_TRACKING
 
-> Thời gian kiểm thử: **12:41:04 16/10/2026**
+> Thời gian kiểm thử: **11:11:11 19/10/2026**
 > Tổng số kịch bản: **4** | ✅ LOGIC PASS: **3** | ❌ LOGIC FAIL: **1**
 
 ## BẢNG ĐỐI CHIẾU TRẠNG THÁI TEST & LOGIC NGHIỆP VỤ
@@ -81,13 +81,21 @@
 * **Đánh giá tổng quát**: FAIL - Lỗi cú pháp SQL Backend khi tìm kiếm: Incorrect syntax near ')'.
 * **Thư mục lưu trữ**: `test-evidence/crm_service_tracking/TC-03/`
 
-> [!CAUTION] 🚨 PHÂN TÍCH NGUYÊN NHÂN THẤT BẠI (FAILURE ANALYSIS)
+> [!CAUTION] 🚨 THÔNG TIN LỖI PHÁT HIỆN TỪ THỰC THI (DEFECT EVIDENCE - FACTS ONLY)
 >
-> * **Vấn đề / Mã lỗi**: DataGrid hiển thị "Không có dữ liệu" khi tìm kiếm dù từ khóa có thật trong danh sách
+> * **Vấn đề ghi nhận**: DataGrid hiển thị "Không có dữ liệu" khi tìm kiếm dù từ khóa có thật trong danh sách
 > * **Kỳ vọng nghiệp vụ (Expected Output)**: Khi tìm kiếm "NIDEC" hoặc "CÔNG TY", hệ thống phải trả về các bản ghi khớp với từ khóa
 > * **Thực tế hệ thống (Actual Output)**: Server IIS trả HTTP 200 nhưng payload trả lỗi SQL nội bộ: "Incorrect syntax near ')'.", làm mảng data rỗng []
-> * **Nguyên nhân cốt lõi (Root Cause)**: Stored Procedure hoặc câu lệnh SQL động phía Backend xử lý tham số tìm kiếm bị sai cú pháp (Incorrect syntax near ")")
-> * **Đề xuất khắc phục (Recommendation)**: Đội ngũ Backend cần kiểm tra lại câu lệnh SQL ghép chuỗi tìm kiếm trong Stored Procedure của menu Theo dõi dịch vụ
+> * **Dữ liệu kỹ thuật liên quan (Technical Evidence)**:
+```json
+{
+  "httpStatus": 200,
+  "sqlErrorReason": "Incorrect syntax near ')'.",
+  "searchKeyword": "CÔNG"
+}
+```
+>
+> 📌 **Lưu ý**: Kịch bản Test chỉ ghi nhận dữ liệu thực tế và sai khác. Phân tích nguyên nhân gốc (Root Cause) và giải pháp khắc phục sẽ do AI Agent điều tra và brainstorm trực tiếp từ Database & Source Code khi người dùng yêu cầu.
 
 #### 📸 Bằng chứng trực quan từng bước (Step-by-Step Evidence):
 

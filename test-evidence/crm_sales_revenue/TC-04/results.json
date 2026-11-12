@@ -1,0 +1,61 @@
+{
+  "tcId": "TC-04",
+  "pageName": "crm_sales_revenue",
+  "title": "Mở Dashboard Chi tiết Doanh thu Nhân viên (showDetail) & Biểu đồ Trực quan",
+  "testStatus": "PASSED",
+  "businessStatus": "PASSED",
+  "businessNotes": "PASS - Dashboard chi tiết của NGUYỄN TẤN CHIẾN hiển thị đầy đủ biểu đồ trực quan, nút quay lại hoạt động mượt mà",
+  "defectEvidence": null,
+  "failureAnalysis": {},
+  "status": "PASSED",
+  "duration": "26.72s",
+  "errors": "",
+  "stepScreenshots": [
+    {
+      "step": 1,
+      "title": "Xác định nhân sự NGUYỄN TẤN CHIẾN trên bảng danh sách doanh số",
+      "fileName": "TC-04-step01-xac-dinh-nhan-su-nguyen-tan-chien-tren-bang-danh-sach-doanh-so.png",
+      "relPath": "crm_sales_revenue/TC-04/screenshots/TC-04-step01-xac-dinh-nhan-su-nguyen-tan-chien-tren-bang-danh-sach-doanh-so.png"
+    },
+    {
+      "step": 2,
+      "title": "Con trỏ Neon nhấp dòng nhân sự kích hoạt Dashboard chi tiết cá nhân",
+      "fileName": "TC-04-step02-con-tro-neon-nhap-dong-nhan-su-kich-hoat-dashboard-chi-tiet-ca-nhan.png",
+      "relPath": "crm_sales_revenue/TC-04/screenshots/TC-04-step02-con-tro-neon-nhap-dong-nhan-su-kich-hoat-dashboard-chi-tiet-ca-nhan.png"
+    },
+    {
+      "step": 3,
+      "title": "Rà soát biểu đồ xu hướng doanh thu và biểu đồ cơ cấu thanh toán Donut",
+      "fileName": "TC-04-step03-ra-soat-bieu-do-xu-huong-doanh-thu-va-bieu-do-co-cau-thanh-toan-donut.png",
+      "relPath": "crm_sales_revenue/TC-04/screenshots/TC-04-step03-ra-soat-bieu-do-xu-huong-doanh-thu-va-bieu-do-co-cau-thanh-toan-donut.png"
+    },
+    {
+      "step": 4,
+      "title": "Nhấp nút Quay lại và khôi phục màn hình danh sách tổng hợp",
+      "fileName": "TC-04-step04-nhap-nut-quay-lai-va-khoi-phuc-man-hinh-danh-sach-tong-hop.png",
+      "relPath": "crm_sales_revenue/TC-04/screenshots/TC-04-step04-nhap-nut-quay-lai-va-khoi-phuc-man-hinh-danh-sach-tong-hop.png"
+    },
+    {
+      "step": 5,
+      "title": "Đánh giá logic PASS: Luồng showDetail mở Dashboard và quay lại danh sách hoàn hảo",
+      "fileName": "TC-04-step05-danh-gia-logic-pass-luong-showdetail-mo-dashboard-va-quay-lai-danh-sach-hoan-hao.png",
+      "relPath": "crm_sales_revenue/TC-04/screenshots/TC-04-step05-danh-gia-logic-pass-luong-showdetail-mo-dashboard-va-quay-lai-danh-sach-hoan-hao.png"
+    }
+  ],
+  "attachments": {
+    "screenshots": [
+      "crm_sales_revenue/TC-04/screenshots/TC-04-step01-xac-dinh-nhan-su-nguyen-tan-chien-tren-bang-danh-sach-doanh-so.png",
+      "crm_sales_revenue/TC-04/screenshots/TC-04-step02-con-tro-neon-nhap-dong-nhan-su-kich-hoat-dashboard-chi-tiet-ca-nhan.png",
+      "crm_sales_revenue/TC-04/screenshots/TC-04-step03-ra-soat-bieu-do-xu-huong-doanh-thu-va-bieu-do-co-cau-thanh-toan-donut.png",
+      "crm_sales_revenue/TC-04/screenshots/TC-04-step04-nhap-nut-quay-lai-va-khoi-phuc-man-hinh-danh-sach-tong-hop.png",
+      "crm_sales_revenue/TC-04/screenshots/TC-04-step05-danh-gia-logic-pass-luong-showdetail-mo-dashboard-va-quay-lai-danh-sach-hoan-hao.png"
+    ],
+    "videos": [
+      "crm_sales_revenue/TC-04/videos/video.webm"
+    ],
+    "traces": [
+      "crm_sales_revenue/TC-04/traces/trace.zip"
+    ]
+  },
+  "timestamp": "2026-10-28T01:45:45.483Z"
+}

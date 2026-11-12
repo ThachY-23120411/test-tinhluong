@@ -1,0 +1,28 @@
+{
+  "tcId": "TC-01",
+  "pageName": "crm_marketing_product",
+  "title": "Kiểm tra Màu Chữ và Màu Nền Ô Tìm Kiếm (Search Filter Box) trên Thanh Công Cụ DataGrid Sản Phẩm Marketing",
+  "testStatus": "FAILED",
+  "businessStatus": "FAILED",
+  "businessNotes": "Error: worker process exited unexpectedly (code=3221225477, signal=null)",
+  "defectEvidence": {
+    "issue": "Error: worker process exited unexpectedly (code=3221225477, signal=null)",
+    "expected": "Theo đặc tả chuẩn của hệ thống",
+    "actual": "Thực tế phát sinh lỗi hoặc không đạt điều kiện kiểm tra"
+  },
+  "failureAnalysis": {
+    "issue": "Error: worker process exited unexpectedly (code=3221225477, signal=null)",
+    "expected": "Theo đặc tả chuẩn của hệ thống",
+    "actual": "Thực tế phát sinh lỗi hoặc không đạt điều kiện kiểm tra"
+  },
+  "status": "FAILED",
+  "duration": "0.00s",
+  "errors": "Error: worker process exited unexpectedly (code=3221225477, signal=null)",
+  "stepScreenshots": [],
+  "attachments": {
+    "screenshots": [],
+    "videos": [],
+    "traces": []
+  },
+  "timestamp": "2026-10-28T07:59:06.915Z"
+}

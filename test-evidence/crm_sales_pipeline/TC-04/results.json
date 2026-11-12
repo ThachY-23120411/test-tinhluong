@@ -1,0 +1,69 @@
+{
+  "tcId": "TC-04",
+  "pageName": "crm_sales_pipeline",
+  "title": "Kiểm tra Cụm Nút Lọc Thời Gian (Tất cả, Hôm nay, Tháng này, Quý này, Năm nay) (TC-CTL-04)",
+  "testStatus": "PASSED",
+  "businessStatus": "FAILED",
+  "businessNotes": "FAIL - Lọc thời gian làm thất thoát dữ liệu (Ban đầu: 61, Khôi phục: 0)",
+  "defectEvidence": {
+    "issue": "Bộ lọc thời gian trên Pipeline không khôi phục đủ thẻ cơ hội khi bấm lại Tất cả",
+    "expected": "Khôi phục đủ 61 thẻ ban đầu",
+    "actual": "Chỉ còn 0 thẻ"
+  },
+  "failureAnalysis": {
+    "issue": "Bộ lọc thời gian trên Pipeline không khôi phục đủ thẻ cơ hội khi bấm lại Tất cả",
+    "expected": "Khôi phục đủ 61 thẻ ban đầu",
+    "actual": "Chỉ còn 0 thẻ"
+  },
+  "status": "FAILED",
+  "duration": "32.41s",
+  "errors": "",
+  "stepScreenshots": [
+    {
+      "step": 1,
+      "title": "Cụm nút thời gian (Tất cả, Hôm nay, Tháng này, Quý này, Năm nay) hiển thị đầy đủ",
+      "fileName": "TC-04-step01-cum-nut-thoi-gian-tat-ca-hom-nay-thang-nay-quy-nay-nam-nay-hien-thi-day-du.png",
+      "relPath": "crm_sales_pipeline/TC-04/screenshots/TC-04-step01-cum-nut-thoi-gian-tat-ca-hom-nay-thang-nay-quy-nay-nam-nay-hien-thi-day-du.png"
+    },
+    {
+      "step": 2,
+      "title": "Con trỏ Neon chọn mốc \"Tháng này\" và ghi nhận số lượng thẻ (10)",
+      "fileName": "TC-04-step02-con-tro-neon-chon-moc-thang-nay-va-ghi-nhan-so-luong-the-10.png",
+      "relPath": "crm_sales_pipeline/TC-04/screenshots/TC-04-step02-con-tro-neon-chon-moc-thang-nay-va-ghi-nhan-so-luong-the-10.png"
+    },
+    {
+      "step": 3,
+      "title": "Con trỏ Neon chọn mốc \"Năm nay\" và ghi nhận số lượng thẻ (0)",
+      "fileName": "TC-04-step03-con-tro-neon-chon-moc-nam-nay-va-ghi-nhan-so-luong-the-0.png",
+      "relPath": "crm_sales_pipeline/TC-04/screenshots/TC-04-step03-con-tro-neon-chon-moc-nam-nay-va-ghi-nhan-so-luong-the-0.png"
+    },
+    {
+      "step": 4,
+      "title": "Bấm lại nút \"Tất cả\" để khôi phục toàn bộ danh mục thẻ cơ hội (0)",
+      "fileName": "TC-04-step04-bam-lai-nut-tat-ca-de-khoi-phuc-toan-bo-danh-muc-the-co-hoi-0.png",
+      "relPath": "crm_sales_pipeline/TC-04/screenshots/TC-04-step04-bam-lai-nut-tat-ca-de-khoi-phuc-toan-bo-danh-muc-the-co-hoi-0.png"
+    },
+    {
+      "step": 5,
+      "title": "Đánh giá logic FAIL: Khôi phục mốc Tất cả không đủ số lượng thẻ ban đầu",
+      "fileName": "TC-04-step05-danh-gia-logic-fail-khoi-phuc-moc-tat-ca-khong-du-so-luong-the-ban-dau.png",
+      "relPath": "crm_sales_pipeline/TC-04/screenshots/TC-04-step05-danh-gia-logic-fail-khoi-phuc-moc-tat-ca-khong-du-so-luong-the-ban-dau.png"
+    }
+  ],
+  "attachments": {
+    "screenshots": [
+      "crm_sales_pipeline/TC-04/screenshots/TC-04-step01-cum-nut-thoi-gian-tat-ca-hom-nay-thang-nay-quy-nay-nam-nay-hien-thi-day-du.png",
+      "crm_sales_pipeline/TC-04/screenshots/TC-04-step02-con-tro-neon-chon-moc-thang-nay-va-ghi-nhan-so-luong-the-10.png",
+      "crm_sales_pipeline/TC-04/screenshots/TC-04-step03-con-tro-neon-chon-moc-nam-nay-va-ghi-nhan-so-luong-the-0.png",
+      "crm_sales_pipeline/TC-04/screenshots/TC-04-step04-bam-lai-nut-tat-ca-de-khoi-phuc-toan-bo-danh-muc-the-co-hoi-0.png",
+      "crm_sales_pipeline/TC-04/screenshots/TC-04-step05-danh-gia-logic-fail-khoi-phuc-moc-tat-ca-khong-du-so-luong-the-ban-dau.png"
+    ],
+    "videos": [
+      "crm_sales_pipeline/TC-04/videos/video.webm"
+    ],
+    "traces": [
+      "crm_sales_pipeline/TC-04/traces/trace.zip"
+    ]
+  },
+  "timestamp": "2026-10-21T03:09:50.578Z"
+}

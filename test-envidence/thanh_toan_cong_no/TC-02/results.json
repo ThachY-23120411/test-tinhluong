@@ -1,0 +1,32 @@
+{
+  "tcId": "TC-02",
+  "pageName": "thanh_toan_cong_no",
+  "title": "Bấm nút \"Làm mới\" (loadDebtPaymentData) và xác minh độ rộng các cột không bị vỡ layout",
+  "testStatus": "FAILED",
+  "businessStatus": "FAILED",
+  "businessNotes": "TimeoutError: locator.waitFor: Timeout 15000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('#dp_grid, #dp_grid_container').first() to be visible\u001b[22m\n\u001b[2m    33 × locator resolved to hidden <div id=\"dp_grid_container\">…</div>\u001b[22m\n",
+  "defectEvidence": {
+    "issue": "TimeoutError: locator.waitFor: Timeout 15000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('#dp_grid, #dp_grid_container').first() to be visible\u001b[22m\n\u001b[2m    33 × locator resolved to hidden <div id=\"dp_grid_container\">…</div>\u001b[22m\n",
+    "expected": "Theo đặc tả chuẩn của hệ thống",
+    "actual": "Thực tế phát sinh lỗi hoặc không đạt điều kiện kiểm tra"
+  },
+  "failureAnalysis": {
+    "issue": "TimeoutError: locator.waitFor: Timeout 15000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('#dp_grid, #dp_grid_container').first() to be visible\u001b[22m\n\u001b[2m    33 × locator resolved to hidden <div id=\"dp_grid_container\">…</div>\u001b[22m\n",
+    "expected": "Theo đặc tả chuẩn của hệ thống",
+    "actual": "Thực tế phát sinh lỗi hoặc không đạt điều kiện kiểm tra"
+  },
+  "status": "FAILED",
+  "duration": "29.20s",
+  "errors": "TimeoutError: locator.waitFor: Timeout 15000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('#dp_grid, #dp_grid_container').first() to be visible\u001b[22m\n\u001b[2m    33 × locator resolved to hidden <div id=\"dp_grid_container\">…</div>\u001b[22m\n",
+  "stepScreenshots": [],
+  "attachments": {
+    "screenshots": [],
+    "videos": [
+      "thanh_toan_cong_no/TC-02/videos/video.webm"
+    ],
+    "traces": [
+      "thanh_toan_cong_no/TC-02/traces/trace.zip"
+    ]
+  },
+  "timestamp": "2026-10-21T03:45:23.027Z"
+}

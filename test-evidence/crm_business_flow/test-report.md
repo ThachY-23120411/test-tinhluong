@@ -1,17 +1,17 @@
 # BÁO CÁO KIỂM THỬ TRANG: CRM_BUSINESS_FLOW
 
-> Thời gian kiểm thử: **12:51:34 16/10/2026**
+> Thời gian kiểm thử: **11:11:11 19/10/2026**
 > Tổng số kịch bản: **1** | ✅ LOGIC PASS: **1** | ❌ LOGIC FAIL: **0**
 
 ## BẢNG ĐỐI CHIẾU TRẠNG THÁI TEST & LOGIC NGHIỆP VỤ
 
 | Mã TC | Tiêu đề Kịch bản | Trạng thái Test | Trạng thái Logic | Đánh giá Nghiệp vụ |
 | :--- | :--- | :---: | :---: | :--- |
-| **FLOW-01** | Luồng Nghiệp Vụ Khép Kín: Dữ Liệu Khách Hàng -> Sales Pipeline -> Theo Dõi Dịch Vụ -> Tổng Quan CRM | ✅ PASS | ✅ PASS | PASS - Luồng nghiệp vụ khép kín xuyên suốt 4 menu CRM thực thi trơn tru, đồng bộ hoàn hảo |
+| **FLOW-01** | FLOW-01: Luồng Nghiệp Vụ Khép Kín: Dữ Liệu Khách Hàng -> Sales Pipeline -> Theo Dõi Dịch Vụ -> Tổng Quan CRM | ✅ PASS | ✅ PASS | PASS - Luồng nghiệp vụ khép kín xuyên suốt 4 menu CRM (Khách hàng -> Pipeline -> Dịch vụ -> Tổng quan) thực thi trơn tru, dữ liệu đồng bộ hoàn hảo |
 
 ---
 
-### FLOW-01: Luồng Nghiệp Vụ Khép Kín: Dữ Liệu Khách Hàng -> Sales Pipeline -> Theo Dõi Dịch Vụ -> Tổng Quan CRM
+### FLOW-01: FLOW-01: Luồng Nghiệp Vụ Khép Kín: Dữ Liệu Khách Hàng -> Sales Pipeline -> Theo Dõi Dịch Vụ -> Tổng Quan CRM
 
 * **Trạng thái thực thi Test (Kỹ thuật)**: ✅ PASS (Thời gian thực thi: `84.47s`)
 * **Trạng thái Logic Nghiệp vụ (Business Output)**: ✅ PASS
@@ -61,3 +61,4 @@
 - **Playwright Trace**: [trace.zip](FLOW-01/traces/trace.zip) *(Mở bằng: `npx playwright show-trace test-evidence/crm_business_flow/FLOW-01/traces/trace.zip`)*
 
 ---
+

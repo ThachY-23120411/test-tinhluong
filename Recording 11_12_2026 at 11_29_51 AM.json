@@ -1,0 +1,1436 @@
+{
+    "title": "Recording 11/12/2026 at 11:29:51 AM",
+    "steps": [
+        {
+            "type": "setViewport",
+            "width": 1347,
+            "height": 911,
+            "deviceScaleFactor": 1,
+            "isMobile": false,
+            "hasTouch": false,
+            "isLandscape": false
+        },
+        {
+            "type": "navigate",
+            "url": "https://paradisehrm.com/Tai3/",
+            "assertedEvents": [
+                {
+                    "type": "navigation",
+                    "url": "https://paradisehrm.com/Tai3/",
+                    "title": "Paradise HR"
+                }
+            ]
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "#username"
+                ],
+                [
+                    "text/Chien.nguyen"
+                ]
+            ],
+            "offsetY": 26.078125,
+            "offsetX": 126.171875
+        },
+        {
+            "type": "keyDown",
+            "target": "main",
+            "key": "Control"
+        },
+        {
+            "type": "keyDown",
+            "target": "main",
+            "key": "a"
+        },
+        {
+            "type": "keyUp",
+            "key": "Control",
+            "target": "main"
+        },
+        {
+            "type": "keyUp",
+            "key": "a",
+            "target": "main"
+        },
+        {
+            "type": "change",
+            "value": "tri.nguyen",
+            "selectors": [
+                [
+                    "#username"
+                ],
+                [
+                    "text/Chien.nguyen"
+                ]
+            ],
+            "target": "main"
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "#\\37 443E420BD464740AD70F460ADCC6E29"
+                ]
+            ],
+            "offsetY": 7.484375,
+            "offsetX": 78.171875
+        },
+        {
+            "type": "keyDown",
+            "target": "main",
+            "key": "Control"
+        },
+        {
+            "type": "keyDown",
+            "target": "main",
+            "key": "a"
+        },
+        {
+            "type": "keyUp",
+            "key": "Control",
+            "target": "main"
+        },
+        {
+            "type": "keyUp",
+            "key": "a",
+            "target": "main"
+        },
+        {
+            "type": "change",
+            "value": "123",
+            "selectors": [
+                [
+                    "#\\37 443E420BD464740AD70F460ADCC6E29"
+                ]
+            ],
+            "target": "main"
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "#submitLogin"
+                ]
+            ],
+            "offsetY": 24.890625,
+            "offsetX": 186.171875
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "button.MnuHRS238 > i"
+                ]
+            ],
+            "offsetY": 14.3125,
+            "offsetX": 27.5
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "#launchpad input"
+                ]
+            ],
+            "offsetY": 18.59375,
+            "offsetX": 118.84375
+        },
+        {
+            "type": "change",
+            "value": "phe·",
+            "selectors": [
+                [
+                    "#launchpad input"
+                ]
+            ],
+            "target": "main"
+        },
+        {
+            "type": "keyUp",
+            "key": "Unidentified",
+            "target": "main"
+        },
+        {
+            "type": "change",
+            "value": "phê",
+            "selectors": [
+                [
+                    "#launchpad input"
+                ]
+            ],
+            "target": "main"
+        },
+        {
+            "type": "keyUp",
+            "key": "Unidentified",
+            "target": "main"
+        },
+        {
+            "type": "keyUp",
+            "key": "e",
+            "target": "main"
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "div.wrapper-launchpad > div > div"
+                ]
+            ],
+            "offsetY": 68.59375,
+            "offsetX": 265.65625
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "div.MnuWPT037 > i"
+                ]
+            ],
+            "offsetY": 35.375,
+            "offsetX": 37.53125
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "#cardregistered > div:nth-of-type(1) div.employee > div"
+                ],
+                [
+                    "text/Nguyễn Văn Test\n                099 - 2"
+                ]
+            ],
+            "offsetY": 59.34375,
+            "offsetX": 120.6875
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "button.btnApprove"
+                ]
+            ],
+            "offsetY": 10.09375,
+            "offsetX": 123.515625
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "#btnActionModalRemake"
+                ]
+            ],
+            "offsetY": 17.703125,
+            "offsetX": 32.6875
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "#tab-MnuWPT037 div"
+                ]
+            ],
+            "offsetY": 10.546875,
+            "offsetX": 62.171875
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "#reloadData"
+                ]
+            ],
+            "offsetY": 11.34375,
+            "offsetX": 10.75
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "#cardregistered > div:nth-of-type(1) div.employee"
+                ]
+            ],
+            "offsetY": 48.34375,
+            "offsetX": 262.6875
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "#dynamic-pane-MnuHRS033 button.btnApprove"
+                ]
+            ],
+            "offsetY": 10.015625,
+            "offsetX": 164.625
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "#btnApproveModalRemake"
+                ]
+            ],
+            "offsetY": 17.703125,
+            "offsetX": 26.6875
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "#tab-MnuWPT037 div"
+                ]
+            ],
+            "offsetY": 11.546875,
+            "offsetX": 65.078125
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "#reloadData"
+                ]
+            ],
+            "offsetY": 8.34375,
+            "offsetX": 2.75
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "#cardregistered > div:nth-of-type(1) div.employee"
+                ]
+            ],
+            "offsetY": 62.34375,
+            "offsetX": 370.6875
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "#dynamic-pane-MnuHRS033 button.btnApprove"
+                ]
+            ],
+            "offsetY": 18.015625,
+            "offsetX": 168.625
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "#btnApproveModalRemake"
+                ]
+            ],
+            "offsetY": 23.703125,
+            "offsetX": 29.6875
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "#tab-MnuWPT037 div"
+                ]
+            ],
+            "offsetY": 2.546875,
+            "offsetX": 92.078125
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "#reloadData"
+                ]
+            ],
+            "offsetY": 14.34375,
+            "offsetX": 13.75
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "#cardregistered > div:nth-of-type(1) div.employee"
+                ]
+            ],
+            "offsetY": 57.34375,
+            "offsetX": 351.6875
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "#dynamic-pane-MnuHRS033 button.btnApprove"
+                ]
+            ],
+            "offsetY": 13.015625,
+            "offsetX": 146.625
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "#btnRejectModalRemake"
+                ]
+            ],
+            "offsetY": 19.703125,
+            "offsetX": 29.6875
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "#tab-MnuWPT037 div"
+                ]
+            ],
+            "offsetY": 6.546875,
+            "offsetX": 90.078125
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "#reloadData"
+                ]
+            ],
+            "offsetY": 8.34375,
+            "offsetX": 9.75
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "#randomAvatar"
+                ]
+            ],
+            "offsetY": 22.212501525878906,
+            "offsetX": 11.4000244140625
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "#txtLogoutOpt"
+                ]
+            ],
+            "offsetY": 4.828125,
+            "offsetX": 73
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "#successModalButtonAddNew"
+                ],
+                [
+                    "text/Đăng xuất"
+                ]
+            ],
+            "offsetY": 20.40625,
+            "offsetX": 57.671875,
+            "assertedEvents": [
+                {
+                    "type": "navigation",
+                    "url": "https://paradisehrm.com/Tai3/",
+                    "title": "Paradise HR"
+                }
+            ]
+        },
+        {
+            "type": "change",
+            "value": "Chien.nguyen",
+            "selectors": [
+                [
+                    "#username"
+                ]
+            ],
+            "target": "main"
+        },
+        {
+            "type": "change",
+            "value": "123",
+            "selectors": [
+                [
+                    "#\\37 443E420BD464740AD70F460ADCC6E29"
+                ]
+            ],
+            "target": "main"
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "#username"
+                ],
+                [
+                    "text/Chien.nguyen"
+                ]
+            ],
+            "offsetY": 23.078125,
+            "offsetX": 121.171875
+        },
+        {
+            "type": "keyDown",
+            "target": "main",
+            "key": "Control"
+        },
+        {
+            "type": "keyDown",
+            "target": "main",
+            "key": "a"
+        },
+        {
+            "type": "keyUp",
+            "key": "Control",
+            "target": "main"
+        },
+        {
+            "type": "keyUp",
+            "key": "a",
+            "target": "main"
+        },
+        {
+            "type": "keyDown",
+            "target": "main",
+            "key": "CapsLock"
+        },
+        {
+            "type": "keyUp",
+            "key": "CapsLock",
+            "target": "main"
+        },
+        {
+            "type": "change",
+            "value": "L",
+            "selectors": [
+                [
+                    "#username"
+                ],
+                [
+                    "text/Chien.nguyen"
+                ]
+            ],
+            "target": "main"
+        },
+        {
+            "type": "keyDown",
+            "target": "main",
+            "key": "CapsLock"
+        },
+        {
+            "type": "keyUp",
+            "key": "l",
+            "target": "main"
+        },
+        {
+            "type": "keyUp",
+            "key": "CapsLock",
+            "target": "main"
+        },
+        {
+            "type": "change",
+            "value": "Long",
+            "selectors": [
+                [
+                    "#username"
+                ],
+                [
+                    "text/Chien.nguyen"
+                ]
+            ],
+            "target": "main"
+        },
+        {
+            "type": "keyDown",
+            "target": "main",
+            "key": "CapsLock"
+        },
+        {
+            "type": "keyUp",
+            "key": "CapsLock",
+            "target": "main"
+        },
+        {
+            "type": "change",
+            "value": "LongK",
+            "selectors": [
+                [
+                    "#username"
+                ],
+                [
+                    "text/Chien.nguyen"
+                ]
+            ],
+            "target": "main"
+        },
+        {
+            "type": "keyDown",
+            "target": "main",
+            "key": "CapsLock"
+        },
+        {
+            "type": "keyUp",
+            "key": "k",
+            "target": "main"
+        },
+        {
+            "type": "keyUp",
+            "key": "CapsLock",
+            "target": "main"
+        },
+        {
+            "type": "change",
+            "value": "LongKa",
+            "selectors": [
+                [
+                    "#username"
+                ],
+                [
+                    "text/Chien.nguyen"
+                ]
+            ],
+            "target": "main"
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "#\\37 443E420BD464740AD70F460ADCC6E29"
+                ]
+            ],
+            "offsetY": 15.484375,
+            "offsetX": 164.171875
+        },
+        {
+            "type": "keyDown",
+            "target": "main",
+            "key": "Control"
+        },
+        {
+            "type": "keyDown",
+            "target": "main",
+            "key": "a"
+        },
+        {
+            "type": "keyUp",
+            "key": "Control",
+            "target": "main"
+        },
+        {
+            "type": "keyUp",
+            "key": "a",
+            "target": "main"
+        },
+        {
+            "type": "change",
+            "value": "123",
+            "selectors": [
+                [
+                    "#\\37 443E420BD464740AD70F460ADCC6E29"
+                ]
+            ],
+            "target": "main"
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "#submitLogin"
+                ]
+            ],
+            "offsetY": 11.890625,
+            "offsetX": 208.171875
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "button.MnuHRS238 > i"
+                ]
+            ],
+            "offsetY": 10.3125,
+            "offsetX": 27.5
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "#launchpad input"
+                ]
+            ],
+            "offsetY": 8.59375,
+            "offsetX": 98.84375
+        },
+        {
+            "type": "change",
+            "value": "danh sac·",
+            "selectors": [
+                [
+                    "#launchpad input"
+                ]
+            ],
+            "target": "main"
+        },
+        {
+            "type": "keyUp",
+            "key": "Unidentified",
+            "target": "main"
+        },
+        {
+            "type": "change",
+            "value": "danh sá",
+            "selectors": [
+                [
+                    "#launchpad input"
+                ]
+            ],
+            "target": "main"
+        },
+        {
+            "type": "keyUp",
+            "key": "Unidentified",
+            "target": "main"
+        },
+        {
+            "type": "change",
+            "value": "danh sác",
+            "selectors": [
+                [
+                    "#launchpad input"
+                ]
+            ],
+            "target": "main"
+        },
+        {
+            "type": "keyUp",
+            "key": "Unidentified",
+            "target": "main"
+        },
+        {
+            "type": "change",
+            "value": "danh sách",
+            "selectors": [
+                [
+                    "#launchpad input"
+                ]
+            ],
+            "target": "main"
+        },
+        {
+            "type": "keyUp",
+            "key": "s",
+            "target": "main"
+        },
+        {
+            "type": "change",
+            "value": "danh sách phe·",
+            "selectors": [
+                [
+                    "#launchpad input"
+                ]
+            ],
+            "target": "main"
+        },
+        {
+            "type": "keyUp",
+            "key": "Unidentified",
+            "target": "main"
+        },
+        {
+            "type": "change",
+            "value": "danh sách phê",
+            "selectors": [
+                [
+                    "#launchpad input"
+                ]
+            ],
+            "target": "main"
+        },
+        {
+            "type": "keyUp",
+            "key": "Unidentified",
+            "target": "main"
+        },
+        {
+            "type": "keyUp",
+            "key": "e",
+            "target": "main"
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "div.wrapper-launchpad > div > div i"
+                ]
+            ],
+            "offsetY": 35.375,
+            "offsetX": 31.28125
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "#cardregistered > div:nth-of-type(1) div.employee"
+                ]
+            ],
+            "offsetY": 45.34375,
+            "offsetX": 276.6875
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "button.btnApprove"
+                ]
+            ],
+            "offsetY": 10.3125,
+            "offsetX": 186.6875
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "#btnActionModalRemakeOT"
+                ]
+            ],
+            "offsetY": 14.703125,
+            "offsetX": 30.6875
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "div.menu-tabs > div:nth-of-type(3)"
+                ]
+            ],
+            "offsetY": 16.34375,
+            "offsetX": 49.265625
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "#tab-MnuWPT037 div"
+                ]
+            ],
+            "offsetY": 13.546875,
+            "offsetX": 79.78125
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "#reloadData"
+                ]
+            ],
+            "offsetY": 14.34375,
+            "offsetX": 12.75
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "#cardregistered > div:nth-of-type(1) div.employee"
+                ]
+            ],
+            "offsetY": 36.34375,
+            "offsetX": 328.6875
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "#dynamic-pane-MnuWPT315 button.btnApprove"
+                ]
+            ],
+            "offsetY": 13.09375,
+            "offsetX": 143.515625
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "#btnActionModalRemake"
+                ]
+            ],
+            "offsetY": 11.703125,
+            "offsetX": 35.6875
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "#history-tab-label"
+                ]
+            ],
+            "offsetY": 21.34375,
+            "offsetX": 154.71875
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "#tab-MnuWPT037 div"
+                ]
+            ],
+            "offsetY": 6.546875,
+            "offsetX": 71.53125
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "#reloadData"
+                ]
+            ],
+            "offsetY": 7.34375,
+            "offsetX": 3.75
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "#cardregistered > div:nth-of-type(1) div.employee"
+                ]
+            ],
+            "offsetY": 51.34375,
+            "offsetX": 302.6875
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "#dynamic-pane-MnuHRS033 button.btnApprove"
+                ]
+            ],
+            "offsetY": 24.015625,
+            "offsetX": 133.625
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "#btnApproveModalRemake"
+                ]
+            ],
+            "offsetY": 15.703125,
+            "offsetX": 25.6875
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "div.custom-tabs > button:nth-of-type(3)"
+                ]
+            ],
+            "offsetY": 35.34375,
+            "offsetX": 181.21875
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "div.custom-tabs > button:nth-of-type(2)"
+                ]
+            ],
+            "offsetY": 32.34375,
+            "offsetX": 182.21875
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "#tab-MnuWPT037 div"
+                ]
+            ],
+            "offsetY": 9.546875,
+            "offsetX": 43.4375
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "#reloadData"
+                ]
+            ],
+            "offsetY": 8.34375,
+            "offsetX": 12.75
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "#cardregistered > div:nth-of-type(1) div.employee"
+                ]
+            ],
+            "offsetY": 52.34375,
+            "offsetX": 325.6875
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "#dynamic-pane-MnuHRS033 button.btnApprove"
+                ]
+            ],
+            "offsetY": 27.015625,
+            "offsetX": 154.625
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "#btnApproveModalRemake"
+                ]
+            ],
+            "offsetY": 15.703125,
+            "offsetX": 33.6875
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "div.custom-tabs > button:nth-of-type(3)"
+                ]
+            ],
+            "offsetY": 36.34375,
+            "offsetX": 177.21875
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "#tab-MnuWPT037 div"
+                ]
+            ],
+            "offsetY": 11.546875,
+            "offsetX": 52.4375
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "#reloadData"
+                ]
+            ],
+            "offsetY": 7.34375,
+            "offsetX": 10.75
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "#cardregistered > div:nth-of-type(1) div.employee"
+                ]
+            ],
+            "offsetY": 49.34375,
+            "offsetX": 373.6875
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "#dynamic-pane-MnuHRS033 button.btnApprove"
+                ]
+            ],
+            "offsetY": 22.015625,
+            "offsetX": 132.625
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "#btnRejectModalRemake"
+                ]
+            ],
+            "offsetY": 18.703125,
+            "offsetX": 28.6875
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "div.custom-tabs > button:nth-of-type(3)"
+                ]
+            ],
+            "offsetY": 20.34375,
+            "offsetX": 123.21875
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "#tab-MnuWPT037 div"
+                ]
+            ],
+            "offsetY": 11.546875,
+            "offsetX": 40.4375
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "#reloadData"
+                ]
+            ],
+            "offsetY": 10.34375,
+            "offsetX": 14.75
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "#randomAvatar"
+                ]
+            ],
+            "offsetY": 27.07476234436035,
+            "offsetX": 21.26220703125
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "#txtLogoutOpt"
+                ]
+            ],
+            "offsetY": 1.828125,
+            "offsetX": 102
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "#successModalButtonAddNew"
+                ],
+                [
+                    "text/Đăng xuất"
+                ]
+            ],
+            "offsetY": 18.40625,
+            "offsetX": 32.671875,
+            "assertedEvents": [
+                {
+                    "type": "navigation",
+                    "url": "https://paradisehrm.com/Tai3/",
+                    "title": ""
+                }
+            ]
+        },
+        {
+            "type": "change",
+            "value": "Chien.nguyen",
+            "selectors": [
+                [
+                    "#username"
+                ]
+            ],
+            "target": "main"
+        },
+        {
+            "type": "change",
+            "value": "123",
+            "selectors": [
+                [
+                    "#\\37 443E420BD464740AD70F460ADCC6E29"
+                ]
+            ],
+            "target": "main"
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "#username"
+                ],
+                [
+                    "text/Chien.nguyen"
+                ]
+            ],
+            "offsetY": 23.078125,
+            "offsetX": 127.171875
+        },
+        {
+            "type": "keyDown",
+            "target": "main",
+            "key": "Control"
+        },
+        {
+            "type": "keyDown",
+            "target": "main",
+            "key": "a"
+        },
+        {
+            "type": "keyUp",
+            "key": "a",
+            "target": "main"
+        },
+        {
+            "type": "keyUp",
+            "key": "Control",
+            "target": "main"
+        },
+        {
+            "type": "change",
+            "value": "te·",
+            "selectors": [
+                [
+                    "#username"
+                ],
+                [
+                    "text/Chien.nguyen"
+                ]
+            ],
+            "target": "main"
+        },
+        {
+            "type": "keyUp",
+            "key": "Unidentified",
+            "target": "main"
+        },
+        {
+            "type": "change",
+            "value": "té",
+            "selectors": [
+                [
+                    "#username"
+                ],
+                [
+                    "text/Chien.nguyen"
+                ]
+            ],
+            "target": "main"
+        },
+        {
+            "type": "keyUp",
+            "key": "Unidentified",
+            "target": "main"
+        },
+        {
+            "type": "keyUp",
+            "key": "s",
+            "target": "main"
+        },
+        {
+            "type": "change",
+            "value": "té·",
+            "selectors": [
+                [
+                    "#username"
+                ],
+                [
+                    "text/Chien.nguyen"
+                ]
+            ],
+            "target": "main"
+        },
+        {
+            "type": "keyUp",
+            "key": "Unidentified",
+            "target": "main"
+        },
+        {
+            "type": "change",
+            "value": "te",
+            "selectors": [
+                [
+                    "#username"
+                ],
+                [
+                    "text/Chien.nguyen"
+                ]
+            ],
+            "target": "main"
+        },
+        {
+            "type": "keyUp",
+            "key": "Unidentified",
+            "target": "main"
+        },
+        {
+            "type": "change",
+            "value": "tes",
+            "selectors": [
+                [
+                    "#username"
+                ],
+                [
+                    "text/Chien.nguyen"
+                ]
+            ],
+            "target": "main"
+        },
+        {
+            "type": "keyUp",
+            "key": "Unidentified",
+            "target": "main"
+        },
+        {
+            "type": "change",
+            "value": "test.nv",
+            "selectors": [
+                [
+                    "#username"
+                ],
+                [
+                    "text/Chien.nguyen"
+                ]
+            ],
+            "target": "main"
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "#\\37 443E420BD464740AD70F460ADCC6E29"
+                ]
+            ],
+            "offsetY": 26.484375,
+            "offsetX": 115.171875
+        },
+        {
+            "type": "keyDown",
+            "target": "main",
+            "key": "Control"
+        },
+        {
+            "type": "keyDown",
+            "target": "main",
+            "key": "a"
+        },
+        {
+            "type": "keyUp",
+            "key": "Control",
+            "target": "main"
+        },
+        {
+            "type": "keyUp",
+            "key": "a",
+            "target": "main"
+        },
+        {
+            "type": "change",
+            "value": "123",
+            "selectors": [
+                [
+                    "#\\37 443E420BD464740AD70F460ADCC6E29"
+                ]
+            ],
+            "target": "main"
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "#submitLogin > i"
+                ]
+            ],
+            "offsetY": 13.890625,
+            "offsetX": 15.296875
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "button.MnuWPT010 > i"
+                ]
+            ],
+            "offsetY": 13.3125,
+            "offsetX": 16.5
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "#P2F7760C4CFEC4A7E8A298C8D5BBB4F12 > div > div div.dx-widget > div > div"
+                ]
+            ],
+            "offsetY": 18.34375,
+            "offsetX": 10.328125
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "div.dx-list-item-selected > div > div"
+                ]
+            ],
+            "offsetY": 15,
+            "offsetX": 17
+        }
+    ]
+}

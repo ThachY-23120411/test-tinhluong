@@ -198,7 +198,7 @@ File `fix-report.md` được cấu trúc thành **2 Phần lớn**:
      // <<< [END_TC_XX]
      ```
 2. **Cấm xâm phạm vùng khai báo chung và khối TC của Agent khác**:
-   - **Nghiêm cấm** sửa đổi phần Header chung (`require`, `ACCOUNTS`, `test.use`, helper chung ở đầu file) trừ khi được Team Lead cho phép.
+   - **Nghiêm cấm 100%** sửa đổi phần Header chung và **mọi Helper dùng chung** trong file `.spec.js` (xem chi tiết tại **ĐIỀU 8**), trừ khi được Người Dùng trực tiếp cho phép.
    - **Nghiêm cấm 100%** việc chỉnh sửa, xóa, ghi đè hoặc comment vào bất kỳ dòng code nào thuộc các block `TC-YY` của conversation khác.
 3. **Cơ chế chạy thử nghiệm cục bộ (Targeted TC Run)**:
    - Agent chỉ được phép chạy kiểm thử riêng TC của mình bằng bộ lọc `-g`:
@@ -219,4 +219,32 @@ File `fix-report.md` được cấu trúc thành **2 Phần lớn**:
 > 2. **Bắt buộc hỏi ý kiến và chờ Người Dùng phê duyệt (Mandatory User Approval)**:
 >    - Khi phát hiện cần cải tiến, bổ sung quy chuẩn mới vào skill, Agent **BẮT BUỘC PHẢI HỎI Ý KIẾN NGƯỜI DÙNG** (Team Lead/User) trước, nêu rõ lý do và những điểm dự kiến thay đổi.
 >    - **CHỈ KHI NÀO NGƯỜI DÙNG CHO PHÉP IMPLEMENT** ("Đồng ý", "Cho phép sửa skill", hoặc tương đương) thì Agent mới được phép chỉnh sửa nội dung file của skill đó.
+
+---
+
+## 🔒 ĐIỀU 8: KHÓA CỨNG HELPER DÙNG CHUNG TRONG FILE `.SPEC.JS` (SHARED HELPER LOCK)
+> [!CAUTION]
+> **NGHIÊM CẤM TỰ Ý SỬA CÁC HELPER DÙNG CHUNG TRONG FILE `.SPEC.JS` KHI CHƯA ĐƯỢC NGƯỜI DÙNG CHO PHÉP**:
+>
+> 1. **Chế độ đóng băng Helper dùng chung (Strict Shared-Helper Lock)**:
+>    - Khi sửa file kịch bản kiểm thử `.spec.js` (đặc biệt là `tests/quy_trinh_tinh_luong_nv_moi.spec.js`), Agent **TUYỆT ĐỐI KHÔNG ĐƯỢC TỰ Ý SỬA, XÓA, THÊM HOẶC REFACTOR** bất kỳ hàm helper dùng chung, biến cấu hình chung hay phần khai báo đầu file nào nằm ngoài khối `// >>> [START_TC_XX]` ... `// <<< [END_TC_XX]` của mình (ví dụ: `require`, `ACCOUNTS`, `test.use`, `moveAndClick`, `typeHumanLike`, `selectBoxHumanLike`, `fillDateHumanLike`, `buildGridRowSelector`, `findRowByColumns`, `getScrollableContainerState`, `resolveDynamicTarget`, `moveAndClickGridTarget`, `highlightAndClickDynamicTarget`, ...).
+>    - **Lý do**: Mọi chỉnh sửa trên helper dùng chung đều có thể làm thay đổi hành vi và gây lỗi dây chuyền cho các Test Case mà những Conversation khác (`fix-4`, `fix-5`, `fix-6`, `fix-7`, `fix-8`...) đã làm và đang hoạt động ổn định.
+> 2. **Nguyên tắc xử lý cục bộ trong phạm vi Test Case được giao**:
+>    - Khi xử lý lỗi hoặc tùy biến thao tác cho một Test Case cụ thể, Agent **bắt buộc phải viết/chỉnh code cục bộ ngay bên trong block `TC-XX` được phân công**, tuyệt đối không sửa helper dùng chung để phục vụ riêng 1 TC.
+> 3. **Bắt buộc xin phép & chờ Người Dùng phê duyệt (Mandatory User Approval)**:
+>    - Nếu phát hiện helper dùng chung thực sự có bug cần can thiệp, Agent **BẮT BUỘC PHẢI DỪNG LẠI HỎI Ý KIẾN NGƯỜI DÙNG** trước, nêu rõ: (a) tên hàm helper cần sửa, (b) nguyên nhân lỗi & thay đổi dự kiến, và (c) đánh giá mức độ ảnh hưởng đối với các TC của các conversation khác.
+>    - **CHỈ KHI NÀO NGƯỜI DÙNG CHO PHÉP RÕ RÀNG** (*"Đồng ý sửa helper"*, *"Cho phép sửa"* hoặc tương đương) thì Agent mới được phép chỉnh sửa vùng helper dùng chung của file `.spec.js`.
+
+---
+
+## 🎬 ĐIỀU 9: QUY TRÌNH TẠO REPLAY TEST TỪ FILE JSON CỦA F12 RECORDER (`.JSON` $\rightarrow$ `.SPEC.JS` + `.SQL` RESET + `.BAT`)
+> [!IMPORTANT]
+> **KÍCH HOẠT TỰ ĐỘNG KHI NGƯỜI DÙNG GỬI FILE `.JSON` XUẤT TỪ CHROME DEVTOOLS RECORDER**:
+> Khi Người Dùng gửi file `.json` (F12 $\rightarrow$ Recorder $\rightarrow$ Export JSON) hoặc yêu cầu tạo kịch bản mô phỏng thao tác tái sử dụng từ Recorder, Agent bắt buộc đọc và tuân thủ skill [`.agents/skills/recorder-json-replay/SKILL.md`](./.agents/skills/recorder-json-replay/SKILL.md):
+> 1. **Lọc thao tác thừa & khớp 100% mạch JSON**: Loại bỏ click nhầm/click focus thừa/gõ sửa lặp lại trên cùng 1 input, đồng thời giữ đúng 100% luồng nghiệp vụ thật trong JSON.
+> 2. **Không chèn Expected Result / Chẩn đoán lỗi**: Chạy thuần mô phỏng trực quan để Người Dùng tự quan sát kết quả khi chạy `.bat`, không tự ý thêm `expect(...)` nghiệp vụ hay đối soát DB bắt FAIL giữa luồng.
+> 3. **Chuẩn trực quan Skill Playwright**: Toàn màn hình (`viewport: null` + `--start-maximized`), nhúng `visual_cursor.js` (chuột Neon + sóng gợn + bong bóng phím), di chuột (`moveAndClick`) mới bấm, gõ phím từng ký tự (`pressSequentially`), cuộn thông minh (`mouse.wheel` / smooth scroll), chuyển selector `nth-child`/tọa độ cứng sang định vị động theo chữ/cột/ID, và tuân thủ tuyệt đối **ĐIỀU 8** nếu ghép vào `.spec.js` dùng chung.
+> 4. **Script `.sql` Reset + Launcher `.bat` 1-Click**: Điều tra DB bằng chế độ **Read-Only** (ĐIỀU 1) để xuất file `.sql` reset dữ liệu test cho Người Dùng bấm `F5` trên SSMS trước mỗi lần chạy lại, kèm file `.bat` chạy trực quan `--headed --workers=1`.
+
+
 

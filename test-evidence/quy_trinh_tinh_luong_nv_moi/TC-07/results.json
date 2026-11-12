@@ -1,52 +1,30 @@
 {
   "tcId": "TC-07",
   "pageName": "quy_trinh_tinh_luong_nv_moi",
-  "title": "fix-5 | TC-07: Nộp đơn Xin bù công ngày 15/10/2026 giờ vào 08:00 (Role: test.nv)",
-  "testStatus": "PASSED",
-  "businessStatus": "PASSED",
-  "businessNotes": "PASS - Đơn Xin bù công ngày 15/10/2026 (vào 08:00) đã được nộp thành công và ghi nhận vào CSDL.",
-  "defectEvidence": null,
-  "failureAnalysis": {},
-  "status": "PASSED",
-  "duration": "66.08s",
-  "errors": "",
-  "stepScreenshots": [
-    {
-      "step": 1,
-      "title": "Mo man hinh Xin bu cong MnuHRS033",
-      "fileName": "TC-07-step01-mo-man-hinh-xin-bu-cong-mnuhrs033.png",
-      "relPath": "quy_trinh_tinh_luong_nv_moi/TC-07/screenshots/TC-07-step01-mo-man-hinh-xin-bu-cong-mnuhrs033.png"
-    },
-    {
-      "step": 2,
-      "title": "Dien form Xin bu cong ngay 15-10",
-      "fileName": "TC-07-step02-dien-form-xin-bu-cong-ngay-15-10.png",
-      "relPath": "quy_trinh_tinh_luong_nv_moi/TC-07/screenshots/TC-07-step02-dien-form-xin-bu-cong-ngay-15-10.png"
-    },
-    {
-      "step": 3,
-      "title": "Bam nut Dang ky va xac nhan popup",
-      "fileName": "TC-07-step03-bam-nut-dang-ky-va-xac-nhan-popup.png",
-      "relPath": "quy_trinh_tinh_luong_nv_moi/TC-07/screenshots/TC-07-step03-bam-nut-dang-ky-va-xac-nhan-popup.png"
-    },
-    {
-      "step": 4,
-      "title": "Tab Lich su don Bu cong 15-10 trang thai Cho duyet",
-      "fileName": "TC-07-step04-tab-lich-su-don-bu-cong-15-10-trang-thai-cho-duyet.png",
-      "relPath": "quy_trinh_tinh_luong_nv_moi/TC-07/screenshots/TC-07-step04-tab-lich-su-don-bu-cong-15-10-trang-thai-cho-duyet.png"
-    }
-  ],
+  "title": "fix-5 | TC-07: Nộp và Hủy đơn ngày 14/10; Nộp 2 đơn bù công ngày 15/10 và 16/10/2026 (Role: test.nv)",
+  "testStatus": "FAILED",
+  "businessStatus": "FAILED",
+  "businessNotes": "Error: page.waitForTimeout: Target page, context or browser has been closed",
+  "defectEvidence": {
+    "issue": "Error: page.waitForTimeout: Target page, context or browser has been closed",
+    "expected": "Theo đặc tả chuẩn của hệ thống",
+    "actual": "Thực tế phát sinh lỗi hoặc không đạt điều kiện kiểm tra"
+  },
+  "failureAnalysis": {
+    "issue": "Error: page.waitForTimeout: Target page, context or browser has been closed",
+    "expected": "Theo đặc tả chuẩn của hệ thống",
+    "actual": "Thực tế phát sinh lỗi hoặc không đạt điều kiện kiểm tra"
+  },
+  "status": "FAILED",
+  "duration": "3.87s",
+  "errors": "Error: page.waitForTimeout: Target page, context or browser has been closed",
+  "stepScreenshots": [],
   "attachments": {
-    "screenshots": [
-      "quy_trinh_tinh_luong_nv_moi/TC-07/screenshots/TC-07-step01-mo-man-hinh-xin-bu-cong-mnuhrs033.png",
-      "quy_trinh_tinh_luong_nv_moi/TC-07/screenshots/TC-07-step02-dien-form-xin-bu-cong-ngay-15-10.png",
-      "quy_trinh_tinh_luong_nv_moi/TC-07/screenshots/TC-07-step03-bam-nut-dang-ky-va-xac-nhan-popup.png",
-      "quy_trinh_tinh_luong_nv_moi/TC-07/screenshots/TC-07-step04-tab-lich-su-don-bu-cong-15-10-trang-thai-cho-duyet.png"
-    ],
+    "screenshots": [],
     "videos": [
       "quy_trinh_tinh_luong_nv_moi/TC-07/videos/video.webm"
     ],
     "traces": []
   },
-  "timestamp": "2026-11-11T01:21:08.963Z"
+  "timestamp": "2026-11-12T10:00:14.751Z"
 }

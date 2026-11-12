@@ -44,23 +44,36 @@ WHERE EmployeeID = '099';
 PRINT N'✅ 3. Đã xóa dữ liệu tạm ứng lương của NV 099 (tblSal_Advance)';
 
 -- 4. Xóa đơn xin bù công / giải trình đi trễ về sớm của 099
+DELETE FROM tblApproverHistory 
+WHERE Identity_ID IN (
+    SELECT IdentityID FROM tblAttendanceConfirmRequest WHERE EmployeeID = '099'
+    UNION
+    SELECT IdentityID FROM tblLeaveRegistered WHERE EmployeeID = '099'
+);
+
 DELETE FROM tblAttendanceConfirmRequest 
 WHERE EmployeeID = '099';
 DELETE FROM tblInLateOutEarly 
 WHERE EmployeeID = '099';
 PRINT N'✅ 4. Đã xóa đơn xin bù công / đi trễ của NV 099 (tblAttendanceConfirmRequest, tblInLateOutEarly)';
 
--- 5. Xóa đơn xin nghỉ phép năm AL của 099
-DELETE FROM tblLeaveRegistered 
-WHERE EmployeeID = '099';
-PRINT N'✅ 5. Đã xóa đơn xin nghỉ phép AL của NV 099 (tblLeaveRegistered)';
+-- 5. Xóa đơn xin nghỉ phép năm AL, lịch sử ngày nghỉ & hạn mức phép của 099
+DELETE FROM tblLeaveRegistered_Detail WHERE EmployeeID = '099';
+DELETE FROM tblLeaveRegistered WHERE EmployeeID = '099';
+DELETE FROM tblLvHistory WHERE EmployeeID = '099';
+DELETE FROM tblEmployeeAnnual WHERE EmployeeID = '099';
+PRINT N'✅ 5. Đã xóa đơn nghỉ phép, lịch sử nghỉ & hạn mức phép của NV 099 (tblLeaveRegistered, tblLvHistory, tblEmployeeAnnual)';
 
 -- 6. Xóa đơn xin làm thêm giờ OT của 099
+DELETE FROM tblOvertime_Assignment_Detail 
+WHERE EmployeeID = '099';
+DELETE FROM tblOTList 
+WHERE EmployeeID = '099';
 DELETE FROM tblotregistration 
 WHERE EmployeeID = '099';
 DELETE FROM tblOTRegistration_Web 
 WHERE EmployeeID = '099';
-PRINT N'✅ 6. Đã xóa đơn xin tăng ca OT của NV 099 (tblotregistration, tblOTRegistration_Web)';
+PRINT N'✅ 6. Đã xóa đơn xin tăng ca OT của NV 099 (tblOvertime_Assignment_Detail, tblOTList, tblotregistration, tblOTRegistration_Web)';
 
 -- 7. Xóa dữ liệu quẹt thẻ chấm công phát sinh của 099
 DELETE FROM tblHasTA 
@@ -71,6 +84,11 @@ PRINT N'✅ 7. Đã xóa sạch dữ liệu quẹt thẻ/công của NV 099 (tbl
 DELETE FROM tblShiftGroupByEmployee 
 WHERE EmployeeID = '099';
 PRINT N'✅ 8. Đã xóa phân ca làm việc của NV 099 (tblShiftGroupByEmployee)';
+
+-- 8b. Xóa thiết lập tuyến người duyệt của NV 099 (tblApprovalLineByEmployee)
+DELETE FROM tblApprovalLineByEmployee 
+WHERE EmployeeID = '099';
+PRINT N'✅ 8b. Đã xóa tuyến người duyệt của NV 099 (tblApprovalLineByEmployee)';
 
 -- 9. Xóa tài khoản đăng nhập ESS Portal test.nv & quyền menu
 DELETE FROM tblSC_Right_Stored 

@@ -1,0 +1,61 @@
+{
+  "tcId": "TC-07",
+  "pageName": "crm_customer_data",
+  "title": "Thẩm định Cụm Nút Lọc Thời Gian (\"Hôm nay\", \"Tuần này\", \"Tháng này\", \"Áp dụng\")",
+  "testStatus": "PASSED",
+  "businessStatus": "PASSED",
+  "businessNotes": "PASS - Cụm nút lọc thời gian (Hôm nay/Tuần này/Tháng này) và nút Áp dụng hoạt động ổn định, nạp đúng kỳ dữ liệu",
+  "defectEvidence": null,
+  "failureAnalysis": {},
+  "status": "PASSED",
+  "duration": "31.88s",
+  "errors": "",
+  "stepScreenshots": [
+    {
+      "step": 1,
+      "title": "Nhấp mở bộ lọc thời gian nâng cao từ thanh Toolbar",
+      "fileName": "TC-07-step01-nhap-mo-bo-loc-thoi-gian-nang-cao-tu-thanh-toolbar.png",
+      "relPath": "crm_customer_data/TC-07/screenshots/TC-07-step01-nhap-mo-bo-loc-thoi-gian-nang-cao-tu-thanh-toolbar.png"
+    },
+    {
+      "step": 2,
+      "title": "Cụm nút mốc thời gian Hôm nay, Tuần này, Tháng này hiển thị đầy đủ",
+      "fileName": "TC-07-step02-cum-nut-moc-thoi-gian-hom-nay-tuan-nay-thang-nay-hien-thi-day-du.png",
+      "relPath": "crm_customer_data/TC-07/screenshots/TC-07-step02-cum-nut-moc-thoi-gian-hom-nay-tuan-nay-thang-nay-hien-thi-day-du.png"
+    },
+    {
+      "step": 3,
+      "title": "Con trỏ Neon chọn mốc thời gian Tháng này",
+      "fileName": "TC-07-step03-con-tro-neon-chon-moc-thoi-gian-thang-nay.png",
+      "relPath": "crm_customer_data/TC-07/screenshots/TC-07-step03-con-tro-neon-chon-moc-thoi-gian-thang-nay.png"
+    },
+    {
+      "step": 4,
+      "title": "Bấm nút Áp dụng và nhận phản hồi dữ liệu từ máy chủ",
+      "fileName": "TC-07-step04-bam-nut-ap-dung-va-nhan-phan-hoi-du-lieu-tu-may-chu.png",
+      "relPath": "crm_customer_data/TC-07/screenshots/TC-07-step04-bam-nut-ap-dung-va-nhan-phan-hoi-du-lieu-tu-may-chu.png"
+    },
+    {
+      "step": 5,
+      "title": "Bộ lọc thời gian kích hoạt thành công, DataGrid cập nhật chuẩn xác",
+      "fileName": "TC-07-step05-bo-loc-thoi-gian-kich-hoat-thanh-cong-datagrid-cap-nhat-chuan-xac.png",
+      "relPath": "crm_customer_data/TC-07/screenshots/TC-07-step05-bo-loc-thoi-gian-kich-hoat-thanh-cong-datagrid-cap-nhat-chuan-xac.png"
+    }
+  ],
+  "attachments": {
+    "screenshots": [
+      "crm_customer_data/TC-07/screenshots/TC-07-step01-nhap-mo-bo-loc-thoi-gian-nang-cao-tu-thanh-toolbar.png",
+      "crm_customer_data/TC-07/screenshots/TC-07-step02-cum-nut-moc-thoi-gian-hom-nay-tuan-nay-thang-nay-hien-thi-day-du.png",
+      "crm_customer_data/TC-07/screenshots/TC-07-step03-con-tro-neon-chon-moc-thoi-gian-thang-nay.png",
+      "crm_customer_data/TC-07/screenshots/TC-07-step04-bam-nut-ap-dung-va-nhan-phan-hoi-du-lieu-tu-may-chu.png",
+      "crm_customer_data/TC-07/screenshots/TC-07-step05-bo-loc-thoi-gian-kich-hoat-thanh-cong-datagrid-cap-nhat-chuan-xac.png"
+    ],
+    "videos": [
+      "crm_customer_data/TC-07/videos/video.webm"
+    ],
+    "traces": [
+      "crm_customer_data/TC-07/traces/trace.zip"
+    ]
+  },
+  "timestamp": "2026-10-28T05:22:56.456Z"
+}

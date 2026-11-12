@@ -1,0 +1,20 @@
+{
+  "tcId": "TC-02",
+  "pageName": "crm_dashboard",
+  "title": "TC-02: Kiểm tra Tổng quan CRM - Bộ lọc, Tìm kiếm, Button và Modal (Cấu hình KPI, Thêm Lead)",
+  "status": "PASSED",
+  "duration": "26.43s",
+  "errors": "",
+  "attachments": {
+    "screenshots": [
+      "crm_dashboard/TC-02/screenshots/test-finished-1.png"
+    ],
+    "videos": [
+      "crm_dashboard/TC-02/videos/video.webm"
+    ],
+    "traces": [
+      "crm_dashboard/TC-02/traces/trace.zip"
+    ]
+  },
+  "timestamp": "2026-10-15T08:03:40.943Z"
+}

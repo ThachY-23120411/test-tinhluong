@@ -1,0 +1,68 @@
+{
+  "tcId": "TC-07",
+  "pageName": "crm_sales_pipeline",
+  "title": "Kiểm tra Bộ Lọc Dropdown 'Chọn Nhân Viên Phụ Trách' Trên Toolbar (TC-CTL-07)",
+  "testStatus": "PASSED",
+  "businessStatus": "PASSED",
+  "businessNotes": "PASS - Tiện ích lọc theo nhân viên phụ trách trên Toolbar hoạt động hoàn hảo: hỗ trợ tìm kiếm và chọn nhân sự 'NGUYỄN TẤN CHIẾN', áp dụng lọc chính xác (17 thẻ) và khôi phục đầy đủ 61/61 thẻ ban đầu",
+  "defectEvidence": null,
+  "failureAnalysis": {},
+  "status": "PASSED",
+  "duration": "45.15s",
+  "errors": "",
+  "stepScreenshots": [
+    {
+      "step": 1,
+      "title": "Xác định vị trí bộ lọc nhân viên phụ trách trên Toolbar",
+      "fileName": "TC-07-step01-xac-dinh-vi-tri-bo-loc-nhan-vien-phu-trach-tren-toolbar.png",
+      "relPath": "crm_sales_pipeline/TC-07/screenshots/TC-07-step01-xac-dinh-vi-tri-bo-loc-nhan-vien-phu-trach-tren-toolbar.png"
+    },
+    {
+      "step": 2,
+      "title": "Con trỏ Neon nhấp mở hộp thoại chọn nhân sự phụ trách",
+      "fileName": "TC-07-step02-con-tro-neon-nhap-mo-hop-thoai-chon-nhan-su-phu-trach.png",
+      "relPath": "crm_sales_pipeline/TC-07/screenshots/TC-07-step02-con-tro-neon-nhap-mo-hop-thoai-chon-nhan-su-phu-trach.png"
+    },
+    {
+      "step": 3,
+      "title": "Tìm kiếm và chọn nhân viên phụ trách NGUYỄN TẤN CHIẾN",
+      "fileName": "TC-07-step03-tim-kiem-va-chon-nhan-vien-phu-trach-nguyen-tan-chien.png",
+      "relPath": "crm_sales_pipeline/TC-07/screenshots/TC-07-step03-tim-kiem-va-chon-nhan-vien-phu-trach-nguyen-tan-chien.png"
+    },
+    {
+      "step": 4,
+      "title": "Áp dụng lọc và xác nhận Kanban đồng bộ 17 thẻ của NGUYỄN TẤN CHIẾN",
+      "fileName": "TC-07-step04-ap-dung-loc-va-xac-nhan-kanban-dong-bo-17-the-cua-nguyen-tan-chien.png",
+      "relPath": "crm_sales_pipeline/TC-07/screenshots/TC-07-step04-ap-dung-loc-va-xac-nhan-kanban-dong-bo-17-the-cua-nguyen-tan-chien.png"
+    },
+    {
+      "step": 5,
+      "title": "Nhấn Xóa chọn và Làm mới để khôi phục toàn vẹn dữ liệu ban đầu",
+      "fileName": "TC-07-step05-nhan-xoa-chon-va-lam-moi-de-khoi-phuc-toan-ven-du-lieu-ban-dau.png",
+      "relPath": "crm_sales_pipeline/TC-07/screenshots/TC-07-step05-nhan-xoa-chon-va-lam-moi-de-khoi-phuc-toan-ven-du-lieu-ban-dau.png"
+    },
+    {
+      "step": 6,
+      "title": "Đánh giá logic PASS: Bộ lọc nhân viên phụ trách phản hồi chuẩn xác",
+      "fileName": "TC-07-step06-danh-gia-logic-pass-bo-loc-nhan-vien-phu-trach-phan-hoi-chuan-xac.png",
+      "relPath": "crm_sales_pipeline/TC-07/screenshots/TC-07-step06-danh-gia-logic-pass-bo-loc-nhan-vien-phu-trach-phan-hoi-chuan-xac.png"
+    }
+  ],
+  "attachments": {
+    "screenshots": [
+      "crm_sales_pipeline/TC-07/screenshots/TC-07-step01-xac-dinh-vi-tri-bo-loc-nhan-vien-phu-trach-tren-toolbar.png",
+      "crm_sales_pipeline/TC-07/screenshots/TC-07-step02-con-tro-neon-nhap-mo-hop-thoai-chon-nhan-su-phu-trach.png",
+      "crm_sales_pipeline/TC-07/screenshots/TC-07-step03-tim-kiem-va-chon-nhan-vien-phu-trach-nguyen-tan-chien.png",
+      "crm_sales_pipeline/TC-07/screenshots/TC-07-step04-ap-dung-loc-va-xac-nhan-kanban-dong-bo-17-the-cua-nguyen-tan-chien.png",
+      "crm_sales_pipeline/TC-07/screenshots/TC-07-step05-nhan-xoa-chon-va-lam-moi-de-khoi-phuc-toan-ven-du-lieu-ban-dau.png",
+      "crm_sales_pipeline/TC-07/screenshots/TC-07-step06-danh-gia-logic-pass-bo-loc-nhan-vien-phu-trach-phan-hoi-chuan-xac.png"
+    ],
+    "videos": [
+      "crm_sales_pipeline/TC-07/videos/video.webm"
+    ],
+    "traces": [
+      "crm_sales_pipeline/TC-07/traces/trace.zip"
+    ]
+  },
+  "timestamp": "2026-10-21T03:11:29.957Z"
+}

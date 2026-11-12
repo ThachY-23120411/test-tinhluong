@@ -1,0 +1,73 @@
+{
+  "tcId": "TC-10",
+  "pageName": "quy_trinh_tinh_luong_nv_moi",
+  "title": "fix-6 | TC-10: Quản lý Trí Nguyễn duyệt Cấp 1 (Nghỉ phép 24/10, Bù công 15/10 & 16/10, Xin hủy 14/10) và Đăng xuất (Role: tri.nguyen)",
+  "testStatus": "PASSED",
+  "businessStatus": "PASSED",
+  "businessNotes": "Đạt yêu cầu logic nghiệp vụ mong đợi",
+  "defectEvidence": null,
+  "failureAnalysis": {},
+  "status": "PASSED",
+  "duration": "122.39s",
+  "errors": "",
+  "stepScreenshots": [
+    {
+      "step": 1,
+      "title": "Dang nhap tri.nguyen",
+      "fileName": "TC-10-step01-dang-nhap-tri-nguyen.png",
+      "relPath": "quy_trinh_tinh_luong_nv_moi/TC-10/screenshots/TC-10-step01-dang-nhap-tri-nguyen.png"
+    },
+    {
+      "step": 2,
+      "title": "Mo MnuWPT037 qua Launchpad",
+      "fileName": "TC-10-step02-mo-mnuwpt037-qua-launchpad.png",
+      "relPath": "quy_trinh_tinh_luong_nv_moi/TC-10/screenshots/TC-10-step02-mo-mnuwpt037-qua-launchpad.png"
+    },
+    {
+      "step": 3,
+      "title": "Duyet Cap 1 Đơn Nghỉ phép 24/10",
+      "fileName": "TC-10-step03-duyet-cap-1-don-nghi-phep-24-10.png",
+      "relPath": "quy_trinh_tinh_luong_nv_moi/TC-10/screenshots/TC-10-step03-duyet-cap-1-don-nghi-phep-24-10.png"
+    },
+    {
+      "step": 4,
+      "title": "Duyet Cap 1 Đơn Bù công 15/10",
+      "fileName": "TC-10-step04-duyet-cap-1-don-bu-cong-15-10.png",
+      "relPath": "quy_trinh_tinh_luong_nv_moi/TC-10/screenshots/TC-10-step04-duyet-cap-1-don-bu-cong-15-10.png"
+    },
+    {
+      "step": 5,
+      "title": "Duyet Cap 1 Đơn Bù công 16/10",
+      "fileName": "TC-10-step05-duyet-cap-1-don-bu-cong-16-10.png",
+      "relPath": "quy_trinh_tinh_luong_nv_moi/TC-10/screenshots/TC-10-step05-duyet-cap-1-don-bu-cong-16-10.png"
+    },
+    {
+      "step": 6,
+      "title": "Duyet Cap 1 Đơn Xin hủy Bù công 14/10",
+      "fileName": "TC-10-step06-duyet-cap-1-don-xin-huy-bu-cong-14-10.png",
+      "relPath": "quy_trinh_tinh_luong_nv_moi/TC-10/screenshots/TC-10-step06-duyet-cap-1-don-xin-huy-bu-cong-14-10.png"
+    },
+    {
+      "step": 7,
+      "title": "Dang xuat tri.nguyen thanh cong",
+      "fileName": "TC-10-step07-dang-xuat-tri-nguyen-thanh-cong.png",
+      "relPath": "quy_trinh_tinh_luong_nv_moi/TC-10/screenshots/TC-10-step07-dang-xuat-tri-nguyen-thanh-cong.png"
+    }
+  ],
+  "attachments": {
+    "screenshots": [
+      "quy_trinh_tinh_luong_nv_moi/TC-10/screenshots/TC-10-step01-dang-nhap-tri-nguyen.png",
+      "quy_trinh_tinh_luong_nv_moi/TC-10/screenshots/TC-10-step02-mo-mnuwpt037-qua-launchpad.png",
+      "quy_trinh_tinh_luong_nv_moi/TC-10/screenshots/TC-10-step03-duyet-cap-1-don-nghi-phep-24-10.png",
+      "quy_trinh_tinh_luong_nv_moi/TC-10/screenshots/TC-10-step04-duyet-cap-1-don-bu-cong-15-10.png",
+      "quy_trinh_tinh_luong_nv_moi/TC-10/screenshots/TC-10-step05-duyet-cap-1-don-bu-cong-16-10.png",
+      "quy_trinh_tinh_luong_nv_moi/TC-10/screenshots/TC-10-step06-duyet-cap-1-don-xin-huy-bu-cong-14-10.png",
+      "quy_trinh_tinh_luong_nv_moi/TC-10/screenshots/TC-10-step07-dang-xuat-tri-nguyen-thanh-cong.png"
+    ],
+    "videos": [
+      "quy_trinh_tinh_luong_nv_moi/TC-10/videos/video.webm"
+    ],
+    "traces": []
+  },
+  "timestamp": "2026-11-12T08:10:12.871Z"
+}

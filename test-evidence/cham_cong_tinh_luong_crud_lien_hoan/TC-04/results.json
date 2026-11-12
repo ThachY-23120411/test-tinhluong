@@ -1,0 +1,45 @@
+{
+  "tcId": "TC-04",
+  "pageName": "cham_cong_tinh_luong_crud_lien_hoan",
+  "title": "Kế toán chạy Tính lương Lần 1 toàn công ty và đối soát Bảng lương Before (Role: chien.nguyen)",
+  "testStatus": "PASSED",
+  "businessStatus": "PASSED",
+  "businessNotes": "Đạt yêu cầu logic nghiệp vụ mong đợi",
+  "defectEvidence": null,
+  "failureAnalysis": {},
+  "status": "PASSED",
+  "duration": "40.15s",
+  "errors": "",
+  "stepScreenshots": [
+    {
+      "step": 1,
+      "title": "Ke toan chay tinh tien luong toan cong ty lan 1 mnuprl040",
+      "fileName": "TC-04-step01-ke-toan-chay-tinh-tien-luong-toan-cong-ty-lan-1-mnuprl040.png",
+      "relPath": "cham_cong_tinh_luong_crud_lien_hoan/TC-04/screenshots/TC-04-step01-ke-toan-chay-tinh-tien-luong-toan-cong-ty-lan-1-mnuprl040.png"
+    },
+    {
+      "step": 2,
+      "title": "Ke toan xem bang luong tong hop toan cong ty mnuprl092",
+      "fileName": "TC-04-step02-ke-toan-xem-bang-luong-tong-hop-toan-cong-ty-mnuprl092.png",
+      "relPath": "cham_cong_tinh_luong_crud_lien_hoan/TC-04/screenshots/TC-04-step02-ke-toan-xem-bang-luong-tong-hop-toan-cong-ty-mnuprl092.png"
+    },
+    {
+      "step": 3,
+      "title": "Ke toan doi soat bang luong co so before cua 046 mnuhrs145",
+      "fileName": "TC-04-step03-ke-toan-doi-soat-bang-luong-co-so-before-cua-046-mnuhrs145.png",
+      "relPath": "cham_cong_tinh_luong_crud_lien_hoan/TC-04/screenshots/TC-04-step03-ke-toan-doi-soat-bang-luong-co-so-before-cua-046-mnuhrs145.png"
+    }
+  ],
+  "attachments": {
+    "screenshots": [
+      "cham_cong_tinh_luong_crud_lien_hoan/TC-04/screenshots/TC-04-step01-ke-toan-chay-tinh-tien-luong-toan-cong-ty-lan-1-mnuprl040.png",
+      "cham_cong_tinh_luong_crud_lien_hoan/TC-04/screenshots/TC-04-step02-ke-toan-xem-bang-luong-tong-hop-toan-cong-ty-mnuprl092.png",
+      "cham_cong_tinh_luong_crud_lien_hoan/TC-04/screenshots/TC-04-step03-ke-toan-doi-soat-bang-luong-co-so-before-cua-046-mnuhrs145.png"
+    ],
+    "videos": [
+      "cham_cong_tinh_luong_crud_lien_hoan/TC-04/videos/video.webm"
+    ],
+    "traces": []
+  },
+  "timestamp": "2026-11-05T16:30:40.774Z"
+}

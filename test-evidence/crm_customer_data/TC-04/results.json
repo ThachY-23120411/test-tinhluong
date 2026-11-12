@@ -5,15 +5,10 @@
   "testStatus": "PASSED",
   "businessStatus": "PASSED",
   "businessNotes": "PASS - Chức năng Xem chi tiết khách hàng hoạt động chính xác: API sp_CRM_CompanyDetail phản hồi HTTP 200, nạp đầy đủ thông tin chi tiết và điều hướng tab mượt mà",
-  "failureAnalysis": {
-    "issue": "",
-    "expected": "",
-    "actual": "",
-    "rootCause": "",
-    "recommendation": ""
-  },
+  "defectEvidence": null,
+  "failureAnalysis": {},
   "status": "PASSED",
-  "duration": "25.99s",
+  "duration": "29.81s",
   "errors": "",
   "stepScreenshots": [
     {
@@ -62,5 +57,5 @@
       "crm_customer_data/TC-04/traces/trace.zip"
     ]
   },
-  "timestamp": "2026-10-16T04:42:31.171Z"
+  "timestamp": "2026-10-28T05:21:12.033Z"
 }

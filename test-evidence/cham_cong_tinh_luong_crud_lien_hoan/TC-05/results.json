@@ -1,0 +1,31 @@
+{
+  "tcId": "TC-05",
+  "pageName": "cham_cong_tinh_luong_crud_lien_hoan",
+  "title": "Quản lý Cấp 1 ThanhLong phê duyệt Đơn xin nghỉ phép năm (Role: ThanhLong)",
+  "testStatus": "PASSED",
+  "businessStatus": "PASSED",
+  "businessNotes": "Đạt yêu cầu logic nghiệp vụ mong đợi",
+  "defectEvidence": null,
+  "failureAnalysis": {},
+  "status": "PASSED",
+  "duration": "23.89s",
+  "errors": "",
+  "stepScreenshots": [
+    {
+      "step": 1,
+      "title": "Quan ly thanhlong duyet don nghi phep cap 1 mnuwpt037",
+      "fileName": "TC-05-step01-quan-ly-thanhlong-duyet-don-nghi-phep-cap-1-mnuwpt037.png",
+      "relPath": "cham_cong_tinh_luong_crud_lien_hoan/TC-05/screenshots/TC-05-step01-quan-ly-thanhlong-duyet-don-nghi-phep-cap-1-mnuwpt037.png"
+    }
+  ],
+  "attachments": {
+    "screenshots": [
+      "cham_cong_tinh_luong_crud_lien_hoan/TC-05/screenshots/TC-05-step01-quan-ly-thanhlong-duyet-don-nghi-phep-cap-1-mnuwpt037.png"
+    ],
+    "videos": [
+      "cham_cong_tinh_luong_crud_lien_hoan/TC-05/videos/video.webm"
+    ],
+    "traces": []
+  },
+  "timestamp": "2026-11-05T16:31:48.351Z"
+}

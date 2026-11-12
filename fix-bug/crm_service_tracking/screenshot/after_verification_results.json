@@ -1,0 +1,53 @@
+[
+  {
+    "w": 1440,
+    "h": 900,
+    "name": "1440",
+    "label": "Desktop Chuẩn 1440px",
+    "empTop": 97.53125,
+    "capsuleTop": 98.53125,
+    "actTop": 102.953125,
+    "afterTop": 97.53125,
+    "headersTop": 157.53125,
+    "afterBottom": 137.53125,
+    "isSingleRow": true,
+    "isActSameRowAsAfter": true,
+    "headersOverlap": false,
+    "toggleWidth": 95,
+    "actWidth": 201.359375
+  },
+  {
+    "w": 1024,
+    "h": 768,
+    "name": "1024",
+    "label": "Windows Snap 1024px",
+    "empTop": 96.140625,
+    "capsuleTop": 97.140625,
+    "actTop": 101.5625,
+    "afterTop": 144.140625,
+    "headersTop": 204.140625,
+    "afterBottom": 184.140625,
+    "isSingleRow": false,
+    "isActSameRowAsAfter": false,
+    "headersOverlap": false,
+    "toggleWidth": 95,
+    "actWidth": 201.359375
+  },
+  {
+    "w": 768,
+    "h": 1024,
+    "name": "768",
+    "label": "Tablet / Snap 768px",
+    "empTop": 98.96875,
+    "capsuleTop": 99.96875,
+    "actTop": 152.390625,
+    "afterTop": 146.96875,
+    "headersTop": 206.96875,
+    "afterBottom": 186.96875,
+    "isSingleRow": false,
+    "isActSameRowAsAfter": true,
+    "headersOverlap": false,
+    "toggleWidth": 95,
+    "actWidth": 201.359375
+  }
+]

@@ -1,0 +1,86 @@
+{
+  "tcId": "TC-03",
+  "pageName": "crm_service_tracking",
+  "title": "Thẩm định Ô Tìm kiếm Nhanh, Lọc Tức thì & Khôi phục Danh sách",
+  "testStatus": "PASSED",
+  "businessStatus": "FAILED",
+  "businessNotes": "FAIL - Lỗi cú pháp SQL Backend khi tìm kiếm: Incorrect syntax near ')'.",
+  "defectEvidence": {
+    "issue": "DataGrid hiển thị \"Không có dữ liệu\" khi tìm kiếm dù từ khóa có thật trong danh sách",
+    "expected": "Khi tìm kiếm \"NIDEC\" hoặc \"CÔNG TY\", hệ thống phải trả về các bản ghi khớp với từ khóa",
+    "actual": "Server IIS trả HTTP 200 nhưng payload trả lỗi SQL nội bộ: \"Incorrect syntax near ')'.\", làm mảng data rỗng []",
+    "evidence": {
+      "httpStatus": 200,
+      "sqlErrorReason": "Incorrect syntax near ')'.",
+      "searchKeyword": "CÔNG"
+    }
+  },
+  "failureAnalysis": {
+    "issue": "DataGrid hiển thị \"Không có dữ liệu\" khi tìm kiếm dù từ khóa có thật trong danh sách",
+    "expected": "Khi tìm kiếm \"NIDEC\" hoặc \"CÔNG TY\", hệ thống phải trả về các bản ghi khớp với từ khóa",
+    "actual": "Server IIS trả HTTP 200 nhưng payload trả lỗi SQL nội bộ: \"Incorrect syntax near ')'.\", làm mảng data rỗng []",
+    "evidence": {
+      "httpStatus": 200,
+      "sqlErrorReason": "Incorrect syntax near ')'.",
+      "searchKeyword": "CÔNG"
+    }
+  },
+  "status": "FAILED",
+  "duration": "26.58s",
+  "errors": "",
+  "stepScreenshots": [
+    {
+      "step": 1,
+      "title": "Trích xuất từ khóa thực tế từ dòng 1: CÔNG",
+      "fileName": "TC-03-step01-trich-xuat-tu-khoa-thuc-te-tu-dong-1-cong-ty-tnhh-nidec-instruments-viet-nam.png",
+      "relPath": "crm_service_tracking/TC-03/screenshots/TC-03-step01-trich-xuat-tu-khoa-thuc-te-tu-dong-1-cong-ty-tnhh-nidec-instruments-viet-nam.png"
+    },
+    {
+      "step": 1,
+      "title": "Trích xuất từ khóa thực tế từ dòng 1: CÔNG",
+      "fileName": "TC-03-step01-trich-xuat-tu-khoa-thuc-te-tu-dong-1-cong.png",
+      "relPath": "crm_service_tracking/TC-03/screenshots/TC-03-step01-trich-xuat-tu-khoa-thuc-te-tu-dong-1-cong.png"
+    },
+    {
+      "step": 2,
+      "title": "Con trỏ Neon focus vào ô tìm kiếm nhanh",
+      "fileName": "TC-03-step02-con-tro-neon-focus-vao-o-tim-kiem-nhanh.png",
+      "relPath": "crm_service_tracking/TC-03/screenshots/TC-03-step02-con-tro-neon-focus-vao-o-tim-kiem-nhanh.png"
+    },
+    {
+      "step": 3,
+      "title": "Gõ từ khóa tìm kiếm và quan sát DataGrid lọc tức thì",
+      "fileName": "TC-03-step03-go-tu-khoa-tim-kiem-va-quan-sat-datagrid-loc-tuc-thi.png",
+      "relPath": "crm_service_tracking/TC-03/screenshots/TC-03-step03-go-tu-khoa-tim-kiem-va-quan-sat-datagrid-loc-tuc-thi.png"
+    },
+    {
+      "step": 4,
+      "title": "Phát hiện lỗi Backend SQL làm DataGrid rỗng dữ liệu khi tìm kiếm",
+      "fileName": "TC-03-step04-phat-hien-loi-backend-sql-lam-datagrid-rong-du-lieu-khi-tim-kiem.png",
+      "relPath": "crm_service_tracking/TC-03/screenshots/TC-03-step04-phat-hien-loi-backend-sql-lam-datagrid-rong-du-lieu-khi-tim-kiem.png"
+    },
+    {
+      "step": 5,
+      "title": "Xóa ô tìm kiếm và khôi phục nguyên vẹn 100% số bản ghi ban đầu",
+      "fileName": "TC-03-step05-xoa-o-tim-kiem-va-khoi-phuc-nguyen-ven-100-so-ban-ghi-ban-dau.png",
+      "relPath": "crm_service_tracking/TC-03/screenshots/TC-03-step05-xoa-o-tim-kiem-va-khoi-phuc-nguyen-ven-100-so-ban-ghi-ban-dau.png"
+    }
+  ],
+  "attachments": {
+    "screenshots": [
+      "crm_service_tracking/TC-03/screenshots/TC-03-step01-trich-xuat-tu-khoa-thuc-te-tu-dong-1-cong-ty-tnhh-nidec-instruments-viet-nam.png",
+      "crm_service_tracking/TC-03/screenshots/TC-03-step01-trich-xuat-tu-khoa-thuc-te-tu-dong-1-cong.png",
+      "crm_service_tracking/TC-03/screenshots/TC-03-step02-con-tro-neon-focus-vao-o-tim-kiem-nhanh.png",
+      "crm_service_tracking/TC-03/screenshots/TC-03-step03-go-tu-khoa-tim-kiem-va-quan-sat-datagrid-loc-tuc-thi.png",
+      "crm_service_tracking/TC-03/screenshots/TC-03-step04-phat-hien-loi-backend-sql-lam-datagrid-rong-du-lieu-khi-tim-kiem.png",
+      "crm_service_tracking/TC-03/screenshots/TC-03-step05-xoa-o-tim-kiem-va-khoi-phuc-nguyen-ven-100-so-ban-ghi-ban-dau.png"
+    ],
+    "videos": [
+      "crm_service_tracking/TC-03/videos/video.webm"
+    ],
+    "traces": [
+      "crm_service_tracking/TC-03/traces/trace.zip"
+    ]
+  },
+  "timestamp": "2026-10-16T05:40:38.849Z"
+}

@@ -1,0 +1,47 @@
+{
+  "tcId": "TC-03",
+  "pageName": "employee_bank_approval",
+  "title": "Nhân viên Tai.Dang đăng nhập lại để đối chiếu và kiểm tra thông tin sau phê duyệt",
+  "testStatus": "PASSED",
+  "businessStatus": "PASSED",
+  "businessNotes": "PASS - Thông tin ngân hàng đã cập nhật chính xác trên hồ sơ: 9940759954",
+  "defectEvidence": null,
+  "failureAnalysis": {},
+  "status": "PASSED",
+  "duration": "31.52s",
+  "errors": "",
+  "stepScreenshots": [
+    {
+      "step": 1,
+      "title": "Nhân viên Tai.Dang đăng nhập lại hệ thống để kiểm tra thông tin sau duyệt",
+      "fileName": "TC-03-step01-nhan-vien-tai-dang-dang-nhap-lai-he-thong-de-kiem-tra-thong-tin-sau-duyet.png",
+      "relPath": "employee_bank_approval/TC-03/screenshots/TC-03-step01-nhan-vien-tai-dang-dang-nhap-lai-he-thong-de-kiem-tra-thong-tin-sau-duyet.png"
+    },
+    {
+      "step": 2,
+      "title": "Điều hướng đến mục Thông tin Ngân hàng & Thuế trên màn hình Hồ sơ nhân viên",
+      "fileName": "TC-03-step02-dieu-huong-den-muc-thong-tin-ngan-hang-thue-tren-man-hinh-ho-so-nhan-vien.png",
+      "relPath": "employee_bank_approval/TC-03/screenshots/TC-03-step02-dieu-huong-den-muc-thong-tin-ngan-hang-thue-tren-man-hinh-ho-so-nhan-vien.png"
+    },
+    {
+      "step": 3,
+      "title": "Bằng chứng đối chiếu thực tế: Form Thông tin ngân hàng vẫn rỗng dữ liệu sau khi duyệt",
+      "fileName": "TC-03-step03-bang-chung-doi-chieu-thuc-te-form-thong-tin-ngan-hang-van-rong-du-lieu-sau-khi-duyet.png",
+      "relPath": "employee_bank_approval/TC-03/screenshots/TC-03-step03-bang-chung-doi-chieu-thuc-te-form-thong-tin-ngan-hang-van-rong-du-lieu-sau-khi-duyet.png"
+    }
+  ],
+  "attachments": {
+    "screenshots": [
+      "employee_bank_approval/TC-03/screenshots/TC-03-step01-nhan-vien-tai-dang-dang-nhap-lai-he-thong-de-kiem-tra-thong-tin-sau-duyet.png",
+      "employee_bank_approval/TC-03/screenshots/TC-03-step02-dieu-huong-den-muc-thong-tin-ngan-hang-thue-tren-man-hinh-ho-so-nhan-vien.png",
+      "employee_bank_approval/TC-03/screenshots/TC-03-step03-bang-chung-doi-chieu-thuc-te-form-thong-tin-ngan-hang-van-rong-du-lieu-sau-khi-duyet.png"
+    ],
+    "videos": [
+      "employee_bank_approval/TC-03/videos/video.webm"
+    ],
+    "traces": [
+      "employee_bank_approval/TC-03/traces/trace.zip"
+    ]
+  },
+  "timestamp": "2026-10-28T07:20:22.594Z"
+}

@@ -1,0 +1,66 @@
+{
+  "tcId": "TC-04",
+  "pageName": "crm_overview",
+  "title": "Thẩm định Nút Thêm Lead (#btnCreateLead) & Modal Tạo Mới Lead Nhanh",
+  "testStatus": "PASSED",
+  "businessStatus": "PASSED",
+  "businessNotes": "PASS - Nút Thêm Lead mở đúng modal tạo khách hàng, các trường nhập liệu phản hồi tốt",
+  "failureAnalysis": {
+    "issue": "",
+    "expected": "",
+    "actual": "",
+    "rootCause": "",
+    "recommendation": ""
+  },
+  "status": "PASSED",
+  "duration": "24.28s",
+  "errors": "",
+  "stepScreenshots": [
+    {
+      "step": 1,
+      "title": "Xác định vị trí nút Thêm Lead màu xanh lá",
+      "fileName": "TC-04-step01-xac-dinh-vi-tri-nut-them-lead-mau-xanh-la.png",
+      "relPath": "crm_overview/TC-04/screenshots/TC-04-step01-xac-dinh-vi-tri-nut-them-lead-mau-xanh-la.png"
+    },
+    {
+      "step": 2,
+      "title": "Modal Thêm LEAD mở lên với đầy đủ các trường nhập liệu",
+      "fileName": "TC-04-step02-modal-them-lead-mo-len-voi-day-du-cac-truong-nhap-lieu.png",
+      "relPath": "crm_overview/TC-04/screenshots/TC-04-step02-modal-them-lead-mo-len-voi-day-du-cac-truong-nhap-lieu.png"
+    },
+    {
+      "step": 3,
+      "title": "Kiểm tra khả năng nhập liệu trực quan vào ô Tên khách hàng",
+      "fileName": "TC-04-step03-kiem-tra-kha-nang-nhap-lieu-truc-quan-vao-o-ten-khach-hang.png",
+      "relPath": "crm_overview/TC-04/screenshots/TC-04-step03-kiem-tra-kha-nang-nhap-lieu-truc-quan-vao-o-ten-khach-hang.png"
+    },
+    {
+      "step": 4,
+      "title": "Con trỏ Neon bấm nút Đóng modal Thêm Lead",
+      "fileName": "TC-04-step04-con-tro-neon-bam-nut-dong-modal-them-lead.png",
+      "relPath": "crm_overview/TC-04/screenshots/TC-04-step04-con-tro-neon-bam-nut-dong-modal-them-lead.png"
+    },
+    {
+      "step": 5,
+      "title": "Màn hình Tổng quan CRM phục hồi nguyên vẹn sau khi đóng modal",
+      "fileName": "TC-04-step05-man-hinh-tong-quan-crm-phuc-hoi-nguyen-ven-sau-khi-dong-modal.png",
+      "relPath": "crm_overview/TC-04/screenshots/TC-04-step05-man-hinh-tong-quan-crm-phuc-hoi-nguyen-ven-sau-khi-dong-modal.png"
+    }
+  ],
+  "attachments": {
+    "screenshots": [
+      "crm_overview/TC-04/screenshots/TC-04-step01-xac-dinh-vi-tri-nut-them-lead-mau-xanh-la.png",
+      "crm_overview/TC-04/screenshots/TC-04-step02-modal-them-lead-mo-len-voi-day-du-cac-truong-nhap-lieu.png",
+      "crm_overview/TC-04/screenshots/TC-04-step03-kiem-tra-kha-nang-nhap-lieu-truc-quan-vao-o-ten-khach-hang.png",
+      "crm_overview/TC-04/screenshots/TC-04-step04-con-tro-neon-bam-nut-dong-modal-them-lead.png",
+      "crm_overview/TC-04/screenshots/TC-04-step05-man-hinh-tong-quan-crm-phuc-hoi-nguyen-ven-sau-khi-dong-modal.png"
+    ],
+    "videos": [
+      "crm_overview/TC-04/videos/video.webm"
+    ],
+    "traces": [
+      "crm_overview/TC-04/traces/trace.zip"
+    ]
+  },
+  "timestamp": "2026-10-16T05:31:57.180Z"
+}

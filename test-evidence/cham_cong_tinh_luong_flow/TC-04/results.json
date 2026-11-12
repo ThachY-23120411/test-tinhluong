@@ -1,0 +1,45 @@
+{
+  "tcId": "TC-04",
+  "pageName": "cham_cong_tinh_luong_flow",
+  "title": "Nhân sự C&B kiểm tra công ngày và tổng hợp công tháng (Role: cuong.vu)",
+  "testStatus": "PASSED",
+  "businessStatus": "PASSED",
+  "businessNotes": "PASS - Bảng công ngày hiển thị chính xác bản ghi công của nhân viên 046 (Khớp CSDL tblHasTA)",
+  "defectEvidence": null,
+  "failureAnalysis": {},
+  "status": "PASSED",
+  "duration": "30.20s",
+  "errors": "",
+  "stepScreenshots": [
+    {
+      "step": 1,
+      "title": "Nhan su CB cuong vu dang nhap he thong",
+      "fileName": "TC-04-step01-nhan-su-cb-cuong-vu-dang-nhap-he-thong.png",
+      "relPath": "cham_cong_tinh_luong_flow/TC-04/screenshots/TC-04-step01-nhan-su-cb-cuong-vu-dang-nhap-he-thong.png"
+    },
+    {
+      "step": 2,
+      "title": "Mo bang cham cong hang ngay phan he TAD",
+      "fileName": "TC-04-step02-mo-bang-cham-cong-hang-ngay-phan-he-tad.png",
+      "relPath": "cham_cong_tinh_luong_flow/TC-04/screenshots/TC-04-step02-mo-bang-cham-cong-hang-ngay-phan-he-tad.png"
+    },
+    {
+      "step": 3,
+      "title": "Loc thong tin cham cong cua nhan vien 046",
+      "fileName": "TC-04-step03-loc-thong-tin-cham-cong-cua-nhan-vien-046.png",
+      "relPath": "cham_cong_tinh_luong_flow/TC-04/screenshots/TC-04-step03-loc-thong-tin-cham-cong-cua-nhan-vien-046.png"
+    }
+  ],
+  "attachments": {
+    "screenshots": [
+      "cham_cong_tinh_luong_flow/TC-04/screenshots/TC-04-step01-nhan-su-cb-cuong-vu-dang-nhap-he-thong.png",
+      "cham_cong_tinh_luong_flow/TC-04/screenshots/TC-04-step02-mo-bang-cham-cong-hang-ngay-phan-he-tad.png",
+      "cham_cong_tinh_luong_flow/TC-04/screenshots/TC-04-step03-loc-thong-tin-cham-cong-cua-nhan-vien-046.png"
+    ],
+    "videos": [
+      "cham_cong_tinh_luong_flow/TC-04/videos/video.webm"
+    ],
+    "traces": []
+  },
+  "timestamp": "2026-11-04T04:39:08.532Z"
+}

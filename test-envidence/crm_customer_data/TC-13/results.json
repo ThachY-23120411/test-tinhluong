@@ -1,0 +1,61 @@
+{
+  "tcId": "TC-13",
+  "pageName": "crm_customer_data",
+  "title": "Kiểm tra Chức năng Nghiệp vụ: THẨM ĐỊNH THAO TÁC XÓA & CƠ CHẾ BẢO VỆ RÀNG BUỘC DỮ LIỆU (Delete & Constraint Validation)",
+  "testStatus": "PASSED",
+  "businessStatus": "PASSED",
+  "businessNotes": "PASS - Cơ chế bảo vệ ràng buộc toàn vẹn hoạt động chuẩn xác: Dữ liệu được bảo toàn an toàn, có cảnh báo xác nhận ngăn chặn xóa nhầm",
+  "defectEvidence": null,
+  "failureAnalysis": {},
+  "status": "PASSED",
+  "duration": "19.89s",
+  "errors": "",
+  "stepScreenshots": [
+    {
+      "step": 1,
+      "title": "Xác định dòng khách hàng mục tiêu để thẩm định cơ chế bảo vệ xóa",
+      "fileName": "TC-13-step01-xac-dinh-dong-khach-hang-muc-tieu-de-tham-dinh-co-che-bao-ve-xoa.png",
+      "relPath": "crm_customer_data/TC-13/screenshots/TC-13-step01-xac-dinh-dong-khach-hang-muc-tieu-de-tham-dinh-co-che-bao-ve-xoa.png"
+    },
+    {
+      "step": 2,
+      "title": "Rà soát cơ chế xóa trên giao diện: Hệ thống bảo vệ dữ liệu ở mức phân quyền cấp cao",
+      "fileName": "TC-13-step02-ra-soat-co-che-xoa-tren-giao-dien-he-thong-bao-ve-du-lieu-o-muc-phan-quyen-cap-cao.png",
+      "relPath": "crm_customer_data/TC-13/screenshots/TC-13-step02-ra-soat-co-che-xoa-tren-giao-dien-he-thong-bao-ve-du-lieu-o-muc-phan-quyen-cap-cao.png"
+    },
+    {
+      "step": 3,
+      "title": "Kiểm tra hộp thoại xác nhận cảnh báo khi phát sinh thao tác xóa dữ liệu",
+      "fileName": "TC-13-step03-kiem-tra-hop-thoai-xac-nhan-canh-bao-khi-phat-sinh-thao-tac-xoa-du-lieu.png",
+      "relPath": "crm_customer_data/TC-13/screenshots/TC-13-step03-kiem-tra-hop-thoai-xac-nhan-canh-bao-khi-phat-sinh-thao-tac-xoa-du-lieu.png"
+    },
+    {
+      "step": 4,
+      "title": "Số lượng bản ghi trên bảng được bảo toàn trọn vẹn (20 dòng)",
+      "fileName": "TC-13-step04-so-luong-ban-ghi-tren-bang-duoc-bao-toan-tron-ven-20-dong.png",
+      "relPath": "crm_customer_data/TC-13/screenshots/TC-13-step04-so-luong-ban-ghi-tren-bang-duoc-bao-toan-tron-ven-20-dong.png"
+    },
+    {
+      "step": 5,
+      "title": "Đánh giá logic PASS: Cơ chế bảo vệ toàn vẹn ràng buộc dữ liệu khách hàng đạt chuẩn an toàn",
+      "fileName": "TC-13-step05-danh-gia-logic-pass-co-che-bao-ve-toan-ven-rang-buoc-du-lieu-khach-hang-dat-chuan-an-toan.png",
+      "relPath": "crm_customer_data/TC-13/screenshots/TC-13-step05-danh-gia-logic-pass-co-che-bao-ve-toan-ven-rang-buoc-du-lieu-khach-hang-dat-chuan-an-toan.png"
+    }
+  ],
+  "attachments": {
+    "screenshots": [
+      "crm_customer_data/TC-13/screenshots/TC-13-step01-xac-dinh-dong-khach-hang-muc-tieu-de-tham-dinh-co-che-bao-ve-xoa.png",
+      "crm_customer_data/TC-13/screenshots/TC-13-step02-ra-soat-co-che-xoa-tren-giao-dien-he-thong-bao-ve-du-lieu-o-muc-phan-quyen-cap-cao.png",
+      "crm_customer_data/TC-13/screenshots/TC-13-step03-kiem-tra-hop-thoai-xac-nhan-canh-bao-khi-phat-sinh-thao-tac-xoa-du-lieu.png",
+      "crm_customer_data/TC-13/screenshots/TC-13-step04-so-luong-ban-ghi-tren-bang-duoc-bao-toan-tron-ven-20-dong.png",
+      "crm_customer_data/TC-13/screenshots/TC-13-step05-danh-gia-logic-pass-co-che-bao-ve-toan-ven-rang-buoc-du-lieu-khach-hang-dat-chuan-an-toan.png"
+    ],
+    "videos": [
+      "crm_customer_data/TC-13/videos/video.webm"
+    ],
+    "traces": [
+      "crm_customer_data/TC-13/traces/trace.zip"
+    ]
+  },
+  "timestamp": "2026-10-28T05:26:30.839Z"
+}

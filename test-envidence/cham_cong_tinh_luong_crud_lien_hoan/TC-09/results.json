@@ -1,0 +1,31 @@
+{
+  "tcId": "TC-09",
+  "pageName": "cham_cong_tinh_luong_crud_lien_hoan",
+  "title": "Kế toán chien.nguyen nhập Thưởng KPI 1,000,000 VNĐ tại MnuPRL036 (Role: chien.nguyen)",
+  "testStatus": "PASSED",
+  "businessStatus": "PASSED",
+  "businessNotes": "Đạt yêu cầu logic nghiệp vụ mong đợi",
+  "defectEvidence": null,
+  "failureAnalysis": {},
+  "status": "PASSED",
+  "duration": "26.75s",
+  "errors": "",
+  "stepScreenshots": [
+    {
+      "step": 1,
+      "title": "Ke toan nhap thuong kpi 1 000 000 vnd mnuprl036",
+      "fileName": "TC-09-step01-ke-toan-nhap-thuong-kpi-1-000-000-vnd-mnuprl036.png",
+      "relPath": "cham_cong_tinh_luong_crud_lien_hoan/TC-09/screenshots/TC-09-step01-ke-toan-nhap-thuong-kpi-1-000-000-vnd-mnuprl036.png"
+    }
+  ],
+  "attachments": {
+    "screenshots": [
+      "cham_cong_tinh_luong_crud_lien_hoan/TC-09/screenshots/TC-09-step01-ke-toan-nhap-thuong-kpi-1-000-000-vnd-mnuprl036.png"
+    ],
+    "videos": [
+      "cham_cong_tinh_luong_crud_lien_hoan/TC-09/videos/video.webm"
+    ],
+    "traces": []
+  },
+  "timestamp": "2026-11-05T16:34:53.177Z"
+}

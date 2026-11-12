@@ -1,0 +1,22 @@
+{
+  "tcId": "TC-01",
+  "pageName": "inspect_leave",
+  "title": "Click Approve Button on Leave Form",
+  "testStatus": "PASSED",
+  "businessStatus": "PASSED",
+  "businessNotes": "Đạt yêu cầu logic nghiệp vụ mong đợi",
+  "defectEvidence": null,
+  "failureAnalysis": {},
+  "status": "PASSED",
+  "duration": "19.72s",
+  "errors": "",
+  "stepScreenshots": [],
+  "attachments": {
+    "screenshots": [],
+    "videos": [
+      "inspect_leave/TC-01/videos/video.webm"
+    ],
+    "traces": []
+  },
+  "timestamp": "2026-11-11T03:35:55.534Z"
+}

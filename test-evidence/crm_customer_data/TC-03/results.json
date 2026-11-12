@@ -4,16 +4,11 @@
   "title": "Kiểm tra Chức năng Nghiệp vụ: THÊM MỚI KHÁCH HÀNG THỰC TẾ (Create Customer End-to-End)",
   "testStatus": "PASSED",
   "businessStatus": "PASSED",
-  "businessNotes": "PASS - Chức năng Thêm mới khách hàng hoạt động hoàn hảo: API lưu phản hồi HTTP 200 (Success), dữ liệu được ghi vào DB và khách hàng \"Công ty TNHH Paradise E2E 4230\" hiển thị ngay trên DataGrid",
-  "failureAnalysis": {
-    "issue": "",
-    "expected": "",
-    "actual": "",
-    "rootCause": "",
-    "recommendation": ""
-  },
+  "businessNotes": "PASS - Chức năng Thêm mới khách hàng hoạt động hoàn hảo: API lưu phản hồi HTTP 200 (Success), dữ liệu được ghi vào DB và khách hàng \"Công ty TNHH Paradise E2E 4938\" hiển thị ngay trên DataGrid",
+  "defectEvidence": null,
+  "failureAnalysis": {},
   "status": "PASSED",
-  "duration": "41.28s",
+  "duration": "45.79s",
   "errors": "",
   "stepScreenshots": [
     {
@@ -62,5 +57,5 @@
       "crm_customer_data/TC-03/traces/trace.zip"
     ]
   },
-  "timestamp": "2026-10-16T04:42:03.441Z"
+  "timestamp": "2026-10-28T05:20:40.093Z"
 }

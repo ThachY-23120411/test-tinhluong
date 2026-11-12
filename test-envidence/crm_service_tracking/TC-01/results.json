@@ -1,0 +1,66 @@
+{
+  "tcId": "TC-01",
+  "pageName": "crm_service_tracking",
+  "title": "Khởi động, Điều hướng và Thẩm định API Nạp Danh sách Dịch vụ/Hợp đồng",
+  "testStatus": "PASSED",
+  "businessStatus": "PASSED",
+  "businessNotes": "PASS - Màn hình Theo dõi dịch vụ nạp danh sách hợp đồng thông suốt với đầy đủ dữ liệu",
+  "failureAnalysis": {
+    "issue": "",
+    "expected": "",
+    "actual": "",
+    "rootCause": "",
+    "recommendation": ""
+  },
+  "status": "PASSED",
+  "duration": "26.38s",
+  "errors": "",
+  "stepScreenshots": [
+    {
+      "step": 1,
+      "title": "Mở thành công màn hình Theo dõi dịch vụ trong CRM",
+      "fileName": "TC-01-step01-mo-thanh-cong-man-hinh-theo-doi-dich-vu-trong-crm.png",
+      "relPath": "crm_service_tracking/TC-01/screenshots/TC-01-step01-mo-thanh-cong-man-hinh-theo-doi-dich-vu-trong-crm.png"
+    },
+    {
+      "step": 2,
+      "title": "DataGrid nạp đầy đủ danh sách hợp đồng dịch vụ khách hàng",
+      "fileName": "TC-01-step02-datagrid-nap-day-du-danh-sach-hop-dong-dich-vu-khach-hang.png",
+      "relPath": "crm_service_tracking/TC-01/screenshots/TC-01-step02-datagrid-nap-day-du-danh-sach-hop-dong-dich-vu-khach-hang.png"
+    },
+    {
+      "step": 3,
+      "title": "Xác nhận hiển thị đầy đủ các cột nghiệp vụ trọng tâm",
+      "fileName": "TC-01-step03-xac-nhan-hien-thi-day-du-cac-cot-nghiep-vu-trong-tam.png",
+      "relPath": "crm_service_tracking/TC-01/screenshots/TC-01-step03-xac-nhan-hien-thi-day-du-cac-cot-nghiep-vu-trong-tam.png"
+    },
+    {
+      "step": 4,
+      "title": "Con trỏ Neon rà soát và chọn dòng dịch vụ đầu tiên",
+      "fileName": "TC-01-step04-con-tro-neon-ra-soat-va-chon-dong-dich-vu-dau-tien.png",
+      "relPath": "crm_service_tracking/TC-01/screenshots/TC-01-step04-con-tro-neon-ra-soat-va-chon-dong-dich-vu-dau-tien.png"
+    },
+    {
+      "step": 5,
+      "title": "Danh sách dịch vụ nạp hoàn chỉnh đạt chuẩn",
+      "fileName": "TC-01-step05-danh-sach-dich-vu-nap-hoan-chinh-dat-chuan.png",
+      "relPath": "crm_service_tracking/TC-01/screenshots/TC-01-step05-danh-sach-dich-vu-nap-hoan-chinh-dat-chuan.png"
+    }
+  ],
+  "attachments": {
+    "screenshots": [
+      "crm_service_tracking/TC-01/screenshots/TC-01-step01-mo-thanh-cong-man-hinh-theo-doi-dich-vu-trong-crm.png",
+      "crm_service_tracking/TC-01/screenshots/TC-01-step02-datagrid-nap-day-du-danh-sach-hop-dong-dich-vu-khach-hang.png",
+      "crm_service_tracking/TC-01/screenshots/TC-01-step03-xac-nhan-hien-thi-day-du-cac-cot-nghiep-vu-trong-tam.png",
+      "crm_service_tracking/TC-01/screenshots/TC-01-step04-con-tro-neon-ra-soat-va-chon-dong-dich-vu-dau-tien.png",
+      "crm_service_tracking/TC-01/screenshots/TC-01-step05-danh-sach-dich-vu-nap-hoan-chinh-dat-chuan.png"
+    ],
+    "videos": [
+      "crm_service_tracking/TC-01/videos/video.webm"
+    ],
+    "traces": [
+      "crm_service_tracking/TC-01/traces/trace.zip"
+    ]
+  },
+  "timestamp": "2026-10-16T05:39:41.723Z"
+}

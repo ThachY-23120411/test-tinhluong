@@ -1,0 +1,38 @@
+{
+  "tcId": "TC-06",
+  "pageName": "cham_cong_tinh_luong_toan_dien",
+  "title": "Kế toán thẩm định chốt chặn màn hình Khóa lương (Role: chien.nguyen)",
+  "testStatus": "PASSED",
+  "businessStatus": "PASSED",
+  "businessNotes": "PASS - Xác nhận kỳ lương Tháng 08/2026 đã được Khóa an toàn trong tblSal_Lock. Cổng chốt chặn Khóa lương hợp lệ, sẵn sàng phát hành Phiếu lương cá nhân ra Cổng thông tin nhân viên.",
+  "defectEvidence": null,
+  "failureAnalysis": {},
+  "status": "PASSED",
+  "duration": "43.50s",
+  "errors": "",
+  "stepScreenshots": [
+    {
+      "step": 1,
+      "title": "Ke toan chien nguyen dang nhap he thong",
+      "fileName": "TC-06-step01-ke-toan-chien-nguyen-dang-nhap-he-thong.png",
+      "relPath": "cham_cong_tinh_luong_toan_dien/TC-06/screenshots/TC-06-step01-ke-toan-chien-nguyen-dang-nhap-he-thong.png"
+    },
+    {
+      "step": 2,
+      "title": "Mo man hinh Khoa luong kiem soat cong chot chan ky luong",
+      "fileName": "TC-06-step02-mo-man-hinh-khoa-luong-kiem-soat-cong-chot-chan-ky-luong.png",
+      "relPath": "cham_cong_tinh_luong_toan_dien/TC-06/screenshots/TC-06-step02-mo-man-hinh-khoa-luong-kiem-soat-cong-chot-chan-ky-luong.png"
+    }
+  ],
+  "attachments": {
+    "screenshots": [
+      "cham_cong_tinh_luong_toan_dien/TC-06/screenshots/TC-06-step01-ke-toan-chien-nguyen-dang-nhap-he-thong.png",
+      "cham_cong_tinh_luong_toan_dien/TC-06/screenshots/TC-06-step02-mo-man-hinh-khoa-luong-kiem-soat-cong-chot-chan-ky-luong.png"
+    ],
+    "videos": [
+      "cham_cong_tinh_luong_toan_dien/TC-06/videos/video.webm"
+    ],
+    "traces": []
+  },
+  "timestamp": "2026-11-04T04:48:50.727Z"
+}

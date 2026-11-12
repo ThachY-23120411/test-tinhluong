@@ -4,16 +4,11 @@
   "title": "Kiểm tra Khởi động, Điều hướng và Thẩm định API Nạp Danh sách Khách hàng",
   "testStatus": "PASSED",
   "businessStatus": "PASSED",
-  "businessNotes": "PASS - Khởi động thành công, API nạp dữ liệu phản hồi HTTP 200 (Success) và DataGrid hiển thị 4 bản ghi khách hàng",
-  "failureAnalysis": {
-    "issue": "",
-    "expected": "",
-    "actual": "",
-    "rootCause": "",
-    "recommendation": ""
-  },
+  "businessNotes": "PASS - Khởi động thành công, API nạp dữ liệu phản hồi HTTP 200 (Success) và DataGrid hiển thị 20 bản ghi khách hàng",
+  "defectEvidence": null,
+  "failureAnalysis": {},
   "status": "PASSED",
-  "duration": "40.90s",
+  "duration": "24.22s",
   "errors": "",
   "stepScreenshots": [
     {
@@ -62,5 +57,5 @@
       "crm_customer_data/TC-01/traces/trace.zip"
     ]
   },
-  "timestamp": "2026-10-16T04:40:38.146Z"
+  "timestamp": "2026-10-28T05:19:18.371Z"
 }

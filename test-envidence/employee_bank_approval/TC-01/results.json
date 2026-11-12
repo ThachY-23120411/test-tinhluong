@@ -1,0 +1,61 @@
+{
+  "tcId": "TC-01",
+  "pageName": "employee_bank_approval",
+  "title": "Nhân viên Tai.Dang đăng nhập và cập nhật Thông tin Ngân hàng",
+  "testStatus": "PASSED",
+  "businessStatus": "PASSED",
+  "businessNotes": "PASS - Yêu cầu cập nhật thông tin ngân hàng đã được gửi thành công lên hệ thống phê duyệt",
+  "defectEvidence": null,
+  "failureAnalysis": {},
+  "status": "PASSED",
+  "duration": "46.30s",
+  "errors": "",
+  "stepScreenshots": [
+    {
+      "step": 1,
+      "title": "Đăng nhập thành công với tài khoản nhân viên Tai.Dang",
+      "fileName": "TC-01-step01-dang-nhap-thanh-cong-voi-tai-khoan-nhan-vien-tai-dang.png",
+      "relPath": "employee_bank_approval/TC-01/screenshots/TC-01-step01-dang-nhap-thanh-cong-voi-tai-khoan-nhan-vien-tai-dang.png"
+    },
+    {
+      "step": 2,
+      "title": "Mở màn hình Hồ sơ nhân viên và khu vực thông tin cá nhân",
+      "fileName": "TC-01-step02-mo-man-hinh-ho-so-nhan-vien-va-khu-vuc-thong-tin-ca-nhan.png",
+      "relPath": "employee_bank_approval/TC-01/screenshots/TC-01-step02-mo-man-hinh-ho-so-nhan-vien-va-khu-vuc-thong-tin-ca-nhan.png"
+    },
+    {
+      "step": 3,
+      "title": "Nhập đầy đủ thông tin tài khoản ngân hàng mới trên form chỉnh sửa",
+      "fileName": "TC-01-step03-nhap-day-du-thong-tin-tai-khoan-ngan-hang-moi-tren-form-chinh-sua.png",
+      "relPath": "employee_bank_approval/TC-01/screenshots/TC-01-step03-nhap-day-du-thong-tin-tai-khoan-ngan-hang-moi-tren-form-chinh-sua.png"
+    },
+    {
+      "step": 4,
+      "title": "Con trỏ chuột Neon di chuyển và nhấp nút Lưu thay đổi",
+      "fileName": "TC-01-step04-con-tro-chuot-neon-di-chuyen-va-nhap-nut-luu-thay-doi.png",
+      "relPath": "employee_bank_approval/TC-01/screenshots/TC-01-step04-con-tro-chuot-neon-di-chuyen-va-nhap-nut-luu-thay-doi.png"
+    },
+    {
+      "step": 5,
+      "title": "Hệ thống hoàn tất gửi yêu cầu phê duyệt thông tin ngân hàng",
+      "fileName": "TC-01-step05-he-thong-hoan-tat-gui-yeu-cau-phe-duyet-thong-tin-ngan-hang.png",
+      "relPath": "employee_bank_approval/TC-01/screenshots/TC-01-step05-he-thong-hoan-tat-gui-yeu-cau-phe-duyet-thong-tin-ngan-hang.png"
+    }
+  ],
+  "attachments": {
+    "screenshots": [
+      "employee_bank_approval/TC-01/screenshots/TC-01-step01-dang-nhap-thanh-cong-voi-tai-khoan-nhan-vien-tai-dang.png",
+      "employee_bank_approval/TC-01/screenshots/TC-01-step02-mo-man-hinh-ho-so-nhan-vien-va-khu-vuc-thong-tin-ca-nhan.png",
+      "employee_bank_approval/TC-01/screenshots/TC-01-step03-nhap-day-du-thong-tin-tai-khoan-ngan-hang-moi-tren-form-chinh-sua.png",
+      "employee_bank_approval/TC-01/screenshots/TC-01-step04-con-tro-chuot-neon-di-chuyen-va-nhap-nut-luu-thay-doi.png",
+      "employee_bank_approval/TC-01/screenshots/TC-01-step05-he-thong-hoan-tat-gui-yeu-cau-phe-duyet-thong-tin-ngan-hang.png"
+    ],
+    "videos": [
+      "employee_bank_approval/TC-01/videos/video.webm"
+    ],
+    "traces": [
+      "employee_bank_approval/TC-01/traces/trace.zip"
+    ]
+  },
+  "timestamp": "2026-10-28T07:19:11.656Z"
+}

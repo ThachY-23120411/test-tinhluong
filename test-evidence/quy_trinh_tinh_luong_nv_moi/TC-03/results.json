@@ -8,7 +8,7 @@
   "defectEvidence": null,
   "failureAnalysis": {},
   "status": "PASSED",
-  "duration": "64.25s",
+  "duration": "39.38s",
   "errors": "",
   "stepScreenshots": [],
   "attachments": {
@@ -18,5 +18,5 @@
     ],
     "traces": []
   },
-  "timestamp": "2026-11-11T01:14:32.484Z"
+  "timestamp": "2026-11-11T06:05:02.683Z"
 }

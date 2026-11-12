@@ -1,0 +1,32 @@
+{
+  "tcId": "TC-02",
+  "pageName": "crm_marketing_product",
+  "title": "Kiểm tra Khởi Động, Tải Giao Diện và Đối Soát Danh Sách Sản Phẩm với CSDL",
+  "testStatus": "FAILED",
+  "businessStatus": "FAILED",
+  "businessNotes": "TimeoutError: locator.waitFor: Timeout 20000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('#sp_CRM_marketing_product_html:visible, .dx-datagrid:visible').first() to be visible\u001b[22m\n",
+  "defectEvidence": {
+    "issue": "TimeoutError: locator.waitFor: Timeout 20000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('#sp_CRM_marketing_product_html:visible, .dx-datagrid:visible').first() to be visible\u001b[22m\n",
+    "expected": "Theo đặc tả chuẩn của hệ thống",
+    "actual": "Thực tế phát sinh lỗi hoặc không đạt điều kiện kiểm tra"
+  },
+  "failureAnalysis": {
+    "issue": "TimeoutError: locator.waitFor: Timeout 20000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('#sp_CRM_marketing_product_html:visible, .dx-datagrid:visible').first() to be visible\u001b[22m\n",
+    "expected": "Theo đặc tả chuẩn của hệ thống",
+    "actual": "Thực tế phát sinh lỗi hoặc không đạt điều kiện kiểm tra"
+  },
+  "status": "FAILED",
+  "duration": "57.39s",
+  "errors": "TimeoutError: locator.waitFor: Timeout 20000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('#sp_CRM_marketing_product_html:visible, .dx-datagrid:visible').first() to be visible\u001b[22m\n",
+  "stepScreenshots": [],
+  "attachments": {
+    "screenshots": [],
+    "videos": [
+      "crm_marketing_product/TC-02/videos/video.webm"
+    ],
+    "traces": [
+      "crm_marketing_product/TC-02/traces/trace.zip"
+    ]
+  },
+  "timestamp": "2026-10-28T08:02:25.689Z"
+}

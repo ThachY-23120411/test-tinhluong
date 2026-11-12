@@ -1,0 +1,61 @@
+{
+  "tcId": "TC-13",
+  "pageName": "crm_sales_pipeline",
+  "title": "Quy trình Nghiệp vụ Liên Màn hình: CHUYỂN GIAI ĐOẠN 'THÀNH CÔNG' TRÊN PIPELINE & ĐỐI SOÁT TỔNG QUAN CRM (Dashboard KPI Sync) (TC-FLOW-02)",
+  "testStatus": "PASSED",
+  "businessStatus": "PASSED",
+  "businessNotes": "PASS - Quy trình liên màn hình đạt chuẩn: Cơ hội chuyển sang Thành công trên Pipeline được ghi nhận đồng bộ, màn hình Tổng quan CRM nạp đầy đủ các chỉ số thống kê KPI chuyển đổi",
+  "defectEvidence": null,
+  "failureAnalysis": {},
+  "status": "PASSED",
+  "duration": "29.00s",
+  "errors": "",
+  "stepScreenshots": [
+    {
+      "step": 1,
+      "title": "Xác định thẻ \"Nguyễn Văn Sync 7978\" và cột giai đoạn Thành công trên bảng Pipeline",
+      "fileName": "TC-13-step01-xac-dinh-the-nguyen-van-sync-7978-va-cot-giai-doan-thanh-cong-tren-bang-pipeline.png",
+      "relPath": "crm_sales_pipeline/TC-13/screenshots/TC-13-step01-xac-dinh-the-nguyen-van-sync-7978-va-cot-giai-doan-thanh-cong-tren-bang-pipeline.png"
+    },
+    {
+      "step": 2,
+      "title": "Kéo chuyển cơ hội \"Nguyễn Văn Sync 7978\" sang trạng thái Thành công",
+      "fileName": "TC-13-step02-keo-chuyen-co-hoi-nguyen-van-sync-7978-sang-trang-thai-thanh-cong.png",
+      "relPath": "crm_sales_pipeline/TC-13/screenshots/TC-13-step02-keo-chuyen-co-hoi-nguyen-van-sync-7978-sang-trang-thai-thanh-cong.png"
+    },
+    {
+      "step": 3,
+      "title": "Mở màn hình Tổng quan CRM (Dashboard) để đối soát các chỉ số KPI",
+      "fileName": "TC-13-step03-mo-man-hinh-tong-quan-crm-dashboard-de-doi-soat-cac-chi-so-kpi.png",
+      "relPath": "crm_sales_pipeline/TC-13/screenshots/TC-13-step03-mo-man-hinh-tong-quan-crm-dashboard-de-doi-soat-cac-chi-so-kpi.png"
+    },
+    {
+      "step": 4,
+      "title": "Kiểm tra các khối chỉ số KPI và biểu đồ chuyển đổi trên Dashboard (31 khối)",
+      "fileName": "TC-13-step04-kiem-tra-cac-khoi-chi-so-kpi-va-bieu-do-chuyen-doi-tren-dashboard-31-khoi.png",
+      "relPath": "crm_sales_pipeline/TC-13/screenshots/TC-13-step04-kiem-tra-cac-khoi-chi-so-kpi-va-bieu-do-chuyen-doi-tren-dashboard-31-khoi.png"
+    },
+    {
+      "step": 5,
+      "title": "Đánh giá logic PASS: Đối soát liên màn hình giữa Sales Pipeline và Dashboard KPI đạt chuẩn",
+      "fileName": "TC-13-step05-danh-gia-logic-pass-doi-soat-lien-man-hinh-giua-sales-pipeline-va-dashboard-kpi-dat-chuan.png",
+      "relPath": "crm_sales_pipeline/TC-13/screenshots/TC-13-step05-danh-gia-logic-pass-doi-soat-lien-man-hinh-giua-sales-pipeline-va-dashboard-kpi-dat-chuan.png"
+    }
+  ],
+  "attachments": {
+    "screenshots": [
+      "crm_sales_pipeline/TC-13/screenshots/TC-13-step01-xac-dinh-the-nguyen-van-sync-7978-va-cot-giai-doan-thanh-cong-tren-bang-pipeline.png",
+      "crm_sales_pipeline/TC-13/screenshots/TC-13-step02-keo-chuyen-co-hoi-nguyen-van-sync-7978-sang-trang-thai-thanh-cong.png",
+      "crm_sales_pipeline/TC-13/screenshots/TC-13-step03-mo-man-hinh-tong-quan-crm-dashboard-de-doi-soat-cac-chi-so-kpi.png",
+      "crm_sales_pipeline/TC-13/screenshots/TC-13-step04-kiem-tra-cac-khoi-chi-so-kpi-va-bieu-do-chuyen-doi-tren-dashboard-31-khoi.png",
+      "crm_sales_pipeline/TC-13/screenshots/TC-13-step05-danh-gia-logic-pass-doi-soat-lien-man-hinh-giua-sales-pipeline-va-dashboard-kpi-dat-chuan.png"
+    ],
+    "videos": [
+      "crm_sales_pipeline/TC-13/videos/video.webm"
+    ],
+    "traces": [
+      "crm_sales_pipeline/TC-13/traces/trace.zip"
+    ]
+  },
+  "timestamp": "2026-10-21T03:14:56.600Z"
+}

@@ -1,0 +1,45 @@
+{
+  "tcId": "TC-19",
+  "pageName": "quy_trinh_tinh_luong_nv_moi",
+  "title": "fix-8 | TC-19: Replay Nhân viên test.nv đăng nhập, mở Phiếu lương qua Launchpad & cuộn quan sát (Role: test.nv)",
+  "testStatus": "PASSED",
+  "businessStatus": "PASSED",
+  "businessNotes": "Đạt yêu cầu logic nghiệp vụ mong đợi",
+  "defectEvidence": null,
+  "failureAnalysis": {},
+  "status": "PASSED",
+  "duration": "31.00s",
+  "errors": "",
+  "stepScreenshots": [
+    {
+      "step": 1,
+      "title": "Dang nhap tai khoan nhan vien test nv",
+      "fileName": "TC-19-step01-dang-nhap-tai-khoan-nhan-vien-test-nv.png",
+      "relPath": "quy_trinh_tinh_luong_nv_moi/TC-19/screenshots/TC-19-step01-dang-nhap-tai-khoan-nhan-vien-test-nv.png"
+    },
+    {
+      "step": 2,
+      "title": "Mo man hinh Phieu luong MnuPRL445 qua Launchpad",
+      "fileName": "TC-19-step02-mo-man-hinh-phieu-luong-mnuprl445-qua-launchpad.png",
+      "relPath": "quy_trinh_tinh_luong_nv_moi/TC-19/screenshots/TC-19-step02-mo-man-hinh-phieu-luong-mnuprl445-qua-launchpad.png"
+    },
+    {
+      "step": 3,
+      "title": "Cuon muot quan sat phan Luong thuc lanh tren Phieu luong",
+      "fileName": "TC-19-step03-cuon-muot-quan-sat-phan-luong-thuc-lanh-tren-phieu-luong.png",
+      "relPath": "quy_trinh_tinh_luong_nv_moi/TC-19/screenshots/TC-19-step03-cuon-muot-quan-sat-phan-luong-thuc-lanh-tren-phieu-luong.png"
+    }
+  ],
+  "attachments": {
+    "screenshots": [
+      "quy_trinh_tinh_luong_nv_moi/TC-19/screenshots/TC-19-step01-dang-nhap-tai-khoan-nhan-vien-test-nv.png",
+      "quy_trinh_tinh_luong_nv_moi/TC-19/screenshots/TC-19-step02-mo-man-hinh-phieu-luong-mnuprl445-qua-launchpad.png",
+      "quy_trinh_tinh_luong_nv_moi/TC-19/screenshots/TC-19-step03-cuon-muot-quan-sat-phan-luong-thuc-lanh-tren-phieu-luong.png"
+    ],
+    "videos": [
+      "quy_trinh_tinh_luong_nv_moi/TC-19/videos/video.webm"
+    ],
+    "traces": []
+  },
+  "timestamp": "2026-11-12T12:52:16.171Z"
+}

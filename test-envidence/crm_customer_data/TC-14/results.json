@@ -1,0 +1,61 @@
+{
+  "tcId": "TC-14",
+  "pageName": "crm_customer_data",
+  "title": "Thẩm định Hộp thoại & Biểu Mẫu Nhập Dữ Liệu Excel (Import Excel Data Validation)",
+  "testStatus": "PASSED",
+  "businessStatus": "PASSED",
+  "businessNotes": "PASS - Tiện ích Nhập dữ liệu Excel phản hồi an toàn, cấu hình tệp mẫu hợp lệ và không gây lỗi giao diện",
+  "defectEvidence": null,
+  "failureAnalysis": {},
+  "status": "PASSED",
+  "duration": "30.02s",
+  "errors": "",
+  "stepScreenshots": [
+    {
+      "step": 1,
+      "title": "Xác định vị trí chức năng Nhập dữ liệu Excel trên thanh Toolbar",
+      "fileName": "TC-14-step01-xac-dinh-vi-tri-chuc-nang-nhap-du-lieu-excel-tren-thanh-toolbar.png",
+      "relPath": "crm_customer_data/TC-14/screenshots/TC-14-step01-xac-dinh-vi-tri-chuc-nang-nhap-du-lieu-excel-tren-thanh-toolbar.png"
+    },
+    {
+      "step": 2,
+      "title": "Kích hoạt mở giao diện/hộp thoại Nhập dữ liệu danh sách khách hàng từ Excel",
+      "fileName": "TC-14-step02-kich-hoat-mo-giao-dien-hop-thoai-nhap-du-lieu-danh-sach-khach-hang-tu-excel.png",
+      "relPath": "crm_customer_data/TC-14/screenshots/TC-14-step02-kich-hoat-mo-giao-dien-hop-thoai-nhap-du-lieu-danh-sach-khach-hang-tu-excel.png"
+    },
+    {
+      "step": 3,
+      "title": "Rà soát giao diện Import: Tính năng tích hợp trơn tru trên thanh công cụ",
+      "fileName": "TC-14-step03-ra-soat-giao-dien-import-tinh-nang-tich-hop-tron-tru-tren-thanh-cong-cu.png",
+      "relPath": "crm_customer_data/TC-14/screenshots/TC-14-step03-ra-soat-giao-dien-import-tinh-nang-tich-hop-tron-tru-tren-thanh-cong-cu.png"
+    },
+    {
+      "step": 4,
+      "title": "Con trỏ chuột Neon đóng hộp thoại Import an toàn, trở về giao diện chính",
+      "fileName": "TC-14-step04-con-tro-chuot-neon-dong-hop-thoai-import-an-toan-tro-ve-giao-dien-chinh.png",
+      "relPath": "crm_customer_data/TC-14/screenshots/TC-14-step04-con-tro-chuot-neon-dong-hop-thoai-import-an-toan-tro-ve-giao-dien-chinh.png"
+    },
+    {
+      "step": 5,
+      "title": "Đánh giá logic PASS: Chức năng Nhập Excel phản hồi an toàn, layout bảng ổn định",
+      "fileName": "TC-14-step05-danh-gia-logic-pass-chuc-nang-nhap-excel-phan-hoi-an-toan-layout-bang-on-dinh.png",
+      "relPath": "crm_customer_data/TC-14/screenshots/TC-14-step05-danh-gia-logic-pass-chuc-nang-nhap-excel-phan-hoi-an-toan-layout-bang-on-dinh.png"
+    }
+  ],
+  "attachments": {
+    "screenshots": [
+      "crm_customer_data/TC-14/screenshots/TC-14-step01-xac-dinh-vi-tri-chuc-nang-nhap-du-lieu-excel-tren-thanh-toolbar.png",
+      "crm_customer_data/TC-14/screenshots/TC-14-step02-kich-hoat-mo-giao-dien-hop-thoai-nhap-du-lieu-danh-sach-khach-hang-tu-excel.png",
+      "crm_customer_data/TC-14/screenshots/TC-14-step03-ra-soat-giao-dien-import-tinh-nang-tich-hop-tron-tru-tren-thanh-cong-cu.png",
+      "crm_customer_data/TC-14/screenshots/TC-14-step04-con-tro-chuot-neon-dong-hop-thoai-import-an-toan-tro-ve-giao-dien-chinh.png",
+      "crm_customer_data/TC-14/screenshots/TC-14-step05-danh-gia-logic-pass-chuc-nang-nhap-excel-phan-hoi-an-toan-layout-bang-on-dinh.png"
+    ],
+    "videos": [
+      "crm_customer_data/TC-14/videos/video.webm"
+    ],
+    "traces": [
+      "crm_customer_data/TC-14/traces/trace.zip"
+    ]
+  },
+  "timestamp": "2026-10-28T05:27:03.048Z"
+}

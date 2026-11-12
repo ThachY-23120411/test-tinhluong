@@ -1,0 +1,61 @@
+{
+  "tcId": "TC-08",
+  "pageName": "crm_customer_data",
+  "title": "Thẩm định Bộ Điều Khiển Phân Trang (Pager: Đổi Số Dòng 5/10/50 & Chuyển Trang)",
+  "testStatus": "PASSED",
+  "businessStatus": "PASSED",
+  "businessNotes": "PASS - Thanh phân trang Pager chuyển đổi số dòng (10/50) mượt mà, layout DataGrid tự động co giãn đạt chuẩn",
+  "defectEvidence": null,
+  "failureAnalysis": {},
+  "status": "PASSED",
+  "duration": "26.58s",
+  "errors": "",
+  "stepScreenshots": [
+    {
+      "step": 1,
+      "title": "Xác định vị trí thanh phân trang Pager dưới chân bảng DataGrid",
+      "fileName": "TC-08-step01-xac-dinh-vi-tri-thanh-phan-trang-pager-duoi-chan-bang-datagrid.png",
+      "relPath": "crm_customer_data/TC-08/screenshots/TC-08-step01-xac-dinh-vi-tri-thanh-phan-trang-pager-duoi-chan-bang-datagrid.png"
+    },
+    {
+      "step": 2,
+      "title": "Hệ thống cấu hình đầy đủ các mức phân trang dữ liệu (4 tùy chọn)",
+      "fileName": "TC-08-step02-he-thong-cau-hinh-day-du-cac-muc-phan-trang-du-lieu-4-tuy-chon.png",
+      "relPath": "crm_customer_data/TC-08/screenshots/TC-08-step02-he-thong-cau-hinh-day-du-cac-muc-phan-trang-du-lieu-4-tuy-chon.png"
+    },
+    {
+      "step": 3,
+      "title": "Con trỏ Neon chọn hiển thị 10 dòng trên một trang",
+      "fileName": "TC-08-step03-con-tro-neon-chon-hien-thi-10-dong-tren-mot-trang.png",
+      "relPath": "crm_customer_data/TC-08/screenshots/TC-08-step03-con-tro-neon-chon-hien-thi-10-dong-tren-mot-trang.png"
+    },
+    {
+      "step": 4,
+      "title": "Con trỏ Neon chuyển sang chế độ hiển thị 50 dòng",
+      "fileName": "TC-08-step04-con-tro-neon-chuyen-sang-che-do-hien-thi-50-dong.png",
+      "relPath": "crm_customer_data/TC-08/screenshots/TC-08-step04-con-tro-neon-chuyen-sang-che-do-hien-thi-50-dong.png"
+    },
+    {
+      "step": 5,
+      "title": "Bộ điều khiển phân trang phản hồi tức thì và ổn định",
+      "fileName": "TC-08-step05-bo-dieu-khien-phan-trang-phan-hoi-tuc-thi-va-on-dinh.png",
+      "relPath": "crm_customer_data/TC-08/screenshots/TC-08-step05-bo-dieu-khien-phan-trang-phan-hoi-tuc-thi-va-on-dinh.png"
+    }
+  ],
+  "attachments": {
+    "screenshots": [
+      "crm_customer_data/TC-08/screenshots/TC-08-step01-xac-dinh-vi-tri-thanh-phan-trang-pager-duoi-chan-bang-datagrid.png",
+      "crm_customer_data/TC-08/screenshots/TC-08-step02-he-thong-cau-hinh-day-du-cac-muc-phan-trang-du-lieu-4-tuy-chon.png",
+      "crm_customer_data/TC-08/screenshots/TC-08-step03-con-tro-neon-chon-hien-thi-10-dong-tren-mot-trang.png",
+      "crm_customer_data/TC-08/screenshots/TC-08-step04-con-tro-neon-chuyen-sang-che-do-hien-thi-50-dong.png",
+      "crm_customer_data/TC-08/screenshots/TC-08-step05-bo-dieu-khien-phan-trang-phan-hoi-tuc-thi-va-on-dinh.png"
+    ],
+    "videos": [
+      "crm_customer_data/TC-08/videos/video.webm"
+    ],
+    "traces": [
+      "crm_customer_data/TC-08/traces/trace.zip"
+    ]
+  },
+  "timestamp": "2026-10-28T05:23:25.211Z"
+}

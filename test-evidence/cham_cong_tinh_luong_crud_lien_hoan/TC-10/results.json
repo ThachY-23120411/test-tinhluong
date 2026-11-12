@@ -1,0 +1,31 @@
+{
+  "tcId": "TC-10",
+  "pageName": "cham_cong_tinh_luong_crud_lien_hoan",
+  "title": "Kế toán chien.nguyen nhập và KHÓA Tạm ứng lương 2,000,000 VNĐ tại MnuPRL070 (Role: chien.nguyen)",
+  "testStatus": "PASSED",
+  "businessStatus": "PASSED",
+  "businessNotes": "Đạt yêu cầu logic nghiệp vụ mong đợi",
+  "defectEvidence": null,
+  "failureAnalysis": {},
+  "status": "PASSED",
+  "duration": "26.10s",
+  "errors": "",
+  "stepScreenshots": [
+    {
+      "step": 1,
+      "title": "Ke toan nhap va khoa tam ung luong 2 000 000 vnd mnuprl070",
+      "fileName": "TC-10-step01-ke-toan-nhap-va-khoa-tam-ung-luong-2-000-000-vnd-mnuprl070.png",
+      "relPath": "cham_cong_tinh_luong_crud_lien_hoan/TC-10/screenshots/TC-10-step01-ke-toan-nhap-va-khoa-tam-ung-luong-2-000-000-vnd-mnuprl070.png"
+    }
+  ],
+  "attachments": {
+    "screenshots": [
+      "cham_cong_tinh_luong_crud_lien_hoan/TC-10/screenshots/TC-10-step01-ke-toan-nhap-va-khoa-tam-ung-luong-2-000-000-vnd-mnuprl070.png"
+    ],
+    "videos": [
+      "cham_cong_tinh_luong_crud_lien_hoan/TC-10/videos/video.webm"
+    ],
+    "traces": []
+  },
+  "timestamp": "2026-11-05T16:55:26.649Z"
+}

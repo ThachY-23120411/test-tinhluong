@@ -1,0 +1,52 @@
+{
+  "tcId": "TC-08",
+  "pageName": "quy_trinh_tinh_luong_nv_moi",
+  "title": "fix-5 | TC-08: Nộp đơn Xin nghỉ phép năm AL hưởng nguyên lương ngày 24/10 (Role: test.nv)",
+  "testStatus": "PASSED",
+  "businessStatus": "PASSED",
+  "businessNotes": "PASS - Đơn Xin nghỉ phép năm AL ngày 24/10/2026 đã được nộp thành công và ghi nhận vào CSDL.",
+  "defectEvidence": null,
+  "failureAnalysis": {},
+  "status": "PASSED",
+  "duration": "67.91s",
+  "errors": "",
+  "stepScreenshots": [
+    {
+      "step": 1,
+      "title": "Mo man hinh Xin nghi phep MnuWPT315",
+      "fileName": "TC-08-step01-mo-man-hinh-xin-nghi-phep-mnuwpt315.png",
+      "relPath": "quy_trinh_tinh_luong_nv_moi/TC-08/screenshots/TC-08-step01-mo-man-hinh-xin-nghi-phep-mnuwpt315.png"
+    },
+    {
+      "step": 2,
+      "title": "Dien form Xin nghi phep nam AL ngay 24-10",
+      "fileName": "TC-08-step02-dien-form-xin-nghi-phep-nam-al-ngay-24-10.png",
+      "relPath": "quy_trinh_tinh_luong_nv_moi/TC-08/screenshots/TC-08-step02-dien-form-xin-nghi-phep-nam-al-ngay-24-10.png"
+    },
+    {
+      "step": 3,
+      "title": "Bam nut Gui don va xac nhan popup",
+      "fileName": "TC-08-step03-bam-nut-gui-don-va-xac-nhan-popup.png",
+      "relPath": "quy_trinh_tinh_luong_nv_moi/TC-08/screenshots/TC-08-step03-bam-nut-gui-don-va-xac-nhan-popup.png"
+    },
+    {
+      "step": 4,
+      "title": "Tab Lich su don Nghi phep ngay 24-10",
+      "fileName": "TC-08-step04-tab-lich-su-don-nghi-phep-ngay-24-10.png",
+      "relPath": "quy_trinh_tinh_luong_nv_moi/TC-08/screenshots/TC-08-step04-tab-lich-su-don-nghi-phep-ngay-24-10.png"
+    }
+  ],
+  "attachments": {
+    "screenshots": [
+      "quy_trinh_tinh_luong_nv_moi/TC-08/screenshots/TC-08-step01-mo-man-hinh-xin-nghi-phep-mnuwpt315.png",
+      "quy_trinh_tinh_luong_nv_moi/TC-08/screenshots/TC-08-step02-dien-form-xin-nghi-phep-nam-al-ngay-24-10.png",
+      "quy_trinh_tinh_luong_nv_moi/TC-08/screenshots/TC-08-step03-bam-nut-gui-don-va-xac-nhan-popup.png",
+      "quy_trinh_tinh_luong_nv_moi/TC-08/screenshots/TC-08-step04-tab-lich-su-don-nghi-phep-ngay-24-10.png"
+    ],
+    "videos": [
+      "quy_trinh_tinh_luong_nv_moi/TC-08/videos/video.webm"
+    ],
+    "traces": []
+  },
+  "timestamp": "2026-11-12T07:48:27.332Z"
+}

@@ -6,7 +6,7 @@ echo ====================================================================
 echo   CHAY LAI TRUC QUAN TOAN BO TRANG: login.spec.js
 echo ====================================================================
 echo.
-echo Dang khoi chay Google Chrome truc quan (Chuot Neon, slowMo 400ms)...
+echo Dang khoi chay Google Chrome truc quan (Chuot Neon, slowMo 100ms)...
 echo.
 cd /d "%~dp0..\.."
 if not exist "node_modules" (

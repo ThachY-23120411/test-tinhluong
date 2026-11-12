@@ -1,0 +1,24 @@
+{
+  "tcId": "TC-01",
+  "pageName": "inspect_noidung",
+  "title": "Inspect and capture Nội dung đăng tải live page Before and After",
+  "testStatus": "PASSED",
+  "businessStatus": "PASSED",
+  "businessNotes": "Đạt yêu cầu logic nghiệp vụ mong đợi",
+  "defectEvidence": null,
+  "failureAnalysis": {},
+  "status": "PASSED",
+  "duration": "33.88s",
+  "errors": "",
+  "stepScreenshots": [],
+  "attachments": {
+    "screenshots": [],
+    "videos": [
+      "inspect_noidung/TC-01/videos/video.webm"
+    ],
+    "traces": [
+      "inspect_noidung/TC-01/traces/trace.zip"
+    ]
+  },
+  "timestamp": "2026-10-29T01:42:43.237Z"
+}

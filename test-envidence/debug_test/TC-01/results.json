@@ -1,0 +1,24 @@
+{
+  "tcId": "TC-01",
+  "pageName": "debug_test",
+  "title": "DEBUG LIVE UI",
+  "testStatus": "PASSED",
+  "businessStatus": "PASSED",
+  "businessNotes": "Đạt yêu cầu logic nghiệp vụ mong đợi",
+  "defectEvidence": null,
+  "failureAnalysis": {},
+  "status": "PASSED",
+  "duration": "27.02s",
+  "errors": "",
+  "stepScreenshots": [],
+  "attachments": {
+    "screenshots": [],
+    "videos": [
+      "debug_test/TC-01/videos/video.webm"
+    ],
+    "traces": [
+      "debug_test/TC-01/traces/trace.zip"
+    ]
+  },
+  "timestamp": "2026-10-19T04:01:33.202Z"
+}

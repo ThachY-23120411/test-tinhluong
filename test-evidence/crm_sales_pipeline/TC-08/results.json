@@ -1,0 +1,61 @@
+{
+  "tcId": "TC-08",
+  "pageName": "crm_sales_pipeline",
+  "title": "Nghiệp vụ Xem Nhanh Chi Tiết Cơ Hội Bán Hàng (Eye Icon / Quick View Modal) (TC-BIZ-01)",
+  "testStatus": "PASSED",
+  "businessStatus": "PASSED",
+  "businessNotes": "PASS - Tính năng xem chi tiết thẻ cơ hội hoạt động chính xác, dữ liệu nạp đầy đủ và đóng mở linh hoạt không gây nghẽn",
+  "defectEvidence": null,
+  "failureAnalysis": {},
+  "status": "PASSED",
+  "duration": "25.12s",
+  "errors": "",
+  "stepScreenshots": [
+    {
+      "step": 1,
+      "title": "Xác định thẻ cơ hội và vị trí icon xem chi tiết (con mắt)",
+      "fileName": "TC-08-step01-xac-dinh-the-co-hoi-va-vi-tri-icon-xem-chi-tiet-con-mat.png",
+      "relPath": "crm_sales_pipeline/TC-08/screenshots/TC-08-step01-xac-dinh-the-co-hoi-va-vi-tri-icon-xem-chi-tiet-con-mat.png"
+    },
+    {
+      "step": 2,
+      "title": "Con trỏ Neon di chuyển và bấm vào icon xem chi tiết của thẻ",
+      "fileName": "TC-08-step02-con-tro-neon-di-chuyen-va-bam-vao-icon-xem-chi-tiet-cua-the.png",
+      "relPath": "crm_sales_pipeline/TC-08/screenshots/TC-08-step02-con-tro-neon-di-chuyen-va-bam-vao-icon-xem-chi-tiet-cua-the.png"
+    },
+    {
+      "step": 3,
+      "title": "Giao diện hiển thị chi tiết hồ sơ thông tin khách hàng và cơ hội bán hàng",
+      "fileName": "TC-08-step03-giao-dien-hien-thi-chi-tiet-ho-so-thong-tin-khach-hang-va-co-hoi-ban-hang.png",
+      "relPath": "crm_sales_pipeline/TC-08/screenshots/TC-08-step03-giao-dien-hien-thi-chi-tiet-ho-so-thong-tin-khach-hang-va-co-hoi-ban-hang.png"
+    },
+    {
+      "step": 4,
+      "title": "Đóng an toàn hộp thoại chi tiết và quay lại bảng Kanban",
+      "fileName": "TC-08-step04-dong-an-toan-hop-thoai-chi-tiet-va-quay-lai-bang-kanban.png",
+      "relPath": "crm_sales_pipeline/TC-08/screenshots/TC-08-step04-dong-an-toan-hop-thoai-chi-tiet-va-quay-lai-bang-kanban.png"
+    },
+    {
+      "step": 5,
+      "title": "Đánh giá logic PASS: Xem nhanh chi tiết thẻ mượt mà và duy trì nguyên vẹn bảng Kanban",
+      "fileName": "TC-08-step05-danh-gia-logic-pass-xem-nhanh-chi-tiet-the-muot-ma-va-duy-tri-nguyen-ven-bang-kanban.png",
+      "relPath": "crm_sales_pipeline/TC-08/screenshots/TC-08-step05-danh-gia-logic-pass-xem-nhanh-chi-tiet-the-muot-ma-va-duy-tri-nguyen-ven-bang-kanban.png"
+    }
+  ],
+  "attachments": {
+    "screenshots": [
+      "crm_sales_pipeline/TC-08/screenshots/TC-08-step01-xac-dinh-the-co-hoi-va-vi-tri-icon-xem-chi-tiet-con-mat.png",
+      "crm_sales_pipeline/TC-08/screenshots/TC-08-step02-con-tro-neon-di-chuyen-va-bam-vao-icon-xem-chi-tiet-cua-the.png",
+      "crm_sales_pipeline/TC-08/screenshots/TC-08-step03-giao-dien-hien-thi-chi-tiet-ho-so-thong-tin-khach-hang-va-co-hoi-ban-hang.png",
+      "crm_sales_pipeline/TC-08/screenshots/TC-08-step04-dong-an-toan-hop-thoai-chi-tiet-va-quay-lai-bang-kanban.png",
+      "crm_sales_pipeline/TC-08/screenshots/TC-08-step05-danh-gia-logic-pass-xem-nhanh-chi-tiet-the-muot-ma-va-duy-tri-nguyen-ven-bang-kanban.png"
+    ],
+    "videos": [
+      "crm_sales_pipeline/TC-08/videos/video.webm"
+    ],
+    "traces": [
+      "crm_sales_pipeline/TC-08/traces/trace.zip"
+    ]
+  },
+  "timestamp": "2026-10-21T03:11:57.166Z"
+}

@@ -1,0 +1,32 @@
+{
+  "tcId": "TC-11",
+  "pageName": "crm_customer_data",
+  "title": "Thẩm định Hộp thoại Thêm Dữ Liệu Mới (Đóng nút X, Phím ESC & Bắt Lỗi Bỏ Trống Trường Bắt Buộc)",
+  "testStatus": "TIMEDOUT",
+  "businessStatus": "FAILED",
+  "businessNotes": "\u001b[31mTest timeout of 60000ms exceeded.\u001b[39m\nError: page.waitForTimeout: Target page, context or browser has been closed",
+  "defectEvidence": {
+    "issue": "\u001b[31mTest timeout of 60000ms exceeded.\u001b[39m\nError: page.waitForTimeout: Target page, context or browser has been closed",
+    "expected": "Theo đặc tả chuẩn của hệ thống",
+    "actual": "Thực tế phát sinh lỗi hoặc không đạt điều kiện kiểm tra"
+  },
+  "failureAnalysis": {
+    "issue": "\u001b[31mTest timeout of 60000ms exceeded.\u001b[39m\nError: page.waitForTimeout: Target page, context or browser has been closed",
+    "expected": "Theo đặc tả chuẩn của hệ thống",
+    "actual": "Thực tế phát sinh lỗi hoặc không đạt điều kiện kiểm tra"
+  },
+  "status": "FAILED",
+  "duration": "63.73s",
+  "errors": "\u001b[31mTest timeout of 60000ms exceeded.\u001b[39m\nError: page.waitForTimeout: Target page, context or browser has been closed",
+  "stepScreenshots": [],
+  "attachments": {
+    "screenshots": [],
+    "videos": [
+      "crm_customer_data/TC-11/videos/video.webm"
+    ],
+    "traces": [
+      "crm_customer_data/TC-11/traces/trace.zip"
+    ]
+  },
+  "timestamp": "2026-10-28T05:25:34.575Z"
+}

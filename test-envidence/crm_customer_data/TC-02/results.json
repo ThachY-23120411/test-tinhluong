@@ -1,0 +1,61 @@
+{
+  "tcId": "TC-02",
+  "pageName": "crm_customer_data",
+  "title": "Kiểm tra Bộ lọc Trạng thái (Chip lọc) & Thẩm định Khôi phục Dữ liệu Đầy đủ",
+  "testStatus": "PASSED",
+  "businessStatus": "PASSED",
+  "businessNotes": "PASS - Bộ lọc chip trạng thái hoạt động chính xác: lọc đúng và khôi phục nguyên vẹn 21/21 bản ghi ban đầu",
+  "defectEvidence": null,
+  "failureAnalysis": {},
+  "status": "PASSED",
+  "duration": "22.01s",
+  "errors": "",
+  "stepScreenshots": [
+    {
+      "step": 1,
+      "title": "Giao diện ban đầu hiển thị đầy đủ 21 khách hàng trên DataGrid với chip Tất cả",
+      "fileName": "TC-02-step01-giao-dien-ban-dau-hien-thi-day-du-21-khach-hang-tren-datagrid-voi-chip-tat-ca.png",
+      "relPath": "crm_customer_data/TC-02/screenshots/TC-02-step01-giao-dien-ban-dau-hien-thi-day-du-21-khach-hang-tren-datagrid-voi-chip-tat-ca.png"
+    },
+    {
+      "step": 2,
+      "title": "Bấm chip lọc Lead: API trả HTTP 200, DataGrid hiển thị 1 khách hàng",
+      "fileName": "TC-02-step02-bam-chip-loc-lead-api-tra-http-200-datagrid-hien-thi-1-khach-hang.png",
+      "relPath": "crm_customer_data/TC-02/screenshots/TC-02-step02-bam-chip-loc-lead-api-tra-http-200-datagrid-hien-thi-1-khach-hang.png"
+    },
+    {
+      "step": 3,
+      "title": "Bấm lại Tất cả lần 2: Hiển thị 21/21 bản ghi",
+      "fileName": "TC-02-step03-bam-lai-tat-ca-lan-2-hien-thi-21-21-ban-ghi.png",
+      "relPath": "crm_customer_data/TC-02/screenshots/TC-02-step03-bam-lai-tat-ca-lan-2-hien-thi-21-21-ban-ghi.png"
+    },
+    {
+      "step": 4,
+      "title": "Đối chiếu dữ liệu: Ban đầu = 21 dòng, Sau khi khôi phục = 21 dòng",
+      "fileName": "TC-02-step04-doi-chieu-du-lieu-ban-dau-21-dong-sau-khi-khoi-phuc-21-dong.png",
+      "relPath": "crm_customer_data/TC-02/screenshots/TC-02-step04-doi-chieu-du-lieu-ban-dau-21-dong-sau-khi-khoi-phuc-21-dong.png"
+    },
+    {
+      "step": 5,
+      "title": "Đánh giá logic PASS: Khôi phục trọn vẹn 21/21 bản ghi khách hàng khi chọn lại Tất cả",
+      "fileName": "TC-02-step05-danh-gia-logic-pass-khoi-phuc-tron-ven-21-21-ban-ghi-khach-hang-khi-chon-lai-tat-ca.png",
+      "relPath": "crm_customer_data/TC-02/screenshots/TC-02-step05-danh-gia-logic-pass-khoi-phuc-tron-ven-21-21-ban-ghi-khach-hang-khi-chon-lai-tat-ca.png"
+    }
+  ],
+  "attachments": {
+    "screenshots": [
+      "crm_customer_data/TC-02/screenshots/TC-02-step01-giao-dien-ban-dau-hien-thi-day-du-21-khach-hang-tren-datagrid-voi-chip-tat-ca.png",
+      "crm_customer_data/TC-02/screenshots/TC-02-step02-bam-chip-loc-lead-api-tra-http-200-datagrid-hien-thi-1-khach-hang.png",
+      "crm_customer_data/TC-02/screenshots/TC-02-step03-bam-lai-tat-ca-lan-2-hien-thi-21-21-ban-ghi.png",
+      "crm_customer_data/TC-02/screenshots/TC-02-step04-doi-chieu-du-lieu-ban-dau-21-dong-sau-khi-khoi-phuc-21-dong.png",
+      "crm_customer_data/TC-02/screenshots/TC-02-step05-danh-gia-logic-pass-khoi-phuc-tron-ven-21-21-ban-ghi-khach-hang-khi-chon-lai-tat-ca.png"
+    ],
+    "videos": [
+      "crm_customer_data/TC-02/videos/video.webm"
+    ],
+    "traces": [
+      "crm_customer_data/TC-02/traces/trace.zip"
+    ]
+  },
+  "timestamp": "2026-10-30T04:51:40.702Z"
+}

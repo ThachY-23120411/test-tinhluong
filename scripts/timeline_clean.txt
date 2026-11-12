@@ -1,0 +1,304 @@
+[+0.732s] [Line 16680] V8Console::Error: {}
+[+1.948s] [Line 19297] CLICK on: DIV (1140,368) (dur=1617us)
+[+5.846s] [Line 26545] CLICK on: DIV (1115,449) (dur=1966us)
+[+8.348s] [Line 32839] CLICK on: BUTTON id='submitLogin' class='btn login-button w-100 py-2 mb-4' (1099,557) (dur=2766us)
+[+8.912s] [Line 40308] API POST https://paradisehrm.com/Tai3/hpa/paradise2 | reqId=28072.9827 | status=200 | len=145 | fail=false | stack=window.fetch@44(70469) <- k@4(70490) <- anon@3(70506) <- Qr@3(70506) <- Po@3(70506)
+[+8.990s] [Line 45145] V8Console::Log: {}
+[+9.143s] [Line 47613] API POST https://paradisehrm.com/Tai3/hpa/paradise2 | reqId=28072.9962 | status=200 | len=31788 | fail=false | stack=window.fetch@44(70469) <- k@4(70490) <- anon@3(70506) <- Qr@3(70506) <- Po@3(70506)
+[+9.152s] [Line 47708] API POST https://paradisehrm.com/Tai3/hpa/paradise2 | reqId=28072.9963 | status=200 | len=1107 | fail=false | stack=window.fetch@44(70469) <- k@4(70490) <- anon@3(70506) <- Qr@3(70506) <- Po@3(70506)
+[+9.190s] [Line 48424] V8Console::Log: {}
+[+9.190s] [Line 48440] V8Console::Log: {}
+[+9.190s] [Line 48458] V8Console::Warn: {}
+[+9.300s] [Line 50363] V8Console::Log: {}
+[+9.304s] [Line 50419] ConsoleMessage::Error: {"message":{"content":"Permissions policy violation: unload is not allowed in this document.","url":"https://paradisehrm.com/Tai3/Scripts/paradise.jquery.min.js?26a2e2805f77d5369bbd39db02c22ae1"},"source":"Violation"}
+[+9.492s] [Line 52413] API POST https://paradisehrm.com/Tai3/hpa/paradise2 | reqId=28072.9975 | status=200 | len=18477 | fail=false | stack=window.fetch@44(70469) <- k@4(70490) <- anon@3(70506) <- Qr@3(70506) <- Po@3(70506)
+[+9.601s] [Line 53540] API POST https://paradisehrm.com/Tai3/hpa/paradise2 | reqId=28072.9977 | status=200 | len=77577 | fail=false | stack=window.fetch@44(70469) <- k@4(70490) <- anon@3(70506) <- Qr@3(70506) <- Po@3(70506)
+[+9.604s] [Line 53559] V8Console::Log: {}
+[+9.625s] [Line 53708] V8Console::Log: {}
+[+9.636s] [Line 53854] API POST https://paradisehrm.com/Tai3/hpa/paradise2 | reqId=28072.9979 | status=200 | len=60 | fail=false | stack=window.fetch@44(70469) <- k@4(70490) <- anon@3(70506) <- Qr@3(70506) <- Po@3(70506)
+[+9.637s] [Line 53865] V8Console::Log: {}
+[+9.658s] [Line 54317] API POST https://paradisehrm.com/Tai3/hpa/paradise2 | reqId=28072.9980 | status=200 | len=1241 | fail=false | stack=window.fetch@44(70469) <- k@4(70490) <- anon@3(70506) <- Qr@3(70506) <- Po@3(70506)
+[+9.659s] [Line 54333] API POST https://paradisehrm.com/Tai3/hpa/paradise2 | reqId=28072.9981 | status=200 | len=542 | fail=false | stack=window.fetch@44(70469) <- k@4(70490) <- anon@3(70506) <- Qr@3(70506) <- Po@3(70506)
+[+9.660s] [Line 54347] V8Console::Log: {}
+[+9.663s] [Line 54421] API POST https://paradisehrm.com/Tai3/hpa/paradise2 | reqId=28072.9982 | status=200 | len=1629 | fail=false | stack=window.fetch@44(70469) <- k@4(70490) <- anon@3(70506) <- Qr@3(70506) <- Po@3(70506)
+[+9.667s] [Line 54460] API POST https://paradisehrm.com/Tai3/hpa/paradise2 | reqId=28072.9983 | status=200 | len=145 | fail=false | stack=window.fetch@44(70469) <- k@4(70490) <- anon@3(70506) <- Qr@3(70506) <- Po@3(70506)
+[+9.722s] [Line 55283] V8Console::Log: {}
+[+9.722s] [Line 55295] V8Console::Log: {}
+[+9.723s] [Line 55318] V8Console::Log: {}
+[+9.740s] [Line 55537] V8Console::Log: {}
+[+9.742s] [Line 55559] API POST https://paradisehrm.com/Tai3/hpa/paradise2 | reqId=28072.9985 | status=200 | len=1629 | fail=false | stack=window.fetch@44(70469) <- k@4(70490) <- anon@3(70506) <- Qr@3(70506) <- Po@3(70506)
+[+9.759s] [Line 55976] API POST https://paradisehrm.com/Tai3/hpa/paradise2 | reqId=28072.9986 | status=200 | len=17727 | fail=false | stack=window.fetch@44(70469) <- k@4(70490) <- anon@3(70506) <- Qr@3(70506) <- Po@3(70506)
+[+9.767s] [Line 56170] V8Console::Log: {}
+[+9.921s] [Line 57243] API POST https://paradisehrm.com/Tai3/hpa/paradise2 | reqId=28072.9987 | status=200 | len=2379 | fail=false | stack=window.fetch@44(70469) <- k@4(70490) <- anon@3(70506) <- Qr@3(70506) <- Po@3(70506)
+[+9.934s] [Line 57602] API POST https://paradisehrm.com/Tai3/hpa/paradise2 | reqId=28072.9988 | status=200 | len=9117 | fail=false | stack=window.fetch@44(70469) <- k@4(70490) <- anon@3(70506) <- Qr@3(70506) <- Po@3(70506)
+[+9.941s] [Line 57854] V8Console::Log: {}
+[+9.942s] [Line 57861] V8Console::Log: {}
+[+9.942s] [Line 57879] V8Console::Log: {}
+[+12.611s] [Line 67786] CLICK on: I class='bi bi-windows' (292,29) (dur=18479us)
+[+13.363s] [Line 70818] CLICK on: DIV (736,85) (dur=5634us)
+[+16.423s] [Line 84180] CLICK on: I class='bi bi-pencil-square' (172,190) (dur=24194us)
+[+16.440s] [Line 84335] V8Console::Log: {}
+[+16.446s] [Line 84434] V8Console::Log: {}
+[+16.465s] [Line 84802] API POST https://paradisehrm.com/Tai3/hpa/paradise2 | reqId=28072.9992 | status=200 | len=145 | fail=false | stack=window.fetch@44(70469) <- k@4(70490) <- anon@3(70506) <- Qr@3(70506) <- Po@3(70506)
+[+16.648s] [Line 86128] API POST https://paradisehrm.com/Tai3/hpa/paradise2 | reqId=28072.9993 | status=200 | len=3671 | fail=false | stack=window.fetch@44(70469) <- k@4(70490) <- anon@3(70506) <- Qr@3(70506) <- Po@3(70506)
+[+16.674s] [Line 86800] V8Console::Log: {}
+[+16.677s] [Line 86819] API POST https://paradisehrm.com/Tai3/hpa/paradise2 | reqId=28072.9994 | status=200 | len=1629 | fail=false | stack=window.fetch@44(70469) <- k@4(70490) <- anon@3(70506) <- Qr@3(70506) <- Po@3(70506)
+[+16.704s] [Line 87183] V8Console::Log: {}
+[+16.704s] [Line 87191] V8Console::Log: {}
+[+16.704s] [Line 87206] V8Console::Log: {}
+[+16.816s] [Line 88134] V8Console::Log: {}
+[+16.820s] [Line 88175] API POST https://paradisehrm.com/Tai3/hpa/paradise2 | reqId=28072.9995 | status=200 | len=4382 | fail=false | stack=window.fetch@44(70469) <- k@4(70490) <- anon@3(70506) <- Qr@3(70506) <- Po@3(70506)
+[+16.990s] [Line 89496] API POST https://paradisehrm.com/Tai3/hpa/paradise2 | reqId=28072.9996 | status=200 | len=42 | fail=false | stack=window.fetch@44(70469) <- k@4(70490) <- anon@3(70506) <- Qr@3(70506) <- Po@3(70506)
+[+16.994s] [Line 89520] API POST https://paradisehrm.com/Tai3/hpa/paradise2 | reqId=28072.9997 | status=200 | len=42 | fail=false | stack=window.fetch@44(70469) <- k@4(70490) <- anon@3(70506) <- Qr@3(70506) <- Po@3(70506)
+[+16.998s] [Line 89568] API POST https://paradisehrm.com/Tai3/hpa/paradise2 | reqId=28072.9998 | status=200 | len=42 | fail=false | stack=window.fetch@44(70469) <- k@4(70490) <- anon@3(70506) <- Qr@3(70506) <- Po@3(70506)
+[+17.000s] [Line 89596] API POST https://paradisehrm.com/Tai3/hpa/paradise2 | reqId=28072.9999 | status=200 | len=42 | fail=false | stack=window.fetch@44(70469) <- k@4(70490) <- anon@3(70506) <- Qr@3(70506) <- Po@3(70506)
+[+17.004s] [Line 89632] API POST https://paradisehrm.com/Tai3/hpa/paradise2 | reqId=28072.10000 | status=200 | len=47625 | fail=false | stack=window.fetch@44(70469) <- k@4(70490) <- anon@3(70506) <- Qr@3(70506) <- Po@3(70506)
+[+17.012s] [Line 89703] V8Console::Log: {}
+[+25.499s] [Line 110725] CLICK on: DIV class='text-success' (654,218) (dur=21401us)
+[+25.501s] [Line 110798] V8Console::Log: {}
+[+25.502s] [Line 110812] V8Console::Log: {}
+[+25.513s] [Line 110935] V8Console::Log: {}
+[+25.517s] [Line 111043] V8Console::Log: {}
+[+25.533s] [Line 111479] V8Console::Log: {}
+[+25.538s] [Line 111559] API POST https://paradisehrm.com/Tai3/hpa/paradise2 | reqId=28072.10007 | status=200 | len=1225 | fail=false | stack=window.fetch@44(70469) <- k@4(70490) <- anon@3(70506) <- Qr@3(70506) <- Po@3(70506)
+[+25.538s] [Line 111569] V8Console::Log: {}
+[+25.554s] [Line 111731] API POST https://paradisehrm.com/Tai3/hpa/paradise2 | reqId=28072.10008 | status=200 | len=572 | fail=false | stack=window.fetch@44(70469) <- k@4(70490) <- anon@3(70506) <- Qr@3(70506) <- Po@3(70506)
+[+25.580s] [Line 111824] API POST https://paradisehrm.com/Tai3/hpa/paradise2 | reqId=28072.10009 | status=200 | len=146 | fail=false | stack=window.fetch@44(70469) <- k@4(70490) <- anon@3(70506) <- Qr@3(70506) <- Po@3(70506)
+[+25.698s] [Line 113015] V8Console::Log: {}
+[+25.702s] [Line 113035] API POST https://paradisehrm.com/Tai3/hpa/paradise2 | reqId=28072.10010 | status=200 | len=1629 | fail=false | stack=window.fetch@44(70469) <- k@4(70490) <- anon@3(70506) <- Qr@3(70506) <- Po@3(70506)
+[+25.754s] [Line 114170] V8Console::Log: {}
+[+25.754s] [Line 114177] V8Console::Log: {}
+[+25.755s] [Line 114185] V8Console::Log: {}
+[+25.842s] [Line 115009] V8Console::Log: {}
+[+25.843s] [Line 115034] V8Console::Log: {}
+[+25.843s] [Line 115042] V8Console::Log: {}
+[+25.849s] [Line 115103] API POST https://paradisehrm.com/Tai3/hpa/paradise2 | reqId=28072.10011 | status=200 | len=697 | fail=false | stack=window.fetch@44(70469) <- k@4(70490) <- anon@3(70506) <- Qr@3(70506) <- Po@3(70506)
+[+25.877s] [Line 115435] V8Console::Log: {}
+[+25.882s] [Line 115482] API POST https://paradisehrm.com/Tai3/hpa/paradise2 | reqId=28072.10012 | status=200 | len=700 | fail=false | stack=window.fetch@44(70469) <- k@4(70490) <- anon@3(70506) <- Qr@3(70506) <- Po@3(70506)
+[+25.948s] [Line 115651] V8Console::Log: {}
+[+25.948s] [Line 115663] V8Console::Log: {}
+[+25.950s] [Line 115689] V8Console::Log: {}
+[+25.950s] [Line 115696] V8Console::Log: {}
+[+25.963s] [Line 115957] API POST https://paradisehrm.com/Tai3/hpa/paradise2 | reqId=28072.10013 | status=200 | len=60 | fail=false | stack=window.fetch@44(70469) <- k@4(70490) <- anon@3(70506) <- Qr@3(70506) <- Po@3(70506)
+[+25.965s] [Line 115974] V8Console::Log: {}
+[+25.967s] [Line 116025] API POST https://paradisehrm.com/Tai3/hpa/paradise2 | reqId=28072.10014 | status=200 | len=1825 | fail=false | stack=window.fetch@44(70469) <- k@4(70490) <- anon@3(70506) <- Qr@3(70506) <- Po@3(70506)
+[+25.970s] [Line 116050] V8Console::Log: {}
+[+26.073s] [Line 116885] V8Console::Log: {}
+[+26.074s] [Line 116913] API POST https://paradisehrm.com/Tai3/hpa/paradise2 | reqId=28072.10018 | status=200 | len=700 | fail=false | stack=window.fetch@44(70469) <- k@4(70490) <- anon@3(70506) <- Qr@3(70506) <- Po@3(70506)
+[+26.133s] [Line 117356] API POST https://paradisehrm.com/Tai3/hpa/paradise2 | reqId=28072.10019 | status=200 | len=42 | fail=false | stack=window.fetch@44(70469) <- k@4(70490) <- anon@3(70506) <- Qr@3(70506) <- Po@3(70506)
+[+26.143s] [Line 117539] API POST https://paradisehrm.com/Tai3/hpa/paradise2 | reqId=28072.10020 | status=200 | len=60 | fail=false | stack=window.fetch@44(70469) <- k@4(70490) <- anon@3(70506) <- Qr@3(70506) <- Po@3(70506)
+[+26.154s] [Line 117617] V8Console::Log: {}
+[+26.154s] [Line 117637] V8Console::Log: {}
+[+26.167s] [Line 117803] V8Console::Log: {}
+[+26.168s] [Line 117830] V8Console::Log: {}
+[+26.168s] [Line 117836] V8Console::Log: {}
+[+26.168s] [Line 117847] V8Console::Log: {}
+[+26.168s] [Line 117859] V8Console::Log: {}
+[+26.168s] [Line 117919] V8Console::Log: {}
+[+26.169s] [Line 118066] API POST https://paradisehrm.com/Tai3/hpa/paradise2 | reqId=28072.10021 | status=200 | len=549 | fail=false | stack=window.fetch@44(70469) <- k@4(70490) <- anon@3(70506) <- Qr@3(70506) <- Po@3(70506)
+[+26.188s] [Line 118603] API POST https://paradisehrm.com/Tai3/hpa/paradise2 | reqId=28072.10024 | status=200 | len=17727 | fail=false | stack=window.fetch@44(70469) <- k@4(70490) <- anon@3(70506) <- Qr@3(70506) <- Po@3(70506)
+[+26.254s] [Line 119216] API POST https://paradisehrm.com/Tai3/hpa/paradise2 | reqId=28072.10031 | status=200 | len=31649 | fail=false | stack=window.fetch@44(70469) <- k@4(70490) <- anon@3(70506) <- Qr@3(70506) <- Po@3(70506)
+[+26.291s] [Line 119657] V8Console::Log: {}
+[+26.384s] [Line 120152] API POST https://paradisehrm.com/Tai3/hpa/paradise2 | reqId=28072.10036 | status=200 | len=42 | fail=false | stack=window.fetch@44(70469) <- k@4(70490) <- anon@3(70506) <- Qr@3(70506) <- Po@3(70506)
+[+26.458s] [Line 120971] API POST https://paradisehrm.com/Tai3/hpa/paradise2 | reqId=28072.10040 | status=200 | len=31649 | fail=false | stack=window.fetch@44(70469) <- k@4(70490) <- anon@3(70506) <- Qr@3(70506) <- Po@3(70506)
+[+26.525s] [Line 121572] API POST https://paradisehrm.com/Tai3/hpa/paradise2 | reqId=28072.10044 | status=200 | len=17727 | fail=false | stack=window.fetch@44(70469) <- k@4(70490) <- anon@3(70506) <- Qr@3(70506) <- Po@3(70506)
+[+26.588s] [Line 122213] API POST https://paradisehrm.com/Tai3/hpa/paradise2 | reqId=28072.10048 | status=200 | len=47625 | fail=false | stack=window.fetch@44(70469) <- k@4(70490) <- anon@3(70506) <- Qr@3(70506) <- Po@3(70506)
+[+28.533s] [Line 127759] CLICK on: #text (625,711) (dur=11012us)
+[+29.859s] [Line 133255] CLICK on: #text (828,554) (dur=16807us)
+[+29.860s] [Line 133330] INLINE_EXEC (75249): HandleApproveLeaveRequest()
+[+29.863s] [Line 133348] API POST https://paradisehrm.com/Tai3/hpa/paradise2 | reqId=28072.10052 | status=200 | len=109214 | fail=false | stack=window.fetch@44(70469) <- k@4(70490) <- anon@3(70506) <- Qr@3(70506) <- Po@3(70506)
+[+42.011s] [Line 152299] V8Console::Log: {}
+[+42.056s] [Line 152457] API POST https://paradisehrm.com/Tai3/hpa/paradise2 | reqId=28072.10053 | status=200 | len=392 | fail=false | stack=window.fetch@44(70469) <- k@4(70490) <- anon@3(70506) <- Qr@3(70506) <- Po@3(70506)
+[+42.095s] [Line 153094] V8Console::Log: {}
+[+42.099s] [Line 153151] API POST https://paradisehrm.com/Tai3/hpa/paradise2 | reqId=28072.10054 | status=200 | len=1785 | fail=false | stack=window.fetch@44(70469) <- k@4(70490) <- anon@3(70506) <- Qr@3(70506) <- Po@3(70506)
+[+42.103s] [Line 153178] API POST https://paradisehrm.com/Tai3/hpa/paradise2 | reqId=28072.10055 | status=200 | len=698 | fail=false | stack=window.fetch@44(70469) <- k@4(70490) <- anon@3(70506) <- Qr@3(70506) <- Po@3(70506)
+[+42.276s] [Line 154243] V8Console::Log: {}
+[+42.277s] [Line 154273] API POST https://paradisehrm.com/Tai3/hpa/paradise2 | reqId=28072.10056 | status=200 | len=698 | fail=false | stack=window.fetch@44(70469) <- k@4(70490) <- anon@3(70506) <- Qr@3(70506) <- Po@3(70506)
+[+42.357s] [Line 154567] API POST https://paradisehrm.com/Tai3/hpa/paradise2 | reqId=28072.10057 | status=200 | len=60 | fail=false | stack=window.fetch@44(70469) <- k@4(70490) <- anon@3(70506) <- Qr@3(70506) <- Po@3(70506)
+[+42.359s] [Line 154582] V8Console::Log: {}
+[+42.425s] [Line 155131] API POST https://paradisehrm.com/Tai3/hpa/paradise2 | reqId=28072.10059 | status=200 | len=60 | fail=false | stack=window.fetch@44(70469) <- k@4(70490) <- anon@3(70506) <- Qr@3(70506) <- Po@3(70506)
+[+42.443s] [Line 155222] V8Console::Log: {}
+[+42.444s] [Line 155244] V8Console::Log: {}
+[+42.447s] [Line 155278] V8Console::Log: {}
+[+42.447s] [Line 155283] V8Console::Log: {}
+[+42.448s] [Line 155290] V8Console::Log: {}
+[+42.448s] [Line 155300] V8Console::Log: {}
+[+42.448s] [Line 155307] V8Console::Log: {}
+[+42.448s] [Line 155333] V8Console::Log: {}
+[+42.451s] [Line 155405] API POST https://paradisehrm.com/Tai3/hpa/paradise2 | reqId=28072.10060 | status=200 | len=392 | fail=false | stack=window.fetch@44(70469) <- k@4(70490) <- anon@3(70506) <- Qr@3(70506) <- Po@3(70506)
+[+42.708s] [Line 156695] API POST https://paradisehrm.com/Tai3/hpa/paradise2 | reqId=28072.10066 | status=200 | len=47625 | fail=false | stack=window.fetch@44(70469) <- k@4(70490) <- anon@3(70506) <- Qr@3(70506) <- Po@3(70506)
+[+42.710s] [Line 156707] V8Console::Log: {}
+[+42.807s] [Line 157041] API POST https://paradisehrm.com/Tai3/hpa/paradise2 | reqId=28072.10067 | status=200 | len=17727 | fail=false | stack=window.fetch@44(70469) <- k@4(70490) <- anon@3(70506) <- Qr@3(70506) <- Po@3(70506)
+[+42.946s] [Line 157749] API POST https://paradisehrm.com/Tai3/hpa/paradise2 | reqId=28072.10072 | status=200 | len=31649 | fail=false | stack=window.fetch@44(70469) <- k@4(70490) <- anon@3(70506) <- Qr@3(70506) <- Po@3(70506)
+[+42.948s] [Line 157775] API POST https://paradisehrm.com/Tai3/hpa/paradise2 | reqId=28072.10073 | status=200 | len=47625 | fail=false | stack=window.fetch@44(70469) <- k@4(70490) <- anon@3(70506) <- Qr@3(70506) <- Po@3(70506)
+[+43.006s] [Line 158655] API POST https://paradisehrm.com/Tai3/hpa/paradise2 | reqId=28072.10080 | status=200 | len=17727 | fail=false | stack=window.fetch@44(70469) <- k@4(70490) <- anon@3(70506) <- Qr@3(70506) <- Po@3(70506)
+[+43.054s] [Line 159269] API POST https://paradisehrm.com/Tai3/hpa/paradise2 | reqId=28072.10085 | status=200 | len=31649 | fail=false | stack=window.fetch@44(70469) <- k@4(70490) <- anon@3(70506) <- Qr@3(70506) <- Po@3(70506)
+[+50.178s] [Line 172218] CLICK on: #text (972,125) (dur=9900us)
+[+50.180s] [Line 172305] V8Console::Log: {}
+[+50.181s] [Line 172373] V8Console::Log: {}
+[+50.182s] [Line 172445] API POST https://paradisehrm.com/Tai3/hpa/paradise2 | reqId=28072.10088 | status=200 | len=12512 | fail=false | stack=window.fetch@44(70469) <- k@4(70490) <- anon@3(70506) <- Qr@3(70506) <- Po@3(70506)
+[+50.284s] [Line 173198] V8Console::Log: {}
+[+50.284s] [Line 173206] V8Console::Log: {}
+[+50.285s] [Line 173222] V8Console::Log: {}
+[+50.291s] [Line 173401] V8Console::Log: {}
+[+55.546s] [Line 181789] CLICK on: #text (619,124) (dur=8590us)
+[+78.571s] [Line 204822] CLICK on: #text (134,166) (dur=4132us)
+[+78.573s] [Line 204915] V8Console::Log: {}
+[+78.616s] [Line 205870] V8Console::Log: {}
+[+78.620s] [Line 206125] API POST https://paradisehrm.com/Tai3/hpa/paradise2 | reqId=28072.10090 | status=200 | len=1225 | fail=false | stack=window.fetch@44(70469) <- k@4(70490) <- anon@3(70506) <- Qr@3(70506) <- Po@3(70506)
+[+78.621s] [Line 206136] V8Console::Log: {}
+[+78.645s] [Line 206411] API POST https://paradisehrm.com/Tai3/hpa/paradise2 | reqId=28072.10091 | status=200 | len=146 | fail=false | stack=window.fetch@44(70469) <- k@4(70490) <- anon@3(70506) <- Qr@3(70506) <- Po@3(70506)
+[+78.696s] [Line 207180] V8Console::Log: {}
+[+78.697s] [Line 207218] API POST https://paradisehrm.com/Tai3/hpa/paradise2 | reqId=28072.10092 | status=200 | len=1629 | fail=false | stack=window.fetch@44(70469) <- k@4(70490) <- anon@3(70506) <- Qr@3(70506) <- Po@3(70506)
+[+78.756s] [Line 208389] V8Console::Log: {}
+[+78.756s] [Line 208415] V8Console::Log: {}
+[+78.756s] [Line 208426] V8Console::Log: {}
+[+78.756s] [Line 208441] V8Console::Log: {}
+[+78.757s] [Line 208450] V8Console::Log: {}
+[+78.757s] [Line 208466] V8Console::Log: {}
+[+78.760s] [Line 208529] API POST https://paradisehrm.com/Tai3/hpa/paradise2 | reqId=28072.10093 | status=200 | len=697 | fail=false | stack=window.fetch@44(70469) <- k@4(70490) <- anon@3(70506) <- Qr@3(70506) <- Po@3(70506)
+[+78.787s] [Line 208932] V8Console::Log: {}
+[+78.788s] [Line 208962] API POST https://paradisehrm.com/Tai3/hpa/paradise2 | reqId=28072.10094 | status=200 | len=677 | fail=false | stack=window.fetch@44(70469) <- k@4(70490) <- anon@3(70506) <- Qr@3(70506) <- Po@3(70506)
+[+78.855s] [Line 209422] API POST https://paradisehrm.com/Tai3/hpa/paradise2 | reqId=28072.10095 | status=200 | len=60 | fail=false | stack=window.fetch@44(70469) <- k@4(70490) <- anon@3(70506) <- Qr@3(70506) <- Po@3(70506)
+[+78.865s] [Line 209549] V8Console::Log: {}
+[+78.872s] [Line 209918] V8Console::Log: {}
+[+78.872s] [Line 209927] V8Console::Log: {}
+[+79.002s] [Line 210862] API POST https://paradisehrm.com/Tai3/hpa/paradise2 | reqId=28072.10099 | status=200 | len=17727 | fail=false | stack=window.fetch@44(70469) <- k@4(70490) <- anon@3(70506) <- Qr@3(70506) <- Po@3(70506)
+[+79.161s] [Line 212006] API POST https://paradisehrm.com/Tai3/hpa/paradise2 | reqId=28072.10103 | status=200 | len=46356 | fail=false | stack=window.fetch@44(70469) <- k@4(70490) <- anon@3(70506) <- Qr@3(70506) <- Po@3(70506)
+[+79.219s] [Line 212884] API POST https://paradisehrm.com/Tai3/hpa/paradise2 | reqId=28072.10107 | status=200 | len=10070 | fail=false | stack=window.fetch@44(70469) <- k@4(70490) <- anon@3(70506) <- Qr@3(70506) <- Po@3(70506)
+[+83.546s] [Line 223280] CLICK on: #text (430,87) (dur=28677us)
+[+83.555s] [Line 223394] V8Console::Log: {}
+[+83.566s] [Line 223555] API POST https://paradisehrm.com/Tai3/hpa/paradise2 | reqId=28072.10111 | status=200 | len=60 | fail=false | stack=window.fetch@44(70469) <- k@4(70490) <- anon@3(70506) <- Qr@3(70506) <- Po@3(70506)
+[+86.354s] [Line 230982] CLICK on: I id='reloadData' class='bi bi-arrow-repeat reload-icon-home' (1187,109) (dur=8042us)
+[+86.356s] [Line 231060] V8Console::Log: {}
+[+86.358s] [Line 231082] API POST https://paradisehrm.com/Tai3/hpa/paradise2 | reqId=28072.10112 | status=200 | len=3692 | fail=false | stack=window.fetch@44(70469) <- k@4(70490) <- anon@3(70506) <- Qr@3(70506) <- Po@3(70506)
+[+86.471s] [Line 231439] API POST https://paradisehrm.com/Tai3/hpa/paradise2 | reqId=28072.10113 | status=200 | len=42 | fail=false | stack=window.fetch@44(70469) <- k@4(70490) <- anon@3(70506) <- Qr@3(70506) <- Po@3(70506)
+[+86.473s] [Line 231495] API POST https://paradisehrm.com/Tai3/hpa/paradise2 | reqId=28072.10114 | status=200 | len=42 | fail=false | stack=window.fetch@44(70469) <- k@4(70490) <- anon@3(70506) <- Qr@3(70506) <- Po@3(70506)
+[+86.475s] [Line 231523] API POST https://paradisehrm.com/Tai3/hpa/paradise2 | reqId=28072.10115 | status=200 | len=42 | fail=false | stack=window.fetch@44(70469) <- k@4(70490) <- anon@3(70506) <- Qr@3(70506) <- Po@3(70506)
+[+86.476s] [Line 231552] API POST https://paradisehrm.com/Tai3/hpa/paradise2 | reqId=28072.10116 | status=200 | len=47625 | fail=false | stack=window.fetch@44(70469) <- k@4(70490) <- anon@3(70506) <- Qr@3(70506) <- Po@3(70506)
+[+90.658s] [Line 240641] CLICK on: DIV class='text-success' (894,211) (dur=37131us)
+[+90.661s] [Line 240722] V8Console::Log: {}
+[+90.662s] [Line 240728] V8Console::Log: {}
+[+90.679s] [Line 240879] V8Console::Log: {}
+[+90.686s] [Line 240957] API POST https://paradisehrm.com/Tai3/hpa/paradise2 | reqId=28072.10122 | status=200 | len=60 | fail=false | stack=window.fetch@44(70469) <- k@4(70490) <- anon@3(70506) <- Qr@3(70506) <- Po@3(70506)
+[+90.687s] [Line 240972] V8Console::Log: {}
+[+90.723s] [Line 241547] API POST https://paradisehrm.com/Tai3/hpa/paradise2 | reqId=28072.10124 | status=200 | len=670 | fail=false | stack=window.fetch@44(70469) <- k@4(70490) <- anon@3(70506) <- Qr@3(70506) <- Po@3(70506)
+[+90.726s] [Line 241571] API POST https://paradisehrm.com/Tai3/hpa/paradise2 | reqId=28072.10125 | status=200 | len=948 | fail=false | stack=window.fetch@44(70469) <- k@4(70490) <- anon@3(70506) <- Qr@3(70506) <- Po@3(70506)
+[+90.727s] [Line 241591] API POST https://paradisehrm.com/Tai3/hpa/paradise2 | reqId=28072.10126 | status=200 | len=375 | fail=false | stack=window.fetch@44(70469) <- k@4(70490) <- anon@3(70506) <- Qr@3(70506) <- Po@3(70506)
+[+90.733s] [Line 241615] API POST https://paradisehrm.com/Tai3/hpa/paradise2 | reqId=28072.10127 | status=200 | len=1108 | fail=false | stack=window.fetch@44(70469) <- k@4(70490) <- anon@3(70506) <- Qr@3(70506) <- Po@3(70506)
+[+90.748s] [Line 241692] API POST https://paradisehrm.com/Tai3/hpa/paradise2 | reqId=28072.10128 | status=200 | len=145 | fail=false | stack=window.fetch@44(70469) <- k@4(70490) <- anon@3(70506) <- Qr@3(70506) <- Po@3(70506)
+[+90.785s] [Line 242501] API POST https://paradisehrm.com/Tai3/hpa/paradise2 | reqId=28072.10129 | status=200 | len=700 | fail=false | stack=window.fetch@44(70469) <- k@4(70490) <- anon@3(70506) <- Qr@3(70506) <- Po@3(70506)
+[+90.789s] [Line 242534] API POST https://paradisehrm.com/Tai3/hpa/paradise2 | reqId=28072.10130 | status=200 | len=700 | fail=false | stack=window.fetch@44(70469) <- k@4(70490) <- anon@3(70506) <- Qr@3(70506) <- Po@3(70506)
+[+90.791s] [Line 242563] API POST https://paradisehrm.com/Tai3/hpa/paradise2 | reqId=28072.10131 | status=200 | len=375 | fail=false | stack=window.fetch@44(70469) <- k@4(70490) <- anon@3(70506) <- Qr@3(70506) <- Po@3(70506)
+[+90.796s] [Line 242619] API POST https://paradisehrm.com/Tai3/hpa/paradise2 | reqId=28072.10132 | status=200 | len=201 | fail=false | stack=window.fetch@44(70469) <- k@4(70490) <- anon@3(70506) <- Qr@3(70506) <- Po@3(70506)
+[+90.822s] [Line 243859] V8Console::Log: {}
+[+90.823s] [Line 243878] API POST https://paradisehrm.com/Tai3/hpa/paradise2 | reqId=28072.10133 | status=200 | len=1629 | fail=false | stack=window.fetch@44(70469) <- k@4(70490) <- anon@3(70506) <- Qr@3(70506) <- Po@3(70506)
+[+90.834s] [Line 244167] API POST https://paradisehrm.com/Tai3/hpa/paradise2 | reqId=28072.10134 | status=200 | len=60 | fail=false | stack=window.fetch@44(70469) <- k@4(70490) <- anon@3(70506) <- Qr@3(70506) <- Po@3(70506)
+[+90.841s] [Line 244448] V8Console::Log: {}
+[+90.865s] [Line 245080] V8Console::Log: {}
+[+90.865s] [Line 245086] V8Console::Log: {}
+[+90.866s] [Line 245103] V8Console::Log: {}
+[+90.871s] [Line 245187] API POST https://paradisehrm.com/Tai3/hpa/paradise2 | reqId=28072.10136 | status=200 | len=60 | fail=false | stack=window.fetch@44(70469) <- k@4(70490) <- anon@3(70506) <- Qr@3(70506) <- Po@3(70506)
+[+90.885s] [Line 245452] API POST https://paradisehrm.com/Tai3/hpa/paradise2 | reqId=28072.10138 | status=200 | len=60 | fail=false | stack=window.fetch@44(70469) <- k@4(70490) <- anon@3(70506) <- Qr@3(70506) <- Po@3(70506)
+[+91.036s] [Line 246893] API POST https://paradisehrm.com/Tai3/hpa/paradise2 | reqId=28072.10146 | status=200 | len=17727 | fail=false | stack=window.fetch@44(70469) <- k@4(70490) <- anon@3(70506) <- Qr@3(70506) <- Po@3(70506)
+[+91.143s] [Line 247353] API POST https://paradisehrm.com/Tai3/hpa/paradise2 | reqId=28072.10150 | status=200 | len=42 | fail=false | stack=window.fetch@44(70469) <- k@4(70490) <- anon@3(70506) <- Qr@3(70506) <- Po@3(70506)
+[+91.175s] [Line 247595] API POST https://paradisehrm.com/Tai3/hpa/paradise2 | reqId=28072.10151 | status=200 | len=42 | fail=false | stack=window.fetch@44(70469) <- k@4(70490) <- anon@3(70506) <- Qr@3(70506) <- Po@3(70506)
+[+91.254s] [Line 248316] API POST https://paradisehrm.com/Tai3/hpa/paradise2 | reqId=28072.10156 | status=200 | len=17727 | fail=false | stack=window.fetch@44(70469) <- k@4(70490) <- anon@3(70506) <- Qr@3(70506) <- Po@3(70506)
+[+91.299s] [Line 249017] API POST https://paradisehrm.com/Tai3/hpa/paradise2 | reqId=28072.10162 | status=200 | len=31649 | fail=false | stack=window.fetch@44(70469) <- k@4(70490) <- anon@3(70506) <- Qr@3(70506) <- Po@3(70506)
+[+91.360s] [Line 249604] API POST https://paradisehrm.com/Tai3/hpa/paradise2 | reqId=28072.10166 | status=200 | len=17727 | fail=false | stack=window.fetch@44(70469) <- k@4(70490) <- anon@3(70506) <- Qr@3(70506) <- Po@3(70506)
+[+91.441s] [Line 250258] API POST https://paradisehrm.com/Tai3/hpa/paradise2 | reqId=28072.10169 | status=200 | len=31649 | fail=false | stack=window.fetch@44(70469) <- k@4(70490) <- anon@3(70506) <- Qr@3(70506) <- Po@3(70506)
+[+91.472s] [Line 250747] API POST https://paradisehrm.com/Tai3/hpa/paradise2 | reqId=28072.10172 | status=200 | len=17727 | fail=false | stack=window.fetch@44(70469) <- k@4(70490) <- anon@3(70506) <- Qr@3(70506) <- Po@3(70506)
+[+91.626s] [Line 251448] API POST https://paradisehrm.com/Tai3/hpa/paradise2 | reqId=28072.10175 | status=200 | len=31649 | fail=false | stack=window.fetch@44(70469) <- k@4(70490) <- anon@3(70506) <- Qr@3(70506) <- Po@3(70506)
+[+92.802s] [Line 254683] CLICK on: #text (637,819) (dur=10349us)
+[+94.540s] [Line 261273] CLICK on: #text (818,547) (dur=13136us)
+[+94.542s] [Line 261348] INLINE_EXEC (75266): HandleApproveAttendanceRequest()
+[+94.545s] [Line 261388] API POST https://paradisehrm.com/Tai3/hpa/paradise2 | reqId=28072.10178 | status=200 | len=60 | fail=false | stack=window.fetch@44(70469) <- k@4(70490) <- anon@3(70506) <- Qr@3(70506) <- Po@3(70506)
+[+95.243s] [Line 263415] API POST https://paradisehrm.com/Tai3/hpa/paradise2 | reqId=28072.10179 | status=200 | len=832 | fail=false | stack=window.fetch@44(70469) <- k@4(70490) <- anon@3(70506) <- Qr@3(70506) <- Po@3(70506)
+[+95.289s] [Line 263918] API POST https://paradisehrm.com/Tai3/hpa/paradise2 | reqId=28072.10180 | status=200 | len=945 | fail=false | stack=window.fetch@44(70469) <- k@4(70490) <- anon@3(70506) <- Qr@3(70506) <- Po@3(70506)
+[+95.317s] [Line 264245] API POST https://paradisehrm.com/Tai3/hpa/paradise2 | reqId=28072.10181 | status=200 | len=707 | fail=false | stack=window.fetch@44(70469) <- k@4(70490) <- anon@3(70506) <- Qr@3(70506) <- Po@3(70506)
+[+95.320s] [Line 264271] API POST https://paradisehrm.com/Tai3/hpa/paradise2 | reqId=28072.10182 | status=200 | len=707 | fail=false | stack=window.fetch@44(70469) <- k@4(70490) <- anon@3(70506) <- Qr@3(70506) <- Po@3(70506)
+[+95.322s] [Line 264300] API POST https://paradisehrm.com/Tai3/hpa/paradise2 | reqId=28072.10183 | status=200 | len=375 | fail=false | stack=window.fetch@44(70469) <- k@4(70490) <- anon@3(70506) <- Qr@3(70506) <- Po@3(70506)
+[+95.325s] [Line 264329] API POST https://paradisehrm.com/Tai3/hpa/paradise2 | reqId=28072.10184 | status=200 | len=201 | fail=false | stack=window.fetch@44(70469) <- k@4(70490) <- anon@3(70506) <- Qr@3(70506) <- Po@3(70506)
+[+95.404s] [Line 265258] V8Console::Log: {}
+[+95.411s] [Line 265314] API POST https://paradisehrm.com/Tai3/hpa/paradise2 | reqId=28072.10185 | status=200 | len=60 | fail=false | stack=window.fetch@44(70469) <- k@4(70490) <- anon@3(70506) <- Qr@3(70506) <- Po@3(70506)
+[+95.420s] [Line 265383] API POST https://paradisehrm.com/Tai3/hpa/paradise2 | reqId=28072.10186 | status=200 | len=60 | fail=false | stack=window.fetch@44(70469) <- k@4(70490) <- anon@3(70506) <- Qr@3(70506) <- Po@3(70506)
+[+95.563s] [Line 266624] API POST https://paradisehrm.com/Tai3/hpa/paradise2 | reqId=28072.10193 | status=200 | len=42 | fail=false | stack=window.fetch@44(70469) <- k@4(70490) <- anon@3(70506) <- Qr@3(70506) <- Po@3(70506)
+[+95.658s] [Line 267327] API POST https://paradisehrm.com/Tai3/hpa/paradise2 | reqId=28072.10197 | status=200 | len=42 | fail=false | stack=window.fetch@44(70469) <- k@4(70490) <- anon@3(70506) <- Qr@3(70506) <- Po@3(70506)
+[+95.766s] [Line 267995] API POST https://paradisehrm.com/Tai3/hpa/paradise2 | reqId=28072.10200 | status=200 | len=17727 | fail=false | stack=window.fetch@44(70469) <- k@4(70490) <- anon@3(70506) <- Qr@3(70506) <- Po@3(70506)
+[+95.852s] [Line 268510] API POST https://paradisehrm.com/Tai3/hpa/paradise2 | reqId=28072.10204 | status=200 | len=31649 | fail=false | stack=window.fetch@44(70469) <- k@4(70490) <- anon@3(70506) <- Qr@3(70506) <- Po@3(70506)
+[+95.932s] [Line 269015] API POST https://paradisehrm.com/Tai3/hpa/paradise2 | reqId=28072.10208 | status=200 | len=31649 | fail=false | stack=window.fetch@44(70469) <- k@4(70490) <- anon@3(70506) <- Qr@3(70506) <- Po@3(70506)
+[+96.066s] [Line 269571] API POST https://paradisehrm.com/Tai3/hpa/paradise2 | reqId=28072.10211 | status=200 | len=17727 | fail=false | stack=window.fetch@44(70469) <- k@4(70490) <- anon@3(70506) <- Qr@3(70506) <- Po@3(70506)
+[+115.461s] [Line 301454] CLICK on: #text (520,74) (dur=24017us)
+[+115.466s] [Line 301552] V8Console::Log: {}
+[+115.475s] [Line 301730] API POST https://paradisehrm.com/Tai3/hpa/paradise2 | reqId=28072.10214 | status=200 | len=60 | fail=false | stack=window.fetch@44(70469) <- k@4(70490) <- anon@3(70506) <- Qr@3(70506) <- Po@3(70506)
+[+116.866s] [Line 306400] CLICK on: I id='reloadData' class='bi bi-arrow-repeat reload-icon-home' (1186,106) (dur=7591us)
+[+116.868s] [Line 306483] V8Console::Log: {}
+[+116.870s] [Line 306508] API POST https://paradisehrm.com/Tai3/hpa/paradise2 | reqId=28072.10215 | status=200 | len=3018 | fail=false | stack=window.fetch@44(70469) <- k@4(70490) <- anon@3(70506) <- Qr@3(70506) <- Po@3(70506)
+[+116.975s] [Line 306877] API POST https://paradisehrm.com/Tai3/hpa/paradise2 | reqId=28072.10216 | status=200 | len=42 | fail=false | stack=window.fetch@44(70469) <- k@4(70490) <- anon@3(70506) <- Qr@3(70506) <- Po@3(70506)
+[+116.976s] [Line 306901] API POST https://paradisehrm.com/Tai3/hpa/paradise2 | reqId=28072.10217 | status=200 | len=42 | fail=false | stack=window.fetch@44(70469) <- k@4(70490) <- anon@3(70506) <- Qr@3(70506) <- Po@3(70506)
+[+116.978s] [Line 306929] API POST https://paradisehrm.com/Tai3/hpa/paradise2 | reqId=28072.10218 | status=200 | len=47625 | fail=false | stack=window.fetch@44(70469) <- k@4(70490) <- anon@3(70506) <- Qr@3(70506) <- Po@3(70506)
+[+119.395s] [Line 312634] CLICK on: DIV class='text-success' (683,210) (dur=38783us)
+[+119.397s] [Line 312706] V8Console::Log: {}
+[+119.397s] [Line 312714] V8Console::Log: {}
+[+119.418s] [Line 312834] V8Console::Log: {}
+[+119.426s] [Line 312982] API POST https://paradisehrm.com/Tai3/hpa/paradise2 | reqId=28072.10223 | status=200 | len=60 | fail=false | stack=window.fetch@44(70469) <- k@4(70490) <- anon@3(70506) <- Qr@3(70506) <- Po@3(70506)
+[+119.427s] [Line 312992] V8Console::Log: {}
+[+119.458s] [Line 313471] API POST https://paradisehrm.com/Tai3/hpa/paradise2 | reqId=28072.10224 | status=200 | len=670 | fail=false | stack=window.fetch@44(70469) <- k@4(70490) <- anon@3(70506) <- Qr@3(70506) <- Po@3(70506)
+[+119.461s] [Line 313489] API POST https://paradisehrm.com/Tai3/hpa/paradise2 | reqId=28072.10225 | status=200 | len=941 | fail=false | stack=window.fetch@44(70469) <- k@4(70490) <- anon@3(70506) <- Qr@3(70506) <- Po@3(70506)
+[+119.464s] [Line 313520] API POST https://paradisehrm.com/Tai3/hpa/paradise2 | reqId=28072.10226 | status=200 | len=375 | fail=false | stack=window.fetch@44(70469) <- k@4(70490) <- anon@3(70506) <- Qr@3(70506) <- Po@3(70506)
+[+119.467s] [Line 313538] API POST https://paradisehrm.com/Tai3/hpa/paradise2 | reqId=28072.10227 | status=200 | len=832 | fail=false | stack=window.fetch@44(70469) <- k@4(70490) <- anon@3(70506) <- Qr@3(70506) <- Po@3(70506)
+[+119.484s] [Line 313644] API POST https://paradisehrm.com/Tai3/hpa/paradise2 | reqId=28072.10228 | status=200 | len=145 | fail=false | stack=window.fetch@44(70469) <- k@4(70490) <- anon@3(70506) <- Qr@3(70506) <- Po@3(70506)
+[+119.529s] [Line 315510] API POST https://paradisehrm.com/Tai3/hpa/paradise2 | reqId=28072.10229 | status=200 | len=700 | fail=false | stack=window.fetch@44(70469) <- k@4(70490) <- anon@3(70506) <- Qr@3(70506) <- Po@3(70506)
+[+119.534s] [Line 315539] API POST https://paradisehrm.com/Tai3/hpa/paradise2 | reqId=28072.10230 | status=200 | len=700 | fail=false | stack=window.fetch@44(70469) <- k@4(70490) <- anon@3(70506) <- Qr@3(70506) <- Po@3(70506)
+[+119.537s] [Line 315573] API POST https://paradisehrm.com/Tai3/hpa/paradise2 | reqId=28072.10231 | status=200 | len=375 | fail=false | stack=window.fetch@44(70469) <- k@4(70490) <- anon@3(70506) <- Qr@3(70506) <- Po@3(70506)
+[+119.541s] [Line 315617] API POST https://paradisehrm.com/Tai3/hpa/paradise2 | reqId=28072.10232 | status=200 | len=201 | fail=false | stack=window.fetch@44(70469) <- k@4(70490) <- anon@3(70506) <- Qr@3(70506) <- Po@3(70506)
+[+119.552s] [Line 315679] API POST https://paradisehrm.com/Tai3/hpa/paradise2 | reqId=28072.10233 | status=200 | len=60 | fail=false | stack=window.fetch@44(70469) <- k@4(70490) <- anon@3(70506) <- Qr@3(70506) <- Po@3(70506)
+[+119.567s] [Line 316067] V8Console::Log: {}
+[+119.569s] [Line 316086] API POST https://paradisehrm.com/Tai3/hpa/paradise2 | reqId=28072.10235 | status=200 | len=1629 | fail=false | stack=window.fetch@44(70469) <- k@4(70490) <- anon@3(70506) <- Qr@3(70506) <- Po@3(70506)
+[+119.584s] [Line 316644] V8Console::Log: {}
+[+119.619s] [Line 316963] API POST https://paradisehrm.com/Tai3/hpa/paradise2 | reqId=28072.10236 | status=200 | len=60 | fail=false | stack=window.fetch@44(70469) <- k@4(70490) <- anon@3(70506) <- Qr@3(70506) <- Po@3(70506)
+[+119.667s] [Line 317670] V8Console::Log: {}
+[+119.667s] [Line 317676] V8Console::Log: {}
+[+119.667s] [Line 317692] V8Console::Log: {}
+[+119.677s] [Line 317792] API POST https://paradisehrm.com/Tai3/hpa/paradise2 | reqId=28072.10240 | status=200 | len=60 | fail=false | stack=window.fetch@44(70469) <- k@4(70490) <- anon@3(70506) <- Qr@3(70506) <- Po@3(70506)
+[+119.702s] [Line 318231] API POST https://paradisehrm.com/Tai3/hpa/paradise2 | reqId=28072.10242 | status=200 | len=17727 | fail=false | stack=window.fetch@44(70469) <- k@4(70490) <- anon@3(70506) <- Qr@3(70506) <- Po@3(70506)
+[+119.795s] [Line 319167] API POST https://paradisehrm.com/Tai3/hpa/paradise2 | reqId=28072.10250 | status=200 | len=42 | fail=false | stack=window.fetch@44(70469) <- k@4(70490) <- anon@3(70506) <- Qr@3(70506) <- Po@3(70506)
+[+119.899s] [Line 319584] API POST https://paradisehrm.com/Tai3/hpa/paradise2 | reqId=28072.10254 | status=200 | len=17727 | fail=false | stack=window.fetch@44(70469) <- k@4(70490) <- anon@3(70506) <- Qr@3(70506) <- Po@3(70506)
+[+119.913s] [Line 319732] API POST https://paradisehrm.com/Tai3/hpa/paradise2 | reqId=28072.10255 | status=200 | len=31649 | fail=false | stack=window.fetch@44(70469) <- k@4(70490) <- anon@3(70506) <- Qr@3(70506) <- Po@3(70506)
+[+120.002s] [Line 320523] API POST https://paradisehrm.com/Tai3/hpa/paradise2 | reqId=28072.10262 | status=200 | len=42 | fail=false | stack=window.fetch@44(70469) <- k@4(70490) <- anon@3(70506) <- Qr@3(70506) <- Po@3(70506)
+[+120.122s] [Line 321262] API POST https://paradisehrm.com/Tai3/hpa/paradise2 | reqId=28072.10266 | status=200 | len=17727 | fail=false | stack=window.fetch@44(70469) <- k@4(70490) <- anon@3(70506) <- Qr@3(70506) <- Po@3(70506)
+[+120.269s] [Line 322093] API POST https://paradisehrm.com/Tai3/hpa/paradise2 | reqId=28072.10270 | status=200 | len=31649 | fail=false | stack=window.fetch@44(70469) <- k@4(70490) <- anon@3(70506) <- Qr@3(70506) <- Po@3(70506)
+[+120.340s] [Line 322677] API POST https://paradisehrm.com/Tai3/hpa/paradise2 | reqId=28072.10274 | status=200 | len=17727 | fail=false | stack=window.fetch@44(70469) <- k@4(70490) <- anon@3(70506) <- Qr@3(70506) <- Po@3(70506)
+[+120.410s] [Line 323273] API POST https://paradisehrm.com/Tai3/hpa/paradise2 | reqId=28072.10277 | status=200 | len=31649 | fail=false | stack=window.fetch@44(70469) <- k@4(70490) <- anon@3(70506) <- Qr@3(70506) <- Po@3(70506)
+[+121.252s] [Line 326793] CLICK on: #text (628,823) (dur=11049us)
+[+122.716s] [Line 332942] CLICK on: BUTTON id='btnApproveModalRemake' class='btn btn-success' (810,544) (dur=5037us)
+[+122.718s] [Line 333014] INLINE_EXEC (75274): HandleApproveAttendanceRequest()
+[+124.340s] [Line 338162] CLICK on: #text (811,549) (dur=3517us)
+[+131.011s] [Line 347705] CLICK on: #text (821,546) (dur=3051us)
+[+131.924s] [Line 349387] CLICK on: #text (821,546) (dur=3938us)
+[+154.595s] [Line 360429] CLICK on: #text (821,546) (dur=2756us)
+[+163.780s] [Line 370906] CLICK on: #text (824,555) (dur=3449us)
+[+167.995s] [Line 376086] CLICK on: #text (898,553) (dur=13596us)
+[+170.787s] [Line 384424] CLICK on: BUTTON class='btn btn-success btnApprove' (709,806) (dur=18206us)
+[+172.739s] [Line 391366] CLICK on: #text (826,551) (dur=8048us)
+[+187.036s] [Line 400834] CLICK on: #text (902,556) (dur=7009us)
+[+197.243s] [Line 409658] CLICK on: BUTTON class='btn btn-success btnApprove' (680,808) (dur=16443us)
+[+198.436s] [Line 415393] CLICK on: #text (823,549) (dur=8191us)
+[+199.300s] [Line 417102] CLICK on: #text (823,549) (dur=2977us)
+[+207.460s] [Line 423056] CLICK on: #text (894,546) (dur=6123us)
+[+213.768s] [Line 438411] V8Console::Log: {}
+[+213.769s] [Line 438447] V8Console::Log: {}
+[+213.769s] [Line 438454] V8Console::Warn: {}
+[+216.303s] [Line 451446] V8Console::Warn: {}
+[+216.312s] [Line 451529] V8Console::Error: {}
+[+216.599s] [Line 462056] V8Console::Log: {}
+[+216.615s] [Line 462197] V8Console::Log: {}
+[+216.617s] [Line 462251] V8Console::Log: {}
+[+216.620s] [Line 462322] V8Console::Log: {}
+[+216.623s] [Line 462364] V8Console::Log: {}
+[+216.624s] [Line 462410] V8Console::Log: {}
+[+216.625s] [Line 462450] V8Console::Log: {}
+[+216.626s] [Line 462491] V8Console::Log: {}
+[+216.627s] [Line 462531] V8Console::Log: {}
+[+216.628s] [Line 462577] V8Console::Log: {}
+[+216.628s] [Line 462582] V8Console::Log: {}

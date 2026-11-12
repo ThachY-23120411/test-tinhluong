@@ -5,15 +5,10 @@
   "testStatus": "PASSED",
   "businessStatus": "PASSED",
   "businessNotes": "PASS - Quản lý phê duyệt thành công yêu cầu trên hệ thống (Hệ thống xác nhận: Đã duyệt thành công các thay đổi)",
-  "failureAnalysis": {
-    "issue": "",
-    "expected": "",
-    "actual": "",
-    "rootCause": "",
-    "recommendation": ""
-  },
+  "defectEvidence": null,
+  "failureAnalysis": {},
   "status": "PASSED",
-  "duration": "33.59s",
+  "duration": "34.53s",
   "errors": "",
   "stepScreenshots": [
     {
@@ -62,5 +57,5 @@
       "employee_bank_approval/TC-02/traces/trace.zip"
     ]
   },
-  "timestamp": "2026-10-16T03:48:31.168Z"
+  "timestamp": "2026-10-28T07:19:48.539Z"
 }

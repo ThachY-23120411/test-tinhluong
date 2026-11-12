@@ -1,0 +1,66 @@
+{
+  "tcId": "TC-18",
+  "pageName": "quy_trinh_tinh_luong_nv_moi",
+  "title": "fix-8 | TC-18: Replay Kế toán mở Danh sách trả lương, xem Bảng lương tổng hợp, nhảy Phiếu lương & Đăng xuất (Role: Chien.nguyen)",
+  "testStatus": "PASSED",
+  "businessStatus": "PASSED",
+  "businessNotes": "Đạt yêu cầu logic nghiệp vụ mong đợi",
+  "defectEvidence": null,
+  "failureAnalysis": {},
+  "status": "PASSED",
+  "duration": "80.48s",
+  "errors": "",
+  "stepScreenshots": [
+    {
+      "step": 1,
+      "title": "Dang nhap tai khoan Chien nguyen",
+      "fileName": "TC-18-step01-dang-nhap-tai-khoan-chien-nguyen.png",
+      "relPath": "quy_trinh_tinh_luong_nv_moi/TC-18/screenshots/TC-18-step01-dang-nhap-tai-khoan-chien-nguyen.png"
+    },
+    {
+      "step": 2,
+      "title": "Mo man hinh Danh sach tra luong MnuPRL092 qua Launchpad",
+      "fileName": "TC-18-step02-mo-man-hinh-danh-sach-tra-luong-mnuprl092-qua-launchpad.png",
+      "relPath": "quy_trinh_tinh_luong_nv_moi/TC-18/screenshots/TC-18-step02-mo-man-hinh-danh-sach-tra-luong-mnuprl092-qua-launchpad.png"
+    },
+    {
+      "step": 3,
+      "title": "Chon ky luong Thang 10",
+      "fileName": "TC-18-step03-chon-ky-luong-thang-10.png",
+      "relPath": "quy_trinh_tinh_luong_nv_moi/TC-18/screenshots/TC-18-step03-chon-ky-luong-thang-10.png"
+    },
+    {
+      "step": 4,
+      "title": "Xem Bang luong tong hop va cuon toi dong nhan vien 099",
+      "fileName": "TC-18-step04-xem-bang-luong-tong-hop-va-cuon-toi-dong-nhan-vien-099.png",
+      "relPath": "quy_trinh_tinh_luong_nv_moi/TC-18/screenshots/TC-18-step04-xem-bang-luong-tong-hop-va-cuon-toi-dong-nhan-vien-099.png"
+    },
+    {
+      "step": 5,
+      "title": "Xem phieu luong va chuyen toi trang cuoi (trang 82)",
+      "fileName": "TC-18-step05-xem-phieu-luong-va-chuyen-toi-trang-cuoi-trang-82.png",
+      "relPath": "quy_trinh_tinh_luong_nv_moi/TC-18/screenshots/TC-18-step05-xem-phieu-luong-va-chuyen-toi-trang-cuoi-trang-82.png"
+    },
+    {
+      "step": 6,
+      "title": "Dang xuat khoi tai khoan Chien nguyen thanh cong",
+      "fileName": "TC-18-step06-dang-xuat-khoi-tai-khoan-chien-nguyen-thanh-cong.png",
+      "relPath": "quy_trinh_tinh_luong_nv_moi/TC-18/screenshots/TC-18-step06-dang-xuat-khoi-tai-khoan-chien-nguyen-thanh-cong.png"
+    }
+  ],
+  "attachments": {
+    "screenshots": [
+      "quy_trinh_tinh_luong_nv_moi/TC-18/screenshots/TC-18-step01-dang-nhap-tai-khoan-chien-nguyen.png",
+      "quy_trinh_tinh_luong_nv_moi/TC-18/screenshots/TC-18-step02-mo-man-hinh-danh-sach-tra-luong-mnuprl092-qua-launchpad.png",
+      "quy_trinh_tinh_luong_nv_moi/TC-18/screenshots/TC-18-step03-chon-ky-luong-thang-10.png",
+      "quy_trinh_tinh_luong_nv_moi/TC-18/screenshots/TC-18-step04-xem-bang-luong-tong-hop-va-cuon-toi-dong-nhan-vien-099.png",
+      "quy_trinh_tinh_luong_nv_moi/TC-18/screenshots/TC-18-step05-xem-phieu-luong-va-chuyen-toi-trang-cuoi-trang-82.png",
+      "quy_trinh_tinh_luong_nv_moi/TC-18/screenshots/TC-18-step06-dang-xuat-khoi-tai-khoan-chien-nguyen-thanh-cong.png"
+    ],
+    "videos": [
+      "quy_trinh_tinh_luong_nv_moi/TC-18/videos/video.webm"
+    ],
+    "traces": []
+  },
+  "timestamp": "2026-11-12T12:51:45.171Z"
+}

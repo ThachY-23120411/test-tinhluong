@@ -1,0 +1,1276 @@
+
+
+
+<style id="salary-history-employee-mode-style">
+.dx-popup-content:has(#sp_SalaryHistory_Insert_html){padding:0!important;}
+#sp_SalaryHistory_Insert_html.salary-add-mode .sal-emp-edit{display:none!important;visibility:hidden!important;height:0!important;overflow:hidden!important;}
+#sp_SalaryHistory_Insert_html.salary-add-mode .sal-emp-add{display:block!important;visibility:visible!important;height:auto!important;}
+#sp_SalaryHistory_Insert_html.salary-edit-mode .sal-emp-edit{display:block!important;visibility:visible!important;height:auto!important;pointer-events:none!important;opacity:.85!important;}
+#sp_SalaryHistory_Insert_html.salary-edit-mode .sal-emp-edit [style*="cursor: pointer"]{cursor:default!important;}
+#sp_SalaryHistory_Insert_html.salary-edit-mode .sal-emp-add{display:none!important;visibility:hidden!important;height:0!important;overflow:hidden!important;}
+#sp_SalaryHistory_Insert_html.salary-edit-loading{opacity:0!important;}
+#sp_SalaryHistory_Insert_html .form-group:has(> #P5CF1303904584E548A0ABDD9A5FB2168){display:none!important;}
+#sp_SalaryHistory_Insert_html{padding:var(--paradise-space-3) var(--paradise-space-4) var(--paradise-space-3);width:100%;background:var(--paradise-bg-1);color:var(--paradise-fg-0);font-family:var(--paradise-font-family-base);}
+#sp_SalaryHistory_Insert_html .salary-section{margin-bottom:var(--paradise-space-1);}
+#sp_SalaryHistory_Insert_html .salary-section-title{display:flex;align-items:center;gap:var(--paradise-space-1);color:var(--paradise-color-primary);font-family:var(--paradise-font-family-base);font-weight:var(--font-weight-bold);font-size:var(--paradise-font-heading-sub);padding:0;margin-bottom:var(--paradise-space-1);border-bottom:none;line-height:1.25;}
+#sp_SalaryHistory_Insert_html .salary-section-title i{font-size:var(--paradise-font-heading-sub);color:var(--paradise-color-primary);width:1.125rem;text-align:center;}
+#sp_SalaryHistory_Insert_html .salary-section-title .bi{color:var(--paradise-color-primary);font-size:var(--paradise-font-heading-sub);width:1.125rem;text-align:center;}
+#sp_SalaryHistory_Insert_html .salary-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);column-gap:var(--paradise-space-4);row-gap:var(--paradise-space-1);}
+#sp_SalaryHistory_Insert_html .salary-field{display:grid;grid-template-columns:7.25rem minmax(0,1fr);align-items:center;column-gap:var(--paradise-space-2);min-height:1.85rem;}
+#sp_SalaryHistory_Insert_html .salary-field label{margin:0;font-family:var(--paradise-font-family-base);font-weight:var(--font-weight-medium);font-size:var(--paradise-font-size-xs);color:var(--paradise-fg-0);}
+#sp_SalaryHistory_Insert_html .salary-field label.required::after{content:" (*)";color:var(--paradise-color-danger);font-weight:var(--font-weight-bold);}
+#sp_SalaryHistory_Insert_html .salary-field.full{grid-column:1/-1;grid-template-columns:7.25rem minmax(0,1fr);}
+#sp_SalaryHistory_Insert_html .salary-field .dx-texteditor-input,#sp_SalaryHistory_Insert_html .salary-field .dx-placeholder,#sp_SalaryHistory_Insert_html .salary-field .dx-texteditor-container{font-family:var(--paradise-font-family-base);}
+#sp_SalaryHistory_Insert_html .salary-field[id],#sp_SalaryHistory_Insert_html .dx-numberbox .dx-texteditor-input{font-family:var(--paradise-font-family-mono);}
+#sp_SalaryHistory_Insert_html .salary-actions{display:flex;justify-content:flex-end;gap:var(--paradise-space-2);margin-top:var(--paradise-space-2);padding-top:0;border-top:none;}
+#sp_SalaryHistory_Insert_html .salary-actions .btn{min-width:4.75rem;font-family:var(--paradise-font-family-base);font-weight:var(--font-weight-bold);border-radius:var(--paradise-border-radius-xl);}
+@media(max-width:480px){#sp_SalaryHistory_Insert_html{padding:var(--paradise-space-3);}#sp_SalaryHistory_Insert_html .salary-grid{grid-template-columns:1fr;}#sp_SalaryHistory_Insert_html .salary-field,#sp_SalaryHistory_Insert_html .salary-field.full{grid-template-columns:1fr;row-gap:var(--paradise-space-1);}#sp_SalaryHistory_Insert_html .salary-actions{flex-direction:column;}#sp_SalaryHistory_Insert_html .salary-actions .btn{width:100%;}}
+
+/* spacing override */
+#sp_SalaryHistory_Insert_html{padding:var(--paradise-space-5) var(--paradise-space-5) var(--paradise-space-4)!important;}
+#sp_SalaryHistory_Insert_html .salary-section{margin-bottom:var(--paradise-space-4)!important;}
+#sp_SalaryHistory_Insert_html .salary-section-title{padding:0!important;margin-bottom:var(--paradise-space-3)!important;border-bottom:none!important;}
+#sp_SalaryHistory_Insert_html .salary-grid{row-gap:var(--paradise-space-3)!important;column-gap:var(--paradise-space-5)!important;}
+#sp_SalaryHistory_Insert_html .salary-field{min-height:2.25rem!important;}
+#sp_SalaryHistory_Insert_html .salary-actions{margin-top:var(--paradise-space-4)!important;padding-top:0!important;border-top:none!important;}
+</style>
+<div id="sp_SalaryHistory_Insert_html" class="salary-add-mode">
+ <div class="salary-section"><div class="salary-section-title"><i class="bi bi-person-gear"></i><span>Employee information</span></div><div class="salary-grid">
+  <div class="salary-field"><label class="required">Employee</label><div style="min-width:0;"><div id="P0F10902CD93049F9BF48D31E0EE80970" class="sal-emp-edit" style="display:none;"></div><div id="P7D0E9F2A6B4C4D8E9A1B2C3D4E5F6071" class="sal-emp-add" style="display:none;"></div></div></div>
+  <div class="salary-field"><label class="required">Date</label><div id="P4DAAB905424748229EAFD9AFC4D4EAEE" required="required"></div></div>
+ </div></div>
+ <div class="salary-section"><div class="salary-section-title"><i class="bi bi-currency-exchange"></i><span>Salary information</span></div><div class="salary-grid">
+  <div class="salary-field"><label class="required">Basic salary</label><div id="PFAD05D72A31C4A2A81963A8FF680608F" required="required"></div></div>
+  <div class="salary-field"><label>Insurance Salary</label><div id="PC205049BF57549FB8D707CEE111859D7"></div></div>
+  <div class="salary-field"><label>Sales transportation</label><div id="PF4104AD4CE364664BE68B94CCEC2FF44"></div></div>
+  <div class="salary-field"><label>Position</label><div id="P008696ECCBCD4F86895C9113890F421C"></div></div>
+  <div class="salary-field"><label>Performance Rate</label><div id="PB4C93683D82E4C61A34644BEAF5E90DB"></div></div>
+  <div class="salary-field"><label>Is NET salary</label><div id="P92AAACE73638481D96C35420E93DE728"></div></div>
+ </div></div>
+ <div class="salary-section"><div class="salary-section-title"><i class="bi bi-calculator"></i><span>Salary calculation settings</span></div><div class="salary-grid">
+  <div class="salary-field"><label>Salary rule</label><div id="P625590059DBC47C7AFCBADE2FA86DB46"></div></div>
+  <div class="salary-field"><label>Position</label><div id="P5CF1303904584E548A0ABDD9A5FB2168"></div></div>
+  <div class="salary-field"><label>Regional base salary</label><div id="P74FE628DB64645908CA648CA6346D82B"></div></div>
+  <div class="salary-field"><label>Pay date</label><div id="PF108D2EED8A6470B9F767E335DB58562"></div></div>
+ </div></div>
+ <div class="salary-section"><div class="salary-section-title"><i class="bi bi-journal-check"></i><span>Details</span></div><div class="salary-grid"><div class="salary-field full"><label>Note</label><div id="PBA392C066B5D4481A12621487E9AF8EB"></div></div></div></div>
+ <div class="salary-actions"><button id="btnDeleteSalaryHistory" class="btn btn-danger salary-edit-only" type="button" style="margin-right:auto;display:none;">Delete</button><button id="btnSaveSalaryHistory" class="btn btn-primary salary-add-only" type="button">Save</button><button id="btnCancelSalaryHistory" class="btn btn-secondary salary-add-only" type="button">Cancel</button></div>
+</div>
+<script>
+        (() => {
+            let LoginID = window.UserID || window.LoginID || 3;
+            let LanguageID = window.LanguageID || 'VN';
+
+            function getSalaryHistoryEmpInstance() {
+                let isEdit = $("#sp_SalaryHistory_Insert_html").hasClass("salary-edit-mode");
+                if (isEdit) {
+                    return typeof InstanceEmployeeIDP0F10902CD93049F9BF48D31E0EE80970 !== "undefined" ? InstanceEmployeeIDP0F10902CD93049F9BF48D31E0EE80970 : null;
+                } else {
+                    return typeof InstanceEmployeeIDP7D0E9F2A6B4C4D8E9A1B2C3D4E5F6071 !== "undefined" ? InstanceEmployeeIDP7D0E9F2A6B4C4D8E9A1B2C3D4E5F6071 : null;
+                }
+            }
+
+            function hpaSalaryHistoryNotify(message, type) {
+                if (typeof uiManager !== "undefined" && uiManager.showAlert) {
+                    uiManager.showAlert({ type: type || "info", message: message });
+                } else {
+                    alert(message);
+                }
+            }
+
+            function hpaCloseSalaryHistoryForm() {
+                $(".dx-popup-wrapper:visible .dx-closebutton").last().trigger("dxclick").trigger("click");
+            }
+
+            // Patch SelectEmployee to fix click event lost issue
+            if (window.hpaControlEngine && !window.hpaControlEngine._isPatchedSelectEmployee) {
+                window.hpaControlEngine._isPatchedSelectEmployee = true;
+                const patchInit = (originalFn) => {
+                    return function(cfg) {
+                        let originalOn = $.fn.on;
+                        let clickHandler = null;
+                        let keydownHandler = null;
+                        $.fn.on = function(events, fn) {
+                            if (typeof fn === 'function') {
+                                if (events === 'click') {
+                                    clickHandler = fn;
+                                } else if (events === 'keydown') {
+                                    keydownHandler = fn;
+                                }
+                            }
+                            return originalOn.apply(this, arguments);
+                        };
+                        try {
+                            let inst = originalFn.apply(this, arguments);
+                            if (clickHandler || keydownHandler) {
+                                let $container = $('#' + cfg.uid);
+                                $container.off('click.patchedSelectEmployee').on('click.patchedSelectEmployee', function(e) {
+                                    if (clickHandler) clickHandler.call(this, e);
+                                });
+                                $container.off('keydown.patchedSelectEmployee').on('keydown.patchedSelectEmployee', function(e) {
+                                    if (keydownHandler) keydownHandler.call(this, e);
+                                });
+                            }
+                            return inst;
+                        } finally {
+                            $.fn.on = originalOn;
+                        }
+                    };
+                };
+                if (typeof window.hpaControlEngine.initSelectEmployeeAutoSave === 'function') {
+                    window.hpaControlEngine.initSelectEmployeeAutoSave = patchInit(window.hpaControlEngine.initSelectEmployeeAutoSave);
+                }
+                if (typeof window.hpaControlEngine.initSelectEmployeeManual === 'function') {
+                    window.hpaControlEngine.initSelectEmployeeManual = patchInit(window.hpaControlEngine.initSelectEmployeeManual);
+                }
+            }
+            
+       /* control-native prebind: must run before loadUI */
+       window.currentRecordID_SalaryHistoryID = (window.currentSalaryHistorySelected && window.currentSalaryHistorySelected.SalaryHistoryID) ? window.currentSalaryHistorySelected.SalaryHistoryID : (window.currentRecordID_SalaryHistoryID || -1);
+       window.currentRecordID_ID = window.currentRecordID_SalaryHistoryID;
+       window.currentRecordID_ = window.currentRecordID_SalaryHistoryID;
+       /* edit-mode flags are assigned after loadUI using local _autoSave variables */
+    
+       if (typeof window.loadDataSourceCommon !== "function") {
+           window.loadDataSourceCommon = function(columnName, dataSourceSP, onSuccessCallback) {
+               if (!columnName || !dataSourceSP || dataSourceSP.trim() === "") return;
+               const dataSourceKey = "DataSource_" + columnName;
+               const loadedKey = columnName + "DataSourceLoaded";
+               if (window[loadedKey] === true) {
+                   if (typeof onSuccessCallback === "function") onSuccessCallback(window[dataSourceKey] || []);
+                   return;
+               }
+               if (window[loadedKey] === "loading") {
+                   setTimeout(function(){ window.loadDataSourceCommon(columnName, dataSourceSP, onSuccessCallback); }, 100);
+                   return;
+               }
+               window[loadedKey] = "loading";
+               return new Promise((resolve, reject) => {
+                   AjaxHPAParadise({
+                       data: { name: dataSourceSP, param: ["LoginID", LoginID, "LanguageID", LanguageID] },
+                       success: function(res) {
+                           const json = typeof res === "string" ? JSON.parse(res) : res;
+                           window[dataSourceKey] = (json.data && json.data[0]) || [];
+                           window[loadedKey] = true;
+                           let idField = json.valueExpr;
+                           let nameField = json.displayExpr;
+                           if ((!idField || !nameField) && json.dataSchema && json.dataSchema[0]) {
+                               const schema = json.dataSchema[0];
+                               if (!idField) idField = schema[0]?.name;
+                               if (!nameField) nameField = schema[1]?.name;
+                           }
+                           window["DataSourceIDField_" + columnName] = idField || "ID";
+                           window["DataSourceNameField_" + columnName] = nameField || "Name";
+                           if (typeof onSuccessCallback === "function") onSuccessCallback(window[dataSourceKey], json);
+                           resolve(window[dataSourceKey]);
+                       },
+                       error: function(err) {
+                           window[loadedKey] = false;
+                           if (typeof onSuccessCallback === "function") onSuccessCallback([]);
+                           reject(err);
+                       }
+                   });
+               });
+           };
+       }
+    
+    var cfg = {
+        uid: "P0F10902CD93049F9BF48D31E0EE80970",
+        columnName: "EmployeeID",
+        columnIDName: "SalaryHistoryID",
+        columnIDName2: "",
+        displayName: "Employee ID",
+        tableId: "-110857012",
+        dataSourceSP: "EmployeeListAll_DataSetting_Custom",
+        gridColumnName: "gridSalaryHistory",
+        saveErrorMessage: "Failed to save data.",
+        tabIndex: "0",
+        tableAddNew: "",
+        columnAddNew: "Add New",
+        tableAddNewD: "",
+        isMultiSelect: false
+    };
+    window.hpaControlEngine.initSelectEmployeeAutoSave(cfg);
+   
+    var cfg = {
+        uid: "P7D0E9F2A6B4C4D8E9A1B2C3D4E5F6071",
+        columnName: "EmployeeID",
+        columnIDName: "SalaryHistoryID",
+        columnIDName2: "",
+        displayName: "Employee ID",
+        tableId: "-110857012",
+        dataSourceSP: "EmployeeListAll_DataSetting_Custom",
+        gridColumnName: "gridSalaryHistory",
+        saveErrorMessage: "Failed to save data.",
+        tabIndex: "0",
+        tableAddNew: "",
+        columnAddNew: "Add New",
+        tableAddNewD: "",
+        isMultiSelect: true
+    };
+    window.hpaControlEngine.initSelectEmployeeAutoSave(cfg);
+   
+        if (typeof window.hpaControlEngine === "undefined") {
+            console.error("[hpaControlDate] window.hpaControlEngine chưa được load."); return;
+        }
+        window.hpaControlEngine.initDateBoxAutoSave({
+            uid: "P4DAAB905424748229EAFD9AFC4D4EAEE",
+            columnName: "Date",
+            type: "date",
+            displayFormat: "dd/MM/yyyy",
+            dateSerializationFormat: "yyyy-MM-dd",
+            saveFormat: "yyyy/MM/dd",
+            tableId: "-110857012",
+            columnIDName: "SalaryHistoryID",
+            columnIDName2: "",
+            saveErrorMessage: "Lưu thất bại",
+            gridColumnName: "gridSalaryHistory",
+            tabIndex: "0"
+        });
+    
+        window.hpaControlEngine.initNumberBoxAutoSave({
+            uid: "PFAD05D72A31C4A2A81963A8FF680608F",
+            columnName: "Salary",
+            tableId: "-110857012",
+            columnIDName: "SalaryHistoryID",
+            columnIDName2: "",
+            gridColumnName: "gridSalaryHistory",
+            tabIndex: "0",
+            saveErrorMessage: "Failed to save data.",
+            saveSuccessMessage: "Saved Successfully",
+            format: "#,##0 ₫",
+            getMin: function() { return window["IsNegativeSalaryPFAD05D72A31C4A2A81963A8FF680608F"] == 1 ? undefined : 0; },
+            preventNegative: true,
+            getPreventNegative: function() { return window["IsNegativeSalaryPFAD05D72A31C4A2A81963A8FF680608F"] != 1; }
+        });
+    
+        window.hpaControlEngine.initNumberBoxAutoSave({
+            uid: "PC205049BF57549FB8D707CEE111859D7",
+            columnName: "InsSalary",
+            tableId: "-110857012",
+            columnIDName: "SalaryHistoryID",
+            columnIDName2: "",
+            gridColumnName: "gridSalaryHistory",
+            tabIndex: "0",
+            saveErrorMessage: "Failed to save data.",
+            saveSuccessMessage: "Saved Successfully",
+            format: "#,##0 ₫",
+            getMin: function() { return window["IsNegativeInsSalaryPC205049BF57549FB8D707CEE111859D7"] == 1 ? undefined : 0; },
+            preventNegative: true,
+            getPreventNegative: function() { return window["IsNegativeInsSalaryPC205049BF57549FB8D707CEE111859D7"] != 1; }
+        });
+    
+    var cfg = {
+        uid: "P92AAACE73638481D96C35420E93DE728",
+        columnName: "IsNet",
+        columnIDName: "SalaryHistoryID",
+        columnIDName2: "",
+        displayName: "Net Salary?",
+        tableId: "-110857012",
+        dataSourceSP: "",
+        gridColumnName: "gridSalaryHistory",
+        saveErrorMessage: "Failed to save data.",
+        tabIndex: "0",
+        tableAddNew: "",
+        columnAddNew: "Add New",
+        tableAddNewD: ""
+
+    };
+    window.hpaControlEngine.initCheckBoxAutoSave(cfg);
+   
+        let PositionIDP5CF1303904584E548A0ABDD9A5FB2168DataSourceSP  = "sp_loadPosition";
+        let PositionIDP5CF1303904584E548A0ABDD9A5FB2168TableAddNew   = "";
+        let PositionIDP5CF1303904584E548A0ABDD9A5FB2168ColumnAddNew  = "";
+        let PositionIDP5CF1303904584E548A0ABDD9A5FB2168CurrentSearch = "";
+        let InstancePositionIDP5CF1303904584E548A0ABDD9A5FB2168      = null;
+
+        let _isEditPositionIDP5CF1303904584E548A0ABDD9A5FB2168    = window["_isEdit_PositionIDP5CF1303904584E548A0ABDD9A5FB2168"]    || false;
+        let _isDeletePositionIDP5CF1303904584E548A0ABDD9A5FB2168  = window["_isDelete_PositionIDP5CF1303904584E548A0ABDD9A5FB2168"]  || false;
+        let _hideIDPositionIDP5CF1303904584E548A0ABDD9A5FB2168    = window["_hideID_PositionIDP5CF1303904584E548A0ABDD9A5FB2168"]    || false;
+        let _hideSearchPositionIDP5CF1303904584E548A0ABDD9A5FB2168  = window["_hideSearch_PositionIDP5CF1303904584E548A0ABDD9A5FB2168"]  || false;
+
+        if (window.hpaControlEngine) {
+            InstancePositionIDP5CF1303904584E548A0ABDD9A5FB2168 = window.hpaControlEngine.initSelectBoxAutoSave({
+                uid:            "P5CF1303904584E548A0ABDD9A5FB2168",
+                columnName:     "PositionID",
+                displayName:    "Position",
+                dataSourceSP:   "sp_loadPosition",
+                tableAddNew:    "",
+                tableAddNewD:   "",
+                columnAddNew:   "",
+                tableId:        "-110857012",
+                columnIDName:   "SalaryHistoryID",
+                columnIDName2:  "",
+                gridColumnName: "gridSalaryHistory",
+                keyUpdateGrid:  "0",
+                columnNameSync: "",
+                isEdit:         _isEditPositionIDP5CF1303904584E548A0ABDD9A5FB2168,
+                isDelete:       _isDeletePositionIDP5CF1303904584E548A0ABDD9A5FB2168,
+                hideID:         _hideIDPositionIDP5CF1303904584E548A0ABDD9A5FB2168,
+                hideSearch:     _hideSearchPositionIDP5CF1303904584E548A0ABDD9A5FB2168,
+                isAdminOrManager: window.hpaIsAdminOrManager,
+                loadDataSourceCommon: (typeof loadDataSourceCommon !== 'undefined' ? loadDataSourceCommon : undefined),
+                saveFunction: (typeof saveFunction !== 'undefined' ? saveFunction : undefined),
+                updateOrDeleteDataExample: (typeof updateOrDeleteDataExample !== 'undefined' ? updateOrDeleteDataExample : undefined)
+            });
+        }
+        
+        let SalCalRuleIDP625590059DBC47C7AFCBADE2FA86DB46DataSourceSP  = "sp_loadSalaryCalculationRule";
+        let SalCalRuleIDP625590059DBC47C7AFCBADE2FA86DB46TableAddNew   = "";
+        let SalCalRuleIDP625590059DBC47C7AFCBADE2FA86DB46ColumnAddNew  = "";
+        let SalCalRuleIDP625590059DBC47C7AFCBADE2FA86DB46CurrentSearch = "";
+        let InstanceSalCalRuleIDP625590059DBC47C7AFCBADE2FA86DB46      = null;
+
+        let _isEditSalCalRuleIDP625590059DBC47C7AFCBADE2FA86DB46    = window["_isEdit_SalCalRuleIDP625590059DBC47C7AFCBADE2FA86DB46"]    || false;
+        let _isDeleteSalCalRuleIDP625590059DBC47C7AFCBADE2FA86DB46  = window["_isDelete_SalCalRuleIDP625590059DBC47C7AFCBADE2FA86DB46"]  || false;
+        let _hideIDSalCalRuleIDP625590059DBC47C7AFCBADE2FA86DB46    = window["_hideID_SalCalRuleIDP625590059DBC47C7AFCBADE2FA86DB46"]    || false;
+        let _hideSearchSalCalRuleIDP625590059DBC47C7AFCBADE2FA86DB46  = window["_hideSearch_SalCalRuleIDP625590059DBC47C7AFCBADE2FA86DB46"]  || false;
+
+        if (window.hpaControlEngine) {
+            InstanceSalCalRuleIDP625590059DBC47C7AFCBADE2FA86DB46 = window.hpaControlEngine.initSelectBoxAutoSave({
+                uid:            "P625590059DBC47C7AFCBADE2FA86DB46",
+                columnName:     "SalCalRuleID",
+                displayName:    "Salary Formula",
+                dataSourceSP:   "sp_loadSalaryCalculationRule",
+                tableAddNew:    "",
+                tableAddNewD:   "",
+                columnAddNew:   "",
+                tableId:        "-110857012",
+                columnIDName:   "SalaryHistoryID",
+                columnIDName2:  "",
+                gridColumnName: "gridSalaryHistory",
+                keyUpdateGrid:  "0",
+                columnNameSync: "",
+                isEdit:         _isEditSalCalRuleIDP625590059DBC47C7AFCBADE2FA86DB46,
+                isDelete:       _isDeleteSalCalRuleIDP625590059DBC47C7AFCBADE2FA86DB46,
+                hideID:         _hideIDSalCalRuleIDP625590059DBC47C7AFCBADE2FA86DB46,
+                hideSearch:     _hideSearchSalCalRuleIDP625590059DBC47C7AFCBADE2FA86DB46,
+                isAdminOrManager: window.hpaIsAdminOrManager,
+                loadDataSourceCommon: (typeof loadDataSourceCommon !== 'undefined' ? loadDataSourceCommon : undefined),
+                saveFunction: (typeof saveFunction !== 'undefined' ? saveFunction : undefined),
+                updateOrDeleteDataExample: (typeof updateOrDeleteDataExample !== 'undefined' ? updateOrDeleteDataExample : undefined)
+            });
+        }
+        
+        let BaseSalRegionalIDP74FE628DB64645908CA648CA6346D82BDataSourceSP  = "sp_loadBaseSalRegional";
+        let BaseSalRegionalIDP74FE628DB64645908CA648CA6346D82BTableAddNew   = "";
+        let BaseSalRegionalIDP74FE628DB64645908CA648CA6346D82BColumnAddNew  = "";
+        let BaseSalRegionalIDP74FE628DB64645908CA648CA6346D82BCurrentSearch = "";
+        let InstanceBaseSalRegionalIDP74FE628DB64645908CA648CA6346D82B      = null;
+
+        let _isEditBaseSalRegionalIDP74FE628DB64645908CA648CA6346D82B    = window["_isEdit_BaseSalRegionalIDP74FE628DB64645908CA648CA6346D82B"]    || false;
+        let _isDeleteBaseSalRegionalIDP74FE628DB64645908CA648CA6346D82B  = window["_isDelete_BaseSalRegionalIDP74FE628DB64645908CA648CA6346D82B"]  || false;
+        let _hideIDBaseSalRegionalIDP74FE628DB64645908CA648CA6346D82B    = window["_hideID_BaseSalRegionalIDP74FE628DB64645908CA648CA6346D82B"]    || false;
+        let _hideSearchBaseSalRegionalIDP74FE628DB64645908CA648CA6346D82B  = window["_hideSearch_BaseSalRegionalIDP74FE628DB64645908CA648CA6346D82B"]  || false;
+
+        if (window.hpaControlEngine) {
+            InstanceBaseSalRegionalIDP74FE628DB64645908CA648CA6346D82B = window.hpaControlEngine.initSelectBoxAutoSave({
+                uid:            "P74FE628DB64645908CA648CA6346D82B",
+                columnName:     "BaseSalRegionalID",
+                displayName:    "Regional Base Salary",
+                dataSourceSP:   "sp_loadBaseSalRegional",
+                tableAddNew:    "",
+                tableAddNewD:   "",
+                columnAddNew:   "",
+                tableId:        "-110857012",
+                columnIDName:   "SalaryHistoryID",
+                columnIDName2:  "",
+                gridColumnName: "gridSalaryHistory",
+                keyUpdateGrid:  "0",
+                columnNameSync: "",
+                isEdit:         _isEditBaseSalRegionalIDP74FE628DB64645908CA648CA6346D82B,
+                isDelete:       _isDeleteBaseSalRegionalIDP74FE628DB64645908CA648CA6346D82B,
+                hideID:         _hideIDBaseSalRegionalIDP74FE628DB64645908CA648CA6346D82B,
+                hideSearch:     _hideSearchBaseSalRegionalIDP74FE628DB64645908CA648CA6346D82B,
+                isAdminOrManager: window.hpaIsAdminOrManager,
+                loadDataSourceCommon: (typeof loadDataSourceCommon !== 'undefined' ? loadDataSourceCommon : undefined),
+                saveFunction: (typeof saveFunction !== 'undefined' ? saveFunction : undefined),
+                updateOrDeleteDataExample: (typeof updateOrDeleteDataExample !== 'undefined' ? updateOrDeleteDataExample : undefined)
+            });
+        }
+        
+        if (typeof window.hpaControlEngine === "undefined") {
+            console.error("[hpaControlDate] window.hpaControlEngine chưa được load."); return;
+        }
+        window.hpaControlEngine.initDateBoxAutoSave({
+            uid: "PF108D2EED8A6470B9F767E335DB58562",
+            columnName: "RetroDate",
+            type: "date",
+            displayFormat: "dd/MM/yyyy",
+            dateSerializationFormat: "yyyy-MM-dd",
+            saveFormat: "yyyy/MM/dd",
+            tableId: "-110857012",
+            columnIDName: "SalaryHistoryID",
+            columnIDName2: "",
+            saveErrorMessage: "Lưu thất bại",
+            gridColumnName: "gridSalaryHistory",
+            tabIndex: "0"
+        });
+    
+            if (typeof window.hpaControlEngine === "undefined") {
+                console.error("[hpaControlText] window.hpaControlEngine chưa được load. Vui lòng load thủ tục sp_hpaControlEngineLoadUI trước.");
+                return;
+            }
+            window.hpaControlEngine.initTextBoxAutoSave({
+                uid: "PBA392C066B5D4481A12621487E9AF8EB",
+                columnName: "Note",
+                displayName: "Note",
+                tableId: "-110857012",
+                columnIDName: "SalaryHistoryID",
+                columnIDName2: "",
+                isRequired: 0,
+                customValidate: function() { return typeof null === "function" ? null.apply(this, arguments) : true; },
+                saveErrorMessage: "Failed to save data.",
+                gridColumnName: "gridSalaryHistory",
+                keyUpdateGrid: "0",
+                tabIndex: "0"
+            });
+        
+        window.hpaControlEngine.initNumberBoxAutoSave({
+            uid: "PF4104AD4CE364664BE68B94CCEC2FF44",
+            columnName: "Trans_AL",
+            tableId: "-110857012",
+            columnIDName: "SalaryHistoryID",
+            columnIDName2: "",
+            gridColumnName: "gridSalaryHistory",
+            tabIndex: "0",
+            saveErrorMessage: "Failed to save data.",
+            saveSuccessMessage: "Saved Successfully",
+            format: "#,##0 ₫",
+            getMin: function() { return window["IsNegativeTrans_ALPF4104AD4CE364664BE68B94CCEC2FF44"] == 1 ? undefined : 0; },
+            preventNegative: true,
+            getPreventNegative: function() { return window["IsNegativeTrans_ALPF4104AD4CE364664BE68B94CCEC2FF44"] != 1; }
+        });
+    
+        window.hpaControlEngine.initNumberBoxAutoSave({
+            uid: "P008696ECCBCD4F86895C9113890F421C",
+            columnName: "Pos_AL",
+            tableId: "-110857012",
+            columnIDName: "SalaryHistoryID",
+            columnIDName2: "",
+            gridColumnName: "gridSalaryHistory",
+            tabIndex: "0",
+            saveErrorMessage: "Failed to save data.",
+            saveSuccessMessage: "Saved Successfully",
+            format: "#,##0 ₫",
+            getMin: function() { return window["IsNegativePos_ALP008696ECCBCD4F86895C9113890F421C"] == 1 ? undefined : 0; },
+            preventNegative: true,
+            getPreventNegative: function() { return window["IsNegativePos_ALP008696ECCBCD4F86895C9113890F421C"] != 1; }
+        });
+    
+        window.hpaControlEngine.initNumberBoxAutoSave({
+            uid: "PB4C93683D82E4C61A34644BEAF5E90DB",
+            columnName: "Per_Rate",
+            tableId: "-110857012",
+            columnIDName: "SalaryHistoryID",
+            columnIDName2: "",
+            gridColumnName: "gridSalaryHistory",
+            tabIndex: "0",
+            saveErrorMessage: "Failed to save data.",
+            saveSuccessMessage: "Saved Successfully",
+            format: "#,##0 ₫",
+            getMin: function() { return window["IsNegativePer_RatePB4C93683D82E4C61A34644BEAF5E90DB"] == 1 ? undefined : 0; },
+            preventNegative: true,
+            getPreventNegative: function() { return window["IsNegativePer_RatePB4C93683D82E4C61A34644BEAF5E90DB"] != 1; }
+        });
+    
+
+       obj = ((window.sp_SalaryHistory_Insert_param && (window.sp_SalaryHistory_Insert_param.ParamControls || window.sp_SalaryHistory_Insert_param)) || window.currentSalaryHistorySelected || {});
+       window.currentRecordID_SalaryHistoryID = (obj && obj.SalaryHistoryID) ? obj.SalaryHistoryID : (window.currentRecordID_SalaryHistoryID || -1);
+       window.currentRecordID_ID = window.currentRecordID_SalaryHistoryID;
+       window.currentRecordID_ = window.currentRecordID_SalaryHistoryID;
+       let objSalaryHistoryMode = obj;
+       let isEditSalaryHistoryMode = !!(obj && obj.SalaryHistoryID && obj.SalaryHistoryID > 0);
+       $("#sp_SalaryHistory_Insert_html").toggleClass("salary-edit-mode", isEditSalaryHistoryMode).toggleClass("salary-add-mode", !isEditSalaryHistoryMode);
+       $("#btnDeleteSalaryHistory").toggle(isEditSalaryHistoryMode);
+       $("#btnSaveSalaryHistory,#btnCancelSalaryHistory").toggle(!isEditSalaryHistoryMode);
+       if (isEditSalaryHistoryMode) {
+           _readOnlyEmployeeIDP0F10902CD93049F9BF48D31E0EE80970 = true;
+           _autoSaveEmployeeIDP0F10902CD93049F9BF48D31E0EE80970 = true;
+           _autoSaveDateP4DAAB905424748229EAFD9AFC4D4EAEE = true;
+           _autoSaveSalaryPFAD05D72A31C4A2A81963A8FF680608F = true;
+           _autoSaveInsSalaryPC205049BF57549FB8D707CEE111859D7 = true;
+           _autoSaveIsNetP92AAACE73638481D96C35420E93DE728 = true;
+           _autoSavePositionIDP5CF1303904584E548A0ABDD9A5FB2168 = true;
+           _autoSaveSalCalRuleIDP625590059DBC47C7AFCBADE2FA86DB46 = true;
+           _autoSaveBaseSalRegionalIDP74FE628DB64645908CA648CA6346D82B = true;
+           _autoSaveRetroDatePF108D2EED8A6470B9F767E335DB58562 = true;
+           _autoSaveNotePBA392C066B5D4481A12621487E9AF8EB = true;
+           _autoSaveTrans_ALPF4104AD4CE364664BE68B94CCEC2FF44 = true;
+           _autoSavePos_ALP008696ECCBCD4F86895C9113890F421C = true;
+           _autoSavePer_RatePB4C93683D82E4C61A34644BEAF5E90DB = true;
+       }
+    
+            // Smart Load: Check số dòng - nếu > 1000 thì dùng API, còn không thì load bình thường
+            var spLoadDataGridName = "EmployeeListAll_DataSetting_Custom";
+            var isSmartLoadNeeded = false;
+
+            // Kiểm tra xem có cần smart load hay không (chỉ cho các control có datasource)
+            if (spLoadDataGridName && spLoadDataGridName.trim() !== "") {
+                // Lấy data source từ window nếu đã load
+                var dataSource = window["DataSource_EmployeeID"];
+
+                // Nếu chưa load hoặc dữ liệu trống, thì skip smart load cho lần này
+                if (dataSource && Array.isArray(dataSource) && dataSource.length > 1000) {
+                    isSmartLoadNeeded = true;
+                }
+            }
+
+            // Nếu smart load, thì set flag để control sẽ tự động load qua API
+            if (isSmartLoadNeeded) {
+                window["UseAPILoad_EmployeeID"] = true;
+                return;
+             }
+
+            // Load bình thường (dữ liệu nhỏ <= 1000)
+
+			try{	
+			InstanceEmployeeIDP0F10902CD93049F9BF48D31E0EE80970.clearValidationError();	
+			}catch(e){}
+            InstanceEmployeeIDP0F10902CD93049F9BF48D31E0EE80970._suppressValueChangeAction();
+
+			try {
+				InstanceEmployeeIDP0F10902CD93049F9BF48D31E0EE80970.option("searchValue", "");
+				InstanceEmployeeIDP0F10902CD93049F9BF48D31E0EE80970.option("text", "");
+				InstanceEmployeeIDP0F10902CD93049F9BF48D31E0EE80970.reset();
+			} catch(e) {}
+		
+            if(typeof obj !== "undefined" && obj && obj.EmployeeID != null) InstanceEmployeeIDP0F10902CD93049F9BF48D31E0EE80970.option("value", obj.EmployeeID);
+            else InstanceEmployeeIDP0F10902CD93049F9BF48D31E0EE80970.option("value", "");            						
+
+			InstanceEmployeeIDP0F10902CD93049F9BF48D31E0EE80970._resumeValueChangeAction();		
+			
+		
+        
+            // Smart Load: Check số dòng - nếu > 1000 thì dùng API, còn không thì load bình thường
+            var spLoadDataGridName = "EmployeeListAll_DataSetting_Custom";
+            var isSmartLoadNeeded = false;
+
+            // Kiểm tra xem có cần smart load hay không (chỉ cho các control có datasource)
+            if (spLoadDataGridName && spLoadDataGridName.trim() !== "") {
+                // Lấy data source từ window nếu đã load
+                var dataSource = window["DataSource_EmployeeID"];
+
+                // Nếu chưa load hoặc dữ liệu trống, thì skip smart load cho lần này
+                if (dataSource && Array.isArray(dataSource) && dataSource.length > 1000) {
+                    isSmartLoadNeeded = true;
+                }
+            }
+
+            // Nếu smart load, thì set flag để control sẽ tự động load qua API
+            if (isSmartLoadNeeded) {
+                window["UseAPILoad_EmployeeID"] = true;
+                return;
+             }
+
+            // Load bình thường (dữ liệu nhỏ <= 1000)
+
+			try{	
+			InstanceEmployeeIDP7D0E9F2A6B4C4D8E9A1B2C3D4E5F6071.clearValidationError();	
+			}catch(e){}
+            InstanceEmployeeIDP7D0E9F2A6B4C4D8E9A1B2C3D4E5F6071._suppressValueChangeAction();
+
+			try {
+				InstanceEmployeeIDP7D0E9F2A6B4C4D8E9A1B2C3D4E5F6071.option("searchValue", "");
+				InstanceEmployeeIDP7D0E9F2A6B4C4D8E9A1B2C3D4E5F6071.option("text", "");
+				InstanceEmployeeIDP7D0E9F2A6B4C4D8E9A1B2C3D4E5F6071.reset();
+			} catch(e) {}
+		
+            if(typeof obj !== "undefined" && obj && obj.EmployeeID != null) InstanceEmployeeIDP7D0E9F2A6B4C4D8E9A1B2C3D4E5F6071.option("value", obj.EmployeeID);
+            else InstanceEmployeeIDP7D0E9F2A6B4C4D8E9A1B2C3D4E5F6071.option("value", "");            						
+
+			InstanceEmployeeIDP7D0E9F2A6B4C4D8E9A1B2C3D4E5F6071._resumeValueChangeAction();		
+			
+		
+        
+            // Smart Load: Check số dòng - nếu > 1000 thì dùng API, còn không thì load bình thường
+            var spLoadDataGridName = "";
+            var isSmartLoadNeeded = false;
+
+            // Kiểm tra xem có cần smart load hay không (chỉ cho các control có datasource)
+            if (spLoadDataGridName && spLoadDataGridName.trim() !== "") {
+                // Lấy data source từ window nếu đã load
+                var dataSource = window["DataSource_Date"];
+
+                // Nếu chưa load hoặc dữ liệu trống, thì skip smart load cho lần này
+                if (dataSource && Array.isArray(dataSource) && dataSource.length > 1000) {
+                    isSmartLoadNeeded = true;
+                }
+            }
+
+            // Nếu smart load, thì set flag để control sẽ tự động load qua API
+            if (isSmartLoadNeeded) {
+                window["UseAPILoad_Date"] = true;
+                return;
+             }
+
+            // Load bình thường (dữ liệu nhỏ <= 1000)
+
+			try{	
+			InstanceDateP4DAAB905424748229EAFD9AFC4D4EAEE.clearValidationError();	
+			}catch(e){}
+            InstanceDateP4DAAB905424748229EAFD9AFC4D4EAEE._suppressValueChangeAction();
+
+			try {
+				InstanceDateP4DAAB905424748229EAFD9AFC4D4EAEE.option("searchValue", "");
+				InstanceDateP4DAAB905424748229EAFD9AFC4D4EAEE.option("text", "");
+				InstanceDateP4DAAB905424748229EAFD9AFC4D4EAEE.reset();
+			} catch(e) {}
+		
+            if(typeof obj !== "undefined" && obj && obj.Date != null) InstanceDateP4DAAB905424748229EAFD9AFC4D4EAEE.option("value", obj.Date);
+            else InstanceDateP4DAAB905424748229EAFD9AFC4D4EAEE.option("value", "");            						
+
+			InstanceDateP4DAAB905424748229EAFD9AFC4D4EAEE._resumeValueChangeAction();		
+			
+		
+        
+            // Smart Load: Check số dòng - nếu > 1000 thì dùng API, còn không thì load bình thường
+            var spLoadDataGridName = "";
+            var isSmartLoadNeeded = false;
+
+            // Kiểm tra xem có cần smart load hay không (chỉ cho các control có datasource)
+            if (spLoadDataGridName && spLoadDataGridName.trim() !== "") {
+                // Lấy data source từ window nếu đã load
+                var dataSource = window["DataSource_Salary"];
+
+                // Nếu chưa load hoặc dữ liệu trống, thì skip smart load cho lần này
+                if (dataSource && Array.isArray(dataSource) && dataSource.length > 1000) {
+                    isSmartLoadNeeded = true;
+                }
+            }
+
+            // Nếu smart load, thì set flag để control sẽ tự động load qua API
+            if (isSmartLoadNeeded) {
+                window["UseAPILoad_Salary"] = true;
+                return;
+             }
+
+            // Load bình thường (dữ liệu nhỏ <= 1000)
+
+			try{	
+			InstanceSalaryPFAD05D72A31C4A2A81963A8FF680608F.clearValidationError();	
+			}catch(e){}
+            InstanceSalaryPFAD05D72A31C4A2A81963A8FF680608F._suppressValueChangeAction();
+
+			try {
+				InstanceSalaryPFAD05D72A31C4A2A81963A8FF680608F.option("searchValue", "");
+				InstanceSalaryPFAD05D72A31C4A2A81963A8FF680608F.option("text", "");
+				InstanceSalaryPFAD05D72A31C4A2A81963A8FF680608F.reset();
+			} catch(e) {}
+		
+            if(typeof obj !== "undefined" && obj && obj.Salary != null) InstanceSalaryPFAD05D72A31C4A2A81963A8FF680608F.option("value", obj.Salary);
+            else InstanceSalaryPFAD05D72A31C4A2A81963A8FF680608F.option("value", "");            						
+
+			InstanceSalaryPFAD05D72A31C4A2A81963A8FF680608F._resumeValueChangeAction();		
+			
+		
+        
+            // Smart Load: Check số dòng - nếu > 1000 thì dùng API, còn không thì load bình thường
+            var spLoadDataGridName = "";
+            var isSmartLoadNeeded = false;
+
+            // Kiểm tra xem có cần smart load hay không (chỉ cho các control có datasource)
+            if (spLoadDataGridName && spLoadDataGridName.trim() !== "") {
+                // Lấy data source từ window nếu đã load
+                var dataSource = window["DataSource_InsSalary"];
+
+                // Nếu chưa load hoặc dữ liệu trống, thì skip smart load cho lần này
+                if (dataSource && Array.isArray(dataSource) && dataSource.length > 1000) {
+                    isSmartLoadNeeded = true;
+                }
+            }
+
+            // Nếu smart load, thì set flag để control sẽ tự động load qua API
+            if (isSmartLoadNeeded) {
+                window["UseAPILoad_InsSalary"] = true;
+                return;
+             }
+
+            // Load bình thường (dữ liệu nhỏ <= 1000)
+
+			try{	
+			InstanceInsSalaryPC205049BF57549FB8D707CEE111859D7.clearValidationError();	
+			}catch(e){}
+            InstanceInsSalaryPC205049BF57549FB8D707CEE111859D7._suppressValueChangeAction();
+
+			try {
+				InstanceInsSalaryPC205049BF57549FB8D707CEE111859D7.option("searchValue", "");
+				InstanceInsSalaryPC205049BF57549FB8D707CEE111859D7.option("text", "");
+				InstanceInsSalaryPC205049BF57549FB8D707CEE111859D7.reset();
+			} catch(e) {}
+		
+            if(typeof obj !== "undefined" && obj && obj.InsSalary != null) InstanceInsSalaryPC205049BF57549FB8D707CEE111859D7.option("value", obj.InsSalary);
+            else InstanceInsSalaryPC205049BF57549FB8D707CEE111859D7.option("value", "");            						
+
+			InstanceInsSalaryPC205049BF57549FB8D707CEE111859D7._resumeValueChangeAction();		
+			
+		
+        
+          if (typeof window["InstanceIsNetP92AAACE73638481D96C35420E93DE728"] !== "undefined" && window["InstanceIsNetP92AAACE73638481D96C35420E93DE728"]) {
+              window["InstanceIsNetP92AAACE73638481D96C35420E93DE728"].setValue(obj.IsNet);
+          }
+      
+            // Smart Load: Check số dòng - nếu > 1000 thì dùng API, còn không thì load bình thường
+            var spLoadDataGridName = "";
+            var isSmartLoadNeeded = false;
+
+            // Kiểm tra xem có cần smart load hay không (chỉ cho các control có datasource)
+            if (spLoadDataGridName && spLoadDataGridName.trim() !== "") {
+                // Lấy data source từ window nếu đã load
+                var dataSource = window["DataSource_IsNet"];
+
+                // Nếu chưa load hoặc dữ liệu trống, thì skip smart load cho lần này
+                if (dataSource && Array.isArray(dataSource) && dataSource.length > 1000) {
+                    isSmartLoadNeeded = true;
+                }
+            }
+
+            // Nếu smart load, thì set flag để control sẽ tự động load qua API
+            if (isSmartLoadNeeded) {
+                window["UseAPILoad_IsNet"] = true;
+                return;
+             }
+
+            // Load bình thường (dữ liệu nhỏ <= 1000)
+
+			try{	
+			InstanceIsNetP92AAACE73638481D96C35420E93DE728.clearValidationError();	
+			}catch(e){}
+            InstanceIsNetP92AAACE73638481D96C35420E93DE728._suppressValueChangeAction();
+
+			try {
+				InstanceIsNetP92AAACE73638481D96C35420E93DE728.option("searchValue", "");
+				InstanceIsNetP92AAACE73638481D96C35420E93DE728.option("text", "");
+				InstanceIsNetP92AAACE73638481D96C35420E93DE728.reset();
+			} catch(e) {}
+		
+            if(typeof obj !== "undefined" && obj && obj.IsNet != null) InstanceIsNetP92AAACE73638481D96C35420E93DE728.option("value", obj.IsNet);
+            else InstanceIsNetP92AAACE73638481D96C35420E93DE728.option("value", "");            						
+
+			InstanceIsNetP92AAACE73638481D96C35420E93DE728._resumeValueChangeAction();		
+			
+		
+        
+            // Smart Load: Check số dòng - nếu > 1000 thì dùng API, còn không thì load bình thường
+            var spLoadDataGridName = "sp_loadPosition";
+            var isSmartLoadNeeded = false;
+
+            // Kiểm tra xem có cần smart load hay không (chỉ cho các control có datasource)
+            if (spLoadDataGridName && spLoadDataGridName.trim() !== "") {
+                // Lấy data source từ window nếu đã load
+                var dataSource = window["DataSource_PositionID"];
+
+                // Nếu chưa load hoặc dữ liệu trống, thì skip smart load cho lần này
+                if (dataSource && Array.isArray(dataSource) && dataSource.length > 1000) {
+                    isSmartLoadNeeded = true;
+                }
+            }
+
+            // Nếu smart load, thì set flag để control sẽ tự động load qua API
+            if (isSmartLoadNeeded) {
+                window["UseAPILoad_PositionID"] = true;
+                return;
+             }
+
+            // Load bình thường (dữ liệu nhỏ <= 1000)
+
+			try{	
+			InstancePositionIDP5CF1303904584E548A0ABDD9A5FB2168.clearValidationError();	
+			}catch(e){}
+            InstancePositionIDP5CF1303904584E548A0ABDD9A5FB2168._suppressValueChangeAction();
+
+			try {
+				InstancePositionIDP5CF1303904584E548A0ABDD9A5FB2168.option("searchValue", "");
+				InstancePositionIDP5CF1303904584E548A0ABDD9A5FB2168.option("text", "");
+				InstancePositionIDP5CF1303904584E548A0ABDD9A5FB2168.reset();
+			} catch(e) {}
+		
+            if(typeof obj !== "undefined" && obj && obj.PositionID != null) InstancePositionIDP5CF1303904584E548A0ABDD9A5FB2168.option("value", obj.PositionID);
+            else InstancePositionIDP5CF1303904584E548A0ABDD9A5FB2168.option("value", "");            						
+
+			InstancePositionIDP5CF1303904584E548A0ABDD9A5FB2168._resumeValueChangeAction();		
+			
+		
+        
+            // Smart Load: Check số dòng - nếu > 1000 thì dùng API, còn không thì load bình thường
+            var spLoadDataGridName = "sp_loadSalaryCalculationRule";
+            var isSmartLoadNeeded = false;
+
+            // Kiểm tra xem có cần smart load hay không (chỉ cho các control có datasource)
+            if (spLoadDataGridName && spLoadDataGridName.trim() !== "") {
+                // Lấy data source từ window nếu đã load
+                var dataSource = window["DataSource_SalCalRuleID"];
+
+                // Nếu chưa load hoặc dữ liệu trống, thì skip smart load cho lần này
+                if (dataSource && Array.isArray(dataSource) && dataSource.length > 1000) {
+                    isSmartLoadNeeded = true;
+                }
+            }
+
+            // Nếu smart load, thì set flag để control sẽ tự động load qua API
+            if (isSmartLoadNeeded) {
+                window["UseAPILoad_SalCalRuleID"] = true;
+                return;
+             }
+
+            // Load bình thường (dữ liệu nhỏ <= 1000)
+
+			try{	
+			InstanceSalCalRuleIDP625590059DBC47C7AFCBADE2FA86DB46.clearValidationError();	
+			}catch(e){}
+            InstanceSalCalRuleIDP625590059DBC47C7AFCBADE2FA86DB46._suppressValueChangeAction();
+
+			try {
+				InstanceSalCalRuleIDP625590059DBC47C7AFCBADE2FA86DB46.option("searchValue", "");
+				InstanceSalCalRuleIDP625590059DBC47C7AFCBADE2FA86DB46.option("text", "");
+				InstanceSalCalRuleIDP625590059DBC47C7AFCBADE2FA86DB46.reset();
+			} catch(e) {}
+		
+            if(typeof obj !== "undefined" && obj && obj.SalCalRuleID != null) InstanceSalCalRuleIDP625590059DBC47C7AFCBADE2FA86DB46.option("value", obj.SalCalRuleID);
+            else InstanceSalCalRuleIDP625590059DBC47C7AFCBADE2FA86DB46.option("value", "");            						
+
+			InstanceSalCalRuleIDP625590059DBC47C7AFCBADE2FA86DB46._resumeValueChangeAction();		
+			
+		
+        
+            // Smart Load: Check số dòng - nếu > 1000 thì dùng API, còn không thì load bình thường
+            var spLoadDataGridName = "sp_loadBaseSalRegional";
+            var isSmartLoadNeeded = false;
+
+            // Kiểm tra xem có cần smart load hay không (chỉ cho các control có datasource)
+            if (spLoadDataGridName && spLoadDataGridName.trim() !== "") {
+                // Lấy data source từ window nếu đã load
+                var dataSource = window["DataSource_BaseSalRegionalID"];
+
+                // Nếu chưa load hoặc dữ liệu trống, thì skip smart load cho lần này
+                if (dataSource && Array.isArray(dataSource) && dataSource.length > 1000) {
+                    isSmartLoadNeeded = true;
+                }
+            }
+
+            // Nếu smart load, thì set flag để control sẽ tự động load qua API
+            if (isSmartLoadNeeded) {
+                window["UseAPILoad_BaseSalRegionalID"] = true;
+                return;
+             }
+
+            // Load bình thường (dữ liệu nhỏ <= 1000)
+
+			try{	
+			InstanceBaseSalRegionalIDP74FE628DB64645908CA648CA6346D82B.clearValidationError();	
+			}catch(e){}
+            InstanceBaseSalRegionalIDP74FE628DB64645908CA648CA6346D82B._suppressValueChangeAction();
+
+			try {
+				InstanceBaseSalRegionalIDP74FE628DB64645908CA648CA6346D82B.option("searchValue", "");
+				InstanceBaseSalRegionalIDP74FE628DB64645908CA648CA6346D82B.option("text", "");
+				InstanceBaseSalRegionalIDP74FE628DB64645908CA648CA6346D82B.reset();
+			} catch(e) {}
+		
+            if(typeof obj !== "undefined" && obj && obj.BaseSalRegionalID != null) InstanceBaseSalRegionalIDP74FE628DB64645908CA648CA6346D82B.option("value", obj.BaseSalRegionalID);
+            else InstanceBaseSalRegionalIDP74FE628DB64645908CA648CA6346D82B.option("value", "");            						
+
+			InstanceBaseSalRegionalIDP74FE628DB64645908CA648CA6346D82B._resumeValueChangeAction();		
+			
+		
+        
+            // Smart Load: Check số dòng - nếu > 1000 thì dùng API, còn không thì load bình thường
+            var spLoadDataGridName = "";
+            var isSmartLoadNeeded = false;
+
+            // Kiểm tra xem có cần smart load hay không (chỉ cho các control có datasource)
+            if (spLoadDataGridName && spLoadDataGridName.trim() !== "") {
+                // Lấy data source từ window nếu đã load
+                var dataSource = window["DataSource_RetroDate"];
+
+                // Nếu chưa load hoặc dữ liệu trống, thì skip smart load cho lần này
+                if (dataSource && Array.isArray(dataSource) && dataSource.length > 1000) {
+                    isSmartLoadNeeded = true;
+                }
+            }
+
+            // Nếu smart load, thì set flag để control sẽ tự động load qua API
+            if (isSmartLoadNeeded) {
+                window["UseAPILoad_RetroDate"] = true;
+                return;
+             }
+
+            // Load bình thường (dữ liệu nhỏ <= 1000)
+
+			try{	
+			InstanceRetroDatePF108D2EED8A6470B9F767E335DB58562.clearValidationError();	
+			}catch(e){}
+            InstanceRetroDatePF108D2EED8A6470B9F767E335DB58562._suppressValueChangeAction();
+
+			try {
+				InstanceRetroDatePF108D2EED8A6470B9F767E335DB58562.option("searchValue", "");
+				InstanceRetroDatePF108D2EED8A6470B9F767E335DB58562.option("text", "");
+				InstanceRetroDatePF108D2EED8A6470B9F767E335DB58562.reset();
+			} catch(e) {}
+		
+            if(typeof obj !== "undefined" && obj && obj.RetroDate != null) InstanceRetroDatePF108D2EED8A6470B9F767E335DB58562.option("value", obj.RetroDate);
+            else InstanceRetroDatePF108D2EED8A6470B9F767E335DB58562.option("value", "");            						
+
+			InstanceRetroDatePF108D2EED8A6470B9F767E335DB58562._resumeValueChangeAction();		
+			
+		
+        
+            // Smart Load: Check số dòng - nếu > 1000 thì dùng API, còn không thì load bình thường
+            var spLoadDataGridName = "";
+            var isSmartLoadNeeded = false;
+
+            // Kiểm tra xem có cần smart load hay không (chỉ cho các control có datasource)
+            if (spLoadDataGridName && spLoadDataGridName.trim() !== "") {
+                // Lấy data source từ window nếu đã load
+                var dataSource = window["DataSource_Note"];
+
+                // Nếu chưa load hoặc dữ liệu trống, thì skip smart load cho lần này
+                if (dataSource && Array.isArray(dataSource) && dataSource.length > 1000) {
+                    isSmartLoadNeeded = true;
+                }
+            }
+
+            // Nếu smart load, thì set flag để control sẽ tự động load qua API
+            if (isSmartLoadNeeded) {
+                window["UseAPILoad_Note"] = true;
+                return;
+             }
+
+            // Load bình thường (dữ liệu nhỏ <= 1000)
+
+			try{	
+			InstanceNotePBA392C066B5D4481A12621487E9AF8EB.clearValidationError();	
+			}catch(e){}
+            InstanceNotePBA392C066B5D4481A12621487E9AF8EB._suppressValueChangeAction();
+
+			try {
+				InstanceNotePBA392C066B5D4481A12621487E9AF8EB.option("searchValue", "");
+				InstanceNotePBA392C066B5D4481A12621487E9AF8EB.option("text", "");
+				InstanceNotePBA392C066B5D4481A12621487E9AF8EB.reset();
+			} catch(e) {}
+		
+            if(typeof obj !== "undefined" && obj && obj.Note != null) InstanceNotePBA392C066B5D4481A12621487E9AF8EB.option("value", obj.Note);
+            else InstanceNotePBA392C066B5D4481A12621487E9AF8EB.option("value", "");            						
+
+			InstanceNotePBA392C066B5D4481A12621487E9AF8EB._resumeValueChangeAction();		
+			
+		
+        
+            // Smart Load: Check số dòng - nếu > 1000 thì dùng API, còn không thì load bình thường
+            var spLoadDataGridName = "";
+            var isSmartLoadNeeded = false;
+
+            // Kiểm tra xem có cần smart load hay không (chỉ cho các control có datasource)
+            if (spLoadDataGridName && spLoadDataGridName.trim() !== "") {
+                // Lấy data source từ window nếu đã load
+                var dataSource = window["DataSource_Trans_AL"];
+
+                // Nếu chưa load hoặc dữ liệu trống, thì skip smart load cho lần này
+                if (dataSource && Array.isArray(dataSource) && dataSource.length > 1000) {
+                    isSmartLoadNeeded = true;
+                }
+            }
+
+            // Nếu smart load, thì set flag để control sẽ tự động load qua API
+            if (isSmartLoadNeeded) {
+                window["UseAPILoad_Trans_AL"] = true;
+                return;
+             }
+
+            // Load bình thường (dữ liệu nhỏ <= 1000)
+
+			try{	
+			InstanceTrans_ALPF4104AD4CE364664BE68B94CCEC2FF44.clearValidationError();	
+			}catch(e){}
+            InstanceTrans_ALPF4104AD4CE364664BE68B94CCEC2FF44._suppressValueChangeAction();
+
+			try {
+				InstanceTrans_ALPF4104AD4CE364664BE68B94CCEC2FF44.option("searchValue", "");
+				InstanceTrans_ALPF4104AD4CE364664BE68B94CCEC2FF44.option("text", "");
+				InstanceTrans_ALPF4104AD4CE364664BE68B94CCEC2FF44.reset();
+			} catch(e) {}
+		
+            if(typeof obj !== "undefined" && obj && obj.Trans_AL != null) InstanceTrans_ALPF4104AD4CE364664BE68B94CCEC2FF44.option("value", obj.Trans_AL);
+            else InstanceTrans_ALPF4104AD4CE364664BE68B94CCEC2FF44.option("value", "");            						
+
+			InstanceTrans_ALPF4104AD4CE364664BE68B94CCEC2FF44._resumeValueChangeAction();		
+			
+		
+        
+            // Smart Load: Check số dòng - nếu > 1000 thì dùng API, còn không thì load bình thường
+            var spLoadDataGridName = "";
+            var isSmartLoadNeeded = false;
+
+            // Kiểm tra xem có cần smart load hay không (chỉ cho các control có datasource)
+            if (spLoadDataGridName && spLoadDataGridName.trim() !== "") {
+                // Lấy data source từ window nếu đã load
+                var dataSource = window["DataSource_Pos_AL"];
+
+                // Nếu chưa load hoặc dữ liệu trống, thì skip smart load cho lần này
+                if (dataSource && Array.isArray(dataSource) && dataSource.length > 1000) {
+                    isSmartLoadNeeded = true;
+                }
+            }
+
+            // Nếu smart load, thì set flag để control sẽ tự động load qua API
+            if (isSmartLoadNeeded) {
+                window["UseAPILoad_Pos_AL"] = true;
+                return;
+             }
+
+            // Load bình thường (dữ liệu nhỏ <= 1000)
+
+			try{	
+			InstancePos_ALP008696ECCBCD4F86895C9113890F421C.clearValidationError();	
+			}catch(e){}
+            InstancePos_ALP008696ECCBCD4F86895C9113890F421C._suppressValueChangeAction();
+
+			try {
+				InstancePos_ALP008696ECCBCD4F86895C9113890F421C.option("searchValue", "");
+				InstancePos_ALP008696ECCBCD4F86895C9113890F421C.option("text", "");
+				InstancePos_ALP008696ECCBCD4F86895C9113890F421C.reset();
+			} catch(e) {}
+		
+            if(typeof obj !== "undefined" && obj && obj.Pos_AL != null) InstancePos_ALP008696ECCBCD4F86895C9113890F421C.option("value", obj.Pos_AL);
+            else InstancePos_ALP008696ECCBCD4F86895C9113890F421C.option("value", "");            						
+
+			InstancePos_ALP008696ECCBCD4F86895C9113890F421C._resumeValueChangeAction();		
+			
+		
+        
+            // Smart Load: Check số dòng - nếu > 1000 thì dùng API, còn không thì load bình thường
+            var spLoadDataGridName = "";
+            var isSmartLoadNeeded = false;
+
+            // Kiểm tra xem có cần smart load hay không (chỉ cho các control có datasource)
+            if (spLoadDataGridName && spLoadDataGridName.trim() !== "") {
+                // Lấy data source từ window nếu đã load
+                var dataSource = window["DataSource_Per_Rate"];
+
+                // Nếu chưa load hoặc dữ liệu trống, thì skip smart load cho lần này
+                if (dataSource && Array.isArray(dataSource) && dataSource.length > 1000) {
+                    isSmartLoadNeeded = true;
+                }
+            }
+
+            // Nếu smart load, thì set flag để control sẽ tự động load qua API
+            if (isSmartLoadNeeded) {
+                window["UseAPILoad_Per_Rate"] = true;
+                return;
+             }
+
+            // Load bình thường (dữ liệu nhỏ <= 1000)
+
+			try{	
+			InstancePer_RatePB4C93683D82E4C61A34644BEAF5E90DB.clearValidationError();	
+			}catch(e){}
+            InstancePer_RatePB4C93683D82E4C61A34644BEAF5E90DB._suppressValueChangeAction();
+
+			try {
+				InstancePer_RatePB4C93683D82E4C61A34644BEAF5E90DB.option("searchValue", "");
+				InstancePer_RatePB4C93683D82E4C61A34644BEAF5E90DB.option("text", "");
+				InstancePer_RatePB4C93683D82E4C61A34644BEAF5E90DB.reset();
+			} catch(e) {}
+		
+            if(typeof obj !== "undefined" && obj && obj.Per_Rate != null) InstancePer_RatePB4C93683D82E4C61A34644BEAF5E90DB.option("value", obj.Per_Rate);
+            else InstancePer_RatePB4C93683D82E4C61A34644BEAF5E90DB.option("value", "");            						
+
+			InstancePer_RatePB4C93683D82E4C61A34644BEAF5E90DB._resumeValueChangeAction();		
+			
+		
+        
+
+$("#btnSaveSalaryHistory").on("click", function() {
+            let empInst = getSalaryHistoryEmpInstance();
+            let empVal = "";
+            if (empInst && typeof empInst.getValueAsString === "function") {
+                empVal = empInst.getValueAsString();
+            } else if (empInst && typeof empInst.getValue === "function") {
+                let empRawVal = empInst.getValue();
+                empVal = Array.isArray(empRawVal) ? empRawVal.join(",") : (empRawVal || "");
+            } else if (empInst) {
+                empVal = empInst.option("value");
+            }
+            if (Array.isArray(empVal)) empVal = empVal.join(",");
+            empVal = (empVal || "").toString();
+            let dateVal = InstanceDateP4DAAB905424748229EAFD9AFC4D4EAEE.option("value");
+            let salVal = InstanceSalaryPFAD05D72A31C4A2A81963A8FF680608F.option("value");
+
+            if (!empVal || empVal === "" || empVal == "-1") {
+                hpaSalaryHistoryNotify("Please select an employee.", "warning", 2000);
+                return;
+            }
+            if (!dateVal) {
+                hpaSalaryHistoryNotify("Please select effective date.", "warning", 2000);
+                return;
+            }
+            if (salVal === null || salVal === undefined || salVal === "") {
+                hpaSalaryHistoryNotify("Please enter basic salary.", "warning", 2000);
+                return;
+            }
+
+            let formattedDate = DevExpress.localization.formatDate(new Date(dateVal), "yyyy-MM-dd");
+            let insSalVal = typeof InstanceInsSalaryPC205049BF57549FB8D707CEE111859D7 !== "undefined" ? InstanceInsSalaryPC205049BF57549FB8D707CEE111859D7.option("value") : null;
+            let isNetVal = 0;
+            if (typeof InstanceIsNetP92AAACE73638481D96C35420E93DE728 !== "undefined"
+                && InstanceIsNetP92AAACE73638481D96C35420E93DE728) {
+                if (typeof InstanceIsNetP92AAACE73638481D96C35420E93DE728.getValue === "function") {
+                    isNetVal = InstanceIsNetP92AAACE73638481D96C35420E93DE728.getValue() ? 1 : 0;
+                } else if (typeof InstanceIsNetP92AAACE73638481D96C35420E93DE728.option === "function") {
+                    isNetVal = InstanceIsNetP92AAACE73638481D96C35420E93DE728.option("value") ? 1 : 0;
+                }
+            }
+            let posVal = typeof InstancePositionIDP5CF1303904584E548A0ABDD9A5FB2168 !== "undefined" ? InstancePositionIDP5CF1303904584E548A0ABDD9A5FB2168.option("value") : null;
+            let ruleVal = typeof InstanceSalCalRuleIDP625590059DBC47C7AFCBADE2FA86DB46 !== "undefined" ? InstanceSalCalRuleIDP625590059DBC47C7AFCBADE2FA86DB46.option("value") : null;
+            let regVal = typeof InstanceBaseSalRegionalIDP74FE628DB64645908CA648CA6346D82B !== "undefined" ? InstanceBaseSalRegionalIDP74FE628DB64645908CA648CA6346D82B.option("value") : null;
+            let retroVal = typeof InstanceRetroDatePF108D2EED8A6470B9F767E335DB58562 !== "undefined" ? InstanceRetroDatePF108D2EED8A6470B9F767E335DB58562.option("value") : null;
+            let formattedRetro = retroVal ? DevExpress.localization.formatDate(new Date(retroVal), "yyyy-MM-dd HH:mm:ss") : null;
+            let noteVal = typeof InstanceNotePBA392C066B5D4481A12621487E9AF8EB !== "undefined" ? InstanceNotePBA392C066B5D4481A12621487E9AF8EB.option("value") : null;
+            let transAlVal = typeof InstanceTrans_ALPF4104AD4CE364664BE68B94CCEC2FF44 !== "undefined" ? (InstanceTrans_ALPF4104AD4CE364664BE68B94CCEC2FF44.option("value") || 0) : 0;
+            let posAlVal = typeof InstancePos_ALP008696ECCBCD4F86895C9113890F421C !== "undefined" ? (InstancePos_ALP008696ECCBCD4F86895C9113890F421C.option("value") || 0) : 0;
+            let perRateInst = null;
+            for (let key in window) {
+                if (key.startsWith("Instance") && key.endsWith("PB4C93683D82E4C61A34644BEAF5E90DB")) {
+                    perRateInst = window[key];
+                    break;
+                }
+            }
+            let perRateVal = (perRateInst && perRateInst.option("value")) || 0;
+
+            AjaxHPAParadise({
+                data: {
+                    name: "sp_SalaryHistory_Insert",
+                    param: [
+                        "LoginID", LoginID,
+                        "EmployeeID", empVal,
+                        "Date", formattedDate,
+                        "Salary", salVal,
+                        "InsSalary", insSalVal,
+                        "IsNet", isNetVal,
+                        "PositionID", posVal,
+                        "SalCalRuleID", ruleVal,
+                        "BaseSalRegionalID", regVal,
+                        "RetroDate", formattedRetro,
+                        "Note", noteVal,
+                        "Trans_AL", transAlVal,
+                        "Pos_AL", posAlVal,
+                        "Per_Rate", perRateVal
+                    ]
+                },
+                success: function(res) {
+                //    console.log("Save salary history raw response:", res);
+                    const json = typeof res === "string" ? JSON.parse(res) : res;
+                  //  console.log("Save salary history parsed json:", json);
+                    if (json && json.data && json.data[0] && json.data[0][0]) {
+                        let result = json.data[0][0];
+                        if (result.Success === 1 || result.Success === true || result.Success === "1") {
+                            hpaSalaryHistoryNotify(result.Message || "Salary saved successfully.", "success", 2000);
+                            if (typeof window.InstancegridSalaryHistoryPD66259053F5E42B48615BBB3D277D02F !== "undefined" && typeof window.InstancegridSalaryHistoryPD66259053F5E42B48615BBB3D277D02F.refresh === "function") {
+                                window.InstancegridSalaryHistoryPD66259053F5E42B48615BBB3D277D02F.refresh();
+                            }
+                            hpaCloseSalaryHistoryForm();
+                        } else {
+                            hpaSalaryHistoryNotify(result.Message || "Error saving salary.", "error", 4000);
+                        }
+         } else {
+                        hpaSalaryHistoryNotify("Salary saved successfully.", "success", 2000);
+                        if (typeof window.InstancegridSalaryHistoryPD66259053F5E42B48615BBB3D277D02F !== "undefined" && typeof window.InstancegridSalaryHistoryPD66259053F5E42B48615BBB3D277D02F.refresh === "function") {
+                            window.InstancegridSalaryHistoryPD66259053F5E42B48615BBB3D277D02F.refresh();
+                        }
+                        hpaCloseSalaryHistoryForm();
+                    }
+                },
+                error: function(err) {
+                    console.error("Save salary history error:", err);
+                    hpaSalaryHistoryNotify("Connection or processing error: " + err, "error", 4000);
+                }
+            });
+        });
+
+        // Đăng ký sự kiện Click cho nút Xóa
+        $("#btnDeleteSalaryHistory").off("click").on("click", function(e) {
+            if (e) { e.preventDefault(); e.stopPropagation(); }
+            let salaryHistoryID = window.currentRecordID_SalaryHistoryID || (window._currentEditSalaryHistoryObj && window._currentEditSalaryHistoryObj.SalaryHistoryID);
+            let empInst = getSalaryHistoryEmpInstance();
+            let empVal = "";
+            if (empInst && typeof empInst.getValueAsString === "function") {
+                empVal = empInst.getValueAsString();
+            } else if (empInst && typeof empInst.getValue === "function") {
+                let empRawVal = empInst.getValue();
+                empVal = Array.isArray(empRawVal) ? empRawVal.join(",") : (empRawVal || "");
+            } else if (empInst) {
+                empVal = empInst.option("value");
+            }
+            if (Array.isArray(empVal)) empVal = empVal.join(",");
+            empVal = (empVal || "").toString();
+            let dateVal = InstanceDateP4DAAB905424748229EAFD9AFC4D4EAEE ? InstanceDateP4DAAB905424748229EAFD9AFC4D4EAEE.option("value") : null;
+            let formattedDate = dateVal ? DevExpress.localization.formatDate(new Date(dateVal), "yyyy-MM-dd") : null;
+
+            const performDelete = function() {
+                AjaxHPAParadise({
+                    data: {
+                        name: "sp_SalaryHistory_Delete",
+                        param: [
+                            "LoginID", LoginID,
+                            "SalaryHistoryID", salaryHistoryID || 0,
+                            "EmployeeID", empVal,
+                            "Date", formattedDate
+                        ]
+                    },
+                    success: function(res) {
+                        const json = typeof res === "string" ? JSON.parse(res) : res;
+                        if (json && json.data && json.data[0] && json.data[0][0]) {
+                            let result = json.data[0][0];
+                            if (result.Success === 1 || result.Success === true || result.Success === "1") {
+                                hpaSalaryHistoryNotify(result.Message || "Salary history deleted successfully.", "success");
+                                if (typeof window.InstancegridSalaryHistoryPD66259053F5E42B48615BBB3D277D02F !== "undefined" && typeof window.InstancegridSalaryHistoryPD66259053F5E42B48615BBB3D277D02F.refresh === "function") {
+                                    window.InstancegridSalaryHistoryPD66259053F5E42B48615BBB3D277D02F.refresh();
+                                }
+                                hpaCloseSalaryHistoryForm();
+                            } else {
+                                hpaSalaryHistoryNotify(result.Message || "Error deleting salary history.", "error");
+                            }
+                        } else {
+                            hpaSalaryHistoryNotify("Salary history deleted successfully.", "success");
+                            if (typeof window.InstancegridSalaryHistoryPD66259053F5E42B48615BBB3D277D02F !== "undefined" && typeof window.InstancegridSalaryHistoryPD66259053F5E42B48615BBB3D277D02F.refresh === "function") {
+                                window.InstancegridSalaryHistoryPD66259053F5E42B48615BBB3D277D02F.refresh();
+                            }
+                            hpaCloseSalaryHistoryForm();
+                        }
+                    },
+                    error: function(err) {
+                        console.error("Delete salary history error:", err);
+                        hpaSalaryHistoryNotify("Connection or processing error: " + err, "error");
+                    }
+                });
+            };
+
+            if (typeof showConfirmPopup === "function") {
+                showConfirmPopup({
+                    title: "Delete confirmation",
+                    message: "Are you sure you want to delete this salary history record?",
+                    YesText: "Yes",
+                    NoText: "No",
+                    onYes: performDelete
+                });
+            } else if (typeof DevExpress !== "undefined" && DevExpress.ui && DevExpress.ui.dialog) {
+                DevExpress.ui.dialog.confirm("Are you sure you want to delete this salary history record?", "Delete confirmation").then(function(confirmed) {
+                    if (confirmed) performDelete();
+                });
+            } else {
+                if (confirm("Are you sure you want to delete this salary history record?")) {
+                    performDelete();
+                }
+            }
+        });
+
+        // Đăng ký sự kiện Click cho
+        $("#btnCancelSalaryHistory").off("click").on("click", function(e) {
+            if (e) { e.preventDefault(); e.stopPropagation(); }
+            $(".dx-popup-wrapper:visible .dx-closebutton").last().trigger("dxclick").trigger("click");
+            return false;
+        })
+
+
+    })();
+    </script>

@@ -1,0 +1,31 @@
+{
+  "tcId": "TC-03",
+  "pageName": "cham_cong_tinh_luong_crud_lien_hoan",
+  "title": "Gửi đơn Xin làm thêm giờ OT 2.0h ngày test (Role: tai.dang)",
+  "testStatus": "PASSED",
+  "businessStatus": "PASSED",
+  "businessNotes": "Đạt yêu cầu logic nghiệp vụ mong đợi",
+  "defectEvidence": null,
+  "failureAnalysis": {},
+  "status": "PASSED",
+  "duration": "27.86s",
+  "errors": "",
+  "stepScreenshots": [
+    {
+      "step": 1,
+      "title": "Nhan vien dien form xin lam them gio ot 2h ngay 2026 10 28 mnuwpt316",
+      "fileName": "TC-03-step01-nhan-vien-dien-form-xin-lam-them-gio-ot-2h-ngay-2026-10-28-mnuwpt316.png",
+      "relPath": "cham_cong_tinh_luong_crud_lien_hoan/TC-03/screenshots/TC-03-step01-nhan-vien-dien-form-xin-lam-them-gio-ot-2h-ngay-2026-10-28-mnuwpt316.png"
+    }
+  ],
+  "attachments": {
+    "screenshots": [
+      "cham_cong_tinh_luong_crud_lien_hoan/TC-03/screenshots/TC-03-step01-nhan-vien-dien-form-xin-lam-them-gio-ot-2h-ngay-2026-10-28-mnuwpt316.png"
+    ],
+    "videos": [
+      "cham_cong_tinh_luong_crud_lien_hoan/TC-03/videos/video.webm"
+    ],
+    "traces": []
+  },
+  "timestamp": "2026-11-05T16:25:14.128Z"
+}

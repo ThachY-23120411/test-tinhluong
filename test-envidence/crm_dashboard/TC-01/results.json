@@ -1,0 +1,20 @@
+{
+  "tcId": "TC-01",
+  "pageName": "crm_dashboard",
+  "title": "TC-01: Kiểm tra Trang Chủ CRM - Dashboard KPI, Thống kê & Widget Cards",
+  "status": "PASSED",
+  "duration": "15.49s",
+  "errors": "",
+  "attachments": {
+    "screenshots": [
+      "crm_dashboard/TC-01/screenshots/test-finished-1.png"
+    ],
+    "videos": [
+      "crm_dashboard/TC-01/videos/video.webm"
+    ],
+    "traces": [
+      "crm_dashboard/TC-01/traces/trace.zip"
+    ]
+  },
+  "timestamp": "2026-10-15T08:06:03.163Z"
+}

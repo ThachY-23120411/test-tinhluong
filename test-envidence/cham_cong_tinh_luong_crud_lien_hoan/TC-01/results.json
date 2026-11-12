@@ -1,0 +1,31 @@
+{
+  "tcId": "TC-01",
+  "pageName": "cham_cong_tinh_luong_crud_lien_hoan",
+  "title": "Gửi đơn Xin bù công ngày test xóa vi phạm quẹt thẻ (Role: tai.dang)",
+  "testStatus": "PASSED",
+  "businessStatus": "PASSED",
+  "businessNotes": "Đạt yêu cầu logic nghiệp vụ mong đợi",
+  "defectEvidence": null,
+  "failureAnalysis": {},
+  "status": "PASSED",
+  "duration": "26.23s",
+  "errors": "",
+  "stepScreenshots": [
+    {
+      "step": 1,
+      "title": "Nhan vien dien form xin bu cong ngay 2026 10 02 mnuhrs033",
+      "fileName": "TC-01-step01-nhan-vien-dien-form-xin-bu-cong-ngay-2026-10-02-mnuhrs033.png",
+      "relPath": "cham_cong_tinh_luong_crud_lien_hoan/TC-01/screenshots/TC-01-step01-nhan-vien-dien-form-xin-bu-cong-ngay-2026-10-02-mnuhrs033.png"
+    }
+  ],
+  "attachments": {
+    "screenshots": [
+      "cham_cong_tinh_luong_crud_lien_hoan/TC-01/screenshots/TC-01-step01-nhan-vien-dien-form-xin-bu-cong-ngay-2026-10-02-mnuhrs033.png"
+    ],
+    "videos": [
+      "cham_cong_tinh_luong_crud_lien_hoan/TC-01/videos/video.webm"
+    ],
+    "traces": []
+  },
+  "timestamp": "2026-11-05T17:22:14.891Z"
+}

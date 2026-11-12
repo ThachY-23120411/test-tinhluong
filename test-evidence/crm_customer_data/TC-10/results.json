@@ -1,0 +1,61 @@
+{
+  "tcId": "TC-10",
+  "pageName": "crm_customer_data",
+  "title": "Thẩm định Tính Năng Sắp Xếp Dữ Liệu Bằng Click Tiêu Đề Cột (Column Sorting)",
+  "testStatus": "PASSED",
+  "businessStatus": "PASSED",
+  "businessNotes": "PASS - Thao tác Click tiêu đề cột sắp xếp (Sort ASC/DESC) đảo chiều mượt mà, phản hồi API nạp lại chuẩn xác",
+  "defectEvidence": null,
+  "failureAnalysis": {},
+  "status": "PASSED",
+  "duration": "31.58s",
+  "errors": "",
+  "stepScreenshots": [
+    {
+      "step": 1,
+      "title": "Xác định vị trí tiêu đề cột dữ liệu trên DataGrid",
+      "fileName": "TC-10-step01-xac-dinh-vi-tri-tieu-de-cot-du-lieu-tren-datagrid.png",
+      "relPath": "crm_customer_data/TC-10/screenshots/TC-10-step01-xac-dinh-vi-tri-tieu-de-cot-du-lieu-tren-datagrid.png"
+    },
+    {
+      "step": 2,
+      "title": "Nhấp tiêu đề cột kích hoạt sắp xếp tăng dần (Sort ASC)",
+      "fileName": "TC-10-step02-nhap-tieu-de-cot-kich-hoat-sap-xep-tang-dan-sort-asc.png",
+      "relPath": "crm_customer_data/TC-10/screenshots/TC-10-step02-nhap-tieu-de-cot-kich-hoat-sap-xep-tang-dan-sort-asc.png"
+    },
+    {
+      "step": 3,
+      "title": "Nhấp tiêu đề cột đảo chiều sang sắp xếp giảm dần (Sort DESC)",
+      "fileName": "TC-10-step03-nhap-tieu-de-cot-dao-chieu-sang-sap-xep-giam-dan-sort-desc.png",
+      "relPath": "crm_customer_data/TC-10/screenshots/TC-10-step03-nhap-tieu-de-cot-dao-chieu-sang-sap-xep-giam-dan-sort-desc.png"
+    },
+    {
+      "step": 4,
+      "title": "DataGrid tái sắp xếp thành công danh sách bản ghi hiển thị (20 dòng)",
+      "fileName": "TC-10-step04-datagrid-tai-sap-xep-thanh-cong-danh-sach-ban-ghi-hien-thi-20-dong.png",
+      "relPath": "crm_customer_data/TC-10/screenshots/TC-10-step04-datagrid-tai-sap-xep-thanh-cong-danh-sach-ban-ghi-hien-thi-20-dong.png"
+    },
+    {
+      "step": 5,
+      "title": "Tính năng sắp xếp dữ liệu theo cột hoạt động mượt mà đạt chuẩn",
+      "fileName": "TC-10-step05-tinh-nang-sap-xep-du-lieu-theo-cot-hoat-dong-muot-ma-dat-chuan.png",
+      "relPath": "crm_customer_data/TC-10/screenshots/TC-10-step05-tinh-nang-sap-xep-du-lieu-theo-cot-hoat-dong-muot-ma-dat-chuan.png"
+    }
+  ],
+  "attachments": {
+    "screenshots": [
+      "crm_customer_data/TC-10/screenshots/TC-10-step01-xac-dinh-vi-tri-tieu-de-cot-du-lieu-tren-datagrid.png",
+      "crm_customer_data/TC-10/screenshots/TC-10-step02-nhap-tieu-de-cot-kich-hoat-sap-xep-tang-dan-sort-asc.png",
+      "crm_customer_data/TC-10/screenshots/TC-10-step03-nhap-tieu-de-cot-dao-chieu-sang-sap-xep-giam-dan-sort-desc.png",
+      "crm_customer_data/TC-10/screenshots/TC-10-step04-datagrid-tai-sap-xep-thanh-cong-danh-sach-ban-ghi-hien-thi-20-dong.png",
+      "crm_customer_data/TC-10/screenshots/TC-10-step05-tinh-nang-sap-xep-du-lieu-theo-cot-hoat-dong-muot-ma-dat-chuan.png"
+    ],
+    "videos": [
+      "crm_customer_data/TC-10/videos/video.webm"
+    ],
+    "traces": [
+      "crm_customer_data/TC-10/traces/trace.zip"
+    ]
+  },
+  "timestamp": "2026-10-28T05:24:29.287Z"
+}

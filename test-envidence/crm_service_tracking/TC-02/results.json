@@ -1,0 +1,66 @@
+{
+  "tcId": "TC-02",
+  "pageName": "crm_service_tracking",
+  "title": "Thẩm định Checkbox Lọc Dữ liệu Cá nhân (#toolbarIsOnlyUser) & Bắt API Lọc",
+  "testStatus": "PASSED",
+  "businessStatus": "PASSED",
+  "businessNotes": "PASS - Checkbox lọc cá nhân phản hồi mượt mà, chu kỳ khôi phục dữ liệu đạt 100%",
+  "failureAnalysis": {
+    "issue": "",
+    "expected": "",
+    "actual": "",
+    "rootCause": "",
+    "recommendation": ""
+  },
+  "status": "PASSED",
+  "duration": "26.74s",
+  "errors": "",
+  "stepScreenshots": [
+    {
+      "step": 1,
+      "title": "Xác định vị trí checkbox Lọc dữ liệu cá nhân",
+      "fileName": "TC-02-step01-xac-dinh-vi-tri-checkbox-loc-du-lieu-ca-nhan.png",
+      "relPath": "crm_service_tracking/TC-02/screenshots/TC-02-step01-xac-dinh-vi-tri-checkbox-loc-du-lieu-ca-nhan.png"
+    },
+    {
+      "step": 2,
+      "title": "Con trỏ Neon nhấp đổi trạng thái checkbox lọc dữ liệu cá nhân",
+      "fileName": "TC-02-step02-con-tro-neon-nhap-doi-trang-thai-checkbox-loc-du-lieu-ca-nhan.png",
+      "relPath": "crm_service_tracking/TC-02/screenshots/TC-02-step02-con-tro-neon-nhap-doi-trang-thai-checkbox-loc-du-lieu-ca-nhan.png"
+    },
+    {
+      "step": 3,
+      "title": "DataGrid cập nhật danh sách theo tiêu chí phân quyền cá nhân",
+      "fileName": "TC-02-step03-datagrid-cap-nhat-danh-sach-theo-tieu-chi-phan-quyen-ca-nhan.png",
+      "relPath": "crm_service_tracking/TC-02/screenshots/TC-02-step03-datagrid-cap-nhat-danh-sach-theo-tieu-chi-phan-quyen-ca-nhan.png"
+    },
+    {
+      "step": 4,
+      "title": "Khôi phục lại checkbox ban đầu và thẩm định tính toàn vẹn danh sách",
+      "fileName": "TC-02-step04-khoi-phuc-lai-checkbox-ban-dau-va-tham-dinh-tinh-toan-ven-danh-sach.png",
+      "relPath": "crm_service_tracking/TC-02/screenshots/TC-02-step04-khoi-phuc-lai-checkbox-ban-dau-va-tham-dinh-tinh-toan-ven-danh-sach.png"
+    },
+    {
+      "step": 5,
+      "title": "Hệ thống khôi phục dữ liệu nguyên vẹn sau chu kỳ lọc",
+      "fileName": "TC-02-step05-he-thong-khoi-phuc-du-lieu-nguyen-ven-sau-chu-ky-loc.png",
+      "relPath": "crm_service_tracking/TC-02/screenshots/TC-02-step05-he-thong-khoi-phuc-du-lieu-nguyen-ven-sau-chu-ky-loc.png"
+    }
+  ],
+  "attachments": {
+    "screenshots": [
+      "crm_service_tracking/TC-02/screenshots/TC-02-step01-xac-dinh-vi-tri-checkbox-loc-du-lieu-ca-nhan.png",
+      "crm_service_tracking/TC-02/screenshots/TC-02-step02-con-tro-neon-nhap-doi-trang-thai-checkbox-loc-du-lieu-ca-nhan.png",
+      "crm_service_tracking/TC-02/screenshots/TC-02-step03-datagrid-cap-nhat-danh-sach-theo-tieu-chi-phan-quyen-ca-nhan.png",
+      "crm_service_tracking/TC-02/screenshots/TC-02-step04-khoi-phuc-lai-checkbox-ban-dau-va-tham-dinh-tinh-toan-ven-danh-sach.png",
+      "crm_service_tracking/TC-02/screenshots/TC-02-step05-he-thong-khoi-phuc-du-lieu-nguyen-ven-sau-chu-ky-loc.png"
+    ],
+    "videos": [
+      "crm_service_tracking/TC-02/videos/video.webm"
+    ],
+    "traces": [
+      "crm_service_tracking/TC-02/traces/trace.zip"
+    ]
+  },
+  "timestamp": "2026-10-16T05:40:10.336Z"
+}

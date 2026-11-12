@@ -1,0 +1,59 @@
+{
+  "tcId": "TC-11",
+  "pageName": "quy_trinh_tinh_luong_nv_moi",
+  "title": "fix-6 | TC-11: Quản lý Trường Long duyệt Cấp 1 đơn Tăng ca OT 20/10 & kiểm tra tab Lịch sử (Role: LongKa)",
+  "testStatus": "PASSED",
+  "businessStatus": "PASSED",
+  "businessNotes": "Đạt yêu cầu logic nghiệp vụ mong đợi",
+  "defectEvidence": null,
+  "failureAnalysis": {},
+  "status": "PASSED",
+  "duration": "57.67s",
+  "errors": "",
+  "stepScreenshots": [
+    {
+      "step": 1,
+      "title": "Dang nhap LongKa",
+      "fileName": "TC-11-step01-dang-nhap-longka.png",
+      "relPath": "quy_trinh_tinh_luong_nv_moi/TC-11/screenshots/TC-11-step01-dang-nhap-longka.png"
+    },
+    {
+      "step": 2,
+      "title": "Mo MnuWPT037 tu Launchpad",
+      "fileName": "TC-11-step02-mo-mnuwpt037-tu-launchpad.png",
+      "relPath": "quy_trinh_tinh_luong_nv_moi/TC-11/screenshots/TC-11-step02-mo-mnuwpt037-tu-launchpad.png"
+    },
+    {
+      "step": 3,
+      "title": "Chon the don Tang ca OT 099",
+      "fileName": "TC-11-step03-chon-the-don-tang-ca-ot-099.png",
+      "relPath": "quy_trinh_tinh_luong_nv_moi/TC-11/screenshots/TC-11-step03-chon-the-don-tang-ca-ot-099.png"
+    },
+    {
+      "step": 4,
+      "title": "Duyet OT va xem tab Lich su",
+      "fileName": "TC-11-step04-duyet-ot-va-xem-tab-lich-su.png",
+      "relPath": "quy_trinh_tinh_luong_nv_moi/TC-11/screenshots/TC-11-step04-duyet-ot-va-xem-tab-lich-su.png"
+    },
+    {
+      "step": 5,
+      "title": "Quay lai MnuWPT037 va reloadData",
+      "fileName": "TC-11-step05-quay-lai-mnuwpt037-va-reloaddata.png",
+      "relPath": "quy_trinh_tinh_luong_nv_moi/TC-11/screenshots/TC-11-step05-quay-lai-mnuwpt037-va-reloaddata.png"
+    }
+  ],
+  "attachments": {
+    "screenshots": [
+      "quy_trinh_tinh_luong_nv_moi/TC-11/screenshots/TC-11-step01-dang-nhap-longka.png",
+      "quy_trinh_tinh_luong_nv_moi/TC-11/screenshots/TC-11-step02-mo-mnuwpt037-tu-launchpad.png",
+      "quy_trinh_tinh_luong_nv_moi/TC-11/screenshots/TC-11-step03-chon-the-don-tang-ca-ot-099.png",
+      "quy_trinh_tinh_luong_nv_moi/TC-11/screenshots/TC-11-step04-duyet-ot-va-xem-tab-lich-su.png",
+      "quy_trinh_tinh_luong_nv_moi/TC-11/screenshots/TC-11-step05-quay-lai-mnuwpt037-va-reloaddata.png"
+    ],
+    "videos": [
+      "quy_trinh_tinh_luong_nv_moi/TC-11/videos/video.webm"
+    ],
+    "traces": []
+  },
+  "timestamp": "2026-11-12T08:11:10.548Z"
+}

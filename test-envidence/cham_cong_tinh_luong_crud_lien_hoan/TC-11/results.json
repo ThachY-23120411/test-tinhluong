@@ -1,0 +1,38 @@
+{
+  "tcId": "TC-11",
+  "pageName": "cham_cong_tinh_luong_crud_lien_hoan",
+  "title": "Kế toán chien.nguyen chạy Tính lương Lần 2 toàn công ty và đối soát biến động After (Role: chien.nguyen)",
+  "testStatus": "PASSED",
+  "businessStatus": "PASSED",
+  "businessNotes": "Đạt yêu cầu logic nghiệp vụ mong đợi",
+  "defectEvidence": null,
+  "failureAnalysis": {},
+  "status": "PASSED",
+  "duration": "41.07s",
+  "errors": "",
+  "stepScreenshots": [
+    {
+      "step": 1,
+      "title": "Ke toan xem bang luong tong hop lan 2 after mnuprl092",
+      "fileName": "TC-11-step01-ke-toan-xem-bang-luong-tong-hop-lan-2-after-mnuprl092.png",
+      "relPath": "cham_cong_tinh_luong_crud_lien_hoan/TC-11/screenshots/TC-11-step01-ke-toan-xem-bang-luong-tong-hop-lan-2-after-mnuprl092.png"
+    },
+    {
+      "step": 2,
+      "title": "Ke toan doi soat bien dong ngoan muc delta after cua 046 mnuhrs145",
+      "fileName": "TC-11-step02-ke-toan-doi-soat-bien-dong-ngoan-muc-delta-after-cua-046-mnuhrs145.png",
+      "relPath": "cham_cong_tinh_luong_crud_lien_hoan/TC-11/screenshots/TC-11-step02-ke-toan-doi-soat-bien-dong-ngoan-muc-delta-after-cua-046-mnuhrs145.png"
+    }
+  ],
+  "attachments": {
+    "screenshots": [
+      "cham_cong_tinh_luong_crud_lien_hoan/TC-11/screenshots/TC-11-step01-ke-toan-xem-bang-luong-tong-hop-lan-2-after-mnuprl092.png",
+      "cham_cong_tinh_luong_crud_lien_hoan/TC-11/screenshots/TC-11-step02-ke-toan-doi-soat-bien-dong-ngoan-muc-delta-after-cua-046-mnuhrs145.png"
+    ],
+    "videos": [
+      "cham_cong_tinh_luong_crud_lien_hoan/TC-11/videos/video.webm"
+    ],
+    "traces": []
+  },
+  "timestamp": "2026-11-05T16:56:18.474Z"
+}

@@ -1,7 +1,7 @@
 # BÁO CÁO KIỂM THỬ TRANG: EMPLOYEE_BANK_APPROVAL
 
-> Thời gian kiểm thử: **10:49:06 16/10/2026**
-> Tổng số kịch bản: **3** | ✅ LOGIC PASS: **2** | ❌ LOGIC FAIL: **1**
+> Thời gian kiểm thử: **14:20:23 28/10/2026**
+> Tổng số kịch bản: **3** | ✅ LOGIC PASS: **3** | ❌ LOGIC FAIL: **0**
 
 ## BẢNG ĐỐI CHIẾU TRẠNG THÁI TEST & LOGIC NGHIỆP VỤ
 
@@ -9,13 +9,13 @@
 | :--- | :--- | :---: | :---: | :--- |
 | **TC-01** | Nhân viên Tai.Dang đăng nhập và cập nhật Thông tin Ngân hàng | ✅ PASS | ✅ PASS | PASS - Yêu cầu cập nhật thông tin ngân hàng đã được gửi thành công lên hệ thống phê duyệt |
 | **TC-02** | Quản lý Cuong.Vu đăng nhập và Phê duyệt thay đổi hồ sơ | ✅ PASS | ✅ PASS | PASS - Quản lý phê duyệt thành công yêu cầu trên hệ thống (Hệ thống xác nhận: Đã duyệt thành công các thay đổi) |
-| **TC-03** | Nhân viên Tai.Dang đăng nhập lại để đối chiếu và kiểm tra thông tin sau phê duyệt | ✅ PASS | ❌ FAIL | FAIL - Thông tin tài khoản ngân hàng không hiển thị trên hồ sơ nhân viên sau khi đã được phê duyệt |
+| **TC-03** | Nhân viên Tai.Dang đăng nhập lại để đối chiếu và kiểm tra thông tin sau phê duyệt | ✅ PASS | ✅ PASS | PASS - Thông tin ngân hàng đã cập nhật chính xác trên hồ sơ: 9940759954 |
 
 ---
 
 ### TC-01: Nhân viên Tai.Dang đăng nhập và cập nhật Thông tin Ngân hàng
 
-* **Trạng thái thực thi Test (Kỹ thuật)**: ✅ PASS (Thời gian thực thi: `36.68s`)
+* **Trạng thái thực thi Test (Kỹ thuật)**: ✅ PASS (Thời gian thực thi: `46.30s`)
 * **Trạng thái Logic Nghiệp vụ (Business Output)**: ✅ PASS
 * **Đánh giá tổng quát**: PASS - Yêu cầu cập nhật thông tin ngân hàng đã được gửi thành công lên hệ thống phê duyệt
 * **Thư mục lưu trữ**: `test-evidence/employee_bank_approval/TC-01/`
@@ -45,7 +45,7 @@
 
 ### TC-02: Quản lý Cuong.Vu đăng nhập và Phê duyệt thay đổi hồ sơ
 
-* **Trạng thái thực thi Test (Kỹ thuật)**: ✅ PASS (Thời gian thực thi: `33.59s`)
+* **Trạng thái thực thi Test (Kỹ thuật)**: ✅ PASS (Thời gian thực thi: `34.53s`)
 * **Trạng thái Logic Nghiệp vụ (Business Output)**: ✅ PASS
 * **Đánh giá tổng quát**: PASS - Quản lý phê duyệt thành công yêu cầu trên hệ thống (Hệ thống xác nhận: Đã duyệt thành công các thay đổi)
 * **Thư mục lưu trữ**: `test-evidence/employee_bank_approval/TC-02/`
@@ -75,18 +75,10 @@
 
 ### TC-03: Nhân viên Tai.Dang đăng nhập lại để đối chiếu và kiểm tra thông tin sau phê duyệt
 
-* **Trạng thái thực thi Test (Kỹ thuật)**: ✅ PASS (Thời gian thực thi: `32.14s`)
-* **Trạng thái Logic Nghiệp vụ (Business Output)**: ❌ FAIL
-* **Đánh giá tổng quát**: FAIL - Thông tin tài khoản ngân hàng không hiển thị trên hồ sơ nhân viên sau khi đã được phê duyệt
+* **Trạng thái thực thi Test (Kỹ thuật)**: ✅ PASS (Thời gian thực thi: `31.52s`)
+* **Trạng thái Logic Nghiệp vụ (Business Output)**: ✅ PASS
+* **Đánh giá tổng quát**: PASS - Thông tin ngân hàng đã cập nhật chính xác trên hồ sơ: 9940759954
 * **Thư mục lưu trữ**: `test-evidence/employee_bank_approval/TC-03/`
-
-> [!CAUTION] 🚨 PHÂN TÍCH NGUYÊN NHÂN THẤT BẠI (FAILURE ANALYSIS)
->
-> * **Vấn đề / Mã lỗi**: Dữ liệu số tài khoản và thông tin ngân hàng không cập nhật vào hồ sơ cá nhân sau khi Quản lý phê duyệt thành công
-> * **Kỳ vọng nghiệp vụ (Expected Output)**: Sau khi Quản lý Cuong.Vu thực hiện duyệt ở TC-02, số tài khoản mới (ví dụ 99xxxxxxx) và ngân hàng phải được nạp đầy đủ vào form Thông tin ngân hàng của nhân viên Tai.Dang
-> * **Thực tế hệ thống (Actual Output)**: Các ô nhập liệu Số tài khoản, Ngân hàng, Chi nhánh trong form Thông tin ngân hàng của nhân viên vẫn hoàn toàn rỗng ("")
-> * **Nguyên nhân cốt lõi (Root Cause)**: Hệ thống Paradise HRM khi gọi sp_approve_EmployeeChange mới chỉ cập nhật cờ trạng thái trong bảng yêu cầu thay đổi (sp_EmployeeChange_Detail), nhưng chưa thực hiện câu lệnh UPDATE dữ liệu vào bảng chính của nhân viên (tbl_HRS_Employee / tbl_HRS_Employee_Bank), hoặc API lấy thông tin nhân viên chưa nạp dữ liệu từ nguồn đã duyệt.
-> * **Đề xuất khắc phục (Recommendation)**: Đội ngũ Backend cần kiểm tra lại Stored Procedure sp_approve_EmployeeChange để đảm bảo dữ liệu được đồng bộ vào bảng nhân viên chính thức; đồng thời kiểm tra luồng API nạp dữ liệu lên form Hồ sơ nhân viên.
 
 #### 📸 Bằng chứng trực quan từng bước (Step-by-Step Evidence):
 

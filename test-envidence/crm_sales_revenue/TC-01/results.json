@@ -1,0 +1,61 @@
+{
+  "tcId": "TC-01",
+  "pageName": "crm_sales_revenue",
+  "title": "Khởi động, Tải Màn hình Doanh số & Xác thực 6 Thẻ Metric KPI Tổng quan",
+  "testStatus": "PASSED",
+  "businessStatus": "PASSED",
+  "businessNotes": "PASS - Màn hình Báo cáo Doanh số nạp đầy đủ 6 thẻ KPI và danh sách 7 nhân sự khớp định lượng CSDL",
+  "defectEvidence": null,
+  "failureAnalysis": {},
+  "status": "PASSED",
+  "duration": "22.20s",
+  "errors": "",
+  "stepScreenshots": [
+    {
+      "step": 1,
+      "title": "Mở thành công màn hình Doanh số trong phân hệ CRM",
+      "fileName": "TC-01-step01-mo-thanh-cong-man-hinh-doanh-so-trong-phan-he-crm.png",
+      "relPath": "crm_sales_revenue/TC-01/screenshots/TC-01-step01-mo-thanh-cong-man-hinh-doanh-so-trong-phan-he-crm.png"
+    },
+    {
+      "step": 2,
+      "title": "Xác nhận hiển thị không gian làm việc Báo cáo Doanh số",
+      "fileName": "TC-01-step02-xac-nhan-hien-thi-khong-gian-lam-viec-bao-cao-doanh-so.png",
+      "relPath": "crm_sales_revenue/TC-01/screenshots/TC-01-step02-xac-nhan-hien-thi-khong-gian-lam-viec-bao-cao-doanh-so.png"
+    },
+    {
+      "step": 3,
+      "title": "Rà soát cụm nút lọc kỳ thời gian và dropdown chọn năm tháng",
+      "fileName": "TC-01-step03-ra-soat-cum-nut-loc-ky-thoi-gian-va-dropdown-chon-nam-thang.png",
+      "relPath": "crm_sales_revenue/TC-01/screenshots/TC-01-step03-ra-soat-cum-nut-loc-ky-thoi-gian-va-dropdown-chon-nam-thang.png"
+    },
+    {
+      "step": 4,
+      "title": "Con trỏ Neon rà soát 6 thẻ chỉ số KPI tổng quan doanh số",
+      "fileName": "TC-01-step04-con-tro-neon-ra-soat-6-the-chi-so-kpi-tong-quan-doanh-so.png",
+      "relPath": "crm_sales_revenue/TC-01/screenshots/TC-01-step04-con-tro-neon-ra-soat-6-the-chi-so-kpi-tong-quan-doanh-so.png"
+    },
+    {
+      "step": 5,
+      "title": "Đánh giá logic PASS: Danh sách nạp đầy đủ 7/7 nhân sự kinh doanh",
+      "fileName": "TC-01-step05-danh-gia-logic-pass-danh-sach-nap-day-du-7-7-nhan-su-kinh-doanh.png",
+      "relPath": "crm_sales_revenue/TC-01/screenshots/TC-01-step05-danh-gia-logic-pass-danh-sach-nap-day-du-7-7-nhan-su-kinh-doanh.png"
+    }
+  ],
+  "attachments": {
+    "screenshots": [
+      "crm_sales_revenue/TC-01/screenshots/TC-01-step01-mo-thanh-cong-man-hinh-doanh-so-trong-phan-he-crm.png",
+      "crm_sales_revenue/TC-01/screenshots/TC-01-step02-xac-nhan-hien-thi-khong-gian-lam-viec-bao-cao-doanh-so.png",
+      "crm_sales_revenue/TC-01/screenshots/TC-01-step03-ra-soat-cum-nut-loc-ky-thoi-gian-va-dropdown-chon-nam-thang.png",
+      "crm_sales_revenue/TC-01/screenshots/TC-01-step04-con-tro-neon-ra-soat-6-the-chi-so-kpi-tong-quan-doanh-so.png",
+      "crm_sales_revenue/TC-01/screenshots/TC-01-step05-danh-gia-logic-pass-danh-sach-nap-day-du-7-7-nhan-su-kinh-doanh.png"
+    ],
+    "videos": [
+      "crm_sales_revenue/TC-01/videos/video.webm"
+    ],
+    "traces": [
+      "crm_sales_revenue/TC-01/traces/trace.zip"
+    ]
+  },
+  "timestamp": "2026-10-28T01:44:14.267Z"
+}

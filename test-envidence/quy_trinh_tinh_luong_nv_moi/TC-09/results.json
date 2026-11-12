@@ -1,0 +1,59 @@
+{
+  "tcId": "TC-09",
+  "pageName": "quy_trinh_tinh_luong_nv_moi",
+  "title": "fix-5 | TC-09: Nộp đơn Xin tăng ca OT 2.0h ngày 20/10/2026 & Đăng xuất (Role: test.nv)",
+  "testStatus": "PASSED",
+  "businessStatus": "PASSED",
+  "businessNotes": "PASS - Đơn Xin tăng ca OT 2.0h ngày 20/10/2026 đã được nộp thành công và đăng xuất an toàn. Hoàn tất bàn giao cho fix-6!",
+  "defectEvidence": null,
+  "failureAnalysis": {},
+  "status": "PASSED",
+  "duration": "65.23s",
+  "errors": "",
+  "stepScreenshots": [
+    {
+      "step": 1,
+      "title": "Mo man hinh Xin tang ca MnuWPT316",
+      "fileName": "TC-09-step01-mo-man-hinh-xin-tang-ca-mnuwpt316.png",
+      "relPath": "quy_trinh_tinh_luong_nv_moi/TC-09/screenshots/TC-09-step01-mo-man-hinh-xin-tang-ca-mnuwpt316.png"
+    },
+    {
+      "step": 2,
+      "title": "Dien form Xin tang ca OT 2h ngay 20-10",
+      "fileName": "TC-09-step02-dien-form-xin-tang-ca-ot-2h-ngay-20-10.png",
+      "relPath": "quy_trinh_tinh_luong_nv_moi/TC-09/screenshots/TC-09-step02-dien-form-xin-tang-ca-ot-2h-ngay-20-10.png"
+    },
+    {
+      "step": 3,
+      "title": "Bam nut Gui don tang ca va xac nhan popup",
+      "fileName": "TC-09-step03-bam-nut-gui-don-tang-ca-va-xac-nhan-popup.png",
+      "relPath": "quy_trinh_tinh_luong_nv_moi/TC-09/screenshots/TC-09-step03-bam-nut-gui-don-tang-ca-va-xac-nhan-popup.png"
+    },
+    {
+      "step": 4,
+      "title": "Tab Lich su don Tang ca OT ngay 20-10",
+      "fileName": "TC-09-step04-tab-lich-su-don-tang-ca-ot-ngay-20-10.png",
+      "relPath": "quy_trinh_tinh_luong_nv_moi/TC-09/screenshots/TC-09-step04-tab-lich-su-don-tang-ca-ot-ngay-20-10.png"
+    },
+    {
+      "step": 5,
+      "title": "Dang xuat hoan tat chu trinh nop don ESS",
+      "fileName": "TC-09-step05-dang-xuat-hoan-tat-chu-trinh-nop-don-ess.png",
+      "relPath": "quy_trinh_tinh_luong_nv_moi/TC-09/screenshots/TC-09-step05-dang-xuat-hoan-tat-chu-trinh-nop-don-ess.png"
+    }
+  ],
+  "attachments": {
+    "screenshots": [
+      "quy_trinh_tinh_luong_nv_moi/TC-09/screenshots/TC-09-step01-mo-man-hinh-xin-tang-ca-mnuwpt316.png",
+      "quy_trinh_tinh_luong_nv_moi/TC-09/screenshots/TC-09-step02-dien-form-xin-tang-ca-ot-2h-ngay-20-10.png",
+      "quy_trinh_tinh_luong_nv_moi/TC-09/screenshots/TC-09-step03-bam-nut-gui-don-tang-ca-va-xac-nhan-popup.png",
+      "quy_trinh_tinh_luong_nv_moi/TC-09/screenshots/TC-09-step04-tab-lich-su-don-tang-ca-ot-ngay-20-10.png",
+      "quy_trinh_tinh_luong_nv_moi/TC-09/screenshots/TC-09-step05-dang-xuat-hoan-tat-chu-trinh-nop-don-ess.png"
+    ],
+    "videos": [
+      "quy_trinh_tinh_luong_nv_moi/TC-09/videos/video.webm"
+    ],
+    "traces": []
+  },
+  "timestamp": "2026-11-12T07:49:32.597Z"
+}

@@ -1,0 +1,24 @@
+{
+  "tcId": "TC-01",
+  "pageName": "inspect_api",
+  "title": "INSPECT EXACT REQUEST & RESPONSE",
+  "testStatus": "PASSED",
+  "businessStatus": "PASSED",
+  "businessNotes": "Đạt yêu cầu logic nghiệp vụ mong đợi",
+  "defectEvidence": null,
+  "failureAnalysis": {},
+  "status": "PASSED",
+  "duration": "10.54s",
+  "errors": "",
+  "stepScreenshots": [],
+  "attachments": {
+    "screenshots": [],
+    "videos": [
+      "inspect_api/TC-01/videos/video.webm"
+    ],
+    "traces": [
+      "inspect_api/TC-01/traces/trace.zip"
+    ]
+  },
+  "timestamp": "2026-10-19T04:02:02.267Z"
+}

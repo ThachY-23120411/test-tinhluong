@@ -1,0 +1,28 @@
+{
+  "tcId": "TC-05",
+  "pageName": "crm_marketing_product",
+  "title": "Kiểm Tra Chức Năng Nghiệp Vụ: XEM CHI TIẾT SẢN PHẨM MARKETING (View Detail Modal)",
+  "testStatus": "SKIPPED",
+  "businessStatus": "FAILED",
+  "businessNotes": "Lỗi thực thi trong quá trình test",
+  "defectEvidence": {
+    "issue": "Lỗi thực thi trong quá trình test",
+    "expected": "Theo đặc tả chuẩn của hệ thống",
+    "actual": "Thực tế phát sinh lỗi hoặc không đạt điều kiện kiểm tra"
+  },
+  "failureAnalysis": {
+    "issue": "Lỗi thực thi trong quá trình test",
+    "expected": "Theo đặc tả chuẩn của hệ thống",
+    "actual": "Thực tế phát sinh lỗi hoặc không đạt điều kiện kiểm tra"
+  },
+  "status": "FAILED",
+  "duration": "0.00s",
+  "errors": "",
+  "stepScreenshots": [],
+  "attachments": {
+    "screenshots": [],
+    "videos": [],
+    "traces": []
+  },
+  "timestamp": "2026-10-28T07:59:06.928Z"
+}

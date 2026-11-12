@@ -1,0 +1,61 @@
+{
+  "tcId": "TC-06",
+  "pageName": "crm_sales_revenue",
+  "title": "Quy trình Đối soát Liên màn hình: Dữ liệu Hợp đồng Thanh toán Đồng bộ Doanh số",
+  "testStatus": "PASSED",
+  "businessStatus": "PASSED",
+  "businessNotes": "PASS - Báo cáo doanh số phản ánh chính xác số liệu hợp đồng từ CSDL (tblCRM_Contract & tblCRM_ContractPayment), phân bổ đều qua 9 nhân sự",
+  "defectEvidence": null,
+  "failureAnalysis": {},
+  "status": "PASSED",
+  "duration": "22.03s",
+  "errors": "",
+  "stepScreenshots": [
+    {
+      "step": 1,
+      "title": "Chuyển kỳ xem Năm 2026 để đối soát tổng hợp đồng và thanh toán",
+      "fileName": "TC-06-step01-chuyen-ky-xem-nam-2026-de-doi-soat-tong-hop-dong-va-thanh-toan.png",
+      "relPath": "crm_sales_revenue/TC-06/screenshots/TC-06-step01-chuyen-ky-xem-nam-2026-de-doi-soat-tong-hop-dong-va-thanh-toan.png"
+    },
+    {
+      "step": 2,
+      "title": "Ghi nhận số lượng trên thẻ TỔNG HỢP ĐỒNG: 96",
+      "fileName": "TC-06-step02-ghi-nhan-so-luong-tren-the-tong-hop-dong-96.png",
+      "relPath": "crm_sales_revenue/TC-06/screenshots/TC-06-step02-ghi-nhan-so-luong-tren-the-tong-hop-dong-96.png"
+    },
+    {
+      "step": 3,
+      "title": "Xác nhận danh sách nhân sự phụ trách hợp đồng thực tế (Nguyễn Tấn Chiến, Trần Khánh Ly)",
+      "fileName": "TC-06-step03-xac-nhan-danh-sach-nhan-su-phu-trach-hop-dong-thuc-te-nguyen-tan-chien-tran-khanh-ly.png",
+      "relPath": "crm_sales_revenue/TC-06/screenshots/TC-06-step03-xac-nhan-danh-sach-nhan-su-phu-trach-hop-dong-thuc-te-nguyen-tan-chien-tran-khanh-ly.png"
+    },
+    {
+      "step": 4,
+      "title": "Rà soát tính nhất quán của số liệu doanh thu đã chốt và số dư thanh toán",
+      "fileName": "TC-06-step04-ra-soat-tinh-nhat-quan-cua-so-lieu-doanh-thu-da-chot-va-so-du-thanh-toan.png",
+      "relPath": "crm_sales_revenue/TC-06/screenshots/TC-06-step04-ra-soat-tinh-nhat-quan-cua-so-lieu-doanh-thu-da-chot-va-so-du-thanh-toan.png"
+    },
+    {
+      "step": 5,
+      "title": "Đánh giá logic PASS: Số liệu đối soát liên màn hình khớp nhất quán với CSDL quan hệ",
+      "fileName": "TC-06-step05-danh-gia-logic-pass-so-lieu-doi-soat-lien-man-hinh-khop-nhat-quan-voi-csdl-quan-he.png",
+      "relPath": "crm_sales_revenue/TC-06/screenshots/TC-06-step05-danh-gia-logic-pass-so-lieu-doi-soat-lien-man-hinh-khop-nhat-quan-voi-csdl-quan-he.png"
+    }
+  ],
+  "attachments": {
+    "screenshots": [
+      "crm_sales_revenue/TC-06/screenshots/TC-06-step01-chuyen-ky-xem-nam-2026-de-doi-soat-tong-hop-dong-va-thanh-toan.png",
+      "crm_sales_revenue/TC-06/screenshots/TC-06-step02-ghi-nhan-so-luong-tren-the-tong-hop-dong-96.png",
+      "crm_sales_revenue/TC-06/screenshots/TC-06-step03-xac-nhan-danh-sach-nhan-su-phu-trach-hop-dong-thuc-te-nguyen-tan-chien-tran-khanh-ly.png",
+      "crm_sales_revenue/TC-06/screenshots/TC-06-step04-ra-soat-tinh-nhat-quan-cua-so-lieu-doanh-thu-da-chot-va-so-du-thanh-toan.png",
+      "crm_sales_revenue/TC-06/screenshots/TC-06-step05-danh-gia-logic-pass-so-lieu-doi-soat-lien-man-hinh-khop-nhat-quan-voi-csdl-quan-he.png"
+    ],
+    "videos": [
+      "crm_sales_revenue/TC-06/videos/video.webm"
+    ],
+    "traces": [
+      "crm_sales_revenue/TC-06/traces/trace.zip"
+    ]
+  },
+  "timestamp": "2026-10-28T01:46:46.222Z"
+}

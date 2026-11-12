@@ -1,0 +1,61 @@
+{
+  "tcId": "TC-06",
+  "pageName": "crm_customer_data",
+  "title": "Thẩm định Nút \"Xuất Excel\" (Export) & Bắt Phản Hồi Kết Xuất Dữ Liệu",
+  "testStatus": "PASSED",
+  "businessStatus": "PASSED",
+  "businessNotes": "PASS - Nút Export trên toolbar kích hoạt trơn tru, máy chủ xử lý kết xuất an toàn không gây lỗi",
+  "defectEvidence": null,
+  "failureAnalysis": {},
+  "status": "PASSED",
+  "duration": "35.16s",
+  "errors": "",
+  "stepScreenshots": [
+    {
+      "step": 1,
+      "title": "Xác định vị trí nút mở rộng chức năng trên thanh Toolbar",
+      "fileName": "TC-06-step01-xac-dinh-vi-tri-nut-mo-rong-chuc-nang-tren-thanh-toolbar.png",
+      "relPath": "crm_customer_data/TC-06/screenshots/TC-06-step01-xac-dinh-vi-tri-nut-mo-rong-chuc-nang-tren-thanh-toolbar.png"
+    },
+    {
+      "step": 2,
+      "title": "Con trỏ Neon nhấp mở danh mục tính năng mở rộng",
+      "fileName": "TC-06-step02-con-tro-neon-nhap-mo-danh-muc-tinh-nang-mo-rong.png",
+      "relPath": "crm_customer_data/TC-06/screenshots/TC-06-step02-con-tro-neon-nhap-mo-danh-muc-tinh-nang-mo-rong.png"
+    },
+    {
+      "step": 3,
+      "title": "Con trỏ Neon định vị vào nút chức năng Export Excel",
+      "fileName": "TC-06-step03-con-tro-neon-dinh-vi-vao-nut-chuc-nang-export-excel.png",
+      "relPath": "crm_customer_data/TC-06/screenshots/TC-06-step03-con-tro-neon-dinh-vi-vao-nut-chuc-nang-export-excel.png"
+    },
+    {
+      "step": 4,
+      "title": "Kích hoạt lệnh Xuất Excel và bắt gói phản hồi máy chủ",
+      "fileName": "TC-06-step04-kich-hoat-lenh-xuat-excel-va-bat-goi-phan-hoi-may-chu.png",
+      "relPath": "crm_customer_data/TC-06/screenshots/TC-06-step04-kich-hoat-lenh-xuat-excel-va-bat-goi-phan-hoi-may-chu.png"
+    },
+    {
+      "step": 5,
+      "title": "Tính năng Xuất Excel phản hồi an toàn và hoàn tất nghiệp vụ",
+      "fileName": "TC-06-step05-tinh-nang-xuat-excel-phan-hoi-an-toan-va-hoan-tat-nghiep-vu.png",
+      "relPath": "crm_customer_data/TC-06/screenshots/TC-06-step05-tinh-nang-xuat-excel-phan-hoi-an-toan-va-hoan-tat-nghiep-vu.png"
+    }
+  ],
+  "attachments": {
+    "screenshots": [
+      "crm_customer_data/TC-06/screenshots/TC-06-step01-xac-dinh-vi-tri-nut-mo-rong-chuc-nang-tren-thanh-toolbar.png",
+      "crm_customer_data/TC-06/screenshots/TC-06-step02-con-tro-neon-nhap-mo-danh-muc-tinh-nang-mo-rong.png",
+      "crm_customer_data/TC-06/screenshots/TC-06-step03-con-tro-neon-dinh-vi-vao-nut-chuc-nang-export-excel.png",
+      "crm_customer_data/TC-06/screenshots/TC-06-step04-kich-hoat-lenh-xuat-excel-va-bat-goi-phan-hoi-may-chu.png",
+      "crm_customer_data/TC-06/screenshots/TC-06-step05-tinh-nang-xuat-excel-phan-hoi-an-toan-va-hoan-tat-nghiep-vu.png"
+    ],
+    "videos": [
+      "crm_customer_data/TC-06/videos/video.webm"
+    ],
+    "traces": [
+      "crm_customer_data/TC-06/traces/trace.zip"
+    ]
+  },
+  "timestamp": "2026-10-28T05:22:22.194Z"
+}

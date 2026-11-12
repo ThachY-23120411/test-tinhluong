@@ -1,0 +1,61 @@
+{
+  "tcId": "TC-03",
+  "pageName": "crm_sales_pipeline",
+  "title": "Kiểm tra Nút 'Làm mới' (Refresh) & Bắt Phản hồi API Đồng bộ Dữ liệu (TC-CTL-03)",
+  "testStatus": "PASSED",
+  "businessStatus": "PASSED",
+  "businessNotes": "PASS - Nút Làm mới phản hồi nhanh chóng, API nạp lại 61 thẻ cơ hội và duy trì giao diện ổn định",
+  "defectEvidence": null,
+  "failureAnalysis": {},
+  "status": "PASSED",
+  "duration": "23.05s",
+  "errors": "",
+  "stepScreenshots": [
+    {
+      "step": 1,
+      "title": "Xác định vị trí nút Làm mới trên thanh toolbar",
+      "fileName": "TC-03-step01-xac-dinh-vi-tri-nut-lam-moi-tren-thanh-toolbar.png",
+      "relPath": "crm_sales_pipeline/TC-03/screenshots/TC-03-step01-xac-dinh-vi-tri-nut-lam-moi-tren-thanh-toolbar.png"
+    },
+    {
+      "step": 2,
+      "title": "Con trỏ Neon di chuyển vào tâm nút Làm mới",
+      "fileName": "TC-03-step02-con-tro-neon-di-chuyen-vao-tam-nut-lam-moi.png",
+      "relPath": "crm_sales_pipeline/TC-03/screenshots/TC-03-step02-con-tro-neon-di-chuyen-vao-tam-nut-lam-moi.png"
+    },
+    {
+      "step": 3,
+      "title": "Bấm nút Làm mới và nhận gói phản hồi từ máy chủ",
+      "fileName": "TC-03-step03-bam-nut-lam-moi-va-nhan-goi-phan-hoi-tu-may-chu.png",
+      "relPath": "crm_sales_pipeline/TC-03/screenshots/TC-03-step03-bam-nut-lam-moi-va-nhan-goi-phan-hoi-tu-may-chu.png"
+    },
+    {
+      "step": 4,
+      "title": "Pipeline hoàn tất quá trình làm mới đồng bộ",
+      "fileName": "TC-03-step04-pipeline-hoan-tat-qua-trinh-lam-moi-dong-bo.png",
+      "relPath": "crm_sales_pipeline/TC-03/screenshots/TC-03-step04-pipeline-hoan-tat-qua-trinh-lam-moi-dong-bo.png"
+    },
+    {
+      "step": 5,
+      "title": "Tính năng làm mới dữ liệu Sales Pipeline đạt chuẩn nghiệp vụ",
+      "fileName": "TC-03-step05-tinh-nang-lam-moi-du-lieu-sales-pipeline-dat-chuan-nghiep-vu.png",
+      "relPath": "crm_sales_pipeline/TC-03/screenshots/TC-03-step05-tinh-nang-lam-moi-du-lieu-sales-pipeline-dat-chuan-nghiep-vu.png"
+    }
+  ],
+  "attachments": {
+    "screenshots": [
+      "crm_sales_pipeline/TC-03/screenshots/TC-03-step01-xac-dinh-vi-tri-nut-lam-moi-tren-thanh-toolbar.png",
+      "crm_sales_pipeline/TC-03/screenshots/TC-03-step02-con-tro-neon-di-chuyen-vao-tam-nut-lam-moi.png",
+      "crm_sales_pipeline/TC-03/screenshots/TC-03-step03-bam-nut-lam-moi-va-nhan-goi-phan-hoi-tu-may-chu.png",
+      "crm_sales_pipeline/TC-03/screenshots/TC-03-step04-pipeline-hoan-tat-qua-trinh-lam-moi-dong-bo.png",
+      "crm_sales_pipeline/TC-03/screenshots/TC-03-step05-tinh-nang-lam-moi-du-lieu-sales-pipeline-dat-chuan-nghiep-vu.png"
+    ],
+    "videos": [
+      "crm_sales_pipeline/TC-03/videos/video.webm"
+    ],
+    "traces": [
+      "crm_sales_pipeline/TC-03/traces/trace.zip"
+    ]
+  },
+  "timestamp": "2026-10-21T03:09:15.467Z"
+}

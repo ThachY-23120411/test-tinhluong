@@ -1,38 +1,52 @@
 {
   "tcId": "TC-17",
   "pageName": "quy_trinh_tinh_luong_nv_moi",
-  "title": "fix-7 | TC-17: Kế toán thực hiện Khóa sổ kỳ lương Tháng 10/2026 (Role: chien.nguyen)",
+  "title": "fix-7 | TC-17: Mô phỏng thao tác Khóa chấm công (MnuTAD125), Khóa lương (MnuPRL080) & Đăng xuất",
   "testStatus": "PASSED",
   "businessStatus": "PASSED",
-  "businessNotes": "PASS - Kỳ lương Tháng 10/2026 đã được niêm phong thành công trong tblSal_Lock (LockCount >= 1). Hoàn tất bàn giao cho fix-8 nghiệm thu Phiếu lương!",
+  "businessNotes": "Đạt yêu cầu logic nghiệp vụ mong đợi",
   "defectEvidence": null,
   "failureAnalysis": {},
   "status": "PASSED",
-  "duration": "28.78s",
+  "duration": "85.19s",
   "errors": "",
   "stepScreenshots": [
     {
       "step": 1,
-      "title": "Truoc khi khoa luong thang 10 2026 tai mnuprl080",
-      "fileName": "TC-17-step01-truoc-khi-khoa-luong-thang-10-2026-tai-mnuprl080.png",
-      "relPath": "quy_trinh_tinh_luong_nv_moi/TC-17/screenshots/TC-17-step01-truoc-khi-khoa-luong-thang-10-2026-tai-mnuprl080.png"
+      "title": "Dang nhap Chien nguyen",
+      "fileName": "TC-17-step01-dang-nhap-chien-nguyen.png",
+      "relPath": "quy_trinh_tinh_luong_nv_moi/TC-17/screenshots/TC-17-step01-dang-nhap-chien-nguyen.png"
     },
     {
       "step": 2,
-      "title": "Sau khi khoa luong thang 10 2026 tai mnuprl080",
-      "fileName": "TC-17-step02-sau-khi-khoa-luong-thang-10-2026-tai-mnuprl080.png",
-      "relPath": "quy_trinh_tinh_luong_nv_moi/TC-17/screenshots/TC-17-step02-sau-khi-khoa-luong-thang-10-2026-tai-mnuprl080.png",
-      "isDuplicate": true,
-      "duplicateOfStep": 1
+      "title": "Khoa cham cong NV 099 tren MnuTAD125",
+      "fileName": "TC-17-step02-khoa-cham-cong-nv-099-tren-mnutad125.png",
+      "relPath": "quy_trinh_tinh_luong_nv_moi/TC-17/screenshots/TC-17-step02-khoa-cham-cong-nv-099-tren-mnutad125.png"
+    },
+    {
+      "step": 3,
+      "title": "Khoa so ky luong NV 099 tren MnuPRL080",
+      "fileName": "TC-17-step03-khoa-so-ky-luong-nv-099-tren-mnuprl080.png",
+      "relPath": "quy_trinh_tinh_luong_nv_moi/TC-17/screenshots/TC-17-step03-khoa-so-ky-luong-nv-099-tren-mnuprl080.png"
+    },
+    {
+      "step": 4,
+      "title": "Dang xuat ve man hinh Login",
+      "fileName": "TC-17-step04-dang-xuat-ve-man-hinh-login.png",
+      "relPath": "quy_trinh_tinh_luong_nv_moi/TC-17/screenshots/TC-17-step04-dang-xuat-ve-man-hinh-login.png"
     }
   ],
   "attachments": {
     "screenshots": [
-      "quy_trinh_tinh_luong_nv_moi/TC-17/screenshots/TC-17-step01-truoc-khi-khoa-luong-thang-10-2026-tai-mnuprl080.png",
-      "quy_trinh_tinh_luong_nv_moi/TC-17/screenshots/TC-17-step02-sau-khi-khoa-luong-thang-10-2026-tai-mnuprl080.png"
+      "quy_trinh_tinh_luong_nv_moi/TC-17/screenshots/TC-17-step01-dang-nhap-chien-nguyen.png",
+      "quy_trinh_tinh_luong_nv_moi/TC-17/screenshots/TC-17-step02-khoa-cham-cong-nv-099-tren-mnutad125.png",
+      "quy_trinh_tinh_luong_nv_moi/TC-17/screenshots/TC-17-step03-khoa-so-ky-luong-nv-099-tren-mnuprl080.png",
+      "quy_trinh_tinh_luong_nv_moi/TC-17/screenshots/TC-17-step04-dang-xuat-ve-man-hinh-login.png"
     ],
-    "videos": [],
+    "videos": [
+      "quy_trinh_tinh_luong_nv_moi/TC-17/videos/video.webm"
+    ],
     "traces": []
   },
-  "timestamp": "2026-11-09T04:04:36.161Z"
+  "timestamp": "2026-11-12T12:46:38.850Z"
 }

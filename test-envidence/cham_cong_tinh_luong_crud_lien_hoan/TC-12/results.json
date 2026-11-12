@@ -1,0 +1,31 @@
+{
+  "tcId": "TC-12",
+  "pageName": "cham_cong_tinh_luong_crud_lien_hoan",
+  "title": "Kế toán chien.nguyen thực hiện Khóa lương Tháng 10/2026 niêm phong sổ (Role: chien.nguyen)",
+  "testStatus": "PASSED",
+  "businessStatus": "PASSED",
+  "businessNotes": "Đạt yêu cầu logic nghiệp vụ mong đợi",
+  "defectEvidence": null,
+  "failureAnalysis": {},
+  "status": "PASSED",
+  "duration": "27.96s",
+  "errors": "",
+  "stepScreenshots": [
+    {
+      "step": 1,
+      "title": "Ke toan khoa luong thang 10 2026 niem phong so mnuprl080",
+      "fileName": "TC-12-step01-ke-toan-khoa-luong-thang-10-2026-niem-phong-so-mnuprl080.png",
+      "relPath": "cham_cong_tinh_luong_crud_lien_hoan/TC-12/screenshots/TC-12-step01-ke-toan-khoa-luong-thang-10-2026-niem-phong-so-mnuprl080.png"
+    }
+  ],
+  "attachments": {
+    "screenshots": [
+      "cham_cong_tinh_luong_crud_lien_hoan/TC-12/screenshots/TC-12-step01-ke-toan-khoa-luong-thang-10-2026-niem-phong-so-mnuprl080.png"
+    ],
+    "videos": [
+      "cham_cong_tinh_luong_crud_lien_hoan/TC-12/videos/video.webm"
+    ],
+    "traces": []
+  },
+  "timestamp": "2026-11-05T17:06:16.813Z"
+}

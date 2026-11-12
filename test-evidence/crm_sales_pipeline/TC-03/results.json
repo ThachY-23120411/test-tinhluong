@@ -1,19 +1,14 @@
 {
   "tcId": "TC-03",
   "pageName": "crm_sales_pipeline",
-  "title": "Thẩm định Nút \"Làm mới\" & Bắt Phản hồi API Đồng bộ Dữ liệu",
+  "title": "Kiểm tra Nút 'Làm mới' (Refresh) & Bắt Phản hồi API Đồng bộ Dữ liệu (TC-CTL-03)",
   "testStatus": "PASSED",
   "businessStatus": "PASSED",
-  "businessNotes": "PASS - Nút Làm mới phản hồi nhanh chóng, tái nạp dữ liệu Pipeline ổn định",
-  "failureAnalysis": {
-    "issue": "",
-    "expected": "",
-    "actual": "",
-    "rootCause": "",
-    "recommendation": ""
-  },
+  "businessNotes": "PASS - Nút Làm mới phản hồi nhanh chóng, API nạp lại 61 thẻ cơ hội và duy trì giao diện ổn định",
+  "defectEvidence": null,
+  "failureAnalysis": {},
   "status": "PASSED",
-  "duration": "23.64s",
+  "duration": "23.05s",
   "errors": "",
   "stepScreenshots": [
     {
@@ -62,5 +57,5 @@
       "crm_sales_pipeline/TC-03/traces/trace.zip"
     ]
   },
-  "timestamp": "2026-10-16T05:45:23.850Z"
+  "timestamp": "2026-10-21T03:09:15.467Z"
 }

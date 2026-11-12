@@ -1,31 +1,45 @@
 {
   "tcId": "TC-15",
   "pageName": "quy_trinh_tinh_luong_nv_moi",
-  "title": "fix-7 | TC-15: Kế toán chien.nguyen nạp Tạm ứng lương 2,000,000 VNĐ và Khóa phiếu (Role: chien.nguyen)",
+  "title": "fix-7 | TC-15: Mô phỏng thao tác nạp Tạm ứng lương 2,000,000 VNĐ & Khóa phiếu (MnuPRL070)",
   "testStatus": "PASSED",
   "businessStatus": "PASSED",
-  "businessNotes": "PASS - Kế toán trưởng chien.nguyen đã nạp Tạm ứng 2.000.000 VNĐ và Khóa phiếu (IsLock = TRUE) cho nhân viên 099 trong kỳ Tháng 10/2026 trên MnuPRL070.",
+  "businessNotes": "Đạt yêu cầu logic nghiệp vụ mong đợi",
   "defectEvidence": null,
   "failureAnalysis": {},
   "status": "PASSED",
-  "duration": "29.08s",
+  "duration": "59.90s",
   "errors": "",
   "stepScreenshots": [
     {
       "step": 1,
-      "title": "Man hinh tam ung luong mnuprl070 thang 10 2026",
-      "fileName": "TC-15-step01-man-hinh-tam-ung-luong-mnuprl070-thang-10-2026.png",
-      "relPath": "quy_trinh_tinh_luong_nv_moi/TC-15/screenshots/TC-15-step01-man-hinh-tam-ung-luong-mnuprl070-thang-10-2026.png"
+      "title": "Dang nhap Chien nguyen",
+      "fileName": "TC-15-step01-dang-nhap-chien-nguyen.png",
+      "relPath": "quy_trinh_tinh_luong_nv_moi/TC-15/screenshots/TC-15-step01-dang-nhap-chien-nguyen.png"
+    },
+    {
+      "step": 2,
+      "title": "Mo menu Tam ung luong MnuPRL070",
+      "fileName": "TC-15-step02-mo-menu-tam-ung-luong-mnuprl070.png",
+      "relPath": "quy_trinh_tinh_luong_nv_moi/TC-15/screenshots/TC-15-step02-mo-menu-tam-ung-luong-mnuprl070.png"
+    },
+    {
+      "step": 3,
+      "title": "Luu va khoa Tam ung 2M tren MnuPRL070",
+      "fileName": "TC-15-step03-luu-va-khoa-tam-ung-2m-tren-mnuprl070.png",
+      "relPath": "quy_trinh_tinh_luong_nv_moi/TC-15/screenshots/TC-15-step03-luu-va-khoa-tam-ung-2m-tren-mnuprl070.png"
     }
   ],
   "attachments": {
     "screenshots": [
-      "quy_trinh_tinh_luong_nv_moi/TC-15/screenshots/TC-15-step01-man-hinh-tam-ung-luong-mnuprl070-thang-10-2026.png"
+      "quy_trinh_tinh_luong_nv_moi/TC-15/screenshots/TC-15-step01-dang-nhap-chien-nguyen.png",
+      "quy_trinh_tinh_luong_nv_moi/TC-15/screenshots/TC-15-step02-mo-menu-tam-ung-luong-mnuprl070.png",
+      "quy_trinh_tinh_luong_nv_moi/TC-15/screenshots/TC-15-step03-luu-va-khoa-tam-ung-2m-tren-mnuprl070.png"
     ],
     "videos": [
       "quy_trinh_tinh_luong_nv_moi/TC-15/videos/video.webm"
     ],
     "traces": []
   },
-  "timestamp": "2026-11-09T04:03:39.210Z"
+  "timestamp": "2026-11-12T12:44:03.838Z"
 }

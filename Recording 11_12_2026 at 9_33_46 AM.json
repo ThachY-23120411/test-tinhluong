@@ -1,0 +1,427 @@
+{
+    "title": "Recording 11/12/2026 at 9:33:46 AM",
+    "steps": [
+        {
+            "type": "setViewport",
+            "width": 1347,
+            "height": 911,
+            "deviceScaleFactor": 1,
+            "isMobile": false,
+            "hasTouch": false,
+            "isLandscape": false
+        },
+        {
+            "type": "navigate",
+            "url": "https://paradisehrm.com/Tai3/",
+            "assertedEvents": [
+                {
+                    "type": "navigation",
+                    "url": "https://paradisehrm.com/Tai3/",
+                    "title": "Paradise HR"
+                }
+            ]
+        },
+        {
+            "type": "change",
+            "value": "Chien.nguyen",
+            "selectors": [
+                [
+                    "aria/Tên đăng nhập (*)"
+                ],
+                [
+                    "#username"
+                ],
+                [
+                    "xpath///*[@id=\"username\"]"
+                ],
+                [
+                    "pierce/#username"
+                ]
+            ],
+            "target": "main"
+        },
+        {
+            "type": "change",
+            "value": "123",
+            "selectors": [
+                [
+                    "aria/Mật khẩu (*)"
+                ],
+                [
+                    "#\\37 443E420BD464740AD70F460ADCC6E29"
+                ],
+                [
+                    "xpath///*[@id=\"7443E420BD464740AD70F460ADCC6E29\"]"
+                ],
+                [
+                    "pierce/#\\37 443E420BD464740AD70F460ADCC6E29"
+                ]
+            ],
+            "target": "main"
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "aria/Tên đăng nhập (*)"
+                ],
+                [
+                    "#username"
+                ],
+                [
+                    "xpath///*[@id=\"username\"]"
+                ],
+                [
+                    "pierce/#username"
+                ],
+                [
+                    "text/Chien.nguyen"
+                ]
+            ],
+            "offsetY": 33.078125,
+            "offsetX": 145.171875
+        },
+        {
+            "type": "keyDown",
+            "target": "main",
+            "key": "Control"
+        },
+        {
+            "type": "keyDown",
+            "target": "main",
+            "key": "a"
+        },
+        {
+            "type": "keyUp",
+            "key": "Control",
+            "target": "main"
+        },
+        {
+            "type": "keyUp",
+            "key": "a",
+            "target": "main"
+        },
+        {
+            "type": "change",
+            "value": "te·",
+            "selectors": [
+                [
+                    "aria/Tên đăng nhập (*)"
+                ],
+                [
+                    "#username"
+                ],
+                [
+                    "xpath///*[@id=\"username\"]"
+                ],
+                [
+                    "pierce/#username"
+                ],
+                [
+                    "text/Chien.nguyen"
+                ]
+            ],
+            "target": "main"
+        },
+        {
+            "type": "keyUp",
+            "key": "Unidentified",
+            "target": "main"
+        },
+        {
+            "type": "change",
+            "value": "té",
+            "selectors": [
+                [
+                    "aria/Tên đăng nhập (*)"
+                ],
+                [
+                    "#username"
+                ],
+                [
+                    "xpath///*[@id=\"username\"]"
+                ],
+                [
+                    "pierce/#username"
+                ],
+                [
+                    "text/Chien.nguyen"
+                ]
+            ],
+            "target": "main"
+        },
+        {
+            "type": "keyUp",
+            "key": "Unidentified",
+            "target": "main"
+        },
+        {
+            "type": "keyUp",
+            "key": "s",
+            "target": "main"
+        },
+        {
+            "type": "change",
+            "value": "té·",
+            "selectors": [
+                [
+                    "aria/Tên đăng nhập (*)"
+                ],
+                [
+                    "#username"
+                ],
+                [
+                    "xpath///*[@id=\"username\"]"
+                ],
+                [
+                    "pierce/#username"
+                ],
+                [
+                    "text/Chien.nguyen"
+                ]
+            ],
+            "target": "main"
+        },
+        {
+            "type": "keyUp",
+            "key": "Unidentified",
+            "target": "main"
+        },
+        {
+            "type": "change",
+            "value": "te",
+            "selectors": [
+                [
+                    "aria/Tên đăng nhập (*)"
+                ],
+                [
+                    "#username"
+                ],
+                [
+                    "xpath///*[@id=\"username\"]"
+                ],
+                [
+                    "pierce/#username"
+                ],
+                [
+                    "text/Chien.nguyen"
+                ]
+            ],
+            "target": "main"
+        },
+        {
+            "type": "keyUp",
+            "key": "Unidentified",
+            "target": "main"
+        },
+        {
+            "type": "change",
+            "value": "tes",
+            "selectors": [
+                [
+                    "aria/Tên đăng nhập (*)"
+                ],
+                [
+                    "#username"
+                ],
+                [
+                    "xpath///*[@id=\"username\"]"
+                ],
+                [
+                    "pierce/#username"
+                ],
+                [
+                    "text/Chien.nguyen"
+                ]
+            ],
+            "target": "main"
+        },
+        {
+            "type": "keyUp",
+            "key": "Unidentified",
+            "target": "main"
+        },
+        {
+            "type": "keyUp",
+            "key": "Backspace",
+            "target": "main"
+        },
+        {
+            "type": "change",
+            "value": "test.nv",
+            "selectors": [
+                [
+                    "aria/Tên đăng nhập (*)"
+                ],
+                [
+                    "#username"
+                ],
+                [
+                    "xpath///*[@id=\"username\"]"
+                ],
+                [
+                    "pierce/#username"
+                ],
+                [
+                    "text/Chien.nguyen"
+                ]
+            ],
+            "target": "main"
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "aria/Mật khẩu (*)"
+                ],
+                [
+                    "#\\37 443E420BD464740AD70F460ADCC6E29"
+                ],
+                [
+                    "xpath///*[@id=\"7443E420BD464740AD70F460ADCC6E29\"]"
+                ],
+                [
+                    "pierce/#\\37 443E420BD464740AD70F460ADCC6E29"
+                ]
+            ],
+            "offsetY": 26.484375,
+            "offsetX": 37.171875
+        },
+        {
+            "type": "change",
+            "value": "12312",
+            "selectors": [
+                [
+                    "aria/Mật khẩu (*)"
+                ],
+                [
+                    "#\\37 443E420BD464740AD70F460ADCC6E29"
+                ],
+                [
+                    "xpath///*[@id=\"7443E420BD464740AD70F460ADCC6E29\"]"
+                ],
+                [
+                    "pierce/#\\37 443E420BD464740AD70F460ADCC6E29"
+                ]
+            ],
+            "target": "main"
+        },
+        {
+            "type": "keyDown",
+            "target": "main",
+            "key": "Control"
+        },
+        {
+            "type": "keyDown",
+            "target": "main",
+            "key": "a"
+        },
+        {
+            "type": "keyUp",
+            "key": "Control",
+            "target": "main"
+        },
+        {
+            "type": "keyUp",
+            "key": "a",
+            "target": "main"
+        },
+        {
+            "type": "change",
+            "value": "123",
+            "selectors": [
+                [
+                    "aria/Mật khẩu (*)"
+                ],
+                [
+                    "#\\37 443E420BD464740AD70F460ADCC6E29"
+                ],
+                [
+                    "xpath///*[@id=\"7443E420BD464740AD70F460ADCC6E29\"]"
+                ],
+                [
+                    "pierce/#\\37 443E420BD464740AD70F460ADCC6E29"
+                ]
+            ],
+            "target": "main"
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "aria/ Đăng nhập",
+                    "aria/[role=\"generic\"]"
+                ],
+                [
+                    "#submitLogin > i"
+                ],
+                [
+                    "xpath///*[@id=\"submitLogin\"]/i"
+                ],
+                [
+                    "pierce/#submitLogin > i"
+                ]
+            ],
+            "offsetY": 18.890625,
+            "offsetX": 14.296875
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "aria/ Chấm công cá nhân",
+                    "aria/[role=\"generic\"]"
+                ],
+                [
+                    "button.MnuWPT010 > i"
+                ],
+                [
+                    "xpath///*[@id=\"ID-navbar-home\"]/div[2]/button[16]/i"
+                ],
+                [
+                    "pierce/button.MnuWPT010 > i"
+                ]
+            ],
+            "offsetY": 7.3125,
+            "offsetX": 18.5
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "#P2F7760C4CFEC4A7E8A298C8D5BBB4F12 > div > div div.dx-widget > div > div"
+                ],
+                [
+                    "xpath///*[@id=\"P2F7760C4CFEC4A7E8A298C8D5BBB4F12\"]/div/div/div[2]/div[2]/div/div"
+                ],
+                [
+                    "pierce/#P2F7760C4CFEC4A7E8A298C8D5BBB4F12 > div > div div.dx-widget > div > div"
+                ]
+            ],
+            "offsetY": 12.34375,
+            "offsetX": 3.328125
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "div.dx-state-hover > div > div"
+                ],
+                [
+                    "xpath///*[@id=\"dx-f95a165a-c85b-6d1e-c576-e5359687b8d0\"]/div[1]/div/div[1]/div[2]/div/div[10]/div/div"
+                ],
+                [
+                    "pierce/div.dx-state-hover > div > div"
+                ]
+            ],
+            "offsetY": 14,
+            "offsetX": 36
+        }
+    ]
+}

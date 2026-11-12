@@ -1,0 +1,31 @@
+{
+  "tcId": "TC-08",
+  "pageName": "cham_cong_tinh_luong_crud_lien_hoan",
+  "title": "HR cuong.vu xác lập Hồ sơ Lương 10,000,000 VNĐ và 1 Người phụ thuộc (Role: cuong.vu)",
+  "testStatus": "PASSED",
+  "businessStatus": "PASSED",
+  "businessNotes": "Đạt yêu cầu logic nghiệp vụ mong đợi",
+  "defectEvidence": null,
+  "failureAnalysis": {},
+  "status": "PASSED",
+  "duration": "22.20s",
+  "errors": "",
+  "stepScreenshots": [
+    {
+      "step": 1,
+      "title": "Hr cuong vu xac thuc ho so luong 10m va npt mnuhrs157",
+      "fileName": "TC-08-step01-hr-cuong-vu-xac-thuc-ho-so-luong-10m-va-npt-mnuhrs157.png",
+      "relPath": "cham_cong_tinh_luong_crud_lien_hoan/TC-08/screenshots/TC-08-step01-hr-cuong-vu-xac-thuc-ho-so-luong-10m-va-npt-mnuhrs157.png"
+    }
+  ],
+  "attachments": {
+    "screenshots": [
+      "cham_cong_tinh_luong_crud_lien_hoan/TC-08/screenshots/TC-08-step01-hr-cuong-vu-xac-thuc-ho-so-luong-10m-va-npt-mnuhrs157.png"
+    ],
+    "videos": [
+      "cham_cong_tinh_luong_crud_lien_hoan/TC-08/videos/video.webm"
+    ],
+    "traces": []
+  },
+  "timestamp": "2026-11-05T16:33:56.405Z"
+}

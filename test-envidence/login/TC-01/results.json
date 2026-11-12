@@ -1,0 +1,32 @@
+{
+  "tcId": "TC-01",
+  "pageName": "login",
+  "title": "Đăng nhập thành công với tài khoản Chien.nguyen",
+  "testStatus": "FAILED",
+  "businessStatus": "FAILED",
+  "businessNotes": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('#username')\nExpected: visible\nTimeout: 15000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" locator('#username') with timeout 15000ms\u001b[22m\n\u001b[2m  - waiting for locator('#username')\u001b[22m\n",
+  "defectEvidence": {
+    "issue": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('#username')\nExpected: visible\nTimeout: 15000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" locator('#username') with timeout 15000ms\u001b[22m\n\u001b[2m  - waiting for locator('#username')\u001b[22m\n",
+    "expected": "Theo đặc tả chuẩn của hệ thống",
+    "actual": "Thực tế phát sinh lỗi hoặc không đạt điều kiện kiểm tra"
+  },
+  "failureAnalysis": {
+    "issue": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('#username')\nExpected: visible\nTimeout: 15000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" locator('#username') with timeout 15000ms\u001b[22m\n\u001b[2m  - waiting for locator('#username')\u001b[22m\n",
+    "expected": "Theo đặc tả chuẩn của hệ thống",
+    "actual": "Thực tế phát sinh lỗi hoặc không đạt điều kiện kiểm tra"
+  },
+  "status": "FAILED",
+  "duration": "23.61s",
+  "errors": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('#username')\nExpected: visible\nTimeout: 15000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" locator('#username') with timeout 15000ms\u001b[22m\n\u001b[2m  - waiting for locator('#username')\u001b[22m\n",
+  "stepScreenshots": [],
+  "attachments": {
+    "screenshots": [],
+    "videos": [
+      "login/TC-01/videos/video.webm"
+    ],
+    "traces": [
+      "login/TC-01/traces/trace.zip"
+    ]
+  },
+  "timestamp": "2026-11-02T04:55:19.009Z"
+}
