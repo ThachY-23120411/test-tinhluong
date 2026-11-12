@@ -4,11 +4,11 @@
   "title": "fix-5 | TC-06: Khảo sát hiện trạng 5 ngày công trên Bảng công chi tiết (Role: test.nv)",
   "testStatus": "PASSED",
   "businessStatus": "PASSED",
-  "businessNotes": "PASS - Khảo sát Baseline Before 5 ngày công Tháng 10/2026 của NV 099 trên Bảng công cá nhân (5 ngày công trong CSDL).",
+  "businessNotes": "PASS - Khảo sát Baseline Before 5 ngày công Tháng 10/2026 của NV 099 trên Bảng công cá nhân (22 ngày công trong CSDL).",
   "defectEvidence": null,
   "failureAnalysis": {},
   "status": "PASSED",
-  "duration": "28.93s",
+  "duration": "41.12s",
   "errors": "",
   "stepScreenshots": [
     {
@@ -41,5 +41,5 @@
     ],
     "traces": []
   },
-  "timestamp": "2026-11-12T10:00:10.549Z"
+  "timestamp": "2026-11-12T17:26:17.711Z"
 }

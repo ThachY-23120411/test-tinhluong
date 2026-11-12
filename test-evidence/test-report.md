@@ -1,6 +1,6 @@
 # BÁO CÁO KIỂM THỬ TỔNG HỢP E2E (MASTER TEST REPORT)
 
-> Thời gian kiểm thử: **22:26:15 12/11/2026**
+> Thời gian kiểm thử: **00:26:18 13/11/2026**
 > Tổng số trang: **21** | Tổng số kịch bản: **115**
 
 ## 1. TỔNG QUAN THEO TỪNG TRANG / MENU
@@ -26,7 +26,7 @@
 | **inspect_leave** | `tests/inspect_leave.spec.js` | 1 | ✅ 100% LOGIC PASS | [Xem chi tiết](inspect_leave/test-report.md) |
 | **inspect_noidung** | `tests/inspect_noidung.spec.js` | 1 | ✅ 100% LOGIC PASS | [Xem chi tiết](inspect_noidung/test-report.md) |
 | **login** | `tests/login.spec.js` | 2 | ❌ 2 LOGIC FAIL | [Xem chi tiết](login/test-report.md) |
-| **quy_trinh_tinh_luong_nv_moi** | `tests/quy_trinh_tinh_luong_nv_moi.spec.js` | 20 | ❌ 1 LOGIC FAIL | [Xem chi tiết](quy_trinh_tinh_luong_nv_moi/test-report.md) |
+| **quy_trinh_tinh_luong_nv_moi** | `tests/quy_trinh_tinh_luong_nv_moi.spec.js` | 20 | ❌ 6 LOGIC FAIL | [Xem chi tiết](quy_trinh_tinh_luong_nv_moi/test-report.md) |
 | **thanh_toan_cong_no** | `tests/thanh_toan_cong_no.spec.js` | 3 | ❌ 3 LOGIC FAIL | [Xem chi tiết](thanh_toan_cong_no/test-report.md) |
 
 ---
@@ -38,7 +38,7 @@
 * **Trạng thái thực thi Test (Kỹ thuật)**: ✅ PASS (Thời gian thực thi: `26.23s`)
 * **Trạng thái Logic Nghiệp vụ (Business Output)**: ✅ PASS
 * **Đánh giá chi tiết**: Đạt yêu cầu logic nghiệp vụ mong đợi
-* **Thư mục bằng chứng**: [`test-evidence/cham_cong_tinh_luong_crud_lien_hoan/TC-01/`](file:///c:/Users/Y.Thach/Desktop/paradiseHR/test-evidence/cham_cong_tinh_luong_crud_lien_hoan/TC-01)
+* **Thư mục bằng chứng**: [`test-evidence/cham_cong_tinh_luong_crud_lien_hoan/TC-01/`](file:///C:/Users/Y.Thach/Desktop/paradiseHR/test-evidence/cham_cong_tinh_luong_crud_lien_hoan/TC-01)
 
 #### 📸 Bằng chứng trực quan từng bước (Step-by-Step Evidence):
 
@@ -55,7 +55,7 @@
 * **Trạng thái thực thi Test (Kỹ thuật)**: ✅ PASS (Thời gian thực thi: `24.08s`)
 * **Trạng thái Logic Nghiệp vụ (Business Output)**: ✅ PASS
 * **Đánh giá chi tiết**: Đạt yêu cầu logic nghiệp vụ mong đợi
-* **Thư mục bằng chứng**: [`test-evidence/cham_cong_tinh_luong_crud_lien_hoan/TC-02/`](file:///c:/Users/Y.Thach/Desktop/paradiseHR/test-evidence/cham_cong_tinh_luong_crud_lien_hoan/TC-02)
+* **Thư mục bằng chứng**: [`test-evidence/cham_cong_tinh_luong_crud_lien_hoan/TC-02/`](file:///C:/Users/Y.Thach/Desktop/paradiseHR/test-evidence/cham_cong_tinh_luong_crud_lien_hoan/TC-02)
 
 #### 📸 Bằng chứng trực quan từng bước (Step-by-Step Evidence):
 
@@ -72,7 +72,7 @@
 * **Trạng thái thực thi Test (Kỹ thuật)**: ✅ PASS (Thời gian thực thi: `27.86s`)
 * **Trạng thái Logic Nghiệp vụ (Business Output)**: ✅ PASS
 * **Đánh giá chi tiết**: Đạt yêu cầu logic nghiệp vụ mong đợi
-* **Thư mục bằng chứng**: [`test-evidence/cham_cong_tinh_luong_crud_lien_hoan/TC-03/`](file:///c:/Users/Y.Thach/Desktop/paradiseHR/test-evidence/cham_cong_tinh_luong_crud_lien_hoan/TC-03)
+* **Thư mục bằng chứng**: [`test-evidence/cham_cong_tinh_luong_crud_lien_hoan/TC-03/`](file:///C:/Users/Y.Thach/Desktop/paradiseHR/test-evidence/cham_cong_tinh_luong_crud_lien_hoan/TC-03)
 
 #### 📸 Bằng chứng trực quan từng bước (Step-by-Step Evidence):
 
@@ -89,7 +89,7 @@
 * **Trạng thái thực thi Test (Kỹ thuật)**: ✅ PASS (Thời gian thực thi: `40.15s`)
 * **Trạng thái Logic Nghiệp vụ (Business Output)**: ✅ PASS
 * **Đánh giá chi tiết**: Đạt yêu cầu logic nghiệp vụ mong đợi
-* **Thư mục bằng chứng**: [`test-evidence/cham_cong_tinh_luong_crud_lien_hoan/TC-04/`](file:///c:/Users/Y.Thach/Desktop/paradiseHR/test-evidence/cham_cong_tinh_luong_crud_lien_hoan/TC-04)
+* **Thư mục bằng chứng**: [`test-evidence/cham_cong_tinh_luong_crud_lien_hoan/TC-04/`](file:///C:/Users/Y.Thach/Desktop/paradiseHR/test-evidence/cham_cong_tinh_luong_crud_lien_hoan/TC-04)
 
 #### 📸 Bằng chứng trực quan từng bước (Step-by-Step Evidence):
 
@@ -112,7 +112,7 @@
 * **Trạng thái thực thi Test (Kỹ thuật)**: ✅ PASS (Thời gian thực thi: `23.89s`)
 * **Trạng thái Logic Nghiệp vụ (Business Output)**: ✅ PASS
 * **Đánh giá chi tiết**: Đạt yêu cầu logic nghiệp vụ mong đợi
-* **Thư mục bằng chứng**: [`test-evidence/cham_cong_tinh_luong_crud_lien_hoan/TC-05/`](file:///c:/Users/Y.Thach/Desktop/paradiseHR/test-evidence/cham_cong_tinh_luong_crud_lien_hoan/TC-05)
+* **Thư mục bằng chứng**: [`test-evidence/cham_cong_tinh_luong_crud_lien_hoan/TC-05/`](file:///C:/Users/Y.Thach/Desktop/paradiseHR/test-evidence/cham_cong_tinh_luong_crud_lien_hoan/TC-05)
 
 #### 📸 Bằng chứng trực quan từng bước (Step-by-Step Evidence):
 
@@ -129,7 +129,7 @@
 * **Trạng thái thực thi Test (Kỹ thuật)**: ✅ PASS (Thời gian thực thi: `25.83s`)
 * **Trạng thái Logic Nghiệp vụ (Business Output)**: ✅ PASS
 * **Đánh giá chi tiết**: Đạt yêu cầu logic nghiệp vụ mong đợi
-* **Thư mục bằng chứng**: [`test-evidence/cham_cong_tinh_luong_crud_lien_hoan/TC-06/`](file:///c:/Users/Y.Thach/Desktop/paradiseHR/test-evidence/cham_cong_tinh_luong_crud_lien_hoan/TC-06)
+* **Thư mục bằng chứng**: [`test-evidence/cham_cong_tinh_luong_crud_lien_hoan/TC-06/`](file:///C:/Users/Y.Thach/Desktop/paradiseHR/test-evidence/cham_cong_tinh_luong_crud_lien_hoan/TC-06)
 
 #### 📸 Bằng chứng trực quan từng bước (Step-by-Step Evidence):
 
@@ -146,7 +146,7 @@
 * **Trạng thái thực thi Test (Kỹ thuật)**: ✅ PASS (Thời gian thực thi: `27.40s`)
 * **Trạng thái Logic Nghiệp vụ (Business Output)**: ✅ PASS
 * **Đánh giá chi tiết**: Đạt yêu cầu logic nghiệp vụ mong đợi
-* **Thư mục bằng chứng**: [`test-evidence/cham_cong_tinh_luong_crud_lien_hoan/TC-07/`](file:///c:/Users/Y.Thach/Desktop/paradiseHR/test-evidence/cham_cong_tinh_luong_crud_lien_hoan/TC-07)
+* **Thư mục bằng chứng**: [`test-evidence/cham_cong_tinh_luong_crud_lien_hoan/TC-07/`](file:///C:/Users/Y.Thach/Desktop/paradiseHR/test-evidence/cham_cong_tinh_luong_crud_lien_hoan/TC-07)
 
 #### 📸 Bằng chứng trực quan từng bước (Step-by-Step Evidence):
 
@@ -163,7 +163,7 @@
 * **Trạng thái thực thi Test (Kỹ thuật)**: ✅ PASS (Thời gian thực thi: `22.20s`)
 * **Trạng thái Logic Nghiệp vụ (Business Output)**: ✅ PASS
 * **Đánh giá chi tiết**: Đạt yêu cầu logic nghiệp vụ mong đợi
-* **Thư mục bằng chứng**: [`test-evidence/cham_cong_tinh_luong_crud_lien_hoan/TC-08/`](file:///c:/Users/Y.Thach/Desktop/paradiseHR/test-evidence/cham_cong_tinh_luong_crud_lien_hoan/TC-08)
+* **Thư mục bằng chứng**: [`test-evidence/cham_cong_tinh_luong_crud_lien_hoan/TC-08/`](file:///C:/Users/Y.Thach/Desktop/paradiseHR/test-evidence/cham_cong_tinh_luong_crud_lien_hoan/TC-08)
 
 #### 📸 Bằng chứng trực quan từng bước (Step-by-Step Evidence):
 
@@ -180,7 +180,7 @@
 * **Trạng thái thực thi Test (Kỹ thuật)**: ✅ PASS (Thời gian thực thi: `26.75s`)
 * **Trạng thái Logic Nghiệp vụ (Business Output)**: ✅ PASS
 * **Đánh giá chi tiết**: Đạt yêu cầu logic nghiệp vụ mong đợi
-* **Thư mục bằng chứng**: [`test-evidence/cham_cong_tinh_luong_crud_lien_hoan/TC-09/`](file:///c:/Users/Y.Thach/Desktop/paradiseHR/test-evidence/cham_cong_tinh_luong_crud_lien_hoan/TC-09)
+* **Thư mục bằng chứng**: [`test-evidence/cham_cong_tinh_luong_crud_lien_hoan/TC-09/`](file:///C:/Users/Y.Thach/Desktop/paradiseHR/test-evidence/cham_cong_tinh_luong_crud_lien_hoan/TC-09)
 
 #### 📸 Bằng chứng trực quan từng bước (Step-by-Step Evidence):
 
@@ -197,7 +197,7 @@
 * **Trạng thái thực thi Test (Kỹ thuật)**: ✅ PASS (Thời gian thực thi: `26.10s`)
 * **Trạng thái Logic Nghiệp vụ (Business Output)**: ✅ PASS
 * **Đánh giá chi tiết**: Đạt yêu cầu logic nghiệp vụ mong đợi
-* **Thư mục bằng chứng**: [`test-evidence/cham_cong_tinh_luong_crud_lien_hoan/TC-10/`](file:///c:/Users/Y.Thach/Desktop/paradiseHR/test-evidence/cham_cong_tinh_luong_crud_lien_hoan/TC-10)
+* **Thư mục bằng chứng**: [`test-evidence/cham_cong_tinh_luong_crud_lien_hoan/TC-10/`](file:///C:/Users/Y.Thach/Desktop/paradiseHR/test-evidence/cham_cong_tinh_luong_crud_lien_hoan/TC-10)
 
 #### 📸 Bằng chứng trực quan từng bước (Step-by-Step Evidence):
 
@@ -214,7 +214,7 @@
 * **Trạng thái thực thi Test (Kỹ thuật)**: ✅ PASS (Thời gian thực thi: `41.07s`)
 * **Trạng thái Logic Nghiệp vụ (Business Output)**: ✅ PASS
 * **Đánh giá chi tiết**: Đạt yêu cầu logic nghiệp vụ mong đợi
-* **Thư mục bằng chứng**: [`test-evidence/cham_cong_tinh_luong_crud_lien_hoan/TC-11/`](file:///c:/Users/Y.Thach/Desktop/paradiseHR/test-evidence/cham_cong_tinh_luong_crud_lien_hoan/TC-11)
+* **Thư mục bằng chứng**: [`test-evidence/cham_cong_tinh_luong_crud_lien_hoan/TC-11/`](file:///C:/Users/Y.Thach/Desktop/paradiseHR/test-evidence/cham_cong_tinh_luong_crud_lien_hoan/TC-11)
 
 #### 📸 Bằng chứng trực quan từng bước (Step-by-Step Evidence):
 
@@ -234,7 +234,7 @@
 * **Trạng thái thực thi Test (Kỹ thuật)**: ✅ PASS (Thời gian thực thi: `27.96s`)
 * **Trạng thái Logic Nghiệp vụ (Business Output)**: ✅ PASS
 * **Đánh giá chi tiết**: Đạt yêu cầu logic nghiệp vụ mong đợi
-* **Thư mục bằng chứng**: [`test-evidence/cham_cong_tinh_luong_crud_lien_hoan/TC-12/`](file:///c:/Users/Y.Thach/Desktop/paradiseHR/test-evidence/cham_cong_tinh_luong_crud_lien_hoan/TC-12)
+* **Thư mục bằng chứng**: [`test-evidence/cham_cong_tinh_luong_crud_lien_hoan/TC-12/`](file:///C:/Users/Y.Thach/Desktop/paradiseHR/test-evidence/cham_cong_tinh_luong_crud_lien_hoan/TC-12)
 
 #### 📸 Bằng chứng trực quan từng bước (Step-by-Step Evidence):
 
@@ -251,7 +251,7 @@
 * **Trạng thái thực thi Test (Kỹ thuật)**: ✅ PASS (Thời gian thực thi: `17.49s`)
 * **Trạng thái Logic Nghiệp vụ (Business Output)**: ✅ PASS
 * **Đánh giá chi tiết**: Đạt yêu cầu logic nghiệp vụ mong đợi
-* **Thư mục bằng chứng**: [`test-evidence/cham_cong_tinh_luong_crud_lien_hoan/TC-13/`](file:///c:/Users/Y.Thach/Desktop/paradiseHR/test-evidence/cham_cong_tinh_luong_crud_lien_hoan/TC-13)
+* **Thư mục bằng chứng**: [`test-evidence/cham_cong_tinh_luong_crud_lien_hoan/TC-13/`](file:///C:/Users/Y.Thach/Desktop/paradiseHR/test-evidence/cham_cong_tinh_luong_crud_lien_hoan/TC-13)
 
 #### 📸 Bằng chứng trực quan từng bước (Step-by-Step Evidence):
 
@@ -268,7 +268,7 @@
 * **Trạng thái thực thi Test (Kỹ thuật)**: ✅ PASS (Thời gian thực thi: `26.38s`)
 * **Trạng thái Logic Nghiệp vụ (Business Output)**: ✅ PASS
 * **Đánh giá chi tiết**: Đạt yêu cầu logic nghiệp vụ mong đợi
-* **Thư mục bằng chứng**: [`test-evidence/cham_cong_tinh_luong_crud_lien_hoan/TC-14/`](file:///c:/Users/Y.Thach/Desktop/paradiseHR/test-evidence/cham_cong_tinh_luong_crud_lien_hoan/TC-14)
+* **Thư mục bằng chứng**: [`test-evidence/cham_cong_tinh_luong_crud_lien_hoan/TC-14/`](file:///C:/Users/Y.Thach/Desktop/paradiseHR/test-evidence/cham_cong_tinh_luong_crud_lien_hoan/TC-14)
 
 #### 📸 Bằng chứng trực quan từng bước (Step-by-Step Evidence):
 
@@ -291,7 +291,7 @@
 * **Trạng thái thực thi Test (Kỹ thuật)**: ✅ PASS (Thời gian thực thi: `18.69s`)
 * **Trạng thái Logic Nghiệp vụ (Business Output)**: ✅ PASS
 * **Đánh giá chi tiết**: Đạt yêu cầu logic nghiệp vụ mong đợi
-* **Thư mục bằng chứng**: [`test-evidence/cham_cong_tinh_luong_crud_lien_hoan/TC-15/`](file:///c:/Users/Y.Thach/Desktop/paradiseHR/test-evidence/cham_cong_tinh_luong_crud_lien_hoan/TC-15)
+* **Thư mục bằng chứng**: [`test-evidence/cham_cong_tinh_luong_crud_lien_hoan/TC-15/`](file:///C:/Users/Y.Thach/Desktop/paradiseHR/test-evidence/cham_cong_tinh_luong_crud_lien_hoan/TC-15)
 
 #### 📸 Bằng chứng trực quan từng bước (Step-by-Step Evidence):
 
@@ -308,7 +308,7 @@
 * **Trạng thái thực thi Test (Kỹ thuật)**: ✅ PASS (Thời gian thực thi: `47.04s`)
 * **Trạng thái Logic Nghiệp vụ (Business Output)**: ✅ PASS
 * **Đánh giá chi tiết**: PASS - Tạo và gửi đơn xin bù công thành công, xác thực CSDL đã lưu bản ghi IdentityID: 01A1A4D8-72BB-71AB-B470-6D7CB3438475 (Token: 000781)
-* **Thư mục bằng chứng**: [`test-evidence/cham_cong_tinh_luong_flow/TC-01/`](file:///c:/Users/Y.Thach/Desktop/paradiseHR/test-evidence/cham_cong_tinh_luong_flow/TC-01)
+* **Thư mục bằng chứng**: [`test-evidence/cham_cong_tinh_luong_flow/TC-01/`](file:///C:/Users/Y.Thach/Desktop/paradiseHR/test-evidence/cham_cong_tinh_luong_flow/TC-01)
 
 #### 📸 Bằng chứng trực quan từng bước (Step-by-Step Evidence):
 
@@ -337,7 +337,7 @@
 * **Trạng thái thực thi Test (Kỹ thuật)**: ✅ PASS (Thời gian thực thi: `28.10s`)
 * **Trạng thái Logic Nghiệp vụ (Business Output)**: ✅ PASS
 * **Đánh giá chi tiết**: PASS - Đơn bù công hiển thị chuẩn xác trong Tab Lịch sử với trạng thái "Đang chờ duyệt" (Khớp CSDL Approve_Status: 1)
-* **Thư mục bằng chứng**: [`test-evidence/cham_cong_tinh_luong_flow/TC-02/`](file:///c:/Users/Y.Thach/Desktop/paradiseHR/test-evidence/cham_cong_tinh_luong_flow/TC-02)
+* **Thư mục bằng chứng**: [`test-evidence/cham_cong_tinh_luong_flow/TC-02/`](file:///C:/Users/Y.Thach/Desktop/paradiseHR/test-evidence/cham_cong_tinh_luong_flow/TC-02)
 
 #### 📸 Bằng chứng trực quan từng bước (Step-by-Step Evidence):
 
@@ -357,7 +357,7 @@
 * **Trạng thái thực thi Test (Kỹ thuật)**: ✅ PASS (Thời gian thực thi: `68.36s`)
 * **Trạng thái Logic Nghiệp vụ (Business Output)**: ✅ PASS
 * **Đánh giá chi tiết**: PASS - Quy trình phê duyệt liên hoàn 2 cấp (ThanhLong Cấp 1 -> cuong.vu Cấp 2) hoàn tất chuẩn xác, xác thực CSDL đã duyệt thành công
-* **Thư mục bằng chứng**: [`test-evidence/cham_cong_tinh_luong_flow/TC-03/`](file:///c:/Users/Y.Thach/Desktop/paradiseHR/test-evidence/cham_cong_tinh_luong_flow/TC-03)
+* **Thư mục bằng chứng**: [`test-evidence/cham_cong_tinh_luong_flow/TC-03/`](file:///C:/Users/Y.Thach/Desktop/paradiseHR/test-evidence/cham_cong_tinh_luong_flow/TC-03)
 
 #### 📸 Bằng chứng trực quan từng bước (Step-by-Step Evidence):
 
@@ -383,7 +383,7 @@
 * **Trạng thái thực thi Test (Kỹ thuật)**: ✅ PASS (Thời gian thực thi: `30.20s`)
 * **Trạng thái Logic Nghiệp vụ (Business Output)**: ✅ PASS
 * **Đánh giá chi tiết**: PASS - Bảng công ngày hiển thị chính xác bản ghi công của nhân viên 046 (Khớp CSDL tblHasTA)
-* **Thư mục bằng chứng**: [`test-evidence/cham_cong_tinh_luong_flow/TC-04/`](file:///c:/Users/Y.Thach/Desktop/paradiseHR/test-evidence/cham_cong_tinh_luong_flow/TC-04)
+* **Thư mục bằng chứng**: [`test-evidence/cham_cong_tinh_luong_flow/TC-04/`](file:///C:/Users/Y.Thach/Desktop/paradiseHR/test-evidence/cham_cong_tinh_luong_flow/TC-04)
 
 #### 📸 Bằng chứng trực quan từng bước (Step-by-Step Evidence):
 
@@ -406,7 +406,7 @@
 * **Trạng thái thực thi Test (Kỹ thuật)**: ✅ PASS (Thời gian thực thi: `25.40s`)
 * **Trạng thái Logic Nghiệp vụ (Business Output)**: ✅ PASS
 * **Đánh giá chi tiết**: PASS - Bảng lương công ty tổng hợp đầy đủ chỉ tiêu lương cho nhân viên 046 (Khớp CSDL tblSal_Sal)
-* **Thư mục bằng chứng**: [`test-evidence/cham_cong_tinh_luong_flow/TC-05/`](file:///c:/Users/Y.Thach/Desktop/paradiseHR/test-evidence/cham_cong_tinh_luong_flow/TC-05)
+* **Thư mục bằng chứng**: [`test-evidence/cham_cong_tinh_luong_flow/TC-05/`](file:///C:/Users/Y.Thach/Desktop/paradiseHR/test-evidence/cham_cong_tinh_luong_flow/TC-05)
 
 #### 📸 Bằng chứng trực quan từng bước (Step-by-Step Evidence):
 
@@ -437,7 +437,7 @@
 | 7 | Lương cơ bản (psBasicSalary) | 0 | 0 | ✅ KHỚP 100% |
 | 8 | Tổng thu nhập (psTotalIncome) | 0 | 0 | ✅ KHỚP 100% |
 | 9 | Thực lĩnh / Lương thực nhận (psNetSalary) | 0 | 0 | ✅ KHỚP 100% |
-* **Thư mục bằng chứng**: [`test-evidence/cham_cong_tinh_luong_flow/TC-06/`](file:///c:/Users/Y.Thach/Desktop/paradiseHR/test-evidence/cham_cong_tinh_luong_flow/TC-06)
+* **Thư mục bằng chứng**: [`test-evidence/cham_cong_tinh_luong_flow/TC-06/`](file:///C:/Users/Y.Thach/Desktop/paradiseHR/test-evidence/cham_cong_tinh_luong_flow/TC-06)
 
 #### 📸 Bằng chứng trực quan từng bước (Step-by-Step Evidence):
 
@@ -457,7 +457,7 @@
 * **Trạng thái thực thi Test (Kỹ thuật)**: ✅ PASS (Thời gian thực thi: `34.14s`)
 * **Trạng thái Logic Nghiệp vụ (Business Output)**: ✅ PASS
 * **Đánh giá chi tiết**: PASS - Tạo và gửi đơn xin bù công thành công, xác thực CSDL đã lưu bản ghi IdentityID: 01A1A4E0-968F-7D0E-BC4F-9C1924459647 (Token: 535718)
-* **Thư mục bằng chứng**: [`test-evidence/cham_cong_tinh_luong_toan_dien/TC-01/`](file:///c:/Users/Y.Thach/Desktop/paradiseHR/test-evidence/cham_cong_tinh_luong_toan_dien/TC-01)
+* **Thư mục bằng chứng**: [`test-evidence/cham_cong_tinh_luong_toan_dien/TC-01/`](file:///C:/Users/Y.Thach/Desktop/paradiseHR/test-evidence/cham_cong_tinh_luong_toan_dien/TC-01)
 
 #### 📸 Bằng chứng trực quan từng bước (Step-by-Step Evidence):
 
@@ -486,7 +486,7 @@
 * **Trạng thái thực thi Test (Kỹ thuật)**: ✅ PASS (Thời gian thực thi: `23.55s`)
 * **Trạng thái Logic Nghiệp vụ (Business Output)**: ✅ PASS
 * **Đánh giá chi tiết**: PASS - Đơn bù công hiển thị chuẩn xác trong Tab Lịch sử với trạng thái "Đang chờ duyệt" (Khớp CSDL Approve_Status: 1)
-* **Thư mục bằng chứng**: [`test-evidence/cham_cong_tinh_luong_toan_dien/TC-02/`](file:///c:/Users/Y.Thach/Desktop/paradiseHR/test-evidence/cham_cong_tinh_luong_toan_dien/TC-02)
+* **Thư mục bằng chứng**: [`test-evidence/cham_cong_tinh_luong_toan_dien/TC-02/`](file:///C:/Users/Y.Thach/Desktop/paradiseHR/test-evidence/cham_cong_tinh_luong_toan_dien/TC-02)
 
 #### 📸 Bằng chứng trực quan từng bước (Step-by-Step Evidence):
 
@@ -506,7 +506,7 @@
 * **Trạng thái thực thi Test (Kỹ thuật)**: ✅ PASS (Thời gian thực thi: `61.83s`)
 * **Trạng thái Logic Nghiệp vụ (Business Output)**: ✅ PASS
 * **Đánh giá chi tiết**: PASS - Quy trình phê duyệt liên hoàn 2 cấp (ThanhLong Cấp 1 -> cuong.vu Cấp 2) hoàn tất chuẩn xác, xác thực CSDL đã duyệt thành công
-* **Thư mục bằng chứng**: [`test-evidence/cham_cong_tinh_luong_toan_dien/TC-03/`](file:///c:/Users/Y.Thach/Desktop/paradiseHR/test-evidence/cham_cong_tinh_luong_toan_dien/TC-03)
+* **Thư mục bằng chứng**: [`test-evidence/cham_cong_tinh_luong_toan_dien/TC-03/`](file:///C:/Users/Y.Thach/Desktop/paradiseHR/test-evidence/cham_cong_tinh_luong_toan_dien/TC-03)
 
 #### 📸 Bằng chứng trực quan từng bước (Step-by-Step Evidence):
 
@@ -532,7 +532,7 @@
 * **Trạng thái thực thi Test (Kỹ thuật)**: ✅ PASS (Thời gian thực thi: `25.64s`)
 * **Trạng thái Logic Nghiệp vụ (Business Output)**: ✅ PASS
 * **Đánh giá chi tiết**: PASS - Bảng công ngày hiển thị chính xác bản ghi công của nhân viên 046 (Khớp CSDL tblHasTA)
-* **Thư mục bằng chứng**: [`test-evidence/cham_cong_tinh_luong_toan_dien/TC-04/`](file:///c:/Users/Y.Thach/Desktop/paradiseHR/test-evidence/cham_cong_tinh_luong_toan_dien/TC-04)
+* **Thư mục bằng chứng**: [`test-evidence/cham_cong_tinh_luong_toan_dien/TC-04/`](file:///C:/Users/Y.Thach/Desktop/paradiseHR/test-evidence/cham_cong_tinh_luong_toan_dien/TC-04)
 
 #### 📸 Bằng chứng trực quan từng bước (Step-by-Step Evidence):
 
@@ -555,7 +555,7 @@
 * **Trạng thái thực thi Test (Kỹ thuật)**: ✅ PASS (Thời gian thực thi: `24.07s`)
 * **Trạng thái Logic Nghiệp vụ (Business Output)**: ✅ PASS
 * **Đánh giá chi tiết**: PASS - Bảng lương công ty tổng hợp đầy đủ chỉ tiêu lương cho nhân viên 046 (Khớp CSDL tblSal_Sal)
-* **Thư mục bằng chứng**: [`test-evidence/cham_cong_tinh_luong_toan_dien/TC-05/`](file:///c:/Users/Y.Thach/Desktop/paradiseHR/test-evidence/cham_cong_tinh_luong_toan_dien/TC-05)
+* **Thư mục bằng chứng**: [`test-evidence/cham_cong_tinh_luong_toan_dien/TC-05/`](file:///C:/Users/Y.Thach/Desktop/paradiseHR/test-evidence/cham_cong_tinh_luong_toan_dien/TC-05)
 
 #### 📸 Bằng chứng trực quan từng bước (Step-by-Step Evidence):
 
@@ -581,7 +581,7 @@
 * **Trạng thái thực thi Test (Kỹ thuật)**: ✅ PASS (Thời gian thực thi: `43.50s`)
 * **Trạng thái Logic Nghiệp vụ (Business Output)**: ✅ PASS
 * **Đánh giá chi tiết**: PASS - Xác nhận kỳ lương Tháng 08/2026 đã được Khóa an toàn trong tblSal_Lock. Cổng chốt chặn Khóa lương hợp lệ, sẵn sàng phát hành Phiếu lương cá nhân ra Cổng thông tin nhân viên.
-* **Thư mục bằng chứng**: [`test-evidence/cham_cong_tinh_luong_toan_dien/TC-06/`](file:///c:/Users/Y.Thach/Desktop/paradiseHR/test-evidence/cham_cong_tinh_luong_toan_dien/TC-06)
+* **Thư mục bằng chứng**: [`test-evidence/cham_cong_tinh_luong_toan_dien/TC-06/`](file:///C:/Users/Y.Thach/Desktop/paradiseHR/test-evidence/cham_cong_tinh_luong_toan_dien/TC-06)
 
 #### 📸 Bằng chứng trực quan từng bước (Step-by-Step Evidence):
 
@@ -615,7 +615,7 @@
 | 9 | Giảm trừ gia cảnh (psDepTax) | 0 | 0 | ✅ KHỚP 100% |
 | 10 | Tổng thu nhập (psTotalIncome) | 0 | 0 | ✅ KHỚP 100% |
 | 11 | Thực lĩnh / Lương thực nhận (psNetSalary) | 0 | 0 | ✅ KHỚP 100% |
-* **Thư mục bằng chứng**: [`test-evidence/cham_cong_tinh_luong_toan_dien/TC-07/`](file:///c:/Users/Y.Thach/Desktop/paradiseHR/test-evidence/cham_cong_tinh_luong_toan_dien/TC-07)
+* **Thư mục bằng chứng**: [`test-evidence/cham_cong_tinh_luong_toan_dien/TC-07/`](file:///C:/Users/Y.Thach/Desktop/paradiseHR/test-evidence/cham_cong_tinh_luong_toan_dien/TC-07)
 
 #### 📸 Bằng chứng trực quan từng bước (Step-by-Step Evidence):
 
@@ -635,7 +635,7 @@
 * **Trạng thái thực thi Test (Kỹ thuật)**: ✅ PASS (Thời gian thực thi: `32.87s`)
 * **Trạng thái Logic Nghiệp vụ (Business Output)**: ✅ PASS
 * **Đánh giá chi tiết**: PASS - Tab Lịch sử phiếu lương nạp danh sách kỳ lương đã khóa chuẩn xác. Ba Modal popup tương tác chi tiết (👁️ Tăng ca, 👁️ Ngày nghỉ, 👁️ Đi trễ về sớm) render bảng số liệu chi tiết và đóng mở an toàn 100% không vỡ DOM.
-* **Thư mục bằng chứng**: [`test-evidence/cham_cong_tinh_luong_toan_dien/TC-08/`](file:///c:/Users/Y.Thach/Desktop/paradiseHR/test-evidence/cham_cong_tinh_luong_toan_dien/TC-08)
+* **Thư mục bằng chứng**: [`test-evidence/cham_cong_tinh_luong_toan_dien/TC-08/`](file:///C:/Users/Y.Thach/Desktop/paradiseHR/test-evidence/cham_cong_tinh_luong_toan_dien/TC-08)
 
 #### 📸 Bằng chứng trực quan từng bước (Step-by-Step Evidence):
 
@@ -664,7 +664,7 @@
 * **Trạng thái thực thi Test (Kỹ thuật)**: ✅ PASS (Thời gian thực thi: `84.47s`)
 * **Trạng thái Logic Nghiệp vụ (Business Output)**: ✅ PASS
 * **Đánh giá chi tiết**: PASS - Luồng nghiệp vụ khép kín xuyên suốt 4 menu CRM (Khách hàng -> Pipeline -> Dịch vụ -> Tổng quan) thực thi trơn tru, dữ liệu đồng bộ hoàn hảo
-* **Thư mục bằng chứng**: [`test-evidence/crm_business_flow/FLOW-01/`](file:///c:/Users/Y.Thach/Desktop/paradiseHR/test-evidence/crm_business_flow/FLOW-01)
+* **Thư mục bằng chứng**: [`test-evidence/crm_business_flow/FLOW-01/`](file:///C:/Users/Y.Thach/Desktop/paradiseHR/test-evidence/crm_business_flow/FLOW-01)
 
 #### 📸 Bằng chứng trực quan từng bước (Step-by-Step Evidence):
 
@@ -713,7 +713,7 @@
 * **Trạng thái thực thi Test (Kỹ thuật)**: ✅ PASS (Thời gian thực thi: `24.22s`)
 * **Trạng thái Logic Nghiệp vụ (Business Output)**: ✅ PASS
 * **Đánh giá chi tiết**: PASS - Khởi động thành công, API nạp dữ liệu phản hồi HTTP 200 (Success) và DataGrid hiển thị 20 bản ghi khách hàng
-* **Thư mục bằng chứng**: [`test-evidence/crm_customer_data/TC-01/`](file:///c:/Users/Y.Thach/Desktop/paradiseHR/test-evidence/crm_customer_data/TC-01)
+* **Thư mục bằng chứng**: [`test-evidence/crm_customer_data/TC-01/`](file:///C:/Users/Y.Thach/Desktop/paradiseHR/test-evidence/crm_customer_data/TC-01)
 
 #### 📸 Bằng chứng trực quan từng bước (Step-by-Step Evidence):
 
@@ -743,7 +743,7 @@
 * **Trạng thái thực thi Test (Kỹ thuật)**: ✅ PASS (Thời gian thực thi: `22.01s`)
 * **Trạng thái Logic Nghiệp vụ (Business Output)**: ✅ PASS
 * **Đánh giá chi tiết**: PASS - Bộ lọc chip trạng thái hoạt động chính xác: lọc đúng và khôi phục nguyên vẹn 21/21 bản ghi ban đầu
-* **Thư mục bằng chứng**: [`test-evidence/crm_customer_data/TC-02/`](file:///c:/Users/Y.Thach/Desktop/paradiseHR/test-evidence/crm_customer_data/TC-02)
+* **Thư mục bằng chứng**: [`test-evidence/crm_customer_data/TC-02/`](file:///C:/Users/Y.Thach/Desktop/paradiseHR/test-evidence/crm_customer_data/TC-02)
 
 #### 📸 Bằng chứng trực quan từng bước (Step-by-Step Evidence):
 
@@ -773,7 +773,7 @@
 * **Trạng thái thực thi Test (Kỹ thuật)**: ✅ PASS (Thời gian thực thi: `45.79s`)
 * **Trạng thái Logic Nghiệp vụ (Business Output)**: ✅ PASS
 * **Đánh giá chi tiết**: PASS - Chức năng Thêm mới khách hàng hoạt động hoàn hảo: API lưu phản hồi HTTP 200 (Success), dữ liệu được ghi vào DB và khách hàng "Công ty TNHH Paradise E2E 4938" hiển thị ngay trên DataGrid
-* **Thư mục bằng chứng**: [`test-evidence/crm_customer_data/TC-03/`](file:///c:/Users/Y.Thach/Desktop/paradiseHR/test-evidence/crm_customer_data/TC-03)
+* **Thư mục bằng chứng**: [`test-evidence/crm_customer_data/TC-03/`](file:///C:/Users/Y.Thach/Desktop/paradiseHR/test-evidence/crm_customer_data/TC-03)
 
 #### 📸 Bằng chứng trực quan từng bước (Step-by-Step Evidence):
 
@@ -803,7 +803,7 @@
 * **Trạng thái thực thi Test (Kỹ thuật)**: ✅ PASS (Thời gian thực thi: `29.81s`)
 * **Trạng thái Logic Nghiệp vụ (Business Output)**: ✅ PASS
 * **Đánh giá chi tiết**: PASS - Chức năng Xem chi tiết khách hàng hoạt động chính xác: API sp_CRM_CompanyDetail phản hồi HTTP 200, nạp đầy đủ thông tin chi tiết và điều hướng tab mượt mà
-* **Thư mục bằng chứng**: [`test-evidence/crm_customer_data/TC-04/`](file:///c:/Users/Y.Thach/Desktop/paradiseHR/test-evidence/crm_customer_data/TC-04)
+* **Thư mục bằng chứng**: [`test-evidence/crm_customer_data/TC-04/`](file:///C:/Users/Y.Thach/Desktop/paradiseHR/test-evidence/crm_customer_data/TC-04)
 
 #### 📸 Bằng chứng trực quan từng bước (Step-by-Step Evidence):
 
@@ -833,7 +833,7 @@
 * **Trạng thái thực thi Test (Kỹ thuật)**: ✅ PASS (Thời gian thực thi: `30.05s`)
 * **Trạng thái Logic Nghiệp vụ (Business Output)**: ✅ PASS
 * **Đánh giá chi tiết**: PASS - Chức năng Tìm kiếm nhanh hoạt động tức thì, lọc chính xác theo từ khóa "Nguyễn" và khôi phục đầy đủ 20 bản ghi
-* **Thư mục bằng chứng**: [`test-evidence/crm_customer_data/TC-05/`](file:///c:/Users/Y.Thach/Desktop/paradiseHR/test-evidence/crm_customer_data/TC-05)
+* **Thư mục bằng chứng**: [`test-evidence/crm_customer_data/TC-05/`](file:///C:/Users/Y.Thach/Desktop/paradiseHR/test-evidence/crm_customer_data/TC-05)
 
 #### 📸 Bằng chứng trực quan từng bước (Step-by-Step Evidence):
 
@@ -863,7 +863,7 @@
 * **Trạng thái thực thi Test (Kỹ thuật)**: ✅ PASS (Thời gian thực thi: `35.16s`)
 * **Trạng thái Logic Nghiệp vụ (Business Output)**: ✅ PASS
 * **Đánh giá chi tiết**: PASS - Nút Export trên toolbar kích hoạt trơn tru, máy chủ xử lý kết xuất an toàn không gây lỗi
-* **Thư mục bằng chứng**: [`test-evidence/crm_customer_data/TC-06/`](file:///c:/Users/Y.Thach/Desktop/paradiseHR/test-evidence/crm_customer_data/TC-06)
+* **Thư mục bằng chứng**: [`test-evidence/crm_customer_data/TC-06/`](file:///C:/Users/Y.Thach/Desktop/paradiseHR/test-evidence/crm_customer_data/TC-06)
 
 #### 📸 Bằng chứng trực quan từng bước (Step-by-Step Evidence):
 
@@ -893,7 +893,7 @@
 * **Trạng thái thực thi Test (Kỹ thuật)**: ✅ PASS (Thời gian thực thi: `31.88s`)
 * **Trạng thái Logic Nghiệp vụ (Business Output)**: ✅ PASS
 * **Đánh giá chi tiết**: PASS - Cụm nút lọc thời gian (Hôm nay/Tuần này/Tháng này) và nút Áp dụng hoạt động ổn định, nạp đúng kỳ dữ liệu
-* **Thư mục bằng chứng**: [`test-evidence/crm_customer_data/TC-07/`](file:///c:/Users/Y.Thach/Desktop/paradiseHR/test-evidence/crm_customer_data/TC-07)
+* **Thư mục bằng chứng**: [`test-evidence/crm_customer_data/TC-07/`](file:///C:/Users/Y.Thach/Desktop/paradiseHR/test-evidence/crm_customer_data/TC-07)
 
 #### 📸 Bằng chứng trực quan từng bước (Step-by-Step Evidence):
 
@@ -923,7 +923,7 @@
 * **Trạng thái thực thi Test (Kỹ thuật)**: ✅ PASS (Thời gian thực thi: `26.58s`)
 * **Trạng thái Logic Nghiệp vụ (Business Output)**: ✅ PASS
 * **Đánh giá chi tiết**: PASS - Thanh phân trang Pager chuyển đổi số dòng (10/50) mượt mà, layout DataGrid tự động co giãn đạt chuẩn
-* **Thư mục bằng chứng**: [`test-evidence/crm_customer_data/TC-08/`](file:///c:/Users/Y.Thach/Desktop/paradiseHR/test-evidence/crm_customer_data/TC-08)
+* **Thư mục bằng chứng**: [`test-evidence/crm_customer_data/TC-08/`](file:///C:/Users/Y.Thach/Desktop/paradiseHR/test-evidence/crm_customer_data/TC-08)
 
 #### 📸 Bằng chứng trực quan từng bước (Step-by-Step Evidence):
 
@@ -953,7 +953,7 @@
 * **Trạng thái thực thi Test (Kỹ thuật)**: ✅ PASS (Thời gian thực thi: `27.81s`)
 * **Trạng thái Logic Nghiệp vụ (Business Output)**: ✅ PASS
 * **Đánh giá chi tiết**: PASS - Column Chooser cho phép tùy biến hiển thị cột linh hoạt, đóng mở an toàn
-* **Thư mục bằng chứng**: [`test-evidence/crm_customer_data/TC-09/`](file:///c:/Users/Y.Thach/Desktop/paradiseHR/test-evidence/crm_customer_data/TC-09)
+* **Thư mục bằng chứng**: [`test-evidence/crm_customer_data/TC-09/`](file:///C:/Users/Y.Thach/Desktop/paradiseHR/test-evidence/crm_customer_data/TC-09)
 
 #### 📸 Bằng chứng trực quan từng bước (Step-by-Step Evidence):
 
@@ -983,7 +983,7 @@
 * **Trạng thái thực thi Test (Kỹ thuật)**: ✅ PASS (Thời gian thực thi: `31.58s`)
 * **Trạng thái Logic Nghiệp vụ (Business Output)**: ✅ PASS
 * **Đánh giá chi tiết**: PASS - Thao tác Click tiêu đề cột sắp xếp (Sort ASC/DESC) đảo chiều mượt mà, phản hồi API nạp lại chuẩn xác
-* **Thư mục bằng chứng**: [`test-evidence/crm_customer_data/TC-10/`](file:///c:/Users/Y.Thach/Desktop/paradiseHR/test-evidence/crm_customer_data/TC-10)
+* **Thư mục bằng chứng**: [`test-evidence/crm_customer_data/TC-10/`](file:///C:/Users/Y.Thach/Desktop/paradiseHR/test-evidence/crm_customer_data/TC-10)
 
 #### 📸 Bằng chứng trực quan từng bước (Step-by-Step Evidence):
 
@@ -1014,7 +1014,7 @@
 * **Trạng thái Logic Nghiệp vụ (Business Output)**: ❌ FAIL
 * **Đánh giá chi tiết**: [31mTest timeout of 60000ms exceeded.[39m
 Error: page.waitForTimeout: Target page, context or browser has been closed
-* **Thư mục bằng chứng**: [`test-evidence/crm_customer_data/TC-11/`](file:///c:/Users/Y.Thach/Desktop/paradiseHR/test-evidence/crm_customer_data/TC-11)
+* **Thư mục bằng chứng**: [`test-evidence/crm_customer_data/TC-11/`](file:///C:/Users/Y.Thach/Desktop/paradiseHR/test-evidence/crm_customer_data/TC-11)
 
 > [!CAUTION] 🚨 THÔNG TIN LỖI PHÁT HIỆN TỪ THỰC THI (DEFECT EVIDENCE - FACTS ONLY)
 >
@@ -1044,7 +1044,7 @@ Error: page.waitForTimeout: Target page, context or browser has been closed
 * **Trạng thái thực thi Test (Kỹ thuật)**: ✅ PASS (Thời gian thực thi: `31.00s`)
 * **Trạng thái Logic Nghiệp vụ (Business Output)**: ✅ PASS
 * **Đánh giá chi tiết**: PASS - Quy trình xem và cập nhật hồ sơ khách hàng hoạt động trơn tru, nạp đúng API chi tiết và điều hướng an toàn
-* **Thư mục bằng chứng**: [`test-evidence/crm_customer_data/TC-12/`](file:///c:/Users/Y.Thach/Desktop/paradiseHR/test-evidence/crm_customer_data/TC-12)
+* **Thư mục bằng chứng**: [`test-evidence/crm_customer_data/TC-12/`](file:///C:/Users/Y.Thach/Desktop/paradiseHR/test-evidence/crm_customer_data/TC-12)
 
 #### 📸 Bằng chứng trực quan từng bước (Step-by-Step Evidence):
 
@@ -1074,7 +1074,7 @@ Error: page.waitForTimeout: Target page, context or browser has been closed
 * **Trạng thái thực thi Test (Kỹ thuật)**: ✅ PASS (Thời gian thực thi: `19.89s`)
 * **Trạng thái Logic Nghiệp vụ (Business Output)**: ✅ PASS
 * **Đánh giá chi tiết**: PASS - Cơ chế bảo vệ ràng buộc toàn vẹn hoạt động chuẩn xác: Dữ liệu được bảo toàn an toàn, có cảnh báo xác nhận ngăn chặn xóa nhầm
-* **Thư mục bằng chứng**: [`test-evidence/crm_customer_data/TC-13/`](file:///c:/Users/Y.Thach/Desktop/paradiseHR/test-evidence/crm_customer_data/TC-13)
+* **Thư mục bằng chứng**: [`test-evidence/crm_customer_data/TC-13/`](file:///C:/Users/Y.Thach/Desktop/paradiseHR/test-evidence/crm_customer_data/TC-13)
 
 #### 📸 Bằng chứng trực quan từng bước (Step-by-Step Evidence):
 
@@ -1104,7 +1104,7 @@ Error: page.waitForTimeout: Target page, context or browser has been closed
 * **Trạng thái thực thi Test (Kỹ thuật)**: ✅ PASS (Thời gian thực thi: `30.02s`)
 * **Trạng thái Logic Nghiệp vụ (Business Output)**: ✅ PASS
 * **Đánh giá chi tiết**: PASS - Tiện ích Nhập dữ liệu Excel phản hồi an toàn, cấu hình tệp mẫu hợp lệ và không gây lỗi giao diện
-* **Thư mục bằng chứng**: [`test-evidence/crm_customer_data/TC-14/`](file:///c:/Users/Y.Thach/Desktop/paradiseHR/test-evidence/crm_customer_data/TC-14)
+* **Thư mục bằng chứng**: [`test-evidence/crm_customer_data/TC-14/`](file:///C:/Users/Y.Thach/Desktop/paradiseHR/test-evidence/crm_customer_data/TC-14)
 
 #### 📸 Bằng chứng trực quan từng bước (Step-by-Step Evidence):
 
@@ -1134,7 +1134,7 @@ Error: page.waitForTimeout: Target page, context or browser has been closed
 * **Trạng thái thực thi Test (Kỹ thuật)**: ❌ FAIL (Thời gian thực thi: `0.00s`)
 * **Trạng thái Logic Nghiệp vụ (Business Output)**: ❌ FAIL
 * **Đánh giá chi tiết**: Error: worker process exited unexpectedly (code=3221225477, signal=null)
-* **Thư mục bằng chứng**: [`test-evidence/crm_customer_data/TC-15/`](file:///c:/Users/Y.Thach/Desktop/paradiseHR/test-evidence/crm_customer_data/TC-15)
+* **Thư mục bằng chứng**: [`test-evidence/crm_customer_data/TC-15/`](file:///C:/Users/Y.Thach/Desktop/paradiseHR/test-evidence/crm_customer_data/TC-15)
 
 > [!CAUTION] 🚨 THÔNG TIN LỖI PHÁT HIỆN TỪ THỰC THI (DEFECT EVIDENCE - FACTS ONLY)
 >
@@ -1163,7 +1163,7 @@ Error: worker process exited unexpectedly (code=3221225477, signal=null)
 * **Trạng thái thực thi Test (Kỹ thuật)**: ❌ FAIL (Thời gian thực thi: `15.49s`)
 * **Trạng thái Logic Nghiệp vụ (Business Output)**: ❌ FAIL
 * **Đánh giá chi tiết**: undefined
-* **Thư mục bằng chứng**: [`test-evidence/crm_dashboard/TC-01/`](file:///c:/Users/Y.Thach/Desktop/paradiseHR/test-evidence/crm_dashboard/TC-01)
+* **Thư mục bằng chứng**: [`test-evidence/crm_dashboard/TC-01/`](file:///C:/Users/Y.Thach/Desktop/paradiseHR/test-evidence/crm_dashboard/TC-01)
 
 #### 📸 Bằng chứng trực quan từng bước (Step-by-Step Evidence):
 
@@ -1178,7 +1178,7 @@ Error: worker process exited unexpectedly (code=3221225477, signal=null)
 * **Trạng thái thực thi Test (Kỹ thuật)**: ❌ FAIL (Thời gian thực thi: `26.43s`)
 * **Trạng thái Logic Nghiệp vụ (Business Output)**: ❌ FAIL
 * **Đánh giá chi tiết**: undefined
-* **Thư mục bằng chứng**: [`test-evidence/crm_dashboard/TC-02/`](file:///c:/Users/Y.Thach/Desktop/paradiseHR/test-evidence/crm_dashboard/TC-02)
+* **Thư mục bằng chứng**: [`test-evidence/crm_dashboard/TC-02/`](file:///C:/Users/Y.Thach/Desktop/paradiseHR/test-evidence/crm_dashboard/TC-02)
 
 #### 📸 Bằng chứng trực quan từng bước (Step-by-Step Evidence):
 
@@ -1193,7 +1193,7 @@ Error: worker process exited unexpectedly (code=3221225477, signal=null)
 * **Trạng thái thực thi Test (Kỹ thuật)**: ❌ FAIL (Thời gian thực thi: `0.00s`)
 * **Trạng thái Logic Nghiệp vụ (Business Output)**: ❌ FAIL
 * **Đánh giá chi tiết**: Error: worker process exited unexpectedly (code=3221225477, signal=null)
-* **Thư mục bằng chứng**: [`test-evidence/crm_marketing_product/TC-01/`](file:///c:/Users/Y.Thach/Desktop/paradiseHR/test-evidence/crm_marketing_product/TC-01)
+* **Thư mục bằng chứng**: [`test-evidence/crm_marketing_product/TC-01/`](file:///C:/Users/Y.Thach/Desktop/paradiseHR/test-evidence/crm_marketing_product/TC-01)
 
 > [!CAUTION] 🚨 THÔNG TIN LỖI PHÁT HIỆN TỪ THỰC THI (DEFECT EVIDENCE - FACTS ONLY)
 >
@@ -1222,7 +1222,7 @@ Error: worker process exited unexpectedly (code=3221225477, signal=null)
 Call log:
 [2m  - waiting for locator('#sp_CRM_marketing_product_html:visible, .dx-datagrid:visible').first() to be visible[22m
 
-* **Thư mục bằng chứng**: [`test-evidence/crm_marketing_product/TC-02/`](file:///c:/Users/Y.Thach/Desktop/paradiseHR/test-evidence/crm_marketing_product/TC-02)
+* **Thư mục bằng chứng**: [`test-evidence/crm_marketing_product/TC-02/`](file:///C:/Users/Y.Thach/Desktop/paradiseHR/test-evidence/crm_marketing_product/TC-02)
 
 > [!CAUTION] 🚨 THÔNG TIN LỖI PHÁT HIỆN TỪ THỰC THI (DEFECT EVIDENCE - FACTS ONLY)
 >
@@ -1256,7 +1256,7 @@ Call log:
 * **Trạng thái thực thi Test (Kỹ thuật)**: ❌ FAIL (Thời gian thực thi: `0.00s`)
 * **Trạng thái Logic Nghiệp vụ (Business Output)**: ❌ FAIL
 * **Đánh giá chi tiết**: Lỗi thực thi trong quá trình test
-* **Thư mục bằng chứng**: [`test-evidence/crm_marketing_product/TC-03/`](file:///c:/Users/Y.Thach/Desktop/paradiseHR/test-evidence/crm_marketing_product/TC-03)
+* **Thư mục bằng chứng**: [`test-evidence/crm_marketing_product/TC-03/`](file:///C:/Users/Y.Thach/Desktop/paradiseHR/test-evidence/crm_marketing_product/TC-03)
 
 > [!CAUTION] 🚨 THÔNG TIN LỖI PHÁT HIỆN TỪ THỰC THI (DEFECT EVIDENCE - FACTS ONLY)
 >
@@ -1277,7 +1277,7 @@ Call log:
 * **Trạng thái thực thi Test (Kỹ thuật)**: ❌ FAIL (Thời gian thực thi: `0.00s`)
 * **Trạng thái Logic Nghiệp vụ (Business Output)**: ❌ FAIL
 * **Đánh giá chi tiết**: Lỗi thực thi trong quá trình test
-* **Thư mục bằng chứng**: [`test-evidence/crm_marketing_product/TC-04/`](file:///c:/Users/Y.Thach/Desktop/paradiseHR/test-evidence/crm_marketing_product/TC-04)
+* **Thư mục bằng chứng**: [`test-evidence/crm_marketing_product/TC-04/`](file:///C:/Users/Y.Thach/Desktop/paradiseHR/test-evidence/crm_marketing_product/TC-04)
 
 > [!CAUTION] 🚨 THÔNG TIN LỖI PHÁT HIỆN TỪ THỰC THI (DEFECT EVIDENCE - FACTS ONLY)
 >
@@ -1298,7 +1298,7 @@ Call log:
 * **Trạng thái thực thi Test (Kỹ thuật)**: ❌ FAIL (Thời gian thực thi: `0.00s`)
 * **Trạng thái Logic Nghiệp vụ (Business Output)**: ❌ FAIL
 * **Đánh giá chi tiết**: Lỗi thực thi trong quá trình test
-* **Thư mục bằng chứng**: [`test-evidence/crm_marketing_product/TC-05/`](file:///c:/Users/Y.Thach/Desktop/paradiseHR/test-evidence/crm_marketing_product/TC-05)
+* **Thư mục bằng chứng**: [`test-evidence/crm_marketing_product/TC-05/`](file:///C:/Users/Y.Thach/Desktop/paradiseHR/test-evidence/crm_marketing_product/TC-05)
 
 > [!CAUTION] 🚨 THÔNG TIN LỖI PHÁT HIỆN TỪ THỰC THI (DEFECT EVIDENCE - FACTS ONLY)
 >
@@ -1319,7 +1319,7 @@ Call log:
 * **Trạng thái thực thi Test (Kỹ thuật)**: ❌ FAIL (Thời gian thực thi: `0.00s`)
 * **Trạng thái Logic Nghiệp vụ (Business Output)**: ❌ FAIL
 * **Đánh giá chi tiết**: Lỗi thực thi trong quá trình test
-* **Thư mục bằng chứng**: [`test-evidence/crm_marketing_product/TC-06/`](file:///c:/Users/Y.Thach/Desktop/paradiseHR/test-evidence/crm_marketing_product/TC-06)
+* **Thư mục bằng chứng**: [`test-evidence/crm_marketing_product/TC-06/`](file:///C:/Users/Y.Thach/Desktop/paradiseHR/test-evidence/crm_marketing_product/TC-06)
 
 > [!CAUTION] 🚨 THÔNG TIN LỖI PHÁT HIỆN TỪ THỰC THI (DEFECT EVIDENCE - FACTS ONLY)
 >
@@ -1340,7 +1340,7 @@ Call log:
 * **Trạng thái thực thi Test (Kỹ thuật)**: ❌ FAIL (Thời gian thực thi: `0.00s`)
 * **Trạng thái Logic Nghiệp vụ (Business Output)**: ❌ FAIL
 * **Đánh giá chi tiết**: Lỗi thực thi trong quá trình test
-* **Thư mục bằng chứng**: [`test-evidence/crm_marketing_product/TC-07/`](file:///c:/Users/Y.Thach/Desktop/paradiseHR/test-evidence/crm_marketing_product/TC-07)
+* **Thư mục bằng chứng**: [`test-evidence/crm_marketing_product/TC-07/`](file:///C:/Users/Y.Thach/Desktop/paradiseHR/test-evidence/crm_marketing_product/TC-07)
 
 > [!CAUTION] 🚨 THÔNG TIN LỖI PHÁT HIỆN TỪ THỰC THI (DEFECT EVIDENCE - FACTS ONLY)
 >
@@ -1361,7 +1361,7 @@ Call log:
 * **Trạng thái thực thi Test (Kỹ thuật)**: ✅ PASS (Thời gian thực thi: `21.82s`)
 * **Trạng thái Logic Nghiệp vụ (Business Output)**: ✅ PASS
 * **Đánh giá chi tiết**: PASS - Màn hình Tổng quan CRM nạp đầy đủ các widget và bảng KPI chi tiết
-* **Thư mục bằng chứng**: [`test-evidence/crm_overview/TC-01/`](file:///c:/Users/Y.Thach/Desktop/paradiseHR/test-evidence/crm_overview/TC-01)
+* **Thư mục bằng chứng**: [`test-evidence/crm_overview/TC-01/`](file:///C:/Users/Y.Thach/Desktop/paradiseHR/test-evidence/crm_overview/TC-01)
 
 #### 📸 Bằng chứng trực quan từng bước (Step-by-Step Evidence):
 
@@ -1391,7 +1391,7 @@ Call log:
 * **Trạng thái thực thi Test (Kỹ thuật)**: ✅ PASS (Thời gian thực thi: `28.51s`)
 * **Trạng thái Logic Nghiệp vụ (Business Output)**: ✅ PASS
 * **Đánh giá chi tiết**: PASS - Các bộ lọc thời gian và nút Tính toán lại phản hồi tốt, dữ liệu đồng bộ
-* **Thư mục bằng chứng**: [`test-evidence/crm_overview/TC-02/`](file:///c:/Users/Y.Thach/Desktop/paradiseHR/test-evidence/crm_overview/TC-02)
+* **Thư mục bằng chứng**: [`test-evidence/crm_overview/TC-02/`](file:///C:/Users/Y.Thach/Desktop/paradiseHR/test-evidence/crm_overview/TC-02)
 
 #### 📸 Bằng chứng trực quan từng bước (Step-by-Step Evidence):
 
@@ -1421,7 +1421,7 @@ Call log:
 * **Trạng thái thực thi Test (Kỹ thuật)**: ✅ PASS (Thời gian thực thi: `23.01s`)
 * **Trạng thái Logic Nghiệp vụ (Business Output)**: ✅ PASS
 * **Đánh giá chi tiết**: PASS - Modal Cấu hình KPI mở và đóng mượt mà, đầy đủ các trường thiết lập
-* **Thư mục bằng chứng**: [`test-evidence/crm_overview/TC-03/`](file:///c:/Users/Y.Thach/Desktop/paradiseHR/test-evidence/crm_overview/TC-03)
+* **Thư mục bằng chứng**: [`test-evidence/crm_overview/TC-03/`](file:///C:/Users/Y.Thach/Desktop/paradiseHR/test-evidence/crm_overview/TC-03)
 
 #### 📸 Bằng chứng trực quan từng bước (Step-by-Step Evidence):
 
@@ -1451,7 +1451,7 @@ Call log:
 * **Trạng thái thực thi Test (Kỹ thuật)**: ✅ PASS (Thời gian thực thi: `24.28s`)
 * **Trạng thái Logic Nghiệp vụ (Business Output)**: ✅ PASS
 * **Đánh giá chi tiết**: PASS - Nút Thêm Lead mở đúng modal tạo khách hàng, các trường nhập liệu phản hồi tốt
-* **Thư mục bằng chứng**: [`test-evidence/crm_overview/TC-04/`](file:///c:/Users/Y.Thach/Desktop/paradiseHR/test-evidence/crm_overview/TC-04)
+* **Thư mục bằng chứng**: [`test-evidence/crm_overview/TC-04/`](file:///C:/Users/Y.Thach/Desktop/paradiseHR/test-evidence/crm_overview/TC-04)
 
 #### 📸 Bằng chứng trực quan từng bước (Step-by-Step Evidence):
 
@@ -1481,7 +1481,7 @@ Call log:
 * **Trạng thái thực thi Test (Kỹ thuật)**: ✅ PASS (Thời gian thực thi: `21.91s`)
 * **Trạng thái Logic Nghiệp vụ (Business Output)**: ✅ PASS
 * **Đánh giá chi tiết**: PASS - Màn hình Sales Pipeline nạp giao diện Kanban trực quan, hiển thị 46 cột giai đoạn và 61 thẻ cơ hội
-* **Thư mục bằng chứng**: [`test-evidence/crm_sales_pipeline/TC-01/`](file:///c:/Users/Y.Thach/Desktop/paradiseHR/test-evidence/crm_sales_pipeline/TC-01)
+* **Thư mục bằng chứng**: [`test-evidence/crm_sales_pipeline/TC-01/`](file:///C:/Users/Y.Thach/Desktop/paradiseHR/test-evidence/crm_sales_pipeline/TC-01)
 
 #### 📸 Bằng chứng trực quan từng bước (Step-by-Step Evidence):
 
@@ -1511,7 +1511,7 @@ Call log:
 * **Trạng thái thực thi Test (Kỹ thuật)**: ✅ PASS (Thời gian thực thi: `25.86s`)
 * **Trạng thái Logic Nghiệp vụ (Business Output)**: ✅ PASS
 * **Đánh giá chi tiết**: PASS - Ô tìm kiếm Kanban lọc tức thì theo từ khóa "Nguyễn" (30 thẻ, đối soát CSDL: 31 thẻ) và khôi phục đầy đủ 61/61 thẻ ban đầu
-* **Thư mục bằng chứng**: [`test-evidence/crm_sales_pipeline/TC-02/`](file:///c:/Users/Y.Thach/Desktop/paradiseHR/test-evidence/crm_sales_pipeline/TC-02)
+* **Thư mục bằng chứng**: [`test-evidence/crm_sales_pipeline/TC-02/`](file:///C:/Users/Y.Thach/Desktop/paradiseHR/test-evidence/crm_sales_pipeline/TC-02)
 
 #### 📸 Bằng chứng trực quan từng bước (Step-by-Step Evidence):
 
@@ -1541,7 +1541,7 @@ Call log:
 * **Trạng thái thực thi Test (Kỹ thuật)**: ✅ PASS (Thời gian thực thi: `23.05s`)
 * **Trạng thái Logic Nghiệp vụ (Business Output)**: ✅ PASS
 * **Đánh giá chi tiết**: PASS - Nút Làm mới phản hồi nhanh chóng, API nạp lại 61 thẻ cơ hội và duy trì giao diện ổn định
-* **Thư mục bằng chứng**: [`test-evidence/crm_sales_pipeline/TC-03/`](file:///c:/Users/Y.Thach/Desktop/paradiseHR/test-evidence/crm_sales_pipeline/TC-03)
+* **Thư mục bằng chứng**: [`test-evidence/crm_sales_pipeline/TC-03/`](file:///C:/Users/Y.Thach/Desktop/paradiseHR/test-evidence/crm_sales_pipeline/TC-03)
 
 #### 📸 Bằng chứng trực quan từng bước (Step-by-Step Evidence):
 
@@ -1571,7 +1571,7 @@ Call log:
 * **Trạng thái thực thi Test (Kỹ thuật)**: ✅ PASS (Thời gian thực thi: `32.41s`)
 * **Trạng thái Logic Nghiệp vụ (Business Output)**: ❌ FAIL
 * **Đánh giá chi tiết**: FAIL - Lọc thời gian làm thất thoát dữ liệu (Ban đầu: 61, Khôi phục: 0)
-* **Thư mục bằng chứng**: [`test-evidence/crm_sales_pipeline/TC-04/`](file:///c:/Users/Y.Thach/Desktop/paradiseHR/test-evidence/crm_sales_pipeline/TC-04)
+* **Thư mục bằng chứng**: [`test-evidence/crm_sales_pipeline/TC-04/`](file:///C:/Users/Y.Thach/Desktop/paradiseHR/test-evidence/crm_sales_pipeline/TC-04)
 
 > [!CAUTION] 🚨 THÔNG TIN LỖI PHÁT HIỆN TỪ THỰC THI (DEFECT EVIDENCE - FACTS ONLY)
 >
@@ -1609,7 +1609,7 @@ Call log:
 * **Trạng thái thực thi Test (Kỹ thuật)**: ✅ PASS (Thời gian thực thi: `24.75s`)
 * **Trạng thái Logic Nghiệp vụ (Business Output)**: ✅ PASS
 * **Đánh giá chi tiết**: PASS - Nút xóa nhanh #btnClearSearch dọn sạch từ khóa tức thì và khôi phục đủ 61/61 thẻ cơ hội
-* **Thư mục bằng chứng**: [`test-evidence/crm_sales_pipeline/TC-05/`](file:///c:/Users/Y.Thach/Desktop/paradiseHR/test-evidence/crm_sales_pipeline/TC-05)
+* **Thư mục bằng chứng**: [`test-evidence/crm_sales_pipeline/TC-05/`](file:///C:/Users/Y.Thach/Desktop/paradiseHR/test-evidence/crm_sales_pipeline/TC-05)
 
 #### 📸 Bằng chứng trực quan từng bước (Step-by-Step Evidence):
 
@@ -1639,7 +1639,7 @@ Call log:
 * **Trạng thái thực thi Test (Kỹ thuật)**: ✅ PASS (Thời gian thực thi: `22.37s`)
 * **Trạng thái Logic Nghiệp vụ (Business Output)**: ✅ PASS
 * **Đánh giá chi tiết**: PASS - Không gian Kanban phân cấp đầy đủ 16 cột giai đoạn và 8 badge số lượng chuẩn mực
-* **Thư mục bằng chứng**: [`test-evidence/crm_sales_pipeline/TC-06/`](file:///c:/Users/Y.Thach/Desktop/paradiseHR/test-evidence/crm_sales_pipeline/TC-06)
+* **Thư mục bằng chứng**: [`test-evidence/crm_sales_pipeline/TC-06/`](file:///C:/Users/Y.Thach/Desktop/paradiseHR/test-evidence/crm_sales_pipeline/TC-06)
 
 #### 📸 Bằng chứng trực quan từng bước (Step-by-Step Evidence):
 
@@ -1669,7 +1669,7 @@ Call log:
 * **Trạng thái thực thi Test (Kỹ thuật)**: ✅ PASS (Thời gian thực thi: `45.15s`)
 * **Trạng thái Logic Nghiệp vụ (Business Output)**: ✅ PASS
 * **Đánh giá chi tiết**: PASS - Tiện ích lọc theo nhân viên phụ trách trên Toolbar hoạt động hoàn hảo: hỗ trợ tìm kiếm và chọn nhân sự 'NGUYỄN TẤN CHIẾN', áp dụng lọc chính xác (17 thẻ) và khôi phục đầy đủ 61/61 thẻ ban đầu
-* **Thư mục bằng chứng**: [`test-evidence/crm_sales_pipeline/TC-07/`](file:///c:/Users/Y.Thach/Desktop/paradiseHR/test-evidence/crm_sales_pipeline/TC-07)
+* **Thư mục bằng chứng**: [`test-evidence/crm_sales_pipeline/TC-07/`](file:///C:/Users/Y.Thach/Desktop/paradiseHR/test-evidence/crm_sales_pipeline/TC-07)
 
 #### 📸 Bằng chứng trực quan từng bước (Step-by-Step Evidence):
 
@@ -1702,7 +1702,7 @@ Call log:
 * **Trạng thái thực thi Test (Kỹ thuật)**: ✅ PASS (Thời gian thực thi: `25.12s`)
 * **Trạng thái Logic Nghiệp vụ (Business Output)**: ✅ PASS
 * **Đánh giá chi tiết**: PASS - Tính năng xem chi tiết thẻ cơ hội hoạt động chính xác, dữ liệu nạp đầy đủ và đóng mở linh hoạt không gây nghẽn
-* **Thư mục bằng chứng**: [`test-evidence/crm_sales_pipeline/TC-08/`](file:///c:/Users/Y.Thach/Desktop/paradiseHR/test-evidence/crm_sales_pipeline/TC-08)
+* **Thư mục bằng chứng**: [`test-evidence/crm_sales_pipeline/TC-08/`](file:///C:/Users/Y.Thach/Desktop/paradiseHR/test-evidence/crm_sales_pipeline/TC-08)
 
 #### 📸 Bằng chứng trực quan từng bước (Step-by-Step Evidence):
 
@@ -1732,7 +1732,7 @@ Call log:
 * **Trạng thái thực thi Test (Kỹ thuật)**: ✅ PASS (Thời gian thực thi: `20.86s`)
 * **Trạng thái Logic Nghiệp vụ (Business Output)**: ✅ PASS
 * **Đánh giá chi tiết**: PASS - Thẻ khách hàng "Nguyễn Văn Sync 4739" hiển thị đầy đủ thông tin liên hệ, mã số và nhân sự phụ trách
-* **Thư mục bằng chứng**: [`test-evidence/crm_sales_pipeline/TC-09/`](file:///c:/Users/Y.Thach/Desktop/paradiseHR/test-evidence/crm_sales_pipeline/TC-09)
+* **Thư mục bằng chứng**: [`test-evidence/crm_sales_pipeline/TC-09/`](file:///C:/Users/Y.Thach/Desktop/paradiseHR/test-evidence/crm_sales_pipeline/TC-09)
 
 #### 📸 Bằng chứng trực quan từng bước (Step-by-Step Evidence):
 
@@ -1762,7 +1762,7 @@ Call log:
 * **Trạng thái thực thi Test (Kỹ thuật)**: ✅ PASS (Thời gian thực thi: `31.98s`)
 * **Trạng thái Logic Nghiệp vụ (Business Output)**: ✅ PASS
 * **Đánh giá chi tiết**: PASS - Tiện ích Thêm mới cơ hội bán hàng trên Toolbar kích hoạt mượt mà, hỗ trợ đóng an toàn và duy trì nguyên vẹn bảng Kanban
-* **Thư mục bằng chứng**: [`test-evidence/crm_sales_pipeline/TC-10/`](file:///c:/Users/Y.Thach/Desktop/paradiseHR/test-evidence/crm_sales_pipeline/TC-10)
+* **Thư mục bằng chứng**: [`test-evidence/crm_sales_pipeline/TC-10/`](file:///C:/Users/Y.Thach/Desktop/paradiseHR/test-evidence/crm_sales_pipeline/TC-10)
 
 #### 📸 Bằng chứng trực quan từng bước (Step-by-Step Evidence):
 
@@ -1792,7 +1792,7 @@ Call log:
 * **Trạng thái thực thi Test (Kỹ thuật)**: ✅ PASS (Thời gian thực thi: `31.59s`)
 * **Trạng thái Logic Nghiệp vụ (Business Output)**: ✅ PASS
 * **Đánh giá chi tiết**: PASS - Thao tác Kéo thả thẻ (Drag & Drop) hoạt động mượt mà, hỗ trợ chuyển giai đoạn bán hàng trực quan trên Kanban
-* **Thư mục bằng chứng**: [`test-evidence/crm_sales_pipeline/TC-11/`](file:///c:/Users/Y.Thach/Desktop/paradiseHR/test-evidence/crm_sales_pipeline/TC-11)
+* **Thư mục bằng chứng**: [`test-evidence/crm_sales_pipeline/TC-11/`](file:///C:/Users/Y.Thach/Desktop/paradiseHR/test-evidence/crm_sales_pipeline/TC-11)
 
 #### 📸 Bằng chứng trực quan từng bước (Step-by-Step Evidence):
 
@@ -1822,7 +1822,7 @@ Call log:
 * **Trạng thái thực thi Test (Kỹ thuật)**: ✅ PASS (Thời gian thực thi: `53.56s`)
 * **Trạng thái Logic Nghiệp vụ (Business Output)**: ✅ PASS
 * **Đánh giá chi tiết**: PASS - Quy trình nghiệp vụ liên màn hình hoạt động hoàn hảo: Khách hàng "Công ty TNHH Pipeline Sync 7978" vừa tạo lập tức xuất hiện đồng bộ trên bảng Kanban Sales Pipeline
-* **Thư mục bằng chứng**: [`test-evidence/crm_sales_pipeline/TC-12/`](file:///c:/Users/Y.Thach/Desktop/paradiseHR/test-evidence/crm_sales_pipeline/TC-12)
+* **Thư mục bằng chứng**: [`test-evidence/crm_sales_pipeline/TC-12/`](file:///C:/Users/Y.Thach/Desktop/paradiseHR/test-evidence/crm_sales_pipeline/TC-12)
 
 #### 📸 Bằng chứng trực quan từng bước (Step-by-Step Evidence):
 
@@ -1852,7 +1852,7 @@ Call log:
 * **Trạng thái thực thi Test (Kỹ thuật)**: ✅ PASS (Thời gian thực thi: `29.00s`)
 * **Trạng thái Logic Nghiệp vụ (Business Output)**: ✅ PASS
 * **Đánh giá chi tiết**: PASS - Quy trình liên màn hình đạt chuẩn: Cơ hội chuyển sang Thành công trên Pipeline được ghi nhận đồng bộ, màn hình Tổng quan CRM nạp đầy đủ các chỉ số thống kê KPI chuyển đổi
-* **Thư mục bằng chứng**: [`test-evidence/crm_sales_pipeline/TC-13/`](file:///c:/Users/Y.Thach/Desktop/paradiseHR/test-evidence/crm_sales_pipeline/TC-13)
+* **Thư mục bằng chứng**: [`test-evidence/crm_sales_pipeline/TC-13/`](file:///C:/Users/Y.Thach/Desktop/paradiseHR/test-evidence/crm_sales_pipeline/TC-13)
 
 #### 📸 Bằng chứng trực quan từng bước (Step-by-Step Evidence):
 
@@ -1882,7 +1882,7 @@ Call log:
 * **Trạng thái thực thi Test (Kỹ thuật)**: ✅ PASS (Thời gian thực thi: `22.20s`)
 * **Trạng thái Logic Nghiệp vụ (Business Output)**: ✅ PASS
 * **Đánh giá chi tiết**: PASS - Màn hình Báo cáo Doanh số nạp đầy đủ 6 thẻ KPI và danh sách 7 nhân sự khớp định lượng CSDL
-* **Thư mục bằng chứng**: [`test-evidence/crm_sales_revenue/TC-01/`](file:///c:/Users/Y.Thach/Desktop/paradiseHR/test-evidence/crm_sales_revenue/TC-01)
+* **Thư mục bằng chứng**: [`test-evidence/crm_sales_revenue/TC-01/`](file:///C:/Users/Y.Thach/Desktop/paradiseHR/test-evidence/crm_sales_revenue/TC-01)
 
 #### 📸 Bằng chứng trực quan từng bước (Step-by-Step Evidence):
 
@@ -1912,7 +1912,7 @@ Call log:
 * **Trạng thái thực thi Test (Kỹ thuật)**: ✅ PASS (Thời gian thực thi: `28.73s`)
 * **Trạng thái Logic Nghiệp vụ (Business Output)**: ❌ FAIL
 * **Đánh giá chi tiết**: FAIL - Sai lệch kỳ lọc: Năm nhận 9 (kỳ vọng 9), Khôi phục nhận 7 (kỳ vọng 9)
-* **Thư mục bằng chứng**: [`test-evidence/crm_sales_revenue/TC-02/`](file:///c:/Users/Y.Thach/Desktop/paradiseHR/test-evidence/crm_sales_revenue/TC-02)
+* **Thư mục bằng chứng**: [`test-evidence/crm_sales_revenue/TC-02/`](file:///C:/Users/Y.Thach/Desktop/paradiseHR/test-evidence/crm_sales_revenue/TC-02)
 
 > [!CAUTION] 🚨 THÔNG TIN LỖI PHÁT HIỆN TỪ THỰC THI (DEFECT EVIDENCE - FACTS ONLY)
 >
@@ -1948,7 +1948,7 @@ Call log:
 * **Trạng thái thực thi Test (Kỹ thuật)**: ✅ PASS (Thời gian thực thi: `29.97s`)
 * **Trạng thái Logic Nghiệp vụ (Business Output)**: ✅ PASS
 * **Đánh giá chi tiết**: PASS - Dropdown Năm/Tháng và Nút Tải lại phản hồi mượt mà, đồng bộ số liệu chính xác từ CSDL
-* **Thư mục bằng chứng**: [`test-evidence/crm_sales_revenue/TC-03/`](file:///c:/Users/Y.Thach/Desktop/paradiseHR/test-evidence/crm_sales_revenue/TC-03)
+* **Thư mục bằng chứng**: [`test-evidence/crm_sales_revenue/TC-03/`](file:///C:/Users/Y.Thach/Desktop/paradiseHR/test-evidence/crm_sales_revenue/TC-03)
 
 #### 📸 Bằng chứng trực quan từng bước (Step-by-Step Evidence):
 
@@ -1978,7 +1978,7 @@ Call log:
 * **Trạng thái thực thi Test (Kỹ thuật)**: ✅ PASS (Thời gian thực thi: `26.72s`)
 * **Trạng thái Logic Nghiệp vụ (Business Output)**: ✅ PASS
 * **Đánh giá chi tiết**: PASS - Dashboard chi tiết của NGUYỄN TẤN CHIẾN hiển thị đầy đủ biểu đồ trực quan, nút quay lại hoạt động mượt mà
-* **Thư mục bằng chứng**: [`test-evidence/crm_sales_revenue/TC-04/`](file:///c:/Users/Y.Thach/Desktop/paradiseHR/test-evidence/crm_sales_revenue/TC-04)
+* **Thư mục bằng chứng**: [`test-evidence/crm_sales_revenue/TC-04/`](file:///C:/Users/Y.Thach/Desktop/paradiseHR/test-evidence/crm_sales_revenue/TC-04)
 
 #### 📸 Bằng chứng trực quan từng bước (Step-by-Step Evidence):
 
@@ -2008,7 +2008,7 @@ Call log:
 * **Trạng thái thực thi Test (Kỹ thuật)**: ✅ PASS (Thời gian thực thi: `34.88s`)
 * **Trạng thái Logic Nghiệp vụ (Business Output)**: ✅ PASS
 * **Đánh giá chi tiết**: PASS - Nút Xuất PDF phản hồi tức thì, layout không bị vỡ và giao diện duy trì trạng thái ổn định
-* **Thư mục bằng chứng**: [`test-evidence/crm_sales_revenue/TC-05/`](file:///c:/Users/Y.Thach/Desktop/paradiseHR/test-evidence/crm_sales_revenue/TC-05)
+* **Thư mục bằng chứng**: [`test-evidence/crm_sales_revenue/TC-05/`](file:///C:/Users/Y.Thach/Desktop/paradiseHR/test-evidence/crm_sales_revenue/TC-05)
 
 #### 📸 Bằng chứng trực quan từng bước (Step-by-Step Evidence):
 
@@ -2038,7 +2038,7 @@ Call log:
 * **Trạng thái thực thi Test (Kỹ thuật)**: ✅ PASS (Thời gian thực thi: `22.03s`)
 * **Trạng thái Logic Nghiệp vụ (Business Output)**: ✅ PASS
 * **Đánh giá chi tiết**: PASS - Báo cáo doanh số phản ánh chính xác số liệu hợp đồng từ CSDL (tblCRM_Contract & tblCRM_ContractPayment), phân bổ đều qua 9 nhân sự
-* **Thư mục bằng chứng**: [`test-evidence/crm_sales_revenue/TC-06/`](file:///c:/Users/Y.Thach/Desktop/paradiseHR/test-evidence/crm_sales_revenue/TC-06)
+* **Thư mục bằng chứng**: [`test-evidence/crm_sales_revenue/TC-06/`](file:///C:/Users/Y.Thach/Desktop/paradiseHR/test-evidence/crm_sales_revenue/TC-06)
 
 #### 📸 Bằng chứng trực quan từng bước (Step-by-Step Evidence):
 
@@ -2068,7 +2068,7 @@ Call log:
 * **Trạng thái thực thi Test (Kỹ thuật)**: ✅ PASS (Thời gian thực thi: `26.38s`)
 * **Trạng thái Logic Nghiệp vụ (Business Output)**: ✅ PASS
 * **Đánh giá chi tiết**: PASS - Màn hình Theo dõi dịch vụ nạp danh sách hợp đồng thông suốt với đầy đủ dữ liệu
-* **Thư mục bằng chứng**: [`test-evidence/crm_service_tracking/TC-01/`](file:///c:/Users/Y.Thach/Desktop/paradiseHR/test-evidence/crm_service_tracking/TC-01)
+* **Thư mục bằng chứng**: [`test-evidence/crm_service_tracking/TC-01/`](file:///C:/Users/Y.Thach/Desktop/paradiseHR/test-evidence/crm_service_tracking/TC-01)
 
 #### 📸 Bằng chứng trực quan từng bước (Step-by-Step Evidence):
 
@@ -2098,7 +2098,7 @@ Call log:
 * **Trạng thái thực thi Test (Kỹ thuật)**: ✅ PASS (Thời gian thực thi: `26.74s`)
 * **Trạng thái Logic Nghiệp vụ (Business Output)**: ✅ PASS
 * **Đánh giá chi tiết**: PASS - Checkbox lọc cá nhân phản hồi mượt mà, chu kỳ khôi phục dữ liệu đạt 100%
-* **Thư mục bằng chứng**: [`test-evidence/crm_service_tracking/TC-02/`](file:///c:/Users/Y.Thach/Desktop/paradiseHR/test-evidence/crm_service_tracking/TC-02)
+* **Thư mục bằng chứng**: [`test-evidence/crm_service_tracking/TC-02/`](file:///C:/Users/Y.Thach/Desktop/paradiseHR/test-evidence/crm_service_tracking/TC-02)
 
 #### 📸 Bằng chứng trực quan từng bước (Step-by-Step Evidence):
 
@@ -2128,7 +2128,7 @@ Call log:
 * **Trạng thái thực thi Test (Kỹ thuật)**: ✅ PASS (Thời gian thực thi: `26.58s`)
 * **Trạng thái Logic Nghiệp vụ (Business Output)**: ❌ FAIL
 * **Đánh giá chi tiết**: FAIL - Lỗi cú pháp SQL Backend khi tìm kiếm: Incorrect syntax near ')'.
-* **Thư mục bằng chứng**: [`test-evidence/crm_service_tracking/TC-03/`](file:///c:/Users/Y.Thach/Desktop/paradiseHR/test-evidence/crm_service_tracking/TC-03)
+* **Thư mục bằng chứng**: [`test-evidence/crm_service_tracking/TC-03/`](file:///C:/Users/Y.Thach/Desktop/paradiseHR/test-evidence/crm_service_tracking/TC-03)
 
 > [!CAUTION] 🚨 THÔNG TIN LỖI PHÁT HIỆN TỪ THỰC THI (DEFECT EVIDENCE - FACTS ONLY)
 >
@@ -2176,7 +2176,7 @@ Call log:
 * **Trạng thái thực thi Test (Kỹ thuật)**: ✅ PASS (Thời gian thực thi: `23.50s`)
 * **Trạng thái Logic Nghiệp vụ (Business Output)**: ✅ PASS
 * **Đánh giá chi tiết**: PASS - Tính năng Column Chooser hoạt động mượt mà, hiển thị đầy đủ danh mục cột
-* **Thư mục bằng chứng**: [`test-evidence/crm_service_tracking/TC-04/`](file:///c:/Users/Y.Thach/Desktop/paradiseHR/test-evidence/crm_service_tracking/TC-04)
+* **Thư mục bằng chứng**: [`test-evidence/crm_service_tracking/TC-04/`](file:///C:/Users/Y.Thach/Desktop/paradiseHR/test-evidence/crm_service_tracking/TC-04)
 
 #### 📸 Bằng chứng trực quan từng bước (Step-by-Step Evidence):
 
@@ -2206,7 +2206,7 @@ Call log:
 * **Trạng thái thực thi Test (Kỹ thuật)**: ❌ FAIL (Thời gian thực thi: `11.69s`)
 * **Trạng thái Logic Nghiệp vụ (Business Output)**: ❌ FAIL
 * **Đánh giá chi tiết**: undefined
-* **Thư mục bằng chứng**: [`test-evidence/dashboard_overview/TC-01/`](file:///c:/Users/Y.Thach/Desktop/paradiseHR/test-evidence/dashboard_overview/TC-01)
+* **Thư mục bằng chứng**: [`test-evidence/dashboard_overview/TC-01/`](file:///C:/Users/Y.Thach/Desktop/paradiseHR/test-evidence/dashboard_overview/TC-01)
 
 #### 📸 Bằng chứng trực quan từng bước (Step-by-Step Evidence):
 
@@ -2221,7 +2221,7 @@ Call log:
 * **Trạng thái thực thi Test (Kỹ thuật)**: ✅ PASS (Thời gian thực thi: `27.02s`)
 * **Trạng thái Logic Nghiệp vụ (Business Output)**: ✅ PASS
 * **Đánh giá chi tiết**: Đạt yêu cầu logic nghiệp vụ mong đợi
-* **Thư mục bằng chứng**: [`test-evidence/debug_test/TC-01/`](file:///c:/Users/Y.Thach/Desktop/paradiseHR/test-evidence/debug_test/TC-01)
+* **Thư mục bằng chứng**: [`test-evidence/debug_test/TC-01/`](file:///C:/Users/Y.Thach/Desktop/paradiseHR/test-evidence/debug_test/TC-01)
 
 #### 📸 Bằng chứng trực quan từng bước (Step-by-Step Evidence):
 
@@ -2236,7 +2236,7 @@ Call log:
 * **Trạng thái thực thi Test (Kỹ thuật)**: ✅ PASS (Thời gian thực thi: `46.30s`)
 * **Trạng thái Logic Nghiệp vụ (Business Output)**: ✅ PASS
 * **Đánh giá chi tiết**: PASS - Yêu cầu cập nhật thông tin ngân hàng đã được gửi thành công lên hệ thống phê duyệt
-* **Thư mục bằng chứng**: [`test-evidence/employee_bank_approval/TC-01/`](file:///c:/Users/Y.Thach/Desktop/paradiseHR/test-evidence/employee_bank_approval/TC-01)
+* **Thư mục bằng chứng**: [`test-evidence/employee_bank_approval/TC-01/`](file:///C:/Users/Y.Thach/Desktop/paradiseHR/test-evidence/employee_bank_approval/TC-01)
 
 #### 📸 Bằng chứng trực quan từng bước (Step-by-Step Evidence):
 
@@ -2266,7 +2266,7 @@ Call log:
 * **Trạng thái thực thi Test (Kỹ thuật)**: ✅ PASS (Thời gian thực thi: `34.53s`)
 * **Trạng thái Logic Nghiệp vụ (Business Output)**: ✅ PASS
 * **Đánh giá chi tiết**: PASS - Quản lý phê duyệt thành công yêu cầu trên hệ thống (Hệ thống xác nhận: Đã duyệt thành công các thay đổi)
-* **Thư mục bằng chứng**: [`test-evidence/employee_bank_approval/TC-02/`](file:///c:/Users/Y.Thach/Desktop/paradiseHR/test-evidence/employee_bank_approval/TC-02)
+* **Thư mục bằng chứng**: [`test-evidence/employee_bank_approval/TC-02/`](file:///C:/Users/Y.Thach/Desktop/paradiseHR/test-evidence/employee_bank_approval/TC-02)
 
 #### 📸 Bằng chứng trực quan từng bước (Step-by-Step Evidence):
 
@@ -2296,7 +2296,7 @@ Call log:
 * **Trạng thái thực thi Test (Kỹ thuật)**: ✅ PASS (Thời gian thực thi: `31.52s`)
 * **Trạng thái Logic Nghiệp vụ (Business Output)**: ✅ PASS
 * **Đánh giá chi tiết**: PASS - Thông tin ngân hàng đã cập nhật chính xác trên hồ sơ: 9940759954
-* **Thư mục bằng chứng**: [`test-evidence/employee_bank_approval/TC-03/`](file:///c:/Users/Y.Thach/Desktop/paradiseHR/test-evidence/employee_bank_approval/TC-03)
+* **Thư mục bằng chứng**: [`test-evidence/employee_bank_approval/TC-03/`](file:///C:/Users/Y.Thach/Desktop/paradiseHR/test-evidence/employee_bank_approval/TC-03)
 
 #### 📸 Bằng chứng trực quan từng bước (Step-by-Step Evidence):
 
@@ -2320,7 +2320,7 @@ Call log:
 * **Trạng thái thực thi Test (Kỹ thuật)**: ✅ PASS (Thời gian thực thi: `10.54s`)
 * **Trạng thái Logic Nghiệp vụ (Business Output)**: ✅ PASS
 * **Đánh giá chi tiết**: Đạt yêu cầu logic nghiệp vụ mong đợi
-* **Thư mục bằng chứng**: [`test-evidence/inspect_api/TC-01/`](file:///c:/Users/Y.Thach/Desktop/paradiseHR/test-evidence/inspect_api/TC-01)
+* **Thư mục bằng chứng**: [`test-evidence/inspect_api/TC-01/`](file:///C:/Users/Y.Thach/Desktop/paradiseHR/test-evidence/inspect_api/TC-01)
 
 #### 📸 Bằng chứng trực quan từng bước (Step-by-Step Evidence):
 
@@ -2335,7 +2335,7 @@ Call log:
 * **Trạng thái thực thi Test (Kỹ thuật)**: ✅ PASS (Thời gian thực thi: `15.00s`)
 * **Trạng thái Logic Nghiệp vụ (Business Output)**: ✅ PASS
 * **Đánh giá chi tiết**: Đạt yêu cầu logic nghiệp vụ mong đợi
-* **Thư mục bằng chứng**: [`test-evidence/inspect_launchpad/TC-01/`](file:///c:/Users/Y.Thach/Desktop/paradiseHR/test-evidence/inspect_launchpad/TC-01)
+* **Thư mục bằng chứng**: [`test-evidence/inspect_launchpad/TC-01/`](file:///C:/Users/Y.Thach/Desktop/paradiseHR/test-evidence/inspect_launchpad/TC-01)
 
 #### 📸 Bằng chứng trực quan từng bước (Step-by-Step Evidence):
 
@@ -2349,7 +2349,7 @@ Call log:
 * **Trạng thái thực thi Test (Kỹ thuật)**: ✅ PASS (Thời gian thực thi: `19.72s`)
 * **Trạng thái Logic Nghiệp vụ (Business Output)**: ✅ PASS
 * **Đánh giá chi tiết**: Đạt yêu cầu logic nghiệp vụ mong đợi
-* **Thư mục bằng chứng**: [`test-evidence/inspect_leave/TC-01/`](file:///c:/Users/Y.Thach/Desktop/paradiseHR/test-evidence/inspect_leave/TC-01)
+* **Thư mục bằng chứng**: [`test-evidence/inspect_leave/TC-01/`](file:///C:/Users/Y.Thach/Desktop/paradiseHR/test-evidence/inspect_leave/TC-01)
 
 #### 📸 Bằng chứng trực quan từng bước (Step-by-Step Evidence):
 
@@ -2363,7 +2363,7 @@ Call log:
 * **Trạng thái thực thi Test (Kỹ thuật)**: ✅ PASS (Thời gian thực thi: `33.88s`)
 * **Trạng thái Logic Nghiệp vụ (Business Output)**: ✅ PASS
 * **Đánh giá chi tiết**: Đạt yêu cầu logic nghiệp vụ mong đợi
-* **Thư mục bằng chứng**: [`test-evidence/inspect_noidung/TC-01/`](file:///c:/Users/Y.Thach/Desktop/paradiseHR/test-evidence/inspect_noidung/TC-01)
+* **Thư mục bằng chứng**: [`test-evidence/inspect_noidung/TC-01/`](file:///C:/Users/Y.Thach/Desktop/paradiseHR/test-evidence/inspect_noidung/TC-01)
 
 #### 📸 Bằng chứng trực quan từng bước (Step-by-Step Evidence):
 
@@ -2388,7 +2388,7 @@ Call log:
 [2m  - Expect "toBeVisible" locator('#username') with timeout 15000ms[22m
 [2m  - waiting for locator('#username')[22m
 
-* **Thư mục bằng chứng**: [`test-evidence/login/TC-01/`](file:///c:/Users/Y.Thach/Desktop/paradiseHR/test-evidence/login/TC-01)
+* **Thư mục bằng chứng**: [`test-evidence/login/TC-01/`](file:///C:/Users/Y.Thach/Desktop/paradiseHR/test-evidence/login/TC-01)
 
 > [!CAUTION] 🚨 THÔNG TIN LỖI PHÁT HIỆN TỪ THỰC THI (DEFECT EVIDENCE - FACTS ONLY)
 >
@@ -2436,7 +2436,7 @@ Call log:
 * **Trạng thái thực thi Test (Kỹ thuật)**: ❌ FAIL (Thời gian thực thi: `12.80s`)
 * **Trạng thái Logic Nghiệp vụ (Business Output)**: ❌ FAIL
 * **Đánh giá chi tiết**: undefined
-* **Thư mục bằng chứng**: [`test-evidence/login/TC-02/`](file:///c:/Users/Y.Thach/Desktop/paradiseHR/test-evidence/login/TC-02)
+* **Thư mục bằng chứng**: [`test-evidence/login/TC-02/`](file:///C:/Users/Y.Thach/Desktop/paradiseHR/test-evidence/login/TC-02)
 
 > [!WARNING] Lỗi Kỹ Thuật:
 ```
@@ -2466,7 +2466,7 @@ Call log:
 * **Trạng thái thực thi Test (Kỹ thuật)**: ✅ PASS (Thời gian thực thi: `25.42s`)
 * **Trạng thái Logic Nghiệp vụ (Business Output)**: ✅ PASS
 * **Đánh giá chi tiết**: Đạt yêu cầu logic nghiệp vụ mong đợi
-* **Thư mục bằng chứng**: [`test-evidence/quy_trinh_tinh_luong_nv_moi/TC-01/`](file:///c:/Users/Y.Thach/Desktop/paradiseHR/test-evidence/quy_trinh_tinh_luong_nv_moi/TC-01)
+* **Thư mục bằng chứng**: [`test-evidence/quy_trinh_tinh_luong_nv_moi/TC-01/`](file:///C:/Users/Y.Thach/Desktop/paradiseHR/test-evidence/quy_trinh_tinh_luong_nv_moi/TC-01)
 
 #### 📸 Bằng chứng trực quan từng bước (Step-by-Step Evidence):
 
@@ -2480,7 +2480,7 @@ Call log:
 * **Trạng thái thực thi Test (Kỹ thuật)**: ✅ PASS (Thời gian thực thi: `28.45s`)
 * **Trạng thái Logic Nghiệp vụ (Business Output)**: ✅ PASS
 * **Đánh giá chi tiết**: Đạt yêu cầu logic nghiệp vụ mong đợi
-* **Thư mục bằng chứng**: [`test-evidence/quy_trinh_tinh_luong_nv_moi/TC-02/`](file:///c:/Users/Y.Thach/Desktop/paradiseHR/test-evidence/quy_trinh_tinh_luong_nv_moi/TC-02)
+* **Thư mục bằng chứng**: [`test-evidence/quy_trinh_tinh_luong_nv_moi/TC-02/`](file:///C:/Users/Y.Thach/Desktop/paradiseHR/test-evidence/quy_trinh_tinh_luong_nv_moi/TC-02)
 
 #### 📸 Bằng chứng trực quan từng bước (Step-by-Step Evidence):
 
@@ -2491,10 +2491,32 @@ Call log:
 
 ### [quy_trinh_tinh_luong_nv_moi] TC-03: fix-4 | TC-03: Thiết lập HĐLĐ và Mức lương 10,000,000 VNĐ (Role: cuong.vu)
 
-* **Trạng thái thực thi Test (Kỹ thuật)**: ✅ PASS (Thời gian thực thi: `39.38s`)
-* **Trạng thái Logic Nghiệp vụ (Business Output)**: ✅ PASS
-* **Đánh giá chi tiết**: Đạt yêu cầu logic nghiệp vụ mong đợi
-* **Thư mục bằng chứng**: [`test-evidence/quy_trinh_tinh_luong_nv_moi/TC-03/`](file:///c:/Users/Y.Thach/Desktop/paradiseHR/test-evidence/quy_trinh_tinh_luong_nv_moi/TC-03)
+* **Trạng thái thực thi Test (Kỹ thuật)**: ❌ FAIL (Thời gian thực thi: `16.11s`)
+* **Trạng thái Logic Nghiệp vụ (Business Output)**: ❌ FAIL
+* **Đánh giá chi tiết**: Error: page.goto: Target page, context or browser has been closed
+Call log:
+[2m  - navigating to "https://paradisehrm.com/Tai3/", waiting until "domcontentloaded"[22m
+
+* **Thư mục bằng chứng**: [`test-evidence/quy_trinh_tinh_luong_nv_moi/TC-03/`](file:///C:/Users/Y.Thach/Desktop/paradiseHR/test-evidence/quy_trinh_tinh_luong_nv_moi/TC-03)
+
+> [!CAUTION] 🚨 THÔNG TIN LỖI PHÁT HIỆN TỪ THỰC THI (DEFECT EVIDENCE - FACTS ONLY)
+>
+> * **Vấn đề ghi nhận**: Error: page.goto: Target page, context or browser has been closed
+Call log:
+[2m  - navigating to "https://paradisehrm.com/Tai3/", waiting until "domcontentloaded"[22m
+
+> * **Kỳ vọng nghiệp vụ (Expected Output)**: Theo đặc tả chuẩn của hệ thống
+> * **Thực tế hệ thống (Actual Output)**: Thực tế phát sinh lỗi hoặc không đạt điều kiện kiểm tra
+>
+> 📌 **Lưu ý**: Kịch bản Test chỉ ghi nhận dữ liệu thực tế và sai khác. Phân tích nguyên nhân gốc (Root Cause) và giải pháp khắc phục sẽ do AI Agent điều tra và brainstorm trực tiếp từ Database & Source Code khi người dùng yêu cầu.
+
+> [!WARNING] Lỗi Kỹ Thuật:
+```
+Error: page.goto: Target page, context or browser has been closed
+Call log:
+[2m  - navigating to "https://paradisehrm.com/Tai3/", waiting until "domcontentloaded"[22m
+
+```
 
 #### 📸 Bằng chứng trực quan từng bước (Step-by-Step Evidence):
 
@@ -2505,10 +2527,26 @@ Call log:
 
 ### [quy_trinh_tinh_luong_nv_moi] TC-04: fix-4 | TC-04: Đăng ký 1 Người phụ thuộc giảm trừ gia cảnh (Role: cuong.vu)
 
-* **Trạng thái thực thi Test (Kỹ thuật)**: ✅ PASS (Thời gian thực thi: `70.18s`)
-* **Trạng thái Logic Nghiệp vụ (Business Output)**: ✅ PASS
-* **Đánh giá chi tiết**: Đạt yêu cầu logic nghiệp vụ mong đợi
-* **Thư mục bằng chứng**: [`test-evidence/quy_trinh_tinh_luong_nv_moi/TC-04/`](file:///c:/Users/Y.Thach/Desktop/paradiseHR/test-evidence/quy_trinh_tinh_luong_nv_moi/TC-04)
+* **Trạng thái thực thi Test (Kỹ thuật)**: ❌ FAIL (Thời gian thực thi: `16.65s`)
+* **Trạng thái Logic Nghiệp vụ (Business Output)**: ❌ FAIL
+* **Đánh giá chi tiết**: Error: Command failed: powershell -NoProfile -Command -
+^C
+* **Thư mục bằng chứng**: [`test-evidence/quy_trinh_tinh_luong_nv_moi/TC-04/`](file:///C:/Users/Y.Thach/Desktop/paradiseHR/test-evidence/quy_trinh_tinh_luong_nv_moi/TC-04)
+
+> [!CAUTION] 🚨 THÔNG TIN LỖI PHÁT HIỆN TỪ THỰC THI (DEFECT EVIDENCE - FACTS ONLY)
+>
+> * **Vấn đề ghi nhận**: Error: Command failed: powershell -NoProfile -Command -
+^C
+> * **Kỳ vọng nghiệp vụ (Expected Output)**: Theo đặc tả chuẩn của hệ thống
+> * **Thực tế hệ thống (Actual Output)**: Thực tế phát sinh lỗi hoặc không đạt điều kiện kiểm tra
+>
+> 📌 **Lưu ý**: Kịch bản Test chỉ ghi nhận dữ liệu thực tế và sai khác. Phân tích nguyên nhân gốc (Root Cause) và giải pháp khắc phục sẽ do AI Agent điều tra và brainstorm trực tiếp từ Database & Source Code khi người dùng yêu cầu.
+
+> [!WARNING] Lỗi Kỹ Thuật:
+```
+Error: Command failed: powershell -NoProfile -Command -
+^C
+```
 
 #### 📸 Bằng chứng trực quan từng bước (Step-by-Step Evidence):
 
@@ -2519,10 +2557,23 @@ Call log:
 
 ### [quy_trinh_tinh_luong_nv_moi] TC-05: fix-4 | TC-05: Phân ca làm việc hành chính chuẩn cho NV 099 (Role: cuong.vu)
 
-* **Trạng thái thực thi Test (Kỹ thuật)**: ✅ PASS (Thời gian thực thi: `30.98s`)
-* **Trạng thái Logic Nghiệp vụ (Business Output)**: ✅ PASS
-* **Đánh giá chi tiết**: Đạt yêu cầu logic nghiệp vụ mong đợi
-* **Thư mục bằng chứng**: [`test-evidence/quy_trinh_tinh_luong_nv_moi/TC-05/`](file:///c:/Users/Y.Thach/Desktop/paradiseHR/test-evidence/quy_trinh_tinh_luong_nv_moi/TC-05)
+* **Trạng thái thực thi Test (Kỹ thuật)**: ❌ FAIL (Thời gian thực thi: `42.80s`)
+* **Trạng thái Logic Nghiệp vụ (Business Output)**: ❌ FAIL
+* **Đánh giá chi tiết**: Error: ❌ [Định vị động thất bại]: Đã quét toàn bộ khung danh sách nhưng không tìm thấy phần tử khớp [Chấm công]!
+* **Thư mục bằng chứng**: [`test-evidence/quy_trinh_tinh_luong_nv_moi/TC-05/`](file:///C:/Users/Y.Thach/Desktop/paradiseHR/test-evidence/quy_trinh_tinh_luong_nv_moi/TC-05)
+
+> [!CAUTION] 🚨 THÔNG TIN LỖI PHÁT HIỆN TỪ THỰC THI (DEFECT EVIDENCE - FACTS ONLY)
+>
+> * **Vấn đề ghi nhận**: Error: ❌ [Định vị động thất bại]: Đã quét toàn bộ khung danh sách nhưng không tìm thấy phần tử khớp [Chấm công]!
+> * **Kỳ vọng nghiệp vụ (Expected Output)**: Theo đặc tả chuẩn của hệ thống
+> * **Thực tế hệ thống (Actual Output)**: Thực tế phát sinh lỗi hoặc không đạt điều kiện kiểm tra
+>
+> 📌 **Lưu ý**: Kịch bản Test chỉ ghi nhận dữ liệu thực tế và sai khác. Phân tích nguyên nhân gốc (Root Cause) và giải pháp khắc phục sẽ do AI Agent điều tra và brainstorm trực tiếp từ Database & Source Code khi người dùng yêu cầu.
+
+> [!WARNING] Lỗi Kỹ Thuật:
+```
+Error: ❌ [Định vị động thất bại]: Đã quét toàn bộ khung danh sách nhưng không tìm thấy phần tử khớp [Chấm công]!
+```
 
 #### 📸 Bằng chứng trực quan từng bước (Step-by-Step Evidence):
 
@@ -2533,10 +2584,10 @@ Call log:
 
 ### [quy_trinh_tinh_luong_nv_moi] TC-06: fix-5 | TC-06: Khảo sát hiện trạng 5 ngày công trên Bảng công chi tiết (Role: test.nv)
 
-* **Trạng thái thực thi Test (Kỹ thuật)**: ✅ PASS (Thời gian thực thi: `28.93s`)
+* **Trạng thái thực thi Test (Kỹ thuật)**: ✅ PASS (Thời gian thực thi: `41.12s`)
 * **Trạng thái Logic Nghiệp vụ (Business Output)**: ✅ PASS
-* **Đánh giá chi tiết**: PASS - Khảo sát Baseline Before 5 ngày công Tháng 10/2026 của NV 099 trên Bảng công cá nhân (5 ngày công trong CSDL).
-* **Thư mục bằng chứng**: [`test-evidence/quy_trinh_tinh_luong_nv_moi/TC-06/`](file:///c:/Users/Y.Thach/Desktop/paradiseHR/test-evidence/quy_trinh_tinh_luong_nv_moi/TC-06)
+* **Đánh giá chi tiết**: PASS - Khảo sát Baseline Before 5 ngày công Tháng 10/2026 của NV 099 trên Bảng công cá nhân (22 ngày công trong CSDL).
+* **Thư mục bằng chứng**: [`test-evidence/quy_trinh_tinh_luong_nv_moi/TC-06/`](file:///C:/Users/Y.Thach/Desktop/paradiseHR/test-evidence/quy_trinh_tinh_luong_nv_moi/TC-06)
 
 #### 📸 Bằng chứng trực quan từng bước (Step-by-Step Evidence):
 
@@ -2556,10 +2607,82 @@ Call log:
 
 ### [quy_trinh_tinh_luong_nv_moi] TC-07: fix-5 | TC-07: Nộp và Hủy đơn ngày 14/10; Nộp 2 đơn bù công ngày 15/10 và 16/10/2026 (Role: test.nv)
 
-* **Trạng thái thực thi Test (Kỹ thuật)**: ❌ FAIL (Thời gian thực thi: `3.87s`)
+* **Trạng thái thực thi Test (Kỹ thuật)**: ❌ FAIL (Thời gian thực thi: `13.63s`)
+* **Trạng thái Logic Nghiệp vụ (Business Output)**: ❌ FAIL
+* **Đánh giá chi tiết**: Error: page.goto: net::ERR_NETWORK_CHANGED at https://paradisehrm.com/Tai3/
+Call log:
+[2m  - navigating to "https://paradisehrm.com/Tai3/", waiting until "domcontentloaded"[22m
+
+* **Thư mục bằng chứng**: [`test-evidence/quy_trinh_tinh_luong_nv_moi/TC-07/`](file:///C:/Users/Y.Thach/Desktop/paradiseHR/test-evidence/quy_trinh_tinh_luong_nv_moi/TC-07)
+
+> [!CAUTION] 🚨 THÔNG TIN LỖI PHÁT HIỆN TỪ THỰC THI (DEFECT EVIDENCE - FACTS ONLY)
+>
+> * **Vấn đề ghi nhận**: Error: page.goto: net::ERR_NETWORK_CHANGED at https://paradisehrm.com/Tai3/
+Call log:
+[2m  - navigating to "https://paradisehrm.com/Tai3/", waiting until "domcontentloaded"[22m
+
+> * **Kỳ vọng nghiệp vụ (Expected Output)**: Theo đặc tả chuẩn của hệ thống
+> * **Thực tế hệ thống (Actual Output)**: Thực tế phát sinh lỗi hoặc không đạt điều kiện kiểm tra
+>
+> 📌 **Lưu ý**: Kịch bản Test chỉ ghi nhận dữ liệu thực tế và sai khác. Phân tích nguyên nhân gốc (Root Cause) và giải pháp khắc phục sẽ do AI Agent điều tra và brainstorm trực tiếp từ Database & Source Code khi người dùng yêu cầu.
+
+> [!WARNING] Lỗi Kỹ Thuật:
+```
+Error: page.goto: net::ERR_NETWORK_CHANGED at https://paradisehrm.com/Tai3/
+Call log:
+[2m  - navigating to "https://paradisehrm.com/Tai3/", waiting until "domcontentloaded"[22m
+
+```
+
+#### 📸 Bằng chứng trực quan từng bước (Step-by-Step Evidence):
+
+#### 🎥 Video & Dấu vết kiểm thử (Video & Trace):
+- **Video**: [video.webm](quy_trinh_tinh_luong_nv_moi/TC-07/videos/video.webm)
+
+---
+
+### [quy_trinh_tinh_luong_nv_moi] TC-08: fix-5 | TC-08: Nộp đơn Xin nghỉ phép năm AL hưởng nguyên lương ngày 24/10 (Role: test.nv)
+
+* **Trạng thái thực thi Test (Kỹ thuật)**: ❌ FAIL (Thời gian thực thi: `41.41s`)
+* **Trạng thái Logic Nghiệp vụ (Business Output)**: ❌ FAIL
+* **Đánh giá chi tiết**: Error: locator.waitFor: Target page, context or browser has been closed
+Call log:
+[2m  - waiting for locator('#sp_ResignationLeave, form, #dynamic-pane-MnuWPT315').first() to be visible[22m
+
+* **Thư mục bằng chứng**: [`test-evidence/quy_trinh_tinh_luong_nv_moi/TC-08/`](file:///C:/Users/Y.Thach/Desktop/paradiseHR/test-evidence/quy_trinh_tinh_luong_nv_moi/TC-08)
+
+> [!CAUTION] 🚨 THÔNG TIN LỖI PHÁT HIỆN TỪ THỰC THI (DEFECT EVIDENCE - FACTS ONLY)
+>
+> * **Vấn đề ghi nhận**: Error: locator.waitFor: Target page, context or browser has been closed
+Call log:
+[2m  - waiting for locator('#sp_ResignationLeave, form, #dynamic-pane-MnuWPT315').first() to be visible[22m
+
+> * **Kỳ vọng nghiệp vụ (Expected Output)**: Theo đặc tả chuẩn của hệ thống
+> * **Thực tế hệ thống (Actual Output)**: Thực tế phát sinh lỗi hoặc không đạt điều kiện kiểm tra
+>
+> 📌 **Lưu ý**: Kịch bản Test chỉ ghi nhận dữ liệu thực tế và sai khác. Phân tích nguyên nhân gốc (Root Cause) và giải pháp khắc phục sẽ do AI Agent điều tra và brainstorm trực tiếp từ Database & Source Code khi người dùng yêu cầu.
+
+> [!WARNING] Lỗi Kỹ Thuật:
+```
+Error: locator.waitFor: Target page, context or browser has been closed
+Call log:
+[2m  - waiting for locator('#sp_ResignationLeave, form, #dynamic-pane-MnuWPT315').first() to be visible[22m
+
+```
+
+#### 📸 Bằng chứng trực quan từng bước (Step-by-Step Evidence):
+
+#### 🎥 Video & Dấu vết kiểm thử (Video & Trace):
+- **Video**: [video.webm](quy_trinh_tinh_luong_nv_moi/TC-08/videos/video.webm)
+
+---
+
+### [quy_trinh_tinh_luong_nv_moi] TC-09: fix-5 | TC-09: Nộp đơn Xin tăng ca OT 2.0h ngày 20/10/2026 & Đăng xuất (Role: test.nv)
+
+* **Trạng thái thực thi Test (Kỹ thuật)**: ❌ FAIL (Thời gian thực thi: `26.16s`)
 * **Trạng thái Logic Nghiệp vụ (Business Output)**: ❌ FAIL
 * **Đánh giá chi tiết**: Error: page.waitForTimeout: Target page, context or browser has been closed
-* **Thư mục bằng chứng**: [`test-evidence/quy_trinh_tinh_luong_nv_moi/TC-07/`](file:///c:/Users/Y.Thach/Desktop/paradiseHR/test-evidence/quy_trinh_tinh_luong_nv_moi/TC-07)
+* **Thư mục bằng chứng**: [`test-evidence/quy_trinh_tinh_luong_nv_moi/TC-09/`](file:///C:/Users/Y.Thach/Desktop/paradiseHR/test-evidence/quy_trinh_tinh_luong_nv_moi/TC-09)
 
 > [!CAUTION] 🚨 THÔNG TIN LỖI PHÁT HIỆN TỪ THỰC THI (DEFECT EVIDENCE - FACTS ONLY)
 >
@@ -2577,61 +2700,6 @@ Error: page.waitForTimeout: Target page, context or browser has been closed
 #### 📸 Bằng chứng trực quan từng bước (Step-by-Step Evidence):
 
 #### 🎥 Video & Dấu vết kiểm thử (Video & Trace):
-- **Video**: [video.webm](quy_trinh_tinh_luong_nv_moi/TC-07/videos/video.webm)
-
----
-
-### [quy_trinh_tinh_luong_nv_moi] TC-08: fix-5 | TC-08: Nộp đơn Xin nghỉ phép năm AL hưởng nguyên lương ngày 24/10 (Role: test.nv)
-
-* **Trạng thái thực thi Test (Kỹ thuật)**: ✅ PASS (Thời gian thực thi: `67.91s`)
-* **Trạng thái Logic Nghiệp vụ (Business Output)**: ✅ PASS
-* **Đánh giá chi tiết**: PASS - Đơn Xin nghỉ phép năm AL ngày 24/10/2026 đã được nộp thành công và ghi nhận vào CSDL.
-* **Thư mục bằng chứng**: [`test-evidence/quy_trinh_tinh_luong_nv_moi/TC-08/`](file:///c:/Users/Y.Thach/Desktop/paradiseHR/test-evidence/quy_trinh_tinh_luong_nv_moi/TC-08)
-
-#### 📸 Bằng chứng trực quan từng bước (Step-by-Step Evidence):
-
-##### 🔹 Bước 1: Mo man hinh Xin nghi phep MnuWPT315
-![Bước 1: Mo man hinh Xin nghi phep MnuWPT315](quy_trinh_tinh_luong_nv_moi/TC-08/screenshots/TC-08-step01-mo-man-hinh-xin-nghi-phep-mnuwpt315.png)
-
-##### 🔹 Bước 2: Dien form Xin nghi phep nam AL ngay 24-10
-![Bước 2: Dien form Xin nghi phep nam AL ngay 24-10](quy_trinh_tinh_luong_nv_moi/TC-08/screenshots/TC-08-step02-dien-form-xin-nghi-phep-nam-al-ngay-24-10.png)
-
-##### 🔹 Bước 3: Bam nut Gui don va xac nhan popup
-![Bước 3: Bam nut Gui don va xac nhan popup](quy_trinh_tinh_luong_nv_moi/TC-08/screenshots/TC-08-step03-bam-nut-gui-don-va-xac-nhan-popup.png)
-
-##### 🔹 Bước 4: Tab Lich su don Nghi phep ngay 24-10
-![Bước 4: Tab Lich su don Nghi phep ngay 24-10](quy_trinh_tinh_luong_nv_moi/TC-08/screenshots/TC-08-step04-tab-lich-su-don-nghi-phep-ngay-24-10.png)
-
-#### 🎥 Video & Dấu vết kiểm thử (Video & Trace):
-- **Video**: [video.webm](quy_trinh_tinh_luong_nv_moi/TC-08/videos/video.webm)
-
----
-
-### [quy_trinh_tinh_luong_nv_moi] TC-09: fix-5 | TC-09: Nộp đơn Xin tăng ca OT 2.0h ngày 20/10/2026 & Đăng xuất (Role: test.nv)
-
-* **Trạng thái thực thi Test (Kỹ thuật)**: ✅ PASS (Thời gian thực thi: `65.23s`)
-* **Trạng thái Logic Nghiệp vụ (Business Output)**: ✅ PASS
-* **Đánh giá chi tiết**: PASS - Đơn Xin tăng ca OT 2.0h ngày 20/10/2026 đã được nộp thành công và đăng xuất an toàn. Hoàn tất bàn giao cho fix-6!
-* **Thư mục bằng chứng**: [`test-evidence/quy_trinh_tinh_luong_nv_moi/TC-09/`](file:///c:/Users/Y.Thach/Desktop/paradiseHR/test-evidence/quy_trinh_tinh_luong_nv_moi/TC-09)
-
-#### 📸 Bằng chứng trực quan từng bước (Step-by-Step Evidence):
-
-##### 🔹 Bước 1: Mo man hinh Xin tang ca MnuWPT316
-![Bước 1: Mo man hinh Xin tang ca MnuWPT316](quy_trinh_tinh_luong_nv_moi/TC-09/screenshots/TC-09-step01-mo-man-hinh-xin-tang-ca-mnuwpt316.png)
-
-##### 🔹 Bước 2: Dien form Xin tang ca OT 2h ngay 20-10
-![Bước 2: Dien form Xin tang ca OT 2h ngay 20-10](quy_trinh_tinh_luong_nv_moi/TC-09/screenshots/TC-09-step02-dien-form-xin-tang-ca-ot-2h-ngay-20-10.png)
-
-##### 🔹 Bước 3: Bam nut Gui don tang ca va xac nhan popup
-![Bước 3: Bam nut Gui don tang ca va xac nhan popup](quy_trinh_tinh_luong_nv_moi/TC-09/screenshots/TC-09-step03-bam-nut-gui-don-tang-ca-va-xac-nhan-popup.png)
-
-##### 🔹 Bước 4: Tab Lich su don Tang ca OT ngay 20-10
-![Bước 4: Tab Lich su don Tang ca OT ngay 20-10](quy_trinh_tinh_luong_nv_moi/TC-09/screenshots/TC-09-step04-tab-lich-su-don-tang-ca-ot-ngay-20-10.png)
-
-##### 🔹 Bước 5: Dang xuat hoan tat chu trinh nop don ESS
-![Bước 5: Dang xuat hoan tat chu trinh nop don ESS](quy_trinh_tinh_luong_nv_moi/TC-09/screenshots/TC-09-step05-dang-xuat-hoan-tat-chu-trinh-nop-don-ess.png)
-
-#### 🎥 Video & Dấu vết kiểm thử (Video & Trace):
 - **Video**: [video.webm](quy_trinh_tinh_luong_nv_moi/TC-09/videos/video.webm)
 
 ---
@@ -2641,7 +2709,7 @@ Error: page.waitForTimeout: Target page, context or browser has been closed
 * **Trạng thái thực thi Test (Kỹ thuật)**: ✅ PASS (Thời gian thực thi: `122.39s`)
 * **Trạng thái Logic Nghiệp vụ (Business Output)**: ✅ PASS
 * **Đánh giá chi tiết**: Đạt yêu cầu logic nghiệp vụ mong đợi
-* **Thư mục bằng chứng**: [`test-evidence/quy_trinh_tinh_luong_nv_moi/TC-10/`](file:///c:/Users/Y.Thach/Desktop/paradiseHR/test-evidence/quy_trinh_tinh_luong_nv_moi/TC-10)
+* **Thư mục bằng chứng**: [`test-evidence/quy_trinh_tinh_luong_nv_moi/TC-10/`](file:///C:/Users/Y.Thach/Desktop/paradiseHR/test-evidence/quy_trinh_tinh_luong_nv_moi/TC-10)
 
 #### 📸 Bằng chứng trực quan từng bước (Step-by-Step Evidence):
 
@@ -2676,7 +2744,7 @@ Error: page.waitForTimeout: Target page, context or browser has been closed
 * **Trạng thái thực thi Test (Kỹ thuật)**: ✅ PASS (Thời gian thực thi: `57.67s`)
 * **Trạng thái Logic Nghiệp vụ (Business Output)**: ✅ PASS
 * **Đánh giá chi tiết**: Đạt yêu cầu logic nghiệp vụ mong đợi
-* **Thư mục bằng chứng**: [`test-evidence/quy_trinh_tinh_luong_nv_moi/TC-11/`](file:///c:/Users/Y.Thach/Desktop/paradiseHR/test-evidence/quy_trinh_tinh_luong_nv_moi/TC-11)
+* **Thư mục bằng chứng**: [`test-evidence/quy_trinh_tinh_luong_nv_moi/TC-11/`](file:///C:/Users/Y.Thach/Desktop/paradiseHR/test-evidence/quy_trinh_tinh_luong_nv_moi/TC-11)
 
 #### 📸 Bằng chứng trực quan từng bước (Step-by-Step Evidence):
 
@@ -2705,7 +2773,7 @@ Error: page.waitForTimeout: Target page, context or browser has been closed
 * **Trạng thái thực thi Test (Kỹ thuật)**: ✅ PASS (Thời gian thực thi: `138.76s`)
 * **Trạng thái Logic Nghiệp vụ (Business Output)**: ✅ PASS
 * **Đánh giá chi tiết**: Đạt yêu cầu logic nghiệp vụ mong đợi
-* **Thư mục bằng chứng**: [`test-evidence/quy_trinh_tinh_luong_nv_moi/TC-12/`](file:///c:/Users/Y.Thach/Desktop/paradiseHR/test-evidence/quy_trinh_tinh_luong_nv_moi/TC-12)
+* **Thư mục bằng chứng**: [`test-evidence/quy_trinh_tinh_luong_nv_moi/TC-12/`](file:///C:/Users/Y.Thach/Desktop/paradiseHR/test-evidence/quy_trinh_tinh_luong_nv_moi/TC-12)
 
 #### 📸 Bằng chứng trực quan từng bước (Step-by-Step Evidence):
 
@@ -2737,7 +2805,7 @@ Error: page.waitForTimeout: Target page, context or browser has been closed
 * **Trạng thái thực thi Test (Kỹ thuật)**: ✅ PASS (Thời gian thực thi: `28.05s`)
 * **Trạng thái Logic Nghiệp vụ (Business Output)**: ✅ PASS
 * **Đánh giá chi tiết**: Đạt yêu cầu logic nghiệp vụ mong đợi
-* **Thư mục bằng chứng**: [`test-evidence/quy_trinh_tinh_luong_nv_moi/TC-13/`](file:///c:/Users/Y.Thach/Desktop/paradiseHR/test-evidence/quy_trinh_tinh_luong_nv_moi/TC-13)
+* **Thư mục bằng chứng**: [`test-evidence/quy_trinh_tinh_luong_nv_moi/TC-13/`](file:///C:/Users/Y.Thach/Desktop/paradiseHR/test-evidence/quy_trinh_tinh_luong_nv_moi/TC-13)
 
 #### 📸 Bằng chứng trực quan từng bước (Step-by-Step Evidence):
 
@@ -2760,7 +2828,7 @@ Error: page.waitForTimeout: Target page, context or browser has been closed
 * **Trạng thái thực thi Test (Kỹ thuật)**: ✅ PASS (Thời gian thực thi: `72.31s`)
 * **Trạng thái Logic Nghiệp vụ (Business Output)**: ✅ PASS
 * **Đánh giá chi tiết**: Đạt yêu cầu logic nghiệp vụ mong đợi
-* **Thư mục bằng chứng**: [`test-evidence/quy_trinh_tinh_luong_nv_moi/TC-14/`](file:///c:/Users/Y.Thach/Desktop/paradiseHR/test-evidence/quy_trinh_tinh_luong_nv_moi/TC-14)
+* **Thư mục bằng chứng**: [`test-evidence/quy_trinh_tinh_luong_nv_moi/TC-14/`](file:///C:/Users/Y.Thach/Desktop/paradiseHR/test-evidence/quy_trinh_tinh_luong_nv_moi/TC-14)
 
 #### 📸 Bằng chứng trực quan từng bước (Step-by-Step Evidence):
 
@@ -2783,7 +2851,7 @@ Error: page.waitForTimeout: Target page, context or browser has been closed
 * **Trạng thái thực thi Test (Kỹ thuật)**: ✅ PASS (Thời gian thực thi: `59.90s`)
 * **Trạng thái Logic Nghiệp vụ (Business Output)**: ✅ PASS
 * **Đánh giá chi tiết**: Đạt yêu cầu logic nghiệp vụ mong đợi
-* **Thư mục bằng chứng**: [`test-evidence/quy_trinh_tinh_luong_nv_moi/TC-15/`](file:///c:/Users/Y.Thach/Desktop/paradiseHR/test-evidence/quy_trinh_tinh_luong_nv_moi/TC-15)
+* **Thư mục bằng chứng**: [`test-evidence/quy_trinh_tinh_luong_nv_moi/TC-15/`](file:///C:/Users/Y.Thach/Desktop/paradiseHR/test-evidence/quy_trinh_tinh_luong_nv_moi/TC-15)
 
 #### 📸 Bằng chứng trực quan từng bước (Step-by-Step Evidence):
 
@@ -2806,7 +2874,7 @@ Error: page.waitForTimeout: Target page, context or browser has been closed
 * **Trạng thái thực thi Test (Kỹ thuật)**: ✅ PASS (Thời gian thực thi: `69.77s`)
 * **Trạng thái Logic Nghiệp vụ (Business Output)**: ✅ PASS
 * **Đánh giá chi tiết**: Đạt yêu cầu logic nghiệp vụ mong đợi
-* **Thư mục bằng chứng**: [`test-evidence/quy_trinh_tinh_luong_nv_moi/TC-16/`](file:///c:/Users/Y.Thach/Desktop/paradiseHR/test-evidence/quy_trinh_tinh_luong_nv_moi/TC-16)
+* **Thư mục bằng chứng**: [`test-evidence/quy_trinh_tinh_luong_nv_moi/TC-16/`](file:///C:/Users/Y.Thach/Desktop/paradiseHR/test-evidence/quy_trinh_tinh_luong_nv_moi/TC-16)
 
 #### 📸 Bằng chứng trực quan từng bước (Step-by-Step Evidence):
 
@@ -2829,7 +2897,7 @@ Error: page.waitForTimeout: Target page, context or browser has been closed
 * **Trạng thái thực thi Test (Kỹ thuật)**: ✅ PASS (Thời gian thực thi: `85.19s`)
 * **Trạng thái Logic Nghiệp vụ (Business Output)**: ✅ PASS
 * **Đánh giá chi tiết**: Đạt yêu cầu logic nghiệp vụ mong đợi
-* **Thư mục bằng chứng**: [`test-evidence/quy_trinh_tinh_luong_nv_moi/TC-17/`](file:///c:/Users/Y.Thach/Desktop/paradiseHR/test-evidence/quy_trinh_tinh_luong_nv_moi/TC-17)
+* **Thư mục bằng chứng**: [`test-evidence/quy_trinh_tinh_luong_nv_moi/TC-17/`](file:///C:/Users/Y.Thach/Desktop/paradiseHR/test-evidence/quy_trinh_tinh_luong_nv_moi/TC-17)
 
 #### 📸 Bằng chứng trực quan từng bước (Step-by-Step Evidence):
 
@@ -2855,7 +2923,7 @@ Error: page.waitForTimeout: Target page, context or browser has been closed
 * **Trạng thái thực thi Test (Kỹ thuật)**: ✅ PASS (Thời gian thực thi: `137.32s`)
 * **Trạng thái Logic Nghiệp vụ (Business Output)**: ✅ PASS
 * **Đánh giá chi tiết**: Đạt yêu cầu logic nghiệp vụ mong đợi
-* **Thư mục bằng chứng**: [`test-evidence/quy_trinh_tinh_luong_nv_moi/TC-18/`](file:///c:/Users/Y.Thach/Desktop/paradiseHR/test-evidence/quy_trinh_tinh_luong_nv_moi/TC-18)
+* **Thư mục bằng chứng**: [`test-evidence/quy_trinh_tinh_luong_nv_moi/TC-18/`](file:///C:/Users/Y.Thach/Desktop/paradiseHR/test-evidence/quy_trinh_tinh_luong_nv_moi/TC-18)
 
 #### 📸 Bằng chứng trực quan từng bước (Step-by-Step Evidence):
 
@@ -2911,7 +2979,7 @@ Error: page.waitForTimeout: Target page, context or browser has been closed
 * **Trạng thái thực thi Test (Kỹ thuật)**: ✅ PASS (Thời gian thực thi: `110.63s`)
 * **Trạng thái Logic Nghiệp vụ (Business Output)**: ✅ PASS
 * **Đánh giá chi tiết**: Đạt yêu cầu logic nghiệp vụ mong đợi
-* **Thư mục bằng chứng**: [`test-evidence/quy_trinh_tinh_luong_nv_moi/TC-19/`](file:///c:/Users/Y.Thach/Desktop/paradiseHR/test-evidence/quy_trinh_tinh_luong_nv_moi/TC-19)
+* **Thư mục bằng chứng**: [`test-evidence/quy_trinh_tinh_luong_nv_moi/TC-19/`](file:///C:/Users/Y.Thach/Desktop/paradiseHR/test-evidence/quy_trinh_tinh_luong_nv_moi/TC-19)
 
 #### 📸 Bằng chứng trực quan từng bước (Step-by-Step Evidence):
 
@@ -2964,7 +3032,7 @@ Error: page.waitForTimeout: Target page, context or browser has been closed
 * **Trạng thái thực thi Test (Kỹ thuật)**: ✅ PASS (Thời gian thực thi: `65.50s`)
 * **Trạng thái Logic Nghiệp vụ (Business Output)**: ✅ PASS
 * **Đánh giá chi tiết**: Đạt yêu cầu logic nghiệp vụ mong đợi
-* **Thư mục bằng chứng**: [`test-evidence/quy_trinh_tinh_luong_nv_moi/TC-20/`](file:///c:/Users/Y.Thach/Desktop/paradiseHR/test-evidence/quy_trinh_tinh_luong_nv_moi/TC-20)
+* **Thư mục bằng chứng**: [`test-evidence/quy_trinh_tinh_luong_nv_moi/TC-20/`](file:///C:/Users/Y.Thach/Desktop/paradiseHR/test-evidence/quy_trinh_tinh_luong_nv_moi/TC-20)
 
 #### 📸 Bằng chứng trực quan từng bước (Step-by-Step Evidence):
 
@@ -3000,7 +3068,7 @@ Call log:
 [2m  - waiting for locator('#dp_grid, #dp_grid_container').first() to be visible[22m
 [2m    33 × locator resolved to hidden <div id="dp_grid_container">…</div>[22m
 
-* **Thư mục bằng chứng**: [`test-evidence/thanh_toan_cong_no/TC-01/`](file:///c:/Users/Y.Thach/Desktop/paradiseHR/test-evidence/thanh_toan_cong_no/TC-01)
+* **Thư mục bằng chứng**: [`test-evidence/thanh_toan_cong_no/TC-01/`](file:///C:/Users/Y.Thach/Desktop/paradiseHR/test-evidence/thanh_toan_cong_no/TC-01)
 
 > [!CAUTION] 🚨 THÔNG TIN LỖI PHÁT HIỆN TỪ THỰC THI (DEFECT EVIDENCE - FACTS ONLY)
 >
@@ -3040,7 +3108,7 @@ Call log:
 [2m  - waiting for locator('#dp_grid, #dp_grid_container').first() to be visible[22m
 [2m    33 × locator resolved to hidden <div id="dp_grid_container">…</div>[22m
 
-* **Thư mục bằng chứng**: [`test-evidence/thanh_toan_cong_no/TC-02/`](file:///c:/Users/Y.Thach/Desktop/paradiseHR/test-evidence/thanh_toan_cong_no/TC-02)
+* **Thư mục bằng chứng**: [`test-evidence/thanh_toan_cong_no/TC-02/`](file:///C:/Users/Y.Thach/Desktop/paradiseHR/test-evidence/thanh_toan_cong_no/TC-02)
 
 > [!CAUTION] 🚨 THÔNG TIN LỖI PHÁT HIỆN TỪ THỰC THI (DEFECT EVIDENCE - FACTS ONLY)
 >
@@ -3080,7 +3148,7 @@ Call log:
 [2m  - waiting for locator('#dp_grid, #dp_grid_container').first() to be visible[22m
 [2m    33 × locator resolved to hidden <div id="dp_grid_container">…</div>[22m
 
-* **Thư mục bằng chứng**: [`test-evidence/thanh_toan_cong_no/TC-03/`](file:///c:/Users/Y.Thach/Desktop/paradiseHR/test-evidence/thanh_toan_cong_no/TC-03)
+* **Thư mục bằng chứng**: [`test-evidence/thanh_toan_cong_no/TC-03/`](file:///C:/Users/Y.Thach/Desktop/paradiseHR/test-evidence/thanh_toan_cong_no/TC-03)
 
 > [!CAUTION] 🚨 THÔNG TIN LỖI PHÁT HIỆN TỪ THỰC THI (DEFECT EVIDENCE - FACTS ONLY)
 >

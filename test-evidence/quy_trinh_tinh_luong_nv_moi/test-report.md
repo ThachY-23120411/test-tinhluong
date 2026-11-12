@@ -1,7 +1,7 @@
 # BÁO CÁO KIỂM THỬ TRANG: QUY_TRINH_TINH_LUONG_NV_MOI
 
-> Thời gian kiểm thử: **22:26:15 12/11/2026**
-> Tổng số kịch bản: **20** | ✅ LOGIC PASS: **19** | ❌ LOGIC FAIL: **1**
+> Thời gian kiểm thử: **00:26:18 13/11/2026**
+> Tổng số kịch bản: **20** | ✅ LOGIC PASS: **14** | ❌ LOGIC FAIL: **6**
 
 ## BẢNG ĐỐI CHIẾU TRẠNG THÁI TEST & LOGIC NGHIỆP VỤ
 
@@ -9,13 +9,23 @@
 | :--- | :--- | :---: | :---: | :--- |
 | **TC-01** | fix-4 | TC-01: Tạo mới hồ sơ nhân viên Nguyễn Văn Test (Role: cuong.vu) | ✅ PASS | ✅ PASS | Đạt yêu cầu logic nghiệp vụ mong đợi |
 | **TC-02** | fix-4 | TC-02: Cấp tài khoản đăng nhập ESS Portal test.nv (Role: cuong.vu) | ✅ PASS | ✅ PASS | Đạt yêu cầu logic nghiệp vụ mong đợi |
-| **TC-03** | fix-4 | TC-03: Thiết lập HĐLĐ và Mức lương 10,000,000 VNĐ (Role: cuong.vu) | ✅ PASS | ✅ PASS | Đạt yêu cầu logic nghiệp vụ mong đợi |
-| **TC-04** | fix-4 | TC-04: Đăng ký 1 Người phụ thuộc giảm trừ gia cảnh (Role: cuong.vu) | ✅ PASS | ✅ PASS | Đạt yêu cầu logic nghiệp vụ mong đợi |
-| **TC-05** | fix-4 | TC-05: Phân ca làm việc hành chính chuẩn cho NV 099 (Role: cuong.vu) | ✅ PASS | ✅ PASS | Đạt yêu cầu logic nghiệp vụ mong đợi |
-| **TC-06** | fix-5 | TC-06: Khảo sát hiện trạng 5 ngày công trên Bảng công chi tiết (Role: test.nv) | ✅ PASS | ✅ PASS | PASS - Khảo sát Baseline Before 5 ngày công Tháng 10/2026 của NV 099 trên Bảng công cá nhân (5 ngày công trong CSDL). |
-| **TC-07** | fix-5 | TC-07: Nộp và Hủy đơn ngày 14/10; Nộp 2 đơn bù công ngày 15/10 và 16/10/2026 (Role: test.nv) | ❌ FAIL | ❌ FAIL | Error: page.waitForTimeout: Target page, context or browser has been closed |
-| **TC-08** | fix-5 | TC-08: Nộp đơn Xin nghỉ phép năm AL hưởng nguyên lương ngày 24/10 (Role: test.nv) | ✅ PASS | ✅ PASS | PASS - Đơn Xin nghỉ phép năm AL ngày 24/10/2026 đã được nộp thành công và ghi nhận vào CSDL. |
-| **TC-09** | fix-5 | TC-09: Nộp đơn Xin tăng ca OT 2.0h ngày 20/10/2026 & Đăng xuất (Role: test.nv) | ✅ PASS | ✅ PASS | PASS - Đơn Xin tăng ca OT 2.0h ngày 20/10/2026 đã được nộp thành công và đăng xuất an toàn. Hoàn tất bàn giao cho fix-6! |
+| **TC-03** | fix-4 | TC-03: Thiết lập HĐLĐ và Mức lương 10,000,000 VNĐ (Role: cuong.vu) | ❌ FAIL | ❌ FAIL | Error: page.goto: Target page, context or browser has been closed
+Call log:
+[2m  - navigating to "https://paradisehrm.com/Tai3/", waiting until "domcontentloaded"[22m
+ |
+| **TC-04** | fix-4 | TC-04: Đăng ký 1 Người phụ thuộc giảm trừ gia cảnh (Role: cuong.vu) | ❌ FAIL | ❌ FAIL | Error: Command failed: powershell -NoProfile -Command -
+^C |
+| **TC-05** | fix-4 | TC-05: Phân ca làm việc hành chính chuẩn cho NV 099 (Role: cuong.vu) | ❌ FAIL | ❌ FAIL | Error: ❌ [Định vị động thất bại]: Đã quét toàn bộ khung danh sách nhưng không tìm thấy phần tử khớp [Chấm công]! |
+| **TC-06** | fix-5 | TC-06: Khảo sát hiện trạng 5 ngày công trên Bảng công chi tiết (Role: test.nv) | ✅ PASS | ✅ PASS | PASS - Khảo sát Baseline Before 5 ngày công Tháng 10/2026 của NV 099 trên Bảng công cá nhân (22 ngày công trong CSDL). |
+| **TC-07** | fix-5 | TC-07: Nộp và Hủy đơn ngày 14/10; Nộp 2 đơn bù công ngày 15/10 và 16/10/2026 (Role: test.nv) | ❌ FAIL | ❌ FAIL | Error: page.goto: net::ERR_NETWORK_CHANGED at https://paradisehrm.com/Tai3/
+Call log:
+[2m  - navigating to "https://paradisehrm.com/Tai3/", waiting until "domcontentloaded"[22m
+ |
+| **TC-08** | fix-5 | TC-08: Nộp đơn Xin nghỉ phép năm AL hưởng nguyên lương ngày 24/10 (Role: test.nv) | ❌ FAIL | ❌ FAIL | Error: locator.waitFor: Target page, context or browser has been closed
+Call log:
+[2m  - waiting for locator('#sp_ResignationLeave, form, #dynamic-pane-MnuWPT315').first() to be visible[22m
+ |
+| **TC-09** | fix-5 | TC-09: Nộp đơn Xin tăng ca OT 2.0h ngày 20/10/2026 & Đăng xuất (Role: test.nv) | ❌ FAIL | ❌ FAIL | Error: page.waitForTimeout: Target page, context or browser has been closed |
 | **TC-10** | fix-6 | TC-10: Quản lý Trí Nguyễn duyệt Cấp 1 (Nghỉ phép 24/10, Bù công 15/10 & 16/10, Xin hủy 14/10) và Đăng xuất (Role: tri.nguyen) | ✅ PASS | ✅ PASS | Đạt yêu cầu logic nghiệp vụ mong đợi |
 | **TC-11** | fix-6 | TC-11: Quản lý Trường Long duyệt Cấp 1 đơn Tăng ca OT 20/10 & kiểm tra tab Lịch sử (Role: LongKa) | ✅ PASS | ✅ PASS | Đạt yêu cầu logic nghiệp vụ mong đợi |
 | **TC-12** | fix-6 | TC-12: Quản lý Trường Long duyệt Cấp 2 (Nghỉ phép 24/10, Bù công 15/10 & 16/10, Xin hủy 14/10), xem Lịch sử và Đăng xuất (Role: LongKa) | ✅ PASS | ✅ PASS | Đạt yêu cầu logic nghiệp vụ mong đợi |
@@ -64,10 +74,32 @@
 
 ### TC-03: fix-4 | TC-03: Thiết lập HĐLĐ và Mức lương 10,000,000 VNĐ (Role: cuong.vu)
 
-* **Trạng thái thực thi Test (Kỹ thuật)**: ✅ PASS (Thời gian thực thi: `39.38s`)
-* **Trạng thái Logic Nghiệp vụ (Business Output)**: ✅ PASS
-* **Đánh giá tổng quát**: Đạt yêu cầu logic nghiệp vụ mong đợi
+* **Trạng thái thực thi Test (Kỹ thuật)**: ❌ FAIL (Thời gian thực thi: `16.11s`)
+* **Trạng thái Logic Nghiệp vụ (Business Output)**: ❌ FAIL
+* **Đánh giá tổng quát**: Error: page.goto: Target page, context or browser has been closed
+Call log:
+[2m  - navigating to "https://paradisehrm.com/Tai3/", waiting until "domcontentloaded"[22m
+
 * **Thư mục lưu trữ**: `test-evidence/quy_trinh_tinh_luong_nv_moi/TC-03/`
+
+> [!CAUTION] 🚨 THÔNG TIN LỖI PHÁT HIỆN TỪ THỰC THI (DEFECT EVIDENCE - FACTS ONLY)
+>
+> * **Vấn đề ghi nhận**: Error: page.goto: Target page, context or browser has been closed
+Call log:
+[2m  - navigating to "https://paradisehrm.com/Tai3/", waiting until "domcontentloaded"[22m
+
+> * **Kỳ vọng nghiệp vụ (Expected Output)**: Theo đặc tả chuẩn của hệ thống
+> * **Thực tế hệ thống (Actual Output)**: Thực tế phát sinh lỗi hoặc không đạt điều kiện kiểm tra
+>
+> 📌 **Lưu ý**: Kịch bản Test chỉ ghi nhận dữ liệu thực tế và sai khác. Phân tích nguyên nhân gốc (Root Cause) và giải pháp khắc phục sẽ do AI Agent điều tra và brainstorm trực tiếp từ Database & Source Code khi người dùng yêu cầu.
+
+> [!WARNING] Lỗi Kỹ Thuật (System/Playwright Error):
+```
+Error: page.goto: Target page, context or browser has been closed
+Call log:
+[2m  - navigating to "https://paradisehrm.com/Tai3/", waiting until "domcontentloaded"[22m
+
+```
 
 #### 📸 Bằng chứng trực quan từng bước (Step-by-Step Evidence):
 
@@ -80,10 +112,26 @@
 
 ### TC-04: fix-4 | TC-04: Đăng ký 1 Người phụ thuộc giảm trừ gia cảnh (Role: cuong.vu)
 
-* **Trạng thái thực thi Test (Kỹ thuật)**: ✅ PASS (Thời gian thực thi: `70.18s`)
-* **Trạng thái Logic Nghiệp vụ (Business Output)**: ✅ PASS
-* **Đánh giá tổng quát**: Đạt yêu cầu logic nghiệp vụ mong đợi
+* **Trạng thái thực thi Test (Kỹ thuật)**: ❌ FAIL (Thời gian thực thi: `16.65s`)
+* **Trạng thái Logic Nghiệp vụ (Business Output)**: ❌ FAIL
+* **Đánh giá tổng quát**: Error: Command failed: powershell -NoProfile -Command -
+^C
 * **Thư mục lưu trữ**: `test-evidence/quy_trinh_tinh_luong_nv_moi/TC-04/`
+
+> [!CAUTION] 🚨 THÔNG TIN LỖI PHÁT HIỆN TỪ THỰC THI (DEFECT EVIDENCE - FACTS ONLY)
+>
+> * **Vấn đề ghi nhận**: Error: Command failed: powershell -NoProfile -Command -
+^C
+> * **Kỳ vọng nghiệp vụ (Expected Output)**: Theo đặc tả chuẩn của hệ thống
+> * **Thực tế hệ thống (Actual Output)**: Thực tế phát sinh lỗi hoặc không đạt điều kiện kiểm tra
+>
+> 📌 **Lưu ý**: Kịch bản Test chỉ ghi nhận dữ liệu thực tế và sai khác. Phân tích nguyên nhân gốc (Root Cause) và giải pháp khắc phục sẽ do AI Agent điều tra và brainstorm trực tiếp từ Database & Source Code khi người dùng yêu cầu.
+
+> [!WARNING] Lỗi Kỹ Thuật (System/Playwright Error):
+```
+Error: Command failed: powershell -NoProfile -Command -
+^C
+```
 
 #### 📸 Bằng chứng trực quan từng bước (Step-by-Step Evidence):
 
@@ -96,10 +144,23 @@
 
 ### TC-05: fix-4 | TC-05: Phân ca làm việc hành chính chuẩn cho NV 099 (Role: cuong.vu)
 
-* **Trạng thái thực thi Test (Kỹ thuật)**: ✅ PASS (Thời gian thực thi: `30.98s`)
-* **Trạng thái Logic Nghiệp vụ (Business Output)**: ✅ PASS
-* **Đánh giá tổng quát**: Đạt yêu cầu logic nghiệp vụ mong đợi
+* **Trạng thái thực thi Test (Kỹ thuật)**: ❌ FAIL (Thời gian thực thi: `42.80s`)
+* **Trạng thái Logic Nghiệp vụ (Business Output)**: ❌ FAIL
+* **Đánh giá tổng quát**: Error: ❌ [Định vị động thất bại]: Đã quét toàn bộ khung danh sách nhưng không tìm thấy phần tử khớp [Chấm công]!
 * **Thư mục lưu trữ**: `test-evidence/quy_trinh_tinh_luong_nv_moi/TC-05/`
+
+> [!CAUTION] 🚨 THÔNG TIN LỖI PHÁT HIỆN TỪ THỰC THI (DEFECT EVIDENCE - FACTS ONLY)
+>
+> * **Vấn đề ghi nhận**: Error: ❌ [Định vị động thất bại]: Đã quét toàn bộ khung danh sách nhưng không tìm thấy phần tử khớp [Chấm công]!
+> * **Kỳ vọng nghiệp vụ (Expected Output)**: Theo đặc tả chuẩn của hệ thống
+> * **Thực tế hệ thống (Actual Output)**: Thực tế phát sinh lỗi hoặc không đạt điều kiện kiểm tra
+>
+> 📌 **Lưu ý**: Kịch bản Test chỉ ghi nhận dữ liệu thực tế và sai khác. Phân tích nguyên nhân gốc (Root Cause) và giải pháp khắc phục sẽ do AI Agent điều tra và brainstorm trực tiếp từ Database & Source Code khi người dùng yêu cầu.
+
+> [!WARNING] Lỗi Kỹ Thuật (System/Playwright Error):
+```
+Error: ❌ [Định vị động thất bại]: Đã quét toàn bộ khung danh sách nhưng không tìm thấy phần tử khớp [Chấm công]!
+```
 
 #### 📸 Bằng chứng trực quan từng bước (Step-by-Step Evidence):
 
@@ -112,9 +173,9 @@
 
 ### TC-06: fix-5 | TC-06: Khảo sát hiện trạng 5 ngày công trên Bảng công chi tiết (Role: test.nv)
 
-* **Trạng thái thực thi Test (Kỹ thuật)**: ✅ PASS (Thời gian thực thi: `28.93s`)
+* **Trạng thái thực thi Test (Kỹ thuật)**: ✅ PASS (Thời gian thực thi: `41.12s`)
 * **Trạng thái Logic Nghiệp vụ (Business Output)**: ✅ PASS
-* **Đánh giá tổng quát**: PASS - Khảo sát Baseline Before 5 ngày công Tháng 10/2026 của NV 099 trên Bảng công cá nhân (5 ngày công trong CSDL).
+* **Đánh giá tổng quát**: PASS - Khảo sát Baseline Before 5 ngày công Tháng 10/2026 của NV 099 trên Bảng công cá nhân (22 ngày công trong CSDL).
 * **Thư mục lưu trữ**: `test-evidence/quy_trinh_tinh_luong_nv_moi/TC-06/`
 
 #### 📸 Bằng chứng trực quan từng bước (Step-by-Step Evidence):
@@ -135,10 +196,86 @@
 
 ### TC-07: fix-5 | TC-07: Nộp và Hủy đơn ngày 14/10; Nộp 2 đơn bù công ngày 15/10 và 16/10/2026 (Role: test.nv)
 
-* **Trạng thái thực thi Test (Kỹ thuật)**: ❌ FAIL (Thời gian thực thi: `3.87s`)
+* **Trạng thái thực thi Test (Kỹ thuật)**: ❌ FAIL (Thời gian thực thi: `13.63s`)
+* **Trạng thái Logic Nghiệp vụ (Business Output)**: ❌ FAIL
+* **Đánh giá tổng quát**: Error: page.goto: net::ERR_NETWORK_CHANGED at https://paradisehrm.com/Tai3/
+Call log:
+[2m  - navigating to "https://paradisehrm.com/Tai3/", waiting until "domcontentloaded"[22m
+
+* **Thư mục lưu trữ**: `test-evidence/quy_trinh_tinh_luong_nv_moi/TC-07/`
+
+> [!CAUTION] 🚨 THÔNG TIN LỖI PHÁT HIỆN TỪ THỰC THI (DEFECT EVIDENCE - FACTS ONLY)
+>
+> * **Vấn đề ghi nhận**: Error: page.goto: net::ERR_NETWORK_CHANGED at https://paradisehrm.com/Tai3/
+Call log:
+[2m  - navigating to "https://paradisehrm.com/Tai3/", waiting until "domcontentloaded"[22m
+
+> * **Kỳ vọng nghiệp vụ (Expected Output)**: Theo đặc tả chuẩn của hệ thống
+> * **Thực tế hệ thống (Actual Output)**: Thực tế phát sinh lỗi hoặc không đạt điều kiện kiểm tra
+>
+> 📌 **Lưu ý**: Kịch bản Test chỉ ghi nhận dữ liệu thực tế và sai khác. Phân tích nguyên nhân gốc (Root Cause) và giải pháp khắc phục sẽ do AI Agent điều tra và brainstorm trực tiếp từ Database & Source Code khi người dùng yêu cầu.
+
+> [!WARNING] Lỗi Kỹ Thuật (System/Playwright Error):
+```
+Error: page.goto: net::ERR_NETWORK_CHANGED at https://paradisehrm.com/Tai3/
+Call log:
+[2m  - navigating to "https://paradisehrm.com/Tai3/", waiting until "domcontentloaded"[22m
+
+```
+
+#### 📸 Bằng chứng trực quan từng bước (Step-by-Step Evidence):
+
+*(Không có ảnh chụp màn hình)*
+
+#### 🎥 Video & Dấu vết kiểm thử (Video & Trace):
+- **Video phiên chạy thực tế**: [video.webm](TC-07/videos/video.webm)
+
+---
+
+### TC-08: fix-5 | TC-08: Nộp đơn Xin nghỉ phép năm AL hưởng nguyên lương ngày 24/10 (Role: test.nv)
+
+* **Trạng thái thực thi Test (Kỹ thuật)**: ❌ FAIL (Thời gian thực thi: `41.41s`)
+* **Trạng thái Logic Nghiệp vụ (Business Output)**: ❌ FAIL
+* **Đánh giá tổng quát**: Error: locator.waitFor: Target page, context or browser has been closed
+Call log:
+[2m  - waiting for locator('#sp_ResignationLeave, form, #dynamic-pane-MnuWPT315').first() to be visible[22m
+
+* **Thư mục lưu trữ**: `test-evidence/quy_trinh_tinh_luong_nv_moi/TC-08/`
+
+> [!CAUTION] 🚨 THÔNG TIN LỖI PHÁT HIỆN TỪ THỰC THI (DEFECT EVIDENCE - FACTS ONLY)
+>
+> * **Vấn đề ghi nhận**: Error: locator.waitFor: Target page, context or browser has been closed
+Call log:
+[2m  - waiting for locator('#sp_ResignationLeave, form, #dynamic-pane-MnuWPT315').first() to be visible[22m
+
+> * **Kỳ vọng nghiệp vụ (Expected Output)**: Theo đặc tả chuẩn của hệ thống
+> * **Thực tế hệ thống (Actual Output)**: Thực tế phát sinh lỗi hoặc không đạt điều kiện kiểm tra
+>
+> 📌 **Lưu ý**: Kịch bản Test chỉ ghi nhận dữ liệu thực tế và sai khác. Phân tích nguyên nhân gốc (Root Cause) và giải pháp khắc phục sẽ do AI Agent điều tra và brainstorm trực tiếp từ Database & Source Code khi người dùng yêu cầu.
+
+> [!WARNING] Lỗi Kỹ Thuật (System/Playwright Error):
+```
+Error: locator.waitFor: Target page, context or browser has been closed
+Call log:
+[2m  - waiting for locator('#sp_ResignationLeave, form, #dynamic-pane-MnuWPT315').first() to be visible[22m
+
+```
+
+#### 📸 Bằng chứng trực quan từng bước (Step-by-Step Evidence):
+
+*(Không có ảnh chụp màn hình)*
+
+#### 🎥 Video & Dấu vết kiểm thử (Video & Trace):
+- **Video phiên chạy thực tế**: [video.webm](TC-08/videos/video.webm)
+
+---
+
+### TC-09: fix-5 | TC-09: Nộp đơn Xin tăng ca OT 2.0h ngày 20/10/2026 & Đăng xuất (Role: test.nv)
+
+* **Trạng thái thực thi Test (Kỹ thuật)**: ❌ FAIL (Thời gian thực thi: `26.16s`)
 * **Trạng thái Logic Nghiệp vụ (Business Output)**: ❌ FAIL
 * **Đánh giá tổng quát**: Error: page.waitForTimeout: Target page, context or browser has been closed
-* **Thư mục lưu trữ**: `test-evidence/quy_trinh_tinh_luong_nv_moi/TC-07/`
+* **Thư mục lưu trữ**: `test-evidence/quy_trinh_tinh_luong_nv_moi/TC-09/`
 
 > [!CAUTION] 🚨 THÔNG TIN LỖI PHÁT HIỆN TỪ THỰC THI (DEFECT EVIDENCE - FACTS ONLY)
 >
@@ -156,61 +293,6 @@ Error: page.waitForTimeout: Target page, context or browser has been closed
 #### 📸 Bằng chứng trực quan từng bước (Step-by-Step Evidence):
 
 *(Không có ảnh chụp màn hình)*
-
-#### 🎥 Video & Dấu vết kiểm thử (Video & Trace):
-- **Video phiên chạy thực tế**: [video.webm](TC-07/videos/video.webm)
-
----
-
-### TC-08: fix-5 | TC-08: Nộp đơn Xin nghỉ phép năm AL hưởng nguyên lương ngày 24/10 (Role: test.nv)
-
-* **Trạng thái thực thi Test (Kỹ thuật)**: ✅ PASS (Thời gian thực thi: `67.91s`)
-* **Trạng thái Logic Nghiệp vụ (Business Output)**: ✅ PASS
-* **Đánh giá tổng quát**: PASS - Đơn Xin nghỉ phép năm AL ngày 24/10/2026 đã được nộp thành công và ghi nhận vào CSDL.
-* **Thư mục lưu trữ**: `test-evidence/quy_trinh_tinh_luong_nv_moi/TC-08/`
-
-#### 📸 Bằng chứng trực quan từng bước (Step-by-Step Evidence):
-
-##### 🔹 Bước 1: Mo man hinh Xin nghi phep MnuWPT315
-![Bước 1: Mo man hinh Xin nghi phep MnuWPT315](TC-08/screenshots/TC-08-step01-mo-man-hinh-xin-nghi-phep-mnuwpt315.png)
-
-##### 🔹 Bước 2: Dien form Xin nghi phep nam AL ngay 24-10
-![Bước 2: Dien form Xin nghi phep nam AL ngay 24-10](TC-08/screenshots/TC-08-step02-dien-form-xin-nghi-phep-nam-al-ngay-24-10.png)
-
-##### 🔹 Bước 3: Bam nut Gui don va xac nhan popup
-![Bước 3: Bam nut Gui don va xac nhan popup](TC-08/screenshots/TC-08-step03-bam-nut-gui-don-va-xac-nhan-popup.png)
-
-##### 🔹 Bước 4: Tab Lich su don Nghi phep ngay 24-10
-![Bước 4: Tab Lich su don Nghi phep ngay 24-10](TC-08/screenshots/TC-08-step04-tab-lich-su-don-nghi-phep-ngay-24-10.png)
-
-#### 🎥 Video & Dấu vết kiểm thử (Video & Trace):
-- **Video phiên chạy thực tế**: [video.webm](TC-08/videos/video.webm)
-
----
-
-### TC-09: fix-5 | TC-09: Nộp đơn Xin tăng ca OT 2.0h ngày 20/10/2026 & Đăng xuất (Role: test.nv)
-
-* **Trạng thái thực thi Test (Kỹ thuật)**: ✅ PASS (Thời gian thực thi: `65.23s`)
-* **Trạng thái Logic Nghiệp vụ (Business Output)**: ✅ PASS
-* **Đánh giá tổng quát**: PASS - Đơn Xin tăng ca OT 2.0h ngày 20/10/2026 đã được nộp thành công và đăng xuất an toàn. Hoàn tất bàn giao cho fix-6!
-* **Thư mục lưu trữ**: `test-evidence/quy_trinh_tinh_luong_nv_moi/TC-09/`
-
-#### 📸 Bằng chứng trực quan từng bước (Step-by-Step Evidence):
-
-##### 🔹 Bước 1: Mo man hinh Xin tang ca MnuWPT316
-![Bước 1: Mo man hinh Xin tang ca MnuWPT316](TC-09/screenshots/TC-09-step01-mo-man-hinh-xin-tang-ca-mnuwpt316.png)
-
-##### 🔹 Bước 2: Dien form Xin tang ca OT 2h ngay 20-10
-![Bước 2: Dien form Xin tang ca OT 2h ngay 20-10](TC-09/screenshots/TC-09-step02-dien-form-xin-tang-ca-ot-2h-ngay-20-10.png)
-
-##### 🔹 Bước 3: Bam nut Gui don tang ca va xac nhan popup
-![Bước 3: Bam nut Gui don tang ca va xac nhan popup](TC-09/screenshots/TC-09-step03-bam-nut-gui-don-tang-ca-va-xac-nhan-popup.png)
-
-##### 🔹 Bước 4: Tab Lich su don Tang ca OT ngay 20-10
-![Bước 4: Tab Lich su don Tang ca OT ngay 20-10](TC-09/screenshots/TC-09-step04-tab-lich-su-don-tang-ca-ot-ngay-20-10.png)
-
-##### 🔹 Bước 5: Dang xuat hoan tat chu trinh nop don ESS
-![Bước 5: Dang xuat hoan tat chu trinh nop don ESS](TC-09/screenshots/TC-09-step05-dang-xuat-hoan-tat-chu-trinh-nop-don-ess.png)
 
 #### 🎥 Video & Dấu vết kiểm thử (Video & Trace):
 - **Video phiên chạy thực tế**: [video.webm](TC-09/videos/video.webm)

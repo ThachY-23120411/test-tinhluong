@@ -4,20 +4,20 @@
   "title": "fix-5 | TC-07: Nộp và Hủy đơn ngày 14/10; Nộp 2 đơn bù công ngày 15/10 và 16/10/2026 (Role: test.nv)",
   "testStatus": "FAILED",
   "businessStatus": "FAILED",
-  "businessNotes": "Error: page.waitForTimeout: Target page, context or browser has been closed",
+  "businessNotes": "Error: page.goto: net::ERR_NETWORK_CHANGED at https://paradisehrm.com/Tai3/\nCall log:\n\u001b[2m  - navigating to \"https://paradisehrm.com/Tai3/\", waiting until \"domcontentloaded\"\u001b[22m\n",
   "defectEvidence": {
-    "issue": "Error: page.waitForTimeout: Target page, context or browser has been closed",
+    "issue": "Error: page.goto: net::ERR_NETWORK_CHANGED at https://paradisehrm.com/Tai3/\nCall log:\n\u001b[2m  - navigating to \"https://paradisehrm.com/Tai3/\", waiting until \"domcontentloaded\"\u001b[22m\n",
     "expected": "Theo đặc tả chuẩn của hệ thống",
     "actual": "Thực tế phát sinh lỗi hoặc không đạt điều kiện kiểm tra"
   },
   "failureAnalysis": {
-    "issue": "Error: page.waitForTimeout: Target page, context or browser has been closed",
+    "issue": "Error: page.goto: net::ERR_NETWORK_CHANGED at https://paradisehrm.com/Tai3/\nCall log:\n\u001b[2m  - navigating to \"https://paradisehrm.com/Tai3/\", waiting until \"domcontentloaded\"\u001b[22m\n",
     "expected": "Theo đặc tả chuẩn của hệ thống",
     "actual": "Thực tế phát sinh lỗi hoặc không đạt điều kiện kiểm tra"
   },
   "status": "FAILED",
-  "duration": "3.87s",
-  "errors": "Error: page.waitForTimeout: Target page, context or browser has been closed",
+  "duration": "13.63s",
+  "errors": "Error: page.goto: net::ERR_NETWORK_CHANGED at https://paradisehrm.com/Tai3/\nCall log:\n\u001b[2m  - navigating to \"https://paradisehrm.com/Tai3/\", waiting until \"domcontentloaded\"\u001b[22m\n",
   "stepScreenshots": [],
   "attachments": {
     "screenshots": [],
@@ -26,5 +26,5 @@
     ],
     "traces": []
   },
-  "timestamp": "2026-11-12T10:00:14.751Z"
+  "timestamp": "2026-11-12T16:43:38.364Z"
 }

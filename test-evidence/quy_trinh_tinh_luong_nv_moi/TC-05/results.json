@@ -2,14 +2,22 @@
   "tcId": "TC-05",
   "pageName": "quy_trinh_tinh_luong_nv_moi",
   "title": "fix-4 | TC-05: Phân ca làm việc hành chính chuẩn cho NV 099 (Role: cuong.vu)",
-  "testStatus": "PASSED",
-  "businessStatus": "PASSED",
-  "businessNotes": "Đạt yêu cầu logic nghiệp vụ mong đợi",
-  "defectEvidence": null,
-  "failureAnalysis": {},
-  "status": "PASSED",
-  "duration": "30.98s",
-  "errors": "",
+  "testStatus": "FAILED",
+  "businessStatus": "FAILED",
+  "businessNotes": "Error: ❌ [Định vị động thất bại]: Đã quét toàn bộ khung danh sách nhưng không tìm thấy phần tử khớp [Chấm công]!",
+  "defectEvidence": {
+    "issue": "Error: ❌ [Định vị động thất bại]: Đã quét toàn bộ khung danh sách nhưng không tìm thấy phần tử khớp [Chấm công]!",
+    "expected": "Theo đặc tả chuẩn của hệ thống",
+    "actual": "Thực tế phát sinh lỗi hoặc không đạt điều kiện kiểm tra"
+  },
+  "failureAnalysis": {
+    "issue": "Error: ❌ [Định vị động thất bại]: Đã quét toàn bộ khung danh sách nhưng không tìm thấy phần tử khớp [Chấm công]!",
+    "expected": "Theo đặc tả chuẩn của hệ thống",
+    "actual": "Thực tế phát sinh lỗi hoặc không đạt điều kiện kiểm tra"
+  },
+  "status": "FAILED",
+  "duration": "42.80s",
+  "errors": "Error: ❌ [Định vị động thất bại]: Đã quét toàn bộ khung danh sách nhưng không tìm thấy phần tử khớp [Chấm công]!",
   "stepScreenshots": [],
   "attachments": {
     "screenshots": [],
@@ -18,5 +26,5 @@
     ],
     "traces": []
   },
-  "timestamp": "2026-11-11T06:06:43.929Z"
+  "timestamp": "2026-11-12T16:42:42.950Z"
 }

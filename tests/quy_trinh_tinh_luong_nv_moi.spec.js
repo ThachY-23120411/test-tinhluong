@@ -1410,16 +1410,16 @@ async function openMenuFix5(page, menuId, menuName) {
     await page.waitForTimeout(800);
     const searchInput = page.locator('#launchpad input:visible, input[placeholder*="Search"]:visible, .launchpad-search input:visible').first();
     if (await searchInput.isVisible({ timeout: 2000 }).catch(() => false)) {
-      await typeHumanLike(page, searchInput, menuName.slice(0, 4));
+      await typeHumanLike(page, searchInput, menuName);
       await page.waitForTimeout(600);
       const launchItem = page.locator(`
+        .wrapper-launchpad .child-launchpad.${menuId}:visible,
         .wrapper-launchpad .${menuId}:visible, 
         .wrapper-launchpad [onclick*="${menuId}"]:visible, 
-        .wrapper-launchpad div:has-text("${menuName}"):visible,
-        .wrapper-launchpad i:visible
+        .wrapper-launchpad .child-launchpad:has-text("${menuName}"):visible
       `).first();
-      if (await launchItem.isVisible({ timeout: 2500 }).catch(() => false)) {
-        await moveAndClick(page, launchItem, { steps: 6, pause: 200 });
+      if (await launchItem.isVisible({ timeout: 3500 }).catch(() => false)) {
+        await moveAndClick(page, launchItem, { steps: 8, pause: 250 });
         await page.waitForTimeout(randomBetween(1200, 1800));
         return;
       }
@@ -1473,9 +1473,37 @@ test('fix-5 | TC-06: Khảo sát hiện trạng 5 ngày công trên Bảng công
   await page.waitForTimeout(randomBetween(600, 1000));
   await captureStepFix5(page, testInfo, 'TC-06', 1, 'Dang nhap tai khoan nhan vien moi test nv');
 
-  // 2. Mở menu Chấm công cá nhân (MnuWPT010)
-  await openMenuFix5(page, 'MnuWPT010', 'Chấm công cá nhân');
-  await page.waitForTimeout(randomBetween(1200, 1800));
+  // 2. Mở menu Chấm công cá nhân qua menu Cửa sổ Windows (Launchpad) khớp 100% Recording JSON:
+  // - Di chuột Neon nhấp biểu tượng Cửa sổ Windows trên thanh Dock
+  // - Gõ tìm kiếm "Chấm công cá nhân" vào ô Search của Launchpad
+  // - Di chuột Neon lượn tới đúng icon "Chấm công cá nhân" (.child-launchpad.MnuWPT010) và CLICK!
+  console.log('👉 [fix-5 | TC-06]: Di chuột Neon nhấp biểu tượng Cửa sổ Windows...');
+  const winBtn = page.locator('#ID-navbar-home button:visible, button.MnuHRS238:visible, button.open-lunchpad:visible, button:has(.bi-windows):visible').first();
+  if (await winBtn.isVisible({ timeout: 3000 }).catch(() => false)) {
+    await moveAndClick(page, winBtn, { steps: 8, pause: 250 });
+    await page.waitForTimeout(800);
+
+    const searchInput = page.locator('#launchpad input:visible, input[placeholder*="Search"]:visible').first();
+    if (await searchInput.isVisible({ timeout: 3000 }).catch(() => false)) {
+      console.log('👉 [fix-5 | TC-06]: Gõ tìm kiếm "Chấm công cá nhân" trong ô tìm kiếm Launchpad...');
+      await moveAndClick(page, searchInput, { pause: 200 });
+      await typeHumanLike(page, searchInput, 'Chấm công cá nhân');
+      await page.waitForTimeout(800);
+
+      const launchItem = page.locator('.wrapper-launchpad .child-launchpad.MnuWPT010:visible, .child-launchpad:has-text("Chấm công cá nhân"):visible, [data-keywords*="Chấm công cá nhân"]:visible').first();
+      if (await launchItem.isVisible({ timeout: 5000 }).catch(() => false)) {
+        console.log('👉 [fix-5 | TC-06]: Di chuột Neon tới đúng icon "Chấm công cá nhân" trên menu Cửa sổ Windows và CLICK...');
+        await moveAndClick(page, launchItem, { steps: 10, pause: 350 });
+        await page.waitForTimeout(randomBetween(1200, 1800));
+      } else {
+        await openMenuFix5(page, 'MnuWPT010', 'Chấm công cá nhân');
+      }
+    } else {
+      await openMenuFix5(page, 'MnuWPT010', 'Chấm công cá nhân');
+    }
+  } else {
+    await openMenuFix5(page, 'MnuWPT010', 'Chấm công cá nhân');
+  }
 
   // Chờ bảng lịch nạp
   const calendarArea = page.locator('#ets-calendar, #sp_EmployeeMonthlyAttendance, .calendar-view, #appapp').first();
