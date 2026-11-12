@@ -29,3 +29,7 @@ Thumbs.db
 # DevTools traces & typo trace folder
 Trace-*.json
 test-envidence/**/traces/
+
+# DevTools traces & typo trace folder
+Trace-*.json
+test-envidence/**/traces/
