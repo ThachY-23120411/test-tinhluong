@@ -1,6 +1,6 @@
 # BÁO CÁO KIỂM THỬ TRANG: QUY_TRINH_TINH_LUONG_NV_MOI
 
-> Thời gian kiểm thử: **19:53:07 12/11/2026**
+> Thời gian kiểm thử: **21:31:18 12/11/2026**
 > Tổng số kịch bản: **20** | ✅ LOGIC PASS: **19** | ❌ LOGIC FAIL: **1**
 
 ## BẢNG ĐỐI CHIẾU TRẠNG THÁI TEST & LOGIC NGHIỆP VỤ
@@ -24,9 +24,9 @@
 | **TC-15** | fix-7 | TC-15: Mô phỏng thao tác nạp Tạm ứng lương 2,000,000 VNĐ & Khóa phiếu (MnuPRL070) | ✅ PASS | ✅ PASS | Đạt yêu cầu logic nghiệp vụ mong đợi |
 | **TC-16** | fix-7 | TC-16: Mô phỏng thao tác chạy Tính tiền lương Tháng 10/2026 (MnuPRL040) | ✅ PASS | ✅ PASS | Đạt yêu cầu logic nghiệp vụ mong đợi |
 | **TC-17** | fix-7 | TC-17: Mô phỏng thao tác Khóa chấm công (MnuTAD125), Khóa lương (MnuPRL080) & Đăng xuất | ✅ PASS | ✅ PASS | Đạt yêu cầu logic nghiệp vụ mong đợi |
-| **TC-18** | fix-8 | TC-18: Replay Kế toán mở Danh sách trả lương, xem Bảng lương tổng hợp, nhảy Phiếu lương & Đăng xuất (Role: Chien.nguyen) | ✅ PASS | ✅ PASS | Đạt yêu cầu logic nghiệp vụ mong đợi |
-| **TC-19** | fix-8 | TC-19: Replay Nhân viên test.nv đăng nhập, mở Phiếu lương qua Launchpad & cuộn quan sát (Role: test.nv) | ✅ PASS | ✅ PASS | Đạt yêu cầu logic nghiệp vụ mong đợi |
-| **TC-20** | fix-8 | TC-20: Replay Nhân viên test.nv mở Tab Lịch sử, bấm Xem & mở/đóng 3 Modal chi tiết (Role: test.nv) | ✅ PASS | ✅ PASS | Đạt yêu cầu logic nghiệp vụ mong đợi |
+| **TC-18** | fix-8 | TC-18: Replay Kế toán mở Danh sách trả lương, xem Bảng lương tổng hợp (trượt ngang NV 099), nhảy Phiếu lương & Đăng xuất (Role: Chien.nguyen) | ✅ PASS | ✅ PASS | Đạt yêu cầu logic nghiệp vụ mong đợi |
+| **TC-19** | fix-8 | TC-19: Replay Nhân viên test.nv mở Phiếu lương, cuộn từng mục & khoanh vùng pause 5s (Role: test.nv) | ✅ PASS | ✅ PASS | Đạt yêu cầu logic nghiệp vụ mong đợi |
+| **TC-20** | fix-8 | TC-20: Replay Nhân viên test.nv mở Tab Lịch sử, bấm Xem & mở/khoanh vùng 5s 3 Modal chi tiết (Role: test.nv) | ✅ PASS | ✅ PASS | Đạt yêu cầu logic nghiệp vụ mong đợi |
 
 ---
 
@@ -431,9 +431,9 @@ Error: page.waitForTimeout: Target page, context or browser has been closed
 
 ---
 
-### TC-18: fix-8 | TC-18: Replay Kế toán mở Danh sách trả lương, xem Bảng lương tổng hợp, nhảy Phiếu lương & Đăng xuất (Role: Chien.nguyen)
+### TC-18: fix-8 | TC-18: Replay Kế toán mở Danh sách trả lương, xem Bảng lương tổng hợp (trượt ngang NV 099), nhảy Phiếu lương & Đăng xuất (Role: Chien.nguyen)
 
-* **Trạng thái thực thi Test (Kỹ thuật)**: ✅ PASS (Thời gian thực thi: `80.48s`)
+* **Trạng thái thực thi Test (Kỹ thuật)**: ✅ PASS (Thời gian thực thi: `106.28s`)
 * **Trạng thái Logic Nghiệp vụ (Business Output)**: ✅ PASS
 * **Đánh giá tổng quát**: Đạt yêu cầu logic nghiệp vụ mong đợi
 * **Thư mục lưu trữ**: `test-evidence/quy_trinh_tinh_luong_nv_moi/TC-18/`
@@ -449,23 +449,32 @@ Error: page.waitForTimeout: Target page, context or browser has been closed
 ##### 🔹 Bước 3: Chon ky luong Thang 10
 ![Bước 3: Chon ky luong Thang 10](TC-18/screenshots/TC-18-step03-chon-ky-luong-thang-10.png)
 
-##### 🔹 Bước 4: Xem Bang luong tong hop va cuon toi dong nhan vien 099
-![Bước 4: Xem Bang luong tong hop va cuon toi dong nhan vien 099](TC-18/screenshots/TC-18-step04-xem-bang-luong-tong-hop-va-cuon-toi-dong-nhan-vien-099.png)
+##### 🔹 Bước 4: Bang luong tong hop - Khoanh vung NV 099 (Cot trai)
+![Bước 4: Bang luong tong hop - Khoanh vung NV 099 (Cot trai)](TC-18/screenshots/TC-18-step04-bang-luong-tong-hop-khoanh-vung-nv-099-cot-trai.png)
 
-##### 🔹 Bước 5: Xem phieu luong va chuyen toi trang cuoi (trang 82)
-![Bước 5: Xem phieu luong va chuyen toi trang cuoi (trang 82)](TC-18/screenshots/TC-18-step05-xem-phieu-luong-va-chuyen-toi-trang-cuoi-trang-82.png)
+##### 🔹 Bước 5: Bang luong tong hop - Truot ngang giua bang NV 099
+![Bước 5: Bang luong tong hop - Truot ngang giua bang NV 099](TC-18/screenshots/TC-18-step05-bang-luong-tong-hop-truot-ngang-giua-bang-nv-099.png)
 
-##### 🔹 Bước 6: Dang xuat khoi tai khoan Chien nguyen thanh cong
-![Bước 6: Dang xuat khoi tai khoan Chien nguyen thanh cong](TC-18/screenshots/TC-18-step06-dang-xuat-khoi-tai-khoan-chien-nguyen-thanh-cong.png)
+##### 🔹 Bước 6: Bang luong tong hop - Truot ngang cuoi phai NV 099
+![Bước 6: Bang luong tong hop - Truot ngang cuoi phai NV 099](TC-18/screenshots/TC-18-step06-bang-luong-tong-hop-truot-ngang-cuoi-phai-nv-099.png)
+
+##### 🔹 Bước 7: Phieu luong trang 82 - Khoanh vung thong tin NV 099
+![Bước 7: Phieu luong trang 82 - Khoanh vung thong tin NV 099](TC-18/screenshots/TC-18-step07-phieu-luong-trang-82-khoanh-vung-thong-tin-nv-099.png)
+
+##### 🔹 Bước 8: Phieu luong trang 82 - Khoanh vung Thuc lanh NV 099
+![Bước 8: Phieu luong trang 82 - Khoanh vung Thuc lanh NV 099](TC-18/screenshots/TC-18-step08-phieu-luong-trang-82-khoanh-vung-thuc-lanh-nv-099.png)
+
+##### 🔹 Bước 9: Dang xuat khoi tai khoan Chien nguyen thanh cong
+![Bước 9: Dang xuat khoi tai khoan Chien nguyen thanh cong](TC-18/screenshots/TC-18-step09-dang-xuat-khoi-tai-khoan-chien-nguyen-thanh-cong.png)
 
 #### 🎥 Video & Dấu vết kiểm thử (Video & Trace):
 - **Video phiên chạy thực tế**: [video.webm](TC-18/videos/video.webm)
 
 ---
 
-### TC-19: fix-8 | TC-19: Replay Nhân viên test.nv đăng nhập, mở Phiếu lương qua Launchpad & cuộn quan sát (Role: test.nv)
+### TC-19: fix-8 | TC-19: Replay Nhân viên test.nv mở Phiếu lương, cuộn từng mục & khoanh vùng pause 5s (Role: test.nv)
 
-* **Trạng thái thực thi Test (Kỹ thuật)**: ✅ PASS (Thời gian thực thi: `31.00s`)
+* **Trạng thái thực thi Test (Kỹ thuật)**: ✅ PASS (Thời gian thực thi: `65.62s`)
 * **Trạng thái Logic Nghiệp vụ (Business Output)**: ✅ PASS
 * **Đánh giá tổng quát**: Đạt yêu cầu logic nghiệp vụ mong đợi
 * **Thư mục lưu trữ**: `test-evidence/quy_trinh_tinh_luong_nv_moi/TC-19/`
@@ -478,17 +487,29 @@ Error: page.waitForTimeout: Target page, context or browser has been closed
 ##### 🔹 Bước 2: Mo man hinh Phieu luong MnuPRL445 qua Launchpad
 ![Bước 2: Mo man hinh Phieu luong MnuPRL445 qua Launchpad](TC-19/screenshots/TC-19-step02-mo-man-hinh-phieu-luong-mnuprl445-qua-launchpad.png)
 
-##### 🔹 Bước 3: Cuon muot quan sat phan Luong thuc lanh tren Phieu luong
-![Bước 3: Cuon muot quan sat phan Luong thuc lanh tren Phieu luong](TC-19/screenshots/TC-19-step03-cuon-muot-quan-sat-phan-luong-thuc-lanh-tren-phieu-luong.png)
+##### 🔹 Bước 3: Khoanh vung 5s Thong tin nhan vien 099
+![Bước 3: Khoanh vung 5s Thong tin nhan vien 099](TC-19/screenshots/TC-19-step03-khoanh-vung-5s-thong-tin-nhan-vien-099.png)
+
+##### 🔹 Bước 4: Scroll + Khoanh vung 5s Muc I Thong tin luong
+![Bước 4: Scroll + Khoanh vung 5s Muc I Thong tin luong](TC-19/screenshots/TC-19-step04-scroll-khoanh-vung-5s-muc-i-thong-tin-luong.png)
+
+##### 🔹 Bước 5: Scroll + Khoanh vung 5s Thu nhap khac va Tong thu nhap
+![Bước 5: Scroll + Khoanh vung 5s Thu nhap khac va Tong thu nhap](TC-19/screenshots/TC-19-step05-scroll-khoanh-vung-5s-thu-nhap-khac-va-tong-thu-nhap.png)
+
+##### 🔹 Bước 6: Scroll + Khoanh vung 5s Cac khoan giam tru
+![Bước 6: Scroll + Khoanh vung 5s Cac khoan giam tru](TC-19/screenshots/TC-19-step06-scroll-khoanh-vung-5s-cac-khoan-giam-tru.png)
+
+##### 🔹 Bước 7: Scroll + Khoanh vung 5s Luong thuc lanh
+![Bước 7: Scroll + Khoanh vung 5s Luong thuc lanh](TC-19/screenshots/TC-19-step07-scroll-khoanh-vung-5s-luong-thuc-lanh.png)
 
 #### 🎥 Video & Dấu vết kiểm thử (Video & Trace):
 - **Video phiên chạy thực tế**: [video.webm](TC-19/videos/video.webm)
 
 ---
 
-### TC-20: fix-8 | TC-20: Replay Nhân viên test.nv mở Tab Lịch sử, bấm Xem & mở/đóng 3 Modal chi tiết (Role: test.nv)
+### TC-20: fix-8 | TC-20: Replay Nhân viên test.nv mở Tab Lịch sử, bấm Xem & mở/khoanh vùng 5s 3 Modal chi tiết (Role: test.nv)
 
-* **Trạng thái thực thi Test (Kỹ thuật)**: ✅ PASS (Thời gian thực thi: `51.00s`)
+* **Trạng thái thực thi Test (Kỹ thuật)**: ✅ PASS (Thời gian thực thi: `65.50s`)
 * **Trạng thái Logic Nghiệp vụ (Business Output)**: ✅ PASS
 * **Đánh giá tổng quát**: Đạt yêu cầu logic nghiệp vụ mong đợi
 * **Thư mục lưu trữ**: `test-evidence/quy_trinh_tinh_luong_nv_moi/TC-20/`
@@ -498,20 +519,20 @@ Error: page.waitForTimeout: Target page, context or browser has been closed
 ##### 🔹 Bước 1: Dang nhap test nv va mo man hinh Phieu luong
 ![Bước 1: Dang nhap test nv va mo man hinh Phieu luong](TC-20/screenshots/TC-20-step01-dang-nhap-test-nv-va-mo-man-hinh-phieu-luong.png)
 
-##### 🔹 Bước 2: Chuyen sang Tab Lich Su ky luong
-![Bước 2: Chuyen sang Tab Lich Su ky luong](TC-20/screenshots/TC-20-step02-chuyen-sang-tab-lich-su-ky-luong.png)
+##### 🔹 Bước 2: Tab Lich Su - Khoanh vung 5s ky luong 10/2026
+![Bước 2: Tab Lich Su - Khoanh vung 5s ky luong 10/2026](TC-20/screenshots/TC-20-step02-tab-lich-su-khoanh-vung-5s-ky-luong-10-2026.png)
 
 ##### 🔹 Bước 3: Bam nut Xem tu Lich Su quay ve Phieu luong
 ![Bước 3: Bam nut Xem tu Lich Su quay ve Phieu luong](TC-20/screenshots/TC-20-step03-bam-nut-xem-tu-lich-su-quay-ve-phieu-luong.png)
 
-##### 🔹 Bước 4: Mo Modal chi tiet Tang ca psModalOvertime
-![Bước 4: Mo Modal chi tiet Tang ca psModalOvertime](TC-20/screenshots/TC-20-step04-mo-modal-chi-tiet-tang-ca-psmodalovertime.png)
+##### 🔹 Bước 4: Modal Tang ca - Khoanh vung 5s quan sat chi tiet
+![Bước 4: Modal Tang ca - Khoanh vung 5s quan sat chi tiet](TC-20/screenshots/TC-20-step04-modal-tang-ca-khoanh-vung-5s-quan-sat-chi-tiet.png)
 
-##### 🔹 Bước 5: Mo Modal chi tiet Di tre Ve som psModalLateearly
-![Bước 5: Mo Modal chi tiet Di tre Ve som psModalLateearly](TC-20/screenshots/TC-20-step05-mo-modal-chi-tiet-di-tre-ve-som-psmodallateearly.png)
+##### 🔹 Bước 5: Modal Di tre Ve som - Khoanh vung 5s quan sat chi tiet
+![Bước 5: Modal Di tre Ve som - Khoanh vung 5s quan sat chi tiet](TC-20/screenshots/TC-20-step05-modal-di-tre-ve-som-khoanh-vung-5s-quan-sat-chi-tiet.png)
 
-##### 🔹 Bước 6: Mo Modal chi tiet Ngay nghi psModalDaysoff
-![Bước 6: Mo Modal chi tiet Ngay nghi psModalDaysoff](TC-20/screenshots/TC-20-step06-mo-modal-chi-tiet-ngay-nghi-psmodaldaysoff.png)
+##### 🔹 Bước 6: Modal Ngay nghi - Khoanh vung 5s quan sat chi tiet
+![Bước 6: Modal Ngay nghi - Khoanh vung 5s quan sat chi tiet](TC-20/screenshots/TC-20-step06-modal-ngay-nghi-khoanh-vung-5s-quan-sat-chi-tiet.png)
 
 #### 🎥 Video & Dấu vết kiểm thử (Video & Trace):
 - **Video phiên chạy thực tế**: [video.webm](TC-20/videos/video.webm)

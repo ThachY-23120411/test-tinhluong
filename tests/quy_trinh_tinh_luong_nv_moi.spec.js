@@ -3579,6 +3579,50 @@ async function captureStepFix8(page, testInfo, tcId, stepNum, desc) {
   console.log(`📸 [${tcId}] Đã chụp Bước ${stepNum}: ${desc}`);
 }
 
+// Trợ lý đăng nhập trực quan riêng cho fix-8 (chống SPA re-render nuốt phím / bỏ qua đăng nhập âm thầm)
+async function loginFix8(page, username, password) {
+  await page.goto(LOGIN_URL, { waitUntil: 'domcontentloaded' });
+  await page.waitForLoadState('networkidle', { timeout: 10000 }).catch(() => {});
+
+  const dockIndicator = page.locator('.dock:visible, button.MnuHRS238:visible').first();
+  if (await dockIndicator.isVisible({ timeout: 1500 }).catch(() => false)) {
+    return;
+  }
+
+  for (let attempt = 1; attempt <= 2; attempt++) {
+    const uInput = page.locator('#username:visible, input[placeholder*="tên đăng nhập" i]:visible, input[type="text"]:visible').first();
+    const pInput = page.locator('input[type="password"]:visible, input[placeholder*="mật khẩu" i]:visible').first();
+    const loginBtn = page.locator('button:has-text("Đăng nhập"):visible, button#btnLogin:visible').first();
+
+    await uInput.waitFor({ state: 'visible', timeout: 15000 });
+    await page.waitForTimeout(900);
+
+    await typeHumanLike(page, uInput, username);
+    await typeHumanLike(page, pInput, password);
+
+    const typedUser = await uInput.inputValue().catch(() => '');
+    const typedPass = await pInput.inputValue().catch(() => '');
+    if (typedUser.toLowerCase() !== String(username).toLowerCase() || !typedPass) {
+      console.log(`⚠️ [fix-8 Login]: Form đăng nhập vừa re-render, nhập lại lần ${attempt}...`);
+      await typeHumanLike(page, uInput, username);
+      await typeHumanLike(page, pInput, password);
+    }
+
+    await moveAndClick(page, loginBtn, { steps: 10, pause: 250 });
+
+    if (await dockIndicator.waitFor({ state: 'visible', timeout: 20000 }).then(() => true).catch(() => false)) {
+      await page.waitForTimeout(randomBetween(600, 900));
+      return;
+    }
+
+    console.log(`⚠️ [fix-8 Login]: Chưa thấy thanh Dock sau lần thử ${attempt}, tải lại trang đăng nhập...`);
+    await page.goto(LOGIN_URL, { waitUntil: 'domcontentloaded' });
+    await page.waitForLoadState('networkidle', { timeout: 8000 }).catch(() => {});
+  }
+
+  throw new Error(`❌ [fix-8 Login]: Không thể đăng nhập tài khoản "${username}", vẫn đang kẹt tại màn hình Login!`);
+}
+
 // Trợ lý điều hướng trực quan riêng cho fix-8 (Ưu tiên Windows Launchpad khớp thao tác JSON Recorder)
 async function openMenuFix8(page, menuId, menuName) {
   console.log(`📂 [fix-8 Điều hướng trực quan]: Mở menu "${menuName}" (${menuId})...`);
@@ -3635,8 +3679,14 @@ async function openMenuFix8(page, menuId, menuName) {
         await smoothScrollHumanLike(page, launchpadTile, { block: 'center', wait: 500 });
         console.log(`👉 [fix-8]: Di chuột Neon nhấp mở "${menuName}" (${menuId}) từ Launchpad...`);
         await moveAndClick(page, launchpadTile, { steps: 12, pause: 350 });
-        await page.waitForTimeout(2000);
-        return;
+        await page.waitForTimeout(1800);
+
+        const paneOpened = await page.locator(
+          `#dynamic-pane-${menuId}:visible, #dynamic-tab-${menuId}:visible, #psPayslip:visible, #btnPrint:visible`
+        ).first().isVisible({ timeout: 3000 }).catch(() => false);
+        if (paneOpened) return;
+
+        console.log(`⚠️ [fix-8]: Click tile Launchpad chưa bung "${menuName}", thử tiếp qua Sidebar/fallback...`);
       }
     }
   }
@@ -3684,18 +3734,207 @@ async function openMenuFix8(page, menuId, menuName) {
   await openMenuHumanLike(page, menuId, menuName);
 }
 
+// Trợ lý cục bộ fix-8: Khoanh vùng + cuộn mượt + dừng 5s trực quan bằng highlightAndPause chuẩn hệ thống
+async function highlightAndPauseSectionFix8(page, locator, label, subSelector = '', duration = 5000) {
+  const target = locator.first();
+  if (!(await target.isVisible({ timeout: 5000 }).catch(() => false))) return;
+
+  const anchorText = await target.evaluate((el) => {
+    const raw = (el.innerText || el.textContent || '').trim();
+    const lines = raw.split(/\r?\n/).map(s => s.trim()).filter(Boolean);
+    return lines[0] ? lines[0].slice(0, 40) : '';
+  }).catch(() => '');
+
+  if (!anchorText) return;
+
+  await highlightAndPause(page, target, {
+    expectedText: [anchorText],
+    duration,
+    label,
+    targetSubSelector: subSelector
+  });
+}
+
+// Trợ lý cục bộ fix-8: Khoanh vùng dòng NV 099 (Nguyễn Văn Test) trong iframe Excel & trượt thanh trượt ngang mượt qua tất cả các cột
+async function inspectExcelRowWithHorizontalPanFix8(page, testInfo, tcId, previewIframe) {
+  const frameHandle = await previewIframe.elementHandle().catch(() => null);
+  const excelFrame = frameHandle ? await frameHandle.contentFrame().catch(() => null) : null;
+  if (!excelFrame) return;
+
+  const targetRow = excelFrame.locator('tr:has-text("099"):has-text("Nguyễn Văn Test"), tr:has-text("Nguyễn Văn Test"), tr:has-text("099")').first();
+  const fallbackRow = excelFrame.locator('table tr').nth(11);
+  const rowToInspect = (await targetRow.isVisible({ timeout: 5000 }).catch(() => false)) ? targetRow : fallbackRow;
+  if (!(await rowToInspect.isVisible({ timeout: 3000 }).catch(() => false))) return;
+
+  // Bật khung highlight Neon đỏ trực tiếp trên toàn bộ dòng Nguyễn Văn Test trong iframe
+  const highlightRow = async () => {
+    await rowToInspect.evaluate((tr) => {
+      tr.style.outline = '3px solid #f43f5e';
+      tr.style.outlineOffset = '-2px';
+      tr.style.backgroundColor = 'rgba(244, 63, 94, 0.22)';
+      tr.style.boxShadow = 'inset 0 0 18px rgba(244, 63, 94, 0.45)';
+    }).catch(() => {});
+  };
+
+  const setOuterBadge = async (text) => {
+    const iframeBox = await previewIframe.boundingBox().catch(() => null);
+    const rowBox = await rowToInspect.boundingBox().catch(() => null);
+    await page.evaluate(({ labelText, leftX, topY }) => {
+      let badge = document.getElementById('__ag_focus_badge_fix8__');
+      if (!badge) {
+        badge = document.createElement('div');
+        badge.id = '__ag_focus_badge_fix8__';
+        document.body.appendChild(badge);
+      }
+      badge.style.cssText = `
+        position: fixed; z-index: 2147483647; padding: 7px 14px;
+        background: #e11d48; color: #ffffff; font-family: 'Segoe UI', Arial, sans-serif;
+        font-size: 13px; font-weight: bold; border-radius: 6px;
+        box-shadow: 0 4px 18px rgba(225, 29, 72, 0.8); pointer-events: none;
+        display: block; opacity: 1;
+      `;
+      badge.style.left = `${Math.max(16, leftX)}px`;
+      badge.style.top = `${Math.max(16, topY)}px`;
+      badge.innerText = labelText;
+    }, {
+      labelText: text,
+      leftX: iframeBox ? iframeBox.x + 24 : 40,
+      topY: rowBox ? rowBox.y - 44 : 180
+    }).catch(() => {});
+  };
+
+  // Hàm trượt thanh trượt ngang mượt mà (easeInOutCubic) trong iframe hoặc container #preview-body
+  const smoothHorizontalPanTo = async (ratio) => {
+    const pannedInsideFrame = await rowToInspect.evaluate((tr, targetRatio) => {
+      const findScrollableX = (node) => {
+        let cur = node;
+        while (cur && cur !== document.body && cur !== document.documentElement) {
+          if (cur.scrollWidth > cur.clientWidth + 15) return cur;
+          cur = cur.parentElement;
+        }
+        const docScroller = document.scrollingElement || document.documentElement || document.body;
+        if (docScroller && docScroller.scrollWidth > docScroller.clientWidth + 15) return docScroller;
+        if (document.body && document.body.scrollWidth > document.body.clientWidth + 15) return document.body;
+        return null;
+      };
+      const scroller = findScrollableX(tr);
+      if (!scroller) return { ok: false, maxLeft: 0 };
+
+      const maxLeft = Math.max(0, scroller.scrollWidth - scroller.clientWidth);
+      const startLeft = scroller.scrollLeft || 0;
+      const destLeft = Math.round(maxLeft * targetRatio);
+      const durationMs = 1000;
+
+      return new Promise((resolve) => {
+        const startTime = performance.now();
+        function step(now) {
+          const p = Math.min(1, (now - startTime) / durationMs);
+          const eased = p < 0.5 ? 4 * p * p * p : 1 - Math.pow(-2 * p + 2, 3) / 2;
+          scroller.scrollLeft = Math.round(startLeft + (destLeft - startLeft) * eased);
+          if (p < 1) {
+            requestAnimationFrame(step);
+          } else {
+            resolve({ ok: true, maxLeft, currentLeft: scroller.scrollLeft });
+          }
+        }
+        requestAnimationFrame(step);
+      });
+    }, ratio).catch(() => ({ ok: false, maxLeft: 0 }));
+
+    // Nếu bảng tràn ở container #preview-body bên ngoài iframe thì trượt mượt luôn bên ngoài
+    if (!pannedInsideFrame.ok || pannedInsideFrame.maxLeft <= 15) {
+      await page.evaluate((targetRatio) => {
+        const el = document.getElementById('preview-body');
+        if (!el || el.scrollWidth <= el.clientWidth + 15) return;
+        const maxLeft = el.scrollWidth - el.clientWidth;
+        el.scrollTo({ left: Math.round(maxLeft * targetRatio), behavior: 'smooth' });
+      }, ratio).catch(() => {});
+      await page.waitForTimeout(1000);
+    }
+  };
+
+  // Di chuyển chuột Neon vào ô nằm gọn trong khung nhìn hiện tại trên dòng NV 099
+  const pointMouseToVisibleCell = async (preferRight = false) => {
+    const iframeBox = await previewIframe.boundingBox().catch(() => null);
+    if (!iframeBox) return;
+    const cells = rowToInspect.locator('td');
+    const count = await cells.count().catch(() => 0);
+    const indices = [];
+    for (let i = 0; i < count; i++) indices.push(i);
+    if (preferRight) indices.reverse();
+
+    for (const idx of indices) {
+      const cell = cells.nth(idx);
+      const box = await cell.boundingBox().catch(() => null);
+      if (!box || box.width < 12 || box.height < 10) continue;
+      const centerX = box.x + box.width / 2;
+      const centerY = box.y + box.height / 2;
+      if (centerX > iframeBox.x + 25 && centerX < iframeBox.x + iframeBox.width - 25) {
+        await page.mouse.move(centerX, centerY, { steps: 14 });
+        await page.waitForTimeout(200);
+        return;
+      }
+    }
+  };
+
+  // 1. Cuộn dọc đưa dòng Nguyễn Văn Test (099) vào giữa khung nhìn & đưa thanh trượt ngang về trái (0%)
+  await rowToInspect.evaluate((tr) => {
+    tr.scrollIntoView({ behavior: 'smooth', block: 'center', inline: 'start' });
+  }).catch(() => {});
+  await page.waitForTimeout(1000);
+  await smoothHorizontalPanTo(0);
+  await highlightRow();
+
+  // Chặng 1 (0% - Cột trái: Mã NV 099, Họ tên Nguyễn Văn Test & Lương cơ bản) -> Pause 5s
+  await pointMouseToVisibleCell(false);
+  await setOuterBadge('🎯 Bảng lương tổng hợp: NV 099 Nguyễn Văn Test (Cột định danh trái) — Đang dừng 5s đối soát...');
+  console.log('🔍 [TC-18 Bảng lương tổng hợp]: Khoanh vùng NV 099 (Phần đầu trái) -> Dừng 5s...');
+  await page.waitForTimeout(5000);
+  await captureStepFix8(page, testInfo, tcId, 4, 'Bang luong tong hop - Khoanh vung NV 099 (Cot trai)');
+
+  // Chặng 2 (Trượt thanh trượt ngang sang 48% giữa bảng: Công chuẩn, Thực tế, OT, Thu nhập) -> Pause 5s
+  console.log('👉 [TC-18 Bảng lương tổng hợp]: Trượt thanh trượt ngang sang GIỮA bảng xem cột công & thu nhập NV 099...');
+  await smoothHorizontalPanTo(0.48);
+  await highlightRow();
+  await pointMouseToVisibleCell(false);
+  await setOuterBadge('🎯 Bảng lương tổng hợp: NV 099 Nguyễn Văn Test (Trượt ngang GIỮA bảng: Công, OT & Thu nhập) — Đang dừng 5s...');
+  await page.waitForTimeout(5000);
+  await captureStepFix8(page, testInfo, tcId, 5, 'Bang luong tong hop - Truot ngang giua bang NV 099');
+
+  // Chặng 3 (Trượt thanh trượt ngang sang 100% cuối phải: Giảm trừ, Thuế TNCN & Thực lãnh) -> Pause 5s
+  console.log('👉 [TC-18 Bảng lương tổng hợp]: Trượt thanh trượt ngang hết sang PHẢI xem Thuế & Thực lãnh NV 099...');
+  await smoothHorizontalPanTo(1.0);
+  await highlightRow();
+  await pointMouseToVisibleCell(true);
+  await setOuterBadge('🎯 Bảng lương tổng hợp: NV 099 Nguyễn Văn Test (Trượt ngang CUỐI PHẢI: Khấu trừ, Thuế & Thực lãnh) — Đang dừng 5s...');
+  await page.waitForTimeout(5000);
+  await captureStepFix8(page, testInfo, tcId, 6, 'Bang luong tong hop - Truot ngang cuoi phai NV 099');
+
+  // Dọn highlight & badge sau khi hoàn tất đối soát ngang
+  await rowToInspect.evaluate((tr) => {
+    tr.style.outline = '';
+    tr.style.outlineOffset = '';
+    tr.style.backgroundColor = '';
+    tr.style.boxShadow = '';
+  }).catch(() => {});
+  await page.evaluate(() => {
+    const badge = document.getElementById('__ag_focus_badge_fix8__');
+    if (badge) badge.style.display = 'none';
+  }).catch(() => {});
+}
+
 // >>> [START_TC_18] - CONVERSATION: fix-8
-test('fix-8 | TC-18: Replay Kế toán mở Danh sách trả lương, xem Bảng lương tổng hợp, nhảy Phiếu lương & Đăng xuất (Role: Chien.nguyen)', async ({ page }, testInfo) => {
-  test.setTimeout(150000);
+test('fix-8 | TC-18: Replay Kế toán mở Danh sách trả lương, xem Bảng lương tổng hợp (trượt ngang NV 099), nhảy Phiếu lương & Đăng xuất (Role: Chien.nguyen)', async ({ page }, testInfo) => {
+  test.setTimeout(180000);
   console.log('\n================ [TC-18]: REPLAY MnuPRL092 BẢNG LƯƠNG TỔNG HỢP -> PHIẾU LƯƠNG -> ĐĂNG XUẤT ================');
 
   // Bước 1: Đăng nhập tài khoản Chien.nguyen / 123 (bàn phím từng chữ + chuột Neon)
-  await performLogin(page, 'Chien.nguyen', ACCOUNTS.DIRECTOR.password);
+  await loginFix8(page, 'Chien.nguyen', ACCOUNTS.DIRECTOR.password);
   await captureStepFix8(page, testInfo, 'TC-18', 1, 'Dang nhap tai khoan Chien nguyen');
 
   // Bước 2: Mở menu Danh sách trả lương (MnuPRL092) qua Windows Launchpad
   await openMenuFix8(page, 'MnuPRL092', 'Danh sách trả lương');
-  await page.locator('#btnPrint, #btnView').first().waitFor({ state: 'visible', timeout: 15000 }).catch(() => {});
+  await page.locator('#btnPrint, #btnView').first().waitFor({ state: 'visible', timeout: 15000 });
   await page.waitForTimeout(1000);
   await captureStepFix8(page, testInfo, 'TC-18', 2, 'Mo man hinh Danh sach tra luong MnuPRL092 qua Launchpad');
 
@@ -3707,88 +3946,133 @@ test('fix-8 | TC-18: Replay Kế toán mở Danh sách trả lương, xem Bảng
   await page.waitForTimeout(800);
   await captureStepFix8(page, testInfo, 'TC-18', 3, 'Chon ky luong Thang 10');
 
-  // Bước 4: Bấm nút "Bảng lương tổng hợp" (#btnPrint), chờ iframe Excel & cuộn xem dòng NV 099
+  // Bước 4: Bấm nút "Bảng lương tổng hợp" (#btnPrint), khoanh vùng dòng NV 099 & trượt thanh trượt ngang hết bảng (mỗi chặng pause 5s)
   const btnPrint = page.locator('#btnPrint, button:has-text("Bảng lương tổng hợp")').first();
-  if (await btnPrint.isVisible({ timeout: 4000 }).catch(() => false)) {
-    await smoothScrollHumanLike(page, btnPrint, { block: 'center', wait: 400 });
-    console.log('👉 [TC-18]: Di chuột Neon nhấp nút "Bảng lương tổng hợp" (#btnPrint)...');
-    await moveAndClick(page, btnPrint, { steps: 12, pause: 350 });
+  await btnPrint.waitFor({ state: 'visible', timeout: 10000 });
+  await smoothScrollHumanLike(page, btnPrint, { block: 'center', wait: 400 });
+  console.log('👉 [TC-18]: Di chuột Neon nhấp nút "Bảng lương tổng hợp" (#btnPrint)...');
+  await moveAndClick(page, btnPrint, { steps: 12, pause: 350 });
 
-    const previewIframe = page.locator('#preview-body iframe').first();
-    await previewIframe.waitFor({ state: 'visible', timeout: 20000 }).catch(() => {});
-    await page.waitForTimeout(2200);
+  const previewIframe = page.locator('#preview-body iframe').first();
+  await previewIframe.waitFor({ state: 'visible', timeout: 25000 });
+  await page.waitForTimeout(2200);
 
-    const frameHandle = await previewIframe.elementHandle().catch(() => null);
-    const excelFrame = frameHandle ? await frameHandle.contentFrame().catch(() => null) : null;
-    if (excelFrame) {
-      const targetRow = excelFrame.locator('tr:has-text("099"), tr:has-text("Nguyễn Văn Test")').first();
-      const fallbackRow = excelFrame.locator('table tr').nth(11);
-      const rowToInspect = (await targetRow.isVisible({ timeout: 4000 }).catch(() => false)) ? targetRow : fallbackRow;
+  await inspectExcelRowWithHorizontalPanFix8(page, testInfo, 'TC-18', previewIframe);
 
-      if (await rowToInspect.isVisible({ timeout: 3000 }).catch(() => false)) {
-        await rowToInspect.evaluate((el) => {
-          el.scrollIntoView({ behavior: 'smooth', block: 'center', inline: 'start' });
-        }).catch(() => {});
-        await page.waitForTimeout(900);
+  // Bước 5: Bấm nút "Xem phiếu lương" (#btnView) -> tự động xác định đúng số trang của NV 099 (Nguyễn Văn Test) -> scroll + khoanh vùng + pause 5s
+  const btnView = page.locator('#btnView, button:has-text("Xem phiếu lương")').first();
+  await btnView.waitFor({ state: 'visible', timeout: 10000 });
+  await smoothScrollHumanLike(page, btnView, { block: 'center', wait: 400 });
 
-        const preferredCell = rowToInspect.locator('td').nth(4);
-        const inspectCell = (await preferredCell.isVisible().catch(() => false))
-          ? preferredCell
-          : rowToInspect.locator('td').first();
+  // Lắng nghe dữ liệu sp_ViewEmployeePaySlip trình duyệt vừa tải để tìm chính xác trang của NV 099 (không gán cứng số 82)
+  let dynamicPayslipPage = null;
+  let payslipTotalFromApi = 0;
+  const pendingResponseChecks = [];
+  const onPayslipResponse = (res) => {
+    const p = (async () => {
+      try {
+        const url = res.url() || '';
+        if (res.status() !== 200 || (!url.includes('/hpa/') && !url.includes('paradise'))) return;
+        const rawText = await res.text().catch(() => '');
+        if (!rawText || !rawText.includes('Nguyễn Văn Test')) return;
 
-        await inspectCell.evaluate((el) => {
-          el.scrollIntoView({ behavior: 'smooth', block: 'center', inline: 'center' });
-        }).catch(() => {});
-        await page.waitForTimeout(900);
+        const parsed = JSON.parse(rawText);
+        const root = typeof parsed === 'string' ? JSON.parse(parsed) : parsed;
+        const tables = Array.isArray(root?.data) ? root.data : [];
+        // sp_CompanySalarySummary_html.sql dùng data[2] (EmployeeInfo); tìm đúng mảng chứa thông tin NV (EmployeeID + FullName)
+        const empList = tables.find(t => Array.isArray(t) && t.length > 0 && t[0] && ('EmployeeID' in t[0]) && ('FullName' in t[0]))
+          || tables[2]
+          || tables[0];
+        if (Array.isArray(empList) && empList.length > 0) {
+          payslipTotalFromApi = empList.length;
+          const idx = empList.findIndex(e =>
+            String(e?.EmployeeID || '').trim() === '099' ||
+            String(e?.FullName || '').toLowerCase().includes('nguyễn văn test')
+          );
+          if (idx >= 0) {
+            dynamicPayslipPage = idx + 1;
+            console.log(`🎯 [TC-18]: Xác định động Phiếu lương NV 099 (Nguyễn Văn Test) nằm tại Trang ${dynamicPayslipPage}/${empList.length}`);
+          }
+        }
+      } catch (_) {}
+    })();
+    pendingResponseChecks.push(p);
+  };
+  page.on('response', onPayslipResponse);
 
-        const cellBox = await inspectCell.boundingBox().catch(() => null);
-        if (cellBox) {
-          await page.mouse.move(cellBox.x + cellBox.width / 2, cellBox.y + cellBox.height / 2, { steps: 14 });
-          await page.waitForTimeout(300);
-          await page.mouse.click(cellBox.x + cellBox.width / 2, cellBox.y + cellBox.height / 2);
-          await page.waitForTimeout(1000);
+  console.log('👉 [TC-18]: Di chuột Neon nhấp nút "Xem phiếu lương" (#btnView)...');
+  await moveAndClick(page, btnView, { steps: 12, pause: 350 });
+
+  const htmlPayslip = page.locator('#preview-body .html-payslip-page, #preview-container input.pdf-page-input').first();
+  await htmlPayslip.waitFor({ state: 'visible', timeout: 25000 });
+  await Promise.allSettled(pendingResponseChecks);
+  await page.waitForTimeout(1000);
+  page.off('response', onPayslipResponse);
+
+  const pageInput = page.locator('#preview-container input.pdf-page-input:visible').first();
+  if (await pageInput.isVisible({ timeout: 5000 }).catch(() => false)) {
+    const counterText = await page.locator('#preview-container .page-counter-text').first().innerText().catch(() => '');
+    const matchTotal = counterText.match(/(\d+)/);
+    const totalPages = matchTotal ? parseInt(matchTotal[1], 10) : (payslipTotalFromApi || 1);
+
+    const isCurrentNv099 = async () => {
+      const txt = await page.locator('#preview-body .html-payslip-page').first().innerText().catch(() => '');
+      return txt.includes('099') && txt.toLowerCase().includes('nguyễn văn test');
+    };
+
+    const jumpToPageHumanLike = async (pageNum) => {
+      await typeHumanLike(page, pageInput, String(pageNum));
+      await page.keyboard.press('Enter');
+      // Chạm nhẹ tiêu đề phiếu lương để kích hoạt sự kiện change trên .pdf-page-input chắc chắn 100%
+      const titleHeader = page.locator('#preview-body .html-payslip-page h2').first();
+      if (await titleHeader.isVisible({ timeout: 1500 }).catch(() => false)) {
+        await moveAndClick(page, titleHeader, { steps: 6, pause: 150 });
+      }
+      await page.waitForTimeout(1200);
+    };
+
+    let landedPage = dynamicPayslipPage || 1;
+    if (dynamicPayslipPage && dynamicPayslipPage >= 1 && dynamicPayslipPage <= totalPages) {
+      console.log(`👉 [TC-18]: Gõ số trang động "${dynamicPayslipPage}/${totalPages}" (của NV 099) vào ô chuyển trang...`);
+      await jumpToPageHumanLike(dynamicPayslipPage);
+    }
+
+    // Dự phòng nếu API chưa bắt được hoặc dữ liệu vừa thay đổi thứ tự: dò tự động từ trang cuối lùi về trang 1
+    if (!(await isCurrentNv099())) {
+      console.log(`⚠️ [TC-18]: Đang dò tìm động trang phiếu lương chứa "099 - Nguyễn Văn Test" trong tổng số ${totalPages} trang...`);
+      for (let p = totalPages; p >= 1; p--) {
+        if (p === dynamicPayslipPage) continue;
+        await jumpToPageHumanLike(p);
+        if (await isCurrentNv099()) {
+          landedPage = p;
+          console.log(`🎯 [TC-18]: Đã tìm thấy Phiếu lương NV 099 tại Trang ${p}/${totalPages}`);
+          break;
         }
       }
     }
-  }
-  await captureStepFix8(page, testInfo, 'TC-18', 4, 'Xem Bang luong tong hop va cuon toi dong nhan vien 099');
 
-  // Bước 5: Bấm nút "Xem phiếu lương" (#btnView) & nhập số trang 82 vào ô chuyển trang
-  const btnView = page.locator('#btnView, button:has-text("Xem phiếu lương")').first();
-  if (await btnView.isVisible({ timeout: 4000 }).catch(() => false)) {
-    await smoothScrollHumanLike(page, btnView, { block: 'center', wait: 400 });
-    console.log('👉 [TC-18]: Di chuột Neon nhấp nút "Xem phiếu lương" (#btnView)...');
-    await moveAndClick(page, btnView, { steps: 12, pause: 350 });
-
-    const htmlPayslip = page.locator('#preview-body .html-payslip-page, #preview-container input.pdf-page-input').first();
-    await htmlPayslip.waitFor({ state: 'visible', timeout: 25000 }).catch(() => {});
-    await page.waitForTimeout(1500);
-
-    const pageInput = page.locator('#preview-container input.pdf-page-input:visible').first();
-    if (await pageInput.isVisible({ timeout: 5000 }).catch(() => false)) {
-      const counterText = await page.locator('#preview-container .page-counter-text').first().innerText().catch(() => '');
-      const matchTotal = counterText.match(/(\d+)/);
-      const totalPages = matchTotal ? parseInt(matchTotal[1], 10) : 82;
-      const targetPageStr = String(totalPages >= 82 ? 82 : totalPages);
-
-      console.log(`👉 [TC-18]: Gõ số trang "${targetPageStr}" vào ô chuyển trang và nhấn Enter...`);
-      await typeHumanLike(page, pageInput, targetPageStr);
-      await page.keyboard.press('Enter');
-      await page.waitForTimeout(1800);
-
-      // Cuộn mượt xuống xem nội dung phiếu lương
-      const previewBody = page.locator('#preview-body').first();
-      const bodyBox = await previewBody.boundingBox().catch(() => null);
-      if (bodyBox) {
-        await page.mouse.move(bodyBox.x + bodyBox.width / 2, bodyBox.y + bodyBox.height / 2, { steps: 10 });
-        await page.mouse.wheel(0, 320);
-        await page.waitForTimeout(900);
-        await page.mouse.wheel(0, -320);
-        await page.waitForTimeout(700);
-      }
+    // Khoanh vùng 1 (Thông tin NV 099 - Nguyễn Văn Test & Công thực tế) -> Pause 5s
+    const empGrid = page.locator('#preview-body .html-payslip-page .ps-grid').first();
+    if (await empGrid.isVisible({ timeout: 4000 }).catch(() => false)) {
+      await highlightAndPause(page, empGrid, {
+        expectedText: ['099', 'Nguyễn Văn Test'],
+        duration: 5000,
+        label: `Phiếu lương (MnuPRL092 - Trang ${landedPage}/${totalPages}) - Thông tin NV 099 & Công thực tế`
+      });
+      await captureStepFix8(page, testInfo, 'TC-18', 7, `Phieu luong trang ${landedPage} - Khoanh vung thong tin NV 099`);
     }
+
+    // Cuộn mượt xuống cuối trang -> Khoanh vùng 2 (Thực lãnh cuối kỳ) -> Pause 5s
+    const netRow = page.locator('#preview-body .html-payslip-page .ps-net').first();
+    await highlightAndPauseSectionFix8(
+      page,
+      netRow,
+      `Phiếu lương (MnuPRL092 - Trang ${landedPage}/${totalPages}) - Thực lãnh cuối kỳ NV 099`,
+      'b',
+      5000
+    );
+    await captureStepFix8(page, testInfo, 'TC-18', 8, `Phieu luong trang ${landedPage} - Khoanh vung Thuc lanh NV 099`);
   }
-  await captureStepFix8(page, testInfo, 'TC-18', 5, 'Xem phieu luong va chuyen toi trang cuoi (trang 82)');
 
   // Bước 6: Đăng xuất tài khoản Chien.nguyen (#randomAvatar -> #txtLogoutOpt -> #successModalButtonAddNew)
   const avatarBtn = page.locator('#randomAvatar, #userAvatar, .user-avatar').first();
@@ -3811,72 +4095,125 @@ test('fix-8 | TC-18: Replay Kế toán mở Danh sách trả lương, xem Bảng
       }
     }
   }
-  await captureStepFix8(page, testInfo, 'TC-18', 6, 'Dang xuat khoi tai khoan Chien nguyen thanh cong');
+  await captureStepFix8(page, testInfo, 'TC-18', 9, 'Dang xuat khoi tai khoan Chien nguyen thanh cong');
 });
 // <<< [END_TC_18]
 
 // >>> [START_TC_19] - CONVERSATION: fix-8
-test('fix-8 | TC-19: Replay Nhân viên test.nv đăng nhập, mở Phiếu lương qua Launchpad & cuộn quan sát (Role: test.nv)', async ({ page }, testInfo) => {
-  test.setTimeout(120000);
-  console.log('\n================ [TC-19]: REPLAY NHÂN VIÊN test.nv MỞ PHIẾU LƯƠNG QUA LAUNCHPAD ================');
+test('fix-8 | TC-19: Replay Nhân viên test.nv mở Phiếu lương, cuộn từng mục & khoanh vùng pause 5s (Role: test.nv)', async ({ page }, testInfo) => {
+  test.setTimeout(150000);
+  console.log('\n================ [TC-19]: REPLAY NHÂN VIÊN test.nv MỞ PHIẾU LƯƠNG -> SCROLL + KHOANH VÙNG 5S ================');
 
   // Bước 1: Đăng nhập Nhân viên test.nv / 123 (bàn phím từng chữ + chuột Neon)
-  await performLogin(page, ACCOUNTS.STAFF_NEW.username, ACCOUNTS.STAFF_NEW.password);
+  await loginFix8(page, ACCOUNTS.STAFF_NEW.username, ACCOUNTS.STAFF_NEW.password);
   await captureStepFix8(page, testInfo, 'TC-19', 1, 'Dang nhap tai khoan nhan vien test nv');
 
   // Bước 2: Mở Windows Launchpad -> Gõ "phiếu lương" -> Nhấp mở Phiếu lương (MnuPRL445)
   await openMenuFix8(page, 'MnuPRL445', 'phiếu lương');
 
   const slipContainer = page.locator('#psPayslip, .salary-slip, #sp_salaryslip_html').first();
-  await slipContainer.waitFor({ state: 'visible', timeout: 15000 }).catch(() => {});
+  await slipContainer.waitFor({ state: 'visible', timeout: 15000 });
   await page.waitForFunction(() => {
     const el = document.getElementById('psEmpID');
     return el && el.innerText.trim().length > 0;
-  }, { timeout: 15000 }).catch(() => {});
+  }, { timeout: 15000 });
   await page.waitForTimeout(1200);
   await captureStepFix8(page, testInfo, 'TC-19', 2, 'Mo man hinh Phieu luong MnuPRL445 qua Launchpad');
 
-  // Bước 3: Cuộn mượt từ trên xuống dưới Phiếu lương để người dùng quan sát đầy đủ các mục I -> Thực lãnh
-  const netSalaryEl = page.locator('#psNetSalary, .ps-net-salary').first();
-  if (await netSalaryEl.isVisible({ timeout: 3000 }).catch(() => false)) {
-    await smoothScrollHumanLike(page, netSalaryEl, { block: 'center', wait: 1200 });
-    await captureStepFix8(page, testInfo, 'TC-19', 3, 'Cuon muot quan sat phan Luong thuc lanh tren Phieu luong');
-  }
+  // Bước 3: Scroll + Khoanh vùng + Pause 5s từng khu vực thông số trên Phiếu lương
+  // 3a. Thông tin nhân viên 099
+  await highlightAndPause(page, page.locator('#psPayslip > .ps-info-grid').first(), {
+    expectedText: ['099', 'Nguyễn Văn Test'],
+    duration: 5000,
+    label: 'Phiếu lương NV 099 - Thông tin nhân viên',
+    targetSubSelector: '#psFullName'
+  });
+  await captureStepFix8(page, testInfo, 'TC-19', 3, 'Khoanh vung 5s Thong tin nhan vien 099');
 
+  // 3b. Mục I: Thông tin lương, Ngày công, OT, Nghỉ phép & Lương cơ bản
+  await highlightAndPauseSectionFix8(
+    page,
+    page.locator('#psPayslip .ps-section:has(#psBasicSalary)'),
+    'Mục I - Công chuẩn, Thực tế, OT, Ngày nghỉ & Lương cơ bản',
+    '#psBasicSalary',
+    5000
+  );
+  await captureStepFix8(page, testInfo, 'TC-19', 4, 'Scroll + Khoanh vung 5s Muc I Thong tin luong');
+
+  // 3c. Mục II/III: Thu nhập khác (Thưởng KPI) & Tổng thu nhập
+  await highlightAndPauseSectionFix8(
+    page,
+    page.locator('#psPayslip .ps-section:has(#psTotalIncome)'),
+    'Mục III - Thu nhập khác (Thưởng KPI) & Tổng thu nhập',
+    '#psTotalIncome',
+    5000
+  );
+  await captureStepFix8(page, testInfo, 'TC-19', 5, 'Scroll + Khoanh vung 5s Thu nhap khac va Tong thu nhap');
+
+  // 3d. Mục IV: Các khoản giảm trừ (Tạm ứng / Bảo hiểm)
+  await highlightAndPauseSectionFix8(
+    page,
+    page.locator('#psPayslip .ps-section:has(#psTotalDeductions)'),
+    'Mục IV - Các khoản giảm trừ (Tạm ứng & Bảo hiểm)',
+    '#psTotalDeductions',
+    5000
+  );
+  await captureStepFix8(page, testInfo, 'TC-19', 6, 'Scroll + Khoanh vung 5s Cac khoan giam tru');
+
+  // 3e. Cuối phiếu: Lương Thực Lĩnh (#psNetSalary)
+  await highlightAndPauseSectionFix8(
+    page,
+    page.locator('#psPayslip .ps-section:has(#psNetSalary)'),
+    'Cuối phiếu - LƯƠNG THỰC LĨNH NV 099',
+    '#psNetSalary',
+    5000
+  );
+  await captureStepFix8(page, testInfo, 'TC-19', 7, 'Scroll + Khoanh vung 5s Luong thuc lanh');
+
+  // Cuộn mượt trở lại phần đầu phiếu để kết thúc gọn gàng
   const empIdEl = page.locator('#psEmpID, .ps-info-grid').first();
   if (await empIdEl.isVisible({ timeout: 3000 }).catch(() => false)) {
     await smoothScrollHumanLike(page, empIdEl, { block: 'center', wait: 1000 });
   }
-  await page.waitForTimeout(1500);
 });
 // <<< [END_TC_19]
 
 // >>> [START_TC_20] - CONVERSATION: fix-8
-test('fix-8 | TC-20: Replay Nhân viên test.nv mở Tab Lịch sử, bấm Xem & mở/đóng 3 Modal chi tiết (Role: test.nv)', async ({ page }, testInfo) => {
-  test.setTimeout(150000);
-  console.log('\n================ [TC-20]: REPLAY TAB LỊCH SỬ -> XEM -> 3 MODAL CHI TIẾT ================');
+test('fix-8 | TC-20: Replay Nhân viên test.nv mở Tab Lịch sử, bấm Xem & mở/khoanh vùng 5s 3 Modal chi tiết (Role: test.nv)', async ({ page }, testInfo) => {
+  test.setTimeout(180000);
+  console.log('\n================ [TC-20]: REPLAY TAB LỊCH SỬ -> XEM -> 3 MODAL (PAUSE 5S + KHOANH VÙNG) ================');
 
   // Bước 1: Đăng nhập test.nv & mở Phiếu lương (MnuPRL445) qua Launchpad
-  await performLogin(page, ACCOUNTS.STAFF_NEW.username, ACCOUNTS.STAFF_NEW.password);
+  await loginFix8(page, ACCOUNTS.STAFF_NEW.username, ACCOUNTS.STAFF_NEW.password);
   await openMenuFix8(page, 'MnuPRL445', 'phiếu lương');
 
   const slipContainer = page.locator('#psPayslip, .salary-slip, #sp_salaryslip_html').first();
-  await slipContainer.waitFor({ state: 'visible', timeout: 15000 }).catch(() => {});
+  await slipContainer.waitFor({ state: 'visible', timeout: 15000 });
   await page.waitForFunction(() => {
     const el = document.getElementById('psEmpID');
     return el && el.innerText.trim().length > 0;
-  }, { timeout: 15000 }).catch(() => {});
+  }, { timeout: 15000 });
   await page.waitForTimeout(1000);
   await captureStepFix8(page, testInfo, 'TC-20', 1, 'Dang nhap test nv va mo man hinh Phieu luong');
 
-  // Bước 2: Di chuột Neon bấm Tab "Lịch Sử" -> Chờ danh sách hiển thị -> Bấm nút "Xem"
+  // Bước 2: Di chuột Neon bấm Tab "Lịch Sử" -> Khoanh vùng 5s kỳ lương -> Bấm nút "Xem"
   const historyTabBtn = page.locator('button.ps-tab-btn:has-text("Lịch Sử"), button[onclick*="psHistory"]').first();
   if (await historyTabBtn.isVisible({ timeout: 5000 }).catch(() => false)) {
     console.log('👉 [TC-20]: Di chuột Neon nhấp Tab "Lịch Sử"...');
     await moveAndClick(page, historyTabBtn, { steps: 10, pause: 300 });
     await page.locator('#psHistory, #psHistoryContent').first().waitFor({ state: 'visible', timeout: 8000 }).catch(() => {});
-    await page.waitForTimeout(1200);
-    await captureStepFix8(page, testInfo, 'TC-20', 2, 'Chuyen sang Tab Lich Su ky luong');
+    await page.waitForTimeout(1000);
+
+    // Khoanh vùng dòng kỳ lương trong Tab Lịch Sử 5s để quan sát trước khi bấm Xem
+    const historyRowOrCard = page.locator('#psHistory tr:has-text("10/2026"), #psHistory div:has(> button:has-text("Xem"))').first();
+    await highlightAndPauseSectionFix8(
+      page,
+      historyRowOrCard,
+      'Tab Lịch Sử - Kỳ lương Tháng 10/2026',
+      'button',
+      5000
+    );
+    await captureStepFix8(page, testInfo, 'TC-20', 2, 'Tab Lich Su - Khoanh vung 5s ky luong 10/2026');
 
     const historyViewBtn = page.locator('#psHistory button:has-text("Xem"):visible, #psHistory button:visible').first();
     if (await historyViewBtn.isVisible({ timeout: 5000 }).catch(() => false)) {
@@ -3884,20 +4221,26 @@ test('fix-8 | TC-20: Replay Nhân viên test.nv mở Tab Lịch sử, bấm Xem 
       console.log('👉 [TC-20]: Di chuột Neon nhấp nút "Xem" trên Tab Lịch Sử...');
       await moveAndClick(page, historyViewBtn, { steps: 10, pause: 300 });
       await page.locator('#psPayslip').first().waitFor({ state: 'visible', timeout: 8000 }).catch(() => {});
-      await page.waitForTimeout(1200);
+      await page.waitForTimeout(1000);
       await captureStepFix8(page, testInfo, 'TC-20', 3, 'Bam nut Xem tu Lich Su quay ve Phieu luong');
     }
   }
 
-  // Bước 3: Mở & Đóng Modal 1 — Tăng ca (Overtime)
+  // Bước 3: Mở, Khoanh vùng 5s & Đóng Modal 1 — Tăng ca (Overtime)
   const otEye = page.locator('i.ps-eye[onclick*="overtime"], #psOTHours + i, .eye-ot').first();
   if (await otEye.isVisible({ timeout: 4000 }).catch(() => false)) {
     await smoothScrollHumanLike(page, otEye, { block: 'center', wait: 500 });
     console.log('👉 [TC-20]: Di chuột Neon nhấp icon con mắt Tăng ca...');
     await moveAndClick(page, otEye, { steps: 10, pause: 250 });
     await page.locator('#psModalOvertime').waitFor({ state: 'visible', timeout: 6000 }).catch(() => {});
-    await page.waitForTimeout(1600);
-    await captureStepFix8(page, testInfo, 'TC-20', 4, 'Mo Modal chi tiet Tang ca psModalOvertime');
+    await highlightAndPauseSectionFix8(
+      page,
+      page.locator('#psModalOvertime .ps-modal-content, #psModalOvertime > div'),
+      'Modal Chi tiết Tăng ca (Overtime)',
+      '',
+      5000
+    );
+    await captureStepFix8(page, testInfo, 'TC-20', 4, 'Modal Tang ca - Khoanh vung 5s quan sat chi tiet');
 
     const closeOt = page.locator('#psModalOvertime .ps-modal-close, #psModalOvertime button[onclick*="close"]').first();
     if (await closeOt.isVisible({ timeout: 3000 }).catch(() => false)) {
@@ -3907,15 +4250,21 @@ test('fix-8 | TC-20: Replay Nhân viên test.nv mở Tab Lịch sử, bấm Xem 
     }
   }
 
-  // Bước 4: Mở & Đóng Modal 2 — Đi trễ / Về sớm (Late/Early) đúng thứ tự JSON Recorder
+  // Bước 4: Mở, Khoanh vùng 5s & Đóng Modal 2 — Đi trễ / Về sớm (Late/Early) đúng thứ tự JSON Recorder
   const leEye = page.locator('i.ps-eye[onclick*="lateearly"], #psLateEarly + i, .eye-io').first();
   if (await leEye.isVisible({ timeout: 4000 }).catch(() => false)) {
     await smoothScrollHumanLike(page, leEye, { block: 'center', wait: 500 });
     console.log('👉 [TC-20]: Di chuột Neon nhấp icon con mắt Đi trễ / Về sớm...');
     await moveAndClick(page, leEye, { steps: 10, pause: 250 });
     await page.locator('#psModalLateearly').waitFor({ state: 'visible', timeout: 6000 }).catch(() => {});
-    await page.waitForTimeout(1600);
-    await captureStepFix8(page, testInfo, 'TC-20', 5, 'Mo Modal chi tiet Di tre Ve som psModalLateearly');
+    await highlightAndPauseSectionFix8(
+      page,
+      page.locator('#psModalLateearly .ps-modal-content, #psModalLateearly > div'),
+      'Modal Chi tiết Đi trễ / Về sớm',
+      '',
+      5000
+    );
+    await captureStepFix8(page, testInfo, 'TC-20', 5, 'Modal Di tre Ve som - Khoanh vung 5s quan sat chi tiet');
 
     const closeLe = page.locator('#psModalLateearly .ps-modal-close, #psModalLateearly button[onclick*="close"]').first();
     if (await closeLe.isVisible({ timeout: 3000 }).catch(() => false)) {
@@ -3925,15 +4274,21 @@ test('fix-8 | TC-20: Replay Nhân viên test.nv mở Tab Lịch sử, bấm Xem 
     }
   }
 
-  // Bước 5: Mở & Đóng Modal 3 — Ngày nghỉ (Days Off) đúng thứ tự JSON Recorder
+  // Bước 5: Mở, Khoanh vùng 5s & Đóng Modal 3 — Ngày nghỉ (Days Off) đúng thứ tự JSON Recorder
   const doEye = page.locator('i.ps-eye[onclick*="daysoff"], #psDaysOff + i, .eye-leave').first();
   if (await doEye.isVisible({ timeout: 4000 }).catch(() => false)) {
     await smoothScrollHumanLike(page, doEye, { block: 'center', wait: 500 });
     console.log('👉 [TC-20]: Di chuột Neon nhấp icon con mắt Ngày nghỉ...');
     await moveAndClick(page, doEye, { steps: 10, pause: 250 });
     await page.locator('#psModalDaysoff').waitFor({ state: 'visible', timeout: 6000 }).catch(() => {});
-    await page.waitForTimeout(1600);
-    await captureStepFix8(page, testInfo, 'TC-20', 6, 'Mo Modal chi tiet Ngay nghi psModalDaysoff');
+    await highlightAndPauseSectionFix8(
+      page,
+      page.locator('#psModalDaysoff .ps-modal-content, #psModalDaysoff > div'),
+      'Modal Chi tiết Ngày nghỉ',
+      '',
+      5000
+    );
+    await captureStepFix8(page, testInfo, 'TC-20', 6, 'Modal Ngay nghi - Khoanh vung 5s quan sat chi tiet');
 
     const closeDo = page.locator('#psModalDaysoff .ps-modal-close, #psModalDaysoff button[onclick*="close"]').first();
     if (await closeDo.isVisible({ timeout: 3000 }).catch(() => false)) {

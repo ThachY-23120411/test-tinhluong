@@ -1,14 +1,14 @@
 {
   "tcId": "TC-18",
   "pageName": "quy_trinh_tinh_luong_nv_moi",
-  "title": "fix-8 | TC-18: Replay Kế toán mở Danh sách trả lương, xem Bảng lương tổng hợp, nhảy Phiếu lương & Đăng xuất (Role: Chien.nguyen)",
+  "title": "fix-8 | TC-18: Replay Kế toán mở Danh sách trả lương, xem Bảng lương tổng hợp (trượt ngang NV 099), nhảy Phiếu lương & Đăng xuất (Role: Chien.nguyen)",
   "testStatus": "PASSED",
   "businessStatus": "PASSED",
   "businessNotes": "Đạt yêu cầu logic nghiệp vụ mong đợi",
   "defectEvidence": null,
   "failureAnalysis": {},
   "status": "PASSED",
-  "duration": "80.48s",
+  "duration": "106.28s",
   "errors": "",
   "stepScreenshots": [
     {
@@ -31,21 +31,39 @@
     },
     {
       "step": 4,
-      "title": "Xem Bang luong tong hop va cuon toi dong nhan vien 099",
-      "fileName": "TC-18-step04-xem-bang-luong-tong-hop-va-cuon-toi-dong-nhan-vien-099.png",
-      "relPath": "quy_trinh_tinh_luong_nv_moi/TC-18/screenshots/TC-18-step04-xem-bang-luong-tong-hop-va-cuon-toi-dong-nhan-vien-099.png"
+      "title": "Bang luong tong hop - Khoanh vung NV 099 (Cot trai)",
+      "fileName": "TC-18-step04-bang-luong-tong-hop-khoanh-vung-nv-099-cot-trai.png",
+      "relPath": "quy_trinh_tinh_luong_nv_moi/TC-18/screenshots/TC-18-step04-bang-luong-tong-hop-khoanh-vung-nv-099-cot-trai.png"
     },
     {
       "step": 5,
-      "title": "Xem phieu luong va chuyen toi trang cuoi (trang 82)",
-      "fileName": "TC-18-step05-xem-phieu-luong-va-chuyen-toi-trang-cuoi-trang-82.png",
-      "relPath": "quy_trinh_tinh_luong_nv_moi/TC-18/screenshots/TC-18-step05-xem-phieu-luong-va-chuyen-toi-trang-cuoi-trang-82.png"
+      "title": "Bang luong tong hop - Truot ngang giua bang NV 099",
+      "fileName": "TC-18-step05-bang-luong-tong-hop-truot-ngang-giua-bang-nv-099.png",
+      "relPath": "quy_trinh_tinh_luong_nv_moi/TC-18/screenshots/TC-18-step05-bang-luong-tong-hop-truot-ngang-giua-bang-nv-099.png"
     },
     {
       "step": 6,
+      "title": "Bang luong tong hop - Truot ngang cuoi phai NV 099",
+      "fileName": "TC-18-step06-bang-luong-tong-hop-truot-ngang-cuoi-phai-nv-099.png",
+      "relPath": "quy_trinh_tinh_luong_nv_moi/TC-18/screenshots/TC-18-step06-bang-luong-tong-hop-truot-ngang-cuoi-phai-nv-099.png"
+    },
+    {
+      "step": 7,
+      "title": "Phieu luong trang 82 - Khoanh vung thong tin NV 099",
+      "fileName": "TC-18-step07-phieu-luong-trang-82-khoanh-vung-thong-tin-nv-099.png",
+      "relPath": "quy_trinh_tinh_luong_nv_moi/TC-18/screenshots/TC-18-step07-phieu-luong-trang-82-khoanh-vung-thong-tin-nv-099.png"
+    },
+    {
+      "step": 8,
+      "title": "Phieu luong trang 82 - Khoanh vung Thuc lanh NV 099",
+      "fileName": "TC-18-step08-phieu-luong-trang-82-khoanh-vung-thuc-lanh-nv-099.png",
+      "relPath": "quy_trinh_tinh_luong_nv_moi/TC-18/screenshots/TC-18-step08-phieu-luong-trang-82-khoanh-vung-thuc-lanh-nv-099.png"
+    },
+    {
+      "step": 9,
       "title": "Dang xuat khoi tai khoan Chien nguyen thanh cong",
-      "fileName": "TC-18-step06-dang-xuat-khoi-tai-khoan-chien-nguyen-thanh-cong.png",
-      "relPath": "quy_trinh_tinh_luong_nv_moi/TC-18/screenshots/TC-18-step06-dang-xuat-khoi-tai-khoan-chien-nguyen-thanh-cong.png"
+      "fileName": "TC-18-step09-dang-xuat-khoi-tai-khoan-chien-nguyen-thanh-cong.png",
+      "relPath": "quy_trinh_tinh_luong_nv_moi/TC-18/screenshots/TC-18-step09-dang-xuat-khoi-tai-khoan-chien-nguyen-thanh-cong.png"
     }
   ],
   "attachments": {
@@ -53,14 +71,17 @@
       "quy_trinh_tinh_luong_nv_moi/TC-18/screenshots/TC-18-step01-dang-nhap-tai-khoan-chien-nguyen.png",
       "quy_trinh_tinh_luong_nv_moi/TC-18/screenshots/TC-18-step02-mo-man-hinh-danh-sach-tra-luong-mnuprl092-qua-launchpad.png",
       "quy_trinh_tinh_luong_nv_moi/TC-18/screenshots/TC-18-step03-chon-ky-luong-thang-10.png",
-      "quy_trinh_tinh_luong_nv_moi/TC-18/screenshots/TC-18-step04-xem-bang-luong-tong-hop-va-cuon-toi-dong-nhan-vien-099.png",
-      "quy_trinh_tinh_luong_nv_moi/TC-18/screenshots/TC-18-step05-xem-phieu-luong-va-chuyen-toi-trang-cuoi-trang-82.png",
-      "quy_trinh_tinh_luong_nv_moi/TC-18/screenshots/TC-18-step06-dang-xuat-khoi-tai-khoan-chien-nguyen-thanh-cong.png"
+      "quy_trinh_tinh_luong_nv_moi/TC-18/screenshots/TC-18-step04-bang-luong-tong-hop-khoanh-vung-nv-099-cot-trai.png",
+      "quy_trinh_tinh_luong_nv_moi/TC-18/screenshots/TC-18-step05-bang-luong-tong-hop-truot-ngang-giua-bang-nv-099.png",
+      "quy_trinh_tinh_luong_nv_moi/TC-18/screenshots/TC-18-step06-bang-luong-tong-hop-truot-ngang-cuoi-phai-nv-099.png",
+      "quy_trinh_tinh_luong_nv_moi/TC-18/screenshots/TC-18-step07-phieu-luong-trang-82-khoanh-vung-thong-tin-nv-099.png",
+      "quy_trinh_tinh_luong_nv_moi/TC-18/screenshots/TC-18-step08-phieu-luong-trang-82-khoanh-vung-thuc-lanh-nv-099.png",
+      "quy_trinh_tinh_luong_nv_moi/TC-18/screenshots/TC-18-step09-dang-xuat-khoi-tai-khoan-chien-nguyen-thanh-cong.png"
     ],
     "videos": [
       "quy_trinh_tinh_luong_nv_moi/TC-18/videos/video.webm"
     ],
     "traces": []
   },
-  "timestamp": "2026-11-12T12:51:45.171Z"
+  "timestamp": "2026-11-12T14:29:07.094Z"
 }

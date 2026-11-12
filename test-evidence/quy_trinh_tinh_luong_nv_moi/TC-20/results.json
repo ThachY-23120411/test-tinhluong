@@ -1,14 +1,14 @@
 {
   "tcId": "TC-20",
   "pageName": "quy_trinh_tinh_luong_nv_moi",
-  "title": "fix-8 | TC-20: Replay Nhân viên test.nv mở Tab Lịch sử, bấm Xem & mở/đóng 3 Modal chi tiết (Role: test.nv)",
+  "title": "fix-8 | TC-20: Replay Nhân viên test.nv mở Tab Lịch sử, bấm Xem & mở/khoanh vùng 5s 3 Modal chi tiết (Role: test.nv)",
   "testStatus": "PASSED",
   "businessStatus": "PASSED",
   "businessNotes": "Đạt yêu cầu logic nghiệp vụ mong đợi",
   "defectEvidence": null,
   "failureAnalysis": {},
   "status": "PASSED",
-  "duration": "51.00s",
+  "duration": "65.50s",
   "errors": "",
   "stepScreenshots": [
     {
@@ -19,9 +19,9 @@
     },
     {
       "step": 2,
-      "title": "Chuyen sang Tab Lich Su ky luong",
-      "fileName": "TC-20-step02-chuyen-sang-tab-lich-su-ky-luong.png",
-      "relPath": "quy_trinh_tinh_luong_nv_moi/TC-20/screenshots/TC-20-step02-chuyen-sang-tab-lich-su-ky-luong.png"
+      "title": "Tab Lich Su - Khoanh vung 5s ky luong 10/2026",
+      "fileName": "TC-20-step02-tab-lich-su-khoanh-vung-5s-ky-luong-10-2026.png",
+      "relPath": "quy_trinh_tinh_luong_nv_moi/TC-20/screenshots/TC-20-step02-tab-lich-su-khoanh-vung-5s-ky-luong-10-2026.png"
     },
     {
       "step": 3,
@@ -31,36 +31,36 @@
     },
     {
       "step": 4,
-      "title": "Mo Modal chi tiet Tang ca psModalOvertime",
-      "fileName": "TC-20-step04-mo-modal-chi-tiet-tang-ca-psmodalovertime.png",
-      "relPath": "quy_trinh_tinh_luong_nv_moi/TC-20/screenshots/TC-20-step04-mo-modal-chi-tiet-tang-ca-psmodalovertime.png"
+      "title": "Modal Tang ca - Khoanh vung 5s quan sat chi tiet",
+      "fileName": "TC-20-step04-modal-tang-ca-khoanh-vung-5s-quan-sat-chi-tiet.png",
+      "relPath": "quy_trinh_tinh_luong_nv_moi/TC-20/screenshots/TC-20-step04-modal-tang-ca-khoanh-vung-5s-quan-sat-chi-tiet.png"
     },
     {
       "step": 5,
-      "title": "Mo Modal chi tiet Di tre Ve som psModalLateearly",
-      "fileName": "TC-20-step05-mo-modal-chi-tiet-di-tre-ve-som-psmodallateearly.png",
-      "relPath": "quy_trinh_tinh_luong_nv_moi/TC-20/screenshots/TC-20-step05-mo-modal-chi-tiet-di-tre-ve-som-psmodallateearly.png"
+      "title": "Modal Di tre Ve som - Khoanh vung 5s quan sat chi tiet",
+      "fileName": "TC-20-step05-modal-di-tre-ve-som-khoanh-vung-5s-quan-sat-chi-tiet.png",
+      "relPath": "quy_trinh_tinh_luong_nv_moi/TC-20/screenshots/TC-20-step05-modal-di-tre-ve-som-khoanh-vung-5s-quan-sat-chi-tiet.png"
     },
     {
       "step": 6,
-      "title": "Mo Modal chi tiet Ngay nghi psModalDaysoff",
-      "fileName": "TC-20-step06-mo-modal-chi-tiet-ngay-nghi-psmodaldaysoff.png",
-      "relPath": "quy_trinh_tinh_luong_nv_moi/TC-20/screenshots/TC-20-step06-mo-modal-chi-tiet-ngay-nghi-psmodaldaysoff.png"
+      "title": "Modal Ngay nghi - Khoanh vung 5s quan sat chi tiet",
+      "fileName": "TC-20-step06-modal-ngay-nghi-khoanh-vung-5s-quan-sat-chi-tiet.png",
+      "relPath": "quy_trinh_tinh_luong_nv_moi/TC-20/screenshots/TC-20-step06-modal-ngay-nghi-khoanh-vung-5s-quan-sat-chi-tiet.png"
     }
   ],
   "attachments": {
     "screenshots": [
       "quy_trinh_tinh_luong_nv_moi/TC-20/screenshots/TC-20-step01-dang-nhap-test-nv-va-mo-man-hinh-phieu-luong.png",
-      "quy_trinh_tinh_luong_nv_moi/TC-20/screenshots/TC-20-step02-chuyen-sang-tab-lich-su-ky-luong.png",
+      "quy_trinh_tinh_luong_nv_moi/TC-20/screenshots/TC-20-step02-tab-lich-su-khoanh-vung-5s-ky-luong-10-2026.png",
       "quy_trinh_tinh_luong_nv_moi/TC-20/screenshots/TC-20-step03-bam-nut-xem-tu-lich-su-quay-ve-phieu-luong.png",
-      "quy_trinh_tinh_luong_nv_moi/TC-20/screenshots/TC-20-step04-mo-modal-chi-tiet-tang-ca-psmodalovertime.png",
-      "quy_trinh_tinh_luong_nv_moi/TC-20/screenshots/TC-20-step05-mo-modal-chi-tiet-di-tre-ve-som-psmodallateearly.png",
-      "quy_trinh_tinh_luong_nv_moi/TC-20/screenshots/TC-20-step06-mo-modal-chi-tiet-ngay-nghi-psmodaldaysoff.png"
+      "quy_trinh_tinh_luong_nv_moi/TC-20/screenshots/TC-20-step04-modal-tang-ca-khoanh-vung-5s-quan-sat-chi-tiet.png",
+      "quy_trinh_tinh_luong_nv_moi/TC-20/screenshots/TC-20-step05-modal-di-tre-ve-som-khoanh-vung-5s-quan-sat-chi-tiet.png",
+      "quy_trinh_tinh_luong_nv_moi/TC-20/screenshots/TC-20-step06-modal-ngay-nghi-khoanh-vung-5s-quan-sat-chi-tiet.png"
     ],
     "videos": [
       "quy_trinh_tinh_luong_nv_moi/TC-20/videos/video.webm"
     ],
     "traces": []
   },
-  "timestamp": "2026-11-12T12:53:07.199Z"
+  "timestamp": "2026-11-12T14:31:18.222Z"
 }
