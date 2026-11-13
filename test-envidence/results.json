@@ -1,53 +1,55 @@
 {
   "status": "passed",
-  "timestamp": "00:26:18 13/11/2026",
+  "timestamp": "09:51:31 13/11/2026",
   "totalTests": 1,
   "pages": {
     "quy_trinh_tinh_luong_nv_moi": [
       {
-        "tcId": "TC-06",
+        "tcId": "TC-13",
         "pageName": "quy_trinh_tinh_luong_nv_moi",
-        "title": "fix-5 | TC-06: Khảo sát hiện trạng 5 ngày công trên Bảng công chi tiết (Role: test.nv)",
+        "title": "fix-6 | TC-13: Nhân viên Nguyễn Văn Test mở Bảng công cá nhân (MnuWPT010) chọn Tháng 10 xem kết quả (Role: test.nv)",
         "testStatus": "PASSED",
         "businessStatus": "PASSED",
-        "businessNotes": "PASS - Khảo sát Baseline Before 5 ngày công Tháng 10/2026 của NV 099 trên Bảng công cá nhân (22 ngày công trong CSDL).",
+        "businessNotes": "Đạt yêu cầu logic nghiệp vụ mong đợi",
         "defectEvidence": null,
         "failureAnalysis": {},
         "status": "PASSED",
-        "duration": "41.12s",
+        "duration": "39.19s",
         "errors": "",
         "stepScreenshots": [
           {
             "step": 1,
-            "title": "Dang nhap tai khoan nhan vien moi test nv",
-            "fileName": "TC-06-step01-dang-nhap-tai-khoan-nhan-vien-moi-test-nv.png",
-            "relPath": "quy_trinh_tinh_luong_nv_moi/TC-06/screenshots/TC-06-step01-dang-nhap-tai-khoan-nhan-vien-moi-test-nv.png"
+            "title": "Dang nhap test.nv",
+            "fileName": "TC-13-step01-dang-nhap-test-nv.png",
+            "relPath": "quy_trinh_tinh_luong_nv_moi/TC-13/screenshots/TC-13-step01-dang-nhap-test-nv.png"
           },
           {
             "step": 2,
-            "title": "Mo man hinh Cham cong ca nhan MnuWPT010",
-            "fileName": "TC-06-step02-mo-man-hinh-cham-cong-ca-nhan-mnuwpt010.png",
-            "relPath": "quy_trinh_tinh_luong_nv_moi/TC-06/screenshots/TC-06-step02-mo-man-hinh-cham-cong-ca-nhan-mnuwpt010.png"
+            "title": "Mo Bang cong ca nhan MnuWPT010",
+            "fileName": "TC-13-step02-mo-bang-cong-ca-nhan-mnuwpt010.png",
+            "relPath": "quy_trinh_tinh_luong_nv_moi/TC-13/screenshots/TC-13-step02-mo-bang-cong-ca-nhan-mnuwpt010.png"
           },
           {
             "step": 3,
-            "title": "Khao sat truc quan 5 ngay cong mau thang 10-2026",
-            "fileName": "TC-06-step03-khao-sat-truc-quan-5-ngay-cong-mau-thang-10-2026.png",
-            "relPath": "quy_trinh_tinh_luong_nv_moi/TC-06/screenshots/TC-06-step03-khao-sat-truc-quan-5-ngay-cong-mau-thang-10-2026.png"
+            "title": "Chon Thang 10 xem Bang cong ca nhan NV 099",
+            "fileName": "TC-13-step03-chon-thang-10-xem-bang-cong-ca-nhan-nv-099.png",
+            "relPath": "quy_trinh_tinh_luong_nv_moi/TC-13/screenshots/TC-13-step03-chon-thang-10-xem-bang-cong-ca-nhan-nv-099.png",
+            "isDuplicate": true,
+            "duplicateOfStep": 2
           }
         ],
         "attachments": {
           "screenshots": [
-            "quy_trinh_tinh_luong_nv_moi/TC-06/screenshots/TC-06-step01-dang-nhap-tai-khoan-nhan-vien-moi-test-nv.png",
-            "quy_trinh_tinh_luong_nv_moi/TC-06/screenshots/TC-06-step02-mo-man-hinh-cham-cong-ca-nhan-mnuwpt010.png",
-            "quy_trinh_tinh_luong_nv_moi/TC-06/screenshots/TC-06-step03-khao-sat-truc-quan-5-ngay-cong-mau-thang-10-2026.png"
+            "quy_trinh_tinh_luong_nv_moi/TC-13/screenshots/TC-13-step01-dang-nhap-test-nv.png",
+            "quy_trinh_tinh_luong_nv_moi/TC-13/screenshots/TC-13-step02-mo-bang-cong-ca-nhan-mnuwpt010.png",
+            "quy_trinh_tinh_luong_nv_moi/TC-13/screenshots/TC-13-step03-chon-thang-10-xem-bang-cong-ca-nhan-nv-099.png"
           ],
           "videos": [
-            "quy_trinh_tinh_luong_nv_moi/TC-06/videos/video.webm"
+            "quy_trinh_tinh_luong_nv_moi/TC-13/videos/video.webm"
           ],
           "traces": []
         },
-        "timestamp": "2026-11-12T17:26:17.711Z"
+        "timestamp": "2026-11-13T02:51:31.005Z"
       }
     ]
   }

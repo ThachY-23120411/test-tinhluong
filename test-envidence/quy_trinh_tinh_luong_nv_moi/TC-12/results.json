@@ -1,14 +1,14 @@
 {
   "tcId": "TC-12",
   "pageName": "quy_trinh_tinh_luong_nv_moi",
-  "title": "fix-6 | TC-12: Quản lý Trường Long duyệt Cấp 2 (Nghỉ phép 24/10, Bù công 15/10 & 16/10, Xin hủy 14/10), xem Lịch sử và Đăng xuất (Role: LongKa)",
+  "title": "fix-6 | TC-12: Quản lý Trường Long duyệt Cấp 2 (Nghỉ phép 22/10, Bù công 15/10 & 16/10, Xin hủy 14/10), xem Lịch sử và Đăng xuất (Role: LongKa)",
   "testStatus": "PASSED",
   "businessStatus": "PASSED",
   "businessNotes": "Đạt yêu cầu logic nghiệp vụ mong đợi",
   "defectEvidence": null,
   "failureAnalysis": {},
   "status": "PASSED",
-  "duration": "138.76s",
+  "duration": "148.59s",
   "errors": "",
   "stepScreenshots": [
     {
@@ -19,9 +19,9 @@
     },
     {
       "step": 2,
-      "title": "Duyet Cap 2 va kiem tra tab Nghỉ phép 24/10",
-      "fileName": "TC-12-step02-duyet-cap-2-va-kiem-tra-tab-nghi-phep-24-10.png",
-      "relPath": "quy_trinh_tinh_luong_nv_moi/TC-12/screenshots/TC-12-step02-duyet-cap-2-va-kiem-tra-tab-nghi-phep-24-10.png"
+      "title": "Duyet Cap 2 va kiem tra tab Nghỉ phép 22/10",
+      "fileName": "TC-12-step02-duyet-cap-2-va-kiem-tra-tab-nghi-phep-22-10.png",
+      "relPath": "quy_trinh_tinh_luong_nv_moi/TC-12/screenshots/TC-12-step02-duyet-cap-2-va-kiem-tra-tab-nghi-phep-22-10.png"
     },
     {
       "step": 3,
@@ -51,7 +51,7 @@
   "attachments": {
     "screenshots": [
       "quy_trinh_tinh_luong_nv_moi/TC-12/screenshots/TC-12-step01-longka-mo-mnuwpt037-duyet-cap-2.png",
-      "quy_trinh_tinh_luong_nv_moi/TC-12/screenshots/TC-12-step02-duyet-cap-2-va-kiem-tra-tab-nghi-phep-24-10.png",
+      "quy_trinh_tinh_luong_nv_moi/TC-12/screenshots/TC-12-step02-duyet-cap-2-va-kiem-tra-tab-nghi-phep-22-10.png",
       "quy_trinh_tinh_luong_nv_moi/TC-12/screenshots/TC-12-step03-duyet-cap-2-va-kiem-tra-tab-bu-cong-15-10.png",
       "quy_trinh_tinh_luong_nv_moi/TC-12/screenshots/TC-12-step04-duyet-cap-2-va-kiem-tra-tab-bu-cong-16-10.png",
       "quy_trinh_tinh_luong_nv_moi/TC-12/screenshots/TC-12-step05-duyet-cap-2-va-kiem-tra-tab-xin-huy-bu-cong-14-10.png",
@@ -62,5 +62,5 @@
     ],
     "traces": []
   },
-  "timestamp": "2026-11-12T08:13:29.363Z"
+  "timestamp": "2026-11-13T02:48:33.247Z"
 }

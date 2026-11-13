@@ -114,7 +114,7 @@ BEGIN TRY
     -- 8. [FIX-4] XÓA PHÂN CA LÀM VIỆC & LỊCH CA CŨ
     DELETE FROM tblShiftGroupByEmployee WHERE EmployeeID = '099';
     DELETE FROM tblWSchedule            WHERE EmployeeID = '099';
-    PRINT N'✅ 8. [fix-4] Đã xóa phân ca làm việc & lịch ca cũ (tblShiftGroupByEmployee, tblWSchedule - chờ TC-05 nạp lại)';
+    PRINT N'✅ 8. [fix-4] Đã làm sạch phân ca làm việc cũ (tblShiftGroupByEmployee, tblWSchedule - sẽ được seed đồng bộ ở Mục 15)';
 
     -- 9. [FIX-4] XÓA THÔNG TIN NGƯỜI PHỤ THUỘC GIẢM TRỪ GIA CẢNH
     DELETE FROM tblFamilyInfo WHERE EmployeeID = '099';
@@ -255,7 +255,7 @@ BEGIN TRY
     END
     PRINT N'✅ 14. Đã khởi tạo ngân sách phép năm AL = 2 ngày (Remain = 2) cho NV 099 (tblEmployeeAnnual)';
 
-    -- 15. SEED DỮ LIỆU CHẤM CÔNG THÁNG 10/2026 (ĐỒNG BỘ CẢ tblHasTA VÀ tblTmpAttend ĐỂ TRÁNH LỖI 0H)
+    -- 15. SEED DỮ LIỆU CHẤM CÔNG & PHÂN CA THÁNG 10/2026 (ĐỒNG BỘ tblWSchedule, tblHasTA VÀ tblTmpAttend)
     DECLARE @FromDate DATE, @ToDate DATE;
     SELECT @FromDate = CAST(FromDate AS DATE), @ToDate = CAST(ToDate AS DATE)
     FROM dbo.fn_Get_SalaryPeriod(10, 2026);
@@ -274,10 +274,16 @@ BEGIN TRY
     DECLARE @IsWeekend BIT;
     DECLARE @AttStart DATETIME, @AttEnd DATETIME, @WorkHours FLOAT;
     DECLARE @NormalDays INT = 0;
+    DECLARE @CurShiftID INT;
+    DECLARE @CurHolidayStatus INT;
 
     WHILE @d <= @ToDate
     BEGIN
         SET @IsWeekend = CASE WHEN ((DATEPART(dw, @d) + @@DATEFIRST) % 7) IN (0, 1) THEN 1 ELSE 0 END;
+
+        -- Xác định ca làm việc theo thứ: 1=CN, 2=T2, 3=T3, 4=T4, 5=T5, 6=T6, 7=T7 (khớp ShiftID ca HC trong tblShiftSetting)
+        SET @CurShiftID = ((DATEPART(dw, @d) + @@DATEFIRST - 2) % 7) + 1;
+        SET @CurHolidayStatus = CASE WHEN @IsWeekend = 1 THEN 1 ELSE 0 END;
 
         IF @d = '2026-10-14'
         BEGIN
@@ -300,9 +306,16 @@ BEGIN TRY
             SET @AttEnd    = CAST('2026-10-16 16:00:00' AS DATETIME);
             SET @WorkHours = 7.0;
         END
-        ELSE IF @d = '2026-10-24' OR @IsWeekend = 1
+        ELSE IF @d = '2026-10-22'
         BEGIN
-            -- Ngày đặc biệt 4 (24/10 chờ Nghỉ phép AL) & T7/CN: Trống (0.0h)
+            -- Ngày đặc biệt 4 (22/10 Thứ 5: Ngày làm việc có phân ca nhưng TRỐNG CÔNG để test nộp đơn xin Nghỉ phép AL 1 ngày = 8.0h ở TC-08)
+            SET @AttStart  = NULL;
+            SET @AttEnd    = NULL;
+            SET @WorkHours = 0.0;
+        END
+        ELSE IF @IsWeekend = 1
+        BEGIN
+            -- Tất cả Thứ 7 / Chủ Nhật: Trống (0.0h)
             SET @AttStart  = NULL;
             SET @AttEnd    = NULL;
             SET @WorkHours = 0.0;
@@ -316,11 +329,25 @@ BEGIN TRY
             SET @NormalDays = @NormalDays + 1;
         END
 
-        -- Chèn vào tblHasTA
-        INSERT INTO tblHasTA (EmployeeID, AttDate, Period, AttStart, AttEnd, WorkingTime, RealWorkingTime, Approve)
-        VALUES ('099', @d, 0, @AttStart, @AttEnd, @WorkHours, @WorkHours, 0);
+        -- 1. ĐỒNG BỘ LỊCH PHÂN CA (tblWSchedule) - ĐIỀU KIỆN TIÊN QUYẾT ĐỂ spDailyAttendanceData HIỂN THỊ LÊN LƯỚI CHẤM CÔNG CÁ NHÂN!
+        IF EXISTS (SELECT 1 FROM tblWSchedule WHERE EmployeeID = '099' AND CAST(ScheduleDate AS DATE) = @d)
+        BEGIN
+            UPDATE tblWSchedule
+            SET ShiftID = @CurShiftID,
+                HolidayStatus = @CurHolidayStatus
+            WHERE EmployeeID = '099' AND CAST(ScheduleDate AS DATE) = @d;
+        END
+        ELSE
+        BEGIN
+            INSERT INTO tblWSchedule (EmployeeID, ScheduleDate, ShiftID, HolidayStatus)
+            VALUES ('099', CAST(@d AS DATETIME), @CurShiftID, @CurHolidayStatus);
+        END
 
-        -- Đồng bộ quẹt thẻ vào tblTmpAttend để khi Recalculate không bị xóa về 0h
+        -- 2. Chèn vào tblHasTA
+        INSERT INTO tblHasTA (EmployeeID, AttDate, Period, AttStart, AttEnd, WorkingTime, RealWorkingTime, Approve)
+        VALUES ('099', CAST(@d AS DATETIME), 0, @AttStart, @AttEnd, @WorkHours, @WorkHours, 0);
+
+        -- 3. Đồng bộ quẹt thẻ vào tblTmpAttend để khi Recalculate không bị xóa về 0h
         IF @AttStart IS NOT NULL AND @AttEnd IS NOT NULL
         BEGIN
             INSERT INTO tblTmpAttend (EmployeeID, AttTime, AttState, MachineNo) VALUES ('099', @AttStart, 1, 1);
@@ -334,7 +361,7 @@ BEGIN TRY
     DELETE FROM tblPendingImportAttend WHERE EmployeeID = '099' AND Date BETWEEN @FromDate AND @ToDate;
     DELETE FROM tblPendingTaProcessMain WHERE EmployeeID = '099' AND Date BETWEEN @FromDate AND @ToDate;
 
-    PRINT N'✅ 15. Đã seed toàn bộ kỳ công Tháng 10/2026 (' + CAST(@NormalDays AS NVARCHAR(10)) + N' ngày chuẩn 8.0h + 3 ngày công lẻ 14, 15, 16/10) đồng bộ tblHasTA & tblTmpAttend';
+    PRINT N'✅ 15. Đã seed toàn bộ kỳ công Tháng 10/2026 (' + CAST(@NormalDays AS NVARCHAR(10)) + N' ngày chuẩn 8.0h + 3 ngày công lẻ 14, 15, 16/10) đồng bộ trọn vẹn cả 3 bảng (tblWSchedule, tblHasTA, tblTmpAttend)';
 
     COMMIT TRANSACTION;
     PRINT N'=========================================================================================';
@@ -351,6 +378,14 @@ GO
 -- BẢNG ĐỐI SOÁT CSDL SAU KHI CHẠY MASTER RESET & SEED
 -- =========================================================================================
 PRINT N'';
+PRINT N'📊 BẢNG 0: KIỂM TRA DỮ LIỆU ĐÃ ĐƯỢC RESET (LƯƠNG, NPT, PHÂN CA FIX-4 & TÍNH LƯƠNG FIX-7 PHẢI = 0):';
+SELECT 
+    (SELECT COUNT(*) FROM tblSalaryHistory WHERE EmployeeID = '099') AS [Lương TC-03 (Cần = 0)],
+    (SELECT COUNT(*) FROM tblFamilyInfo WHERE EmployeeID = '099') AS [NPT TC-04 (Cần = 0)],
+    (SELECT COUNT(*) FROM tblShiftGroupByEmployee WHERE EmployeeID = '099') AS [Phân ca TC-05 (Cần = 0)],
+    (SELECT COUNT(*) FROM tblSal_Sal WHERE EmployeeID = '099' AND Month = 10 AND Year = 2026) AS [Bảng lương TC-16 (Cần = 0)];
+
+PRINT N'';
 PRINT N'📊 BẢNG 1: KIỂM TRA HỒ SƠ & TÀI KHOẢN TIỀN ĐỀ:';
 SELECT 
     e.EmployeeID, 
@@ -366,24 +401,28 @@ LEFT JOIN tblSC_Login l ON e.EmployeeID = l.EmployeeID
 WHERE e.EmployeeID = '099';
 
 PRINT N'';
-PRINT N'📊 BẢNG 2: KIỂM TRA DỮ LIỆU CÔNG MẪU TRƯỚC KHI CHẠY TEST (tblHasTA):';
+PRINT N'📊 BẢNG 2: KIỂM TRA DỮ LIỆU PHÂN CA & CÔNG MẪU TRƯỚC KHI CHẠY TEST (tblWSchedule & tblHasTA):';
 SELECT 
-    CONVERT(varchar, AttDate, 23) AS [Ngày],
-    DATENAME(dw, AttDate) AS [Thứ],
-    ISNULL(CONVERT(varchar(5), AttStart, 108), '--:--') AS [Giờ Vào],
-    ISNULL(CONVERT(varchar(5), AttEnd, 108), '--:--') AS [Giờ Ra],
-    WorkingTime AS [Giờ Công],
+    CONVERT(varchar, ws.ScheduleDate, 23) AS [Ngày],
+    DATENAME(dw, ws.ScheduleDate) AS [Thứ],
+    ws.ShiftID AS [Mã Ca],
+    CASE WHEN ws.HolidayStatus = 1 THEN N'Nghỉ tuần' ELSE N'Làm việc' END AS [Lịch phân ca],
+    ISNULL(CONVERT(varchar(5), hta.AttStart, 108), '--:--') AS [Giờ Vào],
+    ISNULL(CONVERT(varchar(5), hta.AttEnd, 108), '--:--') AS [Giờ Ra],
+    ISNULL(hta.WorkingTime, 0) AS [Giờ Công],
+    CAST(ROUND(ISNULL(hta.WorkingTime, 0) / 8.0, 3) AS decimal(5,3)) AS [Quy đổi công],
     CASE 
-        WHEN CONVERT(varchar, AttDate, 23) = '2026-10-14' THEN N'Đặc biệt 1: 6.0h (Nộp nhầm & Tự hủy)'
-        WHEN CONVERT(varchar, AttDate, 23) = '2026-10-15' THEN N'Đặc biệt 2: 4.0h (Chờ bù Giờ Ra 17:00 -> DUYỆT)'
-        WHEN CONVERT(varchar, AttDate, 23) = '2026-10-16' THEN N'Đặc biệt 3: 7.0h (Chờ bù Giờ Ra 17:00 -> TỪ CHỐI)'
-        WHEN CONVERT(varchar, AttDate, 23) = '2026-10-24' THEN N'Đặc biệt 4: 0.0h (Chờ Nghỉ phép AL 1 ngày)'
-        WHEN ((DATEPART(dw, AttDate) + @@DATEFIRST) % 7) IN (0, 1) THEN N'Cuối tuần (T7/CN) - Nghỉ'
+        WHEN CONVERT(varchar, ws.ScheduleDate, 23) = '2026-10-14' THEN N'Đặc biệt 1: 6.0h (Nộp nhầm & Tự hủy)'
+        WHEN CONVERT(varchar, ws.ScheduleDate, 23) = '2026-10-15' THEN N'Đặc biệt 2: 4.0h (Chờ bù Giờ Ra 17:00 -> DUYỆT)'
+        WHEN CONVERT(varchar, ws.ScheduleDate, 23) = '2026-10-16' THEN N'Đặc biệt 3: 7.0h (Chờ bù Giờ Ra 17:00 -> TỪ CHỐI)'
+        WHEN CONVERT(varchar, ws.ScheduleDate, 23) = '2026-10-22' THEN N'Đặc biệt 4: 0.0h (Chờ Nghỉ phép AL 1 ngày)'
+        WHEN ws.HolidayStatus = 1 THEN N'Cuối tuần (T7/CN) - Nghỉ'
         ELSE N'Ngày làm việc chuẩn 8.0h (08:00 - 17:00)'
     END AS [Trạng thái kỳ vọng Before]
-FROM tblHasTA
-WHERE EmployeeID = '099' AND AttDate BETWEEN '2026-10-12' AND '2026-10-25'
-ORDER BY AttDate;
+FROM tblWSchedule ws
+LEFT JOIN tblHasTA hta ON hta.EmployeeID = ws.EmployeeID AND hta.AttDate = ws.ScheduleDate
+WHERE ws.EmployeeID = '099' AND ws.ScheduleDate BETWEEN '2026-10-12' AND '2026-10-25'
+ORDER BY ws.ScheduleDate;
 GO
 
 

@@ -1,6 +1,6 @@
 -- =============================================================================
 -- SCRIPT RESET TRẠNG THÁI CHỜ PHÊ DUYỆT CỦA NV 099 CHO FIX-6 (DỰA TRÊN RECORDING 11/12/2026)
--- Mục đích: Đưa toàn bộ 5 đơn của NV 099 (Tăng ca 20/10, Nghỉ phép 24/10, Bù công 15/10 & 16/10,
+-- Mục đích: Đưa toàn bộ 5 đơn của NV 099 (Tăng ca 20/10, Nghỉ phép 22/10, Bù công 15/10 & 16/10,
 --           Xin hủy bù công 14/10) về nguyên trạng thái chờ phê duyệt Cấp 1 (trước khi chạy fix-6).
 -- Hướng dẫn: Mở trên SSMS, kiểm tra cú pháp (Ctrl + F5) rồi Execute (F5) trước mỗi lần chạy lại fix-6.
 -- =============================================================================
@@ -62,7 +62,7 @@ WHERE EmployeeID = '099'
       SELECT IdentityID FROM tblAttendanceConfirmRequest WHERE EmployeeID = '099'
   );
 
--- 3. Reset đơn Nghỉ phép (24/10)
+-- 3. Reset đơn Nghỉ phép (22/10)
 UPDATE tblLeaveRegistered
 SET Approve_Status = 1,
     Current_Approve_Level = NULL,

@@ -1,6 +1,6 @@
 # BÁO CÁO KIỂM THỬ TRANG: QUY_TRINH_TINH_LUONG_NV_MOI
 
-> Thời gian kiểm thử: **00:26:18 13/11/2026**
+> Thời gian kiểm thử: **09:51:31 13/11/2026**
 > Tổng số kịch bản: **20** | ✅ LOGIC PASS: **14** | ❌ LOGIC FAIL: **6**
 
 ## BẢNG ĐỐI CHIẾU TRẠNG THÁI TEST & LOGIC NGHIỆP VỤ
@@ -26,9 +26,9 @@ Call log:
 [2m  - waiting for locator('#sp_ResignationLeave, form, #dynamic-pane-MnuWPT315').first() to be visible[22m
  |
 | **TC-09** | fix-5 | TC-09: Nộp đơn Xin tăng ca OT 2.0h ngày 20/10/2026 & Đăng xuất (Role: test.nv) | ❌ FAIL | ❌ FAIL | Error: page.waitForTimeout: Target page, context or browser has been closed |
-| **TC-10** | fix-6 | TC-10: Quản lý Trí Nguyễn duyệt Cấp 1 (Nghỉ phép 24/10, Bù công 15/10 & 16/10, Xin hủy 14/10) và Đăng xuất (Role: tri.nguyen) | ✅ PASS | ✅ PASS | Đạt yêu cầu logic nghiệp vụ mong đợi |
+| **TC-10** | fix-6 | TC-10: Quản lý Trí Nguyễn duyệt Cấp 1 (Nghỉ phép 22/10, Bù công 15/10 & 16/10, Xin hủy 14/10) và Đăng xuất (Role: tri.nguyen) | ✅ PASS | ✅ PASS | Đạt yêu cầu logic nghiệp vụ mong đợi |
 | **TC-11** | fix-6 | TC-11: Quản lý Trường Long duyệt Cấp 1 đơn Tăng ca OT 20/10 & kiểm tra tab Lịch sử (Role: LongKa) | ✅ PASS | ✅ PASS | Đạt yêu cầu logic nghiệp vụ mong đợi |
-| **TC-12** | fix-6 | TC-12: Quản lý Trường Long duyệt Cấp 2 (Nghỉ phép 24/10, Bù công 15/10 & 16/10, Xin hủy 14/10), xem Lịch sử và Đăng xuất (Role: LongKa) | ✅ PASS | ✅ PASS | Đạt yêu cầu logic nghiệp vụ mong đợi |
+| **TC-12** | fix-6 | TC-12: Quản lý Trường Long duyệt Cấp 2 (Nghỉ phép 22/10, Bù công 15/10 & 16/10, Xin hủy 14/10), xem Lịch sử và Đăng xuất (Role: LongKa) | ✅ PASS | ✅ PASS | Đạt yêu cầu logic nghiệp vụ mong đợi |
 | **TC-13** | fix-6 | TC-13: Nhân viên Nguyễn Văn Test mở Bảng công cá nhân (MnuWPT010) chọn Tháng 10 xem kết quả (Role: test.nv) | ✅ PASS | ✅ PASS | Đạt yêu cầu logic nghiệp vụ mong đợi |
 | **TC-14** | fix-7 | TC-14: Mô phỏng thao tác nạp Thưởng KPI 1,000,000 VNĐ trên Thu nhập không cố định (MnuPRL036) | ✅ PASS | ✅ PASS | Đạt yêu cầu logic nghiệp vụ mong đợi |
 | **TC-15** | fix-7 | TC-15: Mô phỏng thao tác nạp Tạm ứng lương 2,000,000 VNĐ & Khóa phiếu (MnuPRL070) | ✅ PASS | ✅ PASS | Đạt yêu cầu logic nghiệp vụ mong đợi |
@@ -299,9 +299,9 @@ Error: page.waitForTimeout: Target page, context or browser has been closed
 
 ---
 
-### TC-10: fix-6 | TC-10: Quản lý Trí Nguyễn duyệt Cấp 1 (Nghỉ phép 24/10, Bù công 15/10 & 16/10, Xin hủy 14/10) và Đăng xuất (Role: tri.nguyen)
+### TC-10: fix-6 | TC-10: Quản lý Trí Nguyễn duyệt Cấp 1 (Nghỉ phép 22/10, Bù công 15/10 & 16/10, Xin hủy 14/10) và Đăng xuất (Role: tri.nguyen)
 
-* **Trạng thái thực thi Test (Kỹ thuật)**: ✅ PASS (Thời gian thực thi: `122.39s`)
+* **Trạng thái thực thi Test (Kỹ thuật)**: ✅ PASS (Thời gian thực thi: `129.94s`)
 * **Trạng thái Logic Nghiệp vụ (Business Output)**: ✅ PASS
 * **Đánh giá tổng quát**: Đạt yêu cầu logic nghiệp vụ mong đợi
 * **Thư mục lưu trữ**: `test-evidence/quy_trinh_tinh_luong_nv_moi/TC-10/`
@@ -314,8 +314,8 @@ Error: page.waitForTimeout: Target page, context or browser has been closed
 ##### 🔹 Bước 2: Mo MnuWPT037 qua Launchpad
 ![Bước 2: Mo MnuWPT037 qua Launchpad](TC-10/screenshots/TC-10-step02-mo-mnuwpt037-qua-launchpad.png)
 
-##### 🔹 Bước 3: Duyet Cap 1 Đơn Nghỉ phép 24/10
-![Bước 3: Duyet Cap 1 Đơn Nghỉ phép 24/10](TC-10/screenshots/TC-10-step03-duyet-cap-1-don-nghi-phep-24-10.png)
+##### 🔹 Bước 3: Duyet Cap 1 Đơn Nghỉ phép 22/10
+![Bước 3: Duyet Cap 1 Đơn Nghỉ phép 22/10](TC-10/screenshots/TC-10-step03-duyet-cap-1-don-nghi-phep-22-10.png)
 
 ##### 🔹 Bước 4: Duyet Cap 1 Đơn Bù công 15/10
 ![Bước 4: Duyet Cap 1 Đơn Bù công 15/10](TC-10/screenshots/TC-10-step04-duyet-cap-1-don-bu-cong-15-10.png)
@@ -363,9 +363,9 @@ Error: page.waitForTimeout: Target page, context or browser has been closed
 
 ---
 
-### TC-12: fix-6 | TC-12: Quản lý Trường Long duyệt Cấp 2 (Nghỉ phép 24/10, Bù công 15/10 & 16/10, Xin hủy 14/10), xem Lịch sử và Đăng xuất (Role: LongKa)
+### TC-12: fix-6 | TC-12: Quản lý Trường Long duyệt Cấp 2 (Nghỉ phép 22/10, Bù công 15/10 & 16/10, Xin hủy 14/10), xem Lịch sử và Đăng xuất (Role: LongKa)
 
-* **Trạng thái thực thi Test (Kỹ thuật)**: ✅ PASS (Thời gian thực thi: `138.76s`)
+* **Trạng thái thực thi Test (Kỹ thuật)**: ✅ PASS (Thời gian thực thi: `148.59s`)
 * **Trạng thái Logic Nghiệp vụ (Business Output)**: ✅ PASS
 * **Đánh giá tổng quát**: Đạt yêu cầu logic nghiệp vụ mong đợi
 * **Thư mục lưu trữ**: `test-evidence/quy_trinh_tinh_luong_nv_moi/TC-12/`
@@ -375,8 +375,8 @@ Error: page.waitForTimeout: Target page, context or browser has been closed
 ##### 🔹 Bước 1: LongKa mo MnuWPT037 duyet Cap 2
 ![Bước 1: LongKa mo MnuWPT037 duyet Cap 2](TC-12/screenshots/TC-12-step01-longka-mo-mnuwpt037-duyet-cap-2.png)
 
-##### 🔹 Bước 2: Duyet Cap 2 va kiem tra tab Nghỉ phép 24/10
-![Bước 2: Duyet Cap 2 va kiem tra tab Nghỉ phép 24/10](TC-12/screenshots/TC-12-step02-duyet-cap-2-va-kiem-tra-tab-nghi-phep-24-10.png)
+##### 🔹 Bước 2: Duyet Cap 2 va kiem tra tab Nghỉ phép 22/10
+![Bước 2: Duyet Cap 2 va kiem tra tab Nghỉ phép 22/10](TC-12/screenshots/TC-12-step02-duyet-cap-2-va-kiem-tra-tab-nghi-phep-22-10.png)
 
 ##### 🔹 Bước 3: Duyet Cap 2 va kiem tra tab Bù công 15/10
 ![Bước 3: Duyet Cap 2 va kiem tra tab Bù công 15/10](TC-12/screenshots/TC-12-step03-duyet-cap-2-va-kiem-tra-tab-bu-cong-15-10.png)
@@ -397,7 +397,7 @@ Error: page.waitForTimeout: Target page, context or browser has been closed
 
 ### TC-13: fix-6 | TC-13: Nhân viên Nguyễn Văn Test mở Bảng công cá nhân (MnuWPT010) chọn Tháng 10 xem kết quả (Role: test.nv)
 
-* **Trạng thái thực thi Test (Kỹ thuật)**: ✅ PASS (Thời gian thực thi: `28.05s`)
+* **Trạng thái thực thi Test (Kỹ thuật)**: ✅ PASS (Thời gian thực thi: `39.19s`)
 * **Trạng thái Logic Nghiệp vụ (Business Output)**: ✅ PASS
 * **Đánh giá tổng quát**: Đạt yêu cầu logic nghiệp vụ mong đợi
 * **Thư mục lưu trữ**: `test-evidence/quy_trinh_tinh_luong_nv_moi/TC-13/`
@@ -411,7 +411,7 @@ Error: page.waitForTimeout: Target page, context or browser has been closed
 ![Bước 2: Mo Bang cong ca nhan MnuWPT010](TC-13/screenshots/TC-13-step02-mo-bang-cong-ca-nhan-mnuwpt010.png)
 
 ##### 🔹 Bước 3: Chon Thang 10 xem Bang cong ca nhan NV 099
-![Bước 3: Chon Thang 10 xem Bang cong ca nhan NV 099](TC-13/screenshots/TC-13-step03-chon-thang-10-xem-bang-cong-ca-nhan-nv-099.png)
+> *(Giao diện giữ nguyên, không phát sinh thay đổi so với Bước 2)*
 
 #### 🎥 Video & Dấu vết kiểm thử (Video & Trace):
 - **Video phiên chạy thực tế**: [video.webm](TC-13/videos/video.webm)

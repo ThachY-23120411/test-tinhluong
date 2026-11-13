@@ -5,10 +5,10 @@ cls
 echo ====================================================================
 echo   CHAY TRUC QUAN FIX-6: REPLAY KHOP 100%% RECORDING 11/12/2026
 echo   Vai tro: tri.nguyen (004), LongKa (012), test.nv (099)
-echo   Pham vi (4 TC tu TC-10 den TC-13):
-echo     [TC-10]: tri.nguyen duyet Cap 1 (Phep, Bu cong 15/10 ^& 16/10, Xin huy 14/10) ^& Dang xuat
-echo     [TC-11]: LongKa duyet Cap 1 Tang ca OT ^& xem tab Lich su
-echo     [TC-12]: LongKa duyet Cap 2 (Phep, Bu cong 15/10 ^& 16/10, Xin huy 14/10), xem tab ^& Dang xuat
+echo   Pham vi (3 TC tu TC-10 den TC-13, bo qua TC-11):
+echo     [TC-10]: tri.nguyen duyet Cap 1 (Phep 22/10, Bu cong 15/10 ^& 16/10, Xin huy 14/10) ^& Dang xuat
+echo     [TC-11]: [BO QUA THEO YEU CAU CUA SEP] Khong test duyet Tang ca OT
+echo     [TC-12]: LongKa duyet Cap 2 (Phep 22/10, Bu cong 15/10 ^& 16/10, Xin huy 14/10), xem tab ^& Dang xuat
 echo     [TC-13]: test.nv mo Bang cong ca nhan (MnuWPT010) chon Thang 10
 echo ====================================================================
 echo.

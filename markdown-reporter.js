@@ -577,15 +577,23 @@ pause
       masterMd += `\n---\n\n`;
     }
 
-    fs.writeFileSync(path.join(this.outputDir, 'test-report.md'), masterMd, 'utf8');
+    try {
+      fs.writeFileSync(path.join(this.outputDir, 'test-report.md'), masterMd, 'utf8');
+    } catch (e) {
+      console.warn('⚠️ [REPORTER]: Không thể ghi đè test-report.md do file đang được mở hoặc khóa:', e.message);
+    }
 
     // 3. Ghi master results.json
-    fs.writeFileSync(path.join(this.outputDir, 'results.json'), JSON.stringify({
-      status: result.status,
-      timestamp,
-      totalTests: this.allResults.length,
-      pages: this.pageResults
-    }, null, 2), 'utf8');
+    try {
+      fs.writeFileSync(path.join(this.outputDir, 'results.json'), JSON.stringify({
+        status: result.status,
+        timestamp,
+        totalTests: this.allResults.length,
+        pages: this.pageResults
+      }, null, 2), 'utf8');
+    } catch (e) {
+      console.warn('⚠️ [REPORTER]: Không thể ghi đè results.json:', e.message);
+    }
 
     console.log(`\n📄 [REPORTER]: Đã xuất cấu trúc báo cáo phân cấp chuyên nghiệp tại: ${this.outputDir}`);
   }

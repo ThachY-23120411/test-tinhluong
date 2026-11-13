@@ -1,6 +1,6 @@
 # BÁO CÁO KIỂM THỬ TỔNG HỢP E2E (MASTER TEST REPORT)
 
-> Thời gian kiểm thử: **00:26:18 13/11/2026**
+> Thời gian kiểm thử: **09:51:31 13/11/2026**
 > Tổng số trang: **21** | Tổng số kịch bản: **115**
 
 ## 1. TỔNG QUAN THEO TỪNG TRANG / MENU
@@ -2704,9 +2704,9 @@ Error: page.waitForTimeout: Target page, context or browser has been closed
 
 ---
 
-### [quy_trinh_tinh_luong_nv_moi] TC-10: fix-6 | TC-10: Quản lý Trí Nguyễn duyệt Cấp 1 (Nghỉ phép 24/10, Bù công 15/10 & 16/10, Xin hủy 14/10) và Đăng xuất (Role: tri.nguyen)
+### [quy_trinh_tinh_luong_nv_moi] TC-10: fix-6 | TC-10: Quản lý Trí Nguyễn duyệt Cấp 1 (Nghỉ phép 22/10, Bù công 15/10 & 16/10, Xin hủy 14/10) và Đăng xuất (Role: tri.nguyen)
 
-* **Trạng thái thực thi Test (Kỹ thuật)**: ✅ PASS (Thời gian thực thi: `122.39s`)
+* **Trạng thái thực thi Test (Kỹ thuật)**: ✅ PASS (Thời gian thực thi: `129.94s`)
 * **Trạng thái Logic Nghiệp vụ (Business Output)**: ✅ PASS
 * **Đánh giá chi tiết**: Đạt yêu cầu logic nghiệp vụ mong đợi
 * **Thư mục bằng chứng**: [`test-evidence/quy_trinh_tinh_luong_nv_moi/TC-10/`](file:///C:/Users/Y.Thach/Desktop/paradiseHR/test-evidence/quy_trinh_tinh_luong_nv_moi/TC-10)
@@ -2719,8 +2719,8 @@ Error: page.waitForTimeout: Target page, context or browser has been closed
 ##### 🔹 Bước 2: Mo MnuWPT037 qua Launchpad
 ![Bước 2: Mo MnuWPT037 qua Launchpad](quy_trinh_tinh_luong_nv_moi/TC-10/screenshots/TC-10-step02-mo-mnuwpt037-qua-launchpad.png)
 
-##### 🔹 Bước 3: Duyet Cap 1 Đơn Nghỉ phép 24/10
-![Bước 3: Duyet Cap 1 Đơn Nghỉ phép 24/10](quy_trinh_tinh_luong_nv_moi/TC-10/screenshots/TC-10-step03-duyet-cap-1-don-nghi-phep-24-10.png)
+##### 🔹 Bước 3: Duyet Cap 1 Đơn Nghỉ phép 22/10
+![Bước 3: Duyet Cap 1 Đơn Nghỉ phép 22/10](quy_trinh_tinh_luong_nv_moi/TC-10/screenshots/TC-10-step03-duyet-cap-1-don-nghi-phep-22-10.png)
 
 ##### 🔹 Bước 4: Duyet Cap 1 Đơn Bù công 15/10
 ![Bước 4: Duyet Cap 1 Đơn Bù công 15/10](quy_trinh_tinh_luong_nv_moi/TC-10/screenshots/TC-10-step04-duyet-cap-1-don-bu-cong-15-10.png)
@@ -2768,9 +2768,9 @@ Error: page.waitForTimeout: Target page, context or browser has been closed
 
 ---
 
-### [quy_trinh_tinh_luong_nv_moi] TC-12: fix-6 | TC-12: Quản lý Trường Long duyệt Cấp 2 (Nghỉ phép 24/10, Bù công 15/10 & 16/10, Xin hủy 14/10), xem Lịch sử và Đăng xuất (Role: LongKa)
+### [quy_trinh_tinh_luong_nv_moi] TC-12: fix-6 | TC-12: Quản lý Trường Long duyệt Cấp 2 (Nghỉ phép 22/10, Bù công 15/10 & 16/10, Xin hủy 14/10), xem Lịch sử và Đăng xuất (Role: LongKa)
 
-* **Trạng thái thực thi Test (Kỹ thuật)**: ✅ PASS (Thời gian thực thi: `138.76s`)
+* **Trạng thái thực thi Test (Kỹ thuật)**: ✅ PASS (Thời gian thực thi: `148.59s`)
 * **Trạng thái Logic Nghiệp vụ (Business Output)**: ✅ PASS
 * **Đánh giá chi tiết**: Đạt yêu cầu logic nghiệp vụ mong đợi
 * **Thư mục bằng chứng**: [`test-evidence/quy_trinh_tinh_luong_nv_moi/TC-12/`](file:///C:/Users/Y.Thach/Desktop/paradiseHR/test-evidence/quy_trinh_tinh_luong_nv_moi/TC-12)
@@ -2780,8 +2780,8 @@ Error: page.waitForTimeout: Target page, context or browser has been closed
 ##### 🔹 Bước 1: LongKa mo MnuWPT037 duyet Cap 2
 ![Bước 1: LongKa mo MnuWPT037 duyet Cap 2](quy_trinh_tinh_luong_nv_moi/TC-12/screenshots/TC-12-step01-longka-mo-mnuwpt037-duyet-cap-2.png)
 
-##### 🔹 Bước 2: Duyet Cap 2 va kiem tra tab Nghỉ phép 24/10
-![Bước 2: Duyet Cap 2 va kiem tra tab Nghỉ phép 24/10](quy_trinh_tinh_luong_nv_moi/TC-12/screenshots/TC-12-step02-duyet-cap-2-va-kiem-tra-tab-nghi-phep-24-10.png)
+##### 🔹 Bước 2: Duyet Cap 2 va kiem tra tab Nghỉ phép 22/10
+![Bước 2: Duyet Cap 2 va kiem tra tab Nghỉ phép 22/10](quy_trinh_tinh_luong_nv_moi/TC-12/screenshots/TC-12-step02-duyet-cap-2-va-kiem-tra-tab-nghi-phep-22-10.png)
 
 ##### 🔹 Bước 3: Duyet Cap 2 va kiem tra tab Bù công 15/10
 ![Bước 3: Duyet Cap 2 va kiem tra tab Bù công 15/10](quy_trinh_tinh_luong_nv_moi/TC-12/screenshots/TC-12-step03-duyet-cap-2-va-kiem-tra-tab-bu-cong-15-10.png)
@@ -2802,7 +2802,7 @@ Error: page.waitForTimeout: Target page, context or browser has been closed
 
 ### [quy_trinh_tinh_luong_nv_moi] TC-13: fix-6 | TC-13: Nhân viên Nguyễn Văn Test mở Bảng công cá nhân (MnuWPT010) chọn Tháng 10 xem kết quả (Role: test.nv)
 
-* **Trạng thái thực thi Test (Kỹ thuật)**: ✅ PASS (Thời gian thực thi: `28.05s`)
+* **Trạng thái thực thi Test (Kỹ thuật)**: ✅ PASS (Thời gian thực thi: `39.19s`)
 * **Trạng thái Logic Nghiệp vụ (Business Output)**: ✅ PASS
 * **Đánh giá chi tiết**: Đạt yêu cầu logic nghiệp vụ mong đợi
 * **Thư mục bằng chứng**: [`test-evidence/quy_trinh_tinh_luong_nv_moi/TC-13/`](file:///C:/Users/Y.Thach/Desktop/paradiseHR/test-evidence/quy_trinh_tinh_luong_nv_moi/TC-13)
@@ -2816,7 +2816,7 @@ Error: page.waitForTimeout: Target page, context or browser has been closed
 ![Bước 2: Mo Bang cong ca nhan MnuWPT010](quy_trinh_tinh_luong_nv_moi/TC-13/screenshots/TC-13-step02-mo-bang-cong-ca-nhan-mnuwpt010.png)
 
 ##### 🔹 Bước 3: Chon Thang 10 xem Bang cong ca nhan NV 099
-![Bước 3: Chon Thang 10 xem Bang cong ca nhan NV 099](quy_trinh_tinh_luong_nv_moi/TC-13/screenshots/TC-13-step03-chon-thang-10-xem-bang-cong-ca-nhan-nv-099.png)
+> *(Giao diện giữ nguyên, không phát sinh thay đổi so với Bước 2)*
 
 #### 🎥 Video & Dấu vết kiểm thử (Video & Trace):
 - **Video**: [video.webm](quy_trinh_tinh_luong_nv_moi/TC-13/videos/video.webm)
