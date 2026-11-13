@@ -33,18 +33,6 @@ BEGIN TRY
     -- =====================================================================================
 
     -- 0. BẢO VỆ TÀI KHOẢN QUẢN TRỊ (cuong.vu, chien.nguyen, admin)
-    UPDATE tblSC_Login 
-    SET LoginName = 'cuong.vu', PassWord = '123', IsDisable = 0, isAdmin = 1, AdminRight = 1 
-    WHERE EmployeeID = '014' OR LoginName = 'cuong.vu';
-
-    UPDATE tblSC_Login 
-    SET LoginName = 'chien.nguyen', PassWord = '123', IsDisable = 0, isAdmin = 1, AdminRight = 1 
-    WHERE EmployeeID = '013' OR LoginName = 'chien.nguyen';
-
-    UPDATE tblSC_Login 
-    SET isAdmin = 1, AdminRight = 1 
-    WHERE LoginID = 1 OR LoginName = 'admin';
-    PRINT N'🛡️  0. Đã bảo đảm an toàn quyền Admin cho cuong.vu (014), chien.nguyen (013), admin (1)';
 
     -- 1. [FIX-7] MỞ NIÊM PHONG KHÓA SỔ LƯƠNG & KHÓA CÔNG THÁNG 10/2026
     DELETE FROM tblSal_Lock 
