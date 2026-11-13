@@ -1115,13 +1115,29 @@ test('fix-4 | TC-03: Thiết lập HĐLĐ và Mức lương 10,000,000 VNĐ (Rol
   }
 
   // 5. Thao tác di chuột trực quan tìm kiếm NV 099 trên thanh công cụ DataGrid (Luật 10 Zero-Fill)
+  console.log('👉 [TC-03]: Di chuột Neon nhấp ô tìm kiếm trên toolbar DataGrid Lương nhân viên...');
   const searchInput03 = page.locator('#sp_SalaryHistory_List_html .dx-datagrid-search-panel input:visible, #sp_SalaryHistory_List_html input[placeholder*="Tìm"]:visible').first();
   if (await searchInput03.isVisible({ timeout: 4000 }).catch(() => false)) {
+    await moveAndClick(page, searchInput03, { pause: 200 });
     await typeHumanLike(page, searchInput03, '099');
-    await page.waitForTimeout(randomBetween(800, 1200));
+    await page.keyboard.press('Enter');
+    await page.waitForTimeout(500);
   }
 
+  // 5.1 CỔNG KIỂM SOÁT TẢI DỮ LIỆU BẢNG (CHỐNG KẾT THÚC SỚM KHI DGV ĐANG QUAY LOADING PANEL)
+  console.log('⏳ [TC-03]: Đang chờ DataGrid "Lương nhân viên" nạp và lọc xong dữ liệu (Loading panel biến mất)...');
+  const dgvLoadPanel03 = page.locator('#sp_SalaryHistory_List_html .dx-loadpanel:visible, #sp_SalaryHistory_List_html .dx-loadindicator:visible, .dx-loadpanel:visible');
+  await dgvLoadPanel03.waitFor({ state: 'hidden', timeout: 15000 }).catch(() => {});
+  await page.waitForTimeout(800);
+
+  // 5.2 Chờ dòng nhân viên 099 (Nguyễn Văn Test - 10,000,000 VNĐ) hiển thị thực tế trên DOM của lưới
+  console.log('⏳ [TC-03]: Chờ dòng nhân viên 099 hiển thị thực tế trên bảng lương...');
+  const expectedSalRow = page.locator('#sp_SalaryHistory_List_html tr.dx-data-row').filter({ hasText: '099' });
+  await expectedSalRow.first().waitFor({ state: 'visible', timeout: 15000 });
+  await page.waitForTimeout(500);
+
   // 6. Đối soát trực quan CHÍNH XÁC: Định vị động 3 chiều đúng dòng chứa '099' + '10.000.000' -> Khoanh vùng & dừng 5s
+  console.log('🔍 [TC-03]: Định vị động chính xác và khoanh vùng dòng lương NV 099 (dừng 5s để quan sát)...');
   const salRow03 = await resolveDynamicTarget(page, {
     baseSelector: '#sp_SalaryHistory_List_html tr.dx-data-row',
     requiredTexts: ['099', /10[.,]000[.,]000/]
@@ -1308,8 +1324,18 @@ test('fix-4 | TC-04: Đăng ký 1 Người phụ thuộc giảm trừ gia cảnh
   if (await searchInput04.isVisible({ timeout: 5000 }).catch(() => false)) {
     await moveAndClick(page, searchInput04, { pause: 200 });
     await typeHumanLike(page, searchInput04, 'Nguyễn Minh Khang');
-    await page.waitForTimeout(randomBetween(1000, 1500));
+    await page.keyboard.press('Enter');
+    await page.waitForTimeout(500);
   }
+
+  // Cổng chờ DataGrid tải xong dữ liệu lọc (Loading panel biến mất)
+  const dgvLoadPanel04 = page.locator('.dx-loadpanel:visible, .dx-loadindicator:visible');
+  await dgvLoadPanel04.waitFor({ state: 'hidden', timeout: 15000 }).catch(() => {});
+  await page.waitForTimeout(600);
+
+  const expectedFamRow = page.locator('tr.dx-data-row').filter({ hasText: 'Nguyễn Minh Khang' });
+  await expectedFamRow.first().waitFor({ state: 'visible', timeout: 15000 }).catch(() => {});
+  await page.waitForTimeout(400);
 
   // 7. Đối soát trực quan CHÍNH XÁC: Định vị động đúng dòng "Nguyễn Minh Khang" của NV 099 và DỪNG ĐÚNG 5 GIÂY (Luật 11 & 17)
   const famRow04 = await resolveDynamicTarget(page, {
@@ -1533,21 +1559,17 @@ test('fix-5 | TC-06: Khảo sát hiện trạng 5 ngày công trên Bảng công
   await calendarArea.waitFor({ state: 'visible', timeout: 20000 }).catch(() => {});
   await captureStepFix5(page, testInfo, 'TC-06', 2, 'Mo man hinh Cham cong ca nhan MnuWPT010');
 
-  // 3. Chọn Tháng 10 theo đúng mạch Recording JSON (Recording 11_12_2026 at 9_33_46 AM.json):
-  // - Di chuột Neon click mở dropdown combobox Tháng
-  // - Cuộn danh sách xuống mục Tháng 10 (phần tử thứ 10 trong 12 tháng)
-  // - Dùng chuột Neon click vào mục Tháng 10 trong danh sách thả xuống (hệ thống tự động hiển thị bảng ngày công)
-  // - TUYỆT ĐỐI KHÔNG GÕ ENTER VÀ KHÔNG NHẤN NÚT LÀM MỚI!
-  const monthSelect = page.locator('#P2F7760C4CFEC4A7E8A298C8D5BBB4F12 .dx-dropdowneditor-button, #P2F7760C4CFEC4A7E8A298C8D5BBB4F12, .ets-toolbar .dx-selectbox').first();
+  // 3. CHỌN THÁNG 10 VÀ NĂM 2026 (Theo đúng thứ tự người dùng thao tác):
+  // 3.1: Chọn Tháng 10
+  const monthSelect = page.locator('#P2F7760C4CFEC4A7E8A298C8D5BBB4F12 .dx-dropdowneditor-button, #P2F7760C4CFEC4A7E8A298C8D5BBB4F12, #EmployeeTimeSheetHtml .ets-filter:nth-child(1) .dx-selectbox').first();
   if (await monthSelect.isVisible({ timeout: 5000 }).catch(() => false)) {
     console.log('👉 [fix-5 | TC-06]: Di chuột Neon click mở danh sách thả xuống của combobox Tháng...');
     await moveAndClick(page, monthSelect, { steps: 8, pause: 300 });
     await page.waitForTimeout(600);
 
-    const overlay = page.locator('.dx-overlay-content:visible').first();
-    if (await overlay.isVisible({ timeout: 5000 }).catch(() => false)) {
-      // Cuộn danh sách xuống như người thật
-      const scrollContainer = overlay.locator('.dx-scrollable-container, .dx-list').first();
+    const overlayMonth = page.locator('.dx-overlay-content:visible').first();
+    if (await overlayMonth.isVisible({ timeout: 5000 }).catch(() => false)) {
+      const scrollContainer = overlayMonth.locator('.dx-scrollable-container, .dx-list').first();
       const sBox = await scrollContainer.boundingBox().catch(() => null);
       if (sBox) {
         console.log('👉 [fix-5 | TC-06]: Di chuột Neon vào danh sách và cuộn wheel xuống Tháng 10...');
@@ -1556,29 +1578,128 @@ test('fix-5 | TC-06: Khảo sát hiện trạng 5 ngày công trên Bảng công
         await page.waitForTimeout(500);
       }
 
-      // Xác định mục Tháng 10 (phần tử thứ 10 trong danh sách 12 tháng, index 9 theo JSON recording)
-      let month10Item = overlay.locator('.dx-list-item').nth(9);
-      if (await overlay.locator('.dx-list-item:has-text("10")').count() > 0) {
-        month10Item = overlay.locator('.dx-list-item:has-text("10")').first();
+      let month10Item = overlayMonth.locator('.dx-list-item').nth(9);
+      if (await overlayMonth.locator('.dx-list-item:has-text("10")').count() > 0) {
+        month10Item = overlayMonth.locator('.dx-list-item:has-text("10")').first();
       }
 
       console.log('👉 [fix-5 | TC-06]: Cuộn trúng đích và dùng chuột Neon click vào mục Tháng 10...');
       await month10Item.scrollIntoViewIfNeeded({ timeout: 4000 }).catch(() => {});
       await page.waitForTimeout(350);
       await moveAndClick(page, month10Item, { steps: 10, pause: 350 });
-      await page.waitForTimeout(2500);
+      await page.waitForTimeout(2000);
     }
   }
 
-  // 4. Khoanh vùng khảo sát trực quan bảng công Tháng 10/2026 (ngày thường 8h; 14: 6h, 15: 4h, 16: 7h, 24: 0h)
-  if (await calendarArea.isVisible({ timeout: 3000 }).catch(() => false)) {
-    await highlightAndPause(page, calendarArea, {
-      label: 'BẢNG CÔNG CHI TIẾT 10/2026: NGÀY THƯỜNG 8H | ĐẶC BIỆT (14: 6h, 15: 4h, 16: 7h, 24: 0h)',
-      expectedText: ['THỨ 2'],
-      duration: 5000
-    });
+  // 3.2: Chọn Năm 2026 (đảm bảo chọn đúng Năm 2026)
+  const yearSelect = page.locator('#PD04F4D1B38AF41A4BE71B79915BEB3CD .dx-dropdowneditor-button, #PD04F4D1B38AF41A4BE71B79915BEB3CD, #EmployeeTimeSheetHtml .ets-filter:nth-child(2) .dx-selectbox').first();
+  if (await yearSelect.isVisible({ timeout: 4000 }).catch(() => false)) {
+    const curYearText = await yearSelect.innerText().catch(() => '');
+    if (!curYearText.includes('2026')) {
+      console.log('👉 [fix-5 | TC-06]: Di chuột Neon click mở danh sách thả xuống của combobox Năm...');
+      await moveAndClick(page, yearSelect, { steps: 8, pause: 300 });
+      await page.waitForTimeout(600);
+
+      const overlayYear = page.locator('.dx-overlay-content:visible').first();
+      if (await overlayYear.isVisible({ timeout: 4000 }).catch(() => false)) {
+        const item2026 = overlayYear.locator('.dx-list-item:has-text("2026")').first();
+        if (await item2026.isVisible({ timeout: 3000 }).catch(() => false)) {
+          console.log('👉 [fix-5 | TC-06]: Dùng chuột Neon click vào mục Năm 2026...');
+          await moveAndClick(page, item2026, { steps: 8, pause: 300 });
+          await page.waitForTimeout(2000);
+        }
+      }
+    } else {
+      console.log('ℹ️ [fix-5 | TC-06]: Combobox Năm đã chọn sẵn 2026.');
+    }
   }
-  await captureStepFix5(page, testInfo, 'TC-06', 3, 'Khao sat truc quan 5 ngay cong mau thang 10-2026');
+
+  // Đảm bảo đưa trang về đầu (scrollTop = 0) để thanh Tabbar và Header hiển thị nguyên vẹn 100%
+  await page.evaluate(() => window.scrollTo(0, 0));
+  await page.waitForTimeout(1000);
+
+  // 4. KHẢO SÁT TRỰC QUAN BẢNG CÔNG: PHẦN TRÊN -> LĂN CHUỘT (SCROLL) XUỐNG PHẦN DƯỚI -> LĂN LÊN
+  // 4.1: Pause + Khoanh vùng phần phía trên cho người dùng quan sát (giữ nguyên Tabbar, không cuộn trôi)
+  console.log('👉 [fix-5 | TC-06]: Tạm dừng 5s khoanh vùng phần phía trên Bảng công Tháng 10/2026 (ngày 14, 15, 16, 22)...');
+  await page.evaluate(() => {
+    let badge = document.getElementById('__ag_focus_badge__');
+    if (!badge) {
+      badge = document.createElement('div');
+      badge.id = '__ag_focus_badge__';
+      document.body.appendChild(badge);
+    }
+    badge.style.cssText = `
+      position: fixed; z-index: 2147483647; padding: 6px 14px;
+      background: #e11d48; color: #ffffff; font-family: 'Segoe UI', Arial, sans-serif;
+      font-size: 13px; font-weight: bold; border-radius: 6px;
+      box-shadow: 0 4px 18px rgba(225, 29, 72, 0.75); pointer-events: none;
+      display: block; opacity: 1; top: 120px; left: 280px;
+    `;
+    badge.innerText = '🎯 BẢNG CÔNG 10/2026: NỬA ĐẦU THÁNG (14: 6h THIẾU CÔNG, 15: 4h, 16: 7h, 22: 0h) (Đang dừng 5s đối soát...)';
+
+    const cal = document.getElementById('ets-calendar') || document.querySelector('.ets-calendar');
+    if (cal) {
+      cal.style.outline = '3px solid #f43f5e';
+      cal.style.outlineOffset = '2px';
+      cal.style.boxShadow = '0 0 25px rgba(244, 63, 94, 0.95), inset 0 0 15px rgba(244, 63, 94, 0.25)';
+      cal.style.transition = 'all 0.3s ease';
+    }
+  });
+
+  // Di chuột Neon lướt nhẹ qua các ngày đặc biệt ở nửa đầu tháng (ngày 14: thiếu công, ngày 22: trống công)
+  const cell14 = page.locator('#ets-calendar .ets-day-cell:has-text("14")').first();
+  if (await cell14.isVisible({ timeout: 2000 }).catch(() => false)) {
+    const b14 = await cell14.boundingBox();
+    if (b14) await page.mouse.move(b14.x + b14.width / 2, b14.y + b14.height / 2, { steps: 12 });
+  }
+  await page.waitForTimeout(5000); // Tạm dừng đúng 5 giây cho người dùng quan sát phần trên
+  await captureStepFix5(page, testInfo, 'TC-06', 3, 'Quan sat truc quan nua dau Thang 10-2026');
+
+  // 4.2: Lăn con lăn chuột (mouse wheel) xuống phía dưới như thao tác thủ công người thật
+  console.log('👉 [fix-5 | TC-06]: Lăn chuột xuống từ từ (Mouse Wheel) để hiển thị phần các tuần cuối tháng bị khuất phía dưới...');
+  await page.mouse.move(650, 420, { steps: 8 });
+  for (let i = 0; i < 4; i++) {
+    await page.mouse.wheel(0, 50); // Mỗi nấc 50px, tổng cộng 200px vừa vặn hiện hết các tuần dưới mà không lộ khoảng trống xám
+    await page.waitForTimeout(120);
+  }
+  await page.waitForTimeout(600);
+
+  // Cập nhật badge quan sát phần nửa dưới
+  await page.evaluate(() => {
+    const badge = document.getElementById('__ag_focus_badge__');
+    if (badge) {
+      badge.innerText = '🎯 BẢNG CÔNG 10/2026: NỬA CUỐI THÁNG (26 - 31/10 ĐỦ CÔNG 8H, CUỐI TUẦN OFF) (Đang dừng 5s đối soát...)';
+    }
+  });
+
+  // Di chuột Neon xuống tuần cuối tháng
+  const cell28 = page.locator('#ets-calendar .ets-day-cell:has-text("28")').first();
+  if (await cell28.isVisible({ timeout: 2000 }).catch(() => false)) {
+    const b28 = await cell28.boundingBox();
+    if (b28) await page.mouse.move(b28.x + b28.width / 2, b28.y + b28.height / 2, { steps: 10 });
+  }
+  await page.waitForTimeout(5000); // Tạm dừng đúng 5 giây cho người dùng quan sát phần dưới
+  await captureStepFix5(page, testInfo, 'TC-06', 4, 'Lan chuot quan sat nua cuoi Thang 10-2026');
+
+  // 4.3: Lăn chuột ngược lại lên đầu trang để trả lại giao diện chuẩn ban đầu
+  console.log('👉 [fix-5 | TC-06]: Lăn chuột ngược lại lên đầu trang để trả lại giao diện chuẩn ban đầu...');
+  for (let i = 0; i < 4; i++) {
+    await page.mouse.wheel(0, -50);
+    await page.waitForTimeout(100);
+  }
+  await page.waitForTimeout(500);
+
+  await page.evaluate(() => {
+    window.scrollTo(0, 0);
+    const cal = document.getElementById('ets-calendar') || document.querySelector('.ets-calendar');
+    if (cal) {
+      cal.style.outline = '';
+      cal.style.outlineOffset = '';
+      cal.style.boxShadow = '';
+    }
+    const badge = document.getElementById('__ag_focus_badge__');
+    if (badge) badge.style.display = 'none';
+  });
 
   // 5. Kiểm chứng kép CSDL Read-Only (tblHasTA 5 ngày của NV 099)
   const dbHasTA = query(`
@@ -2814,16 +2935,88 @@ test('fix-6 | TC-13: Nhân viên Nguyễn Văn Test mở Bảng công cá nhân 
     }
   }
 
-  // 4. Cuộn & dừng trực quan trên Bảng công cá nhân Tháng 10 để Người Dùng tự quan sát kết quả
-  const calendarArea = page.locator('#ets-calendar:visible, #EmployeeTimeSheetHtml:visible').first();
-  if (await calendarArea.isVisible({ timeout: 4000 }).catch(() => false)) {
-    await smoothScrollHumanLike(page, calendarArea, { block: 'center', wait: 600 });
-    await highlightAndPause(page, calendarArea, {
-      label: 'BẢNG CÔNG CÁ NHÂN THÁNG 10/2026 - NV 099 (NGƯỜI DÙNG QUAN SÁT KẾT QUẢ)',
-      duration: 4500
-    }).catch(() => {});
+  // 4. KHẢO SÁT TRỰC QUAN BẢNG CÔNG: PHẦN TRÊN -> LĂN CHUỘT (SCROLL) XUỐNG PHẦN DƯỚI -> LĂN LÊN
+  await page.evaluate(() => window.scrollTo(0, 0));
+  await page.waitForTimeout(600);
+
+  // 4.1: Quan sát phần nửa trên Bảng công Tháng 10/2026 (giữ nguyên Tabbar, không cuộn trôi)
+  console.log('👉 [fix-6 | TC-13]: Tạm dừng 4.5s khoanh vùng phần phía trên Bảng công Tháng 10/2026...');
+  await page.evaluate(() => {
+    let badge = document.getElementById('__ag_focus_badge__');
+    if (!badge) {
+      badge = document.createElement('div');
+      badge.id = '__ag_focus_badge__';
+      document.body.appendChild(badge);
+    }
+    badge.style.cssText = `
+      position: fixed; z-index: 2147483647; padding: 6px 14px;
+      background: #e11d48; color: #ffffff; font-family: 'Segoe UI', Arial, sans-serif;
+      font-size: 13px; font-weight: bold; border-radius: 6px;
+      box-shadow: 0 4px 18px rgba(225, 29, 72, 0.75); pointer-events: none;
+      display: block; opacity: 1; top: 120px; left: 280px;
+    `;
+    badge.innerText = '🎯 BẢNG CÔNG CÁ NHÂN 10/2026: NỬA ĐẦU THÁNG (Đang dừng 4.5s quan sát...)';
+
+    const cal = document.getElementById('ets-calendar') || document.querySelector('.ets-calendar');
+    if (cal) {
+      cal.style.outline = '3px solid #f43f5e';
+      cal.style.outlineOffset = '2px';
+      cal.style.boxShadow = '0 0 25px rgba(244, 63, 94, 0.95), inset 0 0 15px rgba(244, 63, 94, 0.25)';
+      cal.style.transition = 'all 0.3s ease';
+    }
+  });
+
+  const cell15 = page.locator('#ets-calendar .ets-day-cell:has-text("15")').first();
+  if (await cell15.isVisible({ timeout: 2000 }).catch(() => false)) {
+    const b15 = await cell15.boundingBox();
+    if (b15) await page.mouse.move(b15.x + b15.width / 2, b15.y + b15.height / 2, { steps: 10 });
   }
-  await captureStepFix6(page, testInfo, 'TC-13', 3, 'Chon Thang 10 xem Bang cong ca nhan NV 099');
+  await page.waitForTimeout(4500);
+  await captureStepFix6(page, testInfo, 'TC-13', 3, 'Chon Thang 10 xem Bang cong ca nhan NV 099 nua dau thang');
+
+  // 4.2: Lăn con lăn chuột (mouse wheel) xuống phía dưới như thao tác thủ công người thật
+  console.log('👉 [fix-6 | TC-13]: Lăn chuột xuống từ từ (Mouse Wheel) để hiển thị phần các tuần cuối tháng bị khuất...');
+  await page.mouse.move(650, 420, { steps: 8 });
+  for (let i = 0; i < 4; i++) {
+    await page.mouse.wheel(0, 50);
+    await page.waitForTimeout(120);
+  }
+  await page.waitForTimeout(600);
+
+  await page.evaluate(() => {
+    const badge = document.getElementById('__ag_focus_badge__');
+    if (badge) {
+      badge.innerText = '🎯 BẢNG CÔNG CÁ NHÂN 10/2026: NỬA CUỐI THÁNG (Đang dừng 4.5s quan sát...)';
+    }
+  });
+
+  const cell30 = page.locator('#ets-calendar .ets-day-cell:has-text("30")').first();
+  if (await cell30.isVisible({ timeout: 2000 }).catch(() => false)) {
+    const b30 = await cell30.boundingBox();
+    if (b30) await page.mouse.move(b30.x + b30.width / 2, b30.y + b30.height / 2, { steps: 10 });
+  }
+  await page.waitForTimeout(4500);
+  await captureStepFix6(page, testInfo, 'TC-13', 4, 'Lan chuot xem Bang cong ca nhan NV 099 nua cuoi thang');
+
+  // 4.3: Lăn chuột ngược lại lên đầu trang và dọn sạch highlight
+  console.log('👉 [fix-6 | TC-13]: Lăn chuột ngược lại lên đầu trang để trả lại giao diện chuẩn ban đầu...');
+  for (let i = 0; i < 4; i++) {
+    await page.mouse.wheel(0, -50);
+    await page.waitForTimeout(100);
+  }
+  await page.waitForTimeout(500);
+
+  await page.evaluate(() => {
+    window.scrollTo(0, 0);
+    const cal = document.getElementById('ets-calendar') || document.querySelector('.ets-calendar');
+    if (cal) {
+      cal.style.outline = '';
+      cal.style.outlineOffset = '';
+      cal.style.boxShadow = '';
+    }
+    const badge = document.getElementById('__ag_focus_badge__');
+    if (badge) badge.style.display = 'none';
+  });
 });
 // <<< [END_TC_13]
 
